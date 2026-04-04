@@ -7,24 +7,50 @@
 
 ## 프로젝트 목적
 
-<!-- 이 프로젝트가 무엇을 위한 것인지 AI가 이해할 수 있도록 작성하세요. -->
+비개발자(임직원, 학생/일반인) 대상 AI 활용 교육자료를 마크다운(SSoT)으로 작성하고,
+MkDocs + Material 기반 정적 사이트(GitHub Pages)와 컨플루언스 위키 양쪽으로 발행한다.
 
 ---
 
 ## AI가 작업 시 지켜야 할 원칙
 
-<!-- 이 프로젝트에서 AI가 따라야 할 규칙이나 제약을 정의하세요. -->
+- 교육 대상이 비개발자이므로, 모든 콘텐츠는 전문 용어를 최소화하고 평이한 톤으로 작성한다
+- `docs/` 디렉토리의 마크다운이 SSoT — 콘텐츠 수정은 항상 여기서 한다
+- nav 순서는 `mkdocs.yml`에서 명시적으로 제어한다 (파일명에 번호 접두사 붙이지 않음)
+- `docs/` 하위 디렉토리명은 URL 경로가 되므로 영문 소문자, 하이픈만 사용한다
+
+---
+
+## 기술 스택
+
+- MkDocs + Material for MkDocs (정적 사이트 빌더)
+- GitHub Pages (호스팅)
+- GitHub Actions (CI/CD — main push → gh-pages 배포)
+- Atlassian Confluence (위키 발행 — MCP 연동)
 
 ---
 
 ## 디렉토리 구조
 
-<!-- 주요 디렉토리와 파일의 역할을 설명하세요. -->
+```
+ai-onboarding/
+├── mkdocs.yml              # 사이트 설정 (네비게이션, 테마, 플러그인)
+├── requirements.txt        # Python 의존성
+├── docs/                   # SSoT: 모든 원본 마크다운
+│   ├── index.md
+│   └── assets/images/
+├── overrides/              # Material 테마 커스터마이징
+├── scripts/                # 자동화 스크립트 (컨플루언스 동기화 등)
+├── .github/workflows/      # CI/CD
+└── .ai/                    # AI 협업 컨텍스트
+```
 
-```
-.
-└── ...
-```
+---
+
+## 코딩 컨벤션
+
+- 마크다운 파일: 한국어 작성, 제목은 `#` 1개로 시작
+- Python 스크립트(scripts/): PEP 8 준수
 
 ---
 
