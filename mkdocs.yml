@@ -5,6 +5,7 @@ site_url: ""
 theme:
   name: material
   language: ko
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: indigo
@@ -39,6 +40,12 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+
+extra_css:
+  - assets/css/reveal-override.css
+
+extra_javascript:
+  - assets/js/reveal-toggle.js
 
 nav:
   - 홈: index.md
