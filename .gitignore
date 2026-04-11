@@ -7,8 +7,11 @@ __pycache__/
 .venv/
 
 # IDE
-.idea/
-.vscode/
+/.idea/
+/.vscode/
+
+# AI agent
+/.claude/
 
 # OS
 .DS_Store
