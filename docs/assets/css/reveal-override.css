@@ -428,8 +428,10 @@ h2.rv-slide__title::after {
   line-height: 1;
 }
 .rv-step-list > li strong {
+  display: block;
   color: #e2e8f0;
   font-size: 1.05rem;
+  margin-bottom: 0.25rem;
 }
 /* 항목 사이 화살표 */
 .rv-step-list > li + li {
