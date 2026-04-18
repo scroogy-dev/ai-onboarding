@@ -1,5 +1,10 @@
 /* ── reveal-override.css ── */
 
+/* 웹/슬라이드 이중 표현 — 기본(웹)은 slide-only 숨김, 슬라이드는 web-only 숨김 */
+.slide-only { display: none; }
+.rv-slide__body .web-only { display: none; }
+.rv-slide__body .slide-only { display: block; }
+
 /* 슬라이드 모드 전환 버튼 */
 .rv-btn {
   display: inline-flex;
@@ -516,26 +521,32 @@ h2.rv-slide__title::after {
   accent-color: #6366f1;
 }
 
-/* warning admonition 강조 (붉은색) */
+/* warning / failure / danger admonition 강조 (붉은색) */
 .rv-slide__body .admonition.warning,
-.rv-slide__body .admonition.danger {
+.rv-slide__body .admonition.danger,
+.rv-slide__body .admonition.failure {
   border: 1px solid rgba(239, 68, 68, 0.35);
   background: rgba(239, 68, 68, 0.08);
 }
 .rv-slide__body .admonition.warning .admonition-title,
-.rv-slide__body .admonition.danger .admonition-title {
+.rv-slide__body .admonition.danger .admonition-title,
+.rv-slide__body .admonition.failure .admonition-title {
   background: rgba(239, 68, 68, 0.15);
   color: #fca5a5;
 }
 
-/* tip admonition 약한 강조 (초록색) */
+/* tip / success admonition 약한 강조 (초록색) */
 .rv-slide__body .admonition.tip,
-.rv-slide__body .admonition.hint {
+.rv-slide__body .admonition.hint,
+.rv-slide__body .admonition.success,
+.rv-slide__body .admonition.check {
   border: 1px solid rgba(52, 211, 153, 0.25);
   background: rgba(52, 211, 153, 0.06);
 }
 .rv-slide__body .admonition.tip .admonition-title,
-.rv-slide__body .admonition.hint .admonition-title {
+.rv-slide__body .admonition.hint .admonition-title,
+.rv-slide__body .admonition.success .admonition-title,
+.rv-slide__body .admonition.check .admonition-title {
   background: rgba(52, 211, 153, 0.1);
   color: #6ee7b7;
 }

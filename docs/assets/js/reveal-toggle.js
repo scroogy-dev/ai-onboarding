@@ -189,7 +189,11 @@
 
   /* ── 카드 레이아웃 변환 (지정 슬라이드만) ── */
   var cardGridSubtitles = ["소프트웨어가 만드는 가치"];
-  var cardStepSubtitles = ["실습 접근법: 최소 플랜 → 실행"];
+  var cardStepSubtitles = [
+    "실습 접근법: 계획 → 실행",
+    "AI 활용 3단계와 내 위치",
+    "개선 사이클",
+  ];
 
   function applyCardGrid(slideEl) {
     var subtitle = slideEl.querySelector(".rv-slide__subtitle");
