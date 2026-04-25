@@ -1,6 +1,12 @@
 # MkDocs build output
 site/
 
+# Slidev
+slides/node_modules/
+slides/dist/
+slides/.slidev/
+slides/review/
+
 # Python
 __pycache__/
 *.py[cod]
