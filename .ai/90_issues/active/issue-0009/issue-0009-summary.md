@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 6 — 자체 구현 슬라이드 모드 제거 (ADR-0003)
+> ✅ 모든 작업이 완료되었습니다.
 
 ---
 
@@ -120,6 +120,19 @@
 
 ### Task 6: 자체 구현 슬라이드 모드 제거 (ADR-0003)
 
-- **결과**:
+- **결과**: 완료
 - **수행 내용 요약**:
+  - **`overrides/main.html` 슬라이드 버튼 교체**: `href="#"` + 자체 구현 JS 토글 → `href="/ai-onboarding/slides/" target="_blank" rel="noopener noreferrer"` 절대 경로 링크로 교체. 라벨·SVG 아이콘·위치 유지. `title` 속성도 새 동작에 맞게 갱신.
+  - **`mkdocs.yml` 정리**: `extra_javascript: assets/js/reveal-toggle.js` 항목 제거, `extra_css: assets/css/reveal-override.css` → `assets/css/slide-link.css` 교체
+  - **자체 구현 파일 삭제** (`git rm`): `docs/assets/js/reveal-toggle.js`(약 12KB), `docs/assets/css/reveal-override.css`(약 13KB) — 합 ~1,000줄 청산
+  - **버튼 스타일 분리 신설**: `docs/assets/css/slide-link.css` 신설(25줄). `.rv-btn` → `.slide-link-btn`로 의미 명확한 클래스명으로 정리. 색상은 MkDocs Material의 `--md-primary-fg-color` 변수 활용해 테마 변경(라이트/다크)에 자동 반응
+  - **`docs/` 본문 이중 표현 패턴 정리** (6개 블록):
+    - `docs/index.md`: stage-model mermaid·계획→실행 mermaid 두 곳에서 `<div class="web-only">` 래핑 해제(콘텐츠 유지), `<div class="slide-only">` 텍스트 리스트 2개 삭제
+    - `docs/operation-guide.md`: 개선 사이클 mermaid의 `<div class="web-only">` 래핑 해제, `<div class="slide-only">` 텍스트 리스트 1개 삭제
+    - 의미: mermaid는 MkDocs Material에서 정상 렌더되어 .web-only 래핑이 무의미해짐. .slide-only는 자체 구현 슬라이드 모드 전용이라 자체 구현 제거와 함께 의미 상실
+  - **로컬 빌드 검증**: `mkdocs build --strict` 0.60초 통과(경고 0). 빌드 산출물에서 ① 슬라이드 버튼 마크업이 새 href·클래스로 출력 ② `slide-link.css` 로드 ③ `reveal-(toggle|override)` 문자열 잔존 0건 확인
 - **특이 사항**:
+  - **버튼 스타일 보존 결정**: `rv-btn` 스타일은 30줄 정도의 단일 버튼 스타일이라 자체 구현 1,000줄 제거 정신과 충돌하지 않는 일반적 사이트 커스터마이징. `<style>` 인라인 또는 별도 css 분리 옵션 중 후자 선택 — `main.html`은 base.html의 content block을 override하는 구조라 인라인 `<style>`은 시맨틱이 어색하고 모든 페이지에 중복 인라인됨. extra_css 등록이 정석 패턴.
+  - **버튼 클래스명 변경(`rv-btn` → `slide-link-btn`)**: 자체 구현 슬라이드 모드(reveal·rv-)와의 의미적 결합을 끊고 "슬라이드 링크 버튼"이라는 새 정체성을 명시. 향후 발견되는 잔존 reveal 흔적을 grep할 때 false positive 방지.
+  - **슬라이드 URL은 절대 경로(`/ai-onboarding/slides/`)**: 풀 URL 대신 사이트 루트 기준 절대 경로 채택. 향후 호스트 변경(예: 커스텀 도메인) 시 수정 포인트가 줄어듦. 트레이드오프: 로컬 `mkdocs serve`(`http://127.0.0.1:8000/`)에서 클릭 시 404 — 로컬 점검 시에는 README의 sync 체크리스트에 안내된 슬라이드 dev 서버(`cd slides && npm run dev`)를 별도로 띄우는 흐름이라 이 한계가 운영 시나리오에 부합.
+  - **DoD 추가 검증 항목**: spec의 DoD 중 "배포된 사이트에서 콘솔 에러 없이 정상 동작"은 본 PR 머지 후 GitHub Pages에서 확인. 자체 구현 JS가 모두 제거됐으므로 reveal 관련 콘솔 에러 자체가 발생할 수 없는 구조이며, MkDocs Material 기본 동작은 변경 없음.

@@ -47,8 +47,6 @@
 
 본 교육에서는 AI 활용을 다음 3단계로 구분해 설명합니다. 참가자는 대체로 **1단계는 통과한 상태**에서 교육에 참여하며, 본 교육은 **2단계와 3단계**에 초점을 맞춥니다.
 
-<div class="web-only" markdown>
-
 ```mermaid
 flowchart LR
     A["<b>1단계</b><br/>챗봇 사용<br/><i>(참가 전제)</i>"]
@@ -59,16 +57,6 @@ flowchart LR
     style B fill:#bbdefb,stroke:#64b5f6
     style C fill:#90caf9,stroke:#42a5f5
 ```
-
-</div>
-
-<div class="slide-only" markdown>
-
-1. **1단계 — 챗봇 사용** *(참가 전제)*
-2. **2단계 — 프롬프트 재활용** · Claude Projects
-3. **3단계 — 에이전트 활용** · Claude Cowork
-
-</div>
 
 | 단계 | 무엇을 하나요? | 대표 도구·기능 | 본 교육에서 |
 |------|-------------|--------------|------------|
@@ -140,8 +128,6 @@ flowchart LR
 
 이 교육은 긴 이론 강의 대신 **"최소한의 계획을 세우고 바로 실행"** 하는 방식으로 진행됩니다.
 
-<div class="web-only" markdown>
-
 ```mermaid
 flowchart LR
     A["<b>1. 문제 정의</b><br/>자동화할 작업 1개 선정"]
@@ -151,17 +137,6 @@ flowchart LR
     A --> B --> C --> D
     D -.->|계획 수정| B
 ```
-
-</div>
-
-<div class="slide-only" markdown>
-
-1. **문제 정의**: 자동화할 작업 1개 선정
-2. **계획**: 지시 내용 간단 정리
-3. **실행**: AI와 대화하며 결과물 제작
-4. **개선**: 결과 검토·개선점 도출 *(→ 다시 2. 계획으로 반복)*
-
-</div>
 
 ### 대상별 실행 계획
 
