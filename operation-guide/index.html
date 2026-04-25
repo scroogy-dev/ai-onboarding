@@ -49,7 +49,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/css/reveal-override.css">
+      <link rel="stylesheet" href="../assets/css/slide-link.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -986,9 +986,11 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <!-- 슬라이드 모드 전환 버튼 -->
-  <a id="slide-mode-btn" class="rv-btn" href="#" role="button"
-     title="슬라이드 모드로 보기 (F: 전체화면, ESC: 닫기)">
+  <a id="slide-mode-btn" class="slide-link-btn"
+     href="/ai-onboarding/slides/"
+     target="_blank" rel="noopener noreferrer"
+     role="button"
+     title="발표 슬라이드(Slidev) 새 탭에서 열기">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M10 8v8l5-4-5-4zm9-5H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
     </svg>
@@ -1184,7 +1186,6 @@
 <h2 id="4">4. 개선 프로세스<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <p>교육은 1회성이 아닌 <strong>반복 개선 사이클</strong>로 운영합니다.</p>
 <h3 id="_11">개선 사이클<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<div class="web-only">
 <pre class="mermaid"><code>flowchart LR
     A["교육 실시"] --&gt; B["직후 설문"]
     B --&gt; C["1개월 후 추적"]
@@ -1192,17 +1193,6 @@
     D --&gt; E["개선 반영"]
     E --&gt; F["다음 교육"]
     F -.-&gt; A</code></pre>
-</div>
-<div class="slide-only">
-<ol>
-<li><strong>교육 실시</strong></li>
-<li><strong>직후 설문</strong> <em>(만족도·개선점)</em></li>
-<li><strong>1개월 후 추적</strong> <em>(업무 적용 여부)</em></li>
-<li><strong>원인 분석</strong></li>
-<li><strong>개선 반영</strong></li>
-<li><strong>다음 교육</strong> <em>(→ 다시 처음으로 순환)</em></li>
-</ol>
-</div>
 <h3 id="_12">직후 설문에서 수집할 개선 포인트<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <ul>
 <li>실습 난이도가 적절했는지 (너무 쉬움 / 적절 / 너무 어려움)</li>
@@ -1394,8 +1384,6 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../assets/js/reveal-toggle.js"></script>
       
     
   </body>

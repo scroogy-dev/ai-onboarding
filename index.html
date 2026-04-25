@@ -49,7 +49,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/css/reveal-override.css">
+      <link rel="stylesheet" href="assets/css/slide-link.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -886,9 +886,11 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <!-- 슬라이드 모드 전환 버튼 -->
-  <a id="slide-mode-btn" class="rv-btn" href="#" role="button"
-     title="슬라이드 모드로 보기 (F: 전체화면, ESC: 닫기)">
+  <a id="slide-mode-btn" class="slide-link-btn"
+     href="/ai-onboarding/slides/"
+     target="_blank" rel="noopener noreferrer"
+     role="button"
+     title="발표 슬라이드(Slidev) 새 탭에서 열기">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M10 8v8l5-4-5-4zm9-5H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
     </svg>
@@ -955,7 +957,6 @@
 </div>
 <h3 id="stage-model">AI 활용 3단계와 내 위치<a class="headerlink" href="#stage-model" title="Permanent link">&para;</a></h3>
 <p>본 교육에서는 AI 활용을 다음 3단계로 구분해 설명합니다. 참가자는 대체로 <strong>1단계는 통과한 상태</strong>에서 교육에 참여하며, 본 교육은 <strong>2단계와 3단계</strong>에 초점을 맞춥니다.</p>
-<div class="web-only">
 <pre class="mermaid"><code>flowchart LR
     A["&lt;b&gt;1단계&lt;/b&gt;&lt;br/&gt;챗봇 사용&lt;br/&gt;&lt;i&gt;(참가 전제)&lt;/i&gt;"]
     B["&lt;b&gt;2단계&lt;/b&gt;&lt;br/&gt;프롬프트 재활용&lt;br/&gt;Claude Projects"]
@@ -964,14 +965,6 @@
     style A fill:#e3f2fd,stroke:#90caf9
     style B fill:#bbdefb,stroke:#64b5f6
     style C fill:#90caf9,stroke:#42a5f5</code></pre>
-</div>
-<div class="slide-only">
-<ol>
-<li><strong>1단계 — 챗봇 사용</strong> <em>(참가 전제)</em></li>
-<li><strong>2단계 — 프롬프트 재활용</strong> · Claude Projects</li>
-<li><strong>3단계 — 에이전트 활용</strong> · Claude Cowork</li>
-</ol>
-</div>
 <table>
 <thead>
 <tr>
@@ -1079,7 +1072,6 @@
 <h2 id="how">How — 어떻게 진행되나요?<a class="headerlink" href="#how" title="Permanent link">&para;</a></h2>
 <h3 id="_8">실습 접근법: 계획 → 실행<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>이 교육은 긴 이론 강의 대신 <strong>"최소한의 계획을 세우고 바로 실행"</strong> 하는 방식으로 진행됩니다.</p>
-<div class="web-only">
 <pre class="mermaid"><code>flowchart LR
     A["&lt;b&gt;1. 문제 정의&lt;/b&gt;&lt;br/&gt;자동화할 작업 1개 선정"]
     B["&lt;b&gt;2. 계획&lt;/b&gt;&lt;br/&gt;지시 내용 간단 정리"]
@@ -1087,15 +1079,6 @@
     D["&lt;b&gt;4. 개선&lt;/b&gt;&lt;br/&gt;결과 검토 · 개선점 도출"]
     A --&gt; B --&gt; C --&gt; D
     D -.-&gt;|계획 수정| B</code></pre>
-</div>
-<div class="slide-only">
-<ol>
-<li><strong>문제 정의</strong>: 자동화할 작업 1개 선정</li>
-<li><strong>계획</strong>: 지시 내용 간단 정리</li>
-<li><strong>실행</strong>: AI와 대화하며 결과물 제작</li>
-<li><strong>개선</strong>: 결과 검토·개선점 도출 <em>(→ 다시 2. 계획으로 반복)</em></li>
-</ol>
-</div>
 <h3 id="_9">대상별 실행 계획<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>각 트랙에서 <strong>2단계와 3단계 실습을 각각 준비</strong>합니다. 참가자의 사전 경험과 목표에 맞춰 강사가 실습 경로를 안내합니다.</p>
 <h4 id="_10">임직원(비개발자)<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
@@ -1203,8 +1186,6 @@
     
     
       <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="assets/js/reveal-toggle.js"></script>
       
     
   </body>
