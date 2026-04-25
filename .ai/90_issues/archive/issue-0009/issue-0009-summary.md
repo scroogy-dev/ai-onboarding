@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 5의 배포 검증(5-1, 5-2, 5-5) — main 머지 후 진행. 안내 문서·sync 체크리스트(5-3, 5-4)는 현재 브랜치에서 완료.
+> ✅ 모든 작업이 완료되었습니다.
 
 ---
 
@@ -96,7 +96,7 @@
 
 ### Task 5: GitHub Pages 배포 확인 및 안내 문서 갱신
 
-- **결과**: 부분 완료 (현재 브랜치 가능 항목 완료, 배포 검증은 머지 후 진행)
+- **결과**: 완료
 - **수행 내용 요약**:
   - **README.md 전면 확장** — 기존 3줄짜리 안내를 다음 6개 섹션으로 재작성:
     1. 발행 채널 표 (문서·슬라이드 URL, 빌더, 소스)
@@ -109,14 +109,30 @@
   - sync 체크리스트 항목은 Task 2 변환·Task 3 디자인에서 식별한 "변형 금지 자산"(ADR-0001 3단계 모델 메시지·mermaid 2종·3단계 비교 표)을 직접 점검하도록 구성
   - ADR-0001·ADR-0002 링크를 README에서 직접 연결해 "왜 이 원칙인지"를 한 번의 클릭으로 추적 가능하게 함
 - **특이 사항**:
-  - **5-1, 5-2, 5-5는 머지·배포 후로 이연**: 배포된 URL에서의 정상 동작·자체 구현 대체 가능 판정은 main 머지 이후 GitHub Actions 실행 결과를 보고서야 가능. plan에 *(머지·배포 후)* 표기로 분리.
-  - sync 체크리스트의 위치 결정: `docs/`는 교육 콘텐츠 SSoT라 운영 문서가 들어갈 자리가 아니고, 별도 디렉토리(`.ai/40_domain/policies/local/`) 신설은 1인 운영 규모에서 과함. README가 진입점·운영문서 양쪽 역할을 하도록 통합.
-  - 향후 발표 운영자가 늘거나 체크리스트가 길어지면 별도 파일로 분리 검토 (ADR-0002의 후행 추출 정책과 동일 원리).
+  - sync 체크리스트의 위치 결정: `docs/`는 교육 콘텐츠 SSoT라 운영 문서가 들어갈 자리가 아니고, 별도 디렉토리(`.ai/40_domain/policies/local/`) 신설은 1인 운영 규모에서 과함. README가 진입점·운영문서 양쪽 역할을 하도록 통합. 향후 발표 운영자가 늘거나 체크리스트가 길어지면 별도 파일로 분리 검토 (ADR-0002의 후행 추출 정책과 동일 원리).
+  - **머지 후 배포 검증 결과** (PR #10, run #24930295123 success / 1분 3초):
+    - 5-1 문서 사이트(`/`) — HTTP 200, `<title>AI 활용 교육</title>` 확인
+    - 5-2 슬라이드 사이트(`/slides/`) — HTTP 200, `<title>AI 활용 온보딩 - Slidev</title>` 확인, asset 경로가 `/ai-onboarding/slides/assets/...`로 정상 prefix, 사용자 시각 점검에서도 동작 양호 판정
+    - 5-5 자체 구현 대체 가능 판정 — 통과 (콘텐츠 변형 없음·동작 양호). 단, 디자인/콘텐츠 보강 여지는 spec의 Out에 해당하므로 별도 이슈로 분리하기로 결정
+  - **후속 이슈 후보 메모**: `.ai/99_workspace/notes/issue-0009-followups.md` — (1) 슬라이드 테마 재검토, (2) "보안 및 개인정보 가이드" 슬라이드 추가. 두 항목 모두 본 이슈 spec의 Out("슬라이드 콘텐츠 자체의 신규 작성")에 해당하여 새 이슈로 분리 예정.
 
 ---
 
 ### Task 6: 자체 구현 슬라이드 모드 제거 (ADR-0003)
 
-- **결과**:
+- **결과**: 완료
 - **수행 내용 요약**:
+  - **`overrides/main.html` 슬라이드 버튼 교체**: `href="#"` + 자체 구현 JS 토글 → `href="/ai-onboarding/slides/" target="_blank" rel="noopener noreferrer"` 절대 경로 링크로 교체. 라벨·SVG 아이콘·위치 유지. `title` 속성도 새 동작에 맞게 갱신.
+  - **`mkdocs.yml` 정리**: `extra_javascript: assets/js/reveal-toggle.js` 항목 제거, `extra_css: assets/css/reveal-override.css` → `assets/css/slide-link.css` 교체
+  - **자체 구현 파일 삭제** (`git rm`): `docs/assets/js/reveal-toggle.js`(약 12KB), `docs/assets/css/reveal-override.css`(약 13KB) — 합 ~1,000줄 청산
+  - **버튼 스타일 분리 신설**: `docs/assets/css/slide-link.css` 신설(25줄). `.rv-btn` → `.slide-link-btn`로 의미 명확한 클래스명으로 정리. 색상은 MkDocs Material의 `--md-primary-fg-color` 변수 활용해 테마 변경(라이트/다크)에 자동 반응
+  - **`docs/` 본문 이중 표현 패턴 정리** (6개 블록):
+    - `docs/index.md`: stage-model mermaid·계획→실행 mermaid 두 곳에서 `<div class="web-only">` 래핑 해제(콘텐츠 유지), `<div class="slide-only">` 텍스트 리스트 2개 삭제
+    - `docs/operation-guide.md`: 개선 사이클 mermaid의 `<div class="web-only">` 래핑 해제, `<div class="slide-only">` 텍스트 리스트 1개 삭제
+    - 의미: mermaid는 MkDocs Material에서 정상 렌더되어 .web-only 래핑이 무의미해짐. .slide-only는 자체 구현 슬라이드 모드 전용이라 자체 구현 제거와 함께 의미 상실
+  - **로컬 빌드 검증**: `mkdocs build --strict` 0.60초 통과(경고 0). 빌드 산출물에서 ① 슬라이드 버튼 마크업이 새 href·클래스로 출력 ② `slide-link.css` 로드 ③ `reveal-(toggle|override)` 문자열 잔존 0건 확인
 - **특이 사항**:
+  - **버튼 스타일 보존 결정**: `rv-btn` 스타일은 30줄 정도의 단일 버튼 스타일이라 자체 구현 1,000줄 제거 정신과 충돌하지 않는 일반적 사이트 커스터마이징. `<style>` 인라인 또는 별도 css 분리 옵션 중 후자 선택 — `main.html`은 base.html의 content block을 override하는 구조라 인라인 `<style>`은 시맨틱이 어색하고 모든 페이지에 중복 인라인됨. extra_css 등록이 정석 패턴.
+  - **버튼 클래스명 변경(`rv-btn` → `slide-link-btn`)**: 자체 구현 슬라이드 모드(reveal·rv-)와의 의미적 결합을 끊고 "슬라이드 링크 버튼"이라는 새 정체성을 명시. 향후 발견되는 잔존 reveal 흔적을 grep할 때 false positive 방지.
+  - **슬라이드 URL은 절대 경로(`/ai-onboarding/slides/`)**: 풀 URL 대신 사이트 루트 기준 절대 경로 채택. 향후 호스트 변경(예: 커스텀 도메인) 시 수정 포인트가 줄어듦. 트레이드오프: 로컬 `mkdocs serve`(`http://127.0.0.1:8000/`)에서 클릭 시 404 — 로컬 점검 시에는 README의 sync 체크리스트에 안내된 슬라이드 dev 서버(`cd slides && npm run dev`)를 별도로 띄우는 흐름이라 이 한계가 운영 시나리오에 부합.
+  - **DoD 추가 검증 항목**: spec의 DoD 중 "배포된 사이트에서 콘솔 에러 없이 정상 동작"은 본 PR 머지 후 GitHub Pages에서 확인. 자체 구현 JS가 모두 제거됐으므로 reveal 관련 콘솔 에러 자체가 발생할 수 없는 구조이며, MkDocs Material 기본 동작은 변경 없음.

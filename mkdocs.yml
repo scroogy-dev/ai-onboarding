@@ -46,10 +46,7 @@ markdown_extensions:
       permalink: true
 
 extra_css:
-  - assets/css/reveal-override.css
-
-extra_javascript:
-  - assets/js/reveal-toggle.js
+  - assets/css/slide-link.css
 
 nav:
   - 홈: index.md
