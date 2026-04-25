@@ -1,0 +1,601 @@
+/* ── reveal-override.css ── */
+
+/* 웹/슬라이드 이중 표현 — 기본(웹)은 slide-only 숨김, 슬라이드는 web-only 숨김 */
+.slide-only { display: none; }
+.rv-slide__body .web-only { display: none; }
+.rv-slide__body .slide-only { display: block; }
+
+/* 슬라이드 모드 전환 버튼 */
+.rv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--md-primary-fg-color);
+  border-radius: 2rem;
+  background: transparent;
+  color: var(--md-primary-fg-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.rv-btn:hover {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+.rv-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* ── 오버레이 ── */
+.rv-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+.rv-overlay--active {
+  display: flex;
+}
+
+/* 프로그레스 바 */
+.rv-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #818cf8, #a78bfa);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0 2px 2px 0;
+  z-index: 20;
+}
+
+/* ── 상단 바 (닫기 + 페이지 점프) ── */
+.rv-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  gap: 0.5rem;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* 닫기 버튼 */
+.rv-overlay__close {
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.3rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  cursor: pointer;
+  line-height: 1;
+  transition: all 0.2s;
+}
+.rv-overlay__close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #f1f5f9;
+}
+
+/* 페이지 점프 바 */
+.rv-pagebar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.rv-pagebar::-webkit-scrollbar {
+  display: none;
+}
+.rv-pagebar__dot {
+  flex-shrink: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.04);
+  color: #64748b;
+  font-size: 0.55rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+}
+.rv-pagebar__dot:hover {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  border-color: rgba(99, 102, 241, 0.25);
+}
+.rv-pagebar__dot--active {
+  background: rgba(99, 102, 241, 0.25);
+  color: #c7d2fe;
+  border-color: rgba(99, 102, 241, 0.4);
+  font-weight: 700;
+}
+.rv-pagebar__dot-num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── 하단 바 (이전/다음 + 카운터) ── */
+.rv-bottombar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.rv-bottombar__btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.45rem 1.2rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+.rv-bottombar__btn:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #c7d2fe;
+}
+.rv-bottombar__counter {
+  font-size: 0.8rem;
+  color: #475569;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+  min-width: 4rem;
+  text-align: center;
+}
+
+/* ── 슬라이드 컨테이너 ── */
+.rv-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 100vh;
+  padding: 4.5rem 5rem 4rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  animation: rv-fadeIn 0.35s ease-out;
+}
+
+@keyframes rv-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── 타이틀 슬라이드 (h1) ── */
+.rv-slide--title {
+  justify-content: center;
+  text-align: center;
+}
+.rv-slide--title .rv-slide__header {
+  margin-bottom: 2rem;
+}
+.rv-slide--title h1.rv-slide__title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+.rv-slide--title .rv-slide__body {
+  font-size: 1.3rem;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.rv-slide--title .rv-slide__body blockquote {
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  color: #cbd5e1;
+  padding: 0;
+  font-style: italic;
+}
+
+/* ── 목차 슬라이드 ── */
+.rv-slide--toc {
+  justify-content: center;
+}
+.rv-slide--toc .rv-slide__header {
+  margin-bottom: 2.5rem;
+}
+.rv-slide--toc h1.rv-slide__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: none;
+  -webkit-text-fill-color: unset;
+}
+.rv-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: toc;
+}
+.rv-toc-list li {
+  position: relative;
+  padding: 0.85rem 1.2rem 0.85rem 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: color 0.2s, padding-left 0.2s;
+}
+.rv-toc-list li:last-child {
+  border-bottom: none;
+}
+.rv-toc-list li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #a78bfa);
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+/* ── 섹션 슬라이드 (h2) ── */
+.rv-slide__header {
+  flex-shrink: 0;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+h2.rv-slide__title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #e2e8f0;
+  letter-spacing: -0.01em;
+}
+h2.rv-slide__title::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #a78bfa);
+  border-radius: 2px;
+  margin-top: 0.75rem;
+}
+
+/* 서브섹션 제목 */
+.rv-slide__subtitle {
+  margin: 0.5rem 0 0;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #a5b4fc;
+}
+
+/* ── 본문 ── */
+.rv-slide__body {
+  flex: 1 1 auto;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  overflow-y: auto;
+  color: #cbd5e1;
+}
+.rv-slide__body p {
+  margin: 0.7rem 0;
+}
+.rv-slide__body strong {
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+/* 리스트 */
+.rv-slide__body ul,
+.rv-slide__body ol {
+  padding-left: 1.4rem;
+}
+.rv-slide__body li {
+  margin-bottom: 0.6rem;
+  padding-left: 0.3rem;
+}
+.rv-slide__body ul > li::marker {
+  color: #818cf8;
+}
+.rv-slide__body ol > li::marker {
+  color: #818cf8;
+  font-weight: 600;
+}
+
+/* 리스트 → 카드 그리드 (2~4개 짧은 항목) */
+.rv-card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 1.2rem 0;
+}
+.rv-card-grid > li {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.6rem;
+  padding: 1.2rem 1.3rem;
+  margin: 0 !important;
+  transition: border-color 0.2s, background 0.2s;
+}
+.rv-card-grid > li:hover {
+  background: rgba(99, 102, 241, 0.06);
+  border-color: rgba(99, 102, 241, 0.25);
+}
+.rv-card-grid > li::marker {
+  content: none;
+}
+.rv-card-grid > li strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #a5b4fc;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.rv-card-grid > li {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #94a3b8;
+}
+
+/* 세로 스텝 카드 */
+.rv-step-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0.8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.rv-step-list > li {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem 0.8rem 3.2rem;
+  margin: 0 !important;
+  transition: border-color 0.2s, background 0.2s;
+}
+.rv-step-list > li:hover {
+  background: rgba(99, 102, 241, 0.06);
+  border-color: rgba(99, 102, 241, 0.25);
+}
+/* 스텝 번호 뱃지 */
+.rv-step-list > li::before {
+  content: attr(data-step);
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #a78bfa);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.rv-step-list > li strong {
+  display: block;
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+/* 항목 사이 화살표 */
+.rv-step-list > li + li {
+  margin-top: 0 !important;
+}
+.rv-step-list > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 1.55rem;
+  bottom: -0.55rem;
+  width: 2px;
+  height: 0.5rem;
+  background: rgba(99, 102, 241, 0.4);
+  z-index: 1;
+}
+/* 화살표 간격 확보 */
+.rv-step-list > li:not(:last-child) {
+  margin-bottom: 0.5rem !important;
+}
+
+/* 테이블 → 카드 스타일 */
+.rv-slide__body table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.95rem;
+  margin: 1.2rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.rv-slide__body th {
+  background: rgba(99, 102, 241, 0.15);
+  color: #c7d2fe;
+  font-weight: 600;
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.rv-slide__body td {
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.rv-slide__body tr:last-child td {
+  border-bottom: none;
+}
+.rv-slide__body tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* 인용문 → 강조 카드 */
+.rv-slide__body blockquote {
+  border: none;
+  border-left: 3px solid #6366f1;
+  margin: 1.2rem 0;
+  padding: 1rem 1.4rem;
+  background: rgba(99, 102, 241, 0.08);
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #e2e8f0;
+  font-size: 1.05rem;
+}
+.rv-slide__body blockquote p {
+  margin: 0.3rem 0;
+}
+
+/* admonition */
+.rv-slide__body .admonition,
+.rv-slide__body details {
+  font-size: 0.95rem;
+  margin: 1.2rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+.rv-slide__body .admonition .admonition-title,
+.rv-slide__body details summary {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* 체크리스트 */
+.rv-slide__body .task-list-control input[type="checkbox"] {
+  accent-color: #6366f1;
+}
+
+/* warning / failure / danger admonition 강조 (붉은색) */
+.rv-slide__body .admonition.warning,
+.rv-slide__body .admonition.danger,
+.rv-slide__body .admonition.failure {
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  background: rgba(239, 68, 68, 0.08);
+}
+.rv-slide__body .admonition.warning .admonition-title,
+.rv-slide__body .admonition.danger .admonition-title,
+.rv-slide__body .admonition.failure .admonition-title {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+}
+
+/* tip / success admonition 약한 강조 (초록색) */
+.rv-slide__body .admonition.tip,
+.rv-slide__body .admonition.hint,
+.rv-slide__body .admonition.success,
+.rv-slide__body .admonition.check {
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  background: rgba(52, 211, 153, 0.06);
+}
+.rv-slide__body .admonition.tip .admonition-title,
+.rv-slide__body .admonition.hint .admonition-title,
+.rv-slide__body .admonition.success .admonition-title,
+.rv-slide__body .admonition.check .admonition-title {
+  background: rgba(52, 211, 153, 0.1);
+  color: #6ee7b7;
+}
+
+/* 체크리스트 아이콘 */
+.rv-check-item {
+  list-style: none !important;
+  position: relative;
+  padding-left: 0.2rem;
+}
+.rv-check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid rgba(99, 102, 241, 0.5);
+  border-radius: 0.25rem;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+  flex-shrink: 0;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+/* 퍼머링크 앵커 숨김 */
+.rv-slide .headerlink,
+.rv-slide a.headerlink {
+  display: none !important;
+}
+
+/* ── 전체화면 보정 ── */
+.rv-overlay:fullscreen {
+  background: #0f172a;
+}
+.rv-overlay:fullscreen .rv-slide {
+  max-width: 1060px;
+}
+.rv-overlay:fullscreen .rv-slide__body {
+  font-size: 1.25rem;
+}
+.rv-overlay:fullscreen h2.rv-slide__title {
+  font-size: 2.4rem;
+}
+.rv-overlay:fullscreen .rv-slide--title h1.rv-slide__title {
+  font-size: 3.8rem;
+}
+
+/* ── 다크 모드 대응 (이미 다크 기본이므로 라이트 스킴 대비만) ── */
+[data-md-color-scheme="default"] .rv-overlay {
+  background: #0f172a;
+  color: #e2e8f0;
+}

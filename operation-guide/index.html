@@ -1,0 +1,1402 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="비개발자를 위한 AI 활용 교육 사이트">
+      
+      
+      
+      
+        <link rel="prev" href="../security-guide/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>교육 운영 가이드 - AI 활용 교육</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/reveal-override.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="AI 활용 교육" class="md-header__button md-logo" aria-label="AI 활용 교육" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 활용 교육
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              교육 운영 가이드
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AI 활용 교육" class="md-nav__button md-logo" aria-label="AI 활용 교육" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 활용 교육
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    보안 및 개인정보 가이드
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    교육 운영 가이드
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    교육 운영 가이드
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 사전설문 설계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 사전설문 설계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설문 항목 예시
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="설문 항목 예시">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본 정보
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        업무·학습 패턴 파악
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        교육 기대
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        그룹핑 기준
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 교육 당일 운영 체크리스트
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 교육 당일 운영 체크리스트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        교육 전 (D-1 ~ 당일 시작 전)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        교육 진행 중
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        교육 후 (당일)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 효과측정
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 효과측정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        측정 시점
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        판단 기준
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 개선 프로세스
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 개선 프로세스">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개선 사이클
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        직후 설문에서 수집할 개선 포인트
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1개월 후 추적에서 파악할 것
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 과제 난이도 파일럿 테스트
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 과제 난이도 파일럿 테스트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        파일럿 절차
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 운영 부하 관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 운영 부하 관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원칙: 작게 시작하고 점진적으로 확장
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        단계별 확장 전략
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        운영 부하 관리 팁
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 사전설문 설계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 사전설문 설계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설문 항목 예시
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="설문 항목 예시">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본 정보
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        업무·학습 패턴 파악
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        교육 기대
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        그룹핑 기준
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 교육 당일 운영 체크리스트
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 교육 당일 운영 체크리스트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        교육 전 (D-1 ~ 당일 시작 전)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        교육 진행 중
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        교육 후 (당일)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 효과측정
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 효과측정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        측정 시점
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        판단 기준
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 개선 프로세스
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 개선 프로세스">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개선 사이클
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        직후 설문에서 수집할 개선 포인트
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1개월 후 추적에서 파악할 것
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 과제 난이도 파일럿 테스트
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 과제 난이도 파일럿 테스트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        파일럿 절차
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 운영 부하 관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 운영 부하 관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원칙: 작게 시작하고 점진적으로 확장
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        단계별 확장 전략
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        운영 부하 관리 팁
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <!-- 슬라이드 모드 전환 버튼 -->
+  <a id="slide-mode-btn" class="rv-btn" href="#" role="button"
+     title="슬라이드 모드로 보기 (F: 전체화면, ESC: 닫기)">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M10 8v8l5-4-5-4zm9-5H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+    </svg>
+    슬라이드 모드
+  </a>
+
+  
+                  
+
+
+
+<h1 id="_1">교육 운영 가이드<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>교육 운영자(강사)를 위한 준비·운영·개선 가이드입니다. 이 문서만으로 교육을 준비하고 운영할 수 있도록 구성했습니다.</p>
+</blockquote>
+<hr />
+<h2 id="1">1. 사전설문 설계<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>교육 효과를 높이려면 참가자의 현재 수준과 니즈를 미리 파악해야 합니다. 설문 결과를 기반으로 <strong>직군별·문제유형별 그룹핑</strong>을 진행합니다. 그룹핑은 실습 주제를 맞춤화하여 <strong>참가자별 결과물 완성률을 높이기 위한</strong> 단계입니다.</p>
+<h3 id="_2">설문 항목 예시<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">참가 전제</p>
+<p>이 교육은 <strong>챗봇 AI(Claude·Gemini·ChatGPT 등)를 한 번이라도 써 본 분</strong>을 대상으로 합니다. 사전설문은 "경험 유무"가 아닌 "현재 활용 수준(<a href="../#stage-model">AI 활용 3단계</a>)"을 파악하는 데 목적이 있습니다. 자세한 대상자·준비사항은 <a href="../#who">참가자 안내</a>를 참고하세요.</p>
+</div>
+<h4 id="_3">기본 정보<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>예시 선택지</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>소속 부서·직군</td>
+<td>영업, 마케팅, 인사, 재무, 기획, 기타</td>
+</tr>
+<tr>
+<td>현재 AI 활용 수준</td>
+<td>1단계(챗봇 대화만 해봤다) / 2단계(맞춤 챗봇·프롬프트 재활용을 해봤다) / 3단계(에이전트로 로컬 파일·작업을 자동화해봤다)</td>
+</tr>
+<tr>
+<td>주로 사용하는 AI 도구</td>
+<td>Claude, ChatGPT, Gemini, 기타</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_4">업무·학습 패턴 파악<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>예시 선택지</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>반복적으로 수행하는 업무·학습 과제</td>
+<td>보고서 작성, 데이터 정리, 이메일 작성, 자료 요약, 문제 풀이·복습, 기타 (서술)</td>
+</tr>
+<tr>
+<td>자동화·효율화하고 싶은 과제 1순위</td>
+<td>서술형</td>
+</tr>
+<tr>
+<td>가장 시간이 오래 걸리는 작업</td>
+<td>서술형</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_5">교육 기대<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>예시 선택지</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>이 교육에서 얻고 싶은 것</td>
+<td>실습 경험 / 활용 아이디어 / 보안 이해 / 기타</td>
+</tr>
+<tr>
+<td>AI 활용에 대한 우려 사항</td>
+<td>보안 / 정확성 / 업무 적용 어려움 / 없음</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">그룹핑 기준<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>설문 결과를 바탕으로 다음과 같이 그룹을 나눕니다.</p>
+<ul>
+<li><strong>직군별</strong>: 유사한 업무를 하는 사람끼리 묶어 실습 주제를 맞춤 제공</li>
+<li><strong>활용 단계별</strong>: 1·2단계에 머물러 있는 그룹은 <strong>2단계(Claude Projects) 실습</strong>에 집중, 이미 2단계에 익숙한 그룹은 <strong>3단계(Claude Cowork) 실습</strong>으로 심화</li>
+<li><strong>문제유형별</strong>: "보고서 자동화" 니즈와 "데이터 정리" 니즈를 구분하여 실습 유형 배정</li>
+</ul>
+<p><strong>그룹 조합 예시</strong></p>
+<ul>
+<li>예 1: <code>영업팀 · 활용 1단계 · 보고서 자동화</code> → 2단계 실습(주간 영업 보고서 자동화 템플릿)</li>
+<li>예 2: <code>재무팀 · 활용 2단계 · 데이터 정리</code> → 3단계 실습(월별 거래 내역을 Cowork로 분류·요약)</li>
+</ul>
+<hr />
+<h2 id="2">2. 교육 당일 운영 체크리스트<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="d-1">교육 전 (D-1 ~ 당일 시작 전)<a class="headerlink" href="#d-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 참가자에게 <strong>준비사항 사전 안내 완료</strong> — Claude Pro 이상 계정 결제, (임직원) 사내 AI 도구 로그인, 실습 주제 1개 아이디어 등. <a href="../#preparation">참가자 준비사항</a> 링크 공유.</li>
+<li>[ ] 강사 본인의 실습 환경 접속 확인 (AI 도구 로그인, 네트워크)</li>
+<li>[ ] 참가자 그룹핑 결과 확정 및 조 편성</li>
+<li>[ ] 실습용 <strong>가상 데이터</strong> 준비 — 실제 개인정보는 절대 사용하지 않고, 실습을 위한 가상 데이터를 직접 생성</li>
+<li>[ ] 프로젝터/화면 공유 테스트</li>
+<li>[ ] 보안 가이드 인쇄물 또는 링크 준비</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">가상 데이터 생성 팁</p>
+<p>Claude 등 AI에게 "OO 업무에서 사용하는 가상의 고객 데이터 20행을 CSV로 만들어줘. 이름은 고객A·고객B 같은 일련번호로, 전화번호는 ○ 처리해줘"처럼 <strong>직접 요청</strong>하면 개인정보 걱정 없는 샘플 데이터를 쉽게 얻을 수 있습니다.</p>
+</div>
+<h3 id="_7">교육 진행 중<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 보안 가이드 안내 (교육 시작 시 5분) — <strong>핵심 원칙 3가지(입력 금지 정보 / 결과물 검증 / 문제 발생 시 대응) 중심</strong>으로 요약</li>
+<li>[ ] 실습 목표 안내: "오늘 1개의 결과물을 만들어 갑니다"</li>
+<li>[ ] 그룹별 실습 시작 → 강사 순회 지원</li>
+<li>[ ] 중간 체크: 참가자별 진행 상황 확인 (막히는 사람 우선 지원)</li>
+<li>[ ] 결과물 공유 시간 (선택): 잘 만든 사례 2~3개 전체 공유</li>
+</ul>
+<h3 id="_8">교육 후 (당일)<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 교육 후 설문 배포 (만족도 + 개선점)</li>
+<li>[ ] 참가자 결과물 저장·백업 안내</li>
+<li>[ ] 다음 단계 안내 (추가 학습 자료, 질문 채널 등)</li>
+</ul>
+<hr />
+<h2 id="3">3. 효과측정<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="_9">측정 시점<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>교육 직후 만족도 조사만으로는 실제 효과를 알 수 없습니다. <strong>1개월 후 사용률 추적</strong>이 핵심입니다. (시점은 조직 상황에 따라 2주·6주 등으로 조정 가능.)</p>
+<table>
+<thead>
+<tr>
+<th>시점</th>
+<th>측정 항목</th>
+<th>방법</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>교육 직후</td>
+<td>만족도, 이해도, 결과물 완성 여부</td>
+<td>설문</td>
+</tr>
+<tr>
+<td>1주 후</td>
+<td>결과물 활용 시도 여부</td>
+<td>간단한 체크인 (메일·메신저)</td>
+</tr>
+<tr>
+<td>1개월 후</td>
+<td>지속 사용 여부, 업무·학습 적용 사례</td>
+<td>설문 + 인터뷰</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_10">판단 기준<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>아래 수치는 <strong>초기 파일럿 기준 참고치</strong>이며, 회차별로 조직 상황에 맞춰 조정합니다.</p>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>목표</th>
+<th>판단</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>교육 직후 결과물 완성률</td>
+<td>80% 이상</td>
+<td>실습 난이도 적정</td>
+</tr>
+<tr>
+<td>1개월 후 주 1회 이상 사용률</td>
+<td>30% 이상</td>
+<td>교육 효과 있음</td>
+</tr>
+<tr>
+<td>1개월 후 업무·학습 적용 사례 보고</td>
+<td>참가자의 20% 이상</td>
+<td>실질적 가치 창출</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">목표 미달 시</p>
+<p>목표에 미달하면 아래 "개선 프로세스"를 통해 원인을 분석하고 다음 교육에 반영합니다.</p>
+</div>
+<hr />
+<h2 id="4">4. 개선 프로세스<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>교육은 1회성이 아닌 <strong>반복 개선 사이클</strong>로 운영합니다.</p>
+<h3 id="_11">개선 사이클<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="web-only">
+<pre class="mermaid"><code>flowchart LR
+    A["교육 실시"] --&gt; B["직후 설문"]
+    B --&gt; C["1개월 후 추적"]
+    C --&gt; D["원인 분석"]
+    D --&gt; E["개선 반영"]
+    E --&gt; F["다음 교육"]
+    F -.-&gt; A</code></pre>
+</div>
+<div class="slide-only">
+<ol>
+<li><strong>교육 실시</strong></li>
+<li><strong>직후 설문</strong> <em>(만족도·개선점)</em></li>
+<li><strong>1개월 후 추적</strong> <em>(업무 적용 여부)</em></li>
+<li><strong>원인 분석</strong></li>
+<li><strong>개선 반영</strong></li>
+<li><strong>다음 교육</strong> <em>(→ 다시 처음으로 순환)</em></li>
+</ol>
+</div>
+<h3 id="_12">직후 설문에서 수집할 개선 포인트<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>실습 난이도가 적절했는지 (너무 쉬움 / 적절 / 너무 어려움)</li>
+<li>실습 시간이 충분했는지</li>
+<li>원할 때 강사 도움을 받을 수 있었는지</li>
+<li>보안 가이드가 이해하기 쉬웠는지</li>
+<li>추가로 배우고 싶은 주제</li>
+</ul>
+<h3 id="1_1">1개월 후 추적에서 파악할 것<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>사용하지 않게 된 이유 (잊어버림 / 필요 없음 / 어려움 / 보안 우려 등)</li>
+<li>실제 업무·학습에 적용한 사례와 효과</li>
+<li>추가 지원이 필요한 부분</li>
+</ul>
+<hr />
+<h2 id="5">5. 과제 난이도 파일럿 테스트<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>새로운 실습 과제를 도입할 때는 <strong>본 교육 전에 소규모 파일럿 테스트</strong>를 진행합니다.</p>
+<h3 id="_13">파일럿 절차<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>대상 선정</strong>: 본 교육 대상과 유사한 배경의 3~5명 선정</li>
+<li><strong>실습 진행</strong>: 동일한 환경에서 실습 과제 수행</li>
+<li><strong>관찰 및 기록</strong>:<ul>
+<li>완료까지 소요 시간</li>
+<li>막히는 지점과 질문 내용</li>
+<li>결과물의 품질 수준</li>
+</ul>
+</li>
+<li><strong>난이도 판정</strong>:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>소요 시간</th>
+<th>완료율</th>
+<th>판정</th>
+<th>조치</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>목표 시간의 50% 이내</td>
+<td>100%</td>
+<td>너무 쉬움</td>
+<td>심화 단계 추가</td>
+</tr>
+<tr>
+<td>목표 시간의 80~120%</td>
+<td><strong>60% 이상</strong></td>
+<td>적정</td>
+<td>유지</td>
+</tr>
+<tr>
+<td>목표 시간 초과</td>
+<td>60% 미만</td>
+<td>너무 어려움</td>
+<td>단계 분리 또는 힌트 추가</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6">6. 운영 부하 관리<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="_14">원칙: 작게 시작하고 점진적으로 확장<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>한 번에 모든 대상·모든 유형의 교육을 진행하면 운영 부하가 과도해집니다.</p>
+<h3 id="_15">단계별 확장 전략<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>대상</th>
+<th>실습 유형 수</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1단계</td>
+<td>1개 부서 파일럿</td>
+<td>2~3개</td>
+<td>핵심 유형만 검증</td>
+</tr>
+<tr>
+<td>2단계</td>
+<td>전사 1차 교육</td>
+<td>2~3개</td>
+<td>파일럿 결과 반영</td>
+</tr>
+<tr>
+<td>3단계</td>
+<td>전사 확대</td>
+<td>유형 추가</td>
+<td>수요 기반 확장</td>
+</tr>
+</tbody>
+</table>
+<p><strong>전략 해설</strong></p>
+<ul>
+<li><strong>1단계 파일럿</strong>은 숙달된 2~3개 유형만 운영하여 <strong>실패 리스크를 작은 범위에 가두는 것</strong>이 핵심입니다. 여기서 확인한 난이도·시간·강사 부하 데이터를 2단계에 반영합니다.</li>
+<li><strong>2단계 전사 1차 교육</strong>도 유형 수는 그대로 유지합니다. 확장의 유혹보다 <strong>운영 안정성 확보</strong>가 우선입니다.</li>
+<li><strong>3단계</strong>에서부터 사내 수요 기반으로 실습 유형을 늘립니다. 이때는 <strong>강사 인력 확충과 FAQ 정비가 선행</strong>되어야 합니다.</li>
+</ul>
+<h3 id="_16">운영 부하 관리 팁<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>초반에는 실습 유형을 2~3개로 제한</strong>: 강사가 충분히 숙달된 유형만 운영</li>
+<li><strong>강사 1인당 참가자 수 제한</strong>: 실습 지원을 위해 강사 1인당 10~15명 권장</li>
+<li><strong>자주 묻는 질문(FAQ) 정리</strong>: 반복 질문은 문서화하여 자기 해결 유도 — 별도 FAQ 페이지를 추후 추가 예정이며, 그 전까지는 회차별 Q&amp;A 기록을 남겨 다음 회차에 반영</li>
+<li><strong>교육 운영 체크리스트 재사용</strong>: 매 회차마다 동일한 체크리스트를 사용하여 누락 방지</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../security-guide/" class="md-footer__link md-footer__link--prev" aria-label="이전: 보안 및 개인정보 가이드">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                보안 및 개인정보 가이드
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/js/reveal-toggle.js"></script>
+      
+    
+  </body>
+</html>
