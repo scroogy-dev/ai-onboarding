@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 4 — GitHub Actions 배포 워크플로우 작성
+> ▶️ 다음 작업: Task 5 — GitHub Pages 배포 확인 및 안내 문서 갱신
 
 ---
 
@@ -79,9 +79,18 @@
 
 ### Task 4: GitHub Actions 배포 워크플로우 작성
 
-- **결과**:
+- **결과**: 완료
 - **수행 내용 요약**:
+  - `.github/workflows/deploy.yml`을 단일 job 순차 실행으로 재작성: MkDocs 빌드(`site/`) → Slidev 빌드(`site/slides/`) → `peaceiris/actions-gh-pages@v4`로 `gh-pages` 브랜치에 합본 배포
+  - Slidev base path는 `/ai-onboarding/slides/`로 지정 (`slidev build --base /ai-onboarding/slides/ --out ../site/slides`)
+  - Node.js 20 + `npm ci` + `slides/package-lock.json` 캐시 적용
+  - MkDocs는 `--strict` 플래그로 변경 (경고를 빌드 실패로 승격 — 향후 회귀 방지)
+  - 로컬 검증: `mkdocs build --strict` 1.43초 통과, `npx slidev build --base ...` 11.41초 통과, `site/index.html`(MkDocs)·`site/slides/index.html`(Slidev) 공존, Slidev `index.html` asset 경로가 `/ai-onboarding/slides/assets/...`로 올바르게 prefix됨
 - **특이 사항**:
+  - **단일 job 순차 선택 근거**: ADR-0002의 단방향(`docs/`→`slides/`) 구조에서 두 빌드는 각 1.4–11초로 작아 병렬화 이득이 미미함. 합본 단계가 단순(같은 `site/` 디렉토리에 누적)해지고, 한쪽 실패 시 둘 다 배포되지 않는 안전판 효과도 큼 (1인 운영 규모에서 적합).
+  - **`mkdocs gh-deploy → peaceiris/actions-gh-pages` 전환**: `gh-deploy`는 `site/`만 commit·push해서 Slidev 합본 배포가 어려움. 직접 `mkdocs build`로 산출물만 만들고 별도 액션으로 푸시하는 패턴이 두 산출물 합본에 더 단순함. `gh-pages` 브랜치 운영 방식은 그대로 유지되어 GitHub 저장소 Pages 설정 변경 불필요.
+  - **`--strict` 도입**: 기존엔 `mkdocs gh-deploy --force`만 사용해 빌드 경고가 무시됐음. 빌드 단계가 분리된 김에 `--strict`를 켜서 누락 링크·잘못된 nav 등을 CI에서 잡도록 함.
+  - 실제 Pages 배포 검증은 main 머지 후에만 가능 → Task 5에서 수행.
 
 ---
 

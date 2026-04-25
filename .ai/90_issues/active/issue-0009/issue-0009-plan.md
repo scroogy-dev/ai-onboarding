@@ -66,7 +66,7 @@
 
 ### Task 4: GitHub Actions 배포 워크플로우 작성
 
-- [ ] 완료
+- [x] 완료
 - **목표**: main push 시 MkDocs와 Slidev 산출물이 함께 GitHub Pages로 배포되도록 한다.
 - **작업 내용**:
   1. 기존 MkDocs 워크플로우 검토 후 Slidev 빌드 단계 추가 (병렬 job vs 단일 job 결정)
