@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 2 — 기존 슬라이드 → Slidev 마크다운 변환
+> ▶️ 다음 작업: Task 3 — 디자인 검토 및 수정
 
 ---
 
@@ -42,9 +42,20 @@
 
 ### Task 2: 기존 슬라이드 → Slidev 마크다운 변환
 
-- **결과**:
+- **결과**: 완료
 - **수행 내용 요약**:
+  - `docs/index.md` SSoT의 Why/Who/What/How 흐름을 22슬라이드로 분할 (Cover · Section×4 · 콘텐츠 슬라이드 14 · Statement 2 · End)
+  - mermaid 다이어그램 2개 이식: `AI 활용 3단계 모델`(ADR-0001 핵심)·`계획→실행 4단계` — `docs/`와 **완전히 동일한 구문** 유지(메시지 변형 금지)
+  - 표는 셀 내 `<br/>`로 줄바꿈 정리, 4컬럼 3단계 표는 본 교육 컬럼 텍스트 단축으로 폭 맞춤
+  - admonition 패턴은 Slidev에 직접 대응이 없어, 강조 박스 2개(학생 트랙 안내·Claude Pro 필수)는 `border-l-4` UnoCSS 컬러 박스로 시각 구분, 일반 안내는 blockquote(`>`)로 통일
+  - `npx slidev build` 성공 (10.94s, 590 modules, 경고/오류 0)
 - **특이 사항**:
+  - **공통 자산(추후 추출 후보, ADR-0002 후행 추출 정책)**:
+    1. 3단계 모델 mermaid — `docs/index.md` L52-61 ↔ `slides/slides.md` 동일 구문 (변형 금지 자산 — 향후 Slidev `src:` import 1순위)
+    2. 계획→실행 4단계 mermaid — `docs/index.md` L145-153 ↔ slides 동일 구문 (변형 금지 자산 — 추출 후보)
+    3. 3단계 비교 테이블 (4컬럼) — slides에서는 "본 교육에서" 컬럼 문구 단축, 향후 통일 시 추출 검토
+  - admonition 등가물 부재가 디자인 부담을 키움 — Task 3에서 일관된 강조 컴포넌트(또는 layout) 정리 필요
+  - 시각적 검증(가독성·여백·색상)은 Task 3에서 수행 — 본 Task는 콘텐츠 이식·구조 정합성에 집중
 
 ---
 
