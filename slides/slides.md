@@ -1,5 +1,5 @@
 ---
-theme: seriph
+theme: the-unnamed
 layout: cover
 title: AI 활용 온보딩
 info: |
@@ -118,9 +118,6 @@ flowchart LR
     B["<b>2단계</b><br/>프롬프트 재활용<br/>Claude Projects"]
     C["<b>3단계</b><br/>에이전트 활용<br/>Claude Cowork"]
     A --> B --> C
-    style A fill:#e3f2fd,stroke:#90caf9
-    style B fill:#bbdefb,stroke:#64b5f6
-    style C fill:#90caf9,stroke:#42a5f5
 ```
 
 참가자는 대체로 **1단계는 통과한 상태**로 참여하며, 본 교육은 **2·3단계**에 초점을 맞춥니다.

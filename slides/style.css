@@ -1,0 +1,6 @@
+/* the-unnamed 베이스 위에 한국어 sans 폰트 강제 (ADR-0004) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+.slidev-layout {
+  font-family: 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+}
