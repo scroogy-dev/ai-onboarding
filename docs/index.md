@@ -53,7 +53,7 @@ flowchart LR
     B["<b>2단계</b><br/>프롬프트 재활용<br/>Agent Skills"]
     C["<b>3단계</b><br/>에이전트 활용<br/>Claude Cowork"]
     A --> B --> C
-    style A fill:#e3f2fd,stroke:#90caf9
+    style A fill:#e5e7eb,stroke:#9ca3af,color:#6b7280
     style B fill:#bbdefb,stroke:#64b5f6
     style C fill:#90caf9,stroke:#42a5f5
 ```
@@ -91,17 +91,20 @@ flowchart LR
     - 요금제 안내: [Claude 요금제](https://claude.com/pricing)
     - 계정 생성과 결제는 **교육 시작 전에 미리** 완료해 주세요
 
-#### 참가자가 준비할 것
+<div class="grid" markdown>
 
-- 개인 노트북 (웹 브라우저가 원활히 동작하는 환경)
-- 본인이 반복하는 업무·학습 작업 **1개 아이디어** (실습 주제로 사용)
-- **Claude Pro 이상 계정** (위 경고 박스 참조)
-- (임직원 트랙) 사내 AI 도구 로그인 사전 확인 — 교육 시작 전에 강사가 안내합니다
+!!! info "참가자가 준비"
+    - 개인 노트북 (웹 브라우저가 원활히 동작하는 환경)
+    - 본인이 반복하는 업무·학습 작업 **1개 아이디어** (실습 주제로 사용)
+    - **Claude Pro 이상 계정** (위 경고 박스 참조)
+    - **Claude Desktop 설치** (Claude Cowork·Code 사용에 필요)
+    - (임직원 트랙) 사내 AI 도구 로그인 사전 확인 — 교육 시작 전에 강사가 안내합니다
 
-#### 강사가 준비합니다 (참가자는 신경 쓰지 않아도 됩니다)
+!!! note "강사가 준비 (참가자는 신경 쓰지 않아도 됩니다)"
+    - 실습용 **가상 데이터** (개인정보가 포함되지 않은 샘플)
+    - 실습 가이드 자료 및 진행 슬라이드
 
-- 실습용 **가상 데이터** (개인정보가 포함되지 않은 샘플)
-- 실습 가이드 자료 및 진행 슬라이드
+</div>
 
 ---
 
