@@ -4,3 +4,8 @@
 .slidev-layout {
   font-family: 'Noto Sans KR', system-ui, -apple-system, sans-serif;
 }
+
+/* blockquote가 직전 엘리먼트(표·본문·코드블록 등)와 너무 붙지 않도록 상단 여백 보강 */
+.slidev-layout blockquote {
+  margin-top: 1.75em;
+}
