@@ -42,35 +42,25 @@ npm run dev
 
 발표 마일스톤 직전에 `docs/`(SSoT)의 핵심 메시지가 `slides/`에 정확히 반영됐는지 한 번 점검합니다. ADR-0002의 단방향 동기화 원칙에 따라 **항상 `docs/`를 기준**으로 비교합니다.
 
-- [ ] **AI 활용 3단계 모델 메시지** ([ADR-0001](.ai/50_adr/active/adr-0001-practice-tool-scope-and-stage-model.md))이 `docs/index.md`와 `slides/slides.md`에서 동일하게 전달됨 — 단계명·정의·교육 범위 표현 일치
-- [ ] **mermaid 다이어그램 2종**의 구문이 양쪽에서 동일
-  - "AI 활용 3단계 모델" 다이어그램
-  - "계획 → 실행 4단계" 다이어그램
-- [ ] **3단계 비교 표**의 핵심 컬럼(단계명·핵심 도구·"본 교육에서") 메시지가 일관 — 슬라이드 폭 제약으로 문구를 단축한 셀이 있어도, 의미가 변형되지 않았는지 확인
-- [ ] **Why / Who / What / How** 4섹션 순서와 핵심 메시지가 슬라이드 흐름에 그대로 반영됨
-- [ ] **보안 및 개인정보 가이드 섹션**이 `docs/security-guide.md`의 3블록 + 정리표 메시지를 슬라이드에 반영 (`slides/slides.md` 본 흐름 끝·감사 직전 위치)
-  - 공통 원칙: 절대 입력 금지 정보(표) · AI 결과물 검증 · 문제 발생 시 대응(임직원/학생 분기)
-  - 임직원 트랙: 엔터프라이즈 환경의 보호 장치·한계 · 비식별 처리 예시
-  - 학생·일반인 트랙: 무료 AI 도구 특성 · 4수칙(내 정보·타인 정보·사진 속 개인정보·약관 확인)
-  - 트랙별 적용 정리 표
-- [ ] **강조 박스**(학생 트랙 안내, Claude Pro 필수 등)가 슬라이드에서 시각적으로 식별 가능 — admonition 등가물로 변환된 콘텐츠 누락 없음
-- [ ] `slides/` 로컬 실행(`npm run dev`) 후 처음부터 끝까지 1회 풀 점검 — Mermaid·표 깨짐 없음
+- [ ] `docs/`의 핵심 메시지·구성·다이어그램·표가 `slides/`에 동일하게 전달됨 (슬라이드 폭 제약으로 문구가 짧아져도 의미는 보존)
+- [ ] `docs/`의 강조 요소(admonition·강조 박스 등)가 슬라이드에서도 시각적으로 구분되어 누락 없음
+- [ ] `slides/` 로컬 실행(`npm run dev`)으로 처음부터 끝까지 1회 풀 점검 — Mermaid·표 깨짐 없음
 - [ ] 배포 URL(문서·슬라이드)에서 동일 점검 1회
 
-체크리스트의 "왜"가 더 궁금하면 ADR-0002의 "원칙: 단방향 동기화" 항목을 참조하세요.
+세부 점검 항목은 발표 회차마다 달라지므로, 회차별 변경 범위에 맞춰 위 원칙을 적용합니다. "왜"가 더 궁금하면 ADR-0002의 "원칙: 단방향 동기화" 항목을 참조하세요.
 
 ## 디렉토리 구조
 
 ```
 ai-onboarding/
+├── .ai/                    # AI 협업 컨텍스트 (ADR, 이슈 작업 등)
+├── .github/workflows/      # CI/CD (MkDocs + Slidev 합본 배포)
 ├── docs/                   # SSoT: 모든 원본 마크다운 (MkDocs로 발행)
-├── slides/                 # docs/의 발표용 파생 (Slidev로 발행)
 ├── overrides/              # MkDocs Material 테마 커스터마이징
 ├── scripts/                # 자동화 스크립트 (컨플루언스 동기화 등)
+├── slides/                 # docs/의 발표용 파생 (Slidev로 발행)
 ├── mkdocs.yml              # MkDocs 사이트 설정
-├── requirements.txt        # MkDocs Python 의존성
-├── .github/workflows/      # CI/CD (MkDocs + Slidev 합본 배포)
-└── .ai/                    # AI 협업 컨텍스트 (ADR, 이슈 작업 등)
+└── requirements.txt        # MkDocs Python 의존성
 ```
 
 AI 어시스턴트용 가이드는 [.ai/AI-CONTEXT.md](.ai/AI-CONTEXT.md)를 참고하세요.
