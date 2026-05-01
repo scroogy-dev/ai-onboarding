@@ -30,6 +30,53 @@ mdc: true
 
 
 ---
+layout: default
+---
+
+# 오늘의 흐름
+
+<div class="text-xl mt-12 max-w-3xl mx-auto">
+
+<div class="flex items-center mb-5">
+<div class="font-mono text-2xl opacity-50 w-14">01</div>
+<div class="font-bold w-24">Why</div>
+<div class="opacity-80">왜 AI를 배워야 하나</div>
+</div>
+
+<div class="flex items-center mb-5">
+<div class="font-mono text-2xl opacity-50 w-14">02</div>
+<div class="font-bold w-24">Who</div>
+<div class="opacity-80">누구를 위한 교육인가</div>
+</div>
+
+<div class="flex items-center mb-5">
+<div class="font-mono text-2xl opacity-50 w-14">03</div>
+<div class="font-bold w-24">What</div>
+<div class="opacity-80">얻어갈 것 — 결과물 1개</div>
+</div>
+
+<div class="flex items-center mb-5">
+<div class="font-mono text-2xl opacity-50 w-14">04</div>
+<div class="font-bold w-24">How</div>
+<div class="opacity-80">어떻게 진행되나</div>
+</div>
+
+<div class="flex items-center">
+<div class="font-mono text-2xl opacity-50 w-14">05</div>
+<div class="font-bold w-24">보안</div>
+<div class="opacity-80">안전한 AI 사용</div>
+</div>
+
+</div>
+
+<!--
+오늘 90분 강의의 전체 흐름을 한눈에 보여주는 신호등.
+청중이 "지금 어디에 있고, 어디로 가는지" 알고 들을 수 있게 함.
+복잡한 다이어그램보다 간결한 목차 한 장으로 정렬.
+-->
+
+
+---
 layout: section
 ---
 
@@ -111,6 +158,46 @@ class: text-center
 <div class="text-2xl font-bold">"AI 덕분에 내가 직접 할 수 있게 된다" ✅</div>
 
 ---
+
+# AI 없이 vs AI로
+
+<div grid="~ cols-2 gap-4" class="mt-8">
+
+<div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
+<div class="bg-gray-500/40 dark:bg-gray-600/40 text-white px-4 py-2 font-bold text-center">AI 없이 — 사람이 직접</div>
+<div class="bg-gray-50/40 dark:bg-gray-700/20 px-4 py-4">
+
+회의록 30분치 정리
+→ 직접 1시간 작성 + 검수 30분
+
+같은 톤의 이메일을
+**매번 새로** 다듬어 작성
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
+<div class="bg-green-500/40 dark:bg-green-600/40 text-white px-4 py-2 font-bold text-center">AI로 — 옆에서 거드는 도구</div>
+<div class="bg-green-50/40 dark:bg-green-900/15 px-4 py-4">
+
+AI가 회의록 초안 정리
+→ 사람은 검수만, **30분 안쪽**
+
+톤 가이드 1번 만들어두고
+**반복 재사용**
+
+</div>
+</div>
+
+</div>
+
+<!--
+"AI 덕분에 내가 직접" 메시지의 구체 예시 — 추상→구체 다리.
+회의록·이메일은 비개발자 청중 대부분이 매주 만나는 작업이라 공감 진입이 쉬움.
+-->
+
+
+---
 layout: section
 ---
 
@@ -131,7 +218,41 @@ layout: section
 | **임직원(비개발자)** | 사내 AI 도구를 사용할 수 있는 직장인 |
 | **비개발자 학생·일반인** | 학습·생활에 AI를 더 활용하고 싶은 분 |
 
-> 두 트랙 모두 챗봇 AI(Claude·Gemini·ChatGPT 등)를 써 본 경험이 있다고 가정합니다.
+---
+
+# 1단계 통과 — 공통 전제 + 자가 진단
+
+두 트랙 모두 **챗봇 AI를 써 본 경험**이 있다고 가정합니다.
+아래 3문항에 모두 **Yes**로 답할 수 있다면 **1단계는 통과한 상태**입니다.
+
+<div class="text-xl space-y-4 mt-10 max-w-3xl mx-auto">
+
+<div class="flex items-start">
+<div class="text-2xl mr-4 opacity-60 leading-none">☐</div>
+<div>챗봇 AI에 한 번이라도 질문하고 답을 받아본 적이 있다</div>
+</div>
+
+<div class="flex items-start">
+<div class="text-2xl mr-4 opacity-60 leading-none">☐</div>
+<div>질문이 잘 안 통할 때 표현을 바꿔서 다시 물어본 경험이 있다</div>
+</div>
+
+<div class="flex items-start">
+<div class="text-2xl mr-4 opacity-60 leading-none">☐</div>
+<div>AI의 답이 부정확하거나 부족하다고 느낀 적이 있다</div>
+</div>
+
+</div>
+
+<div class="mt-12 text-center text-sm opacity-70">
+경험이 전혀 없다면 먼저 챗봇 AI를 몇 차례 사용해 본 뒤 참가하시길 권장합니다.
+</div>
+
+<!--
+공통 전제(통보)를 자가 진단(능동 체크)과 결합 — 학습자가 자기 위치를 직접 인식.
+"3문항 다 Yes" = 1단계 통과 — 본 교육이 2·3단계 초점이라는 다음 슬라이드 흐름과 연결.
+-->
+
 
 ---
 
@@ -201,6 +322,43 @@ ADR-0001의 핵심 모델 — 본 교육의 기준점이 되는 슬라이드.
 <style>
 table { font-size: 0.85em; }
 </style>
+
+---
+
+# 1단계 vs 2단계 — 매번 vs 재사용
+
+<div grid="~ cols-2 gap-4" class="mt-8">
+
+<div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
+<div class="bg-gray-500/40 dark:bg-gray-600/40 text-white px-4 py-2 font-bold text-center">1단계 — 매번 새로 묻기</div>
+<div class="bg-gray-50/40 dark:bg-gray-700/20 px-4 py-4">
+
+"고객 문의 이메일에 정중하고 친근한 톤으로, 짧게 답장해줘…"
+
+→ 다음 답장도 **같은 지시를 처음부터 다시 입력**
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
+<div class="bg-green-500/40 dark:bg-green-600/40 text-white px-4 py-2 font-bold text-center">2단계 — Skill로 묶어 재사용</div>
+<div class="bg-green-50/40 dark:bg-green-900/15 px-4 py-4">
+
+"고객 답장" Skill을 1번 만들어두고
+**호출만으로 동일 톤 유지**
+
+→ 새 답장은 **본문 핵심만** 입력하면 끝
+
+</div>
+</div>
+
+</div>
+
+<!--
+1↔2단계 차이의 첫 만남. "프롬프트 재활용" 추상어를 "이메일 답장 톤" 일상 작업에 연결.
+청중에게 "지금 본인은 어디에 있나"를 자가 평가시키는 자리 — 자가 진단 슬라이드와 호응.
+-->
+
 
 ---
 
@@ -317,6 +475,43 @@ class: text-center
 | 비개발자<br/>학생·일반인 | AI 오답노트, 자동 문제 출제기,<br/>엑셀 데이터 관리 템플릿 | 학습 자료를 로컬 폴더 단위로<br/>정리·요약하는 에이전트 |
 
 ---
+
+# 1·2단계 vs 3단계 — 묻기 vs 일 맡기기
+
+<div grid="~ cols-2 gap-4" class="mt-8">
+
+<div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
+<div class="bg-gray-500/40 dark:bg-gray-600/40 text-white px-4 py-2 font-bold text-center">1·2단계 — AI에게 묻기</div>
+<div class="bg-gray-50/40 dark:bg-gray-700/20 px-4 py-4">
+
+"다운로드 폴더에 쌓인 파일 정리하는 방법 알려줘"
+
+→ AI는 **방법만 알려주고**,
+실제 정리는 사용자가 직접
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
+<div class="bg-green-500/40 dark:bg-green-600/40 text-white px-4 py-2 font-bold text-center">3단계 — AI에게 일 맡기기</div>
+<div class="bg-green-50/40 dark:bg-green-900/15 px-4 py-4">
+
+"다운로드 폴더의 PDF는 documents/, 이미지는 pictures/로 옮겨줘"
+
+→ AI가 **직접 파일을 옮기고** 결과만 보고
+
+</div>
+</div>
+
+</div>
+
+<!--
+1·2 → 3단계 차이의 핵심 — "AI가 일을 직접 수행한다"는 점.
+폴더 정리는 비개발자 청중이 본인 PC에서 매번 미루는 일이라 공감 진입이 쉬움.
+-->
+
+
+---
 layout: section
 ---
 
@@ -339,6 +534,45 @@ flowchart LR
     A --> B --> C --> D
     D -.->|계획 수정| B
 ```
+
+---
+
+# 막연한 vs 구조화된 프롬프트
+
+<div grid="~ cols-2 gap-4" class="mt-8">
+
+<div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
+<div class="bg-gray-500/40 dark:bg-gray-600/40 text-white px-4 py-2 font-bold text-center">막연한 프롬프트</div>
+<div class="bg-gray-50/40 dark:bg-gray-700/20 px-4 py-4">
+
+"이 보고서 요약해줘"
+
+→ AI가 **임의로 분량·관점**을 잡음
+**매번 결과가 들쭉날쭉**
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
+<div class="bg-green-500/40 dark:bg-green-600/40 text-white px-4 py-2 font-bold text-center">구조화된 프롬프트</div>
+<div class="bg-green-50/40 dark:bg-green-900/15 px-4 py-4">
+
+"이 보고서를 3줄로 요약.
+1줄은 결론, 2~3줄은 근거.
+수치는 그대로 유지."
+
+→ 매번 **같은 형식**의 일관된 결과
+
+</div>
+</div>
+
+</div>
+
+<!--
+"계획 → 실행" 흐름과 직결 — 좋은 계획(구조화)이 좋은 결과를 부른다는 것.
+청중이 평소 챗봇을 쓰는 방식("막연한 프롬프트")의 한계를 자기 경험으로 떠올리게 함.
+-->
+
 
 ---
 
