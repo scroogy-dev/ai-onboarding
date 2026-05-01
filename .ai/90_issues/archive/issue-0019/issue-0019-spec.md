@@ -1,7 +1,7 @@
 # Issue #19 스펙 — 비개발자 대상 교육과정 보완 (교수법 보완)
 
 > GitHub: https://github.com/scroogy-dev/issues/19
-> 진단 노트: [.ai/99_workspace/notes/issue-0019-pedagogy-diagnosis.md](../../../99_workspace/notes/issue-0019-pedagogy-diagnosis.md)
+> 진단 노트: [issue-0019-pedagogy-diagnosis.md](./issue-0019-pedagogy-diagnosis.md)
 
 ## 목표 (Goal)
 
@@ -20,6 +20,7 @@
 - W1': 슬라이드 cover 직후 **agenda(목차) 1장** 추가
 - W2: `index.md` Who의 "공통 전제" → **"공통 전제 + 자가 진단" 결합**. yes/no 3문항. 슬라이드 동기화.
 - W3: **before/after 비교 박스 4개** (A·B·C·D) — Why/Who/What/How 적정 위치에 배치. 슬라이드 동기화.
+- W5: **본질 메시지 프레임 정렬** — Why 섹션과 결정 룰 슬라이드에서 "**비개발자도 소프트웨어를 만든다**"를 본질로 명시. 결정성/비결정성 메커니즘은 "동일 품질로 반복 보장" 결과형으로 우회. 별도 ADR(ADR-0005) 기록.
 - 본문(`docs/`) 변경에 따른 슬라이드(`slides/`) 동기화 (ADR-0002).
 
 **비포함 (Out)**
@@ -38,6 +39,7 @@
 - [ ] W1' agenda 슬라이드 1장이 `slides/slides.md` cover 직후에 추가되어 있다
 - [ ] W2 "공통 전제 + 자가 진단" 결합 형태가 `docs/index.md` Who 섹션과 `slides/slides.md`에 반영되어 있다
 - [ ] W3 A·B·C·D 4개 박스가 `docs/index.md`의 적정 위치(B=Why, A=Who/What, D=What, C=How)와 `slides/slides.md`에 반영되어 있다
+- [ ] W5 본질 메시지 프레임이 Why 섹션 2곳·결정 룰 슬라이드 1장에 반영되고 ADR-0005가 작성되어 있다
 - [ ] 비개발자 톤(전문 용어 최소화)·SSoT 동기화(ADR-0002)와 충돌하지 않는다
 - [ ] MkDocs / Slidev 빌드가 정상이다
 - [ ] PR 머지 및 GitHub Pages 배포 확인 완료
@@ -58,5 +60,6 @@
 | [ADR-0001](../../../50_adr/active/adr-0001-practice-tool-scope-and-stage-model.md) | 실습 도구 범위·3단계 모델 — W3 박스의 단계 비교 메시지 기반 |
 | [ADR-0002](../../../50_adr/active/adr-0002-publishing-structure-docs-ssot-slides-derivative.md) | `docs/` SSoT / `slides/` 파생 — 본문·슬라이드 동기화 원칙 |
 | [ADR-0004](../../../50_adr/active/adr-0004-slides-theme-the-unnamed.md) | 슬라이드 테마·톤 — 발표 톤 정합성 |
+| [ADR-0005](../../../50_adr/active/adr-0005-core-message-non-developers-make-software.md) | 본 강의 본질 메시지 프레임 — W5 결정 근거 |
 | [`.ai/AI-CONTEXT.md`](../../../AI-CONTEXT.md) | 프로젝트 규칙 — 비개발자 톤·SSoT 위치 |
 | [`.ai/40_domain/glossary.md`](../../../40_domain/glossary.md) | 도메인 용어 |

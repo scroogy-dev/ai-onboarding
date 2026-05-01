@@ -143,19 +143,20 @@ layout: section
 - 코딩을 몰라도 **자연어(일상 언어)로 지시**하면 결과물을 얻을 수 있음
 - 복잡한 도구를 익히지 않아도 **대화형으로 작업**을 진행할 수 있음
 - 전문가 수준은 아니더라도 **실용적인 산출물**을 직접 만들 수 있음
+- 일회성 사용을 넘어, **비개발자도 본인 일에 필요한 작은 소프트웨어를 직접 만들 수 있음**
 
 ---
 layout: center
 class: text-center
 ---
 
-# 핵심은 도구의 역할 변화
+# 핵심: 비개발자도 소프트웨어를 만든다
 
-<div class="mt-12 text-xl opacity-50">"AI가 일을 대신 해준다" ❌</div>
+<div class="mt-12 text-xl opacity-50">"AI에게 매번 시킨다" ❌</div>
 
 <div class="text-2xl opacity-60 my-3">↓</div>
 
-<div class="text-2xl font-bold">"AI 덕분에 내가 직접 할 수 있게 된다" ✅</div>
+<div class="text-2xl font-bold">"AI로 나만의 소프트웨어를 만들어 반복 자동화한다" ✅</div>
 
 ---
 
@@ -362,6 +363,51 @@ table { font-size: 0.85em; }
 
 ---
 
+# 어떤 접근을 쓸까요? — 결정 룰
+
+<div grid="~ cols-2 gap-4" class="mt-8">
+
+<div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800">
+<div class="bg-cyan-500/40 dark:bg-cyan-600/40 text-white px-4 py-2 font-bold text-center">① 직접 지시</div>
+<div class="bg-cyan-50/40 dark:bg-cyan-900/15 px-4 py-4">
+
+AI에게 그때그때 작업을 부탁
+
+**적합**: 1회성·탐색·변동 큰 작업
+
+**특성**: 같은 입력에도 매번 결과가 다를 수 있음
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
+<div class="bg-emerald-500/40 dark:bg-emerald-600/40 text-white px-4 py-2 font-bold text-center">② 소프트웨어로 만들기</div>
+<div class="bg-emerald-50/40 dark:bg-emerald-900/15 px-4 py-4">
+
+AI로 작은 소프트웨어(Skill·에이전트)를 만들어 활용
+
+**적합**: 반복·일관성·재사용 필요
+
+**특성**: 한 번 만들면 **동일한 품질로 반복 보장**
+
+</div>
+</div>
+
+</div>
+
+<div class="mt-8 text-center text-lg">
+본 교육은 <strong>②번 쪽</strong>에 초점 — 비개발자도 자기 일에 필요한 작은 소프트웨어를 만들어 반복 가치 창출
+</div>
+
+<!--
+본 강의의 본질 메시지(ADR-0005) 가시화 자리. "도구화"의 근거를 결정 룰로 압축.
+"매번 결과가 다를 수 있음"은 LLM의 비결정성을 결과형으로 우회 전달 — 메커니즘은 빼되 학습자 본인 경험과 직결.
+주장: 본 교육은 ②번에 초점. 단, ①번도 valid한 접근임을 명시 (탐색·1회성에는 적합).
+-->
+
+
+---
+
 # 사전지식
 
 <div grid="~ cols-2 gap-4" class="mt-8">
@@ -534,6 +580,51 @@ flowchart LR
     A --> B --> C --> D
     D -.->|계획 수정| B
 ```
+
+---
+
+# 왜 계획부터 세우나요?
+
+그냥 챗봇에 막 물어보는 것과 **무엇이 다른가** — 세 가지 이점이 있습니다.
+
+<div class="mt-8 space-y-5 max-w-4xl mx-auto text-lg">
+
+<div class="flex items-start">
+<div class="font-mono text-2xl opacity-50 w-12 shrink-0">01</div>
+<div>
+<div class="font-bold mb-1">생각이 정리·구체화됩니다</div>
+<div class="opacity-80">머릿속의 모호한 요구가 글로 쓰면 명확해집니다.</div>
+</div>
+</div>
+
+<div class="flex items-start">
+<div class="font-mono text-2xl opacity-50 w-12 shrink-0">02</div>
+<div>
+<div class="font-bold mb-1">AI가 더 정확히 이해합니다</div>
+<div class="opacity-80">깨끗하게 정리된 계획으로 시작하면 답이 일관되고 대화가 길어지지 않습니다.</div>
+</div>
+</div>
+
+<div class="flex items-start">
+<div class="font-mono text-2xl opacity-50 w-12 shrink-0">03</div>
+<div>
+<div class="font-bold mb-1">시간·비용도 절약됩니다</div>
+<div class="opacity-80">AI가 잘못 이해해서 다시 작업하는 비용이 의외로 큽니다.</div>
+</div>
+</div>
+
+</div>
+
+<div class="mt-10 text-center text-base opacity-75 italic">
+"사람도 의사소통이 잘못되면 비용이 큽니다. AI에게도 마찬가지죠."
+</div>
+
+<!--
+"그냥 챗봇에 물어보면 되는데 왜 계획?"이라는 학습자 의문에 대한 답.
+LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로 우회 — ADR-0005 원칙.
+03번 "다시 작업하는 비용"은 사용자 ④ "AI 오해 재작업 비용"을 사람 비유로 풀어 결과만 전달.
+-->
+
 
 ---
 
