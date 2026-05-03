@@ -70,7 +70,7 @@ layout: default
 </div>
 
 <!--
-오늘 90분 강의의 전체 흐름을 한눈에 보여주는 신호등.
+오늘 90분 교육의 전체 흐름을 한눈에 보여주는 신호등.
 청중이 "지금 어디에 있고, 어디로 가는지" 알고 들을 수 있게 함.
 복잡한 다이어그램보다 간결한 목차 한 장으로 정렬.
 -->
@@ -371,7 +371,7 @@ table { font-size: 0.85em; }
 <div class="bg-cyan-500/40 dark:bg-cyan-600/40 text-white px-4 py-2 font-bold text-center">① 직접 지시</div>
 <div class="bg-cyan-50/40 dark:bg-cyan-900/15 px-4 py-4">
 
-AI에게 그때그때 작업을 부탁
+AI에게 그때그때 작업을 지시
 
 **적합**: 1회성·탐색·변동 큰 작업
 
@@ -384,7 +384,7 @@ AI에게 그때그때 작업을 부탁
 <div class="bg-emerald-500/40 dark:bg-emerald-600/40 text-white px-4 py-2 font-bold text-center">② 소프트웨어로 만들기</div>
 <div class="bg-emerald-50/40 dark:bg-emerald-900/15 px-4 py-4">
 
-AI로 작은 소프트웨어(Skill·에이전트)를 만들어 활용
+AI로 작은 소프트웨어(Skill·에이전트 활용)를 만들어 활용
 
 **적합**: 반복·일관성·재사용 필요
 
@@ -400,7 +400,7 @@ AI로 작은 소프트웨어(Skill·에이전트)를 만들어 활용
 </div>
 
 <!--
-본 강의의 본질 메시지(ADR-0005) 가시화 자리. "도구화"의 근거를 결정 룰로 압축.
+본 교육의 본질 메시지(ADR-0005) 가시화 자리. "도구화"의 근거를 결정 룰로 압축.
 "매번 결과가 다를 수 있음"은 LLM의 비결정성을 결과형으로 우회 전달 — 메커니즘은 빼되 학습자 본인 경험과 직결.
 주장: 본 교육은 ②번에 초점. 단, ①번도 valid한 접근임을 명시 (탐색·1회성에는 적합).
 -->
@@ -527,7 +527,7 @@ class: text-center
 <div grid="~ cols-2 gap-4" class="mt-8">
 
 <div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
-<div class="bg-gray-500/40 dark:bg-gray-600/40 text-white px-4 py-2 font-bold text-center">1·2단계 — AI에게 묻기</div>
+<div class="bg-gray-500/40 dark:bg-gray-600/40 text-white px-4 py-2 font-bold text-center">1단계 — AI에게 묻기</div>
 <div class="bg-gray-50/40 dark:bg-gray-700/20 px-4 py-4">
 
 "다운로드 폴더에 쌓인 파일 정리하는 방법 알려줘"
@@ -539,7 +539,7 @@ class: text-center
 </div>
 
 <div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-500/40 dark:bg-green-600/40 text-white px-4 py-2 font-bold text-center">3단계 — AI에게 일 맡기기</div>
+<div class="bg-green-500/40 dark:bg-green-600/40 text-white px-4 py-2 font-bold text-center">2·3단계 — AI에게 일 맡기기</div>
 <div class="bg-green-50/40 dark:bg-green-900/15 px-4 py-4">
 
 "다운로드 폴더의 PDF는 documents/, 이미지는 pictures/로 옮겨줘"
@@ -569,7 +569,7 @@ layout: section
 
 # 실습 접근법: 계획 → 실행
 
-긴 이론 강의 대신 **계획 문서를 작성한 뒤 단계별로 실행**
+긴 이론 학습 대신 **계획 문서를 작성한 뒤 단계별로 실행**
 
 ```mermaid
 flowchart LR
