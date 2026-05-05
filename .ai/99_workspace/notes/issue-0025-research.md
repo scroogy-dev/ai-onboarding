@@ -32,11 +32,28 @@
 
 ---
 
-## Claude 모델 라인업 — (조사 예정)
+## Claude 모델 라인업 — 확정
 
-- 출처 후보: <https://docs.claude.com/en/docs/about-claude/models>, Anthropic 공식 모델 카드
-- 정리할 항목: Opus / Sonnet / Haiku 라인업 현황, 비개발자 입장에서의 강점·비용/속도 포지션 한 줄
-- 메모: 모델 ID는 변동성이 높으므로 본문은 **포지션 중심**으로 쓰고 모델 ID 명시는 최소화
+**1차 출처**: [Anthropic 공식 모델 안내](https://docs.claude.com/en/docs/about-claude/models/overview) (조사 시점 기준)
+
+### 현행 라인업
+
+| 라인업 | 최신 버전 | Anthropic 한 줄 설명 (인용) | 속도 | API 가격 (input/output MTok) | Context |
+|--------|-----------|-----------------------------|------|--------------------------------|---------|
+| **Opus** | 4.7 | "Our most capable generally available model for complex reasoning and agentic coding" | Moderate | $5 / $25 | 1M tokens |
+| **Sonnet** | 4.6 | "The best combination of speed and intelligence" | Fast | $3 / $15 | 1M tokens |
+| **Haiku** | 4.5 | "The fastest model with near-frontier intelligence" | Fastest | $1 / $5 | 200k tokens |
+
+### Anthropic 공식 가이드 (인용)
+
+> "If you're unsure which model to use, consider starting with **Claude Opus 4.7** for the most complex tasks. It is our most capable generally available model, with a step-change improvement in agentic coding over Claude Opus 4.6."
+
+### 본 교육에 반영할 톤
+
+- 비개발자 청중 — API 가격(MTok)·context window·deprecated 모델은 본문에서 생략
+- 라인업 시그니처(Opus/Sonnet/Haiku)는 안정, 버전 번호는 자주 갱신 → 본문은 시그니처 중심, 최신 사양은 공식 docs 링크
+- 기본값 권장: Sonnet (속도·지능 균형, 일상 업무 베이스). 복잡 작업 → Opus, 속도/반복 → Haiku
+- Anthropic 공식 가이드 인용은 한 줄 톤으로 자연스럽게 포함
 
 ---
 
