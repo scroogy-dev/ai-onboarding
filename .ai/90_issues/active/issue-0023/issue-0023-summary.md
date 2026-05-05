@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 4 — `mkdocs.yml` nav 등록 + 용어사전 정합
+> ▶️ 다음 작업: Task 5 — `docs/` 로컬 빌드 검증 (`mkdocs serve` / `mkdocs build --strict`)
 
 ---
 
@@ -58,9 +58,15 @@
 
 ### Task 4: `mkdocs.yml` nav 등록 + 용어사전 정합
 
-- **결과**: 미시작
+- **결과**: 완료
 - **수행 내용 요약**:
+  - `mkdocs.yml` `nav`에 `도입: intro.md`를 「홈」 바로 다음, 「보안 및 개인정보 가이드」 앞에 등록 (Task 1 확정안 그대로).
+  - `.ai/40_domain/glossary.md`(기존: 빈 표)에 `docs/intro.md`에서 도입한 용어 8개 정의 추가 — 생성형 AI / 챗봇 / 에이전트 / claude.ai / Claude Cowork / Claude Code / Agent Skills / MCP.
+  - 각 항목은 비개발자 톤 한 줄 정의 + 본 교육 단계 라벨(해당 시) + 출처(`docs/intro.md`) 표기.
 - **특이 사항**:
+  - Cowork 정의에 「격리 VM·연결 폴더·송신 정책의 3중 보호」를 명시 → intro.md의 「3중 보호 모델」 admonition·기능 비교표와 일관 유지.
+  - Agent Skills·MCP는 도메인 정의 + 상호 관계(MCP는 claude.ai에서 Connectors로 제한 지원)까지 한 줄에 압축.
+  - 빌드 검증은 Task 5에서 수행 — 본 작업은 정적 변경(YAML·MD)만 수행했으므로 사이트에서의 nav 노출·용어 링크 정상 여부는 다음 단계에서 함께 확인한다.
 
 ---
 

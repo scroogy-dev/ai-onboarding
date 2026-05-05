@@ -73,12 +73,16 @@
 
 ### Task 4: `mkdocs.yml` nav 등록 + 용어사전 정합
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 신규 페이지가 사이트에 노출되고, 새 용어가 `glossary.md`와 정합한다.
 - **작업 내용**:
   1. `mkdocs.yml`의 `nav` 섹션에 신규 페이지를 Task 1에서 합의한 위치에 등록한다.
   2. 본 콘텐츠에서 처음 등장하거나 정의가 필요한 용어(예: 에이전트, Cowork)를 `.ai/40_domain/glossary.md`와 대조하여 누락 시 추가한다.
 - **완료 기준**: `nav`가 갱신되어 있고, 새 용어는 `glossary.md`에서 동일한 의미로 정의된다.
+
+**수행 결과**
+- `mkdocs.yml` `nav`: `홈 → 도입 → 보안 → 운영` 순으로 `도입: intro.md` 추가 (Task 1 합의안 그대로).
+- `.ai/40_domain/glossary.md`: 빈 표 → 용어 8개 정의로 채움 (생성형 AI / 챗봇 / 에이전트 / claude.ai / Claude Cowork / Claude Code / Agent Skills / MCP). 각 항목은 비개발자 톤 한 줄 정의 + 본 교육 단계 라벨 + 출처(`docs/intro.md`) 표기. Cowork 정의에 「격리 VM·연결 폴더·송신 정책의 3중 보호」를 명시하여 intro.md의 「3중 보호 모델」 admonition과 일관성 유지.
 
 ---
 

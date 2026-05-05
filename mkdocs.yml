@@ -53,5 +53,6 @@ extra_css:
 
 nav:
   - 홈: index.md
+  - 도입: intro.md
   - 보안 및 개인정보 가이드: security-guide.md
   - 교육 운영 가이드: operation-guide.md
