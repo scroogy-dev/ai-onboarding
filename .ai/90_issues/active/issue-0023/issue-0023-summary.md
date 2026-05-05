@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 5 — `docs/` 로컬 빌드 검증 (`mkdocs serve` / `mkdocs build --strict`)
+> ▶️ 다음 작업: Task 6 — `slides/slides.md` 파생 작성 (ADR-0002 단방향 파생)
 
 ---
 
@@ -72,9 +72,15 @@
 
 ### Task 5: `docs/` 로컬 빌드 검증
 
-- **결과**: 미시작
+- **결과**: 완료
 - **수행 내용 요약**:
+  - `python3 -m mkdocs build --strict --clean` 1.42초 성공, 경고·에러 0건.
+  - `--strict` 통과로 `index.md ↔ intro.md` 양방향 앵커(`#preparation`, `#stage-model`, `#claude`, `#products`, `#chatbot-vs-agent` 등) 정합 자동 검증.
+  - 생성된 `site/intro/index.html`에서 핵심 요소 렌더 확인 — admonition 18회 / grid CSS 5회 / claude.ai·Cowork·Code 라벨 / 「3중 보호」 admonition / 「기능 비교」 표 모두 정상.
+  - `site/index.html` nav에 「도입」 라벨 + `intro/` URL 노출 = Task 4 nav 등록 결과 사이트에 반영 확인.
 - **특이 사항**:
+  - 비개발자 톤 통독 결과: `VM`은 「격리된 가상 머신(VM)」 풀이 동반, `MCP`는 인라인 「(외부 도구·데이터)」 + glossary 등재로 보강됨. `API`/`IDE`는 기능 비교표 헤더·Code 섹션(3단계 보조 안내) 한정 등장 — 컨텍스트상 비개발자 부담 낮음.
+  - 브라우저·모바일 폭 시각 점검은 PR 리뷰 단계로 연기 (빌드 산출물 정상 + 사용 패턴은 기존 `index.md`에서 이미 검증된 것 재사용 → 회귀 위험 낮음).
 
 ---
 

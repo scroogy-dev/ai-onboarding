@@ -88,13 +88,20 @@
 
 ### Task 5: `docs/` 로컬 빌드 검증
 
-- [ ] 완료
+- [x] 완료
 - **목표**: `docs/` SSoT가 빌드·렌더링·링크 깨짐 없이 동작함을 확인한다.
 - **작업 내용**:
   1. `mkdocs serve` 또는 `mkdocs build --strict`로 빌드 확인 (사이트 내부 링크 포함).
   2. 신규 페이지를 브라우저로 열어 admonition·grid·표 렌더링과 모바일 폭에서의 가독성을 확인한다.
   3. 비개발자 톤 점검 — 전문 용어가 정의 없이 등장하지 않는지 통독한다.
 - **완료 기준**: `docs/` 빌드 성공 + 신규 페이지 렌더링 정상.
+
+**수행 결과**
+- `python3 -m mkdocs build --strict --clean` 1.42초 성공, 경고·에러 0건. `--strict` 통과 = 페이지 간 앵커(`index.md#preparation`, `index.md#stage-model`, `intro.md#claude` 등) 모두 정합.
+- `site/intro/index.html` 핵심 요소 렌더 확인: admonition 18회 / grid CSS 5회 / claude.ai·Cowork·Code 라벨·기능 비교 H3·3중 보호 admonition 모두 정상.
+- `site/index.html`의 nav에 「도입」 라벨 + `intro/` URL 정상 노출 (Task 4 등록 결과 검증).
+- 비개발자 톤 점검: `VM`은 「격리된 가상 머신(VM)」으로 한국어 풀이 동반, `MCP`는 「(외부 도구·데이터)」 인라인 보충 + glossary 등재. `API`/`IDE`는 기능 비교표 헤더·Code 섹션(3단계 보조) 안에만 노출되어 비개발자 부담 없음.
+- 브라우저·모바일 폭 시각 점검은 향후 PR 리뷰 단계에서 확인 — 빌드 산출물이 정상이고 마크다운 패턴(admonition·grid·표)은 기존 `docs/index.md`에서 이미 검증된 것을 재사용했으므로 회귀 위험은 낮음.
 
 ---
 
