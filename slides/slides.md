@@ -51,18 +51,24 @@ layout: default
 
 <div class="flex items-center mb-5">
 <div class="font-mono text-2xl opacity-50 w-14">03</div>
+<div class="font-bold w-24">도입</div>
+<div class="opacity-80">생성형 AI 시장과 본 교육의 도구</div>
+</div>
+
+<div class="flex items-center mb-5">
+<div class="font-mono text-2xl opacity-50 w-14">04</div>
 <div class="font-bold w-24">What</div>
 <div class="opacity-80">얻어갈 것 — 결과물 1개</div>
 </div>
 
 <div class="flex items-center mb-5">
-<div class="font-mono text-2xl opacity-50 w-14">04</div>
+<div class="font-mono text-2xl opacity-50 w-14">05</div>
 <div class="font-bold w-24">How</div>
 <div class="opacity-80">어떻게 진행되나</div>
 </div>
 
 <div class="flex items-center">
-<div class="font-mono text-2xl opacity-50 w-14">05</div>
+<div class="font-mono text-2xl opacity-50 w-14">06</div>
 <div class="font-bold w-24">보안</div>
 <div class="opacity-80">안전한 AI 사용</div>
 </div>
@@ -372,6 +378,143 @@ AI가 등장하면서 이 가치를 만드는 길이 <strong>비개발자에게�
 W1 보존 (위계 ↓) — 개인 동기(N-1) 다음의 거시 배경.
 마무리 한 줄("비개발자에게도 열렸습니다")은 W2 진입장벽 메시지를 흡수한 것 — 다음 What 섹션 본질 메시지로 자연 연결.
 도구 우회 표현 회피, "소프트웨어"는 정직 사용.
+-->
+
+
+---
+layout: section
+---
+
+# 도입
+
+어떤 AI를, 어떻게?
+
+<!--
+Why → 도입 → What 흐름의 가운데 — 시장 좌표(어떤 AI가 있나) + 본 교육의 도구(Claude 3종)를 한 번에 짚는 자리.
+What 섹션의 「3단계 모델」·「묻기 vs 일 맡기기」 슬라이드와 호응 — 분류 어휘를 도입에서 깔고, What에서 단계 모델로 매핑한다.
+-->
+
+
+---
+
+# 챗봇은 다 아는데... 짝꿍 에이전트는?
+
+| 회사 | 챗봇 (보통 아는 것) | 코딩 에이전트 |
+|------|--------------------|--------------|
+| **Anthropic** | **Claude** | **Claude Code** |
+| Google | Gemini | Antigravity |
+| OpenAI | ChatGPT | Codex |
+
+같은 회사의 챗봇과 에이전트는 **짝으로 묶여** 있습니다 — 청중이 챗봇은 익숙해도, **본격 자동화 무대인 에이전트** 쪽은 잘 모르는 경우가 많습니다.
+
+> Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공 — 본 교육 3단계 본격 도구.
+
+<!--
+시장 좌표 정렬: 챗봇 3사는 다 아는 것, 짝꿍 에이전트가 새로 도입할 개념.
+본 교육이 Anthropic 짝을 쓰는 이유는 Cowork(비개발자용 에이전트)의 존재 — 이 한 줄로 다음 슬라이드(챗봇 vs 에이전트 분류) 진입.
+1단계 챗봇 경험은 Claude/Gemini/ChatGPT 어느 것이든 비슷한 감각을 준다는 점은 발화로 보충.
+-->
+
+
+---
+
+# 챗봇 vs 에이전트 — 「물어보기」 vs 「맡기기」
+
+<div grid="~ cols-2 gap-4" class="mt-8">
+
+<div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800">
+<div class="bg-cyan-500/40 dark:bg-cyan-600/40 text-white px-4 py-2 font-bold text-center">챗봇 — 물어보기</div>
+<div class="bg-cyan-50/40 dark:bg-cyan-900/15 px-4 py-4">
+
+사람이 묻고 AI가 답합니다
+
+실제 처리는 **사람이 직접**
+
+**본 교육: 1단계** (참가 전제)
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
+<div class="bg-emerald-500/40 dark:bg-emerald-600/40 text-white px-4 py-2 font-bold text-center">에이전트 — 맡기기</div>
+<div class="bg-emerald-50/40 dark:bg-emerald-900/15 px-4 py-4">
+
+AI가 직접 파일을 열고 작업
+
+사람은 **목표만 정해 주고 검토**
+
+**본 교육: 3단계** (Claude Cowork)
+
+</div>
+</div>
+
+</div>
+
+<div class="mt-6 text-center text-base opacity-80">
+같은 일을 매번 시키지 않고 <strong>한 번 맡기게</strong> 만드는 것이 본 교육의 방향입니다.
+</div>
+
+<!--
+시장 분류 차원의 「챗봇 vs 에이전트」 — 같은 분류는 What 섹션에서 「1·2단계 vs 3단계 묻기 vs 일 맡기기」로 단계 매핑되어 다시 등장.
+이 슬라이드는 어휘를 깔고 What에서 본 교육 단계로 적용하는 두 단 구성.
+-->
+
+
+---
+
+# 본 교육의 도구 — Claude 3종
+
+| 제품 | 무엇 | 본 교육 단계 |
+|------|------|------------|
+| **claude.ai** | 웹·모바일 챗봇 | 1단계 (참가 전제) |
+| **Claude Cowork** | 데스크톱 범용 에이전트 | **3단계 본격 실습** |
+| **Claude Code** | 터미널·IDE 코딩 에이전트 | 3단계 보조 (옵션) |
+
+> Cowork·Code는 **Claude Pro 이상 + Claude Desktop** 필요 — Who 섹션의 「준비사항」 슬라이드에서 다룸.
+
+<style>
+table { font-size: 0.9em; }
+</style>
+
+<!--
+ADR-0001 정합 — Claude 단독·3단계 모델.
+docs/intro.md의 3종 비교표를 슬라이드 압축. 「무엇 / 단계」만 한 줄.
+Cowork이 3단계 본격 무대, Code는 진입 장벽이 있어 옵션 안내라는 점이 핵심.
+다음 슬라이드(기능 비교)에서 「로컬 파일·터미널 접근」이 챗봇과 에이전트를 가르는 분기선임을 시각화한다.
+-->
+
+
+---
+
+# 기능 비교 — 챗봇과 에이전트의 분기선
+
+| 기능 | claude.ai | Claude Cowork | Claude Code |
+|:-----|:---------:|:-------------:|:-----------:|
+| 웹 검색 | ✓ | ✓ | ✓ |
+| 대화에 파일 업로드 | ✓ | ✓ | ✓ |
+| **파일·시스템 접근** | ✗ | △ 연결 폴더만 | ✓ 전체 |
+| **터미널 명령 실행** | ✗ | △ 격리 VM | ✓ 전체 |
+| Agent Skills | ✓ | ✓ | ✓ |
+| MCP 연동 (외부 도구·데이터) | △ Connectors | ✓ | ✓ 전체 |
+| 외부 API 호출 | ✗ | △ 송신 정책 | ✓ 전체 |
+
+<div class="text-sm opacity-80 mt-3">
+
+**범례**: ✓ 지원 · △ 제한적·조건부 · ✗ 미지원 &nbsp;·&nbsp; **굵은 행** = 챗봇/에이전트 분기선
+
+</div>
+
+<style>
+table { font-size: 0.72em; }
+table th, table td { padding: 0.35em 0.5em; }
+</style>
+
+<!--
+docs/intro.md의 「기능 비교 — 한눈에」 표 슬라이드 옮김. 핵심 메시지는 「로컬 파일·터미널 접근 여부 = 챗봇과 에이전트의 분기선」.
+- claude.ai: 파일·터미널·외부 API 모두 ✗ → 1단계 챗봇 영역에 머묾.
+- Cowork: △ 표시는 모두 「3중 보호」 모델 — 연결 폴더만 / 격리 VM / 송신 정책 (자세한 내용은 docs/intro.md의 「Cowork의 보호 모델」 admonition 참조).
+- Code: ✓ 전체 = 개발자 환경 전체 권한 → 진입 장벽 있어 본 교육에서는 옵션 안내.
+Cowork의 「△」가 「제한」이 아닌 「제어된 안전 동작」임을 발화로 보충 — 비개발자가 가장 안전하게 에이전트를 쓸 수 있는 도구라는 메시지.
 -->
 
 
