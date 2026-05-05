@@ -31,7 +31,7 @@
 
 ## 완료의 정의 (Definition of Done)
 
-- [ ] `docs/intro.md` 본문 전반의 「챗봇」/「코딩 에이전트」 표기가 「AI 챗봇」/「AI 코딩 에이전트」로 일관되게 정정되었다 (의도적 약칭이 필요한 자리는 한 번 이상 「AI ~」로 풀어쓰고 시작)
+- [ ] `docs/intro.md` 진입 직후 「용어 안내」가 1회 노출되어 «챗봇» = AI 챗봇, «에이전트» = AI 에이전트임을 결합 안내하고, 본문은 자연스러운 짧은 형태를 유지한다 (일괄 정정 회피 — 메모리 `feedback_terminology-prefix-once.md`)
 - [ ] Google 회사 행의 코딩 에이전트 칸에 **Gemini CLI**와 **Antigravity** 가 함께 표기되어 있고, 둘의 위치 차이가 한 줄로 안내된다
 - [ ] Claude 모델 라인업(Opus / Sonnet / Haiku 등)을 비교하는 섹션이 신설되어 있고, 비개발자가 어떤 상황에 어느 모델을 쓰면 되는지 한눈에 짚을 수 있다
 - [ ] Claude 사용량 확인 방법(예: Pro 요금제 한도, claude.ai/Desktop의 사용량 화면 등)이 도입부 내 적절한 위치에 추가되었다
