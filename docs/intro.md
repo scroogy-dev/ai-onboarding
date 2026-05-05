@@ -30,13 +30,15 @@
 
 같은 회사가 만든 챗봇과 코딩 에이전트는 **짝으로 묶여** 있습니다. 챗봇은 익숙해도 에이전트 쪽은 잘 모르는 경우가 많은데, **본격적인 자동화 무대는 이쪽**입니다.
 
-| 회사      | 챗봇 (보통 아는 것) | 코딩 에이전트       |
-|-----------|--------------------|---------------------|
-| Anthropic | Claude             | **Claude Code**     |
-| Google    | Gemini             | **Antigravity**     |
-| OpenAI    | ChatGPT            | **Codex**           |
+| 회사      | 챗봇 (보통 아는 것) | 코딩 에이전트                    |
+|-----------|--------------------|----------------------------------|
+| Anthropic | Claude             | **Claude Code**                  |
+| Google    | Gemini             | **Antigravity** · **Gemini CLI** |
+| OpenAI    | ChatGPT            | **Codex**                        |
 
 Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합니다. 본 교육 3단계 실습은 **Claude Cowork**로 진행하며, Claude Code는 비개발자에게 진입 장벽이 있어 보조 도구로만 안내합니다 (자세한 내용은 아래 [Claude 소개](#claude) 참조).
+
+참고로 Google은 코딩 에이전트를 두 갈래로 제공합니다 — **Antigravity**는 시각적 IDE·에이전트 매니저, **Gemini CLI**는 터미널·헤드리스 실행에 적합합니다 ([Google 공식 비교](https://cloud.google.com/blog/topics/developers-practitioners/choosing-antigravity-or-gemini-cli?hl=en)).
 
 ---
 

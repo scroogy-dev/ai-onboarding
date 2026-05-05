@@ -38,7 +38,7 @@
 
 ### Task 3: Google AI 코딩 에이전트 표기 — Gemini CLI · Antigravity 병기
 
-- [ ] 완료
+- [x] 완료
 - **목표**: `docs/intro.md`의 회사별 AI 코딩 에이전트 표에서 Google 행을 정확히 표기한다.
 - **작업 내용**:
   1. 표에서 Google 행의 「코딩 에이전트」 칸을 **Gemini CLI · Antigravity** 동등 병기로 수정한다.

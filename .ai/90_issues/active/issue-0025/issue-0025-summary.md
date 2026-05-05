@@ -4,9 +4,9 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 3 — Google AI 코딩 에이전트 표기 (Gemini CLI · Antigravity 병기)
+> ▶️ 다음 작업: Task 4 — Claude 모델 비교 섹션 신설
 >
-> Claude 모델/사용량 조사(Task 4·5 직전 이어 수행) 미완.
+> 진입 직전 Anthropic 공식 docs에서 모델 라인업·포지션 사전 조사 필요 (Task 1 미완분).
 
 ---
 
@@ -32,9 +32,9 @@
 
 ### Task 3: Google AI 코딩 에이전트 표기 — Gemini CLI · Antigravity 병기
 
-- **결과**: 미시작
-- **수행 내용 요약**:
-- **특이 사항**:
+- **결과**: 완료
+- **수행 내용 요약**: `docs/intro.md`의 회사별 코딩 에이전트 표 Google 행을 **Antigravity · Gemini CLI** 동등 병기로 수정. 표 아래에 한 줄 보강 — Antigravity(시각적 IDE·에이전트 매니저) vs Gemini CLI(터미널·헤드리스). [Google 공식 비교 블로그](https://cloud.google.com/blog/topics/developers-practitioners/choosing-antigravity-or-gemini-cli?hl=en) 인용.
+- **특이 사항**: Anthropic Cowork 보충 문단은 그대로 유지 (Why·교육 도구 선택 narrative 연결).
 
 ---
 
