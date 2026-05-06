@@ -174,6 +174,30 @@ Pro·Max 요금제에는 시간·기간별 한도가 있습니다. **claude.ai �
 
 ---
 
+## 공식 문서·참고 자료 { #official-references }
+
+본 교육 이후에도 Claude를 더 익히고 싶을 때 참고하면 좋은 공식 자료입니다 (한국어 페이지 우선).
+
+### 시작하기
+
+- [Claude 모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview) — 라인업·최신 사양·버전별 차이
+- [Claude Cowork 시작하기](https://support.claude.com/ko/articles/13345190) — 프로젝트 단위 작업 사용법
+- [Claude Code 안내](https://docs.claude.com/ko/docs/claude-code/overview) — 터미널·IDE에서 쓰는 코딩 에이전트
+
+### 자산화·확장
+
+- [Projects(프로젝트)란 무엇입니까](https://support.claude.com/ko/articles/9517075) — 자료·지침을 묶어 재사용
+- [스킬이란 무엇인가요](https://support.claude.com/ko/articles/12512176) — 반복 작업을 스킬로 자산화
+- [MCP 안내](https://docs.claude.com/ko/docs/agents-and-tools/mcp) — 외부 데이터·도구 연결 (개발자용)
+
+### 운영·지원
+
+- [Anthropic 요금제](https://www.anthropic.com/pricing) — 플랜 비교·가격 *(영문만 제공)*
+- [공식 Support 홈](https://support.claude.com/ko/) — 한국어 도움말 모음
+- [Claude 상태(Status)](https://status.claude.com/) — 서비스 장애·점검 확인
+
+---
+
 ## 함께 읽어보세요
 
 - [홈 — 본 교육의 Why·What·How](index.md)

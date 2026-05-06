@@ -4,9 +4,9 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 6 — Claude 공식 문서·참고 링크 모음 섹션 신설
+> ▶️ 다음 작업: Task 7 — 슬라이드 동기화 (`slides/slides.md` 도입 섹션)
 >
-> Task 6 진입 직전 후보 페이지 사용자 선별 필요 (모델 안내, Cowork, Code, 요금제, Projects, Skills, MCP, Support, status 등).
+> docs 변경분 중 표기 정정·Google 행 동등 병기·모델 비교·사용량 핵심을 슬라이드에 정합시킨다. 공식 문서 모음 섹션은 슬라이드에 옮기지 않고 docs로 위임.
 
 ---
 
@@ -56,9 +56,9 @@
 
 ### Task 6: Claude 공식 문서·참고 링크 모음 섹션 신설
 
-- **결과**: 미시작
-- **수행 내용 요약**:
-- **특이 사항**:
+- **결과**: 완료
+- **수행 내용 요약**: `docs/intro.md`의 「함께 읽어보세요」 위에 H2 「공식 문서·참고 자료」(`{ #official-references }`) 신설. 3그룹·9링크 — 시작하기(모델 안내, Cowork 시작, Code 안내), 자산화·확장(Projects, Skills, MCP), 운영·지원(요금제, Support 홈, Status). 모든 외부 URL은 한국어 경로(/ko/) 우선이며 `curl -L`로 200 응답 검증. `python3 -m mkdocs build --strict` 경고/오류 없이 통과.
+- **특이 사항**: Skills 링크는 사용자 의견에 따라 docs(빌더 톤)에서 support.claude.com(엔드유저 톤)으로 교체 — Projects 링크와 같은 페밀리(support 안내 페이지)로 일관성 확보. MCP는 비개발자용 support 안내가 없어 docs 유지(개발자용 링크임을 한 줄로 명시). 요금제는 한국어 페이지 부재로 영문 fallback(`*(영문만 제공)*` 표기).
 
 ---
 
