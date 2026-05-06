@@ -183,6 +183,7 @@ Pro·Max 요금제에는 시간·기간별 한도가 있습니다. **claude.ai �
 - [Claude 모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview) — 라인업·최신 사양·버전별 차이
 - [Claude Cowork 시작하기](https://support.claude.com/ko/articles/13345190) — 프로젝트 단위 작업 사용법
 - [Claude Code 안내](https://docs.claude.com/ko/docs/claude-code/overview) — 터미널·IDE에서 쓰는 코딩 에이전트
+- [Anthropic Learn](https://www.anthropic.com/learn) — 프롬프트 작성·활용 가이드 모음 *(영문만 제공)*
 
 ### 자산화·확장
 
