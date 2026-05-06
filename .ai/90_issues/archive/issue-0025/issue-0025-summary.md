@@ -4,9 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 8 — docs 로컬 빌드 검증
->
-> `mkdocs build --strict` 최종 통과 확인 (Task 6 커밋 시 1회 통과한 상태 — 이후 슬라이드만 변경되어 추가 영향 없음, 마지막 회 검증).
+> ✅ 모든 작업이 완료되었습니다.
 
 ---
 
@@ -76,14 +74,14 @@
 
 ### Task 8: docs 로컬 빌드 검증
 
-- **결과**: 미시작
-- **수행 내용 요약**:
-- **특이 사항**:
+- **결과**: 완료
+- **수행 내용 요약**: `python3 -m mkdocs build --strict` 경고/오류 없이 통과(Material 업스트림 배너 외). 이어서 `mkdocs serve`로 로컬 서버 가동(`http://127.0.0.1:8000/`), 도입 페이지의 핵심 앵커(`#products`, `#claude-models`, `#claude-usage`, `#official-references`) 모두 200 응답 확인. 슬라이드도 `npx slidev` (Slidev) 로컬 서버에서 동시 점검(`http://localhost:3030/`) — 신설 「모델은 어떤 걸 쓸까」 슬라이드와 도입 섹션 변경 정합 확인.
+- **특이 사항**: 사용자 요청으로 정적 빌드만이 아니라 로컬 서버를 띄워 docs·slides 양쪽을 시각 확인. 검증 후 두 서버 정상 종료.
 
 ---
 
 ### Task 9: 이슈 완료 처리
 
-- **결과**: 미시작
-- **수행 내용 요약**:
-- **특이 사항**:
+- **결과**: 완료
+- **수행 내용 요약**: `issue-0025-plan.md`의 모든 Task 체크박스 체크 완료. `issue-0025-summary.md`의 「다음 작업」을 `✅ 모든 작업이 완료되었습니다.`로 갱신. `issue-0025/` 디렉토리를 `.ai/90_issues/active/`에서 `.ai/90_issues/archive/`로 이동.
+- **특이 사항**: PR 생성·머지는 별도 사용자 지시에 따른다(스펙). 워크스페이스 노트(`.ai/99_workspace/notes/issue-0025-research.md`, `2026-05-06-issue-0025-progress-task6-added.md`)는 작업 산출 흔적으로 그대로 둠.
