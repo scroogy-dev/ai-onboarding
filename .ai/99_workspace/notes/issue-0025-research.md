@@ -57,7 +57,33 @@
 
 ---
 
-## Claude 사용량 확인 방법 — (조사 예정)
+## Claude 사용량 확인 방법 — 확정
 
-- 출처 후보: Anthropic Support 「사용량 확인」/「요금제 한도」 문서, claude.ai 설정 화면
-- 정리할 항목: claude.ai에서 사용량 확인 경로, Pro/Max 한도 차이, 한도 초과 시 동작과 다음 행동
+**1차 출처 (한국어, 응답 200 확인 — `curl -I -L`)**
+
+| 페이지 | URL |
+|--------|-----|
+| 사용량 및 길이 제한은 어떻게 작동하나요 | <https://support.claude.com/ko/articles/11647753> |
+| Claude Cowork 시작하기 | <https://support.claude.com/ko/articles/13345190> |
+| 사용 한도 모범 사례 | <https://support.claude.com/ko/articles/9797557> |
+| 유료 Claude 플랜의 추가 사용량 관리 | <https://support.claude.com/ko/articles/12429409> |
+| Pro 또는 Max 플랜으로 Claude Code 사용하기 | <https://support.claude.com/ko/articles/11145838> |
+
+> 짧은 형태(ID만)는 브라우저에서 정식 ko slug로 자동 리다이렉트되어 200 응답. 본문에서는 ID 형태를 사용해도 무방.
+
+### 확정된 사실
+
+- **확인 경로**: claude.ai 웹 / Claude Desktop 모두 **Settings → Usage**.
+  - 화면 항목: **Current session** (5시간 세션 한도 사용량 + 남은 시간), **Weekly usage limit reset** (Opus 전용/그 외 모델 별도 초기화 시점).
+- **Cowork 한도 소비**: Cowork getting-started 공식 문구 — *"Working on tasks with Cowork consumes more of your usage allocation than chatting with Claude."* (멀티 스텝·도구 호출이 채팅보다 토큰 비용 큼)
+- **한도 초과 시 동작**: *"wait for it to reset, upgrade your plan, or purchase extra usage."* 즉 (1) 5시간 세션 초기화 대기, (2) 요금제 상향, (3) 추가 사용량 구매.
+- **요금제 간 한도 합산**: Pro·Max 요금제에서는 claude.ai · Cowork · Claude Code가 **동일 사용량 풀**을 공유. (Cowork 가이드 + Claude Code with Pro/Max 안내)
+- **Claude Code에서 확인**: 터미널 세션 안에서 `/cost` 명령으로 토큰 사용량 확인 (옵션 — 비개발자 청중에 부차적).
+
+### 본 교육에 반영할 톤
+
+- 청중 우선순위: claude.ai 웹·Cowork (필수) > Claude Code (옵션, 짧게 한 줄)
+- 표 + admonition으로 시각 구분 (메모리 `feedback_preserve-intentional-emphasis.md`)
+- 한도 초과 대처(다음 행동)는 1~2줄로 간결하게
+- 외부 링크는 ko 경로 사용 (메모리 `feedback_korean-docs-url.md`)
+- 위치: 「Claude Code — 3단계 보조 도구」와 「함께 읽어보세요」 사이의 H3 신설 (`{ #claude-usage }`) — 「준비사항」(`docs/index.md#preparation`)은 설치·가입 단계, 본 섹션은 운영 중 모니터링으로 역할 분리

@@ -4,9 +4,9 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 5 — 사용량 확인 방법 안내 추가
+> ▶️ 다음 작업: Task 6 — Claude 공식 문서·참고 링크 모음 섹션 신설
 >
-> 진입 직전 Anthropic Support 「사용량 확인」/「요금제 한도」 문서 사전 조사 필요 (Task 1 미완분).
+> Task 6 진입 직전 후보 페이지 사용자 선별 필요 (모델 안내, Cowork, Code, 요금제, Projects, Skills, MCP, Support, status 등).
 
 ---
 
@@ -48,9 +48,9 @@
 
 ### Task 5: 사용량 확인 방법 안내 추가
 
-- **결과**: 미시작
-- **수행 내용 요약**:
-- **특이 사항**:
+- **결과**: 완료
+- **수행 내용 요약**: `docs/intro.md`의 「Claude Code — 3단계 보조 도구」와 「함께 읽어보세요」 사이에 H3 「사용량 확인 방법」(`{ #claude-usage }`) 추가. **Settings → Usage** 경로 + 화면 항목(현재 세션 / 주간 한도 초기화) 표 + Cowork 한도 소비 주의 admonition + 한도 초과 시 다음 행동(세션 대기 / 요금제 상향 / 추가 사용량 구매) + Claude Code `/cost` 옵션 admonition. 외부 링크 4건 모두 ko 경로.
+- **특이 사항**: 사용자 우선순위 명시 — *"클로드 웹이나 Cowork에서 확인하는 방법이 더 중요해(클로드 코드의 경우는 옵션)"*. 이를 반영해 Web/Cowork은 본문, Code는 별도 admonition 옵션 박스로 시각 구분. ko URL은 ID 짧은 형태가 정식 ko slug로 자동 리다이렉트(200) — `curl -I -L`로 5건 확인. 사전 조사 결과는 `.ai/99_workspace/notes/issue-0025-research.md`의 「Claude 사용량 확인 방법 — 확정」 섹션에 정리. claude.ai · Cowork · Claude Code 한도가 동일 풀에서 합산되는 점도 본문에 명시(Pro/Max 합산 운영 안내).
 
 ---
 
