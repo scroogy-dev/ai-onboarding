@@ -1179,17 +1179,67 @@ table { font-size: 0.78em; }
 </style>
 
 ---
+
+# 공식 문서·참고 자료 — Claude를 더 알고 싶다면
+
+<div grid="~ cols-3 gap-6" class="mt-6">
+
+<div>
+
+**시작하기**
+
+- [모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview)
+- [Cowork 시작](https://support.claude.com/ko/articles/13345190)
+- [Claude Code](https://docs.claude.com/ko/docs/claude-code/overview)
+- [Anthropic Learn](https://www.anthropic.com/learn) *(영문)*
+
+</div>
+
+<div>
+
+**자산화·확장**
+
+- [Projects](https://support.claude.com/ko/articles/9517075)
+- [스킬](https://support.claude.com/ko/articles/12512176)
+- [MCP](https://docs.claude.com/ko/docs/agents-and-tools/mcp) *(개발자용)*
+
+</div>
+
+<div>
+
+**운영·지원**
+
+- [요금제](https://www.anthropic.com/pricing) *(영문)*
+- [Support 홈](https://support.claude.com/ko/)
+- [Status](https://status.claude.com/)
+
+</div>
+
+</div>
+
+<div class="text-sm opacity-70 mt-8 text-center">
+한국어 페이지 우선 · 자세한 안내는 <code>docs/intro.md#official-references</code>
+</div>
+
+<style>
+a { font-size: 0.92em; }
+ul { line-height: 1.7; }
+</style>
+
+<!--
+docs/intro.md의 「공식 문서·참고 자료」 섹션 슬라이드 동기화.
+3그룹·9링크를 3컬럼으로 압축. 라벨은 docs보다 짧게(예: 「Projects(프로젝트)란 무엇입니까」 → 「Projects」), 한 줄 설명은 생략하고 docs로 위임.
+한국어 페이지가 부재한 항목은 *(영문)* 또는 *(개발자용)* 한 단어 라벨로 시각 구분.
+-->
+
+
+---
 layout: end
 ---
 
 # 감사합니다
 
-<div class="mt-12 text-base opacity-70">
-더 알아보기 → docs/intro.md (Claude 공식 자료·자세한 안내)
-</div>
-
 <!--
 Q&A 시간 안내. 질문이 있으면 끝나고 강사에게 직접 또는 사후 채널로 받겠다고 안내.
-공식 문서·참고 자료 모음은 docs/intro.md#official-references로 위임 — 슬라이드는 핵심 메시지에 집중.
 -->
 
