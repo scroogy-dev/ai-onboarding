@@ -7,6 +7,9 @@
 
 ## 생성형 AI 소개
 
+!!! note "용어 안내"
+    이 페이지에서 «챗봇», «에이전트»는 모두 **AI 챗봇**, **AI 에이전트**를 가리킵니다 — 표기를 짧게 쓰기 위함입니다.
+
 ### 대표 제품 — Claude · Gemini · ChatGPT { #products }
 
 생성형 AI는 글·코드·이미지처럼 **새로운 결과물을 만들어내는 AI**를 말합니다. 그중 대화형 제품은 다음 3종이 가장 널리 알려져 있습니다.
@@ -27,13 +30,15 @@
 
 같은 회사가 만든 챗봇과 코딩 에이전트는 **짝으로 묶여** 있습니다. 챗봇은 익숙해도 에이전트 쪽은 잘 모르는 경우가 많은데, **본격적인 자동화 무대는 이쪽**입니다.
 
-| 회사      | 챗봇 (보통 아는 것) | 코딩 에이전트       |
-|-----------|--------------------|---------------------|
-| Anthropic | Claude             | **Claude Code**     |
-| Google    | Gemini             | **Antigravity**     |
-| OpenAI    | ChatGPT            | **Codex**           |
+| 회사      | 챗봇 (보통 아는 것) | 코딩 에이전트                    |
+|-----------|--------------------|----------------------------------|
+| Anthropic | Claude             | **Claude Code**                  |
+| Google    | Gemini             | **Antigravity** · **Gemini CLI** |
+| OpenAI    | ChatGPT            | **Codex**                        |
 
 Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합니다. 본 교육 3단계 실습은 **Claude Cowork**로 진행하며, Claude Code는 비개발자에게 진입 장벽이 있어 보조 도구로만 안내합니다 (자세한 내용은 아래 [Claude 소개](#claude) 참조).
+
+참고로 Google은 코딩 에이전트를 두 갈래로 제공합니다 — **Antigravity**는 시각적 IDE·에이전트 매니저, **Gemini CLI**는 터미널·헤드리스 실행에 적합합니다 ([Google 공식 비교](https://cloud.google.com/blog/topics/developers-practitioners/choosing-antigravity-or-gemini-cli?hl=en)).
 
 ---
 
@@ -100,6 +105,23 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 
 ---
 
+### 모델 비교 — Opus · Sonnet · Haiku { #claude-models }
+
+Claude는 한 모델이 아니라 **세 라인업**으로 구성됩니다. claude.ai·Cowork·Code 어디에서나 동일한 라인업을 공유하며, 사용 화면에서 직접 고를 수 있습니다.
+
+| 라인업     | 한 줄 포지션                          | 어울리는 상황                                                 |
+|------------|---------------------------------------|---------------------------------------------------------------|
+| **Opus**   | 가장 똑똑함 (추론 강함, 속도는 보통)   | 본인도 잘 모르는 주제 의논, 깊은 분석, 다단계 에이전트 작업    |
+| **Sonnet** | 똑똑함과 빠름의 균형 — 일상 업무 기본  | 글 다듬기, 검색·요약·찾아바꾸기 같은 지시 이행 작업            |
+| **Haiku**  | 가장 빠름 (가벼운 작업·반복)          | 짧은 답이면 충분한 단순 질문, 동일 패턴 반복                  |
+
+!!! tip "어느 모델을 쓸까?"
+    기준은 **추론이 얼마나 필요한가**입니다 — 본인도 잘 모르는 주제를 함께 풀어 가야 한다면 **Opus**, 검색·찾아바꾸기·요약처럼 지시 이행이 핵심이라면 **Sonnet**으로 충분합니다. 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로 옮기면 됩니다 (Anthropic도 [복잡한 작업이라면 Opus 시작을 권장](https://docs.claude.com/ko/docs/about-claude/models/overview)).
+
+> 라인업(Opus·Sonnet·Haiku)은 안정적으로 유지되지만 버전 번호(예: Opus **4.7**, Sonnet **4.6**, Haiku **4.5**)는 자주 갱신됩니다 — 최신 사양은 [Anthropic 공식 모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview)에서 확인할 수 있습니다.
+
+---
+
 ### claude.ai (Chat) — 1단계의 시작점 { #claude-ai }
 
 웹·모바일 브라우저에서 바로 쓰는 대화형 챗봇입니다. 빠른 질문, 정보 정리, 글 다듬기 같은 **1회성 작업**에 적합합니다.
@@ -130,6 +152,50 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 
 !!! note "본 교육에서의 위치"
     **3단계 보조 도구·옵션** — 명령줄 인터페이스 진입 장벽이 있어 본 교육에서는 **옵션 안내**로만 다룹니다. 핵심 실습 무대는 Cowork이며, Code는 관심 있는 분께 한 단계 더 깊은 길로 제시됩니다.
+
+---
+
+### 사용량 확인 방법 { #claude-usage }
+
+Pro·Max 요금제에는 시간·기간별 한도가 있습니다. **claude.ai 웹**과 **Claude Desktop** 모두 같은 화면 — **설정 → 사용량 (Settings → Usage)** — 에서 확인합니다.
+
+| 화면 항목 | 의미 |
+|-----------|------|
+| 현재 세션 (Current session) | 5시간 세션 한도 중 사용한 양과 남은 시간 |
+| 주간 한도 (Weekly usage limit reset) | Opus / 그 외 모델별 다음 주간 초기화 시점 |
+
+!!! tip "Cowork은 채팅보다 한도 소비가 큽니다"
+    [공식 안내](https://support.claude.com/ko/articles/11647753) — *"Cowork에서의 작업은 Claude와 채팅하는 것보다 사용량을 더 많이 소비합니다."* 멀티 스텝·도구 호출이 많기 때문입니다. 단순한 질문·정리는 chat, 본격 작업만 Cowork으로 분리하면 한도가 오래 갑니다.
+
+**한도에 도달했다면** — 5시간 세션 초기화를 기다리거나, 요금제를 상향하거나, [추가 사용량 구매](https://support.claude.com/ko/articles/12429409)로 이어서 사용합니다. claude.ai · Cowork · Claude Code는 **하나의 한도 풀**을 함께 씁니다.
+
+!!! info "Claude Code 사용량 확인 (옵션)"
+    터미널 세션 안에서 `/usage` 로 Pro·Max 플랜 한도 사용량을, `/extra-usage` 로 추가 사용량 관리를 확인합니다 — [Pro 또는 Max 플랜으로 Claude Code 사용하기](https://support.claude.com/ko/articles/11145838).
+
+---
+
+## 공식 문서·참고 자료 { #official-references }
+
+본 교육 이후에도 Claude를 더 익히고 싶을 때 참고하면 좋은 공식 자료입니다 (한국어 페이지 우선).
+
+### 시작하기
+
+- [Claude 모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview) — 라인업·최신 사양·버전별 차이
+- [Claude Cowork 시작하기](https://support.claude.com/ko/articles/13345190) — 프로젝트 단위 작업 사용법
+- [Claude Code 안내](https://docs.claude.com/ko/docs/claude-code/overview) — 터미널·IDE에서 쓰는 코딩 에이전트
+- [Anthropic Learn](https://www.anthropic.com/learn) — 프롬프트 작성·활용 가이드 모음 *(영문만 제공)*
+
+### 자산화·확장
+
+- [Projects(프로젝트)란 무엇입니까](https://support.claude.com/ko/articles/9517075) — 자료·지침을 묶어 재사용
+- [스킬이란 무엇인가요](https://support.claude.com/ko/articles/12512176) — 반복 작업을 스킬로 자산화
+- [MCP 안내](https://docs.claude.com/ko/docs/agents-and-tools/mcp) — 외부 데이터·도구 연결 (개발자용)
+
+### 운영·지원
+
+- [Anthropic 요금제](https://www.anthropic.com/pricing) — 플랜 비교·가격 *(영문만 제공)*
+- [공식 Support 홈](https://support.claude.com/ko/) — 한국어 도움말 모음
+- [Claude 상태(Status)](https://status.claude.com/) — 서비스 장애·점검 확인
 
 ---
 
