@@ -78,7 +78,7 @@
 - **Cowork 한도 소비**: Cowork getting-started 공식 문구 — *"Working on tasks with Cowork consumes more of your usage allocation than chatting with Claude."* (멀티 스텝·도구 호출이 채팅보다 토큰 비용 큼)
 - **한도 초과 시 동작**: *"wait for it to reset, upgrade your plan, or purchase extra usage."* 즉 (1) 5시간 세션 초기화 대기, (2) 요금제 상향, (3) 추가 사용량 구매.
 - **요금제 간 한도 합산**: Pro·Max 요금제에서는 claude.ai · Cowork · Claude Code가 **동일 사용량 풀**을 공유. (Cowork 가이드 + Claude Code with Pro/Max 안내)
-- **Claude Code에서 확인**: 터미널 세션 안에서 `/cost` 명령으로 토큰 사용량 확인 (옵션 — 비개발자 청중에 부차적).
+- **Claude Code에서 확인**: 터미널 세션 안에서 `/usage`(Pro·Max 한도 사용량 + 토큰 비용 — 기존 `/cost`가 `/usage`로 통합되어 UI에 `usage (cost)`로 표기), `/extra-usage`(추가 사용량 관리) 명령 사용.
 
 ### 본 교육에 반영할 톤
 
