@@ -42,7 +42,7 @@
 
 - **결과**: 완료
 - **수행 내용 요약**: `docs/intro.md`의 「기능 비교 — 한눈에」와 「claude.ai (Chat)」 사이에 H3 「모델 비교 — Opus · Sonnet · Haiku」 추가. 라인업×포지션×어울리는 상황 3컬럼 표 + 「어느 모델을 쓸까?」 admonition. 결정 축은 **추론 vs 지시 이행** — Opus(본인도 잘 모르는 주제 의논·깊은 추론), Sonnet(검색·요약·찾아바꾸기 같은 지시 이행, 일상 기본값), Haiku(짧은 답·반복). 사전 조사 결과를 `.ai/99_workspace/notes/issue-0025-research.md`에 정리.
-- **특이 사항**: API 가격(MTok)·context window·deprecated 모델은 비개발자 청중에 부적합하여 본문에서 생략 — 본문은 시그니처(Opus/Sonnet/Haiku) 중심, 최신 사양은 [공식 모델 안내](https://docs.claude.com/en/docs/about-claude/models/overview) 링크로 위임. 사용자 첨언("추론 vs 단순 지시 이행 축으로 선택했다, 본인도 잘 모르는 주제 의논엔 Opus")을 결정 가이드의 핵심 축으로 채택, 메모리 `feedback_model-choice-reasoning-vs-execution.md`로 정착.
+- **특이 사항**: API 가격(MTok)·context window·deprecated 모델은 비개발자 청중에 부적합하여 본문에서 생략 — 본문은 시그니처(Opus/Sonnet/Haiku) 중심, 최신 사양은 [공식 모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview) 링크로 위임. 사용자 첨언("추론 vs 단순 지시 이행 축으로 선택했다, 본인도 잘 모르는 주제 의논엔 Opus")을 결정 가이드의 핵심 축으로 채택, 메모리 `feedback_model-choice-reasoning-vs-execution.md`로 정착. 외부 docs 링크는 사용자 지시에 따라 ko 경로 사용 — 메모리 `feedback_korean-docs-url.md`로 정착.
 
 ---
 
@@ -54,7 +54,7 @@
 
 ---
 
-### Task 6: 슬라이드 동기화 — `slides/slides.md` 도입 섹션
+### Task 6: Claude 공식 문서·참고 링크 모음 섹션 신설
 
 - **결과**: 미시작
 - **수행 내용 요약**:
@@ -62,7 +62,7 @@
 
 ---
 
-### Task 7: docs 로컬 빌드 검증
+### Task 7: 슬라이드 동기화 — `slides/slides.md` 도입 섹션
 
 - **결과**: 미시작
 - **수행 내용 요약**:
@@ -70,7 +70,15 @@
 
 ---
 
-### Task 8: 이슈 완료 처리
+### Task 8: docs 로컬 빌드 검증
+
+- **결과**: 미시작
+- **수행 내용 요약**:
+- **특이 사항**:
+
+---
+
+### Task 9: 이슈 완료 처리
 
 - **결과**: 미시작
 - **수행 내용 요약**:
