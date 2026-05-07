@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 3 — 디렉토리 골격·docs 인덱스 페이지 생성
+> ▶️ 다음 작업: Task 4 — step01-weather 본문 작성 (stage 1·2·3)
 
 ---
 
@@ -37,13 +37,28 @@
 
 ### Task 3: 디렉토리 골격·docs 인덱스 페이지 생성
 
+- **결과**: 완료
+- **수행 내용 요약**:
+  - 루트 `labs/` 골격 생성 — 시리즈 README + 4개 step(weather·file-classifier·voca-quiz·wrong-answer-note) README + 9개 stage 디렉토리(.gitkeep)
+  - `docs/labs.md` 인덱스 페이지 작성 — 단일 파일 형태, 시리즈 구성 표·GitHub 링크·zip 다운로드 안내·사전 준비 안내
+  - `mkdocs.yml` nav에 "실습" 항목 등록 (도입과 보안 가이드 사이)
+- **특이 사항**:
+  - step별 README는 본문이 아니라 골격(주제·stage 구성·학습 포인트·선정 근거 표)으로 작성. 본문은 후속 Task 4~7.
+  - `docs/labs.md`는 단일 파일(`docs/labs/index.md` 아님). 향후 본문 보강 시 디렉토리 구조로 전환 가능.
+  - `labs/README.md`는 사이트 미노출 GitHub 페이지이므로 GitHub-flavored markdown만 사용. 사이트 향 페이지인 `docs/labs.md`는 Material admonition 사용.
+  - **이슈 범위 확장**: Task 3 완료 후 사용자 결정으로 각 step의 가이드 본문 작성도 본 이슈로 흡수 (Task 4·5·6·7 신설). 후속 이슈로 미루지 않음.
+
+---
+
+### Task 4: step01-weather 본문 작성 (stage 1·2·3)
+
 - **결과**: <!-- 미시작 -->
 - **수행 내용 요약**:
 - **특이 사항**:
 
 ---
 
-### Task 4: slides 실습 시리즈 섹션 추가
+### Task 5: step02-file-classifier 본문 작성 (stage 2)
 
 - **결과**: <!-- 미시작 -->
 - **수행 내용 요약**:
@@ -51,7 +66,7 @@
 
 ---
 
-### Task 5: ADR 작성
+### Task 6: step03-voca-quiz 본문 작성 (stage 1·2)
 
 - **결과**: <!-- 미시작 -->
 - **수행 내용 요약**:
@@ -59,7 +74,31 @@
 
 ---
 
-### Task 6: 마무리·이관
+### Task 7: step04-wrong-answer-note 본문 작성 (stage 1·2·3)
+
+- **결과**: <!-- 미시작 -->
+- **수행 내용 요약**:
+- **특이 사항**:
+
+---
+
+### Task 8: slides 실습 시리즈 섹션 추가
+
+- **결과**: <!-- 미시작 -->
+- **수행 내용 요약**:
+- **특이 사항**:
+
+---
+
+### Task 9: ADR 작성
+
+- **결과**: <!-- 미시작 -->
+- **수행 내용 요약**:
+- **특이 사항**:
+
+---
+
+### Task 10: 마무리·이관
 
 - **결과**: <!-- 미시작 -->
 - **수행 내용 요약**:

@@ -36,7 +36,7 @@
 
 ### Task 3: 디렉토리 골격·docs 인덱스 페이지 생성
 
-- [ ] 완료
+- [x] 완료
 - **목표**: Task 1·2의 결정을 적용해 루트 `labs/` 모든 step 골격과 `docs/labs.md` 인덱스 페이지를 생성한다. 본문 작성은 후속 이슈에서 진행하되, **디렉토리·파일 구조는 이번 이슈에서 4개 step 모두 잡는다**.
 - **작업 내용**:
   1. 루트 `labs/README.md` (시리즈 전체 안내) 작성
@@ -53,7 +53,53 @@
 
 ---
 
-### Task 4: slides 실습 시리즈 섹션 추가
+### Task 4: step01-weather 본문 작성 (stage 1·2·3)
+
+- [ ] 완료
+- **목표**: step01-weather의 stage 1·2·3 가이드 본문을 작성해 학습자가 자유응답 → 정형 Skill → HTML 리포트까지 따라갈 수 있게 한다.
+- **작업 내용**:
+  1. `stage1-weather-prompt/README.md` — "오늘 날씨 어때?" 자유응답 reference·관찰 포인트(매번 형식이 흔들리는 것 체감)·예시 prompt
+  2. `stage2-weather-skill/README.md` — Skill 구조(설명·instructions·고정 출력 템플릿: 온도·체감·날씨·우산 필요?)·호출 예시·1과 결과 비교
+  3. `stage3-weather-report/README.md` — HTML 템플릿 구조 안내·Cowork 스킬 절차(템플릿 읽기 → 값 채우기 → 파일 저장)·산출 파일 위치
+- **완료 기준**: 3개 stage README 본문이 작성되어 학습자가 step01을 끝까지 따라갈 수 있다.
+
+---
+
+### Task 5: step02-file-classifier 본문 작성 (stage 2)
+
+- [ ] 완료
+- **목표**: step02-file-classifier의 stage 2 가이드 본문을 작성한다. **Skill 옵션(파라미터) 설계**에 집중.
+- **작업 내용**:
+  1. `stage2-file-classifier-skill/README.md` — 옵션(`excel`/`image`)을 받는 Skill 구조·instructions·호출 예시·옵션별 동작 차이
+  2. **실행 매체 안내** — 라벨은 stage 2(교육 초점: 옵션 설계)지만 실제 파일 이동은 Cowork·Code 실행 모드 영역임을 명시
+- **완료 기준**: stage 2 README 본문이 작성되어 옵션 설계 흐름과 실행 매체 경계를 학습자가 명확히 이해할 수 있다.
+
+---
+
+### Task 6: step03-voca-quiz 본문 작성 (stage 1·2)
+
+- [ ] 완료
+- **목표**: step03-voca-quiz의 stage 1·2 가이드 본문을 작성한다. ADR-0001 후속 "Gems → Claude Skill 재설계" 흡수.
+- **작업 내용**:
+  1. `stage1-voca-quiz-prompt/README.md` — "영단어 문제 내줘" 자유응답 reference·형식·난이도 변동 관찰
+  2. `stage2-voca-quiz-skill/README.md` — 입력값(단어 리스트·난이도·문제 유형: 객관식·빈칸·뜻 맞추기) 받는 Skill·정형 출력 예시·호출 예시
+- **완료 기준**: 2개 stage README 본문이 작성되어 학습자가 step03을 끝까지 따라갈 수 있다.
+
+---
+
+### Task 7: step04-wrong-answer-note 본문 작성 (stage 1·2·3)
+
+- [ ] 완료
+- **목표**: step04-wrong-answer-note의 stage 1·2·3 가이드 본문을 작성한다. ADR-0001 후속 "AI 오답노트 재설계" 흡수, 학습 도구 종합.
+- **작업 내용**:
+  1. `stage1-wrong-answer-note-prompt/README.md` — "이 문제 틀렸는데 어떻게 정리?" 자유응답 reference
+  2. `stage2-wrong-answer-note-skill/README.md` — 정형 형식(문제·정답·해설·핵심 개념·복습 시점) 출력 Skill·호출 예시
+  3. `stage3-wrong-answer-note-report/README.md` — 누적 오답 HTML 리포트 절차(단원별 정리·통계 포함)·Cowork 스킬 안내
+- **완료 기준**: 3개 stage README 본문이 작성되어 학습자가 step04를 끝까지 따라갈 수 있다.
+
+---
+
+### Task 8: slides 실습 시리즈 섹션 추가
 
 - [ ] 완료
 - **목표**: `slides/`에 실습 시리즈 소개 섹션을 추가해 docs와 동기화한다 (ADR-0002 단방향 파생).
@@ -65,19 +111,19 @@
 
 ---
 
-### Task 5: ADR 작성
+### Task 9: ADR 작성
 
 - [ ] 완료
 - **목표**: 본 이슈의 의사결정을 ADR로 기록한다.
 - **작업 내용**:
   1. `.ai/50_adr/active/adr-0006-labs-structure-and-naming.md` 신설 (번호는 현재 active 최신 다음번)
-  2. 결정 사항: 위치(루트 SSoT)·중첩 명명 규칙(step+stage)·docs 인덱스 정책·slides 동기화 원칙·ADR-0001과의 정합·stage 1 해석·ADR-0001 후속 항목(오답노트·자동 출제기) 흡수
+  2. 결정 사항: 위치(루트 SSoT)·중첩 명명 규칙(step+stage)·docs 인덱스 정책·slides 동기화 원칙·ADR-0001과의 정합·stage 1 해석·ADR-0001 후속 항목(오답노트·자동 출제기) 흡수·**본 이슈에서 step별 가이드 본문까지 작성**한 범위 변경 기록
   3. `.ai/50_adr/index.md` Active ADR 표에 신규 행 추가
 - **완료 기준**: 신규 ADR 파일이 active에 추가되고 index.md에 등재되었다.
 
 ---
 
-### Task 6: 마무리·이관
+### Task 10: 마무리·이관
 
 - [ ] 완료
 - **목표**: 변경사항을 커밋·PR로 정리하고 이슈를 종료한다.
