@@ -37,13 +37,19 @@
 ### Task 3: 디렉토리 골격·docs 인덱스 페이지 생성
 
 - [ ] 완료
-- **목표**: Task 1·2의 결정을 적용해 루트 `labs/` 골격과 `docs/labs.md` 인덱스 페이지를 생성한다.
+- **목표**: Task 1·2의 결정을 적용해 루트 `labs/` 모든 step 골격과 `docs/labs.md` 인덱스 페이지를 생성한다. 본문 작성은 후속 이슈에서 진행하되, **디렉토리·파일 구조는 이번 이슈에서 4개 step 모두 잡는다**.
 - **작업 내용**:
-  1. 루트 `labs/README.md` (시리즈 전체 안내) + `labs/step01-weather/` 골격 (README + stage 1·2·3 디렉토리, 각각 자리만)
-  2. 후속 step용 **템플릿 디렉토리** 정의 — 다음 이슈에서 복제해 쓸 수 있는 형태(예: `labs/_template-step/` 또는 시리즈 README에 패턴 명시)
-  3. `docs/labs.md` 인덱스 페이지 작성 — 실습 시리즈 소개·3단계 모델 매핑·GitHub `labs/` 링크·zip 다운로드 안내
-  4. `mkdocs.yml` nav에 실습 항목 등록
-- **완료 기준**: 루트 골격·docs 인덱스 페이지가 생성되어 사이트 빌드 시 실습 항목이 노출되고, 후속 이슈가 콘텐츠만 채우면 되도록 준비되었다.
+  1. 루트 `labs/README.md` (시리즈 전체 안내) 작성
+  2. 4개 step 디렉토리·파일 골격 모두 생성 — `labs-candidates.md` 표대로
+     - `labs/step01-weather/` + README + `stage1-weather-prompt/`, `stage2-weather-skill/`, `stage3-weather-report/`
+     - `labs/step02-file-classifier/` + README + `stage2-file-classifier-skill/`
+     - `labs/step03-voca-quiz/` + README + `stage1-voca-quiz-prompt/`, `stage2-voca-quiz-skill/`
+     - `labs/step04-wrong-answer-note/` + README + `stage1-wrong-answer-note-prompt/`, `stage2-wrong-answer-note-skill/`, `stage3-wrong-answer-note-report/`
+     - 각 step README는 주제·stage 구성·학습 포인트 정도의 골격(본문은 후속 이슈)
+     - 각 stage 디렉토리는 자리만 (`.gitkeep` 또는 placeholder README)
+  3. `docs/labs.md` 인덱스 페이지 작성 — 단일 파일 형태(`docs/labs/index.md` 아님). 실습 시리즈 소개·3단계 모델 매핑·GitHub `labs/` 링크·zip 다운로드 안내
+  4. `mkdocs.yml` nav에 "실습" 라벨로 실습 항목 등록
+- **완료 기준**: 4개 step 골격·docs 인덱스 페이지가 생성되어 사이트 빌드 시 실습 항목이 노출되고, 후속 이슈가 본문만 채우면 되도록 준비되었다.
 
 ---
 
