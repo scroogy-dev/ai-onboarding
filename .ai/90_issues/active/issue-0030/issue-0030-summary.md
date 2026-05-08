@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 4 — step01-weather 본문 작성 (stage 1·2·3)
+> ▶️ 다음 작업: Task 5 — step02-file-classifier 본문 작성 (stage 2)
 
 ---
 
@@ -52,9 +52,16 @@
 
 ### Task 4: step01-weather 본문 작성 (stage 1·2·3)
 
-- **결과**: <!-- 미시작 -->
+- **결과**: 완료
 - **수행 내용 요약**:
+  - stage 1 — 자유응답 비교 절차(같은 prompt 3회 반복·표 비교) + 관찰 포인트
+  - stage 2 — Skill 생성·instructions 예시(고정 출력 템플릿)·stage 1과 결과 비교 표
+  - stage 3 — HTML 템플릿(weather-template.html) 코드 블록·Cowork 절차(템플릿 읽기→슬롯 치환→파일 저장)·트러블슈팅
+  - 각 stage README에 "다음 단계" 링크로 학습 흐름 연결
+  - .gitkeep 정리 (README가 디렉토리 유지 역할)
 - **특이 사항**:
+  - stage 2의 "정보 부정확" 트러블슈팅에 모델이 실시간 날씨 API를 호출하지 않는다는 점 명시 — 학습 목표는 "형식 일관성"이지 정확한 실시간 값이 아님을 강조.
+  - stage 3에서 Cowork이 stage 3의 표준 매체임을 명시 (Claude Code는 비개발자 진입 장벽으로 본 교육 비표준 — ADR-0001 정합).
 
 ---
 

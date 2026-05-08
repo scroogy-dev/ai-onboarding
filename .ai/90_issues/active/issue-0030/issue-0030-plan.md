@@ -55,7 +55,7 @@
 
 ### Task 4: step01-weather 본문 작성 (stage 1·2·3)
 
-- [ ] 완료
+- [x] 완료
 - **목표**: step01-weather의 stage 1·2·3 가이드 본문을 작성해 학습자가 자유응답 → 정형 Skill → HTML 리포트까지 따라갈 수 있게 한다.
 - **작업 내용**:
   1. `stage1-weather-prompt/README.md` — "오늘 날씨 어때?" 자유응답 reference·관찰 포인트(매번 형식이 흔들리는 것 체감)·예시 prompt
