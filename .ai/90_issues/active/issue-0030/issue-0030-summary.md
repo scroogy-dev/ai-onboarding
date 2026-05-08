@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 6 — step03-voca-quiz 본문 작성 (stage 1·2)
+> ▶️ 다음 작업: Task 7 — step04-wrong-answer-note 본문 작성 (stage 1·2·3)
 
 ---
 
@@ -86,9 +86,19 @@
 
 ### Task 6: step03-voca-quiz 본문 작성 (stage 1·2)
 
-- **결과**: <!-- 미시작 -->
+- **결과**: 완료
 - **수행 내용 요약**:
+  - 상위 `step03-voca-quiz/README.md` 갱신 — 시나리오를 **부모-자녀 영어 단어 숙제 보조 도구**(단어장 사진 기반 랜덤 출제)로 재정의. 기존 방식의 어려움(순서 까먹음·발음 스트레스·채점 부담·숙어 혼재) → Skill로 해결 매핑 표 추가.
+  - `stage1-voca-quiz-prompt/README.md` 재작성 — 단어장 사진 업로드 + 자유응답 출제 시도. 핵심 흔들림 = **사진의 뜻이 그대로 안 나옴**(AI가 임의로 일반 뜻으로 변환), 숙어 옵션 무시, 출제 개수 흔들림, 발음 도움 누락. 매체는 이미지 업로드 가능한 환경 필요.
+  - `stage2-voca-quiz-skill/README.md` 재작성 — 사진 + 숙어 옵션 + 출제 개수 받는 Skill. 사용자가 운영하던 원본 prompt 골격을 instructions에 옮기면서 **단어별 네이버 영어사전 직접 링크**(`https://en.dict.naver.com/#/search?query=<단어>`) 출력 규칙 추가. 호출 A·B·C(옵션·개수 변경) + D(사진 누락) + E(개수 누락) + stage 1 비교 표.
+  - `voca-quiz/SKILL.md` 재작성 — 사용자 원본 prompt 기반 처리 단계(0~2단계) + 출력 형식. 단어별 링크 query 인코딩 규칙 명시.
+  - `labs-candidates.md` step03 항목 갱신 — 학습 포인트와 짚어둘 점을 새 시나리오로 갱신.
+  - `stage2-voca-quiz-skill/README.md`에 **"Project로도 운영하기"** 섹션 추가 — Skill instructions가 Claude Project custom instructions 영역에 그대로 적용 가능함을 안내. Skill vs Project 동선 비교 표 + 4단계 운영 방법(생성·instruction 붙이기·지식 등록 옵션·모바일 진입). Google Gems 사용 경험에서 Claude로 옮길 때 가장 자연스러운 1:1 대응 안내.
 - **특이 사항**:
+  - **시나리오 전면 변경**: 1차 작성에서는 객관식/빈칸/뜻 분기형 출제기로 잡았으나, 사용자가 실제 운영하던 시나리오(부모-자녀 단어 숙제, 단어장 사진 기반 랜덤 출제, 사진의 뜻 그대로 보존)를 공유받아 전면 재작성. 1차 작성분은 폐기.
+  - **step02와의 차별 메시지 재정의**: step02가 "텍스트 옵션 1축"이라면 step03은 **"이미지 입력 + 출처 충실성 강제(AI 환각 차단) + 외부 도구 직접 링크"**. 더 풍부한 Skill 설계 패턴.
+  - **단어별 발음 링크 처리 결정**: 사용자 원본 prompt에서는 `개별 단어마다 발음 링크를 붙이지 않는다`였으나, 사용자 결정으로 본 lab에서는 **단어 줄마다 직접 링크 부착**으로 진화. instructions의 마지막 규칙을 의도적으로 뒤집고, 그 메시지(Skill은 점진적으로 진화시킬 수 있음)를 본문에서 자연스럽게 전달.
+  - **매체 안내**: stage 1·2 모두 이미지 업로드 가능한 환경 필요(claude.ai 웹·Claude Desktop 모두 OK). step02 stage 1처럼 "라벨 vs 매체" 분리 강조까지는 불필요 — 두 stage 모두 동일 매체.
 
 ---
 

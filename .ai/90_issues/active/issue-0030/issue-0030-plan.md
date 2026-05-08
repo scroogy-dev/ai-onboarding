@@ -80,12 +80,12 @@
 
 ### Task 6: step03-voca-quiz 본문 작성 (stage 1·2)
 
-- [ ] 완료
+- [x] 완료
 - **목표**: step03-voca-quiz의 stage 1·2 가이드 본문을 작성한다. ADR-0001 후속 "Gems → Claude Skill 재설계" 흡수.
 - **작업 내용**:
   1. `stage1-voca-quiz-prompt/README.md` — "영단어 문제 내줘" 자유응답 reference·형식·난이도 변동 관찰
   2. `stage2-voca-quiz-skill/README.md` — 입력값(단어 리스트·난이도·문제 유형: 객관식·빈칸·뜻 맞추기) 받는 Skill·정형 출력 예시·호출 예시
-- **완료 기준**: 2개 stage README 본문이 작성되어 학습자가 step03을 끝까지 따라갈 수 있다.
+- **완료 기준**: 2개 stage README 본문이 작성되어 학습자가 step03을 끝까지 따라갈 수 있다. ✅
 
 ---
 
