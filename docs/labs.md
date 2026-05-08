@@ -28,9 +28,6 @@
 - **GitHub에서 보기**: [github.com/scroogy-dev/ai-onboarding/tree/main/labs](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs)
 - **zip 다운로드**: [main.zip](https://github.com/scroogy-dev/ai-onboarding/archive/refs/heads/main.zip) — 압축을 풀고 `labs/` 디렉토리만 열어 사용
 
-!!! warning "본문 작성 진행 중"
-    각 step의 상세 가이드 본문은 후속 이슈에서 step 단위로 추가됩니다. 현재는 디렉토리 골격만 마련된 상태입니다.
-
 ---
 
 ## 사전 준비
