@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>날씨 아이콘 9종 미리보기</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+      background: #f5f7fa;
+      color: #1f2329;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .lead {
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin-bottom: 1.75rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    .badge {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      background: linear-gradient(160deg, #4a90e2 0%, #74b9ff 50%, #a5d8ff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(74, 144, 226, 0.18);
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.04));
+    }
+    .badge svg {
+      width: 60%;
+      height: 60%;
+    }
+
+    .label {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>날씨 아이콘 9종</h1>
+    <p class="lead">{{weather}} 슬롯에 들어올 수 있는 9가지 값과 매칭되는 아이콘 미리보기.</p>
+
+    <div class="grid">
+      <div class="item">
+        <div class="badge">
+          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22" fill="#ffe082" opacity="0.4"/><circle cx="32" cy="32" r="15" fill="#ffc525"/></svg>
+        </div>
+        <div class="label">맑음</div>
+      </div>
+
+      <div class="item">
+        <div class="badge">
+          <svg viewBox="0 0 64 64"><circle cx="24" cy="24" r="17" fill="#ffe082" opacity="0.4"/><circle cx="24" cy="24" r="11" fill="#ffc525"/><path fill="#d1d8e0" d="M52 52H32a7 7 0 0 1-1-13.9A8.5 8.5 0 0 1 50 36a6 6 0 0 1 2 16z"/></svg>
+        </div>
+        <div class="label">구름조금</div>
+      </div>
+
+      <div class="item">
+        <div class="badge">
+          <svg viewBox="0 0 64 64"><circle cx="18" cy="20" r="13" fill="#ffe082" opacity="0.4"/><circle cx="18" cy="20" r="8.5" fill="#ffc525"/><path fill="#d1d8e0" d="M48 50H22a10 10 0 0 1-1-19.9A12 12 0 0 1 44 28a8 8 0 0 1 4 22z"/></svg>
+        </div>
+        <div class="label">구름많음</div>
+      </div>
+
+      <div class="item">
+        <div class="badge">
+          <svg viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 46H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 24a8 8 0 0 1 2 22z"/></svg>
+        </div>
+        <div class="label">흐림</div>
+      </div>
+
+      <div class="item">
+        <div class="badge">
+          <svg viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><rect x="21" y="44" width="3" height="8" rx="1.5" fill="#5dade2"/><rect x="31" y="46" width="3" height="10" rx="1.5" fill="#5dade2"/><rect x="41" y="44" width="3" height="8" rx="1.5" fill="#5dade2"/></svg>
+        </div>
+        <div class="label">비</div>
+      </div>
+
+      <div class="item">
+        <div class="badge">
+          <svg viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><g stroke="#5dade2" stroke-width="2.8" stroke-linecap="round"><line x1="22" y1="44" x2="19" y2="54"/><line x1="30" y1="44" x2="27" y2="54"/><line x1="38" y1="44" x2="35" y2="54"/><line x1="46" y1="44" x2="43" y2="54"/></g></svg>
+        </div>
+        <div class="label">소나기</div>
+      </div>
+
+      <div class="item">
+        <div class="badge">
+          <svg viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><path fill="#ffc525" d="M34 36 l-8 14 l5.5 0 l-3.5 10 l10 -15 l-5.5 0 l4.5 -9z"/><path fill="#ffc525" d="M48 44 L49.5 46.5 L52 48 L49.5 49.5 L48 52 L46.5 49.5 L44 48 L46.5 46.5 Z"/></svg>
+        </div>
+        <div class="label">천둥번개</div>
+      </div>
+
+      <div class="item">
+        <div class="badge">
+          <svg viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><g stroke="#a8d5e5" stroke-width="1.4" stroke-linecap="round" fill="none"><path d="M22 44v10 M17.67 46.5l8.66 5 M17.67 51.5l8.66-5"/><path d="M32 46v10 M27.67 48.5l8.66 5 M27.67 53.5l8.66-5"/><path d="M42 44v10 M37.67 46.5l8.66 5 M37.67 51.5l8.66-5"/></g></svg>
+        </div>
+        <div class="label">눈</div>
+      </div>
+
+      <div class="item">
+        <div class="badge">
+          <svg viewBox="0 0 64 64"><rect x="14" y="22" width="36" height="3" rx="1.5" fill="#ffffff" opacity="0.9"/><rect x="18" y="30" width="32" height="3" rx="1.5" fill="#ffffff" opacity="0.7"/><rect x="14" y="38" width="36" height="3" rx="1.5" fill="#ffffff" opacity="0.9"/><rect x="22" y="46" width="28" height="3" rx="1.5" fill="#ffffff" opacity="0.7"/></svg>
+        </div>
+        <div class="label">안개</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

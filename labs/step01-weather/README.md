@@ -2,8 +2,6 @@
 
 > 자유 응답에서 출발해 정형 텍스트 응답·HTML 리포트로 발전하는 풀 코스 실습.
 
-> **상태**: 본 페이지는 골격입니다. 상세 가이드 본문은 후속 이슈에서 작성됩니다.
-
 ---
 
 ## 학습 목표
@@ -17,7 +15,7 @@
 | stage | 디렉토리 | 단계 | 학습 포인트 |
 |-------|---------|------|------------|
 | 1 | [stage1-weather-prompt/](./stage1-weather-prompt/) | 챗봇 자유응답 reference | "오늘 날씨 어때?" 질문에 매번 다른 형식의 답이 오는 것을 체감 |
-| 2 | [stage2-weather-skill/](./stage2-weather-skill/) | 정형 텍스트 응답 Skill | 같은 질문에 항상 동일 템플릿(온도·체감·날씨·우산 필요?)으로 답하는 Skill |
+| 2 | [stage2-weather-skill/](./stage2-weather-skill/) | 정형 텍스트 응답 Skill | 같은 질문에 항상 동일 9개 항목(온도·체감·날씨·바람·습도·PM10·PM2.5·우산·옷차림)으로 답하는 Skill |
 | 3 | [stage3-weather-report/](./stage3-weather-report/) | HTML 리포트 파일 생성 | HTML 템플릿 파일을 읽어 결과를 채운 리포트를 자동 저장하는 Cowork 스킬 |
 
 ---

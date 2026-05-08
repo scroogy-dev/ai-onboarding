@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오늘의 날씨 — 서울</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+      background: #f5f7fa;
+      color: #1f2329;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #fff;
+      box-shadow: 0 0 24px rgba(0,0,0,0.04);
+    }
+
+    .hero {
+      padding: 1.75rem 1.5rem 2rem;
+      color: #fff;
+      background: linear-gradient(160deg, #4a90e2 0%, #74b9ff 50%, #a5d8ff 100%);
+    }
+    .hero__date { font-size: 0.875rem; opacity: 0.9; }
+    .hero__city { font-size: 1.625rem; font-weight: 700; margin: 0.125rem 0 1.5rem; letter-spacing: -0.01em; }
+    .hero__main { display: flex; align-items: center; gap: 1rem; }
+    .hero__main-text { flex: 1; min-width: 0; }
+    .hero__temp {
+      font-size: 5.5rem;
+      font-weight: 300;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+    .hero__weather { font-size: 1.25rem; font-weight: 500; margin-top: 0.625rem; }
+    .hero__feels { font-size: 0.95rem; opacity: 0.92; margin-top: 0.25rem; }
+
+    .hero__icon {
+      width: 96px;
+      height: 96px;
+      flex-shrink: 0;
+      color: rgba(255, 255, 255, 0.95);
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
+    }
+    .hero__icon svg { width: 100%; height: 100%; display: none; }
+    .hero__icon[data-weather="맑음"]     .wt-sunny         { display: block; }
+    .hero__icon[data-weather="구름조금"] .wt-partly-cloudy { display: block; }
+    .hero__icon[data-weather="구름많음"] .wt-mostly-cloudy { display: block; }
+    .hero__icon[data-weather="흐림"]     .wt-cloudy        { display: block; }
+    .hero__icon[data-weather="비"]       .wt-rain          { display: block; }
+    .hero__icon[data-weather="소나기"]   .wt-shower        { display: block; }
+    .hero__icon[data-weather="천둥번개"] .wt-thunder       { display: block; }
+    .hero__icon[data-weather="눈"]       .wt-snow          { display: block; }
+    .hero__icon[data-weather="안개"]     .wt-fog           { display: block; }
+
+    .card {
+      margin: 0.875rem 1.25rem 0;
+      padding: 1.125rem 1.25rem 1.25rem;
+      background: #fff;
+      border: 1px solid #eef0f3;
+      border-radius: 16px;
+    }
+    .card__title {
+      font-size: 0.8125rem;
+      color: #8b95a1;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.875rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.625rem;
+    }
+    .grid__cell {
+      padding: 0.875rem 1rem;
+      background: #f6f8fb;
+      border-radius: 12px;
+    }
+    .grid__label {
+      font-size: 0.75rem;
+      color: #8b95a1;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+    .grid__label .ico {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      color: #4a90e2;
+    }
+    .grid__label .ico svg { width: 100%; height: 100%; display: block; }
+    .grid__value { font-size: 1rem; font-weight: 600; color: #1f2329; }
+
+    .aq { display: flex; gap: 0.625rem; }
+    .aq__item {
+      flex: 1;
+      padding: 0.875rem 1rem;
+      background: #f6f8fb;
+      border-radius: 12px;
+    }
+    .aq__label { font-size: 0.75rem; color: #8b95a1; margin-bottom: 0.375rem; }
+    .aq__badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #fff;
+      background: #8b95a1;
+    }
+    .aq__badge--good   { background: #4fb3f9; }
+    .aq__badge--normal { background: #5dc65d; }
+    .aq__badge--bad    { background: #f5a623; }
+    .aq__badge--vbad   { background: #ef5b5b; }
+
+    .summary {
+      margin: 0.875rem 1.25rem 1.5rem;
+      padding: 1rem 1.125rem;
+      background: #f6f8fb;
+      border-left: 3px solid #03c75a;
+      border-radius: 10px;
+      font-size: 0.925rem;
+      line-height: 1.6;
+      color: #4a5057;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <section class="hero">
+      <div class="hero__date">2026-05-08 (금)</div>
+      <div class="hero__city">서울</div>
+      <div class="hero__main">
+        <div class="hero__main-text">
+          <div class="hero__temp">20°</div>
+          <div class="hero__weather">맑음</div>
+          <div class="hero__feels">체감 쾌적</div>
+        </div>
+        <div class="hero__icon" data-weather="맑음" aria-hidden="true">
+          <svg class="wt-sunny" viewBox="0 0 64 64"><circle cx="32" cy="32" r="22" fill="#ffe082" opacity="0.4"/><circle cx="32" cy="32" r="15" fill="#ffc525"/></svg>
+          <svg class="wt-partly-cloudy" viewBox="0 0 64 64"><circle cx="24" cy="24" r="17" fill="#ffe082" opacity="0.4"/><circle cx="24" cy="24" r="11" fill="#ffc525"/><path fill="#d1d8e0" d="M52 52H32a7 7 0 0 1-1-13.9A8.5 8.5 0 0 1 50 36a6 6 0 0 1 2 16z"/></svg>
+          <svg class="wt-mostly-cloudy" viewBox="0 0 64 64"><circle cx="18" cy="20" r="13" fill="#ffe082" opacity="0.4"/><circle cx="18" cy="20" r="8.5" fill="#ffc525"/><path fill="#d1d8e0" d="M48 50H22a10 10 0 0 1-1-19.9A12 12 0 0 1 44 28a8 8 0 0 1 4 22z"/></svg>
+          <svg class="wt-cloudy" viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 46H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 24a8 8 0 0 1 2 22z"/></svg>
+          <svg class="wt-rain" viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><rect x="21" y="44" width="3" height="8" rx="1.5" fill="#5dade2"/><rect x="31" y="46" width="3" height="10" rx="1.5" fill="#5dade2"/><rect x="41" y="44" width="3" height="8" rx="1.5" fill="#5dade2"/></svg>
+          <svg class="wt-shower" viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><g stroke="#5dade2" stroke-width="2.8" stroke-linecap="round"><line x1="22" y1="44" x2="19" y2="54"/><line x1="30" y1="44" x2="27" y2="54"/><line x1="38" y1="44" x2="35" y2="54"/><line x1="46" y1="44" x2="43" y2="54"/></g></svg>
+          <svg class="wt-thunder" viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><path fill="#ffc525" d="M34 36 l-8 14 l5.5 0 l-3.5 10 l10 -15 l-5.5 0 l4.5 -9z"/><path fill="#ffc525" d="M48 44 L49.5 46.5 L52 48 L49.5 49.5 L48 52 L46.5 49.5 L44 48 L46.5 46.5 Z"/></svg>
+          <svg class="wt-snow" viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><g stroke="#a8d5e5" stroke-width="1.4" stroke-linecap="round" fill="none"><path d="M22 44v10 M17.67 46.5l8.66 5 M17.67 51.5l8.66-5"/><path d="M32 46v10 M27.67 48.5l8.66 5 M27.67 53.5l8.66-5"/><path d="M42 44v10 M37.67 46.5l8.66 5 M37.67 51.5l8.66-5"/></g></svg>
+          <svg class="wt-fog" viewBox="0 0 64 64"><rect x="14" y="22" width="36" height="3" rx="1.5" fill="#ffffff" opacity="0.9"/><rect x="18" y="30" width="32" height="3" rx="1.5" fill="#ffffff" opacity="0.7"/><rect x="14" y="38" width="36" height="3" rx="1.5" fill="#ffffff" opacity="0.9"/><rect x="22" y="46" width="28" height="3" rx="1.5" fill="#ffffff" opacity="0.7"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card__title">상세 정보</div>
+      <div class="grid">
+        <div class="grid__cell">
+          <div class="grid__label">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h17a3 3 0 1 1-3 3"/><path d="M3 16h9"/></svg>
+            </span>
+            바람
+          </div>
+          <div class="grid__value">보통 · 4 m/s</div>
+        </div>
+        <div class="grid__cell">
+          <div class="grid__label">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5C9 7 6 11 6 14a6 6 0 0 0 12 0c0-3-3-7-6-10.5z"/></svg>
+            </span>
+            습도
+          </div>
+          <div class="grid__value">55% · 적정</div>
+        </div>
+        <div class="grid__cell">
+          <div class="grid__label">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11a9 9 0 0 1 18 0z"/><path d="M12 11v7a2 2 0 0 0 4 0"/></svg>
+            </span>
+            우산 필요?
+          </div>
+          <div class="grid__value">아니오</div>
+        </div>
+        <div class="grid__cell">
+          <div class="grid__label">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l-5 4 2.7 3.2L8 8.6V21h8V8.6l2.3 1.6L21 7l-5-4-1.7 1.7c-.7.7-1.5 1-2.3 1s-1.6-.3-2.3-1L8 3z"/></svg>
+            </span>
+            옷차림
+          </div>
+          <div class="grid__value">얇은 긴팔 · 가벼운 가디건</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card__title">대기질</div>
+      <div class="aq">
+        <div class="aq__item">
+          <div class="aq__label">미세먼지 PM10</div>
+          <span class="aq__badge">보통</span>
+        </div>
+        <div class="aq__item">
+          <div class="aq__label">초미세먼지 PM2.5</div>
+          <span class="aq__badge">좋음</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="summary">외출하기 좋은 날입니다. 자외선이 다소 강할 수 있으니 모자나 선글라스를 챙겨 보세요.</div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.aq__badge').forEach(function (el) {
+      var t = el.textContent.trim().replace(/\s+/g, ' ');
+      var aqMap = { '좋음': 'good', '보통': 'normal', '나쁨': 'bad', '매우 나쁨': 'vbad', '매우나쁨': 'vbad' };
+      if (aqMap[t]) el.classList.add('aq__badge--' + aqMap[t]);
+    });
+
+    (function () {
+      var weatherEl = document.querySelector('.hero__weather');
+      var iconEl = document.querySelector('.hero__icon');
+      if (!weatherEl || !iconEl) return;
+      var w = weatherEl.textContent.trim();
+      var allowed = ['맑음', '구름조금', '구름많음', '흐림', '비', '소나기', '천둥번개', '눈', '안개'];
+      iconEl.setAttribute('data-weather', allowed.indexOf(w) >= 0 ? w : '맑음');
+    })();
+  </script>
+</body>
+</html>
