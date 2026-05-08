@@ -25,7 +25,7 @@
 - **목표**: ADR-0001의 3단계 모델에 매핑되는 실습 후보를 step 단위로 선정한다. 비개발자 청중 + Cowork 샌드박스 제약(외부 API 차단) 고려.
 - **확정 후보** (총 4개 step, 학습 순서):
   - **step01-weather** (날씨, stage 1·2·3 풀 코스) — 자유응답 → 정형 텍스트 → HTML 리포트
-  - **step02-file-classifier** (파일 분류, stage 2만) — 옵션(`excel`/`image`) 있는 Skill 설계 경험에 집중. **각 step이 풀 코스일 필요 없음**을 패턴으로 시연. 실제 파일 이동은 Cowork·Code 실행 모드에서 동작 (stage 라벨은 교육 초점 기준)
+  - **step02-file-classifier** (파일 분류, stage 1·2) — 즉석 prompt(stage 1)와 옵션(`excel`/`image`) 받는 Skill(stage 2)을 비교. 옵션 설계의 효익을 stage 1과의 대비로 보여줌. 실행 매체는 두 stage 모두 Cowork·Code 필요 (stage 라벨은 학습 초점 — 즉석 지시·정형 자산 — 기준)
   - **step03-voca-quiz** (영어 단어 출제기, stage 1·2만) — Skill 활용 다양화. ADR-0001 후속 이슈로 명시된 "자동 출제기 재설계"
   - **step04-wrong-answer-note** (오답노트, stage 1·2·3 풀 코스) — 학습 도구 활용 종합. ADR-0001 후속 이슈로 명시된 "AI 오답노트 재설계"
 - **첫 작성 대상**: `step01-weather` (가장 단순한 1→2 전이부터 시작)
@@ -42,7 +42,7 @@
   1. 루트 `labs/README.md` (시리즈 전체 안내) 작성
   2. 4개 step 디렉토리·파일 골격 모두 생성 — `labs-candidates.md` 표대로
      - `labs/step01-weather/` + README + `stage1-weather-prompt/`, `stage2-weather-skill/`, `stage3-weather-report/`
-     - `labs/step02-file-classifier/` + README + `stage2-file-classifier-skill/`
+     - `labs/step02-file-classifier/` + README + `stage1-file-classifier-prompt/`, `stage2-file-classifier-skill/`
      - `labs/step03-voca-quiz/` + README + `stage1-voca-quiz-prompt/`, `stage2-voca-quiz-skill/`
      - `labs/step04-wrong-answer-note/` + README + `stage1-wrong-answer-note-prompt/`, `stage2-wrong-answer-note-skill/`, `stage3-wrong-answer-note-report/`
      - 각 step README는 주제·stage 구성·학습 포인트 정도의 골격(본문은 후속 이슈)
@@ -65,14 +65,16 @@
 
 ---
 
-### Task 5: step02-file-classifier 본문 작성 (stage 2)
+### Task 5: step02-file-classifier 본문 작성 (stage 1·2)
 
-- [ ] 완료
-- **목표**: step02-file-classifier의 stage 2 가이드 본문을 작성한다. **Skill 옵션(파라미터) 설계**에 집중.
+- [x] 완료
+- **목표**: step02-file-classifier의 stage 1·2 가이드 본문을 작성한다. **즉석 prompt vs Skill 정형화** 비교를 통해 옵션 설계 개념을 보여준다.
 - **작업 내용**:
-  1. `stage2-file-classifier-skill/README.md` — 옵션(`excel`/`image`)을 받는 Skill 구조·instructions·호출 예시·옵션별 동작 차이
-  2. **실행 매체 안내** — 라벨은 stage 2(교육 초점: 옵션 설계)지만 실제 파일 이동은 Cowork·Code 실행 모드 영역임을 명시
-- **완료 기준**: stage 2 README 본문이 작성되어 옵션 설계 흐름과 실행 매체 경계를 학습자가 명확히 이해할 수 있다.
+  1. `stage1-file-classifier-prompt/README.md` — Cowork·Code에서 즉석 prompt로 파일 이동 시도, 매번 흔들리는 점(확장자 정의·디렉토리 이름·보고 형식) 관찰
+  2. `stage2-file-classifier-skill/README.md` — 옵션(`excel`/`image`) 받는 Skill 구조·instructions·호출 예시·옵션별 동작 차이·**stage 1과의 비교 표**
+  3. **실행 매체 안내** — stage 1·2 모두 Cowork·Code가 필요. 라벨은 학습 초점(즉석 지시 vs 정형 자산) 기준이고 실행 매체는 stage 3 영역임을 명시
+  4. **인덱스 동기화** — `labs/README.md`·`docs/labs.md`의 step02 stage 컬럼 `2` → `1·2`
+- **완료 기준**: stage 1·2 README 본문이 작성되고 stage 1↔2 비교 표가 학습자에게 옵션 설계의 효익을 직관적으로 전달한다. ✅
 
 ---
 

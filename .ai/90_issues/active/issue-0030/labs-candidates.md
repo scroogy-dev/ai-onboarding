@@ -15,8 +15,9 @@ labs/
 │   ├── stage1-weather-prompt/
 │   ├── stage2-weather-skill/
 │   └── stage3-weather-report/
-├── step02-file-classifier/                      # Skill 옵션 집중 (stage 2만)
+├── step02-file-classifier/                      # Skill 옵션 집중 (stage 1·2)
 │   ├── README.md
+│   ├── stage1-file-classifier-prompt/
 │   └── stage2-file-classifier-skill/
 ├── step03-voca-quiz/                            # Skill 활용 다양화 (stage 1·2)
 │   ├── README.md
@@ -53,15 +54,18 @@ labs/
 
 ## step02-file-classifier
 
-**주제**: 파일 분류 — 옵션 있는 Skill 설계 경험 (stage 2만)
+**주제**: 파일 분류 — 즉석 prompt vs 옵션 있는 Skill 비교 (stage 1·2)
 
 | stage | 디렉토리 | 단계 | 학습 포인트 |
 |-------|---------|------|------------|
-| 2 | `stage2-file-classifier-skill/` | 옵션 있는 분류 Skill | 옵션(`excel` 또는 `image`)을 받아 해당 확장자 파일만 별도 디렉토리 생성·이동. **Skill 파라미터(옵션) 설계** 경험에 집중 |
+| 1 | `stage1-file-classifier-prompt/` | 즉석 prompt 지시 | Cowork·Code에서 Skill 없이 직접 prompt로 파일 이동. 같은 작업을 반복했을 때 흔들리는 점(엑셀 정의·디렉토리 이름·보고 형식) 체감 |
+| 2 | `stage2-file-classifier-skill/` | 옵션 있는 분류 Skill | 옵션(`excel` 또는 `image`)을 받아 해당 확장자 파일만 별도 디렉토리 생성·이동. **Skill 파라미터(옵션) 설계** 경험에 집중. stage 1과의 비교로 정형화의 효익 확인 |
 
-**선정 근거**: 짧고 집중적인 lab으로 **Skill 옵션** 개념을 보여줌. 단계 모델(1·2·3) 풀 코스가 아니어도 학습 목표에 맞춰 일부 stage만 두는 패턴 시연.
+**선정 근거**: **Skill 옵션** 개념을 가장 짧게 보여주는 시나리오. stage 1·2 두 단계를 두어 "즉석 지시 vs 정형 자산"의 효익을 직접 비교. stage 3(파일 산출 리포트)은 step01·step04에서 다루므로 본 step에서는 두지 않음.
 
-**짚어둘 점**: 실제 파일 이동은 Cowork(stage 3 매체) 또는 claude.ai Code 실행 모드에서 동작. **단계 라벨을 stage 2로 두는 이유는 교육 초점이 "Skill 옵션 설계"(stage 2 개념)이기 때문**이며, 실행 매체는 stage 3 영역임을 README에서 명확히 안내한다.
+**짚어둘 점**:
+- 실제 파일 이동은 stage 1·2 모두 Cowork(stage 3 매체) 또는 claude.ai Code 실행 모드에서 동작. **단계 라벨은 학습 초점(stage 1=즉석 지시, stage 2=Skill 정형화) 기준**이며 실행 매체는 stage 3 영역임을 README에서 명확히 안내한다.
+- step01-weather의 stage 1(어디서나 가능한 챗봇 자유응답)과 달리 본 step의 stage 1은 처음부터 매체 필요 — 학습자에게 "라벨 = 학습 초점, 매체 = 실행 환경, 둘은 분리된 축"이라는 메시지를 한 번 더 강조하는 자리.
 
 ---
 
