@@ -57,3 +57,5 @@
 | [ADR-0006](../../../50_adr/active/adr-0006-labs-structure-and-naming.md) | 실습 자료 구조·진행 원칙 — "프롬프트로만 진행"과 "결과물 검토"의 짝 관계 |
 | `.ai/99_workspace/notes/2026-05-08-followup-topic-candidates.md` | 핵심 후보 1·3·8(+동승 4·2) 출처 |
 | 선례 PR #29 / 이슈 #28 (archive/issue-0028) | "이론 보강 — 활용 모드 적합 명확화·역량 강화 3축" — 같은 결의 도입 섹션 보강 패턴 |
+| [Claude Cowork — 작업을 실행하는 방식](https://support.claude.com/ko/articles/13345190) | Task 3(계획/실행 분리) 외부 근거 — 청중이 쓰는 표면(Cowork)의 공식 가이드 |
+| [Claude Code 모범 사례 — 탐색·계획·코드](https://code.claude.com/docs/ko/best-practices) | Task 3(계획/실행 분리) 외부 근거 — 개발자용이지만 단계화 원칙은 비개발자에게도 유효 |

@@ -38,13 +38,17 @@
 
 ### Task 3: 핵심 후보 1 — 계획과 실행의 분리 (docs 도입 섹션)
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 비개발자가 큰 작업을 AI에 맡길 때 "계획만 먼저 받고 검토 → 실행" 흐름을 docs 도입에 admonition/카드로 명시.
 - **작업 내용**:
-  1. docs 도입 위치 선정 (기존 도입 섹션 검토 후 `docs/index.md` 또는 별 가이드 페이지 결정).
-  2. ADR-0001의 3단계 모델(stage 2 Skill 설계 ↔ stage 3 실행)과의 매핑을 한 줄로 호출.
-  3. 비개발자 톤·전문 용어 최소화 원칙 준수.
-- **완료 기준**: 핵심 메시지·교육적 함의·짧은 예시가 박스 형태로 추가, mkdocs 로컬 빌드 정상.
+  1. 위치 선정 — `docs/index.md`의 "How — 어떻게 진행되나요?" 섹션 안에 새 하위 `### AI 활용 메타 원칙 { #meta-principles }`을 신설(선례 PR #29와 같은 페이지). 후속 Task 4·5·6에서 ②③④⑤ 박스를 같은 자리에 누적.
+  2. ① 박스 작성 — `!!! abstract` admonition으로 짧고 단정적인 "계획만 요청 → 검토 → 실행 요청" 3단계 + 통제권 논거 + 3단계 모델 호출 한 줄. 외부 docs 인용은 의도적으로 배제(사용자 가이드: 심플한 원칙 우선).
+  3. mkdocs strict 빌드로 admonition·attr_list·anchor 정합 확인.
+- **결정 (2026-05-09)**: 외부 docs 인용보다 단정적 메시지 우선. `support.claude.com/ko/13345190`·`code.claude.com/docs/ko/best-practices`는 plan/spec의 외부 근거로만 남기고 본문에는 인용하지 않음.
+- **참고 문서** (외부, plan/spec 등록만 — 본문 미인용):
+  - Claude Cowork — 작업을 실행하는 방식: https://support.claude.com/ko/articles/13345190
+  - Claude Code 모범 사례 — 먼저 탐색하고, 그 다음 계획하고, 그 다음 코드 작성하기: https://code.claude.com/docs/ko/best-practices
+- **완료 기준**: docs/index.md에 ① 박스 + 새 하위 섹션 추가, mkdocs `--strict` 빌드 정상. ✅
 
 ---
 
