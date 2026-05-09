@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>오답노트 — {{student_name}} · {{publish_date}}</title>
+<!--
+  본 파일은 wrong-answer-html-report Skill이 사용하는 HTML 슬롯 템플릿입니다.
+
+  슬롯 형식
+  - 스칼라 슬롯: {{slot_name}} — 단일 값으로 치환
+  - 블록 마커:
+    <!-- PROBLEMS:START -->   ... <!-- PROBLEMS:END -->
+    <!-- SELF_CHECK:START --> ... <!-- SELF_CHECK:END -->
+    각 마커 사이의 한 .problem 카드(+ 해당 섹션 헤더)가 데이터의 각 문항에 대해 반복됩니다.
+    데이터가 비어 있으면 SECTION 블록 전체(섹션 헤더 포함)를 제거합니다.
+
+  실제 데이터가 채워진 결과 예시는 ../classical.html 을 참조하세요.
+
+  슬롯 미지정 시의 기본값은 wrong-answer-html-report/SKILL.md 의 "슬롯 매핑" 섹션을 참고하세요.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Pretendard:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#f6f1e6;
+    --paper-2:#efe8d6;
+    --ink:#1a2230;
+    --ink-2:#3b4658;
+    --rule:#d6cdb6;
+    --rule-strong:#7d6a48;
+    --burgundy:#7a1d2a;
+    --burgundy-soft:#a8525d;
+    --gold:#a98640;
+    --green:#3a5a3a;
+    --paper-cream:#fbf8ef;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background:#e7dfc9;
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    padding:48px 24px;
+  }
+  .page{
+    max-width:880px;
+    margin:0 auto;
+    background:var(--paper);
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(122,29,42,.02), transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(169,134,64,.04), transparent 40%);
+    border:1px solid var(--rule);
+    box-shadow:
+      0 1px 0 rgba(0,0,0,.04),
+      0 24px 60px -20px rgba(26,34,48,.25),
+      0 60px 120px -40px rgba(26,34,48,.18);
+    padding:64px 72px 56px;
+    position:relative;
+  }
+  .page::before{
+    content:"";
+    position:absolute;inset:14px;
+    border:1px solid var(--rule);
+    pointer-events:none;
+  }
+  .page::after{
+    content:"";
+    position:absolute;inset:18px;
+    border:1px solid var(--rule);
+    border-width:0 0 0 0;
+    pointer-events:none;
+  }
+
+  /* Letterhead */
+  .letterhead{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+    gap:24px;
+    padding-bottom:18px;
+    border-bottom:2px solid var(--ink);
+    position:relative;
+  }
+  .letterhead::after{
+    content:"";
+    position:absolute;
+    left:0;right:0;bottom:-6px;
+    height:1px;
+    background:var(--ink);
+  }
+  .crest{
+    width:62px;height:62px;
+    border:1.5px solid var(--ink);
+    border-radius:50%;
+    display:grid;place-items:center;
+    position:relative;
+    background:var(--paper-cream);
+  }
+  .crest::before{
+    content:"";
+    position:absolute;inset:5px;
+    border:1px solid var(--ink);
+    border-radius:50%;
+  }
+  .crest-mark{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:24px;
+    color:var(--burgundy);
+    letter-spacing:.02em;
+    line-height:1;
+  }
+  .brand{
+    display:flex;flex-direction:column;gap:2px;
+  }
+  .brand-name{
+    font-family:'Cormorant Garamond', 'Noto Serif KR', serif;
+    font-size:13px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--burgundy);
+    font-weight:600;
+  }
+  .brand-title{
+    font-family:'Noto Serif KR', serif;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:-.01em;
+    line-height:1;
+    color:var(--ink);
+  }
+  .brand-sub{
+    font-size:11px;
+    letter-spacing:.18em;
+    color:var(--ink-2);
+    text-transform:uppercase;
+    margin-top:6px;
+  }
+  .doc-meta{
+    text-align:right;
+    font-size:11px;
+    line-height:1.5;
+    color:var(--ink-2);
+    letter-spacing:.04em;
+  }
+  .doc-meta b{color:var(--ink);font-weight:600}
+  .doc-no{
+    font-family:'Cormorant Garamond', serif;
+    font-size:13px;
+    letter-spacing:.18em;
+    color:var(--burgundy);
+    font-weight:600;
+  }
+
+  /* Title block */
+  .title-block{
+    text-align:center;
+    margin:36px 0 28px;
+  }
+  .eyebrow{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:15px;
+    letter-spacing:.12em;
+    color:var(--burgundy);
+    margin-bottom:6px;
+  }
+  .doc-title{
+    font-family:'Noto Serif KR', serif;
+    font-size:46px;
+    font-weight:700;
+    letter-spacing:-.02em;
+    margin:0;
+    line-height:1.1;
+  }
+  .title-rule{
+    width:60px;height:1px;background:var(--rule-strong);
+    margin:18px auto 14px;
+  }
+  .title-sub{
+    font-size:13px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+  }
+
+  /* Profile bar */
+  .profile{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    border:1px solid var(--ink);
+    margin:24px 0 36px;
+    background:var(--paper-cream);
+  }
+  .profile-cell{
+    padding:16px 18px;
+    border-right:1px solid var(--rule);
+  }
+  .profile-cell:last-child{border-right:none}
+  .profile-label{
+    font-size:10px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+    font-weight:500;
+    margin-bottom:4px;
+  }
+  .profile-value{
+    font-family:'Noto Serif KR', serif;
+    font-size:18px;
+    font-weight:600;
+    color:var(--ink);
+  }
+
+  /* Executive summary */
+  .exec{
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:36px;
+    margin-bottom:44px;
+    padding-bottom:36px;
+    border-bottom:1px solid var(--rule);
+  }
+  .exec-head{
+    font-family:'Noto Serif KR', serif;
+    font-size:22px;
+    font-weight:600;
+    margin:0 0 14px;
+    display:flex;align-items:baseline;gap:10px;
+  }
+  .exec-head::before{
+    content:"§";
+    font-family:'Cormorant Garamond', serif;
+    color:var(--burgundy);
+    font-size:24px;
+    font-weight:400;
+  }
+  .exec-body{
+    font-size:14.5px;
+    color:var(--ink-2);
+    line-height:1.8;
+  }
+  .exec-body em{
+    font-style:normal;
+    color:var(--ink);
+    font-weight:600;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:1px;
+  }
+  .stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  .stat{
+    border:1px solid var(--rule);
+    padding:14px 16px;
+    background:var(--paper-cream);
+  }
+  .stat-label{
+    font-size:10px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+    margin-bottom:6px;
+  }
+  .stat-value{
+    font-family:'Noto Serif KR', serif;
+    font-size:30px;
+    font-weight:700;
+    color:var(--ink);
+    line-height:1;
+  }
+  .stat-value .unit{
+    font-size:14px;
+    color:var(--ink-2);
+    margin-left:3px;
+    font-weight:500;
+  }
+  .stat-foot{
+    font-size:11px;
+    color:var(--ink-2);
+    margin-top:6px;
+    letter-spacing:.02em;
+  }
+  .stat.accent{
+    background:var(--ink);
+    border-color:var(--ink);
+  }
+  .stat.accent .stat-label{color:rgba(255,255,255,.65)}
+  .stat.accent .stat-value{color:#f6f1e6}
+  .stat.accent .stat-foot{color:rgba(255,255,255,.55)}
+
+  /* Section header */
+  .section-head{
+    display:flex;align-items:baseline;justify-content:space-between;
+    margin:48px 0 20px;
+    padding-bottom:10px;
+    border-bottom:1.5px solid var(--ink);
+  }
+  .section-num{
+    font-family:'Cormorant Garamond', serif;
+    font-size:13px;
+    letter-spacing:.3em;
+    color:var(--burgundy);
+    font-weight:600;
+  }
+  .section-title{
+    font-family:'Noto Serif KR', serif;
+    font-size:24px;
+    font-weight:700;
+    margin:0;
+    letter-spacing:-.01em;
+  }
+  .section-meta{
+    font-size:11px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+  }
+
+  /* Problem entry */
+  .problem{
+    margin-bottom:42px;
+    page-break-inside:avoid;
+  }
+  .problem-head{
+    display:flex;align-items:flex-start;gap:18px;
+    padding-bottom:14px;
+    border-bottom:1px dashed var(--rule-strong);
+    margin-bottom:18px;
+  }
+  .p-num{
+    font-family:'Cormorant Garamond', serif;
+    font-size:54px;
+    font-weight:500;
+    line-height:.85;
+    color:var(--burgundy);
+    min-width:62px;
+  }
+  .p-num small{
+    display:block;
+    font-size:10px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+    font-family:'Pretendard', sans-serif;
+    margin-top:4px;
+    font-weight:600;
+  }
+  .p-meta{
+    flex:1;
+    padding-top:6px;
+  }
+  .p-tags{
+    display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;
+  }
+  .tag{
+    display:inline-block;
+    font-size:10.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:3px 8px;
+    border:1px solid var(--ink-2);
+    color:var(--ink-2);
+    font-weight:500;
+  }
+  .tag.burgundy{background:var(--burgundy);color:#f6f1e6;border-color:var(--burgundy)}
+  .tag.gold{border-color:var(--gold);color:var(--gold)}
+  .tag.green{border-color:var(--green);color:var(--green)}
+  .p-question{
+    font-family:'Noto Serif KR', serif;
+    font-size:19px;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.55;
+  }
+
+  .answer-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    border:1px solid var(--ink);
+    margin-bottom:20px;
+  }
+  .answer-cell{
+    padding:14px 18px;
+    border-right:1px solid var(--ink);
+    background:var(--paper-cream);
+  }
+  .answer-cell:last-child{border-right:none}
+  .answer-cell.correct{background:#1a2230;color:#f6f1e6}
+  .answer-label{
+    font-size:10px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    margin-bottom:4px;
+    opacity:.7;
+  }
+  .answer-value{
+    font-family:'Noto Serif KR', serif;
+    font-size:22px;
+    font-weight:600;
+  }
+  .answer-cell.wrong .answer-value{
+    color:var(--burgundy);
+    text-decoration:line-through;
+    text-decoration-color:var(--burgundy-soft);
+    text-decoration-thickness:1.5px;
+  }
+
+  .block{
+    margin:18px 0;
+  }
+  .block-head{
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:8px;
+  }
+  .block-head h4{
+    font-family:'Noto Serif KR', serif;
+    font-size:16px;
+    margin:0;
+    color:var(--burgundy);
+    font-weight:700;
+    letter-spacing:.01em;
+  }
+  .block-head .ornament{
+    width:18px;height:1px;background:var(--burgundy);
+  }
+  .block-body{
+    font-size:14.5px;
+    line-height:1.85;
+    color:var(--ink-2);
+    padding-left:28px;
+  }
+  .block-body strong{color:var(--ink);font-weight:600}
+
+  .steps{
+    counter-reset:step;
+    list-style:none;
+    margin:0;padding:0 0 0 28px;
+  }
+  .steps li{
+    counter-increment:step;
+    position:relative;
+    padding:10px 0 10px 38px;
+    font-size:14.5px;
+    line-height:1.7;
+    color:var(--ink-2);
+    border-bottom:1px dotted var(--rule);
+  }
+  .steps li:last-child{border-bottom:none}
+  .steps li::before{
+    content:counter(step, decimal-leading-zero);
+    position:absolute;left:0;top:10px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:18px;
+    font-weight:600;
+    color:var(--burgundy);
+    letter-spacing:.04em;
+  }
+  .steps li strong{color:var(--ink);font-weight:600}
+  .formula{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:16px;
+    color:var(--ink);
+    background:rgba(169,134,64,.08);
+    padding:1px 6px;
+    border-bottom:1px solid var(--gold);
+  }
+
+  .keypoint{
+    margin-top:18px;
+    padding:18px 22px;
+    background:var(--paper-cream);
+    border-left:3px solid var(--burgundy);
+    position:relative;
+  }
+  .keypoint::before{
+    content:"";
+    position:absolute;
+    left:0;top:0;bottom:0;
+    width:3px;background:var(--burgundy);
+    box-shadow:6px 0 0 var(--paper);
+  }
+  .keypoint-label{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:13px;
+    color:var(--burgundy);
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    margin-bottom:4px;
+    font-weight:600;
+  }
+  .keypoint-text{
+    font-family:'Noto Serif KR', serif;
+    font-size:15px;
+    line-height:1.7;
+    color:var(--ink);
+    font-weight:500;
+  }
+
+  /* Self-check */
+  .self-check{
+    margin-bottom:42px;
+    padding:24px 28px;
+    border:1px solid var(--green);
+    background:rgba(58,90,58,.04);
+  }
+  .self-check .p-num{color:var(--green)}
+  .self-check .tag.green{background:var(--green);color:var(--paper-cream)}
+  .self-check .answer-cell .answer-value{color:var(--green)}
+  .self-check .answer-cell.correct{background:var(--green);color:var(--paper-cream)}
+  .self-check .answer-cell.correct .answer-value{color:var(--paper-cream)}
+  .self-check .block-head .ornament{background:var(--green)}
+  .self-check .block-head h4{color:var(--green)}
+  .self-check .keypoint{border-left-color:var(--green)}
+  .self-check .keypoint-label{color:var(--green)}
+
+  /* Closing */
+  .closing{
+    margin-top:48px;
+    padding-top:36px;
+    border-top:2px solid var(--ink);
+    border-bottom:1px solid var(--ink);
+    padding-bottom:28px;
+  }
+  .closing-grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:36px;
+  }
+  .closing-head{
+    font-family:'Noto Serif KR', serif;
+    font-size:22px;
+    font-weight:600;
+    margin:0 0 12px;
+  }
+  .closing-list{
+    list-style:none;padding:0;margin:0;
+  }
+  .closing-list li{
+    padding:8px 0;
+    border-bottom:1px dotted var(--rule);
+    display:flex;justify-content:space-between;gap:16px;
+    font-size:13.5px;
+    color:var(--ink-2);
+  }
+  .closing-list li:last-child{border:none}
+  .closing-list li b{color:var(--ink);font-weight:600}
+
+  .quote{
+    font-family:'Noto Serif KR', serif;
+    font-style:italic;
+    font-size:16px;
+    line-height:1.7;
+    color:var(--ink);
+    padding:14px 0 14px 22px;
+    border-left:2px solid var(--gold);
+    position:relative;
+  }
+  .quote::before{
+    content:"\201C";
+    font-family:'Cormorant Garamond', serif;
+    font-size:48px;
+    color:var(--gold);
+    position:absolute;
+    left:8px;top:-4px;
+    line-height:1;
+  }
+  .quote-cite{
+    margin-top:8px;
+    font-style:normal;
+    font-family:'Pretendard', sans-serif;
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+  }
+
+  /* Footer */
+  .footer{
+    margin-top:36px;
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:10.5px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+  }
+  .signature{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:16px;
+    letter-spacing:.04em;
+    color:var(--ink);
+    text-transform:none;
+  }
+  .page-no{
+    font-family:'Cormorant Garamond', serif;
+    font-size:13px;
+    color:var(--ink-2);
+  }
+
+  /* Print */
+  @media print{
+    body{background:white;padding:0}
+    .page{box-shadow:none;border:none;max-width:none}
+  }
+</style>
+</head>
+<body>
+  <article class="page">
+    <!-- LETTERHEAD -->
+    <header class="letterhead">
+      <div class="crest"><span class="crest-mark">{{academy_initial}}</span></div>
+      <div class="brand">
+        <div class="brand-name">{{academy_name}}</div>
+        <div class="brand-title">오 답 노 트</div>
+        <div class="brand-sub">{{academy_subtitle}}</div>
+      </div>
+      <div class="doc-meta">
+        <div class="doc-no">{{doc_no}}</div>
+        <div><b>발행일</b> &nbsp;{{publish_date}}</div>
+        <div><b>발행</b> &nbsp;{{publisher}}</div>
+      </div>
+    </header>
+
+    <!-- TITLE -->
+    <div class="title-block">
+      <div class="eyebrow">{{term_label}}</div>
+      <h1 class="doc-title">{{unit}}</h1>
+      <div class="title-rule"></div>
+      <div class="title-sub">{{subject_grade_label}}</div>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="profile">
+      <div class="profile-cell">
+        <div class="profile-label">학생</div>
+        <div class="profile-value">{{student_name}}</div>
+      </div>
+      <div class="profile-cell">
+        <div class="profile-label">학년 / 과정</div>
+        <div class="profile-value">{{grade_label}}</div>
+      </div>
+      <div class="profile-cell">
+        <div class="profile-label">과목 · 단원</div>
+        <div class="profile-value">{{subject_unit_label}}</div>
+      </div>
+      <div class="profile-cell">
+        <div class="profile-label">담당 튜터</div>
+        <div class="profile-value">{{tutor_name}}</div>
+      </div>
+    </div>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <section class="exec">
+      <div>
+        <h2 class="exec-head">총평</h2>
+        <p class="exec-body">{{exec_summary_html}}</p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-label">출제</div>
+          <div class="stat-value">{{total_count}}<span class="unit">{{total_unit}}</span></div>
+          <div class="stat-foot">{{total_foot}}</div>
+        </div>
+        <div class="stat accent">
+          <div class="stat-label">정답률</div>
+          <div class="stat-value">{{accuracy_percent}}<span class="unit">%</span></div>
+          <div class="stat-foot">{{accuracy_foot}}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">집중 영역</div>
+          <div class="stat-value">{{focus_topic}}</div>
+          <div class="stat-foot">{{focus_foot}}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">스스로 체크</div>
+          <div class="stat-value">{{self_check_count}}<span class="unit">{{self_check_unit}}</span></div>
+          <div class="stat-foot">{{self_check_foot}}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEMS:START
+         이 마커 사이의 한 단위(섹션 헤더 1개 + .problem 카드 1개)에서
+         .problem 카드를 데이터의 각 오답 문항에 대해 반복합니다.
+         section-head는 한 번만 출력합니다.
+         오답 문항이 0건이면 PROBLEMS:START..END 블록 전체를 제거합니다. -->
+    <div class="section-head">
+      <div>
+        <div class="section-num">PART · I</div>
+        <h2 class="section-title">다시 살펴볼 문제</h2>
+      </div>
+      <div class="section-meta">Items requiring review</div>
+    </div>
+
+    <article class="problem">
+      <header class="problem-head">
+        <div class="p-num">{{problem_number_padded}}<small>Problem</small></div>
+        <div class="p-meta">
+          <div class="p-tags">{{tags_html}}</div>
+          <div class="p-question">{{problem_question_html}}</div>
+        </div>
+      </header>
+
+      <div class="answer-row">
+        <div class="answer-cell wrong">
+          <div class="answer-label">내가 쓴 답</div>
+          <div class="answer-value">{{student_answer}}</div>
+        </div>
+        <div class="answer-cell correct">
+          <div class="answer-label">맞는 답</div>
+          <div class="answer-value">{{correct_answer}}</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-head"><span class="ornament"></span><h4>왜 헷갈렸을까</h4></div>
+        <div class="block-body">{{why_html}}</div>
+      </div>
+
+      <div class="block">
+        <div class="block-head"><span class="ornament"></span><h4>이렇게 풀어 보자</h4></div>
+        {{steps_ol_html}}
+      </div>
+
+      <div class="keypoint">
+        <div class="keypoint-label">— 기억 포인트</div>
+        <div class="keypoint-text">{{key_point_html}}</div>
+      </div>
+    </article>
+    <!-- PROBLEMS:END -->
+
+    <!-- SELF_CHECK:START
+         이 마커 사이의 한 단위(섹션 헤더 1개 + .problem.self-check 카드 1개)에서
+         .problem.self-check 카드를 데이터의 각 자체 체크 문항(정답이지만 학생이 별표 등
+         자체 표시한 항목)에 대해 반복합니다. section-head는 한 번만.
+         자체 체크 항목이 0건이면 SELF_CHECK:START..END 블록 전체를 제거합니다. -->
+    <div class="section-head">
+      <div>
+        <div class="section-num">PART · II</div>
+        <h2 class="section-title">스스로 체크한 문제</h2>
+      </div>
+      <div class="section-meta">Self-marked items</div>
+    </div>
+
+    <article class="problem self-check">
+      <header class="problem-head">
+        <div class="p-num">{{sc_problem_number_padded}}<small>Problem</small></div>
+        <div class="p-meta">
+          <div class="p-tags">{{sc_tags_html}}</div>
+          <div class="p-question">{{sc_problem_question_html}}</div>
+        </div>
+      </header>
+
+      <div class="answer-row">
+        <div class="answer-cell">
+          <div class="answer-label">내가 쓴 답</div>
+          <div class="answer-value">{{sc_student_answer}}</div>
+        </div>
+        <div class="answer-cell correct">
+          <div class="answer-label">맞는 답</div>
+          <div class="answer-value">{{sc_correct_answer}}</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-head"><span class="ornament"></span><h4>{{sc_note_heading}}</h4></div>
+        <div class="block-body">{{sc_note_html}}</div>
+      </div>
+
+      <div class="keypoint">
+        <div class="keypoint-label">— 기억 포인트</div>
+        <div class="keypoint-text">{{sc_key_point_html}}</div>
+      </div>
+    </article>
+    <!-- SELF_CHECK:END -->
+
+    <!-- CLOSING -->
+    <section class="closing">
+      <div class="section-head" style="margin-top:0;border-bottom:1.5px solid var(--ink)">
+        <div>
+          <div class="section-num">PART · III</div>
+          <h2 class="section-title">오늘의 복습 포인트</h2>
+        </div>
+        <div class="section-meta">Review &amp; Recommendation</div>
+      </div>
+
+      <div class="closing-grid">
+        <div>
+          <ul class="closing-list">
+            <li><span>오늘 틀린 문제</span><b>{{review_count}}</b></li>
+            <li><span>나온 개념</span><b>{{review_concepts}}</b></li>
+            <li><span>가장 많은 오답 유형</span><b>{{review_focus}}</b></li>
+            <li><span>다음 학습 권장</span><b>{{review_recommendation}}</b></li>
+            <li><span>수석튜터 의견</span><b>{{tutor_opinion}}</b></li>
+          </ul>
+        </div>
+        <div>
+          <div class="quote">
+            {{closing_quote_text}}
+            <div class="quote-cite">{{closing_cite}}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>{{footer_left}}</span>
+      <span class="signature">{{footer_signature}}</span>
+      <span class="page-no">{{page_no}}</span>
+    </footer>
+  </article>
+</body>
+</html>
