@@ -16,7 +16,7 @@
 |-------|---------|------|------------|
 | 1 | [stage1-weather-prompt/](./stage1-weather-prompt/) | 챗봇 자유응답 reference | "오늘 날씨 어때?" 질문에 매번 다른 형식의 답이 오는 것을 체감 |
 | 2 | [stage2-weather-skill/](./stage2-weather-skill/) | 정형 텍스트 응답 Skill | 같은 질문에 항상 동일 9개 항목(온도·체감·날씨·바람·습도·PM10·PM2.5·우산·옷차림)으로 답하는 Skill |
-| 3 | [stage3-weather-report/](./stage3-weather-report/) | HTML 리포트 파일 생성 | HTML 템플릿 파일을 읽어 결과를 채운 리포트를 자동 저장하는 Cowork 스킬 |
+| 3 | [stage3-weather-report/](./stage3-weather-report/) | HTML 리포트 파일 생성 | iPhone mockup 톤의 슬롯 템플릿(9가지 weather state·4가지 미세먼지 등급 자동 매핑)에 stage 2 결과 + 보강 항목을 채워 단일 HTML 리포트를 자동 저장 |
 
 ---
 

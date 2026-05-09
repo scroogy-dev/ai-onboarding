@@ -21,42 +21,25 @@
 
 ---
 
-## 준비 — HTML 템플릿 파일
+## 준비 — HTML 슬롯 템플릿 파일
 
-본 stage 디렉토리의 [`weather-html-report/weather-template.html`](./weather-html-report/weather-template.html)을 작업공간에 복사합니다 (또는 아래 코드를 그대로 새 파일로 저장). **`{{...}}` 자리는 Skill이 채워 넣을 슬롯**입니다 — 학습자가 직접 손댈 부분은 없습니다.
+본 stage 디렉토리의 [`weather-html-report/weather-template.html`](./weather-html-report/weather-template.html)을 작업공간에 복사합니다. iPhone mockup 톤의 디자인에 **`{{...}}` 슬롯과 `data-weather`·`data-grade`·`data-need` 속성**이 박혀 있어, 정확한 텍스트만 채우면 그라데이션·아이콘·배지 색이 자동으로 결정됩니다.
 
-```html
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <title>오늘의 날씨 — {{city}}</title>
-  <style>
-    body { font-family: sans-serif; max-width: 480px; margin: 2rem auto; padding: 0 1rem; }
-    h1 { border-bottom: 2px solid #4f46e5; padding-bottom: .3rem; }
-    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-    th, td { padding: .5rem; border-bottom: 1px solid #eee; text-align: left; }
-    th { width: 40%; color: #6b7280; }
-  </style>
-</head>
-<body>
-  <h1>오늘의 날씨 — {{city}}</h1>
-  <p style="color:#6b7280">{{date}}</p>
-  <table>
-    <tr><th>온도</th><td>{{temperature}}</td></tr>
-    <tr><th>체감</th><td>{{feels_like}}</td></tr>
-    <tr><th>날씨</th><td>{{weather}}</td></tr>
-    <tr><th>바람</th><td>{{wind}}</td></tr>
-    <tr><th>습도</th><td>{{humidity}}</td></tr>
-    <tr><th>미세먼지(PM10)</th><td>{{pm10}}</td></tr>
-    <tr><th>초미세먼지(PM2.5)</th><td>{{pm25}}</td></tr>
-    <tr><th>우산 필요?</th><td>{{umbrella}}</td></tr>
-    <tr><th>옷차림</th><td>{{clothing}}</td></tr>
-  </table>
-  <p style="margin-top:1.5rem">{{summary}}</p>
-</body>
-</html>
-```
+| 슬롯 카테고리 | 슬롯 이름 |
+|------------|----------|
+| 위치·시간 | `{{location}}`·`{{date}}`·`{{hour}}` |
+| 온도·체감 | `{{temperature}}`·`{{feels_like}}`·`{{high}}`·`{{low}}` |
+| 한 줄 묘사·코멘트 | `{{desc}}`·`{{comment}}` |
+| 옷차림·우산 | `{{outfit}}`·`{{outfit_detail}}`·`{{umbrella}}`·`{{umbrella_detail}}` |
+| 날씨 정보 | `{{humidity}}`·`{{wind}}`·`{{wind_dir}}`·`{{rain_prob}}`·`{{uv_label}}`·`{{uv}}` |
+| 대기질 | `{{pm10}}`·`{{pm10_value}}`·`{{pm25}}`·`{{pm25_value}}` |
+| 자동 매핑 | `{{weather_state}}` (9가지 weather 단어 중 하나 — 그라데이션·아이콘 자동 결정) |
+
+전체 슬롯 매핑 표·기본값·자동 매핑 동작은 [`weather-html-report/SKILL.md`](./weather-html-report/SKILL.md)의 "슬롯 치환" 섹션을 참조하세요.
+
+> **자동 매핑이 동작하는 텍스트 토큰** — `{{weather_state}}`는 `맑음·구름조금·구름많음·흐림·비·소나기·천둥번개·눈·안개` 9가지 중 하나, `{{pm10}}`·`{{pm25}}`는 `좋음·보통·나쁨·매우 나쁨` 4가지 중 하나, `{{umbrella}}`는 `필요해요`/`필요없음` 두 단어 중 하나여야 합니다. 이 외 표현은 자동 매핑이 깨집니다.
+
+> **디자인 톤 미리보기** — [`example-output.html`](./example-output.html)을 브라우저에서 먼저 열어 슬롯이 모두 채워졌을 때의 결과를 확인할 수 있습니다.
 
 ---
 
@@ -77,31 +60,15 @@ stage 2의 텍스트 출력 Skill을 그대로 두고, 다음 내용으로 **새
 
 ### 3. Instructions 입력
 
-```
-역할: 사용자가 도시 이름을 알려주면, 그 도시의 오늘 날씨를 HTML 리포트 파일로 저장한다.
+[`weather-html-report/SKILL.md`](./weather-html-report/SKILL.md)의 본문(frontmatter 제외)을 그대로 붙여넣습니다. 핵심은 다음 5단계입니다.
 
-순서:
-1. 도시의 오늘 날씨를 다음 항목으로 정리한다 (stage 2 Skill의 출력 형식과 동일).
-   - 온도 (예: 18°C)
-   - 체감 (한 단어: 추움/선선/쾌적/더움/매우 더움)
-   - 날씨 (다음 중 하나: 맑음/구름조금/구름많음/흐림/비/소나기/천둥번개/눈/안개)
-   - 바람 (약함/보통/강함 + m/s 또는 km/h 수치)
-   - 습도 (숫자% + 건조/적정/높음 중 한 단어)
-   - 미세먼지 PM10 (좋음/보통/나쁨/매우 나쁨)
-   - 초미세먼지 PM2.5 (좋음/보통/나쁨/매우 나쁨)
-   - 우산 필요? (예/아니오 + 짧은 이유)
-   - 옷차림 (한 줄 권고)
-   - 한 줄 총평
-2. 작업공간의 `weather-template.html` 파일을 읽는다.
-3. 템플릿의 다음 슬롯을 위에서 정리한 값으로 치환한다.
-   - `{{city}}` `{{date}}` — 도시·오늘 날짜(YYYY-MM-DD)
-   - `{{temperature}}` `{{feels_like}}` `{{weather}}` `{{wind}}` `{{humidity}}` `{{pm10}}` `{{pm25}}` `{{umbrella}}` `{{clothing}}` — 위 항목들
-   - `{{summary}}` — 한 줄 총평
-4. 결과를 `weather-report-<도시>-<YYYY-MM-DD>.html` 파일명으로 작업공간에 새로 저장한다.
-5. 사용자에게 저장된 파일 경로를 알려준다.
+1. **오늘 날씨 정리** — stage 2와 동일한 9개 항목 + stage 3 자체 보강 항목(시각·최고/최저·한 줄 설명·풍향·강수확률·자외선·미세먼지 농도·옷차림 부연·우산 부연·외출 코멘트)을 함께 산출
+2. **슬롯 템플릿 읽기** — Skill 리소스에서 `weather-template.html` 로드
+3. **슬롯 치환** — 위 표의 슬롯들을 정확한 텍스트로 치환 (`{{weather_state}}`·`{{pm10}}`·`{{pm25}}`·`{{umbrella}}`는 자동 매핑되는 토큰만 사용)
+4. **저장** — `weather-report-<도시>-<YYYY-MM-DD>.html`로 작업공간에 저장
+5. **안내** — 저장 경로 한 줄
 
-도시를 명시하지 않으면 사용자에게 한 줄로 다시 묻는다.
-```
+도시 미지정 시 한 줄로 다시 묻습니다. 자세한 슬롯 매핑·기본값·자동 매핑 토큰 목록은 SKILL.md의 표를 참고하세요.
 
 ### 4. Skill 호출
 
@@ -140,8 +107,8 @@ stage 2의 텍스트 출력 Skill을 그대로 두고, 다음 내용으로 **새
 
 본 stage의 동작하는 Skill 패키지는 [`weather-html-report/`](./weather-html-report/)에 들어 있습니다.
 
-- [`weather-html-report/SKILL.md`](./weather-html-report/SKILL.md) — instructions 전문
-- [`weather-html-report/weather-template.html`](./weather-html-report/weather-template.html) — 9가지 날씨 아이콘·미세먼지 색상 자동 매핑이 내장된 HTML 템플릿
+- [`weather-html-report/SKILL.md`](./weather-html-report/SKILL.md) — instructions 전문 (슬롯 매핑 표 포함)
+- [`weather-html-report/weather-template.html`](./weather-html-report/weather-template.html) — iPhone mockup 톤·9가지 weather state별 hero 그라데이션·9가지 SVG 아이콘·4가지 미세먼지 등급 배지·우산 강조 색이 모두 내장된 슬롯 템플릿
 
 따라하다 막혔거나 결과가 깨질 때:
 - SKILL.md의 instructions를 본인 Skill에 그대로 복사해 비교
@@ -149,8 +116,8 @@ stage 2의 텍스트 출력 Skill을 그대로 두고, 다음 내용으로 **새
 
 ## 시각 미리보기
 
-- [`example-output.html`](./example-output.html) — 슬롯이 채워진 결과의 예시 (서울·2026-05-08·맑음)
-- [`preview-icons.html`](./preview-icons.html) — 9가지 날씨 아이콘 갤러리
+- [`example-output.html`](./example-output.html) — 슬롯이 모두 채워진 결과의 예시 (서울특별시 강남구 역삼동·2026-05-09·맑음)
+- [`preview-icons.html`](./preview-icons.html) — 9가지 weather state별 그라데이션·아이콘 갤러리
 
 ---
 

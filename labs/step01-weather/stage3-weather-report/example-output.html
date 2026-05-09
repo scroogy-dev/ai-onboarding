@@ -1,241 +1,348 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>오늘의 날씨 — 서울</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="utf-8">
+<title>오늘의 날씨 — 서울특별시 강남구 역삼동</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  본 파일은 weather-template.html의 슬롯이 모두 채워진 결과 예시입니다.
+  학습자가 결과의 톤을 미리 보고 싶을 때 참고하세요.
+-->
+<link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --text: #1A1D22;
+    --sub: #7A8089;
+    --card: #FFFFFF;
+    --border: rgba(0,0,0,0.06);
+    --accent: #1B7BCC;
+    --hot: #E2542C;
+    --cold: #2C7DE2;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: #E9EAEE;
+    -webkit-font-smoothing: antialiased;
+    color: var(--text);
+  }
+  body {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .device {
+    width: 402px; height: 874px;
+    border-radius: 48px; overflow: hidden;
+    position: relative; background: var(--bg);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.12);
+  }
+  .island {
+    position: absolute; top: 11px; left: 50%; transform: translateX(-50%);
+    width: 126px; height: 37px; border-radius: 24px; background: #000; z-index: 50;
+  }
+  .home-indicator {
+    position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
+    width: 139px; height: 5px; border-radius: 100px;
+    background: rgba(255,255,255,0.7); z-index: 60;
+  }
+  .status-bar {
+    position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 21px 32px 19px;
+    color: #fff;
+    font-weight: 590; font-size: 17px; line-height: 22px;
+  }
+  .status-bar .icons { display: flex; gap: 7px; align-items: center; }
+  .screen {
+    width: 100%; height: 100%; overflow-y: auto;
+    background: var(--bg); color: var(--text);
+  }
+  .screen::-webkit-scrollbar { display: none; }
+  .hero {
+    color: #fff; padding-top: 56px; padding-bottom: 26px; position: relative;
+    background: linear-gradient(165deg, #2D6FB5 0%, #4F9CD9 60%, #6FB3E5 100%);
+  }
+  .hero-top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 18px 0;
+  }
+  .hero-loc { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; }
+  .hero-body { padding: 10px 20px 0; }
+  .loc-name { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
+  .meta-line { font-size: 11.5px; color: rgba(255,255,255,0.82); margin-top: 3px; }
+  .hero-row {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 14px;
+  }
+  .temp-block { display: flex; flex-direction: column; }
+  .temp-num {
+    display: flex; align-items: flex-start; gap: 2px;
+    font-size: 92px; font-weight: 300; line-height: 0.9;
+    letter-spacing: -0.04em;
+  }
+  .temp-num .deg { font-size: 32px; margin-top: 8px; }
+  .desc { font-size: 16px; font-weight: 600; }
+  .hi-lo { display: flex; gap: 8px; margin-top: 4px; font-size: 12.5px; color: rgba(255,255,255,0.82); }
+  .comment-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 12px; border-radius: 999px;
+    background: rgba(255,255,255,0.22);
+    border: 0.5px solid rgba(255,255,255,0.3);
+    font-size: 12px; font-weight: 500; color: #fff;
+    letter-spacing: -0.01em;
+    margin-top: 14px;
+  }
+  #weather-icon { width: 108px; height: 108px; flex-shrink: 0; }
 
-    body {
-      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-      background: #f5f7fa;
-      color: #1f2329;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
+  .row { display: flex; gap: 8px; padding: 14px 16px 0; }
+  .outfit-card, .umb-card {
+    background: var(--card); border: 0.5px solid var(--border);
+    border-radius: 14px; padding: 12px 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .outfit-card { flex: 1.4; }
+  .umb-card { flex: 1; flex-direction: column; align-items: flex-start; gap: 3px; padding: 12px; }
+  .icon-pill {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: rgba(27,123,204,0.10);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .micro-label {
+    display: flex; align-items: center; gap: 5px;
+    font-size: 11px; color: var(--sub); font-weight: 500;
+  }
+  .big-line {
+    font-size: 14px; font-weight: 700; color: var(--text);
+    letter-spacing: -0.02em; margin-top: 1px;
+  }
+  .small-detail { font-size: 10.5px; color: var(--sub); margin-top: 1px; }
 
-    .container {
-      max-width: 480px;
-      margin: 0 auto;
-      min-height: 100vh;
-      background: #fff;
-      box-shadow: 0 0 24px rgba(0,0,0,0.04);
-    }
+  .section { padding: 14px 16px 0; }
+  .section-title {
+    font-size: 11px; font-weight: 600; color: var(--sub);
+    padding: 0 4px 8px; letter-spacing: 0.02em;
+  }
+  .card-grid { display: flex; flex-direction: column; gap: 8px; }
+  .grid-row { display: flex; gap: 8px; }
+  .info-cell {
+    flex: 1; padding: 14px 12px; border-radius: 14px;
+    background: var(--card); border: 0.5px solid var(--border);
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .info-cell .micro-label { font-size: 11.5px; }
+  .info-cell .value {
+    font-size: 16px; font-weight: 700;
+    color: var(--text); letter-spacing: -0.02em;
+  }
+  .info-cell .value.accent { color: var(--accent); }
+  .info-cell .sub { font-size: 11px; color: var(--sub); }
 
-    .hero {
-      padding: 1.75rem 1.5rem 2rem;
-      color: #fff;
-      background: linear-gradient(160deg, #4a90e2 0%, #74b9ff 50%, #a5d8ff 100%);
-    }
-    .hero__date { font-size: 0.875rem; opacity: 0.9; }
-    .hero__city { font-size: 1.625rem; font-weight: 700; margin: 0.125rem 0 1.5rem; letter-spacing: -0.01em; }
-    .hero__main { display: flex; align-items: center; gap: 1rem; }
-    .hero__main-text { flex: 1; min-width: 0; }
-    .hero__temp {
-      font-size: 5.5rem;
-      font-weight: 300;
-      line-height: 0.95;
-      letter-spacing: -0.04em;
-    }
-    .hero__weather { font-size: 1.25rem; font-weight: 500; margin-top: 0.625rem; }
-    .hero__feels { font-size: 0.95rem; opacity: 0.92; margin-top: 0.25rem; }
+  .aq-card {
+    flex: 1; padding: 12px; border-radius: 14px;
+    background: var(--card); border: 0.5px solid var(--border);
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .aq-head { display: flex; align-items: center; justify-content: space-between; }
+  .aq-label { font-size: 11.5px; color: var(--sub); font-weight: 500; }
+  .aq-badge { font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 999px; background: #E7F5FF; color: #1B7BCC; }
+  .aq-num { display: flex; align-items: baseline; gap: 4px; }
+  .aq-num .n { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+  .aq-num .u { font-size: 11px; color: var(--sub); }
 
-    .hero__icon {
-      width: 96px;
-      height: 96px;
-      flex-shrink: 0;
-      color: rgba(255, 255, 255, 0.95);
-      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
-    }
-    .hero__icon svg { width: 100%; height: 100%; display: none; }
-    .hero__icon[data-weather="맑음"]     .wt-sunny         { display: block; }
-    .hero__icon[data-weather="구름조금"] .wt-partly-cloudy { display: block; }
-    .hero__icon[data-weather="구름많음"] .wt-mostly-cloudy { display: block; }
-    .hero__icon[data-weather="흐림"]     .wt-cloudy        { display: block; }
-    .hero__icon[data-weather="비"]       .wt-rain          { display: block; }
-    .hero__icon[data-weather="소나기"]   .wt-shower        { display: block; }
-    .hero__icon[data-weather="천둥번개"] .wt-thunder       { display: block; }
-    .hero__icon[data-weather="눈"]       .wt-snow          { display: block; }
-    .hero__icon[data-weather="안개"]     .wt-fog           { display: block; }
-
-    .card {
-      margin: 0.875rem 1.25rem 0;
-      padding: 1.125rem 1.25rem 1.25rem;
-      background: #fff;
-      border: 1px solid #eef0f3;
-      border-radius: 16px;
-    }
-    .card__title {
-      font-size: 0.8125rem;
-      color: #8b95a1;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      margin-bottom: 0.875rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.625rem;
-    }
-    .grid__cell {
-      padding: 0.875rem 1rem;
-      background: #f6f8fb;
-      border-radius: 12px;
-    }
-    .grid__label {
-      font-size: 0.75rem;
-      color: #8b95a1;
-      margin-bottom: 0.25rem;
-      display: flex;
-      align-items: center;
-      gap: 0.375rem;
-    }
-    .grid__label .ico {
-      width: 16px;
-      height: 16px;
-      flex-shrink: 0;
-      color: #4a90e2;
-    }
-    .grid__label .ico svg { width: 100%; height: 100%; display: block; }
-    .grid__value { font-size: 1rem; font-weight: 600; color: #1f2329; }
-
-    .aq { display: flex; gap: 0.625rem; }
-    .aq__item {
-      flex: 1;
-      padding: 0.875rem 1rem;
-      background: #f6f8fb;
-      border-radius: 12px;
-    }
-    .aq__label { font-size: 0.75rem; color: #8b95a1; margin-bottom: 0.375rem; }
-    .aq__badge {
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: #fff;
-      background: #8b95a1;
-    }
-    .aq__badge--good   { background: #4fb3f9; }
-    .aq__badge--normal { background: #5dc65d; }
-    .aq__badge--bad    { background: #f5a623; }
-    .aq__badge--vbad   { background: #ef5b5b; }
-
-    .summary {
-      margin: 0.875rem 1.25rem 1.5rem;
-      padding: 1rem 1.125rem;
-      background: #f6f8fb;
-      border-left: 3px solid #03c75a;
-      border-radius: 10px;
-      font-size: 0.925rem;
-      line-height: 1.6;
-      color: #4a5057;
-    }
-  </style>
+  .bottom-pad { height: 40px; }
+</style>
 </head>
 <body>
-  <div class="container">
+<div class="device">
+  <div class="island"></div>
+  <div class="home-indicator"></div>
 
-    <section class="hero">
-      <div class="hero__date">2026-05-08 (금)</div>
-      <div class="hero__city">서울</div>
-      <div class="hero__main">
-        <div class="hero__main-text">
-          <div class="hero__temp">20°</div>
-          <div class="hero__weather">맑음</div>
-          <div class="hero__feels">체감 쾌적</div>
-        </div>
-        <div class="hero__icon" data-weather="맑음" aria-hidden="true">
-          <svg class="wt-sunny" viewBox="0 0 64 64"><circle cx="32" cy="32" r="22" fill="#ffe082" opacity="0.4"/><circle cx="32" cy="32" r="15" fill="#ffc525"/></svg>
-          <svg class="wt-partly-cloudy" viewBox="0 0 64 64"><circle cx="24" cy="24" r="17" fill="#ffe082" opacity="0.4"/><circle cx="24" cy="24" r="11" fill="#ffc525"/><path fill="#d1d8e0" d="M52 52H32a7 7 0 0 1-1-13.9A8.5 8.5 0 0 1 50 36a6 6 0 0 1 2 16z"/></svg>
-          <svg class="wt-mostly-cloudy" viewBox="0 0 64 64"><circle cx="18" cy="20" r="13" fill="#ffe082" opacity="0.4"/><circle cx="18" cy="20" r="8.5" fill="#ffc525"/><path fill="#d1d8e0" d="M48 50H22a10 10 0 0 1-1-19.9A12 12 0 0 1 44 28a8 8 0 0 1 4 22z"/></svg>
-          <svg class="wt-cloudy" viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 46H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 24a8 8 0 0 1 2 22z"/></svg>
-          <svg class="wt-rain" viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><rect x="21" y="44" width="3" height="8" rx="1.5" fill="#5dade2"/><rect x="31" y="46" width="3" height="10" rx="1.5" fill="#5dade2"/><rect x="41" y="44" width="3" height="8" rx="1.5" fill="#5dade2"/></svg>
-          <svg class="wt-shower" viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><g stroke="#5dade2" stroke-width="2.8" stroke-linecap="round"><line x1="22" y1="44" x2="19" y2="54"/><line x1="30" y1="44" x2="27" y2="54"/><line x1="38" y1="44" x2="35" y2="54"/><line x1="46" y1="44" x2="43" y2="54"/></g></svg>
-          <svg class="wt-thunder" viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><path fill="#ffc525" d="M34 36 l-8 14 l5.5 0 l-3.5 10 l10 -15 l-5.5 0 l4.5 -9z"/><path fill="#ffc525" d="M48 44 L49.5 46.5 L52 48 L49.5 49.5 L48 52 L46.5 49.5 L44 48 L46.5 46.5 Z"/></svg>
-          <svg class="wt-snow" viewBox="0 0 64 64"><path fill="#d1d8e0" d="M44 38H20a10 10 0 0 1-1-19.9A12 12 0 0 1 42 16a8 8 0 0 1 2 22z"/><g stroke="#a8d5e5" stroke-width="1.4" stroke-linecap="round" fill="none"><path d="M22 44v10 M17.67 46.5l8.66 5 M17.67 51.5l8.66-5"/><path d="M32 46v10 M27.67 48.5l8.66 5 M27.67 53.5l8.66-5"/><path d="M42 44v10 M37.67 46.5l8.66 5 M37.67 51.5l8.66-5"/></g></svg>
-          <svg class="wt-fog" viewBox="0 0 64 64"><rect x="14" y="22" width="36" height="3" rx="1.5" fill="#ffffff" opacity="0.9"/><rect x="18" y="30" width="32" height="3" rx="1.5" fill="#ffffff" opacity="0.7"/><rect x="14" y="38" width="36" height="3" rx="1.5" fill="#ffffff" opacity="0.9"/><rect x="22" y="46" width="28" height="3" rx="1.5" fill="#ffffff" opacity="0.7"/></svg>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="card__title">상세 정보</div>
-      <div class="grid">
-        <div class="grid__cell">
-          <div class="grid__label">
-            <span class="ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h17a3 3 0 1 1-3 3"/><path d="M3 16h9"/></svg>
-            </span>
-            바람
-          </div>
-          <div class="grid__value">보통 · 4 m/s</div>
-        </div>
-        <div class="grid__cell">
-          <div class="grid__label">
-            <span class="ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5C9 7 6 11 6 14a6 6 0 0 0 12 0c0-3-3-7-6-10.5z"/></svg>
-            </span>
-            습도
-          </div>
-          <div class="grid__value">55% · 적정</div>
-        </div>
-        <div class="grid__cell">
-          <div class="grid__label">
-            <span class="ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11a9 9 0 0 1 18 0z"/><path d="M12 11v7a2 2 0 0 0 4 0"/></svg>
-            </span>
-            우산 필요?
-          </div>
-          <div class="grid__value">아니오</div>
-        </div>
-        <div class="grid__cell">
-          <div class="grid__label">
-            <span class="ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l-5 4 2.7 3.2L8 8.6V21h8V8.6l2.3 1.6L21 7l-5-4-1.7 1.7c-.7.7-1.5 1-2.3 1s-1.6-.3-2.3-1L8 3z"/></svg>
-            </span>
-            옷차림
-          </div>
-          <div class="grid__value">얇은 긴팔 · 가벼운 가디건</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="card__title">대기질</div>
-      <div class="aq">
-        <div class="aq__item">
-          <div class="aq__label">미세먼지 PM10</div>
-          <span class="aq__badge">보통</span>
-        </div>
-        <div class="aq__item">
-          <div class="aq__label">초미세먼지 PM2.5</div>
-          <span class="aq__badge">좋음</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="summary">외출하기 좋은 날입니다. 자외선이 다소 강할 수 있으니 모자나 선글라스를 챙겨 보세요.</div>
-
+  <div class="status-bar">
+    <span>9:41</span>
+    <div class="icons">
+      <svg width="19" height="12" viewBox="0 0 19 12">
+        <rect x="0" y="7.5" width="3.2" height="4.5" rx="0.7" fill="#fff"/>
+        <rect x="4.8" y="5" width="3.2" height="7" rx="0.7" fill="#fff"/>
+        <rect x="9.6" y="2.5" width="3.2" height="9.5" rx="0.7" fill="#fff"/>
+        <rect x="14.4" y="0" width="3.2" height="12" rx="0.7" fill="#fff"/>
+      </svg>
+      <svg width="17" height="12" viewBox="0 0 17 12">
+        <path d="M8.5 3.2C10.8 3.2 12.9 4.1 14.4 5.6L15.5 4.5C13.7 2.7 11.2 1.5 8.5 1.5C5.8 1.5 3.3 2.7 1.5 4.5L2.6 5.6C4.1 4.1 6.2 3.2 8.5 3.2Z" fill="#fff"/>
+        <path d="M8.5 6.8C9.9 6.8 11.1 7.3 12 8.2L13.1 7.1C11.8 5.9 10.2 5.1 8.5 5.1C6.8 5.1 5.2 5.9 3.9 7.1L5 8.2C5.9 7.3 7.1 6.8 8.5 6.8Z" fill="#fff"/>
+        <circle cx="8.5" cy="10.5" r="1.5" fill="#fff"/>
+      </svg>
+      <svg width="27" height="13" viewBox="0 0 27 13">
+        <rect x="0.5" y="0.5" width="23" height="12" rx="3.5" stroke="rgba(255,255,255,0.5)" fill="none"/>
+        <rect x="2" y="2" width="20" height="9" rx="2" fill="#fff"/>
+        <path d="M25 4.5V8.5C25.8 8.2 26.5 7.2 26.5 6.5C26.5 5.8 25.8 4.8 25 4.5Z" fill="rgba(255,255,255,0.6)"/>
+      </svg>
+    </div>
   </div>
 
-  <script>
-    document.querySelectorAll('.aq__badge').forEach(function (el) {
-      var t = el.textContent.trim().replace(/\s+/g, ' ');
-      var aqMap = { '좋음': 'good', '보통': 'normal', '나쁨': 'bad', '매우 나쁨': 'vbad', '매우나쁨': 'vbad' };
-      if (aqMap[t]) el.classList.add('aq__badge--' + aqMap[t]);
-    });
+  <div class="screen">
+    <div class="hero">
+      <div class="hero-top">
+        <div class="hero-loc">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.7">
+            <path d="M10 18s6-5 6-10a6 6 0 10-12 0c0 5 6 10 6 10z" fill="none" stroke-linejoin="round"/>
+            <circle cx="10" cy="8" r="2" fill="none"/>
+          </svg>
+          <span>현재위치</span>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="rgba(255,255,255,0.82)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 10a7 7 0 0112-4.9M17 4v3.5h-3.5M17 10a7 7 0 01-12 4.9M3 16v-3.5h3.5"/>
+        </svg>
+      </div>
 
-    (function () {
-      var weatherEl = document.querySelector('.hero__weather');
-      var iconEl = document.querySelector('.hero__icon');
-      if (!weatherEl || !iconEl) return;
-      var w = weatherEl.textContent.trim();
-      var allowed = ['맑음', '구름조금', '구름많음', '흐림', '비', '소나기', '천둥번개', '눈', '안개'];
-      iconEl.setAttribute('data-weather', allowed.indexOf(w) >= 0 ? w : '맑음');
-    })();
-  </script>
+      <div class="hero-body">
+        <div class="loc-name">서울특별시 강남구 역삼동</div>
+        <div class="meta-line">
+          <span>5월 9일 토요일</span> ·
+          <span>14시</span> 기준 ·
+          체감 <span>21</span>°
+        </div>
+
+        <div class="hero-row">
+          <div class="temp-block">
+            <div class="temp-num">
+              <span>19</span><span class="deg">°</span>
+            </div>
+            <div class="desc">맑고 따뜻한 봄날</div>
+            <div class="hi-lo">
+              <span>↑ <span>22</span>°</span>
+              <span>↓ <span>11</span>°</span>
+            </div>
+          </div>
+
+          <div id="weather-icon">
+            <svg viewBox="0 0 120 120" fill="none">
+              <circle cx="60" cy="60" r="36" fill="#FFE17A" opacity="0.25"/>
+              <circle cx="60" cy="60" r="26" fill="#FFE17A"/>
+              <line x1="60" y1="18" x2="60" y2="6" stroke="#FFD23E" stroke-width="4" stroke-linecap="round"/>
+              <line x1="60" y1="114" x2="60" y2="102" stroke="#FFD23E" stroke-width="4" stroke-linecap="round"/>
+              <line x1="18" y1="60" x2="6" y2="60" stroke="#FFD23E" stroke-width="4" stroke-linecap="round"/>
+              <line x1="114" y1="60" x2="102" y2="60" stroke="#FFD23E" stroke-width="4" stroke-linecap="round"/>
+              <line x1="30" y1="30" x2="22" y2="22" stroke="#FFD23E" stroke-width="4" stroke-linecap="round"/>
+              <line x1="98" y1="98" x2="90" y2="90" stroke="#FFD23E" stroke-width="4" stroke-linecap="round"/>
+              <line x1="30" y1="90" x2="22" y2="98" stroke="#FFD23E" stroke-width="4" stroke-linecap="round"/>
+              <line x1="98" y1="22" x2="90" y2="30" stroke="#FFD23E" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="comment-chip">산책하기 딱 좋은 날이에요</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="outfit-card">
+        <div class="icon-pill">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#1B7BCC" stroke-width="1.7" stroke-linejoin="round">
+            <path d="M6 4l-3 2 1.5 3 1.5-1v8h8V8l1.5 1L17 6l-3-2-2 1.5a3 3 0 01-4 0L6 4z" fill="none"/>
+          </svg>
+        </div>
+        <div>
+          <div class="micro-label">오늘의 옷차림</div>
+          <div class="big-line">얇은 가디건</div>
+          <div class="small-detail">낮에는 반팔도 좋아요</div>
+        </div>
+      </div>
+      <div class="umb-card">
+        <div class="micro-label">
+          <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="#7A8089" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2.5 9a7.5 7.5 0 0115 0H2.5z" fill="none"/>
+            <path d="M10 9v7a2 2 0 002-2" fill="none"/>
+          </svg>
+          <span>우산</span>
+        </div>
+        <div class="big-line">필요없음</div>
+        <div class="small-detail">필요 없어요</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">날씨 정보</div>
+      <div class="card-grid">
+        <div class="grid-row">
+          <div class="info-cell">
+            <div class="micro-label">
+              <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="#7A8089" stroke-width="1.7" stroke-linejoin="round">
+                <path d="M10 2.5C10 2.5 4.5 9 4.5 13a5.5 5.5 0 0011 0c0-4-5.5-10.5-5.5-10.5z" fill="none"/>
+              </svg>
+              <span>습도</span>
+            </div>
+            <div class="value"><span>38</span>%</div>
+          </div>
+          <div class="info-cell">
+            <div class="micro-label">
+              <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="#7A8089" stroke-width="1.7" stroke-linecap="round">
+                <path d="M3 7h9a2.5 2.5 0 100-5" fill="none"/>
+                <path d="M3 11h13a2.5 2.5 0 110 5" fill="none"/>
+                <path d="M3 15h6"/>
+              </svg>
+              <span>바람</span>
+            </div>
+            <div class="value"><span>2.4</span>m/s</div>
+            <div class="sub">남동풍</div>
+          </div>
+        </div>
+        <div class="grid-row">
+          <div class="info-cell">
+            <div class="micro-label">
+              <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="#7A8089" stroke-width="1.7" stroke-linejoin="round">
+                <path d="M10 2C7.5 2 5.5 4 5.5 6.5c-2 0-3.5 1.5-3.5 3.5S3.5 13.5 5.5 13.5h9a3.5 3.5 0 100-7C14.5 4 12.5 2 10 2z" fill="none"/>
+                <path d="M7 16l-1 2M11 16l-1 2M15 16l-1 2" stroke-linecap="round"/>
+              </svg>
+              <span>강수확률</span>
+            </div>
+            <div class="value"><span>0</span>%</div>
+          </div>
+          <div class="info-cell">
+            <div class="micro-label">
+              <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="#7A8089" stroke-width="1.7" stroke-linecap="round">
+                <circle cx="10" cy="10" r="3.5" fill="none"/>
+                <path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.5 4.5l1.5 1.5M14 14l1.5 1.5M4.5 15.5l1.5-1.5M14 6l1.5-1.5"/>
+              </svg>
+              <span>자외선</span>
+            </div>
+            <div class="value accent">높음</div>
+            <div class="sub">지수 <span>6</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">대기질</div>
+      <div class="grid-row">
+        <div class="aq-card">
+          <div class="aq-head">
+            <span class="aq-label">미세먼지</span>
+            <span class="aq-badge">좋음</span>
+          </div>
+          <div class="aq-num">
+            <span class="n">28</span>
+            <span class="u">㎍/㎥</span>
+          </div>
+        </div>
+        <div class="aq-card">
+          <div class="aq-head">
+            <span class="aq-label">초미세먼지</span>
+            <span class="aq-badge">좋음</span>
+          </div>
+          <div class="aq-num">
+            <span class="n">14</span>
+            <span class="u">㎍/㎥</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-pad"></div>
+  </div>
+</div>
 </body>
 </html>
