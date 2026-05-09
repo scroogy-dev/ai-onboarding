@@ -36,10 +36,14 @@
 - [ ] step 단위 **실습 후보 목록**이 작성되어 본 이슈 디렉토리 또는 ADR에 남았다
 - [ ] 모든 step(step01~04)의 디렉토리·파일 골격이 생성되었다
 - [ ] 각 step·stage의 가이드 본문(README)이 작성되었다 — step01(1·2·3)·step02(1·2)·step03(1·2)·step04(1·2·3)
+- [ ] **각 step의 동작하는 SKILL과 stage 3 산출 자산(템플릿·예시 HTML)이 동봉되었다** — step01 weather-html-report·step02 file-classifier·step03 voca-quiz·step04 quiz-recognize/wrong-answer-note/wrong-answer-html-report
+- [ ] **stage 3 자산은 "슬롯 템플릿 + 채워진 예시" 패턴으로 일관되게 동봉되었다** — step01(weather-template + example-output) / step04(wrong-answer-note-template + classical)
 - [ ] `docs/labs.md` 인덱스 페이지가 작성되어 사이트에 노출되었다
 - [ ] `mkdocs.yml` nav에 실습 항목이 등록되었다
 - [ ] `slides/`에 실습 시리즈 소개 섹션이 추가되어 docs와 동기화되었다 (ADR-0002 단방향 파생 원칙)
 - [ ] AI-CONTEXT.md 프로젝트 규칙(`docs/` 하위 영문 소문자·하이픈)과의 정합이 ADR에서 명시적으로 다뤄졌다
+- [ ] **시리즈 진행 원칙("프롬프트로만 진행")이 labs/README·docs/labs에 명시되었다**
+- [ ] **사용자 수작업 최종 점검 Task가 plan에 포함되어 실행되었다** — 사이트/슬라이드 빌드·HTML 톤·README 흐름·Skill 동작 등 자동 검증 어려운 항목
 
 ---
 

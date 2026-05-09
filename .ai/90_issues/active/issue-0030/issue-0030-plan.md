@@ -62,6 +62,14 @@
   2. `stage2-weather-skill/README.md` — Skill 구조(설명·instructions·고정 출력 템플릿: 온도·체감·날씨·우산 필요?)·호출 예시·1과 결과 비교
   3. `stage3-weather-report/README.md` — HTML 템플릿 구조 안내·Cowork 스킬 절차(템플릿 읽기 → 값 채우기 → 파일 저장)·산출 파일 위치
 - **완료 기준**: 3개 stage README 본문이 작성되어 학습자가 step01을 끝까지 따라갈 수 있다.
+- **후속 보강 (Task 7 이후)**: 사용자가 워크스페이스에 올린 새 디자인(`날씨 템플릿.html` — iPhone mockup·Pretendard·hero 그라데이션·옷차림+우산 row·날씨 정보+대기질 카테고리)을 stage 3 자산으로 흡수.
+  - `weather-template.html` 덮어쓰기(파일명 유지) — 슬롯 + `data-weather`/`data-grade`/`data-need` 속성으로 9가지 weather state·4가지 미세먼지 등급·우산 강조 색 자동 매핑
+  - 새 슬롯 추가: `{{location}}`·`{{hour}}`·`{{high}}`·`{{low}}`·`{{desc}}`·`{{comment}}`·`{{outfit_detail}}`·`{{umbrella_detail}}`·`{{wind_dir}}`·`{{rain_prob}}`·`{{uv_label}}`·`{{uv}}`·`{{pm10_value}}`·`{{pm25_value}}`·`{{weather_state}}`
+  - `SKILL.md` 갱신 — stage 2 9개 항목 + stage 3 자체 보강 항목 + 슬롯 매핑 표·자동 매핑 토큰 명시
+  - `example-output.html` 갱신 — 새 디자인의 채워진 예시(서울특별시 강남구 역삼동·맑음)
+  - `preview-icons.html` 갱신 — 9가지 weather state별 hero 그라데이션 + 새 SVG 아이콘 갤러리
+  - `stage3-weather-report/README.md`·`step01-weather/README.md` 동기화
+  - **stage 2 SKILL은 그대로 유지** — 학습 목표(텍스트 형식 통일) 보존, stage 3가 추가 항목을 자체 보강
 
 ---
 
@@ -91,13 +99,17 @@
 
 ### Task 7: step04-wrong-answer-note 본문 작성 (stage 1·2·3)
 
-- [ ] 완료
-- **목표**: step04-wrong-answer-note의 stage 1·2·3 가이드 본문을 작성한다. ADR-0001 후속 "AI 오답노트 재설계" 흡수, 학습 도구 종합.
+- [x] 완료
+- **목표**: step04-wrong-answer-note의 stage 1·2·3 가이드 본문을 작성한다. ADR-0001 후속 "AI 오답노트 재설계" 흡수, 학습 도구 종합. 사용자의 실제 운영 자산(3-Gem: 문제분석·오답노트·리포팅)을 Skill 파이프라인 + 디자인 prompt로 옮긴다.
 - **작업 내용**:
-  1. `stage1-wrong-answer-note-prompt/README.md` — "이 문제 틀렸는데 어떻게 정리?" 자유응답 reference
-  2. `stage2-wrong-answer-note-skill/README.md` — 정형 형식(문제·정답·해설·핵심 개념·복습 시점) 출력 Skill·호출 예시
-  3. `stage3-wrong-answer-note-report/README.md` — 누적 오답 HTML 리포트 절차(단원별 정리·통계 포함)·Cowork 스킬 안내
-- **완료 기준**: 3개 stage README 본문이 작성되어 학습자가 step04를 끝까지 따라갈 수 있다.
+  1. `step04-wrong-answer-note/README.md` 갱신 — 자녀 채점지 시나리오·다단계 파이프라인·검수 자리 메시지·step01~03과의 차이·stage별 매체 요건
+  2. `stage1-wrong-answer-note-prompt/README.md` — 채점 사진 한 장 + 자유응답 시도. OCR 오인식(연필 답안·줄 그음·자체 표시)·재인식 비용 누적 관찰
+  3. `stage2-wrong-answer-note-skill/README.md` — 2단계 파이프라인 (Skill ① quiz-recognize 사진→엑셀 + 부모 검수 + Skill ② wrong-answer-note 엑셀→자녀용 마크다운). 두 SKILL.md 동봉
+  4. `stage3-wrong-answer-note-report/README.md` — 검수된 엑셀 → 인쇄용 HTML. step01 stage 3와 같은 **슬롯 템플릿 + 예시** 구조로 동봉: `wrong-answer-html-report/wrong-answer-note-template.html`(슬롯 + PROBLEMS·SELF_CHECK 블록 반복 마커) + `classical.html`(채워진 예시). `wrong-answer-html-report/SKILL.md` 10단계 instructions(슬롯 템플릿 읽기 → 엑셀 컬럼·메타 매핑 → PROBLEMS/SELF_CHECK 분기 → 자녀 친화 해설 자체 생성 → 스칼라 슬롯 채우기 → PROBLEMS 블록 반복 → SELF_CHECK 블록 반복/제거 → 태그 HTML 생성 → 저장 → 응답). 길 A(템플릿 그대로 매주) / 길 B(`minimal-template.html` 등 새 톤 형제 추가, 슬롯 이름·마커 유지)
+  5. 인덱스 동기화 — `labs/README.md`·`docs/labs.md`·`labs-candidates.md`의 step04 줄을 새 시나리오로 갱신
+  6. .gitkeep 정리 (3개 stage 디렉토리)
+- **완료 기준**: 3개 stage README 본문이 작성되고 stage 2의 두 SKILL 인스트럭션·stage 3의 디자인 prompt가 학습자가 그대로 따라갈 수 있는 형태로 들어 있다. ✅
+- **후속 보정 (Task 7 이후)**: stage 3 Skill의 입력을 마크다운 → **검수된 엑셀**로 보정. 이유 — 마크다운은 평문 뷰의 한 형태이고, 데이터·뷰 분리 원칙에 따르면 엑셀이 데이터의 단일 출처이며 마크다운/HTML은 같은 엑셀에서 갈라지는 평행 뷰여야 함. 변경 대상: `wrong-answer-html-report/SKILL.md`(처리 단계 재작성·자녀 친화 해설 생성을 본 Skill 자체 책임으로) + `stage3 README`(데이터 구조 원칙·다이어그램·호출 변형) + `stage2 README`(파이프라인 다이어그램이 마크다운 → HTML 직렬에서 엑셀 → 두 뷰 평행 분기로) + `step04 README`(stage 구성 표·기존 어려움 표·차이 표). stage 2의 `wrong-answer-note` Skill(엑셀 → 마크다운)은 평문 뷰로 유지(평행 형제).
 
 ---
 
@@ -113,19 +125,36 @@
 
 ---
 
-### Task 9: ADR 작성
+### Task 9: 최종 점검 (사용자 수작업 확인)
+
+- [ ] 완료
+- **목표**: 자동화로 검증하기 어려운 항목을 사용자가 직접 수작업으로 점검한다. 본 Task는 AI가 진행하지 않고 사용자가 결과를 확인한 뒤 다음 Task로 넘어간다.
+- **수작업 점검 체크리스트**:
+  1. **사이트 빌드** — `mkdocs serve`로 로컬 빌드 후 `/labs` 페이지가 nav에 노출되고 표·admonition이 의도대로 렌더링되는지 브라우저로 확인
+  2. **step01 stage 3 HTML** — `labs/step01-weather/stage3-weather-report/example-output.html`을 브라우저에서 열어 디자인 톤 확인. 9가지 weather state별 톤은 `preview-icons.html`로 확인
+  3. **각 step·stage README 흐름** — step01·02·03·04를 학습자 시점에서 한 번씩 따라 읽으며 stage 간 링크·"다음 단계" 동선이 깨지지 않는지 확인
+  4. **slides 빌드** — `slides/`에서 Slidev dev/build 한 번 실행. 실습 시리즈 섹션이 docs/labs.md와 톤·구조가 정합한지 확인
+  5. **Skill 동작 — step01 stage 3** — Claude Desktop에 `weather-html-report/` Skill 등록 후 호출, 결과 HTML이 `example-output.html`과 비슷한 톤으로 나오는지 확인 (선택)
+  6. **Skill 동작 — step04 stage 2·3** — 가능하면 자녀 채점지 사진으로 quiz-recognize → wrong-answer-note → wrong-answer-html-report 파이프라인 한 번 호출
+  7. **링크·이미지 깨짐** — `mkdocs build`의 strict 모드(또는 `--strict`)로 깨진 내부 링크 점검
+  8. **운영 자료 보존 여부** — `.ai/99_workspace/`의 `리포팅 프롬프트.md`·`자녀 맞춤형 문제 분석 및 튜터링 템플릿 (Step 1·2).md`가 lab으로 흡수된 부분과 워크스페이스 잔존 사이의 차이를 확인 후 어느 쪽으로 정리할지 결정
+- **완료 기준**: 위 체크리스트의 모든 항목을 사용자가 점검·수정 완료한 상태.
+
+---
+
+### Task 10: ADR 작성
 
 - [ ] 완료
 - **목표**: 본 이슈의 의사결정을 ADR로 기록한다.
 - **작업 내용**:
   1. `.ai/50_adr/active/adr-0006-labs-structure-and-naming.md` 신설 (번호는 현재 active 최신 다음번)
-  2. 결정 사항: 위치(루트 SSoT)·중첩 명명 규칙(step+stage)·docs 인덱스 정책·slides 동기화 원칙·ADR-0001과의 정합·stage 1 해석·ADR-0001 후속 항목(오답노트·자동 출제기) 흡수·**본 이슈에서 step별 가이드 본문까지 작성**한 범위 변경 기록
+  2. 결정 사항: 위치(루트 SSoT)·중첩 명명 규칙(step+stage)·docs 인덱스 정책·slides 동기화 원칙·ADR-0001과의 정합·stage 1 해석·ADR-0001 후속 항목(오답노트·자동 출제기) 흡수·**본 이슈에서 step별 가이드 본문까지 작성**한 범위 변경 기록·**stage 3 자산 패턴(슬롯 템플릿 + 채워진 예시 + 데이터·뷰 분리)**·진행 원칙(프롬프트로만 진행)
   3. `.ai/50_adr/index.md` Active ADR 표에 신규 행 추가
 - **완료 기준**: 신규 ADR 파일이 active에 추가되고 index.md에 등재되었다.
 
 ---
 
-### Task 10: 마무리·이관
+### Task 11: 마무리·이관
 
 - [ ] 완료
 - **목표**: 변경사항을 커밋·PR로 정리하고 이슈를 종료한다.

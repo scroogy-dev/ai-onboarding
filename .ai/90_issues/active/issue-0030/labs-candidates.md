@@ -89,15 +89,21 @@ labs/
 
 ## step04-wrong-answer-note
 
-**주제**: 오답노트 — 학습 도구 활용 종합 (stage 1·2·3 풀 코스)
+**주제**: 자녀 채점지 오답노트 — 다단계 파이프라인 + 검수 자리 + 디자인까지 프롬프트 (stage 1·2·3 풀 코스)
 
 | stage | 디렉토리 | 단계 | 학습 포인트 |
 |-------|---------|------|------------|
-| 1 | `stage1-wrong-answer-note-prompt/` | 챗봇 자유응답 reference | "이 문제 틀렸는데 어떻게 정리?" 자유응답 — 매번 다른 형식 체감 |
-| 2 | `stage2-wrong-answer-note-skill/` | 정형 텍스트 출력 Skill | 틀린 문제 입력 → 정해진 형식(문제·정답·해설·핵심 개념·복습 시점)으로 출력 |
-| 3 | `stage3-wrong-answer-note-report/` | HTML 리포트 자동 생성 | 누적된 오답을 HTML 템플릿으로 리포트화 (단원별 정리·통계 포함 가능) |
+| 1 | `stage1-wrong-answer-note-prompt/` | 챗봇 자유응답 reference | 채점된 학습지 사진 한 장 + "오답노트 만들어줘" 자유응답 — OCR 오인식(연필 답안·줄 그음·자체 표시), 한 번에 채점·해설까지 가버려서 **재인식 비용**이 누적되는 점 체감 |
+| 2 | `stage2-wrong-answer-note-skill/` | 2단계 파이프라인 Skill | Skill ① `quiz-recognize`(사진 → 인식 결과 엑셀, 채점 X) → 부모 검수 → Skill ② `wrong-answer-note`(검수된 엑셀 → 자녀용 마크다운). **검수 자리를 일부러 둔다**는 메시지 |
+| 3 | `stage3-wrong-answer-note-report/` | 인쇄용 HTML 리포트 | 검수된 엑셀 → 학원 워크북 톤 인쇄용 HTML 1페이지. **슬롯 템플릿(`wrong-answer-note-template.html`) + 채워진 예시(`classical.html`)** 동봉(step01 stage 3 패턴). Skill이 스칼라 슬롯 채우기 + PROBLEMS·SELF_CHECK 블록 반복 마커로 가변 문항 처리 + 자녀 친화 해설 자체 생성. 엑셀이 데이터, 마크다운(stage 2 출력)·HTML(stage 3 출력)는 평행 뷰 — 데이터·뷰 분리 |
 
-**선정 근거**: ADR-0001이 후속 이슈로 명시한 "Gems 기반 AI 오답노트를 Claude Skill로 재설계" 항목. 학습 도구 활용을 stage 1→2→3 풀 코스로 종합.
+**선정 근거**: ADR-0001이 후속 이슈로 명시한 "Gems 기반 AI 오답노트를 Claude Skill로 재설계" 항목. 사용자가 운영하던 3-Gem 흐름(문제분석 → 오답노트 → 리포팅)을 Claude Skill 파이프라인 + 디자인 프롬프트로 옮기면서 **검수 자리**라는 학습 메시지를 시리즈의 마지막 step에서 정면으로 드러낸다.
+
+**짚어둘 점**:
+- step01~03이 "Skill 하나의 완성도"였다면 step04는 **여러 Skill을 잇고 검수 자리를 두는** 한 단계 위 설계 패턴. 시리즈를 마무리짓는 메시지.
+- 매체 요건이 stage별로 갈림 — stage 1만 일반 챗봇 가능, stage 2·3은 Cowork 필요. 비개발자에게 "Skill 가치가 커질수록 매체 요건도 함께 올라간다"는 신호.
+- stage 3는 step01 stage 3와 **같은 패턴(슬롯 템플릿 + 예시)** 으로 정렬되되, **블록 반복 마커**(`<!-- PROBLEMS:START/END -->`·`<!-- SELF_CHECK:START/END -->`)를 추가해 가변 문항 수를 다룸 — step01이 고정 슬롯이라면 step04는 슬롯 + 블록 반복. 채워진 예시(`classical.html`)는 사용자의 디자인 prompt 결과물이라 "프롬프트로만 진행" 원칙과 정합 — 학습자도 본인 prompt로 `minimal-template.html` 등 새 톤(같은 슬롯 이름·블록 마커 유지)을 형제로 추가 가능.
+- 본 step의 원형은 사용자가 운영하던 자녀 학습지 채점 + 자녀용 오답노트 + 인쇄용 리포트 3-Gem 흐름. 운영 자산 3개(`Step 1. 문제분석.md`, `Step 2. 오답노트.md`, `리포팅 프롬프트.md`)를 Skill·prompt에 그대로 흡수.
 
 ---
 
