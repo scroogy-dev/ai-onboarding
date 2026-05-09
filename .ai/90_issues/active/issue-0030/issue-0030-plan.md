@@ -115,13 +115,13 @@
 
 ### Task 8: slides 실습 시리즈 섹션 추가
 
-- [ ] 완료
+- [x] 완료
 - **목표**: `slides/`에 실습 시리즈 소개 섹션을 추가해 docs와 동기화한다 (ADR-0002 단방향 파생).
 - **작업 내용**:
-  1. `slides/` 구조 확인 후 적절한 위치에 실습 섹션 슬라이드 추가
-  2. 시리즈 소개 슬라이드 1장 + step01~04 안내 슬라이드 (간단한 한두 줄 + GitHub 링크)
-  3. `docs/labs.md` 내용과 메시지·구조 정합 확인
-- **완료 기준**: slides에 실습 섹션이 추가되어 `docs/labs.md`와 동기화되었다.
+  1. `slides/slides.md` 구조 확인 — How 섹션 끝의 placeholder "실행 안내" 슬라이드를 갈음 위치로 결정
+  2. 두 장으로 확장 — ① "실습 시리즈 — 4개 step"(시리즈 구성 표 + 진행 원칙 admonition + GitHub/zip 링크 한 줄), ② "step별 학습 포인트"(2x2 카드 그리드 + 강사 경로 안내 한 줄)
+  3. `docs/labs.md`와 메시지·구조 정합 — 4개 step·stage·핵심 학습 포인트 표 동일, "프롬프트로만 진행" 원칙 동일
+- **완료 기준**: slides에 실습 섹션이 추가되어 `docs/labs.md`와 동기화되었다. ✅
 
 ---
 
@@ -144,13 +144,14 @@
 
 ### Task 10: ADR 작성
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 본 이슈의 의사결정을 ADR로 기록한다.
 - **작업 내용**:
-  1. `.ai/50_adr/active/adr-0006-labs-structure-and-naming.md` 신설 (번호는 현재 active 최신 다음번)
-  2. 결정 사항: 위치(루트 SSoT)·중첩 명명 규칙(step+stage)·docs 인덱스 정책·slides 동기화 원칙·ADR-0001과의 정합·stage 1 해석·ADR-0001 후속 항목(오답노트·자동 출제기) 흡수·**본 이슈에서 step별 가이드 본문까지 작성**한 범위 변경 기록·**stage 3 자산 패턴(슬롯 템플릿 + 채워진 예시 + 데이터·뷰 분리)**·진행 원칙(프롬프트로만 진행)
-  3. `.ai/50_adr/index.md` Active ADR 표에 신규 행 추가
-- **완료 기준**: 신규 ADR 파일이 active에 추가되고 index.md에 등재되었다.
+  1. `.ai/50_adr/active/adr-0006-labs-structure-and-naming.md` 신설 (active 최신 ADR-0005 다음 번호)
+  2. 결정 사항 8개 기록 — ① 위치(루트 `labs/` SSoT, `docs/labs.md` 인덱스만), ② 중첩 명명 규칙(`step<NN>-<topic>/stage<N>-...`), ③ stage 구성은 학습 목표에 맞춰 선택(풀 코스 강제 X), ④ stage 1 해석(참가 전제의 입체화·라벨/매체 분리), ⑤ stage 3 자산 패턴(슬롯 템플릿 + 채워진 예시 + 블록 반복 + 데이터/뷰 분리), ⑥ 진행 원칙(프롬프트로만), ⑦ 본 이슈 범위 변경(step 본문까지 흡수), ⑧ ADR-0001 후속 항목 흡수(오답노트·자동 출제기 → step03·04)
+  3. 고려한 대안 4개(docs 통합·평면 명명·후속 이슈 분할·stage 3 동봉 없음) 기각 사유 기록
+  4. `.ai/50_adr/index.md` Active ADR 표에 ADR-0006 행 추가
+- **완료 기준**: 신규 ADR 파일이 active에 추가되고 index.md에 등재되었다. ✅
 
 ---
 

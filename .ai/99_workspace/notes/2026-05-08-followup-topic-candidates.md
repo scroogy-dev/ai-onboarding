@@ -81,6 +81,21 @@
 
 ---
 
+## 9. labs README → docs 통합 (웹 읽기 경로)
+
+- **요지**: 현재 `labs/` 하위 README는 사실상 학습 가이드 본문(stage 1·2·3 narrative, before/after 비교, 트러블슈팅 표). 그런데 `docs/labs.md`는 인덱스 한 페이지뿐이라 사이트 방문자는 zip을 받거나 GitHub로 가야만 본문을 읽을 수 있다.
+- **현재 결정 근거 (이슈 #30 Task 1)**: zip 단일 다운로드 친화 + README 안의 상대 경로 자산 참조(`SKILL.md`·`*-template.html`·`example-output.html` 등)가 사이트로 옮기면 깨짐. 그래서 `labs/`는 SSoT로 격리, `docs/labs.md`는 인덱스만.
+- **고민 지점**:
+  - 학습자가 GitHub 페이지에서 README를 직접 읽는 것으로 충분한가, 아니면 사이트 nav에서 진입한 학습자가 본문을 못 읽고 떠나는 비용이 더 큰가?
+  - 슬라이드(`slides/`)에서도 같은 문제 — labs 슬라이드는 인덱스 수준이고 본문 narrative는 README에만 존재. docs와 slides 양쪽 본문을 어떻게 채울지 정책 필요.
+- **방향**:
+  - **(a) 그대로 유지** — 학습자 피드백 받고 결정. GitHub 페이지 렌더링이 잘 되므로 즉시 문제는 아님.
+  - **(b) per-step 요약 narrative 페이지 신설** — `docs/labs/step01-weather.md` 등에 핵심 메시지·미리보기·GitHub 링크. README 본문은 `labs/`에 그대로 두고 docs는 요약. 두 벌 관리 부담은 있으되 자산 경로 충돌 회피.
+  - **(c) README를 docs로 이전, `labs/`는 코드 자산만** — 가장 깨끗한 분리지만 이슈 #30·ADR-0006 결정(labs/ SSoT) 뒤집는 큰 변경.
+- **연결 지점**: 이슈 #30 Task 1 결정·ADR-0002(docs SSoT·slides 단방향)·작성 예정 ADR-0006(labs 구조).
+
+---
+
 ## 다음 액션
 
 - 이슈 #30 완료 후 본 파일 검토.
