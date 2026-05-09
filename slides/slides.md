@@ -958,6 +958,279 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 
 ---
 
+# AI 활용 메타 원칙
+
+도구·실습이 바뀌어도 그대로 통하는 **시리즈 차원의 자세** 5종.
+
+<div grid="~ cols-3 gap-3" class="mt-8 max-w-2xl mx-auto">
+
+<div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800">
+<div class="bg-cyan-500/40 dark:bg-cyan-600/40 text-white px-3 py-2 font-bold text-center text-sm">① 계획·실행</div>
+<div class="bg-cyan-50/40 dark:bg-cyan-900/15 px-3 py-3 text-xs">계획만 받고 검토한 뒤 실행시키기</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
+<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-3 py-2 font-bold text-center text-sm">② 데이터·뷰</div>
+<div class="bg-blue-50/40 dark:bg-blue-900/15 px-3 py-3 text-xs">내용(값)과 표현(틀)을 분리하기</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-purple-200 dark:border-purple-800">
+<div class="bg-purple-500/40 dark:bg-purple-600/40 text-white px-3 py-2 font-bold text-center text-sm">③ 결과물 검토</div>
+<div class="bg-purple-50/40 dark:bg-purple-900/15 px-3 py-3 text-xs">손으로 안 쓰지만 읽고 이해는 한다</div>
+</div>
+
+</div>
+
+<div grid="~ cols-2 gap-3" class="mt-3 max-w-md mx-auto">
+
+<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
+<div class="bg-teal-500/40 dark:bg-teal-600/40 text-white px-3 py-2 font-bold text-center text-sm">④ 컨텍스트</div>
+<div class="bg-teal-50/40 dark:bg-teal-900/15 px-3 py-3 text-xs">한 대화방을 무한히 끌고 가지 않기</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800">
+<div class="bg-amber-500/40 dark:bg-amber-600/40 text-white px-3 py-2 font-bold text-center text-sm">⑤ 페르소나</div>
+<div class="bg-amber-50/40 dark:bg-amber-900/15 px-3 py-3 text-xs">조건부 권장 — 본 강의의 현재 입장</div>
+</div>
+
+</div>
+
+<!--
+docs/index.md `### AI 활용 메타 원칙` 섹션의 표지 — ADR-0002 단방향 파생.
+도구·실습이 바뀌어도 그대로 통하는 시리즈 차원의 자세 5종을 한눈에. 본문 5장 ① ② ③ ④ ⑤이 이 표지 다음에 누적.
+색상 분리: ①~④ 동일 abstract 톤 계열(cyan/blue/purple/teal — 시리즈 확립 원칙), ⑤ amber(검증 성격 — note 톤 분리, docs admonition 종류 차이와 정합).
+-->
+
+
+---
+
+# 메타 원칙 ① 계획과 실행의 분리
+
+AI에게 한 번에 "계획 + 실행"을 맡기지 마세요. **계획만 먼저 받고, 검토한 뒤 실행시킵니다.**
+
+<div class="mt-6 grid grid-cols-3 gap-3 max-w-4xl mx-auto">
+
+<div class="rounded-lg border border-cyan-300 dark:border-cyan-700 px-4 py-3 text-center">
+<div class="text-xl font-mono opacity-60 mb-1">1</div>
+<div class="font-bold text-sm mb-1">계획만 요청</div>
+<div class="text-xs opacity-80">"이렇게 하려는데 계획만 짜줘"</div>
+</div>
+
+<div class="rounded-lg border border-cyan-300 dark:border-cyan-700 px-4 py-3 text-center">
+<div class="text-xl font-mono opacity-60 mb-1">2</div>
+<div class="font-bold text-sm mb-1">계획 검토</div>
+<div class="text-xs opacity-80">빠진 단계·의도와 다른 곳 손보기</div>
+</div>
+
+<div class="rounded-lg border border-cyan-300 dark:border-cyan-700 px-4 py-3 text-center">
+<div class="text-xl font-mono opacity-60 mb-1">3</div>
+<div class="font-bold text-sm mb-1">실행 요청</div>
+<div class="text-xs opacity-80">"좋아, 그 계획대로 진행해줘"</div>
+</div>
+
+</div>
+
+<div class="mt-6 max-w-4xl mx-auto text-center">
+
+**계획에 최소 2가지** — **목표(What)** · **완료의 정의(체크리스트)**
+복잡하면 **실행계획(How)**, 끝난 뒤 **실행요약(결과)** 추가.
+
+</div>
+
+<div class="mt-4 text-center text-sm opacity-75 italic max-w-3xl mx-auto">
+한 번에 맡기면 결과를 통제하기 어렵고, 두 번에 나누면 검토 자리가 생겨 통제권을 잃지 않습니다.
+</div>
+
+<!--
+docs/index.md `### AI 활용 메타 원칙` ① 박스 압축 — ADR-0002 단방향 파생.
+기존 "실습 접근법: 계획 → 실행"·"왜 계획부터 세우나요?"·"막연한 vs 구조화된 프롬프트" 3장과 결 분리:
+- 기존 3장 = 본 강의의 진행 절차·이점·예시 (구체)
+- 본 슬라이드 = 시리즈 차원의 원칙·통제권 (제너럴)
+같은 ①을 다른 카메라 각도에서 두 번 봄.
+계획 구성 가이드(목표·완료의 정의 + 복잡 시 실행계획·실행요약)는 사용자 보강 가이드(2026-05-09)로 docs ① 박스에 들어간 부분 — 슬라이드도 한 단락으로 호출.
+-->
+
+
+---
+
+# 메타 원칙 ② 데이터와 뷰의 분리
+
+산출물의 **내용(데이터)** 과 **표현(뷰)** 을 분리해 두세요.
+
+<div class="mt-6 grid grid-cols-2 gap-4 max-w-4xl mx-auto">
+
+<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
+<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-4 py-2 font-bold text-center">데이터</div>
+<div class="bg-blue-50/40 dark:bg-blue-900/15 px-4 py-3 text-sm text-center">
+값 그 자체 — 숫자·텍스트·표·엑셀
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
+<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-4 py-2 font-bold text-center">뷰</div>
+<div class="bg-blue-50/40 dark:bg-blue-900/15 px-4 py-3 text-sm text-center">
+보여주는 틀 — 마크다운·HTML·슬라이드
+</div>
+</div>
+
+</div>
+
+<div class="mt-6 text-center max-w-3xl mx-auto">
+
+한 번 잘 만든 뷰(템플릿)는 여러 데이터에 **재사용**할 수 있습니다.
+
+섞어 두면 다음에 또 처음부터 만들어야 합니다.
+
+</div>
+
+<div class="mt-6 text-center text-sm opacity-75 italic max-w-3xl mx-auto">
+실습 사례 — <code>step01-weather</code> (날씨 값 + HTML 리포트), <code>step04-wrong-answer-note</code> (인식 엑셀 + 마크다운/HTML)
+</div>
+
+<!--
+docs/index.md `### AI 활용 메타 원칙` ② 박스 압축 — ADR-0002 단방향 파생.
+step04는 카드 슬라이드 "step별 학습 포인트"의 핵심 학습 포인트로도 등장 — 시리즈 차원에서 같은 메시지가 두 자리(원칙·실습)에서 호출.
+ADR 격상 후보(이슈 #32 Task 8에서 결정) — 데이터/뷰 분리를 별 ADR로 정책화할지 본 이슈에서 판단.
+-->
+
+
+---
+
+# 메타 원칙 ③ AI 결과물 검토·이해 의무
+
+만들기는 AI에 맡기더라도 **결과물은 본인이 직접 읽고 이해**한 상태에서 씁니다.
+
+<div class="mt-6 max-w-4xl mx-auto space-y-3">
+
+<div class="border-l-4 border-purple-400 pl-5 py-2">
+<strong>읽지 않은 결과물은 사용하지 않습니다</strong> — 마크다운·HTML·엑셀·Skill 지시문 모두.
+</div>
+
+<div class="border-l-4 border-purple-400 pl-5 py-2">
+<strong>이해가 부족하면 AI에게 설명을 시킵니다</strong> — "왜 이렇게 만들었는지·이 부분이 무슨 의미인지" 다시 묻기.
+</div>
+
+</div>
+
+<div class="mt-6 max-w-3xl mx-auto text-sm opacity-90 text-center">
+
+**검토의 깊이는 결과물의 영향 범위에 비례합니다.**
+
+반복해서 쓰거나 다른 사람에게 영향을 주는 산출물일수록 깊이 있게, 1회성·프로토타입은 가볍게.
+
+</div>
+
+<div class="mt-6 text-center text-sm opacity-75 italic max-w-3xl mx-auto">
+"프롬프트로만 진행"의 짝 원칙 — 손으로 안 쓰지만 검토는 합니다. 사례: <code>step04</code>의 인식 엑셀 검수 자리.
+</div>
+
+<!--
+docs/index.md `### AI 활용 메타 원칙` ③ 박스 압축 — ADR-0002 단방향 파생.
+labs/README.md·docs/labs.md의 "결과물은 반드시 읽고 이해합니다" ② 항목과도 짝 — 시리즈 차원에서 도입(원칙)·실습(진행 원칙) 두 자리 모두 호출.
+검토 깊이 차등화 단서는 비개발자 청중이 "전부 이해 못 하면 못 쓴다"로 오독하지 않도록(2026-05-09 사용자 보강 가이드).
+-->
+
+
+---
+
+# 메타 원칙 ④ 컨텍스트(대화방) 관리
+
+**컨텍스트(맥락)** = AI가 한 번의 대화에서 함께 보고 있는 모든 입력의 묶음 (메시지·문서·첨부 전부).
+한 대화방을 무한히 끌고 가지 마세요. 일정 신호가 오면 **새 대화를 시작**합니다.
+
+<div class="mt-5 grid grid-cols-2 gap-4 max-w-5xl mx-auto">
+
+<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
+<div class="bg-teal-500/40 dark:bg-teal-600/40 text-white px-4 py-2 font-bold">새 대화를 여는 신호</div>
+<div class="bg-teal-50/40 dark:bg-teal-900/15 px-4 py-3 text-sm">
+
+- 주제가 바뀔 때
+- 계획 단계가 끝나고 실행 단계로 (메타 원칙 ①)
+- AI가 앞 말을 잊거나 어긋날 때
+- 대화가 너무 길어졌을 때
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
+<div class="bg-teal-500/40 dark:bg-teal-600/40 text-white px-4 py-2 font-bold">새 대화를 시작하는 방법</div>
+<div class="bg-teal-50/40 dark:bg-teal-900/15 px-4 py-3 text-sm">
+
+- **Claude.ai 챗봇·Cowork** — 사이드바 **새 대화** 버튼
+- **Claude Code** — `/clear` 명령
+
+옮길 때는 **회의록**처럼 핵심 결과만 압축해 가져갑니다.
+
+</div>
+</div>
+
+</div>
+
+<div class="mt-5 text-center text-xs opacity-70 max-w-4xl mx-auto">
+참고 — 컨텍스트 크기: <strong>모든 모델·유료 플랜 200K</strong>, Enterprise 일부 모델 <strong>500K</strong>; <strong>Claude Code 일부 모델 1M</strong> (<code>/model</code>로 선택). <a href="https://platform.claude.com/docs/ko/build-with-claude/context-windows">기술 배경</a> · <a href="https://support.claude.com/ko/articles/8606394">Claude.ai 한도</a>
+</div>
+
+<!--
+docs/index.md `### AI 활용 메타 원칙` ④ 박스 압축 — ADR-0002 단방향 파생.
+사용자 보강 가이드(2026-05-09 보강 #2):
+- 박스 도입부에 컨텍스트 정의 단락 신설(슬라이드는 본문 첫 줄에 흡수).
+- "새 대화를 시작하는 방법" 표면별 명령(챗봇/Cowork 새 대화·Code /clear) — 슬라이드는 두 카드 중 우측 카드로 시각 분리.
+- "참고 — 컨텍스트 크기" 인용 단락(200K/500K/1M·외부 docs 한국어 링크 2개) — 슬라이드는 footer 작은 글자로 노출(발표 매체 특성, 본문 무게감 보존).
+회의록 메타포는 우측 카드 마지막 한 줄로 압축 — docs는 두 자리에서 풀지만 슬라이드는 한 줄.
+-->
+
+
+---
+
+# 메타 원칙 ⑤ 페르소나(역할) 부여 — 본 강의의 현재 입장
+
+"너는 ~ 전문가야" 같은 **페르소나 부여**의 효과에 대한 본 강의 입장은 **조건부 권장**입니다.
+
+<div class="mt-6 grid grid-cols-2 gap-4 max-w-5xl mx-auto">
+
+<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
+<div class="bg-emerald-500/40 dark:bg-emerald-600/40 text-white px-4 py-2 font-bold text-center">톤·형식 지정 — 권장 ✓</div>
+<div class="bg-emerald-50/40 dark:bg-emerald-900/15 px-4 py-3 text-sm">
+
+예: <em>"공식 문서 톤으로 설명해줘"</em>, <em>"초등학생도 이해할 수 있게 풀어줘"</em>
+
+→ 같은 결과를 **일관된 형식**으로 받기 좋은 실용적 도구.
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800">
+<div class="bg-amber-500/40 dark:bg-amber-600/40 text-white px-4 py-2 font-bold text-center">전문성 부여 — 보수적 ⚠</div>
+<div class="bg-amber-50/40 dark:bg-amber-900/15 px-4 py-3 text-sm">
+
+예: <em>"너는 20년 경력 변호사야, 이 계약서 검토해"</em>
+
+→ 잘못된 권위 부여로 **틀린 답을 자신 있게 말하는 위험**이 커질 수 있음.
+
+</div>
+</div>
+
+</div>
+
+<div class="mt-6 text-center max-w-3xl mx-auto">
+
+본인 작업에서 **있을 때·없을 때 결과를 직접 비교**해 보고 결정하세요.
+
+</div>
+
+<div class="mt-4 text-center text-sm opacity-75 italic max-w-3xl mx-auto">
+시리즈 차원의 더 든든한 통제권은 메타 원칙 ③ 결과물 검토에서 옵니다 — 페르소나로 <em>기대</em>하기보다 받은 결과를 <em>읽고 검토</em>하는 쪽이 안정적.
+</div>
+
+<!--
+docs/index.md `### AI 활용 메타 원칙` ⑤ 박스 압축 — ADR-0002 단방향 파생.
+docs admonition은 ① ② ③ ④ `!!! abstract`(시리즈 확립 원칙) vs ⑤ `!!! note`(검증 성격) 톤 분리 — 슬라이드는 ① ~ ④ cyan/blue/purple/teal 동일 톤 vs ⑤ emerald(권장)·amber(보수) 두 색 카드로 결 분리. 헤더 라벨 "본 강의의 현재 입장"은 docs와 정합.
+페르소나 입장 결정 — 사용자 확정(2026-05-09): 톤·형식 권장, 전문성 부여 보수적.
+-->
+
+
+---
+
 # 임직원 (비개발자) 실습
 
 ### 2단계 (예시) — Agent Skills로 자산화
@@ -978,15 +1251,15 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 
 ### 2단계 (예시) — Agent Skills로 학습 자산화
 
-- AI 오답노트
-- 자동 문제 출제기
-- 엑셀 데이터 관리 템플릿
+- 영어 단어 출제기 (`step03-voca-quiz`)
+- 자녀 채점지 답안 인식·채점 (`step04-wrong-answer-note` stage 1·2)
+- 파일 분류·정리 (`step02-file-classifier`)
 
 <div class="mt-10"></div>
 
 ### 3단계 (예시) — Claude Cowork로 학습 자료 자동화
 
-- 수업 자료·학습 노트를 로컬 폴더 단위로 정리·요약
+- 자녀용 학습 리포트 자동 생성 — 마크다운·인쇄용 HTML (`step04-wrong-answer-note` stage 3)
 
 ---
 layout: section
