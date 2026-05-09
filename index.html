@@ -469,6 +469,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#meta-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 활용 메타 원칙
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -839,6 +850,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#meta-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 활용 메타 원칙
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1174,8 +1196,8 @@
 </tr>
 <tr>
 <td>비개발자 학생·일반인</td>
-<td>AI 오답노트, 자동 문제 출제기, 엑셀 데이터 관리 템플릿</td>
-<td>학습 자료를 로컬 폴더 단위로 정리·요약하는 에이전트</td>
+<td>영어 단어 출제기, 자녀 채점지 답안 인식·채점, 파일 분류·정리</td>
+<td>자녀용 학습 리포트(마크다운·HTML) 자동 생성</td>
 </tr>
 </tbody>
 </table>
@@ -1226,6 +1248,87 @@
 <p>→ 매번 같은 형식의 일관된 결과</p>
 </div>
 </div>
+<h3 id="meta-principles">AI 활용 메타 원칙<a class="headerlink" href="#meta-principles" title="Permanent link">&para;</a></h3>
+<p>도구·실습이 바뀌어도 그대로 통하는 <strong>시리즈 차원의 자세</strong>를 정리합니다.</p>
+<div class="admonition abstract">
+<p class="admonition-title">① 계획과 실행의 분리</p>
+<p>AI에게 한 번에 "계획 + 실행"을 맡기지 마세요. <strong>계획만 먼저 받고, 검토한 뒤 실행시킵니다.</strong></p>
+<ol>
+<li><strong>계획만 요청</strong> — "이렇게 하려는데 계획만 짜줘."</li>
+<li><strong>계획 검토</strong> — 빠진 단계·의도와 다른 곳을 손봅니다.</li>
+<li><strong>실행 요청</strong> — "좋아, 그 계획대로 진행해줘."</li>
+</ol>
+<p><strong>계획에는 최소한 다음 두 가지가 있어야 합니다.</strong></p>
+<ul>
+<li><strong>목표(What)</strong> — 무엇을 하려는지</li>
+<li><strong>완료의 정의(체크리스트)</strong> — 무엇이 다 되었다고 할 수 있는지</li>
+</ul>
+<p>작업이 복잡하면 <strong>실행계획(How — 단계별 task)</strong> 도 함께 받습니다. 작업이 끝난 뒤에는 <strong>실행요약(결과)</strong> 을 덧붙여 다음 단계의 입력으로 쓰면 됩니다.</p>
+<p>한 번에 맡기면 AI가 임의로 판단해 진행해 버려 <strong>결과를 통제하기 어렵고</strong>, 의도와 다르면 처음부터 다시 시켜야 합니다. 두 번에 나누면 <strong>검토 자리</strong>가 생겨 통제권을 잃지 않습니다.</p>
+<blockquote>
+<p>본 교육의 <a href="#stage-model">3단계 모델</a>과도 같은 결입니다 — Skill로 계획을 자산화(2단계)하고 에이전트가 실행(3단계)하는 구조에 학습자의 검토 자리가 명시되어 있습니다.</p>
+</blockquote>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">② 데이터와 뷰의 분리</p>
+<p>AI에게 산출물을 만들 때 <strong>내용(데이터)</strong> 과 <strong>표현(뷰)</strong> 을 분리해 두세요.</p>
+<ul>
+<li><strong>데이터</strong> — 값 그 자체 (숫자·텍스트·표·엑셀 등)</li>
+<li><strong>뷰</strong> — 데이터를 보여주는 틀 (마크다운·HTML·슬라이드 등)</li>
+</ul>
+<p>한 번 잘 만든 뷰(템플릿)는 여러 데이터에 재사용할 수 있고, 같은 데이터로 여러 뷰를 함께 만들 수도 있습니다. 섞어 두면 다음에 다시 만들 때 처음부터 또 시키게 됩니다.</p>
+<blockquote>
+<p>본 교육 <a href="labs/">실습 시리즈</a>에 사례가 있습니다 — <code>step01-weather</code>는 날씨 값(데이터)과 HTML 리포트 템플릿(뷰), <code>step04-wrong-answer-note</code>는 인식 결과 엑셀(데이터)과 마크다운·HTML(뷰)으로 갈라져 있습니다.</p>
+</blockquote>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">③ AI 결과물 검토·이해 의무</p>
+<p>AI에게 만들기를 맡겼더라도, <strong>결과물은 본인이 직접 읽고 이해한 상태</strong>에서 써야 합니다.</p>
+<ul>
+<li><strong>읽지 않은 결과물은 사용하지 않습니다</strong> — 마크다운·HTML·엑셀·Skill 지시문 모두 마찬가지.</li>
+<li><strong>이해가 부족하면 AI에게 설명을 시킵니다</strong> — "왜 이렇게 만들었는지·이 부분이 무슨 의미인지" 다시 물어 짚어 봅니다.</li>
+</ul>
+<p>본 교육의 <a href="labs/">실습 시리즈</a>는 손으로 쓰지 않고 <strong>프롬프트만으로</strong> 진행합니다. 다만 손으로 쓰지 않는다고 검토까지 면제되는 것은 아닙니다 — 오히려 손으로 쓰지 않는 만큼 <strong>이해의 깊이는 더 의식적으로 챙겨야</strong> 합니다. 그렇지 않으면 결과물이 잘못되어도 알아채지 못한 채 그대로 사용하게 됩니다.</p>
+<p>단, 모든 결과물을 같은 강도로 검토하라는 뜻은 아닙니다. <strong>검토의 깊이는 결과물의 영향 범위에 비례합니다.</strong> 한 번 쓰고 버리는 가벼운 산출물까지 모든 줄을 뜯어볼 필요는 없습니다. 반대로 <strong>반복해서 쓰거나 다른 사람에게 영향을 주는 산출물</strong>일수록 깊이 있게 봅니다. 코드처럼 줄 하나하나 읽기 어려운 산출물도, 적어도 <strong>이 도구가 무엇을·어떻게 처리하고, 실패하면 어디서 멈추며, 민감한 데이터를 어떻게 다루는지</strong>는 짚어 두세요. (예를 들어 "이번 회의 한 번만 쓸" 1회성 산출물이나, 개발자가 본인만 쓰는 프로토타입처럼 영향이 좁은 경우는 자연스럽게 가벼운 검토로 충분합니다.)</p>
+<blockquote>
+<p>실습에서 가장 직접적인 사례는 <code>step04-wrong-answer-note</code>입니다. 자녀 답안을 인식한 결과 엑셀을 다음 단계로 넘기기 전에 <strong>본인이 한 번 읽고 검토</strong>하도록 흐름이 짜여 있습니다.</p>
+</blockquote>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">④ 컨텍스트(대화방) 관리</p>
+<p><strong>컨텍스트(맥락)</strong> 는 AI가 한 번의 대화에서 함께 보고 있는 <strong>모든 입력의 묶음</strong>입니다 — 지금까지 주고받은 메시지, 붙여넣은 문서, 첨부 파일 전부. AI는 매번 이 묶음을 처음부터 다시 읽어서 답을 만듭니다. 그래서 한 대화가 길어질수록 <strong>AI가 한 번에 보는 분량이 커지고</strong>, 일정 한도를 넘어가면 앞쪽 내용부터 흐려지거나 잘려 나갑니다.</p>
+<p>한 대화방을 무한히 끌고 가지 마세요. 일정한 기준이 충족되면 <strong>새 대화를 시작</strong>합니다.</p>
+<p><strong>새 대화를 여는 신호</strong></p>
+<ul>
+<li><strong>주제가 바뀔 때</strong> — 예: 회의록 정리에서 주간 보고서 작성으로 넘어가는 전환.</li>
+<li><strong>계획 단계가 끝나고 실행 단계로 넘어갈 때</strong> — <a href="#meta-principles">메타 원칙 ①</a>의 컨텍스트 차원 적용. 계획을 검토·합의했다면 그 계획만 입력으로 두고 <strong>새 대화에서 실행</strong>을 시작합니다 (한 대화방에서 계획·실행·검수가 섞이면 흐름이 흐려집니다).</li>
+<li><strong>AI가 앞에서 한 말을 잊거나 어긋나기 시작할 때</strong> — 같은 지시를 반복해도 답이 흔들리는 신호입니다.</li>
+<li><strong>대화가 너무 길어졌을 때</strong> — <strong>회의가 길어지면 사람도 집중도가 떨어지듯</strong>, AI도 앞쪽 맥락을 놓칩니다. "여기까지 한 작업의 결과"가 정리되는 지점에서 한 번 끊는 게 안전합니다.</li>
+</ul>
+<p><strong>새 대화를 시작하는 방법</strong></p>
+<ul>
+<li><strong>Claude.ai 챗봇·Claude Cowork</strong> — 사이드바의 <strong>새 대화</strong> 버튼.</li>
+<li><strong>Claude Code</strong> — <code>/clear</code> 명령.</li>
+</ul>
+<p><strong>회의록처럼 정리해 가져갑니다.</strong> 회의를 두 번에 나눠 하면 다음 회의에 <strong>회의록</strong>을 들고 가야 맥락이 이어지듯, 새 대화로 옮길 때는 직전 대화의 <strong>핵심 결과(결정·완료된 작업·다음 단계)</strong> 를 압축해 가져옵니다 (예: "지금까지 이런 결정을 했어 — A·B·C. 다음은…"). 전체 히스토리를 그대로 붙여넣을 필요는 없습니다.</p>
+<blockquote>
+<p>이 "회의록" 자리가 <a href="#meta-principles">메타 원칙 ①</a>에서 말한 <strong>계획 문서·실행요약</strong>과 같은 역할입니다. 한 번 잘 정리해 두면 다음 대화의 깨끗한 입력이 되고, 대화방을 새로 열어도 통제권이 유지됩니다. 한 대화방에 모든 걸 누적하면 입력이 흐려져 통제권을 잃습니다.</p>
+<p><strong>참고 — 컨텍스트 크기.</strong> 공식 문서에 따르면 Claude의 컨텍스트 윈도우 크기는 <strong>모든 모델과 유료 플랜에서 200K 토큰</strong>이며, <strong>Enterprise 플랜은 일부 모델에서 500K 컨텍스트 윈도우</strong>를 가집니다 (<a href="https://support.claude.com/ko/articles/8606394">Claude.ai 컨텍스트 한도</a>). <strong>Claude Code는 일부 모델에서 1M 토큰 컨텍스트</strong>를 제공하며 <code>/model</code> 명령으로 선택할 수 있습니다. 기술 배경은 <a href="https://platform.claude.com/docs/ko/build-with-claude/context-windows">컨텍스트 윈도우 — Claude API 문서</a>를 참고하세요.</p>
+</blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">⑤ 페르소나(역할) 부여 — 본 강의의 현재 입장</p>
+<p>"너는 ~ 전문가야" 같은 <strong>페르소나 부여</strong>가 결과 품질에 도움이 되는지에 대한 본 강의의 현재 입장은 <strong>조건부 권장</strong>입니다.</p>
+<p><strong>두 가지를 구분해서 봅니다.</strong></p>
+<ul>
+<li><strong>톤·형식 지정으로서의 페르소나</strong> — 예: <em>"공식 문서 톤으로 설명해줘"</em>, <em>"초등학생도 이해할 수 있게 풀어줘"</em>. ➜ <strong>권장</strong>. 같은 결과를 일관된 형식으로 받기 좋은 실용적 도구.</li>
+<li><strong>전문성 부여로서의 페르소나</strong> — 예: <em>"너는 20년 경력 변호사야, 이 계약서를 검토해"</em>. ➜ <strong>보수적</strong>. 최근 AI는 페르소나 없이도 같은 수준으로 답하는 경우가 많고, 오히려 잘못된 권위 부여로 <strong>틀린 답을 자신 있게 말하는 위험</strong>이 커질 수 있습니다.</li>
+</ul>
+<p>효과가 있는지는 본인 작업에서 <strong>있을 때·없을 때 결과를 직접 비교</strong>해 보고 결정하세요. "너는 ~ 전문가야" 한 줄을 무조건 붙이는 습관은 권하지 않습니다.</p>
+<blockquote>
+<p>시리즈 차원에서 더 든든한 통제권은 <a href="#meta-principles">메타 원칙 ③ 결과물 검토</a>에서 옵니다 — 페르소나로 결과를 <em>기대</em>하기보다, 받은 결과를 본인이 <em>읽고 검토</em>하는 쪽이 안정적입니다.</p>
+</blockquote>
+</div>
 <h3 id="_7">대상별 실행 계획<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>각 트랙에서 <strong>2단계와 3단계 실습을 각각 준비</strong>합니다. 아래는 <strong>실습 예시</strong>이며, 참가자의 사전 경험과 목표에 맞춰 강사가 구체적인 실습 경로를 안내합니다.</p>
 <h4 id="_8">임직원(비개발자)<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
@@ -1235,8 +1338,8 @@
 </ul>
 <h4 id="_9">비개발자 학생·일반인<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>2단계 실습 예시</strong>: AI 오답노트, 자동 문제 출제기, 엑셀 데이터 관리 템플릿 등을 <strong>Agent Skills</strong>로 구축</li>
-<li><strong>3단계 실습 예시</strong>: <strong>Claude Cowork</strong>로 수업 자료·학습 노트를 로컬 폴더 단위로 정리·요약</li>
+<li><strong>2단계 실습 예시</strong>: <strong>영어 단어 출제기</strong>(<code>step03-voca-quiz</code>), <strong>자녀 채점지 답안 인식·채점</strong>(<code>step04-wrong-answer-note</code> stage 1·2), <strong>파일 분류·정리</strong>(<code>step02-file-classifier</code>) 등을 <strong>Agent Skills</strong>로 구축</li>
+<li><strong>3단계 실습 예시</strong>: <strong>자녀용 학습 리포트(마크다운·인쇄용 HTML) 자동 생성</strong>(<code>step04-wrong-answer-note</code> stage 3)을 <strong>Claude Cowork</strong>로</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">실습 상세 가이드 안내</p>
