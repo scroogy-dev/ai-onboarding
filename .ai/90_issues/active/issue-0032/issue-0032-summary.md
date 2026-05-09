@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 9 — 메모리 후보 `feedback_labs-review-output.md` 신설 여부 결정·반영
+> ▶️ 다음 작업: Task 10 — 빌드 확인·PR 생성·자체 리뷰·머지·archive 이관
 
 ---
 
@@ -168,9 +168,17 @@
 
 ### Task 9: 메모리 후보 정리
 
-- **결과**: 미수행
+- **결과**: 완료
 - **수행 내용 요약**:
+  - **신규 메모리 신설** — `/Users/user/.claude/projects/-Users-user-Dev-git-repository-ai-onboarding/memory/feedback_labs-review-output.md` 작성. 짝 메모리 `feedback_labs-prompt-only.md` 톤·구조 그대로 따라 name·description·type 프론트매터 + 본문(원칙 한 줄·Why·How to apply).
+  - **본문 구성** — labs 결과물 검토·이해 의무(짝 원칙) 한 단락 + Why(짝 원칙 ① 프롬프트로만이 검토 면제 아님 + 시리즈 정착 자리들 — `docs/index.md` 메타 원칙 ③·`labs/README` 진행 원칙 ②·`docs/labs.md` 진행 원칙 ②·ADR-0006 결정 6) + How to apply 5 bullets(README 작성 톤·검수 자리·검토 깊이 차등화·이해 부족 시 AI 설명 요청·메타 원칙 ③/ADR-0006 정합).
+  - **MEMORY.md 인덱스 갱신** — 짝 메모리 `feedback_labs-prompt-only` 다음 자리에 한 줄 추가("실습 자료 결과물 검토·이해 의무 — 손으로 안 쓰지만 읽고 이해한 상태에서 사용. 「프롬프트로만 진행」의 짝 원칙. 검토 깊이는 영향 범위에 비례").
 - **특이 사항**:
+  - **신설 vs 보류 결정** — 사용자 확정(2026-05-09): **신설**. ADR-0006 결정 6·메타 원칙 ③·labs/README ②로 이미 정착된 원칙이지만, 메모리는 향후 새 step·자료 작성 시 본 강의 외 작성자(에이전트 포함)가 같은 톤을 유지하기 위한 별 자리. 짝 원칙 `feedback_labs-prompt-only`와 대칭 구조라 메모리 인덱스에서 두 줄로 짝이 보임 — 후속 작성자가 짝 관계를 인지하고 한 원칙만 적용하는 실수를 줄임.
+  - **단일 메모리 vs 두 메모리 분리** — 사용자 확정: **단일 메모리**(추천안). 검토 깊이 차등화 단서는 labs 한정이 아닌 일반 원칙이지만, 결과물 검토 의무의 한 단락으로 두는 게 자연스럽고 메모리 인덱스 분량도 절약. 별 메모리(예: `feedback_review-depth-proportionality`)로 분리는 추후 일반 원칙으로 더 자주 인용되는 시점이 오면 재검토 가능.
+  - **메모리 짝 관계 표기** — 본 메모리 본문에서 짝 메모리(`feedback_labs-prompt-only.md`)를 명시 호출. 인덱스 한 줄에서도 "「프롬프트로만 진행」의 짝 원칙"으로 짝 관계 노출 — 검색·인용 시 한 쪽만 적용되는 실수 회피.
+  - **memoryFile 위치** — 사용자 머신의 `/Users/user/.claude/projects/-Users-user-Dev-git-repository-ai-onboarding/memory/` 디렉토리. 이슈 워크플로우(`.ai/90_issues/`)·ADR(`.ai/50_adr/`)와는 다른 영역. 본 이슈 git 변경에는 메모리 파일 자체가 포함되지 않음(사용자 머신 외부 영역).
+  - **본 이슈 git 변경 범위** — Task 9의 git 변경은 `.ai/90_issues/active/issue-0032/issue-0032-plan.md`·`-summary.md` 두 파일만. 메모리 파일은 사용자 머신 영역에 별 존재.
 
 ---
 
