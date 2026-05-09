@@ -102,3 +102,4 @@
 ## 변경 이력 (Revisions)
 
 - **2026-05-01** (Issue #19 작업 중) — 현재 `docs/index.md`와 동기화. 단계 표의 1단계 진행 표기 단순화, 2단계 명칭에서 "정교화" 제거 및 도구 순서 변경(Agent Skills 우선), 3단계 도구를 Claude Code로 정정, "별도 준비"→"실습 진행" 표기 갱신. 결정 3에서 Claude Code 입장을 "실습 안 함"에서 "보조 도구로 거론"으로 완화 (docs가 Code를 도구 표·준비물에 포함하고 있어 정합화). 핵심 결정(Claude 단독·3단계 모델·대상자 재정의)은 유지.
+- **2026-05-09** (Issue #30 작업 중) — 후속 조치 항목 중 "Gems 기반 실습(오답노트·자동 출제기)의 Agent Skills · Projects 재설계"가 Issue #30에서 step03-voca-quiz(자동 출제기)·step04-wrong-answer-note(AI 오답노트)로 흡수 처리됨. 단순 "Gems → Skill 1:1 이전"이 아니라 사용자 운영 자산(3-Gem 흐름) + 디자인 prompt까지 흡수해 시리즈의 종합 step으로 확장. 본 ADR 본문 결정은 변경 없음 — 흡수의 구체 패턴(`labs/` SSoT·중첩 명명 규칙·stage 3 자산 패턴·진행 원칙)은 [ADR-0006](adr-0006-labs-structure-and-naming.md)에 별도 기록.

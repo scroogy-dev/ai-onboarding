@@ -1,0 +1,54 @@
+# 실습 시리즈 (labs)
+
+본 교육의 hands-on 실습 자료입니다. 비개발자도 본인의 업무·학습·일상에 쓸 작은 소프트웨어를 직접 만들어 볼 수 있도록 step 단위로 구성했습니다.
+
+---
+
+## 진행 원칙 — 프롬프트로만 진행합니다
+
+본 시리즈는 **의도적으로 프롬프트만으로** 진행하는 수련을 권장합니다.
+
+- 파일·코드·템플릿을 에디터로 직접 고치지 않고, AI에게 프롬프트로 요청합니다.
+- 이유: AI에게 "말로 소프트웨어를 움직이는" 근육을 만드는 것이 본 시리즈의 목적입니다.
+- 막혔을 때도 해결을 프롬프트로 요청해 보세요 (손으로 고치고 싶은 조바심이 바로 수련 지점입니다).
+
+---
+
+## 구성
+
+각 step은 하나의 주제를 다루며, 그 안에서 [AI 활용 3단계 모델](https://scroogy-dev.github.io/ai-onboarding/#stage-model)에 매핑된 stage들을 진행합니다. **각 step이 풀 코스(stage 1·2·3)일 필요는 없으며, 학습 목표에 맞춰 필요한 stage만 둡니다.**
+
+| step | 주제 | stage 구성 | 핵심 학습 포인트 |
+|------|------|-----------|----------------|
+| [step01-weather](./step01-weather/) | 날씨 — 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약 |
+| [step02-file-classifier](./step02-file-classifier/) | 파일 분류 | 1·2 | Skill 옵션(파라미터) 설계 |
+| [step03-voca-quiz](./step03-voca-quiz/) | 영어 단어 출제기 | 1·2 | Skill 활용 다양화 |
+| [step04-wrong-answer-note](./step04-wrong-answer-note/) | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 + 검수 자리 + 데이터·뷰 분리 |
+
+---
+
+## 디렉토리 명명 규칙
+
+```
+labs/step<NN>-<topic>/stage<N>-<topic>-<설명>/
+```
+
+- `step` 번호 = 학습 순서
+- `stage` 번호 = [AI 활용 3단계 모델](https://scroogy-dev.github.io/ai-onboarding/#stage-model) 매핑
+- 같은 step 안에서 stage 1→2→3 진행으로 단계 모델을 동일 콘텐츠로 직접 체감
+
+---
+
+## 사이트와의 관계
+
+- **본 디렉토리(`labs/`)가 가이드 본문 SSoT**입니다.
+- 사이트(`docs/labs.md`)는 인덱스+GitHub 링크만 노출합니다.
+- 본 디렉토리 전체를 zip으로 받아 로컬에서 함께 보면서 따라할 수 있습니다.
+
+---
+
+## 사전 준비
+
+- Claude Pro 이상 유료 요금제
+- Claude Desktop 설치 (stage 3 실습에 필요)
+- 자세한 준비물은 [사이트 안내](https://scroogy-dev.github.io/ai-onboarding/#preparation)를 참고하세요.

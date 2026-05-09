@@ -989,13 +989,115 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 - 수업 자료·학습 노트를 로컬 폴더 단위로 정리·요약
 
 ---
+layout: section
+---
 
-# 실행 안내
+# 실습
 
-각 트랙에서 **2·3단계 실습을 각각 준비**합니다.
-참가자의 사전 경험과 목표에 맞춰 강사가 실습 경로를 안내합니다.
+손으로 따라가는 4개 step
 
-> 💡 각 실습의 **상세 시나리오·절차**는 별도 페이지로 제공될 예정입니다.
+<!--
+docs nav 정합 — `mkdocs.yml`의 top-level은 「홈 / 도입 / 실습 / 보안 / 운영」으로 실습이 도입·보안과 동급 형제다.
+이 섹션 디바이더는 docs의 「실습」 페이지(`docs/labs.md`)와 위계가 맞는 자리. 본 교육 흐름(Who/Why/What/How)이 끝난 뒤 hands-on으로 진입하는 분기점.
+docs/labs.md → labs/ SSoT의 단방향 파생(ADR-0002).
+-->
+
+
+---
+
+# 실습 시리즈 — 4개 step
+
+본 교육의 hands-on 자료는 GitHub repo의 `labs/` 디렉토리에서 받을 수 있습니다.
+
+| step | 주제 | stage | 핵심 학습 포인트 |
+|------|------|:-----:|----------------|
+| **step01** | 날씨 — 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약 |
+| **step02** | 파일 분류 | 1·2 | Skill 옵션(파라미터) 설계 |
+| **step03** | 영어 단어 출제기 | 1·2 | 사진 입력·출처 충실성·외부 도구 연결 |
+| **step04** | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 · 검수 자리 · 데이터/뷰 분리 |
+
+<div class="border-l-4 border-emerald-400 pl-6 py-3 my-4 bg-emerald-50/40 dark:bg-emerald-900/15 rounded-r">
+
+🛠️ **진행 원칙 — 프롬프트로만 진행합니다.** 파일·코드·템플릿을 에디터로 직접 고치지 않고, AI에게 프롬프트로 요청합니다.
+
+</div>
+
+> [GitHub `labs/`](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs) · [zip 다운로드](https://github.com/scroogy-dev/ai-onboarding/archive/refs/heads/main.zip) · 사이트 안내: `docs/labs.md`
+
+<style>
+table { font-size: 0.78em; }
+table th, table td { padding: 0.35em 0.5em; }
+</style>
+
+<!--
+docs/labs.md의 시리즈 구성 표 슬라이드 압축 — ADR-0002 단방향 파생.
+풀 코스(stage 1·2·3)는 step01(입문)·step04(종합), 부분(stage 1·2)은 step02·step03 — 각 step의 학습 목표에 맞춰 필요한 stage만 둔다.
+"프롬프트로만 진행" 원칙은 시리즈 차원의 의도적 수련 — 손으로 고치고 싶은 조바심이 곧 수련 지점이라는 더 자세한 메시지는 docs/labs.md 본문에. 슬라이드는 한 줄 핵심만.
+-->
+
+
+---
+
+# step별 학습 포인트
+
+<div grid="~ cols-2 gap-3" class="mt-6">
+
+<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
+<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-4 py-2 font-bold">step01 — 날씨 (입문)</div>
+<div class="bg-blue-50/40 dark:bg-blue-900/15 px-4 py-3 text-sm">
+
+자유응답 → 정형 응답 Skill → HTML 리포트.
+
+**stage 1·2·3 풀 코스**, 시리즈 입문.
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800">
+<div class="bg-cyan-500/40 dark:bg-cyan-600/40 text-white px-4 py-2 font-bold">step02 — 파일 분류</div>
+<div class="bg-cyan-50/40 dark:bg-cyan-900/15 px-4 py-3 text-sm">
+
+옵션(`excel`/`image`)을 받는 Skill로 같은 작업을 분기.
+
+**Skill 파라미터 설계**의 효익.
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-purple-200 dark:border-purple-800">
+<div class="bg-purple-500/40 dark:bg-purple-600/40 text-white px-4 py-2 font-bold">step03 — 영어 단어 출제기</div>
+<div class="bg-purple-50/40 dark:bg-purple-900/15 px-4 py-3 text-sm">
+
+단어장 사진 + 옵션을 받는 출제 Skill.
+
+**사진의 뜻 그대로 보존** + 단어별 사전 직접 링크.
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-orange-200 dark:border-orange-800">
+<div class="bg-orange-500/40 dark:bg-orange-600/40 text-white px-4 py-2 font-bold">step04 — 자녀 오답노트 (종합)</div>
+<div class="bg-orange-50/40 dark:bg-orange-900/15 px-4 py-3 text-sm">
+
+채점지 사진 → 인식 엑셀 → **검수** → 자녀용 마크다운·인쇄용 HTML.
+
+다단계 파이프라인 + 데이터/뷰 분리.
+
+</div>
+</div>
+
+</div>
+
+<div class="mt-6 text-center text-base opacity-80">
+참가자의 사전 경험과 목표에 맞춰 <strong>강사가 실습 경로</strong>를 안내합니다.
+</div>
+
+<!--
+4개 step의 한 줄 메시지를 카드 그리드로 정렬 — 단순 bullet 나열 회피(memory: 의도적 강조 카드 유지, 그룹핑은 시각 구분 권장).
+색상 사다리: step01 blue(입문) → step02 cyan(옵션) → step03 purple(사진) → step04 orange(파이프라인) — 학습 단계 톤 변화.
+하단 한 줄로 강사 안내 메시지(이전 「실행 안내」 슬라이드 핵심) 흡수.
+-->
+
 
 ---
 layout: section
