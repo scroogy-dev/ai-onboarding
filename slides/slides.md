@@ -569,6 +569,72 @@ Cowork의 「△」가 「제한」이 아닌 「제어된 안전 동작」임�
 
 
 ---
+
+# 기본 용어와 범위
+
+> 본격 내용 전에 — 사이트·슬라이드에서 만나게 될 **세 용어**와, **본 강의가 다루지 않는 영역**을 한 번에 짚습니다.
+
+<div class="mt-5 grid grid-cols-3 gap-3 max-w-6xl mx-auto">
+
+<div class="rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700">
+<div class="bg-slate-500/40 dark:bg-slate-600/40 text-white px-3 py-2 font-bold text-center text-sm">마크다운</div>
+<div class="bg-slate-50/40 dark:bg-slate-900/15 px-3 py-3 text-xs">
+
+텍스트만으로 서식을 표현하는 가벼운 문서 형식. <code>.md</code>, AI 출력 포맷의 단골.
+
+<code>#&nbsp;제목</code> → 큰 제목, <code>**굵게**</code> → **굵게**.
+
+→ **문법 학습은 안 합니다.**
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700">
+<div class="bg-slate-500/40 dark:bg-slate-600/40 text-white px-3 py-2 font-bold text-center text-sm">바이브 ↔ 에이전틱</div>
+<div class="bg-slate-50/40 dark:bg-slate-900/15 px-3 py-3 text-xs">
+
+**던지고 결과 그대로 vs 컨텍스트·자산 반복 활용.**
+
+- **바이브 코딩** — 느낌으로 빠르게.
+- **에이전틱 엔지니어링** — 컨텍스트·자산 의도적 설계.
+
+본 강의는 둘 사이의 **가벼운 입문**.
+
+→ **에이전틱 자체는 요구 X.**
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700">
+<div class="bg-slate-500/40 dark:bg-slate-600/40 text-white px-3 py-2 font-bold text-center text-sm">외부 컨텍스트 — MCP·RAG</div>
+<div class="bg-slate-50/40 dark:bg-slate-900/15 px-3 py-3 text-xs">
+
+내 자료를 AI에 붙여 답하게 하는 **일반 개념**.
+
+**MCP** <span class="opacity-60">(Model Context Protocol)</span> — 어떻게 연결.<br/>
+**RAG** <span class="opacity-60">(Retrieval-Augmented Generation)</span> — 무엇을 하느냐.
+
+→ **설치·내부 구조 모두 범위 밖.**
+
+</div>
+</div>
+
+</div>
+
+<div class="mt-5 text-center text-sm opacity-80">
+사이트 페이지: <code>기본 용어와 범위</code> — 더 자세히 짚을 수 있습니다.
+</div>
+
+<!--
+docs/basics.md 「기본 용어와 범위」 페이지 1장 압축 — ADR-0002 단방향 파생.
+세 용어(마크다운 / 바이브↔에이전틱 / 외부 컨텍스트)를 가로 3분할 카드로 한 슬라이드에 묶음.
+메타 원칙 5장(②blue / ③purple / ④teal / ⑤emerald·amber)과는 색상(slate 회색조)·비중(작은 카드 3분할) 분리 — 「원칙」이 아닌 「용어 해소·범위 밖 안내」 결.
+청중 메시지: 「이 단어들이 본 강의에 나오면 멈추지 마세요. 다만 본격 학습·설치·내부 구조는 본 강의 밖입니다.」
+nav 위치: 「도입」 직후, 「What」 직전. docs nav 순서와 정합.
+-->
+
+
+---
 layout: section
 ---
 

@@ -56,6 +56,7 @@ ai-onboarding/
 ├── .ai/                    # AI 협업 컨텍스트 (ADR, 이슈 작업 등)
 ├── .github/workflows/      # CI/CD (MkDocs + Slidev 합본 배포)
 ├── docs/                   # SSoT: 모든 원본 마크다운 (MkDocs로 발행)
+├── labs/                   # 실습 자료 본문 (step01~step04 + README, GitHub repo에서 직접 사용)
 ├── overrides/              # MkDocs Material 테마 커스터마이징
 ├── scripts/                # 자동화 스크립트 (컨플루언스 동기화 등)
 ├── slides/                 # docs/의 발표용 파생 (Slidev로 발행)
