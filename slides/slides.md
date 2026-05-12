@@ -593,6 +593,8 @@ Cowork의 「△」가 「제한」이 아닌 「제어된 안전 동작」임�
 <div class="bg-slate-500/40 dark:bg-slate-600/40 text-white px-3 py-2 font-bold text-center text-sm">바이브 ↔ 에이전틱</div>
 <div class="bg-slate-50/40 dark:bg-slate-900/15 px-3 py-3 text-xs">
 
+**던지고 결과 그대로 vs 컨텍스트·자산 반복 활용.**
+
 - **바이브 코딩** — 느낌으로 빠르게.
 - **에이전틱 엔지니어링** — 컨텍스트·자산 의도적 설계.
 
@@ -609,8 +611,8 @@ Cowork의 「△」가 「제한」이 아닌 「제어된 안전 동작」임�
 
 내 자료를 AI에 붙여 답하게 하는 **일반 개념**.
 
-**MCP** — 어떻게 연결.<br/>
-**RAG** — 무엇을 하느냐.
+**MCP** <span class="opacity-60">(Model Context Protocol)</span> — 어떻게 연결.<br/>
+**RAG** <span class="opacity-60">(Retrieval-Augmented Generation)</span> — 무엇을 하느냐.
 
 → **설치·내부 구조 모두 범위 밖.**
 
