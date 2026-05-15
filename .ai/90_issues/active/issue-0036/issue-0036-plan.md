@@ -10,7 +10,7 @@
 
 ### Task 1: #9 선택지 비교 + 결정
 
-- [ ] 완료
+- [x] 완료
 - **목표**: labs 본문 진입 경로 (a)/(b)/(c) 중 한 길을 명시적으로 선택하고 근거 기록.
 - **작업 내용**:
   1. 현재 상태 재확인 — `docs/labs.md`(인덱스만)·`labs/README.md`·`labs/step*/README.md` 본문 길이·자산 참조 양상.
@@ -25,7 +25,7 @@
 
 ### Task 2: ADR-0006 영향 평가 + 처리
 
-- [ ] 완료
+- [x] 완료
 - **목표**: Task 1 결정이 ADR-0006에 미치는 영향을 평가하고 필요한 후속 조치 처리.
 - **작업 내용**:
   1. Task 1 결정과 ADR-0006(labs SSoT·zip 친화) 사이의 정합·충돌 확인.
@@ -38,15 +38,18 @@
 
 ---
 
-### Task 3: #9 결정 반영 — docs 본문 보강
+### Task 3: #9 (a) 결정 반영 — docs/slides 진입 링크 보강
 
 - [ ] 완료
-- **목표**: Task 1 결정에 따라 docs 본문에 반영.
+- **목표**: (a) 유지 결정의 자연스러운 보강 — 본문은 `labs/` SSoT에 그대로 두고, 사이트·슬라이드 진입자가 step 본문에 **한 클릭**으로 도달하도록 진입 링크만 추가.
+- **배경**: (a) 결정 후 "사이트·강의 진행 시 본문을 어떻게 보여줄지" 우려가 제기됨. 표 step 셀에 GitHub README 직링크를 다는 가벼운 보강으로 학습자·강사 양쪽 진입 동선을 한 클릭으로 단축.
 - **작업 내용**:
-  1. (a) 유지: 작업 없음 — followup 노트에 결정만 기록.
-  2. (b) per-step 요약 페이지: `docs/labs/step01-weather.md` 등 신설, `mkdocs.yml` nav 갱신, 본문은 핵심 메시지·미리보기·GitHub 링크 중심으로 작성(비개발자 톤·자산 경로 깨지지 않게).
-  3. (c) 전면 이전: `labs/*/README.md`의 본문을 `docs/labs/`로 옮기되 자산 경로(`SKILL.md`·`*-template.html`·`example-output.html`) 처리 정책 결정 후 반영.
-- **완료 기준**: 결정된 길에 따라 docs 반영 완료, 로컬 mkdocs serve로 사이트 렌더링 확인.
+  1. `docs/labs.md` 시리즈 구성 표의 step 4개 셀(`step01-weather`·`step02-file-classifier`·`step03-voca-quiz`·`step04-wrong-answer-note`)을 각자의 GitHub README 직링크로 갱신.
+  2. `slides/slides.md` "실습 시리즈 — 4개 step" 슬라이드(1347줄 인근) 표의 step 셀에 같은 직링크 반영 (ADR-0002 단방향 파생).
+  3. "step별 학습 포인트" 카드 슬라이드(1380줄 인근)는 메시지 카드 시각 일관성 유지 위해 손대지 않음.
+  4. footer/"자료 받기" 섹션의 전체 `labs/`·zip 링크는 기존대로 유지.
+  5. 로컬 mkdocs serve + slides dev로 렌더링 확인.
+- **완료 기준**: docs/labs.md·slides/slides.md 양쪽 표 셀에서 step별 GitHub README로 한 클릭 점프 가능, 렌더링 정상.
 
 ---
 

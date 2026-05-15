@@ -13,16 +13,20 @@
 
 **포함 (In)**
 
-- 후속 후보 #9 — labs 본문 진입 경로 결정 + 결정에 따른 docs 반영
+- 후속 후보 #9 — labs 본문 진입 경로 결정 + 결정에 따른 docs/slides 반영
   - 선택지 (a) 유지 / (b) per-step 요약 narrative 페이지 신설 / (c) README→docs 이전
   - 선택지 비교(자산 경로 충돌·두 벌 관리 부담·ADR-0006 영향) 후 결정
-  - 결정 결과에 따라 `docs/labs.md` 또는 `docs/labs/step*.md` 본문 보강
+  - **결정 결과 (a) 유지** — 본문은 `labs/` SSoT 유지. 사이트 진입 동선만 가볍게 보강:
+    - `docs/labs.md` 시리즈 구성 표의 step 4개 셀에 각자의 GitHub README 직링크
+    - `slides/slides.md` "실습 시리즈 — 4개 step" 슬라이드 표의 step 셀에 같은 직링크 (ADR-0002 단방향 파생)
+    - "step별 학습 포인트" 카드 슬라이드는 메시지 카드 시각 일관성 유지 위해 손대지 않음
+    - 기존 footer/"자료 받기" 섹션의 전체 `labs/`·zip 링크는 그대로 유지
 - 후속 후보 #6 — Claude Desktop "Code" 탭 사용량 화면 안내
   - 사이트 안내 페이지 짧은 섹션 (스크린샷 1~2장 + 갱신 정책)
-  - 자리 후보: `docs/index.md` 도입부 또는 #9 결정에 따라 별도 가이드 페이지
-- slides 동기화 (필요 시)
+  - 자리 후보: `docs/index.md` 도입부 또는 별도 가이드 페이지
+- slides 동기화 — #9 진입 링크 반영 + #6 필요 시 1장 추가
 - followup 노트(`2026-05-08-followup-topic-candidates.md`)의 #9·#6 상태 갱신
-- ADR-0006 결정 재방문이 필요한 경우 ADR 업데이트 또는 신규 ADR
+- ADR-0006 결정 재방문이 필요한 경우 ADR 업데이트 또는 신규 ADR — **본질 유지, 변경 이력 1줄 추가로 처리**
 
 **비포함 (Out)**
 
@@ -36,12 +40,12 @@
 
 ## 완료의 정의 (Definition of Done)
 
-- [ ] #9 선택지 (a)/(b)/(c) 중 하나를 명시적으로 결정하고 근거를 spec/summary에 기록
-- [ ] 결정 결과에 따른 docs 반영 완료 (또는 (a) 유지인 경우 followup 노트에 그 결정 명시)
+- [x] #9 선택지 (a)/(b)/(c) 중 하나를 명시적으로 결정하고 근거를 spec/summary에 기록 — **(a) 유지 결정**
+- [ ] (a) 결정에 따른 docs/slides 진입 링크 보강 완료 — `docs/labs.md` 시리즈 구성 표·`slides/slides.md` "실습 시리즈" 표 step 셀에 GitHub README 직링크
 - [ ] #6 Claude Desktop 사용량 화면 안내 섹션이 사이트 어딘가에 추가됨 (스크린샷 1~2장 + 갱신 정책 포함)
-- [ ] slides 동기화 필요 여부 판단 + 필요 시 동기화 완료
+- [ ] slides 동기화 — #9 진입 링크 반영 + #6 필요 시 1장 추가
 - [ ] followup 노트의 #9·#6 상태 라인이 "이슈 #36 반영 완료"로 갱신됨
-- [ ] ADR-0006 영향 평가 — 결정에 따라 ADR 업데이트 또는 "영향 없음" 기록
+- [x] ADR-0006 영향 평가 — 본질 유지, 변경 이력 1줄 추가 완료
 
 ---
 
