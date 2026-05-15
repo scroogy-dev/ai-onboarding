@@ -41,10 +41,10 @@
 ## 완료의 정의 (Definition of Done)
 
 - [x] #9 선택지 (a)/(b)/(c) 중 하나를 명시적으로 결정하고 근거를 spec/summary에 기록 — **(a) 유지 결정**
-- [ ] (a) 결정에 따른 docs/slides 진입 링크 보강 완료 — `docs/labs.md` 시리즈 구성 표·`slides/slides.md` "실습 시리즈" 표 step 셀에 GitHub README 직링크
-- [ ] #6 Claude Desktop 사용량 화면 안내 섹션이 사이트 어딘가에 추가됨 (스크린샷 1~2장 + 갱신 정책 포함)
-- [ ] slides 동기화 — #9 진입 링크 반영 + #6 필요 시 1장 추가
-- [ ] followup 노트의 #9·#6 상태 라인이 "이슈 #36 반영 완료"로 갱신됨
+- [x] (a) 결정에 따른 docs/slides 진입 링크 보강 완료 — `docs/labs.md` 시리즈 구성 표·`slides/slides.md` "실습 시리즈" 표 step 셀에 GitHub README 직링크
+- [x] #6 Claude Desktop 사용량 화면 안내 섹션이 사이트 어딘가에 추가됨 — `docs/index.md` 「준비사항」 직후 admonition + 스크린샷 3장 + 갱신 정책
+- [x] slides 동기화 — #9 진입 링크 반영 + #6 슬라이드 1장 추가
+- [x] followup 노트의 #9·#6 상태 라인이 "이슈 #36 반영 완료"로 갱신됨
 - [x] ADR-0006 영향 평가 — 본질 유지, 변경 이력 1줄 추가 완료
 
 ---
