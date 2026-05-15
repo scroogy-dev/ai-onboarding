@@ -244,6 +244,32 @@ Claude Cowork · Code 사용을 위해
 
 
 ---
+
+# Claude 사용량 확인하기
+
+**Claude Desktop → Code 탭 → 모델 선택기 옆 사용량 링**
+
+| 보이는 것 | 의미 |
+|---|---|
+| **현재 세션 컨텍스트** | 지금 대화방이 얼마나 차 있는지 |
+| **요금제 사용량** | 모든 Claude Code 표면에서 공유되는 누적 사용량 |
+| **모델별 분포** | 일별·모델별(Opus·Sonnet·Haiku) 토큰 비율 |
+
+<div class="border-l-4 border-emerald-400 pl-6 py-3 my-4 bg-emerald-50/40 dark:bg-emerald-900/15 rounded-r">
+
+🛠️ 추론이 많이 필요한 작업과 단순 지시 이행은 사용량 차이가 큽니다 — 작업 성격에 맞춰 모델을 골라 보세요.
+
+</div>
+
+> 공식 안내: [Claude Code Desktop — 사용량 확인하기](https://code.claude.com/docs/ko/desktop#check-usage)
+
+<!--
+docs/index.md 「준비사항」의 사용량 안내 admonition 동기화 슬라이드 — ADR-0002 단방향 파생.
+이미지·화면 캡처는 사이트에 두고 본 슬라이드는 메시지 카드 1장으로 유지. UI 변경 시 docs/index.md가 캡처 갱신 책임 자리.
+-->
+
+
+---
 layout: section
 ---
 

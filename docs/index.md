@@ -75,6 +75,27 @@
 
 </div>
 
+!!! tip "Claude 사용량 확인하기"
+    Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우측 하단의 **사용량 링**(현재 모델 표시 옆)을 클릭하면 짧은 요약 화면이 먼저 펼쳐집니다.
+
+    ![사용량 링 클릭 시 보이는 플랜 사용량 요약](assets/images/claude-desktop-usage-03.png)
+
+    여기서 화살표(→)를 눌러 들어가면 전체 사용량 화면이 열리고, **개요·모델** 두 탭에서 본인의 사용 현황을 더 자세히 볼 수 있습니다.
+
+    **개요 — 누적 사용량 한눈에 (세션·메시지·토큰·연속 일수·즐겨 사용한 모델)**
+
+    ![누적 사용량 개요](assets/images/claude-desktop-usage-01.png)
+
+    **모델 — 일별·모델별 토큰 분포**
+
+    ![모델별 일별 사용량 막대그래프](assets/images/claude-desktop-usage-02.png)
+
+    추론이 많이 필요한 작업과 단순 지시 이행은 같은 시간에도 토큰 차이가 큽니다. 모델별 비율(Opus·Sonnet·Haiku)을 보며 **작업 성격에 맞춰 모델을 골라** 직접 차이를 체감해 보세요.
+
+    *이미지는 Claude Desktop UI가 바뀌면 옛 화면일 수 있어요. 본 페이지가 캡처 갱신 책임 자리입니다.*
+
+    > 공식 안내: [Claude Code Desktop — 사용량 확인하기](https://code.claude.com/docs/ko/desktop#check-usage)
+
 ---
 
 ## Why — 왜 AI 활용을 배워야 할까요?
