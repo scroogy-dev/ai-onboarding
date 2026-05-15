@@ -147,7 +147,7 @@ ADR-0001 "후속 조치" 두 항목("Gems 기반 실습의 Agent Skills · Proje
 ### 후속 조치
 
 - [ADR-0001](adr-0001-practice-tool-scope-and-stage-model.md) 변경 이력에 2026-05-09 항목 추가 — "Gems 기반 실습 재설계" 후속 조치 두 항목이 Issue #30에서 step03·step04로 흡수 처리됨을 기록. **(완료 — 본 이슈에서 처리)**
-- `99_workspace/notes/2026-05-08-followup-topic-candidates.md` 항목 9(labs README → docs 통합)는 학습자 피드백 후 별도 이슈로 승격 검토.
+- `99_workspace/notes/2026-05-08-followup-topic-candidates.md` 항목 9(labs README → docs 통합)는 학습자 피드백 후 별도 이슈로 승격 검토. **(재검토 완료 — Issue #36에서 (a) 유지 결정. 학습자 피드백 누적 후 다시 검토.)**
 - 후속 step·시리즈 추가 시 본 ADR의 명명 규칙·자산 패턴·진행 원칙을 기준 삼는다. 패턴 변경이 필요하면 본 ADR을 갱신하거나 신규 ADR을 신설한다.
 - 결정 5의 "데이터/뷰 분리"가 시리즈 차원 사고 원칙으로 격상되어 [ADR-0007](adr-0007-data-view-separation.md)로 분리됨. 본 결정 5는 ADR-0007을 stage 3 자산에 적용한 사례로 재해석. **(완료 — Issue #32에서 처리)**
 - 결정 6의 진행 원칙이 단일 원칙(① 프롬프트로만 진행)에서 두 원칙(① + ② 결과물 검토·이해 의무)으로 보강됨. ② 원칙은 시리즈 차원 메타 원칙 ③(`docs/index.md` `#meta-principles`)으로도 격상되어 docs/slides 도입에 동기화됨. **(완료 — Issue #32에서 처리)**
@@ -157,3 +157,4 @@ ADR-0001 "후속 조치" 두 항목("Gems 기반 실습의 Agent Skills · Proje
 ## 변경 이력 (Revisions)
 
 - **2026-05-09** (Issue #32 작업 중) — 결정 5(stage 3 자산 패턴)의 "데이터/뷰 분리" 한 줄을 [ADR-0007](adr-0007-data-view-separation.md) 호출로 갱신. ADR-0007이 신규 신설되어 데이터/뷰 분리가 시리즈 차원 사고 원칙으로 격상됨. 결정 6(진행 원칙)을 단일 원칙(① 프롬프트로만 진행)에서 두 원칙(① + ② 결과물 검토·이해 의무)으로 보강. ② 원칙은 메타 원칙 ③으로 docs/slides에도 동기화됨. 두 변경은 이슈 #32 메타 원칙 격상의 일환이며 본 ADR의 핵심 결정(`labs/` SSoT·중첩 명명·stage 3 자산 패턴 자체·진행 원칙의 골격)은 유지.
+- **2026-05-13** (Issue #36 작업 중) — 후속 조치의 "labs README → docs 통합" 재검토 항목을 Issue #36에서 명시적으로 다룸. 결정은 **(a) 유지** — 결정 1(`labs/` SSoT, `docs/labs.md`는 단일 인덱스)을 그대로 유지하고 학습자 피드백 누적 후 재검토. 본 ADR의 결정 본문은 변경 없음, 후속 조치 라인만 "재검토 완료" 표기 추가.
