@@ -251,7 +251,6 @@ Claude Cowork · Code 사용을 위해
 
 | 보이는 것 | 의미 |
 |---|---|
-| **현재 세션 컨텍스트** | 지금 대화방이 얼마나 차 있는지 |
 | **요금제 사용량** | 모든 Claude Code 표면에서 공유되는 누적 사용량 |
 | **모델별 분포** | 일별·모델별(Opus·Sonnet·Haiku) 토큰 비율 |
 
@@ -623,8 +622,6 @@ Cowork의 「△」가 「제한」이 아닌 「제어된 안전 동작」임�
 
 - **바이브 코딩** — 느낌으로 빠르게.
 - **에이전틱 엔지니어링** — 컨텍스트·자산 의도적 설계.
-
-본 강의는 둘 사이의 **가벼운 입문**.
 
 → **에이전틱 자체는 요구 X.**
 
@@ -1560,13 +1557,13 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 2. **개인정보 포함 데이터는 가리거나 빼고 입력** — 전문 용어로 **"비식별 처리"**
 3. **결과물 외부 공유 주의** — 사내 정보 포함 여부 검토 후 공유
 
-<div class="border-l-4 border-orange-400 pl-6 py-3 my-4 bg-orange-50/40 dark:bg-orange-900/15 rounded-r text-sm">
+<div class="border-l-4 border-orange-400 pl-6 py-2 my-3 bg-orange-50/40 dark:bg-orange-900/15 rounded-r text-sm">
 
 회사 계약은 <strong>데이터가 처리되는 방식</strong>만 보호합니다 — <strong>입력하는 정보의 책임은 여전히 본인에게</strong> 있습니다.
 
 </div>
 
-<div class="border-l-4 border-blue-400 pl-6 py-4 my-4 bg-blue-50/40 dark:bg-blue-900/15 rounded-r">
+<div class="border-l-4 border-blue-400 pl-6 py-3 my-3 bg-blue-50/40 dark:bg-blue-900/15 rounded-r">
 
 **비식별 처리 예시**
 
