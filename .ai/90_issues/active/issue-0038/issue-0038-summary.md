@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 4 — 커밋·PR 정리
+> ✅ 모든 작업이 완료되었습니다. (PR 머지 후 active → archive 이관 예정)
 
 ---
 
@@ -36,6 +36,6 @@
 
 ### Task 4: 커밋·PR 정리
 
-- **결과**:
-- **수행 내용 요약**:
-- **특이 사항**:
+- **결과**: 완료
+- **수행 내용 요약**: 변경 사항(`slides/slides.md` + plan·summary) 커밋 `0ac93a5` "docs: 슬라이드 오버플로우 3건 수정 — 사용량 표 행 제거·기본 용어 카드 조정·임직원 보안 박스 축소 (#38)". `issue-0038` 브랜치 push 후 PR #39 생성.
+- **특이 사항**: PR URL — https://github.com/scroogy-dev/ai-onboarding/pull/39
