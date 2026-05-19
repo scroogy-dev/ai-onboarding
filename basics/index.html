@@ -352,6 +352,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#three-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 활용의 세 형태 — 1회성 프롬프트 · 에이전트 스킬 · 애플리케이션
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#markdown" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -500,6 +511,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#three-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 활용의 세 형태 — 1회성 프롬프트 · 에이전트 스킬 · 애플리케이션
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#markdown" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -564,6 +586,59 @@
 <h1 id="_1">기본 용어와 범위<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>비개발자 청중이 본 시리즈를 시작하기 전에 알아두면 좋은 <strong>기본 용어</strong>와, 본 시리즈가 <strong>다루지 않는 영역</strong>(범위 밖 안내)을 짧게 정리합니다. 본격적인 문법·내부 구조 학습이 아니라, 단어가 등장했을 때 멈추지 않을 정도가 목표입니다.</p>
+</blockquote>
+<hr />
+<h2 id="three-forms">AI 활용의 세 형태 — 1회성 프롬프트 · 에이전트 스킬 · 애플리케이션<a class="headerlink" href="#three-forms" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">생성형 AI는 기본적으로 비결정적입니다</p>
+<p>동일한 지시를 입력해도 매번 답이 조금씩 다를 수 있습니다. AI를 어떤 <strong>형태</strong>로 활용하느냐에 따라 이 비결정성을 얼마나 통제할 수 있는지가 달라집니다.</p>
+</div>
+<p>AI를 활용하는 방식은 결과물의 형태에 따라 셋으로 나뉩니다. 같은 작업도 어떤 형태로 만드느냐에 따라 <strong>결과의 일관성</strong>과 <strong>만드는 비용</strong>이 크게 달라집니다.</p>
+<table>
+<thead>
+<tr>
+<th>축</th>
+<th>1회성 프롬프트</th>
+<th>에이전트 스킬 <em>(본 교육)</em></th>
+<th>애플리케이션 <em>(소프트웨어)</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>무엇인가</strong></td>
+<td>챗봇에 그때그때 입력하는 한 번짜리 지시</td>
+<td>자주 쓰는 프롬프트·절차를 재사용 가능한 형태로 묶어둔 자산</td>
+<td>코드로 작성된 프로그램</td>
+</tr>
+<tr>
+<td><strong>결정성</strong></td>
+<td>비결정</td>
+<td>비결정 <em>(내부가 LLM 호출)</em></td>
+<td>결정</td>
+</tr>
+<tr>
+<td><strong>결과 일관성</strong></td>
+<td>매번 결과가 조금씩 다를 수 있음</td>
+<td>동일한 형식·접근 보장 <em>(값은 다를 수 있음)</em></td>
+<td>동일 입력 → 동일 출력</td>
+</tr>
+<tr>
+<td><strong>만드는 비용·누가</strong></td>
+<td>없음 — 누구나 즉시</td>
+<td>낮음 — <strong>비개발자도 직접 만듦</strong></td>
+<td>큼 — 개발자가 코드 작성</td>
+</tr>
+<tr>
+<td><strong>언제 적합한가</strong></td>
+<td>일회성·탐색·맥락이 매번 다른 작업</td>
+<td>반복되는 동일 패턴 작업</td>
+<td>대규모·다수 사용자·결정적 신뢰성이 핵심인 작업</td>
+</tr>
+</tbody>
+</table>
+<p>본 교육이 강조하는 <strong>에이전트 스킬</strong>은 두 끝점 사이에 있습니다. 비개발자가 만들 수 있는 비용이면서, 반복 작업의 일관성을 크게 끌어올립니다. 결정적 신뢰성이 핵심인 영역(공식 시스템·다수 사용자 대상)은 여전히 개발자가 만드는 <strong>애플리케이션의 영역</strong>입니다.</p>
+<blockquote>
+<p>본 강의 <a href="../#manual-vs-software">홈 — 매번 시키기 vs 소프트웨어로 만들기</a>의 결정 룰이 <strong>① 직접 지시 / ② 소프트웨어로 만들기</strong>의 2분기 가이드라면, 위 표는 ②번 안에서 <strong>에이전트 스킬과 애플리케이션의 위치 차이</strong>를 보여줍니다.</p>
 </blockquote>
 <hr />
 <h2 id="markdown">마크다운<a class="headerlink" href="#markdown" title="Permanent link">&para;</a></h2>
