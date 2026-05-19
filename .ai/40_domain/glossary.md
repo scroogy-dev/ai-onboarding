@@ -10,5 +10,9 @@
 | claude.ai | Anthropic의 **웹·모바일 대화형 챗봇** 서비스. Projects·Skills 기능으로 자산화·커스터마이징도 가능하다. | 본 교육 1단계 / 출처: `docs/intro.md` |
 | Claude Cowork | Claude Desktop에서 동작하는 **비개발자용 범용 에이전트**. 격리 VM·연결 폴더·송신 정책의 3중 보호로 실행된다. | 본 교육 3단계 본격 실습 도구 / 출처: `docs/intro.md` |
 | Claude Code | 터미널·IDE에서 동작하는 **코딩 특화 에이전트**. 본 교육에서는 옵션·보조 도구로만 다룬다. | 본 교육 3단계 보조 / 출처: `docs/intro.md` |
-| Agent Skills | Claude에 **재사용 가능한 절차·지식을 등록**해 두는 기능. 사전 제작 Skill과 사용자 정의 Skill을 모두 지원한다. | 출처: `docs/intro.md` 기능 비교표 |
+| Agent Skills | Claude에 **재사용 가능한 절차·지식을 등록**해 두는 기능. 사전 제작 Skill과 사용자 정의 Skill을 모두 지원한다. 한국어 라벨로는 「에이전트 스킬」을 사용한다. | 출처: `docs/intro.md` 기능 비교표 |
 | MCP (Model Context Protocol) | Claude가 **외부 도구·데이터 소스에 연결**하기 위한 표준 프로토콜. claude.ai에서는 Connectors라는 제한적 형태로 지원된다. | 출처: `docs/intro.md` 기능 비교표 |
+| 결정성 (Deterministic) | **동일한 입력 → 동일한 출력**을 보장하는 동작 성격. 일반 소프트웨어가 여기에 해당한다. | 출처: `docs/basics.md` AI 활용의 세 형태 |
+| 비결정성 (Non-deterministic) | **동일한 입력에도 출력이 달라질 수 있는** 동작 성격. 생성형 AI(LLM 호출)는 기본적으로 비결정적이다. | 출처: `docs/basics.md` AI 활용의 세 형태 |
+| 1회성 프롬프트 | 챗봇 창에 그때그때 입력하는 **한 번짜리 지시**. 자산화하지 않은 사용 방식. | 출처: `docs/basics.md` AI 활용의 세 형태 |
+| 애플리케이션 | 코드로 작성된 일반 **소프트웨어 프로그램**. 본 교육의 직접 제작 범위 밖이며, 비교 기준으로 등장한다. | 출처: `docs/basics.md` AI 활용의 세 형태 |
