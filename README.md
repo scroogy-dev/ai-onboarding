@@ -65,3 +65,15 @@ ai-onboarding/
 ```
 
 AI 어시스턴트용 가이드는 [.ai/AI-CONTEXT.md](.ai/AI-CONTEXT.md)를 참고하세요.
+
+## 라이선스
+
+All Rights Reserved.
+
+### 개인 저작물 고지
+
+이 프로젝트는 **scroogy-dev**의 개인 저작물입니다. 특정 기업이나 조직의 업무와 무관하게, 개인적인 목적으로 개발 및 관리되고 있습니다.
+
+```
+Copyright 2026 scroogy-dev (scroogy@swtest.co.kr)
+```
