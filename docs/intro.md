@@ -64,6 +64,8 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 
 </div>
 
+> 에이전트가 *무엇으로 이뤄져 있는지*(모델 + 하네스)는 [기본 용어 — 에이전트 = 모델 + 하네스](basics.md#model-harness)에서 다룹니다.
+
 !!! quote "왜 이 분류가 중요한가요?"
     챗봇(매번 시키기)과 에이전트(맡기기)는 **반복 작업에서의 비용 구조**가 다릅니다.
 
@@ -157,12 +159,36 @@ Claude는 한 모델이 아니라 **세 라인업**으로 구성됩니다. claud
 
 ### 사용량 확인 방법 { #claude-usage }
 
-Pro·Max 요금제에는 시간·기간별 한도가 있습니다. **claude.ai 웹**과 **Claude Desktop** 모두 같은 화면 — **설정 → 사용량 (Settings → Usage)** — 에서 확인합니다.
+Pro·Max 요금제에는 시간·기간별 한도가 있습니다. 사용 현황은 **두 가지 화면**으로 봅니다 — *한도 숫자*(설정)와 *누적 사용량*(Code 탭).
+
+#### ① 한도 숫자 — 설정 → 사용량 (Settings → Usage)
+
+**claude.ai 웹**과 **Claude Desktop** 모두 같은 화면에서 확인합니다.
 
 | 화면 항목 | 의미 |
 |-----------|------|
 | 현재 세션 (Current session) | 5시간 세션 한도 중 사용한 양과 남은 시간 |
 | 주간 한도 (Weekly usage limit reset) | Opus / 그 외 모델별 다음 주간 초기화 시점 |
+
+#### ② 누적 사용량 — Claude Desktop의 Code 탭 → 사용량 링
+
+Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우측 하단의 **사용량 링**(현재 모델 표시 옆)을 클릭하면 짧은 요약 화면이 먼저 펼쳐집니다.
+
+![사용량 링 클릭 시 보이는 플랜 사용량 요약](assets/images/claude-desktop-usage-03.png)
+
+여기서 화살표(→)를 눌러 들어가면 전체 사용량 화면이 열리고, **개요·모델** 두 탭에서 더 자세히 볼 수 있습니다.
+
+**개요 — 누적 사용량 한눈에 (세션·메시지·토큰·연속 일수·즐겨 사용한 모델)**
+
+![누적 사용량 개요](assets/images/claude-desktop-usage-01.png)
+
+**모델 — 일별·모델별 토큰 분포**
+
+![모델별 일별 사용량 막대그래프](assets/images/claude-desktop-usage-02.png)
+
+추론이 많이 필요한 작업과 단순 지시 이행은 같은 시간에도 토큰 차이가 큽니다. 모델별 비율(Opus·Sonnet·Haiku)을 보며 **작업 성격에 맞춰 모델을 골라**(→ [모델 비교](#claude-models)) 직접 차이를 체감해 보세요.
+
+*이미지는 Claude Desktop UI가 바뀌면 옛 화면일 수 있어요. 본 페이지가 캡처 갱신 책임 자리입니다.*
 
 !!! tip "Cowork은 채팅보다 한도 소비가 큽니다"
     [공식 안내](https://support.claude.com/ko/articles/11647753) — *"Cowork에서의 작업은 Claude와 채팅하는 것보다 사용량을 더 많이 소비합니다."* 멀티 스텝·도구 호출이 많기 때문입니다. 단순한 질문·정리는 chat, 본격 작업만 Cowork으로 분리하면 한도가 오래 갑니다.
@@ -171,6 +197,8 @@ Pro·Max 요금제에는 시간·기간별 한도가 있습니다. **claude.ai �
 
 !!! info "Claude Code 사용량 확인 (옵션)"
     터미널 세션 안에서 `/usage` 로 Pro·Max 플랜 한도 사용량을, `/extra-usage` 로 추가 사용량 관리를 확인합니다 — [Pro 또는 Max 플랜으로 Claude Code 사용하기](https://support.claude.com/ko/articles/11145838).
+
+> 공식 안내: [Claude Code Desktop — 사용량 확인하기](https://code.claude.com/docs/ko/desktop#check-usage)
 
 ---
 
