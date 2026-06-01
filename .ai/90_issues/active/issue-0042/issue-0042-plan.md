@@ -12,7 +12,7 @@
 
 ### Task 1: '모델 + 하네스' 멘탈모델 + 오해 해소 정립
 
-- [x] 완료 — 산출물: [`.ai/99_workspace/issue-0042-task1-model-harness.md`](../../../99_workspace/issue-0042-task1-model-harness.md)
+- [x] 완료 — 작업 파일 정리됨(결론은 `docs/basics.md` §에이전트 = 모델 + 하네스 + [summary](./issue-0042-summary.md)에 반영, 상세 도출 과정은 git 이력)
 - **목표**: `에이전트 = 모델 + 하네스`를 비개발자 톤으로 정립하고, 멀티 에이전트 자율성 오해를 푸는 메시지를 만든다.
 - **작업 내용**:
   1. 모델(틀릴 수 있고 매번 달라지는 *생각하는 부분*)과 하네스(*사람이 짜는 틀* = 지시·자료·단계·검토)를 한 줄 정의로 추출한다.
@@ -24,7 +24,7 @@
 
 ### Task 2: 하네스 범위를 "내가 세팅하는 것들"로 구체화
 
-- [x] 완료 — 산출물: [`.ai/99_workspace/issue-0042-task2-harness-scope.md`](../../../99_workspace/issue-0042-task2-harness-scope.md)
+- [x] 완료 — 작업 파일 정리됨(결론은 `docs/basics.md` §하네스는 마법이 아니라 "내가 세팅하는 것들" + [summary](./issue-0042-summary.md)에 반영, 상세는 git 이력)
 - **목표**: 하네스의 범위를 비개발자 기준으로 구체·작게 분류해 *마법 아님*이 드러나게 한다.
 - **작업 내용**:
   1. 하네스의 **출처를 셋으로** 가른다 — 회사가 만든 것(제품·모델) / 이미 있는 외부 서비스·사내 인프라(나는 연결만) / 내가 만드는·정하는 것(스킬·순서·검토). 범위 구체화의 초점은 *내가 하는 일*.
@@ -37,7 +37,7 @@
 
 ### Task 3: 이론 파트 구성·순서 재검토
 
-- [x] 완료 — 산출물: [`.ai/99_workspace/issue-0042-task3-placement.md`](../../../99_workspace/issue-0042-task3-placement.md)
+- [x] 완료 — 작업 파일 정리됨(결론은 모델+하네스 섹션 배치로 `docs/basics.md`에 반영 + [summary](./issue-0042-summary.md), 상세는 git 이력)
 - **목표**: Task 1·2 결과를 기준으로 이론 파트 3개 문서의 순서·구성을 진단하고 재배치를 제안한다.
 - **작업 내용**:
   1. `docs/index.md`·`docs/intro.md`·`docs/basics.md`의 현행 구성·순서를 진단한다.
