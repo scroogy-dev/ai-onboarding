@@ -8,7 +8,7 @@
 ## 생성형 AI 소개
 
 !!! note "용어 안내"
-    이 페이지에서 «챗봇», «에이전트»는 모두 **AI 챗봇**, **AI 에이전트**를 가리킵니다 — 표기를 짧게 쓰기 위함입니다.
+    이 페이지에서 «챗봇», «에이전트»는 모두 **AI 챗봇**, **AI 에이전트**를 가리킵니다. 표기를 짧게 쓰기 위함입니다.
 
 ### 대표 제품 — Claude · Gemini · ChatGPT { #products }
 
@@ -33,12 +33,10 @@
 | 회사      | 챗봇 (보통 아는 것) | 코딩 에이전트                    |
 |-----------|--------------------|----------------------------------|
 | Anthropic | Claude             | **Claude Code**                  |
-| Google    | Gemini             | **Antigravity** · **Gemini CLI** |
+| Google    | Gemini             | **Antigravity**                  |
 | OpenAI    | ChatGPT            | **Codex**                        |
 
 Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합니다. 본 교육 3단계 실습은 **Claude Cowork**로 진행하며, Claude Code는 비개발자에게 진입 장벽이 있어 보조 도구로만 안내합니다 (자세한 내용은 아래 [Claude 소개](#claude) 참조).
-
-참고로 Google은 코딩 에이전트를 두 갈래로 제공합니다 — **Antigravity**는 시각적 IDE·에이전트 매니저, **Gemini CLI**는 터미널·헤드리스 실행에 적합합니다 ([Google 공식 비교](https://cloud.google.com/blog/topics/developers-practitioners/choosing-antigravity-or-gemini-cli?hl=en)).
 
 ---
 
@@ -71,7 +69,7 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 
     매주 같은 작업을 매번 챗봇에 새로 시키면 **시간·품질 양쪽**이 흔들립니다. 한 번 맡길 수 있게 만들어 두면 같은 일을 **일관된 품질로 반복**할 수 있습니다.
 
-    본 교육은 챗봇과 에이전트 사이에 **2단계(프롬프트 재활용)** 를 다리로 두어, 챗봇 사용자에서 에이전트 활용자로 자연스럽게 옮겨가도록 설계되어 있습니다 — [3단계 모델](index.md#stage-model) 참조.
+    본 교육은 챗봇과 에이전트 사이에 **2단계(프롬프트 재활용)** 를 다리로 두어, 챗봇 사용자에서 에이전트 활용자로 자연스럽게 옮겨가도록 설계되어 있습니다. [3단계 모델](index.md#stage-model) 참조.
 
 ---
 
@@ -85,7 +83,7 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 | **Claude Cowork** | 데스크톱 환경의 범용 에이전트    | **3단계 본격 실습**                  |
 | **Claude Code**   | 터미널·IDE 코딩 특화 에이전트   | 3단계 보조 도구 (옵션 안내)          |
 
-> 세 제품 모두 **Claude Pro 이상 유료 요금제**가 필요하며, Cowork·Code 사용에는 **Claude Desktop 설치**가 전제됩니다 — [홈 — 준비사항](index.md#preparation) 참조.
+> 세 제품 모두 **Claude Pro 이상 유료 요금제**가 필요하며, Cowork·Code 사용에는 **Claude Desktop 설치**가 전제됩니다. [홈 — 준비사항](index.md#preparation) 참조.
 
 ---
 
@@ -118,9 +116,9 @@ Claude는 한 모델이 아니라 **세 라인업**으로 구성됩니다. claud
 | **Haiku**  | 가장 빠름 (가벼운 작업·반복)          | 짧은 답이면 충분한 단순 질문, 동일 패턴 반복                  |
 
 !!! tip "어느 모델을 쓸까?"
-    기준은 **추론이 얼마나 필요한가**입니다 — 본인도 잘 모르는 주제를 함께 풀어 가야 한다면 **Opus**, 검색·찾아바꾸기·요약처럼 지시 이행이 핵심이라면 **Sonnet**으로 충분합니다. 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로 옮기면 됩니다 (Anthropic도 [복잡한 작업이라면 Opus 시작을 권장](https://docs.claude.com/ko/docs/about-claude/models/overview)).
+    기준은 **추론이 얼마나 필요한가**입니다. 본인도 잘 모르는 주제를 함께 풀어 가야 한다면 **Opus**, 검색·찾아바꾸기·요약처럼 지시 이행이 핵심이라면 **Sonnet**으로 충분합니다. 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로 옮기면 됩니다 (Anthropic도 [복잡한 작업이라면 Opus 시작을 권장](https://docs.claude.com/ko/docs/about-claude/models/overview)).
 
-> 라인업(Opus·Sonnet·Haiku)은 안정적으로 유지되지만 버전 번호(예: Opus **4.7**, Sonnet **4.6**, Haiku **4.5**)는 자주 갱신됩니다 — 최신 사양은 [Anthropic 공식 모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview)에서 확인할 수 있습니다.
+> 라인업(Opus·Sonnet·Haiku)은 안정적으로 유지되지만 버전 번호(예: Opus **4.8**, Sonnet **4.6**, Haiku **4.5**)는 자주 갱신됩니다. 최신 사양은 [Anthropic 공식 모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview)에서 확인할 수 있습니다.
 
 ---
 
@@ -159,7 +157,7 @@ Claude는 한 모델이 아니라 **세 라인업**으로 구성됩니다. claud
 
 ### 사용량 확인 방법 { #claude-usage }
 
-Pro·Max 요금제에는 시간·기간별 한도가 있습니다. 사용 현황은 **두 가지 화면**으로 봅니다 — *한도 숫자*(설정)와 *누적 사용량*(Code 탭).
+Pro·Max 요금제에는 시간·기간별 한도가 있습니다. 사용 현황은 **두 가지 화면**으로 봅니다. *한도 숫자*(설정)와 *누적 사용량*(Code 탭)입니다.
 
 #### ① 한도 숫자 — 설정 → 사용량 (Settings → Usage)
 
@@ -174,17 +172,17 @@ Pro·Max 요금제에는 시간·기간별 한도가 있습니다. 사용 현황
 
 Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우측 하단의 **사용량 링**(현재 모델 표시 옆)을 클릭하면 짧은 요약 화면이 먼저 펼쳐집니다.
 
-![사용량 링 클릭 시 보이는 플랜 사용량 요약](assets/images/claude-desktop-usage-03.png)
+![사용량 링 클릭 시 보이는 플랜 사용량 요약](assets/images/claude-desktop-usage-01.png)
 
 여기서 화살표(→)를 눌러 들어가면 전체 사용량 화면이 열리고, **개요·모델** 두 탭에서 더 자세히 볼 수 있습니다.
 
 **개요 — 누적 사용량 한눈에 (세션·메시지·토큰·연속 일수·즐겨 사용한 모델)**
 
-![누적 사용량 개요](assets/images/claude-desktop-usage-01.png)
+![누적 사용량 개요](assets/images/claude-desktop-usage-02.png)
 
 **모델 — 일별·모델별 토큰 분포**
 
-![모델별 일별 사용량 막대그래프](assets/images/claude-desktop-usage-02.png)
+![모델별 일별 사용량 막대그래프](assets/images/claude-desktop-usage-03.png)
 
 추론이 많이 필요한 작업과 단순 지시 이행은 같은 시간에도 토큰 차이가 큽니다. 모델별 비율(Opus·Sonnet·Haiku)을 보며 **작업 성격에 맞춰 모델을 골라**(→ [모델 비교](#claude-models)) 직접 차이를 체감해 보세요.
 
@@ -196,7 +194,7 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 **한도에 도달했다면** — 5시간 세션 초기화를 기다리거나, 요금제를 상향하거나, [추가 사용량 구매](https://support.claude.com/ko/articles/12429409)로 이어서 사용합니다. claude.ai · Cowork · Claude Code는 **하나의 한도 풀**을 함께 씁니다.
 
 !!! info "Claude Code 사용량 확인 (옵션)"
-    터미널 세션 안에서 `/usage` 로 Pro·Max 플랜 한도 사용량을, `/extra-usage` 로 추가 사용량 관리를 확인합니다 — [Pro 또는 Max 플랜으로 Claude Code 사용하기](https://support.claude.com/ko/articles/11145838).
+    터미널 세션 안에서 `/usage` 로 Pro·Max 플랜 한도 사용량을, `/extra-usage` 로 추가 사용량 관리를 확인합니다 ([Pro 또는 Max 플랜으로 Claude Code 사용하기](https://support.claude.com/ko/articles/11145838)).
 
 > 공식 안내: [Claude Code Desktop — 사용량 확인하기](https://code.claude.com/docs/ko/desktop#check-usage)
 
