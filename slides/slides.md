@@ -64,7 +64,7 @@ layout: default
 <div class="flex items-center mb-4">
 <div class="font-mono text-2xl opacity-50 w-14">05</div>
 <div class="font-bold w-44">What</div>
-<div class="opacity-80">얻어갈 것 — 결과물 1개</div>
+<div class="opacity-80">얻어갈 것 — 스스로 만드는 능력</div>
 </div>
 
 <div class="flex items-center mb-4">
