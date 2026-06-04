@@ -1,11 +1,69 @@
-/* the-unnamed 베이스 위에 한국어 sans 폰트 강제 (ADR-0004) */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+/* Claude 스타일 슬라이드 — Issue #44
+   토큰 SSoT: .ai/90_issues/active/issue-0044/issue-0044-spec.md
+   base: Slidev default(라이트) + Claude 토큰 (ADR-0004 다크 the-unnamed 대체)
+   강조 박스(bg-*-50 등)는 콘텐츠 강조라 손대지 않고 캔버스만 Claude 톤으로 칠함 */
 
-.slidev-layout {
-  font-family: 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --slidev-theme-primary: #D97757;
 }
 
-/* blockquote가 직전 엘리먼트(표·본문·코드블록 등)와 너무 붙지 않도록 상단 여백 보강 */
+/* 캔버스: 아이보리 배경 + 잉크 본문 + 한국어 sans 강제 */
+.slidev-layout {
+  background-color: #FAF9F5;
+  color: #3D3A34;
+  font-family: 'Inter', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+}
+
+/* 제목 잉크 톤 */
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4 {
+  color: #1F1E1D;
+}
+
+/* 링크·강조 = 코랄 */
+.slidev-layout a {
+  color: #BD5D3A;
+  text-decoration-color: rgba(217, 119, 87, 0.4);
+}
+
+/* 코드 폰트 통일 */
+.slidev-layout code,
+.slidev-layout pre {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+/* 인라인 코드(터라코타) */
+.slidev-layout :not(pre) > code {
+  color: #B85C38;
+  background-color: rgba(217, 119, 87, 0.08);
+  padding: 0.1em 0.35em;
+  border-radius: 0.3em;
+}
+
+/* 코드 블록 컨테이너 — Claude 톤 라이트 카드 */
+.slidev-layout pre.shiki,
+.slidev-layout pre {
+  background-color: #F0EEE6 !important;
+  border: 1px solid #E3E0D6;
+  border-radius: 0.5rem;
+}
+
+/* blockquote가 직전 엘리먼트(표·본문·코드블록 등)와 너무 붙지 않도록 + 코랄 강조선 */
 .slidev-layout blockquote {
   margin-top: 1.75em;
+  border-left-color: #D97757;
+}
+
+/* end 레이아웃(마지막 「감사합니다」)도 Claude 톤으로.
+   Slidev 코어 기본은 bg-black/text-white라 캔버스 오버라이드보다 우선순위가 높아 별도 처리. */
+.slidev-layout.end {
+  background-color: #FAF9F5 !important;
+  color: #1F1E1D !important;
+}
+.slidev-layout.end h1 {
+  color: #1F1E1D;
 }

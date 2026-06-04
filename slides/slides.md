@@ -1,5 +1,5 @@
 ---
-theme: the-unnamed
+theme: default
 layout: cover
 title: AI 활용 온보딩
 info: |
@@ -7,6 +7,7 @@ info: |
   콘텐츠 SSoT는 docs/ 디렉토리이며, 본 슬라이드는 발표용 파생 표면입니다 (ADR-0002).
 class: text-center
 highlighter: shiki
+colorSchema: light
 drawings:
   persist: false
 transition: slide-left

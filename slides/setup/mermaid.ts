@@ -1,10 +1,8 @@
 import { defineMermaidSetup } from '@slidev/types'
 
-// the-unnamed 베이스 mermaid 셋업이 forest(라이트) 강제 → 다크 슬라이드 위에서 가독성 저하.
-// ADR-0004 결정에 따라 다크 슬라이드와 정합되도록 mermaid 테마를 'dark'로 override.
-//
-// ADR-0002 변형 금지 자산은 메시지·구조 중심 보호이며, 색·여백 등 매체 적응은
-// 발표 표면이 자체 톤(다크)에 맞춰 조정 가능 (ADR-0004 Decision 3).
+// Claude 라이트 톤 슬라이드(Issue #44)에 맞춰 mermaid를 라이트(neutral)로.
+// ADR-0004의 dark override를 대체 — slides가 the-unnamed(다크)에서
+// default(라이트) + Claude 토큰으로 전환되면서 mermaid도 라이트 톤으로 정합.
 export default defineMermaidSetup(() => ({
-  theme: 'dark',
+  theme: 'neutral',
 }))

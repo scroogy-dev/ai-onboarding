@@ -1,0 +1,82 @@
+/* Claude 스타일 테마 — Issue #44
+   토큰 SSoT: .ai/90_issues/active/issue-0044/issue-0044-spec.md
+   액센트 코랄 #D97757 · docs 라이트/다크 토글 유지 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* 폰트: Inter(라틴, theme.font.text) + Noto Sans KR(한국어 fallback) */
+:root {
+  --md-text-font: "Inter", "Noto Sans KR";
+  --md-code-font: "JetBrains Mono";
+}
+
+/* 액센트(코랄) — palette primary/accent = custom 매핑 */
+[data-md-color-primary=custom] {
+  --md-primary-fg-color: #D97757;
+  --md-primary-fg-color--light: #E0875F;
+  --md-primary-fg-color--dark: #BD5D3A;
+  --md-primary-bg-color: #FAF9F5;
+  --md-primary-bg-color--light: rgba(250, 249, 245, 0.7);
+}
+[data-md-color-accent=custom] {
+  --md-accent-fg-color: #BD5D3A;
+  --md-accent-fg-color--transparent: rgba(217, 119, 87, 0.1);
+  --md-accent-bg-color: #FAF9F5;
+  --md-accent-bg-color--light: rgba(250, 249, 245, 0.7);
+}
+
+/* 라이트 스킴 — 아이보리 배경 + 잉크 텍스트 */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #FAF9F5;
+  --md-default-fg-color: rgba(31, 30, 29, 0.87);
+  --md-default-fg-color--light: rgba(31, 30, 29, 0.60);
+  --md-default-fg-color--lighter: rgba(31, 30, 29, 0.32);
+  --md-default-fg-color--lightest: rgba(31, 30, 29, 0.07);
+  --md-typeset-color: #3D3A34;
+  --md-typeset-a-color: #BD5D3A;
+  --md-code-bg-color: #F0EEE6;
+  --md-code-fg-color: #3D3A34;
+  --md-footer-bg-color: #F0EEE6;
+  --md-footer-bg-color--dark: #E3E0D6;
+  --md-footer-fg-color: rgba(31, 30, 29, 0.87);
+}
+
+/* 다크 스킴(slate) — Claude 웜 다크 */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #262624;
+  --md-default-fg-color: rgba(236, 234, 225, 0.90);
+  --md-default-fg-color--light: rgba(236, 234, 225, 0.62);
+  --md-default-fg-color--lighter: rgba(236, 234, 225, 0.32);
+  --md-default-fg-color--lightest: rgba(236, 234, 225, 0.10);
+  --md-typeset-color: #C9C6BC;
+  --md-typeset-a-color: #E0875F;
+  --md-code-bg-color: #1E1E1B;
+  --md-code-fg-color: #C9C6BC;
+  --md-footer-bg-color: #1F1E1D;
+  --md-footer-fg-color: #C9C6BC;
+}
+
+/* 제목 잉크 톤 강조 */
+[data-md-color-scheme="default"] .md-typeset h1,
+[data-md-color-scheme="default"] .md-typeset h2,
+[data-md-color-scheme="default"] .md-typeset h3 {
+  color: #1F1E1D;
+}
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3 {
+  color: #ECEAE1;
+}
+
+/* 헤더·탭은 코랄 바 대신 배경색으로 — Claude의 가벼운 톤 */
+.md-header,
+.md-tabs {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.05), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
+}
+
+/* 인라인 코드 강조(터라코타) */
+[data-md-color-scheme="default"] .md-typeset code {
+  color: #B85C38;
+}
