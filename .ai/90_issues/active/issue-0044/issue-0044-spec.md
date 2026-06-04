@@ -92,4 +92,5 @@ docs(MkDocs Material)와 slides(Slidev) 양쪽의 UI 테마를 **Claude 스타�
 | 문서 | 역할 |
 |------|------|
 | [ADR-0002](../../../50_adr/active/adr-0002-publishing-structure-docs-ssot-slides-derivative.md) | 발행 구조 — docs(SSoT)/slides(파생). 두 표면을 모두 손대므로 경계 확인 |
-| [ADR-0004](../../../50_adr/active/adr-0004-slides-theme-the-unnamed.md) | 현재 슬라이드 테마(`the-unnamed`) 결정 — 이 이슈가 변경/대체할 대상 |
+| [ADR-0004](../../../50_adr/superseded/adr-0004-slides-theme-the-unnamed.md) | (Superseded) 이전 슬라이드 테마(`the-unnamed` 다크) — 이 이슈가 대체 |
+| [ADR-0009](../../../50_adr/active/adr-0009-unified-ui-theme-claude-style.md) | 본 이슈의 결정 — docs·slides 통합 Claude 스타일(라이트) |

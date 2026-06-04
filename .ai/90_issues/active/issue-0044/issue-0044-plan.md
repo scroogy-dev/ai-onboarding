@@ -23,7 +23,7 @@
 
 ### Task 2: docs 테마 적용
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 결정된 스타일을 docs(MkDocs Material)에 반영한다.
 - **작업 내용**:
   1. `mkdocs.yml` palette/font/features 및 `docs/assets/` css 수정
@@ -35,7 +35,7 @@
 
 ### Task 3: slides 테마 적용
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 결정된 스타일을 slides(Slidev)에 반영한다.
 - **작업 내용**:
   1. `slides/`의 Slidev 테마·스타일 교체 또는 커스터마이징
@@ -47,10 +47,10 @@
 
 ### Task 4: ADR 갱신
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 테마 변경 결정을 의사결정 기록에 반영한다.
 - **작업 내용**:
-  1. ADR-0004(슬라이드 테마) 갱신 또는 supersede 처리
-  2. 필요 시 docs/slides 통합 테마 결정에 대한 신규 ADR 작성
-  3. `50_adr/index.md` 목록 갱신
+  1. ADR-0004(슬라이드 테마)를 `superseded/`로 이관 + supersede 표기
+  2. docs·slides 통합 테마 결정을 신규 ADR-0009로 작성
+  3. `50_adr/index.md` 목록 갱신(Active에 ADR-0009, Superseded 섹션에 ADR-0004)
 - **완료 기준**: 영향받는 ADR과 index가 최신 상태로 정합됨

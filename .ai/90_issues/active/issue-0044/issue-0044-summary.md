@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ Task 2·3 초안 적용 완료 — **사용자 시각 점검 대기** (docs `mkdocs serve` / slides `npm run dev`). 점검·피드백 후 조정 또는 Task 4(ADR 갱신) 진행
+> ✅ 모든 작업이 완료되었습니다.
 
 ---
 
@@ -53,6 +53,10 @@
 
 ### Task 4: ADR 갱신
 
-- **결과**:
+- **결과**: 완료
 - **수행 내용 요약**:
-- **특이 사항**:
+  - 신규 [ADR-0009](../../../50_adr/active/adr-0009-unified-ui-theme-claude-style.md) 작성: docs·slides 통합 Claude 스타일(라이트) 결정 — 배경·토큰·표면별 결정·대안(GitHub 등)·결과 명문화.
+  - ADR-0004를 `active/` → `superseded/`로 `git mv`, 상태 `Superseded`로 변경 + 상단 대체 안내 + 내부 ADR-0002 링크 경로 보정.
+  - `50_adr/index.md`: Active 표에서 ADR-0004 제거 + ADR-0009 추가, `## Superseded ADR` 섹션 신설.
+  - `issue-0044-spec.md` 연관 문서 링크 갱신(ADR-0004→superseded, ADR-0009 추가).
+- **특이 사항**: ADR-0004를 참조하는 `archive/` 이슈 문서들은 역사 스냅샷이라 미수정(당시 `active/` 경로 링크는 보존). ADR-0002의 변형 금지 자산 해석은 ADR-0009가 승계.
