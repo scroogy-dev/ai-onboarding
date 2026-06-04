@@ -8,17 +8,20 @@ theme:
   custom_dir: overrides
   palette:
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: 다크 모드로 전환
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: 라이트 모드로 전환
+  font:
+    text: Inter
+    code: JetBrains Mono
   features:
     - navigation.instant
     - navigation.tracking
@@ -49,6 +52,7 @@ markdown_extensions:
       permalink: true
 
 extra_css:
+  - assets/css/claude-theme.css
   - assets/css/slide-link.css
 
 nav:

@@ -1,5 +1,5 @@
 ---
-theme: the-unnamed
+theme: default
 layout: cover
 title: AI 활용 온보딩
 info: |
@@ -7,6 +7,7 @@ info: |
   콘텐츠 SSoT는 docs/ 디렉토리이며, 본 슬라이드는 발표용 파생 표면입니다 (ADR-0002).
 class: text-center
 highlighter: shiki
+colorSchema: light
 drawings:
   persist: false
 transition: slide-left
@@ -149,7 +150,7 @@ layout: section
 
 # 학생 트랙 범위 안내
 
-<div class="border-l-4 border-orange-400 pl-6 py-4 my-8 bg-orange-50/40 dark:bg-orange-900/15 rounded-r">
+<div class="border-l-4 border-orange-400 pl-6 py-4 my-8 bg-orange-50 dark:bg-orange-900/15 rounded-r">
 
 ⚠️ **개발 진로를 희망하는 학생**은 본 교육의 **대상이 아닙니다.**
 
@@ -161,7 +162,7 @@ layout: section
 
 # 본 교육이 강화하는 역량 — 개인
 
-<div class="border-l-4 border-blue-400 pl-6 py-4 my-8 bg-blue-50/40 dark:bg-blue-900/15 rounded-r">
+<div class="border-l-4 border-blue-400 pl-6 py-4 my-8 bg-blue-50 dark:bg-blue-900/15 rounded-r">
 
 AI 활용으로 강화할 수 있는 역량은 **세 갈래**입니다.
 
@@ -180,8 +181,8 @@ AI 활용으로 강화할 수 있는 역량은 **세 갈래**입니다.
 <div grid="~ cols-2 gap-4" class="mt-8">
 
 <div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-500/40 dark:bg-green-600/40 text-white px-4 py-2 font-bold text-center">✅ 요구합니다</div>
-<div class="bg-green-50/40 dark:bg-green-900/15 px-4 py-4">
+<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">✅ 요구합니다</div>
+<div class="bg-green-50 dark:bg-green-900/15 px-4 py-4">
 
 - 기본 컴퓨터 조작 (파일 업·다운로드, 웹 브라우저)
 - 기본적인 웹 검색
@@ -191,8 +192,8 @@ AI 활용으로 강화할 수 있는 역량은 **세 갈래**입니다.
 </div>
 
 <div class="rounded-lg overflow-hidden border border-red-200 dark:border-red-800">
-<div class="bg-red-500/40 dark:bg-red-600/40 text-white px-4 py-2 font-bold text-center">❌ 요구하지 않습니다</div>
-<div class="bg-red-50/40 dark:bg-red-900/15 px-4 py-4">
+<div class="bg-red-100 text-red-800 px-4 py-2 font-bold text-center">❌ 요구하지 않습니다</div>
+<div class="bg-red-50 dark:bg-red-900/15 px-4 py-4">
 
 - 프로그래밍·코딩 지식
 - 프롬프트·컨텍스트·하네스 엔지니어링 이론
@@ -207,7 +208,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 갈래**입니다.
 
 # 준비사항 — Claude Pro 필수
 
-<div class="border-l-4 border-red-400 pl-6 py-4 my-6 bg-red-50/40 dark:bg-red-900/15 rounded-r">
+<div class="border-l-4 border-red-400 pl-6 py-4 my-6 bg-red-50 dark:bg-red-900/15 rounded-r">
 
 ⚠️ 본 교육의 **모든 실습은 Claude에서 진행**되며,
 Claude Cowork · Code 사용을 위해
@@ -224,7 +225,7 @@ Claude Cowork · Code 사용을 위해
 
 <div grid="~ cols-2 gap-4" class="mt-6">
 
-<div class="border-l-4 border-blue-400 pl-4 py-3 bg-blue-50/40 dark:bg-blue-900/15 rounded-r">
+<div class="border-l-4 border-blue-400 pl-4 py-3 bg-blue-50 dark:bg-blue-900/15 rounded-r">
 
 **참가자가 준비**
 
@@ -236,7 +237,7 @@ Claude Cowork · Code 사용을 위해
 
 </div>
 
-<div class="border-l-4 border-gray-400 pl-4 py-3 bg-gray-50/40 dark:bg-gray-700/20 rounded-r">
+<div class="border-l-4 border-gray-400 pl-4 py-3 bg-gray-50 dark:bg-gray-700/20 rounded-r">
 
 **강사가 준비** <span class="opacity-60 text-sm">(참가자는 신경 쓰지 않아도 됩니다)</span>
 
@@ -352,8 +353,8 @@ N-1 ③ 능력의 확장 — 해결책 카피. 본 교육 본질 메시지(ADR-0
 <div grid="~ cols-3 gap-4" class="mt-8">
 
 <div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
-<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-4 py-2 font-bold text-center">기능 제공</div>
-<div class="bg-blue-50/40 dark:bg-blue-900/15 px-4 py-4">
+<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center">기능 제공</div>
+<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-4">
 
 할 수 없거나 어려웠던 일을 **가능하게**
 
@@ -365,8 +366,8 @@ N-1 ③ 능력의 확장 — 해결책 카피. 본 교육 본질 메시지(ADR-0
 </div>
 
 <div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-500/40 dark:bg-green-600/40 text-white px-4 py-2 font-bold text-center">시간 절약</div>
-<div class="bg-green-50/40 dark:bg-green-900/15 px-4 py-4">
+<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">시간 절약</div>
+<div class="bg-green-50 dark:bg-green-900/15 px-4 py-4">
 
 사람이 하면 오래 걸리던 일을 **짧은 시간에**
 
@@ -378,8 +379,8 @@ N-1 ③ 능력의 확장 — 해결책 카피. 본 교육 본질 메시지(ADR-0
 </div>
 
 <div class="rounded-lg overflow-hidden border border-orange-200 dark:border-orange-800">
-<div class="bg-orange-500/40 dark:bg-orange-600/40 text-white px-4 py-2 font-bold text-center">비용 감소</div>
-<div class="bg-orange-50/40 dark:bg-orange-900/15 px-4 py-4">
+<div class="bg-orange-100 text-orange-800 px-4 py-2 font-bold text-center">비용 감소</div>
+<div class="bg-orange-50 dark:bg-orange-900/15 px-4 py-4">
 
 사람·장소·이동 등에 드는 **비용 절감**
 
@@ -425,8 +426,8 @@ docs S5 축 재분류(개념 vs 도구)에 맞춰 이어지는 「도구와 제�
 <div grid="~ cols-2 gap-4" class="mt-8">
 
 <div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800">
-<div class="bg-cyan-500/40 dark:bg-cyan-600/40 text-white px-4 py-2 font-bold text-center">챗봇 — 물어보기</div>
-<div class="bg-cyan-50/40 dark:bg-cyan-900/15 px-4 py-4">
+<div class="bg-cyan-100 text-cyan-800 px-4 py-2 font-bold text-center">챗봇 — 물어보기</div>
+<div class="bg-cyan-50 dark:bg-cyan-900/15 px-4 py-4">
 
 사람이 묻고 AI가 답합니다
 
@@ -438,8 +439,8 @@ docs S5 축 재분류(개념 vs 도구)에 맞춰 이어지는 「도구와 제�
 </div>
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
-<div class="bg-emerald-500/40 dark:bg-emerald-600/40 text-white px-4 py-2 font-bold text-center">에이전트 — 맡기기</div>
-<div class="bg-emerald-50/40 dark:bg-emerald-900/15 px-4 py-4">
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">에이전트 — 맡기기</div>
+<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4">
 
 AI가 직접 파일을 열고 작업
 
@@ -471,8 +472,8 @@ AI가 직접 파일을 열고 작업
 <div grid="~ cols-2 gap-4" class="mt-5">
 
 <div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
-<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-4 py-2 font-bold text-center">모델 — 생각하는 머리</div>
-<div class="bg-blue-50/40 dark:bg-blue-900/15 px-4 py-4 text-sm">
+<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center">모델 — 생각하는 머리</div>
+<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-4 text-sm">
 
 똑똑하지만 **틀릴 수 있고**, 매번 답이 조금씩 다를 수 있는 부분.
 
@@ -482,8 +483,8 @@ AI가 직접 파일을 열고 작업
 </div>
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
-<div class="bg-emerald-500/40 dark:bg-emerald-600/40 text-white px-4 py-2 font-bold text-center">하네스 — 사람이 짜 둔 틀</div>
-<div class="bg-emerald-50/40 dark:bg-emerald-900/15 px-4 py-4 text-sm">
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">하네스 — 사람이 짜 둔 틀</div>
+<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4 text-sm">
 
 어떤 도구·자료를 쓸지, 어떤 순서로, 결과를 어디서 확인할지.
 
@@ -494,7 +495,7 @@ AI가 직접 파일을 열고 작업
 
 </div>
 
-<div class="mt-5 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-3 bg-amber-50/30 dark:bg-amber-900/15 text-sm">
+<div class="mt-5 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-3 bg-amber-50 dark:bg-amber-900/15 text-sm">
 <strong>⚠ 흔한 오해</strong> — "에이전트끼리 알아서 회의하면 좋은 결론이 나온다" → <strong>아닙니다.</strong> 틀은 사람이 설계했고, 모델은 틀릴 수 있으며, 좋은 결론은 <strong>틀을 짠 사람 + 검토한 사람</strong>이 만듭니다.
 </div>
 
@@ -512,7 +513,7 @@ viewport 점검 필요 — 2카드 + 오해 박스가 한 화면에 들어가는
 
 # 결과물의 성격 — 1회성 · 스킬 · 애플리케이션
 
-<div class="mt-2 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-2 bg-amber-50/30 dark:bg-amber-900/15 text-sm">
+<div class="mt-2 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-2 bg-amber-50 dark:bg-amber-900/15 text-sm">
 <strong>⚠ 생성형 AI는 기본적으로 비결정적입니다</strong> — 같은 지시에도 매번 답이 조금씩 다를 수 있습니다.
 </div>
 
@@ -549,8 +550,8 @@ viewport 점검 필요 — 5축×3종 표가 가로폭·세로폭에 다 들어�
 <div class="mt-6 grid grid-cols-2 gap-4 max-w-4xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700">
-<div class="bg-slate-500/40 dark:bg-slate-600/40 text-white px-3 py-2 font-bold text-center text-sm">마크다운</div>
-<div class="bg-slate-50/40 dark:bg-slate-900/15 px-3 py-3 text-xs">
+<div class="bg-slate-100 text-slate-800 px-3 py-2 font-bold text-center text-sm">마크다운</div>
+<div class="bg-slate-50 dark:bg-slate-900/15 px-3 py-3 text-xs">
 
 텍스트만으로 서식을 표현하는 가벼운 문서 형식. <code>.md</code>, AI 출력 포맷의 단골.
 
@@ -562,8 +563,8 @@ viewport 점검 필요 — 5축×3종 표가 가로폭·세로폭에 다 들어�
 </div>
 
 <div class="rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700">
-<div class="bg-slate-500/40 dark:bg-slate-600/40 text-white px-3 py-2 font-bold text-center text-sm">외부 컨텍스트 — MCP·RAG</div>
-<div class="bg-slate-50/40 dark:bg-slate-900/15 px-3 py-3 text-xs">
+<div class="bg-slate-100 text-slate-800 px-3 py-2 font-bold text-center text-sm">외부 컨텍스트 — MCP·RAG</div>
+<div class="bg-slate-50 dark:bg-slate-900/15 px-3 py-3 text-xs">
 
 내 자료를 AI에 붙여 답하게 하는 **일반 개념**.
 
@@ -726,8 +727,8 @@ docs/intro.md 「모델 비교 — Opus · Sonnet · Haiku」(#claude-models)의
 <div grid="~ cols-2 gap-4" class="mt-6">
 
 <div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
-<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-4 py-2 font-bold text-center text-sm">① 한도 숫자 — 설정 → 사용량</div>
-<div class="bg-blue-50/40 dark:bg-blue-900/15 px-4 py-3 text-sm">
+<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center text-sm">① 한도 숫자 — 설정 → 사용량</div>
+<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-sm">
 
 claude.ai 웹·Claude Desktop 공통.
 
@@ -738,8 +739,8 @@ claude.ai 웹·Claude Desktop 공통.
 </div>
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
-<div class="bg-emerald-500/40 dark:bg-emerald-600/40 text-white px-4 py-2 font-bold text-center text-sm">② 누적 사용량 — Code 탭 → 사용량 링</div>
-<div class="bg-emerald-50/40 dark:bg-emerald-900/15 px-4 py-3 text-sm">
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center text-sm">② 누적 사용량 — Code 탭 → 사용량 링</div>
+<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-3 text-sm">
 
 Claude Desktop의 **Code 탭 → 사용량 링**(모델 표시 옆).
 
@@ -751,7 +752,7 @@ Claude Desktop의 **Code 탭 → 사용량 링**(모델 표시 옆).
 
 </div>
 
-<div class="border-l-4 border-emerald-400 pl-6 py-2 my-4 bg-emerald-50/40 dark:bg-emerald-900/15 rounded-r text-sm">
+<div class="border-l-4 border-emerald-400 pl-6 py-2 my-4 bg-emerald-50 dark:bg-emerald-900/15 rounded-r text-sm">
 
 🛠️ 추론이 많이 필요한 작업과 단순 지시 이행은 사용량 차이가 큽니다 — 작업 성격에 맞춰 모델을 골라 보세요. claude.ai · Cowork · Code는 **하나의 한도 풀**을 함께 씁니다.
 
@@ -812,8 +813,8 @@ class: text-center
 <div grid="~ cols-2 gap-4" class="mt-8">
 
 <div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800">
-<div class="bg-cyan-500/40 dark:bg-cyan-600/40 text-white px-4 py-2 font-bold text-center">① 직접 지시 (= 매번 시키기)</div>
-<div class="bg-cyan-50/40 dark:bg-cyan-900/15 px-4 py-4">
+<div class="bg-cyan-100 text-cyan-800 px-4 py-2 font-bold text-center">① 직접 지시 (= 매번 시키기)</div>
+<div class="bg-cyan-50 dark:bg-cyan-900/15 px-4 py-4">
 
 AI에게 그때그때 작업을 지시
 
@@ -823,8 +824,8 @@ AI에게 그때그때 작업을 지시
 </div>
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
-<div class="bg-emerald-500/40 dark:bg-emerald-600/40 text-white px-4 py-2 font-bold text-center">② 소프트웨어로 만들기 (본 교육이 강조하는 쪽)</div>
-<div class="bg-emerald-50/40 dark:bg-emerald-900/15 px-4 py-4">
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">② 소프트웨어로 만들기 (본 교육이 강조하는 쪽)</div>
+<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4">
 
 AI로 작은 소프트웨어(Skill·에이전트 활용)를 만들어 활용
 
@@ -853,19 +854,19 @@ ADR-0005 본질 메시지 못박는 자리 — "도구화"의 근거를 결정 �
 
 <div class="mt-4 space-y-3 max-w-5xl mx-auto">
 
-<div class="rounded-lg border border-blue-200 dark:border-blue-800 px-5 py-3 bg-blue-50/30 dark:bg-blue-900/15">
+<div class="rounded-lg border border-blue-200 dark:border-blue-800 px-5 py-3 bg-blue-50 dark:bg-blue-900/15">
 <span class="font-mono text-sm opacity-60 mr-3">[1]</span>
 <span class="font-bold">출발은 누구나 같다</span>
 <div class="text-sm opacity-80 mt-1">"AI에게 매번 새로 시키기"도 좋은 출발점 — 처음부터 본인의 챗봇이나 자동화 도구를 만드는 사람은 없습니다.</div>
 </div>
 
-<div class="rounded-lg border border-blue-200 dark:border-blue-800 px-5 py-3 bg-blue-50/30 dark:bg-blue-900/15">
+<div class="rounded-lg border border-blue-200 dark:border-blue-800 px-5 py-3 bg-blue-50 dark:bg-blue-900/15">
 <span class="font-mono text-sm opacity-60 mr-3">[2]</span>
 <span class="font-bold">한 번으로 끝나지 않는 일들도 많다</span>
 <div class="text-sm opacity-80 mt-1">매주 보고서, 매번 회의록, 매학기 학습 정리 — <strong>본인이 매일·매주 하는 일을 떠올려 보세요.</strong></div>
 </div>
 
-<div class="rounded-lg border border-orange-200 dark:border-orange-800 px-5 py-3 bg-orange-50/30 dark:bg-orange-900/15">
+<div class="rounded-lg border border-orange-200 dark:border-orange-800 px-5 py-3 bg-orange-50 dark:bg-orange-900/15">
 <span class="font-mono text-sm opacity-60 mr-3">[3]</span>
 <span class="font-bold">반복인데 매번 처음부터 시키면 비용이 누적된다</span>
 <div class="text-sm opacity-80 mt-1">
@@ -873,7 +874,7 @@ ADR-0005 본질 메시지 못박는 자리 — "도구화"의 근거를 결정 �
 </div>
 </div>
 
-<div class="rounded-lg border border-emerald-200 dark:border-emerald-800 px-5 py-3 bg-emerald-50/30 dark:bg-emerald-900/15">
+<div class="rounded-lg border border-emerald-200 dark:border-emerald-800 px-5 py-3 bg-emerald-50 dark:bg-emerald-900/15">
 <span class="font-mono text-sm opacity-60 mr-3">[4]</span>
 <span class="font-bold">한 번 만들고 100번 쓰는 게 합리적</span>
 <div class="text-sm opacity-80 mt-1">반복되는 일에는 <strong>본인 일에 맞는 작은 소프트웨어를 직접 만드는 것</strong>이 답입니다 — 비개발자도 자기 일에 필요한 소프트웨어를 만든다.</div>
@@ -976,8 +977,8 @@ table { font-size: 0.85em; }
 <div grid="~ cols-2 gap-4" class="mt-8">
 
 <div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
-<div class="bg-gray-500/40 dark:bg-gray-600/40 text-white px-4 py-2 font-bold text-center">1단계 — 매번 새로 묻기</div>
-<div class="bg-gray-50/40 dark:bg-gray-700/20 px-4 py-4">
+<div class="bg-gray-100 text-gray-800 px-4 py-2 font-bold text-center">1단계 — 매번 새로 묻기</div>
+<div class="bg-gray-50 dark:bg-gray-700/20 px-4 py-4">
 
 "고객 문의 이메일에 정중하고 친근한 톤으로, 짧게 답장해줘…"
 
@@ -987,8 +988,8 @@ table { font-size: 0.85em; }
 </div>
 
 <div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-500/40 dark:bg-green-600/40 text-white px-4 py-2 font-bold text-center">2단계 — Skill로 묶어 재사용</div>
-<div class="bg-green-50/40 dark:bg-green-900/15 px-4 py-4">
+<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">2단계 — Skill로 묶어 재사용</div>
+<div class="bg-green-50 dark:bg-green-900/15 px-4 py-4">
 
 "고객 답장" Skill을 1번 만들어두고
 **호출만으로 동일 톤 유지**
@@ -1091,8 +1092,8 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 <div grid="~ cols-2 gap-4" class="mt-8">
 
 <div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
-<div class="bg-gray-500/40 dark:bg-gray-600/40 text-white px-4 py-2 font-bold text-center">막연한 프롬프트</div>
-<div class="bg-gray-50/40 dark:bg-gray-700/20 px-4 py-4">
+<div class="bg-gray-100 text-gray-800 px-4 py-2 font-bold text-center">막연한 프롬프트</div>
+<div class="bg-gray-50 dark:bg-gray-700/20 px-4 py-4">
 
 "이 보고서 요약해줘"
 
@@ -1103,8 +1104,8 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 </div>
 
 <div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-500/40 dark:bg-green-600/40 text-white px-4 py-2 font-bold text-center">구조화된 프롬프트</div>
-<div class="bg-green-50/40 dark:bg-green-900/15 px-4 py-4">
+<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">구조화된 프롬프트</div>
+<div class="bg-green-50 dark:bg-green-900/15 px-4 py-4">
 
 "이 보고서를 3줄로 요약.
 1줄은 결론, 2~3줄은 근거.
@@ -1132,18 +1133,18 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 <div grid="~ cols-3 gap-3" class="mt-8 max-w-2xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800">
-<div class="bg-cyan-500/40 dark:bg-cyan-600/40 text-white px-3 py-2 font-bold text-center text-sm">① 계획·실행</div>
-<div class="bg-cyan-50/40 dark:bg-cyan-900/15 px-3 py-3 text-xs">계획만 받고 검토한 뒤 실행시키기</div>
+<div class="bg-cyan-100 text-cyan-800 px-3 py-2 font-bold text-center text-sm">① 계획·실행</div>
+<div class="bg-cyan-50 dark:bg-cyan-900/15 px-3 py-3 text-xs">계획만 받고 검토한 뒤 실행시키기</div>
 </div>
 
 <div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
-<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-3 py-2 font-bold text-center text-sm">② 데이터·뷰</div>
-<div class="bg-blue-50/40 dark:bg-blue-900/15 px-3 py-3 text-xs">내용(값)과 표현(틀)을 분리하기</div>
+<div class="bg-blue-100 text-blue-800 px-3 py-2 font-bold text-center text-sm">② 데이터·뷰</div>
+<div class="bg-blue-50 dark:bg-blue-900/15 px-3 py-3 text-xs">내용(값)과 표현(틀)을 분리하기</div>
 </div>
 
 <div class="rounded-lg overflow-hidden border border-purple-200 dark:border-purple-800">
-<div class="bg-purple-500/40 dark:bg-purple-600/40 text-white px-3 py-2 font-bold text-center text-sm">③ 결과물 검토</div>
-<div class="bg-purple-50/40 dark:bg-purple-900/15 px-3 py-3 text-xs">손으로 안 쓰지만 읽고 이해는 한다</div>
+<div class="bg-purple-100 text-purple-800 px-3 py-2 font-bold text-center text-sm">③ 결과물 검토</div>
+<div class="bg-purple-50 dark:bg-purple-900/15 px-3 py-3 text-xs">손으로 안 쓰지만 읽고 이해는 한다</div>
 </div>
 
 </div>
@@ -1151,13 +1152,13 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 <div grid="~ cols-2 gap-3" class="mt-3 max-w-md mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
-<div class="bg-teal-500/40 dark:bg-teal-600/40 text-white px-3 py-2 font-bold text-center text-sm">④ 컨텍스트</div>
-<div class="bg-teal-50/40 dark:bg-teal-900/15 px-3 py-3 text-xs">한 대화방을 무한히 끌고 가지 않기</div>
+<div class="bg-teal-100 text-teal-800 px-3 py-2 font-bold text-center text-sm">④ 컨텍스트</div>
+<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs">한 대화방을 무한히 끌고 가지 않기</div>
 </div>
 
 <div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800">
-<div class="bg-amber-500/40 dark:bg-amber-600/40 text-white px-3 py-2 font-bold text-center text-sm">⑤ 페르소나</div>
-<div class="bg-amber-50/40 dark:bg-amber-900/15 px-3 py-3 text-xs">조건부 권장 — 본 강의의 현재 입장</div>
+<div class="bg-amber-100 text-amber-800 px-3 py-2 font-bold text-center text-sm">⑤ 페르소나</div>
+<div class="bg-amber-50 dark:bg-amber-900/15 px-3 py-3 text-xs">조건부 권장 — 본 강의의 현재 입장</div>
 </div>
 
 </div>
@@ -1227,15 +1228,15 @@ docs/index.md `### AI 활용 메타 원칙` ① 박스 압축 — ADR-0002 단�
 <div class="mt-6 grid grid-cols-2 gap-4 max-w-4xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
-<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-4 py-2 font-bold text-center">데이터</div>
-<div class="bg-blue-50/40 dark:bg-blue-900/15 px-4 py-3 text-sm text-center">
+<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center">데이터</div>
+<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-sm text-center">
 값 그 자체 — 숫자·텍스트·표·엑셀
 </div>
 </div>
 
 <div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
-<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-4 py-2 font-bold text-center">뷰</div>
-<div class="bg-blue-50/40 dark:bg-blue-900/15 px-4 py-3 text-sm text-center">
+<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center">뷰</div>
+<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-sm text-center">
 보여주는 틀 — 마크다운·HTML·슬라이드
 </div>
 </div>
@@ -1308,8 +1309,8 @@ labs/README.md·docs/labs.md의 "결과물은 반드시 읽고 이해합니다" 
 <div class="mt-5 grid grid-cols-2 gap-4 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
-<div class="bg-teal-500/40 dark:bg-teal-600/40 text-white px-4 py-2 font-bold">새 대화를 여는 신호</div>
-<div class="bg-teal-50/40 dark:bg-teal-900/15 px-4 py-3 text-sm">
+<div class="bg-teal-100 text-teal-800 px-4 py-2 font-bold">새 대화를 여는 신호</div>
+<div class="bg-teal-50 dark:bg-teal-900/15 px-4 py-3 text-sm">
 
 - 주제가 바뀔 때
 - 계획 단계가 끝나고 실행 단계로 (메타 원칙 ①)
@@ -1320,8 +1321,8 @@ labs/README.md·docs/labs.md의 "결과물은 반드시 읽고 이해합니다" 
 </div>
 
 <div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
-<div class="bg-teal-500/40 dark:bg-teal-600/40 text-white px-4 py-2 font-bold">새 대화를 시작하는 방법</div>
-<div class="bg-teal-50/40 dark:bg-teal-900/15 px-4 py-3 text-sm">
+<div class="bg-teal-100 text-teal-800 px-4 py-2 font-bold">새 대화를 시작하는 방법</div>
+<div class="bg-teal-50 dark:bg-teal-900/15 px-4 py-3 text-sm">
 
 - **Claude.ai 챗봇·Cowork** — 사이드바 **새 대화** 버튼
 - **Claude Code** — `/clear` 명령
@@ -1356,8 +1357,8 @@ docs/index.md `### AI 활용 메타 원칙` ④ 박스 압축 — ADR-0002 단�
 <div class="mt-6 grid grid-cols-2 gap-4 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
-<div class="bg-emerald-500/40 dark:bg-emerald-600/40 text-white px-4 py-2 font-bold text-center">톤·형식 지정 — 권장 ✓</div>
-<div class="bg-emerald-50/40 dark:bg-emerald-900/15 px-4 py-3 text-sm">
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">톤·형식 지정 — 권장 ✓</div>
+<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-3 text-sm">
 
 예: <em>"공식 문서 톤으로 설명해줘"</em>, <em>"초등학생도 이해할 수 있게 풀어줘"</em>
 
@@ -1367,8 +1368,8 @@ docs/index.md `### AI 활용 메타 원칙` ④ 박스 압축 — ADR-0002 단�
 </div>
 
 <div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800">
-<div class="bg-amber-500/40 dark:bg-amber-600/40 text-white px-4 py-2 font-bold text-center">전문성 부여 — 보수적 ⚠</div>
-<div class="bg-amber-50/40 dark:bg-amber-900/15 px-4 py-3 text-sm">
+<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center">전문성 부여 — 보수적 ⚠</div>
+<div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-3 text-sm">
 
 예: <em>"너는 20년 경력 변호사야, 이 계약서 검토해"</em>
 
@@ -1456,7 +1457,7 @@ docs/labs.md → labs/ SSoT의 단방향 파생(ADR-0002).
 | **[step03](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step03-voca-quiz)** | 영어 단어 출제기 | 1·2 | 사진 입력·출처 충실성·외부 도구 연결 |
 | **[step04](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step04-wrong-answer-note)** | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 · 검수 자리 · 데이터/뷰 분리 |
 
-<div class="border-l-4 border-emerald-400 pl-6 py-3 my-4 bg-emerald-50/40 dark:bg-emerald-900/15 rounded-r">
+<div class="border-l-4 border-emerald-400 pl-6 py-3 my-4 bg-emerald-50 dark:bg-emerald-900/15 rounded-r">
 
 🛠️ **진행 원칙 — 프롬프트로만 진행합니다.** 파일·코드·템플릿을 에디터로 직접 고치지 않고, AI에게 프롬프트로 요청합니다.
 
@@ -1483,8 +1484,8 @@ docs/labs.md의 시리즈 구성 표 슬라이드 압축 — ADR-0002 단방향 
 <div grid="~ cols-2 gap-3" class="mt-6">
 
 <div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
-<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-4 py-2 font-bold">step01 — 날씨 (입문)</div>
-<div class="bg-blue-50/40 dark:bg-blue-900/15 px-4 py-3 text-sm">
+<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold">step01 — 날씨 (입문)</div>
+<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-sm">
 
 자유응답 → 정형 응답 Skill → HTML 리포트.
 
@@ -1494,8 +1495,8 @@ docs/labs.md의 시리즈 구성 표 슬라이드 압축 — ADR-0002 단방향 
 </div>
 
 <div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800">
-<div class="bg-cyan-500/40 dark:bg-cyan-600/40 text-white px-4 py-2 font-bold">step02 — 파일 분류</div>
-<div class="bg-cyan-50/40 dark:bg-cyan-900/15 px-4 py-3 text-sm">
+<div class="bg-cyan-100 text-cyan-800 px-4 py-2 font-bold">step02 — 파일 분류</div>
+<div class="bg-cyan-50 dark:bg-cyan-900/15 px-4 py-3 text-sm">
 
 옵션(`excel`/`image`)을 받는 Skill로 같은 작업을 분기.
 
@@ -1505,8 +1506,8 @@ docs/labs.md의 시리즈 구성 표 슬라이드 압축 — ADR-0002 단방향 
 </div>
 
 <div class="rounded-lg overflow-hidden border border-purple-200 dark:border-purple-800">
-<div class="bg-purple-500/40 dark:bg-purple-600/40 text-white px-4 py-2 font-bold">step03 — 영어 단어 출제기</div>
-<div class="bg-purple-50/40 dark:bg-purple-900/15 px-4 py-3 text-sm">
+<div class="bg-purple-100 text-purple-800 px-4 py-2 font-bold">step03 — 영어 단어 출제기</div>
+<div class="bg-purple-50 dark:bg-purple-900/15 px-4 py-3 text-sm">
 
 단어장 사진 + 옵션을 받는 출제 Skill.
 
@@ -1516,8 +1517,8 @@ docs/labs.md의 시리즈 구성 표 슬라이드 압축 — ADR-0002 단방향 
 </div>
 
 <div class="rounded-lg overflow-hidden border border-orange-200 dark:border-orange-800">
-<div class="bg-orange-500/40 dark:bg-orange-600/40 text-white px-4 py-2 font-bold">step04 — 자녀 오답노트 (종합)</div>
-<div class="bg-orange-50/40 dark:bg-orange-900/15 px-4 py-3 text-sm">
+<div class="bg-orange-100 text-orange-800 px-4 py-2 font-bold">step04 — 자녀 오답노트 (종합)</div>
+<div class="bg-orange-50 dark:bg-orange-900/15 px-4 py-3 text-sm">
 
 채점지 사진 → 인식 엑셀 → **검수** → 자녀용 마크다운·인쇄용 HTML.
 
@@ -1557,7 +1558,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 # 공통 원칙 — 트랙 무관 동일
 
-<div class="border-l-4 border-red-400 pl-6 py-4 my-8 bg-red-50/40 dark:bg-red-900/15 rounded-r">
+<div class="border-l-4 border-red-400 pl-6 py-4 my-8 bg-red-50 dark:bg-red-900/15 rounded-r">
 
 ⚠️ **AI에 입력하는 모든 내용은 "누군가 볼 수 있다"고 가정하세요.**
 
@@ -1587,7 +1588,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 <div grid="~ cols-2 gap-4" class="mt-6">
 
-<div class="border-l-4 border-blue-400 pl-4 py-3 bg-blue-50/40 dark:bg-blue-900/15 rounded-r">
+<div class="border-l-4 border-blue-400 pl-4 py-3 bg-blue-50 dark:bg-blue-900/15 rounded-r">
 
 **AI 결과물 검증**
 
@@ -1597,7 +1598,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 </div>
 
-<div class="border-l-4 border-red-400 pl-4 py-3 bg-red-50/40 dark:bg-red-900/15 rounded-r">
+<div class="border-l-4 border-red-400 pl-4 py-3 bg-red-50 dark:bg-red-900/15 rounded-r">
 
 **문제 발생 시**
 
@@ -1620,7 +1621,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 - **데이터 격리** — 우리 회사 데이터는 다른 회사와 분리되어 처리
 - **접근 통제** — 회사 계정으로만 접근, 사용 이력 관리
 
-<div class="border-l-4 border-orange-400 pl-6 py-4 my-6 bg-orange-50/40 dark:bg-orange-900/15 rounded-r">
+<div class="border-l-4 border-orange-400 pl-6 py-4 my-6 bg-orange-50 dark:bg-orange-900/15 rounded-r">
 
 위 세 가지 보호 장치는 "입력한 내용이 처리되는 방식"에 대한 것이며,
 **"무엇을 입력해도 안전하다"는 뜻이 아닙니다.**
@@ -1635,13 +1636,13 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 2. **개인정보 포함 데이터는 가리거나 빼고 입력** — 전문 용어로 **"비식별 처리"**
 3. **결과물 외부 공유 주의** — 사내 정보 포함 여부 검토 후 공유
 
-<div class="border-l-4 border-orange-400 pl-6 py-2 my-3 bg-orange-50/40 dark:bg-orange-900/15 rounded-r text-sm">
+<div class="border-l-4 border-orange-400 pl-6 py-2 my-3 bg-orange-50 dark:bg-orange-900/15 rounded-r text-sm">
 
 회사 계약은 <strong>데이터가 처리되는 방식</strong>만 보호합니다 — <strong>입력하는 정보의 책임은 여전히 본인에게</strong> 있습니다.
 
 </div>
 
-<div class="border-l-4 border-blue-400 pl-6 py-3 my-3 bg-blue-50/40 dark:bg-blue-900/15 rounded-r">
+<div class="border-l-4 border-blue-400 pl-6 py-3 my-3 bg-blue-50 dark:bg-blue-900/15 rounded-r">
 
 **비식별 처리 예시**
 
@@ -1662,7 +1663,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 - 대화 내용이 **서버에 저장**될 수 있음
 - 보안 수준이 **유료·기업용보다 낮을 수** 있음
 
-<div class="border-l-4 border-orange-400 pl-6 py-4 my-6 bg-orange-50/40 dark:bg-orange-900/15 rounded-r">
+<div class="border-l-4 border-orange-400 pl-6 py-4 my-6 bg-orange-50 dark:bg-orange-900/15 rounded-r">
 
 본 교육 실습은 **Claude Pro(유료)** 를 사용하지만,
 평소 쓰는 다른 무료 AI에도 **같은 원칙이 적용**됩니다.
@@ -1675,7 +1676,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 <div grid="~ cols-2 gap-4" class="mt-6">
 
-<div class="border-l-4 border-red-400 pl-4 py-3 bg-red-50/40 dark:bg-red-900/15 rounded-r">
+<div class="border-l-4 border-red-400 pl-4 py-3 bg-red-50 dark:bg-red-900/15 rounded-r">
 
 **1. 내 개인정보 X**
 
@@ -1684,7 +1685,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 </div>
 
-<div class="border-l-4 border-red-400 pl-4 py-3 bg-red-50/40 dark:bg-red-900/15 rounded-r">
+<div class="border-l-4 border-red-400 pl-4 py-3 bg-red-50 dark:bg-red-900/15 rounded-r">
 
 **2. 타인 정보 X**
 
@@ -1693,7 +1694,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 </div>
 
-<div class="border-l-4 border-red-400 pl-4 py-3 bg-red-50/40 dark:bg-red-900/15 rounded-r">
+<div class="border-l-4 border-red-400 pl-4 py-3 bg-red-50 dark:bg-red-900/15 rounded-r">
 
 **3. 사진 속 개인정보 확인**
 
@@ -1701,7 +1702,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 </div>
 
-<div class="border-l-4 border-red-400 pl-4 py-3 bg-red-50/40 dark:bg-red-900/15 rounded-r">
+<div class="border-l-4 border-red-400 pl-4 py-3 bg-red-50 dark:bg-red-900/15 rounded-r">
 
 **4. 서비스 약관 확인**
 
