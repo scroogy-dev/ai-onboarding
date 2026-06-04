@@ -80,3 +80,47 @@
 [data-md-color-scheme="default"] .md-typeset code {
   color: #B85C38;
 }
+
+/* admonition Claude 웜뮤트 톤 (Issue #44 — 의미·구분 유지, 채도만 낮춤)
+   쿨/네온 5종만 재조정. warning/success/failure/quote는 의미색 유지.
+   border-color(박스선), title 배경(색@10%), ::before(아이콘 색)만 덮어씀 — 아이콘 모양(mask)은 Material 기본 유지. */
+
+/* info → 더스티 블루 */
+.md-typeset .admonition.info,
+.md-typeset details.info { border-color: #6E8CA0; }
+.md-typeset .info > .admonition-title,
+.md-typeset .info > summary { background-color: #6e8ca01a; }
+.md-typeset .info > .admonition-title::before,
+.md-typeset .info > summary::before { background-color: #6E8CA0; }
+
+/* tip → 세이지 그린 */
+.md-typeset .admonition.tip,
+.md-typeset details.tip { border-color: #7E9B6B; }
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary { background-color: #7e9b6b1a; }
+.md-typeset .tip > .admonition-title::before,
+.md-typeset .tip > summary::before { background-color: #7E9B6B; }
+
+/* note → 웜 토프 */
+.md-typeset .admonition.note,
+.md-typeset details.note { border-color: #A98C72; }
+.md-typeset .note > .admonition-title,
+.md-typeset .note > summary { background-color: #a98c721a; }
+.md-typeset .note > .admonition-title::before,
+.md-typeset .note > summary::before { background-color: #A98C72; }
+
+/* abstract → 뮤트 슬레이트 */
+.md-typeset .admonition.abstract,
+.md-typeset details.abstract { border-color: #84909E; }
+.md-typeset .abstract > .admonition-title,
+.md-typeset .abstract > summary { background-color: #84909e1a; }
+.md-typeset .abstract > .admonition-title::before,
+.md-typeset .abstract > summary::before { background-color: #84909E; }
+
+/* example → 더스티 플럼 */
+.md-typeset .admonition.example,
+.md-typeset details.example { border-color: #9B7BA0; }
+.md-typeset .example > .admonition-title,
+.md-typeset .example > summary { background-color: #9b7ba01a; }
+.md-typeset .example > .admonition-title::before,
+.md-typeset .example > summary::before { background-color: #9B7BA0; }
