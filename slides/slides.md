@@ -35,41 +35,47 @@ layout: default
 
 # 오늘의 흐름
 
-<div class="text-xl mt-12 max-w-3xl mx-auto">
+<div class="text-xl mt-8 max-w-3xl mx-auto">
 
-<div class="flex items-center mb-5">
+<div class="flex items-center mb-4">
 <div class="font-mono text-2xl opacity-50 w-14">01</div>
-<div class="font-bold w-24">Who</div>
+<div class="font-bold w-44">Who</div>
 <div class="opacity-80">누구를 위한 교육인가</div>
 </div>
 
-<div class="flex items-center mb-5">
+<div class="flex items-center mb-4">
 <div class="font-mono text-2xl opacity-50 w-14">02</div>
-<div class="font-bold w-24">Why</div>
+<div class="font-bold w-44">Why</div>
 <div class="opacity-80">왜 AI 활용을 배워야 하나</div>
 </div>
 
-<div class="flex items-center mb-5">
+<div class="flex items-center mb-4">
 <div class="font-mono text-2xl opacity-50 w-14">03</div>
-<div class="font-bold w-24">도입</div>
-<div class="opacity-80">생성형 AI 시장과 본 교육의 도구</div>
+<div class="font-bold w-44">기본 용어와 범위</div>
+<div class="opacity-80">챗봇·에이전트, 모델+하네스</div>
 </div>
 
-<div class="flex items-center mb-5">
+<div class="flex items-center mb-4">
 <div class="font-mono text-2xl opacity-50 w-14">04</div>
-<div class="font-bold w-24">What</div>
+<div class="font-bold w-44">도구와 제품</div>
+<div class="opacity-80">생성형 AI 지형과 Claude</div>
+</div>
+
+<div class="flex items-center mb-4">
+<div class="font-mono text-2xl opacity-50 w-14">05</div>
+<div class="font-bold w-44">What</div>
 <div class="opacity-80">얻어갈 것 — 결과물 1개</div>
 </div>
 
-<div class="flex items-center mb-5">
-<div class="font-mono text-2xl opacity-50 w-14">05</div>
-<div class="font-bold w-24">How</div>
+<div class="flex items-center mb-4">
+<div class="font-mono text-2xl opacity-50 w-14">06</div>
+<div class="font-bold w-44">How</div>
 <div class="opacity-80">어떻게 진행되나</div>
 </div>
 
 <div class="flex items-center">
-<div class="font-mono text-2xl opacity-50 w-14">06</div>
-<div class="font-bold w-24">보안</div>
+<div class="font-mono text-2xl opacity-50 w-14">07</div>
+<div class="font-bold w-44">보안</div>
 <div class="opacity-80">안전한 AI 사용</div>
 </div>
 
@@ -77,7 +83,7 @@ layout: default
 
 <!--
 오늘 90분 교육의 전체 흐름을 한눈에 보여주는 신호등.
-docs SSoT의 H2 위계(Who → Why → What → How)와 정합 — 청중 정의 → 동기 부여 → 본 교육이 약속하는 것 → 진행 방식 순.
+docs SSoT 정합 — Who → Why → [기본 용어와 범위 → 도구와 제품] → What → How → 보안. 개념(basics)·도구(intro)는 docs에선 별도 참조 페이지지만, 선형 강의에선 What·How가 기대는 어휘라 Why와 What 사이에 먼저 깐다.
 복잡한 다이어그램보다 간결한 목차 한 장으로 정렬.
 -->
 
@@ -105,10 +111,10 @@ layout: section
 
 ---
 
-# 1단계 통과 — 공통 전제 + 자가 진단
+# 공통 전제 + 자가 진단
 
 두 트랙 모두 **챗봇 AI를 써 본 경험**이 있다고 가정합니다.
-아래 3문항에 모두 **Yes**로 답할 수 있다면 **1단계는 통과한 상태**입니다.
+아래 3문항에 모두 **Yes**로 답할 수 있다면 **본 교육에 참여하실 수 있습니다.**
 
 <div class="text-xl space-y-4 mt-10 max-w-3xl mx-auto">
 
@@ -189,7 +195,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 갈래**입니다.
 <div class="bg-red-50/40 dark:bg-red-900/15 px-4 py-4">
 
 - 프로그래밍·코딩 지식
-- 프롬프트 엔지니어링 이론
+- 프롬프트·컨텍스트·하네스 엔지니어링 이론
 - 특정 AI 도구의 고급 기능 숙련도
 
 </div>
@@ -241,31 +247,6 @@ Claude Cowork · Code 사용을 위해
 </div>
 
 </div>
-
-
----
-
-# Claude 사용량 확인하기
-
-**Claude Desktop → Code 탭 → 모델 선택기 옆 사용량 링**
-
-| 보이는 것 | 의미 |
-|---|---|
-| **요금제 사용량** | 모든 Claude Code 표면에서 공유되는 누적 사용량 |
-| **모델별 분포** | 일별·모델별(Opus·Sonnet·Haiku) 토큰 비율 |
-
-<div class="border-l-4 border-emerald-400 pl-6 py-3 my-4 bg-emerald-50/40 dark:bg-emerald-900/15 rounded-r">
-
-🛠️ 추론이 많이 필요한 작업과 단순 지시 이행은 사용량 차이가 큽니다 — 작업 성격에 맞춰 모델을 골라 보세요.
-
-</div>
-
-> 공식 안내: [Claude Code Desktop — 사용량 확인하기](https://code.claude.com/docs/ko/desktop#check-usage)
-
-<!--
-docs/index.md 「준비사항」의 사용량 안내 admonition 동기화 슬라이드 — ADR-0002 단방향 파생.
-이미지·화면 캡처는 사이트에 두고 본 슬라이드는 메시지 카드 1장으로 유지. UI 변경 시 docs/index.md가 캡처 갱신 책임 자리.
--->
 
 
 ---
@@ -403,7 +384,7 @@ N-1 ③ 능력의 확장 — 해결책 카피. 본 교육 본질 메시지(ADR-0
 사람·장소·이동 등에 드는 **비용 절감**
 
 <div class="text-sm opacity-75 mt-3">
-인터넷 뱅킹 (창구 인력 절감) · 키오스크 · 화상회의 (출장비 감소)
+인터넷 뱅킹 · 키오스크 · 화상회의
 </div>
 
 </div>
@@ -426,36 +407,14 @@ W1 보존 (위계 ↓) — 개인 동기(N-1) 다음의 거시 배경.
 layout: section
 ---
 
-# 도입
+# 기본 용어와 범위
 
-어떤 AI를, 어떻게?
-
-<!--
-Why → 도입 → What 흐름의 가운데 — 시장 좌표(어떤 AI가 있나) + 본 교육의 도구(Claude 3종)를 한 번에 짚는 자리.
-What 섹션의 「3단계 모델」·「묻기 vs 일 맡기기」 슬라이드와 호응 — 분류 어휘를 도입에서 깔고, What에서 단계 모델로 매핑한다.
--->
-
-
----
-
-# 챗봇은 다 아는데... 짝꿍 에이전트는?
-
-| 회사 | AI 챗봇 (보통 아는 것) | AI 코딩 에이전트 |
-|------|----------------------|------------------|
-| **Anthropic** | **Claude** | **Claude Code** |
-| Google | Gemini | Antigravity · Gemini CLI |
-| OpenAI | ChatGPT | Codex |
-
-같은 회사의 챗봇과 에이전트는 **짝으로 묶여** 있습니다 — 청중이 챗봇은 익숙해도, **본격 자동화 무대인 에이전트** 쪽은 잘 모르는 경우가 많습니다.
-
-> Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공 — 본 교육 3단계 본격 도구.
+챗봇·에이전트, 모델+하네스, 결과물의 성격
 
 <!--
-시장 좌표 정렬: 챗봇 3사는 다 아는 것, 짝꿍 에이전트가 새로 도입할 개념.
-표 헤더에서 「AI 챗봇」·「AI 코딩 에이전트」로 한 번 결합 안내 — 본문은 짧은 형태(챗봇/에이전트) 유지.
-본 교육이 Anthropic 짝을 쓰는 이유는 Cowork(비개발자용 에이전트)의 존재 — 이 한 줄로 다음 슬라이드(챗봇 vs 에이전트 분류) 진입.
-Google은 Antigravity(시각적 IDE·에이전트 매니저)와 Gemini CLI(터미널·헤드리스 자동화) 두 갈래를 동등 병기 — 발화로 한 줄 보충.
-1단계 챗봇 경험은 Claude/Gemini/ChatGPT 어느 것이든 비슷한 감각을 준다는 점은 발화로 보충.
+docs 「기본 용어와 범위」(basics.md) 정합 — 개념 블록 오프너. Why → [개념 → 도구] → What 흐름의 앞단.
+핵심 개념(챗봇/에이전트 · 모델+하네스 · 결과물의 성격 · 마크다운/외부컨텍스트)을 먼저 깐다.
+docs S5 축 재분류(개념 vs 도구)에 맞춰 이어지는 「도구와 제품」 섹션과 분리. 선형 강의 특성상 What·How가 기대는 어휘를 여기서 먼저 깔고, What 섹션의 「3단계 모델」이 이 어휘를 학습 단계로 매핑한다.
 -->
 
 
@@ -498,8 +457,172 @@ AI가 직접 파일을 열고 작업
 </div>
 
 <!--
-시장 분류 차원의 「챗봇 vs 에이전트」 — 같은 분류는 What 섹션에서 「1·2단계 vs 3단계 묻기 vs 일 맡기기」로 단계 매핑되어 다시 등장.
-이 슬라이드는 어휘를 깔고 What에서 본 교육 단계로 적용하는 두 단 구성.
+시장 분류 차원의 「챗봇 vs 에이전트」 — 물어보기 vs 맡기기의 차이를 여기(개념 블록)서 한 번만 정의. 단계 매핑은 What 섹션 「3단계 모델」이 1·2·3단계로 풀어냄(중복 슬라이드 제거, docs S5 "한 집" 정합).
+이 슬라이드가 어휘(챗봇/에이전트)를 깔고, 구체 적용은 모델+하네스와 What 3단계로 이어짐.
+-->
+
+
+---
+
+# 에이전트 = 모델 + 하네스
+
+<div class="text-sm opacity-80 mt-2">앞의 「챗봇 vs 에이전트」에서 본 그 <strong>에이전트</strong>는 무엇으로 이뤄져 있을까요? 딱 두 부분입니다.</div>
+
+<div grid="~ cols-2 gap-4" class="mt-5">
+
+<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
+<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-4 py-2 font-bold text-center">모델 — 생각하는 머리</div>
+<div class="bg-blue-50/40 dark:bg-blue-900/15 px-4 py-4 text-sm">
+
+똑똑하지만 **틀릴 수 있고**, 매번 답이 조금씩 다를 수 있는 부분.
+
+만드는 회사는 여럿 (Anthropic·OpenAI·Google) — 실습은 Claude.
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
+<div class="bg-emerald-500/40 dark:bg-emerald-600/40 text-white px-4 py-2 font-bold text-center">하네스 — 사람이 짜 둔 틀</div>
+<div class="bg-emerald-50/40 dark:bg-emerald-900/15 px-4 py-4 text-sm">
+
+어떤 도구·자료를 쓸지, 어떤 순서로, 결과를 어디서 확인할지.
+
+**대부분 이미 있는 걸 고르고·잇고·정하는 일** — 내 몫은 얇습니다.
+
+</div>
+</div>
+
+</div>
+
+<div class="mt-5 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-3 bg-amber-50/30 dark:bg-amber-900/15 text-sm">
+<strong>⚠ 흔한 오해</strong> — "에이전트끼리 알아서 회의하면 좋은 결론이 나온다" → <strong>아닙니다.</strong> 틀은 사람이 설계했고, 모델은 틀릴 수 있으며, 좋은 결론은 <strong>틀을 짠 사람 + 검토한 사람</strong>이 만듭니다.
+</div>
+
+<!--
+이슈 #42 본체 — docs/basics.md 「에이전트 = 모델 + 하네스」 슬라이드 압축.
+핵심: 에이전트 자율성 오해 해소 — 좋은 결과는 창발이 아니라 「조립 + 사람 검토」.
+앞 「챗봇 vs 에이전트」(에이전트=맡기기)에서 이어짐 — 그 에이전트가 무엇으로 이뤄졌나.
+하네스 출처는 셋(회사 제품·모델 / 외부 서비스 연결 / 내 설정)이지만 슬라이드는 「사람이 짜 둔 틀」로 압축.
+멀티에이전트 긍정 사례(역할 분업 + 명시적 기준 + 사람 검토)는 발화로 보충 — 단일 에이전트로도 핵심 획득 가능.
+viewport 점검 필요 — 2카드 + 오해 박스가 한 화면에 들어가는지 사용자 확인.
+-->
+
+
+---
+
+# 결과물의 성격 — 1회성 · 스킬 · 애플리케이션
+
+<div class="mt-2 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-2 bg-amber-50/30 dark:bg-amber-900/15 text-sm">
+<strong>⚠ 생성형 AI는 기본적으로 비결정적입니다</strong> — 같은 지시에도 매번 답이 조금씩 다를 수 있습니다.
+</div>
+
+<div class="mt-3 text-xs">
+
+| | 1회성 프롬프트 | 에이전트 스킬 *(본 교육)* | 애플리케이션 *(소프트웨어)* |
+|---|---|---|---|
+| **무엇** | 챗봇에 그때그때 입력하는 한 번짜리 지시 | 자주 쓰는 프롬프트·절차를 재사용 자산으로 묶음 | 코드로 작성된 프로그램 |
+| **결정성** | 비결정 | 비결정 *(내부 LLM)* | 결정 |
+| **결과 일관성** | 매번 결과가 조금씩 다름 | 형식·접근 보장 *(값은 다를 수 있음)* | 동일 입력 → 동일 출력 |
+| **만드는 비용·누가** | 없음 — 누구나 즉시 | 낮음 — **비개발자도 직접** | 큼 — 설계·코드·테스트 필요 |
+| **언제 적합** | 일회성·탐색·맥락이 매번 다른 작업 | 반복되는 동일 패턴 작업 | 대규모·다수 사용자·결정적 신뢰성 |
+
+</div>
+
+<div class="mt-2 text-center text-xs opacity-90">
+<strong>에이전트 스킬</strong>은 두 끝점 사이 — 비개발자가 만들 수 있는 비용 + 반복 일관성 보장
+</div>
+
+<!--
+docs/basics.md 「결과물의 성격」(구 「AI 활용의 세 형태」) 슬라이드 압축 (이슈 #40) — ADR-0002 단방향 파생. 이름 개명은 「AI 활용 3단계」와의 echo 제거(이슈 #42).
+ADR-0005 §3 운용 변경 후속 — 본문 기본은 결과형 유지, 「비결정」 메커니즘 단어 명시는 이 슬라이드 1곳에 한정(단정 박스 + 표 「결정성」 행 두 자리).
+nav 위치(개념 블록): 「에이전트 = 모델 + 하네스」 직후, 「기본 용어와 범위」 카드 앞 — docs basics 개념 순서(챗봇/에이전트 → 모델+하네스 → 결과물의 성격) 정합. 「3단계」와 다른 컷임은 뒤따르는 3단계 슬라이드에서 back-ref.
+viewport 점검 필요 — 5축×3종 표가 가로폭·세로폭에 다 들어가는지 사용자 확인.
+-->
+
+
+---
+
+# 그 밖의 기본 용어 — 마크다운 · 외부 컨텍스트
+
+> 사이트·슬라이드에서 만나게 될 **두 용어**와, **본 강의가 다루지 않는 영역**을 한 번에 짚습니다.
+
+<div class="mt-6 grid grid-cols-2 gap-4 max-w-4xl mx-auto">
+
+<div class="rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700">
+<div class="bg-slate-500/40 dark:bg-slate-600/40 text-white px-3 py-2 font-bold text-center text-sm">마크다운</div>
+<div class="bg-slate-50/40 dark:bg-slate-900/15 px-3 py-3 text-xs">
+
+텍스트만으로 서식을 표현하는 가벼운 문서 형식. <code>.md</code>, AI 출력 포맷의 단골.
+
+<code>#&nbsp;제목</code> → 큰 제목, <code>**굵게**</code> → **굵게**.
+
+→ **문법 학습은 안 합니다.**
+
+</div>
+</div>
+
+<div class="rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700">
+<div class="bg-slate-500/40 dark:bg-slate-600/40 text-white px-3 py-2 font-bold text-center text-sm">외부 컨텍스트 — MCP·RAG</div>
+<div class="bg-slate-50/40 dark:bg-slate-900/15 px-3 py-3 text-xs">
+
+내 자료를 AI에 붙여 답하게 하는 **일반 개념**.
+
+**MCP** <span class="opacity-60">(Model Context Protocol)</span> — 어떻게 연결.<br/>
+**RAG** <span class="opacity-60">(Retrieval-Augmented Generation)</span> — 무엇을 하느냐.
+
+→ **설치·내부 구조 모두 범위 밖.**
+
+</div>
+</div>
+
+</div>
+
+<div class="mt-5 text-center text-sm opacity-80">
+사이트 페이지: <code>기본 용어와 범위</code> — 더 자세히 짚을 수 있습니다.
+</div>
+
+<!--
+docs/basics.md 「기본 용어와 범위」 페이지 1장 압축 — ADR-0002 단방향 파생.
+두 용어(마크다운 / 외부 컨텍스트)를 가로 2분할 카드로 한 슬라이드에 묶음. (바이브↔에이전틱은 docs와 함께 제거 — 비개발자 실익 낮음)
+메타 원칙 5장(②blue / ③purple / ④teal / ⑤emerald·amber)과는 색상(slate 회색조)·비중(작은 카드 2분할) 분리 — 「원칙」이 아닌 「용어 해소·범위 밖 안내」 결.
+청중 메시지: 「이 단어들이 본 강의에 나오면 멈추지 마세요. 다만 본격 학습·설치·내부 구조는 본 강의 밖입니다.」
+nav 위치(개념 블록 끝): 「결과물의 성격」 직후, 도구 블록(Claude 3종) 앞. docs는 개념(기본 용어와 범위) → 도구(도구와 제품) 순으로 정합.
+-->
+
+
+---
+layout: section
+---
+
+# 도구와 제품
+
+생성형 AI 지형과 Claude
+
+<!--
+docs 「도구와 제품」(intro.md) 정합 — 도구 블록 오프너. 개념 블록(기본 용어와 범위) 다음, docs S5 축 재분류(개념 vs 도구)에 맞춰 분리.
+구성: 시장 지형(제품 지형) → Claude 3종 → 기능비교 → 모델 → 사용량 확인 (docs intro 순서 정합).
+-->
+
+
+---
+
+# 챗봇은 다 아는데... 짝꿍 에이전트는?
+
+| 회사 | AI 챗봇 (보통 아는 것) | AI 코딩 에이전트 |
+|------|----------------------|------------------|
+| **Anthropic** | **Claude** | **Claude Code** |
+| Google | Gemini | Antigravity |
+| OpenAI | ChatGPT | Codex |
+
+같은 회사의 챗봇과 에이전트는 **짝으로 묶여** 있습니다 — 청중이 챗봇은 익숙해도, **본격 자동화 무대인 에이전트** 쪽은 잘 모르는 경우가 많습니다.
+
+> Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공 — 본 교육 3단계 본격 도구.
+
+<!--
+시장 좌표 정렬(도구 블록 오프너): 챗봇 3사는 다 아는 것, 짝꿍 에이전트가 새로 도입할 개념. 개념 블록에서 정의한 챗봇/에이전트를 실제 시장 제품으로 확장하는 자리.
+표 헤더에서 「AI 챗봇」·「AI 코딩 에이전트」로 한 번 결합 안내 — 본문은 짧은 형태(챗봇/에이전트) 유지.
+본 교육이 Anthropic 짝을 쓰는 이유는 Cowork(비개발자용 에이전트)의 존재 — 이 한 줄로 다음 슬라이드(본 교육의 도구 — Claude 3종)로 진입.
+1단계 챗봇 경험은 Claude/Gemini/ChatGPT 어느 것이든 비슷한 감각을 준다는 점은 발화로 보충.
 -->
 
 
@@ -523,39 +646,7 @@ table { font-size: 0.9em; }
 ADR-0001 정합 — Claude 단독·3단계 모델.
 docs/intro.md의 3종 비교표를 슬라이드 압축. 「무엇 / 단계」만 한 줄.
 Cowork이 3단계 본격 무대, Code는 진입 장벽이 있어 옵션 안내라는 점이 핵심.
-다음 슬라이드(모델 라인업)에서 같은 3종 안에서도 모델은 별도로 고른다는 점을 짚고, 그 다음 슬라이드(기능 비교)에서 「로컬 파일·터미널 접근」이 챗봇과 에이전트를 가르는 분기선임을 시각화한다.
--->
-
-
----
-
-# 모델은 어떤 걸 쓸까 — Opus · Sonnet · Haiku
-
-| 라인업 | 한 줄 포지션 | 어울리는 상황 |
-|--------|-------------|---------------|
-| **Opus** | 가장 똑똑함 (추론 강함) | 본인도 잘 모르는 주제 의논, 다단계 작업 |
-| **Sonnet** | 균형 — 일상 기본 | 검색·요약·찾아바꾸기 등 지시 이행 |
-| **Haiku** | 가장 빠름 | 짧은 답·반복 |
-
-> 기준은 **추론이 얼마나 필요한가** — 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로.
-
-<div class="text-sm opacity-80 mt-3">
-
-사용량·한도는 claude.ai·Desktop의 <strong>설정 → 사용량 (Settings → Usage)</strong> 에서 확인 — 자세한 안내는 docs.
-
-</div>
-
-<style>
-table { font-size: 0.85em; }
-</style>
-
-<!--
-docs/intro.md 「모델 비교 — Opus · Sonnet · Haiku」의 슬라이드 압축. 핵심 축은 「추론 vs 지시 이행」.
-- Opus: 본인도 잘 모르는 주제·다단계 — 추론이 핵심일 때.
-- Sonnet: 일상 기본값. 검색·요약·찾아바꾸기 같은 지시 이행 작업.
-- Haiku: 짧은 답·반복.
-사용량 안내는 한 줄 footer로만 — 자세한 화면·한도 초과 대응은 docs/intro.md#claude-usage로 위임 (인지 부하 절제).
-버전 번호(Opus 4.7 등)는 본문 생략 — 라인업 시그니처가 안정, 버전은 자주 갱신되므로 docs로 위임.
+다음 슬라이드(기능 비교)에서 「로컬 파일·터미널 접근」이 챗봇과 에이전트를 가르는 분기선임을 시각화하고, 이어 모델 라인업·사용량 확인으로 넘어간다 (docs intro 순서: 기능비교 → 모델 → 사용량 정합).
 -->
 
 
@@ -585,107 +676,95 @@ table th, table td { padding: 0.35em 0.5em; }
 </style>
 
 <!--
-docs/intro.md의 「기능 비교 — 한눈에」 표 슬라이드 옮김. 핵심 메시지는 「로컬 파일·터미널 접근 여부 = 챗봇과 에이전트의 분기선」.
+docs/intro.md의 「기능 비교 — 한눈에」(#claude-comparison) 표 슬라이드 옮김. 핵심 메시지는 「로컬 파일·터미널 접근 여부 = 챗봇과 에이전트의 분기선」.
 - claude.ai: 파일·터미널·외부 API 모두 ✗ → 1단계 챗봇 영역에 머묾.
 - Cowork: △ 표시는 모두 「3중 보호」 모델 — 연결 폴더만 / 격리 VM / 송신 정책 (자세한 내용은 docs/intro.md의 「Cowork의 보호 모델」 admonition 참조).
 - Code: ✓ 전체 = 개발자 환경 전체 권한 → 진입 장벽 있어 본 교육에서는 옵션 안내.
 Cowork의 「△」가 「제한」이 아닌 「제어된 안전 동작」임을 발화로 보충 — 비개발자가 가장 안전하게 에이전트를 쓸 수 있는 도구라는 메시지.
+nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞 — docs intro 순서(기능비교 → 모델 → 사용량) 정합.
 -->
 
 
 ---
 
-# 기본 용어와 범위
+# 모델은 어떤 걸 쓸까 — Opus · Sonnet · Haiku
 
-> 본격 내용 전에 — 사이트·슬라이드에서 만나게 될 **세 용어**와, **본 강의가 다루지 않는 영역**을 한 번에 짚습니다.
+| 라인업 | 한 줄 포지션 | 어울리는 상황 |
+|--------|-------------|---------------|
+| **Opus** | 가장 똑똑함 (추론 강함) | 본인도 잘 모르는 주제 의논, 다단계 작업 |
+| **Sonnet** | 균형 — 일상 기본 | 검색·요약·찾아바꾸기 등 지시 이행 |
+| **Haiku** | 가장 빠름 | 짧은 답·반복 |
 
-<div class="mt-5 grid grid-cols-3 gap-3 max-w-6xl mx-auto">
+> 기준은 **추론이 얼마나 필요한가** — 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로.
 
-<div class="rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700">
-<div class="bg-slate-500/40 dark:bg-slate-600/40 text-white px-3 py-2 font-bold text-center text-sm">마크다운</div>
-<div class="bg-slate-50/40 dark:bg-slate-900/15 px-3 py-3 text-xs">
+<div class="text-sm opacity-80 mt-3">
 
-텍스트만으로 서식을 표현하는 가벼운 문서 형식. <code>.md</code>, AI 출력 포맷의 단골.
-
-<code>#&nbsp;제목</code> → 큰 제목, <code>**굵게**</code> → **굵게**.
-
-→ **문법 학습은 안 합니다.**
-
-</div>
-</div>
-
-<div class="rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700">
-<div class="bg-slate-500/40 dark:bg-slate-600/40 text-white px-3 py-2 font-bold text-center text-sm">바이브 ↔ 에이전틱</div>
-<div class="bg-slate-50/40 dark:bg-slate-900/15 px-3 py-3 text-xs">
-
-**던지고 결과 그대로 vs 컨텍스트·자산 반복 활용.**
-
-- **바이브 코딩** — 느낌으로 빠르게.
-- **에이전틱 엔지니어링** — 컨텍스트·자산 의도적 설계.
-
-→ **에이전틱 자체는 요구 X.**
-
-</div>
-</div>
-
-<div class="rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700">
-<div class="bg-slate-500/40 dark:bg-slate-600/40 text-white px-3 py-2 font-bold text-center text-sm">외부 컨텍스트 — MCP·RAG</div>
-<div class="bg-slate-50/40 dark:bg-slate-900/15 px-3 py-3 text-xs">
-
-내 자료를 AI에 붙여 답하게 하는 **일반 개념**.
-
-**MCP** <span class="opacity-60">(Model Context Protocol)</span> — 어떻게 연결.<br/>
-**RAG** <span class="opacity-60">(Retrieval-Augmented Generation)</span> — 무엇을 하느냐.
-
-→ **설치·내부 구조 모두 범위 밖.**
-
-</div>
-</div>
+버전 번호(Opus 4.8·Sonnet 4.6·Haiku 4.5 등)는 자주 갱신 — 라인업만 기억하고 최신 사양은 docs. 사용량·한도 확인은 <strong>다음 슬라이드</strong>에서.
 
 </div>
 
-<div class="mt-5 text-center text-sm opacity-80">
-사이트 페이지: <code>기본 용어와 범위</code> — 더 자세히 짚을 수 있습니다.
-</div>
+<style>
+table { font-size: 0.85em; }
+</style>
 
 <!--
-docs/basics.md 「기본 용어와 범위」 페이지 1장 압축 — ADR-0002 단방향 파생.
-세 용어(마크다운 / 바이브↔에이전틱 / 외부 컨텍스트)를 가로 3분할 카드로 한 슬라이드에 묶음.
-메타 원칙 5장(②blue / ③purple / ④teal / ⑤emerald·amber)과는 색상(slate 회색조)·비중(작은 카드 3분할) 분리 — 「원칙」이 아닌 「용어 해소·범위 밖 안내」 결.
-청중 메시지: 「이 단어들이 본 강의에 나오면 멈추지 마세요. 다만 본격 학습·설치·내부 구조는 본 강의 밖입니다.」
-nav 위치: 「도입」 직후, 「What」 직전. docs nav 순서와 정합.
+docs/intro.md 「모델 비교 — Opus · Sonnet · Haiku」(#claude-models)의 슬라이드 압축. 핵심 축은 「추론 vs 지시 이행」.
+- Opus: 본인도 잘 모르는 주제·다단계 — 추론이 핵심일 때.
+- Sonnet: 일상 기본값. 검색·요약·찾아바꾸기 같은 지시 이행 작업.
+- Haiku: 짧은 답·반복.
+버전 번호(Opus 4.8 등)는 본문 생략 — 라인업 시그니처가 안정, 버전은 자주 갱신되므로 docs로 위임.
+사용량은 다음 슬라이드(사용량 확인)로 — docs intro가 모델 다음에 사용량을 두는 순서와 정합.
 -->
 
 
 ---
 
-# AI 활용의 세 형태
+# Claude 사용량 확인하기
 
-<div class="mt-2 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-2 bg-amber-50/30 dark:bg-amber-900/15 text-sm">
-<strong>⚠ 생성형 AI는 기본적으로 비결정적입니다</strong> — 같은 지시에도 매번 답이 조금씩 다를 수 있습니다.
+요금제 한도는 **두 화면**으로 봅니다 — *한도 숫자*(설정)와 *누적 사용량*(Code 탭).
+
+<div grid="~ cols-2 gap-4" class="mt-6">
+
+<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
+<div class="bg-blue-500/40 dark:bg-blue-600/40 text-white px-4 py-2 font-bold text-center text-sm">① 한도 숫자 — 설정 → 사용량</div>
+<div class="bg-blue-50/40 dark:bg-blue-900/15 px-4 py-3 text-sm">
+
+claude.ai 웹·Claude Desktop 공통.
+
+- **현재 세션** — 5시간 한도 중 사용량·남은 시간
+- **주간 한도** — Opus / 그 외 모델별 초기화 시점
+
+</div>
 </div>
 
-<div class="mt-3 text-xs">
+<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
+<div class="bg-emerald-500/40 dark:bg-emerald-600/40 text-white px-4 py-2 font-bold text-center text-sm">② 누적 사용량 — Code 탭 → 사용량 링</div>
+<div class="bg-emerald-50/40 dark:bg-emerald-900/15 px-4 py-3 text-sm">
 
-| | 1회성 프롬프트 | 에이전트 스킬 *(본 교육)* | 애플리케이션 *(소프트웨어)* |
-|---|---|---|---|
-| **무엇** | 챗봇에 그때그때 입력하는 한 번짜리 지시 | 자주 쓰는 프롬프트·절차를 재사용 자산으로 묶음 | 코드로 작성된 프로그램 |
-| **결정성** | 비결정 | 비결정 *(내부 LLM)* | 결정 |
-| **결과 일관성** | 매번 결과가 조금씩 다름 | 형식·접근 보장 *(값은 다를 수 있음)* | 동일 입력 → 동일 출력 |
-| **만드는 비용·누가** | 없음 — 누구나 즉시 | 낮음 — **비개발자도 직접** | 큼 — 개발자 코드 작성 |
-| **언제 적합** | 일회성·탐색·맥락이 매번 다른 작업 | 반복되는 동일 패턴 작업 | 대규모·다수 사용자·결정적 신뢰성 |
+Claude Desktop의 **Code 탭 → 사용량 링**(모델 표시 옆).
+
+- **개요** — 세션·메시지·토큰·연속 일수
+- **모델** — 일별·모델별(Opus·Sonnet·Haiku) 토큰 분포
+
+</div>
+</div>
 
 </div>
 
-<div class="mt-2 text-center text-xs opacity-90">
-<strong>에이전트 스킬</strong>은 두 끝점 사이 — 비개발자가 만들 수 있는 비용 + 반복 일관성 보장
+<div class="border-l-4 border-emerald-400 pl-6 py-2 my-4 bg-emerald-50/40 dark:bg-emerald-900/15 rounded-r text-sm">
+
+🛠️ 추론이 많이 필요한 작업과 단순 지시 이행은 사용량 차이가 큽니다 — 작업 성격에 맞춰 모델을 골라 보세요. claude.ai · Cowork · Code는 **하나의 한도 풀**을 함께 씁니다.
+
 </div>
+
+> 공식 안내: [Claude Code Desktop — 사용량 확인하기](https://code.claude.com/docs/ko/desktop#check-usage) · 화면 캡처는 `docs/intro.md#claude-usage`
 
 <!--
-docs/basics.md 첫 H2 「AI 활용의 세 형태」 슬라이드 압축 (이슈 #40) — ADR-0002 단방향 파생.
-ADR-0005 §3 운용 변경 후속 — 본문 기본은 결과형 유지, 「비결정」 메커니즘 단어 명시는 이 슬라이드 1곳에 한정(단정 박스 + 표 「결정성」 행 두 자리).
-nav 위치: 「기본 용어와 범위」 직후, What 직전 — docs nav와 정합.
-viewport 점검 필요 — 5축×3종 표가 가로폭·세로폭에 다 들어가는지 사용자 확인.
+docs/intro.md 「사용량 확인 방법」(#claude-usage) 슬라이드 압축 — ADR-0002 단방향 파생.
+두 화면(① 한도 숫자 = 설정→사용량 / ② 누적 사용량 = Code 탭→사용량 링)으로 docs 구조와 정합.
+이미지·화면 캡처는 사이트에 두고 본 슬라이드는 메시지 카드로 유지. UI 변경 시 docs/intro.md가 캡처 갱신 책임 자리.
+nav 위치(도구 블록 끝): 모델 라인업 직후 — docs intro가 기능비교 → 모델 → 사용량 순인 것과 정합. Who 「준비사항」에서 이리로 옮김(docs도 Who에선 intro로 링크만 둠).
+viewport 점검 필요 — 2카드 + 박스 + 인용구가 한 화면에 들어가는지 사용자 확인.
 -->
 
 
@@ -704,23 +783,23 @@ class: text-center
 
 <div class="text-2xl opacity-60 mb-8">교육 목표</div>
 
-# 1개라도 실제로<br/>반복해서 쓸 수 있는 것을<br/>만든다
+# 반복해서 쓸 수 있는 것을<br/>**스스로 만들 수 있게** 된다
 
 <div class="mt-12 text-xl opacity-90">
 
-이론 학습이 아닌, 교육 후에도 활용 가능한 **결과물 1개**
+이론 학습이 아닌, 교육 후에도 **스스로 반복 활용할 결과물을 만들 수 있는 능력**
 
 </div>
 
 <div class="mt-8 text-base opacity-75 max-w-2xl mx-auto">
 
-💡 출발점은 <strong>본인이 매주 반복하는 30분짜리 작업 1개</strong>가 좋습니다.
+💡 출발점은 <strong>본인이 매주 반복하는 30분 ~ 1시간짜리 작업 1개</strong>가 좋습니다.
 
 </div>
 
 <!--
 이 교육 전체가 약속하는 단 하나의 결과물.
-"많이 배우는 것"이 아니라 "1개를 끝까지 만드는 것"이 목표라는 점을 분명히 전달.
+"많이 배우는 것"이 아니라 "스스로 만들 수 있게 되는 것"이 목표 — 그 역량의 출발점이 1개를 끝까지 만드는 경험(docs 교육 목표 역량-중심 개정 정합).
 출발점 예시 한 줄(30분짜리 작업)로 "어떤 1개?"의 모호함을 손에 잡히는 단위로 구체화 (D-6).
 이 약속 하나에 모든 실습 설계가 정렬되어 있다.
 -->
@@ -864,8 +943,11 @@ flowchart LR
 
 참가자는 대체로 **1단계는 통과한 상태**로 참여하며, 본 교육은 **2·3단계**에 초점을 맞춥니다.
 
+<div class="text-sm opacity-70 mt-3">앞의 「결과물의 성격」(결정성·비용)과는 <strong>다른 컷</strong> — 이건 <em>내가 올라가는 학습 단계</em>입니다.</div>
+
 <!--
 ADR-0001의 핵심 모델 — 본 교육이 다루는 결과물의 단계.
+앞 「결과물의 성격」 슬라이드와 이름·형태가 닮아 혼동되기 쉬워, 한 줄로 "다른 컷"임을 명시(학습 단계 vs 결과물 성격). docs의 「3단계 ↔ 결과물의 성격」 다리와 정합.
 What 섹션에 위치한 이유: 학습자 분류가 아니라 "교육이 다루는 범위·산출물의 단계"이기 때문.
 다음 슬라이드(상세표)로 이어 단계별 차이를 풀어 설명.
 2→3단계로 갈수록 "AI에게 시키는 일의 자동화 폭"이 넓어진다는 점을 강조.
@@ -932,43 +1014,6 @@ table { font-size: 0.85em; }
 |------|--------------------|--------------------|
 | 임직원<br/>(비개발자) | 반복 보고서 자동 작성 템플릿,<br/>데이터 정리·변환 워크플로우 | 로컬 파일을 일괄 정리·변환하는 에이전트 |
 | 비개발자<br/>학생·일반인 | AI 오답노트, 자동 문제 출제기,<br/>엑셀 데이터 관리 템플릿 | 학습 자료를 로컬 폴더 단위로<br/>정리·요약하는 에이전트 |
-
----
-
-# 1·2단계 vs 3단계 — 묻기 vs 일 맡기기
-
-<div grid="~ cols-2 gap-4" class="mt-8">
-
-<div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
-<div class="bg-gray-500/40 dark:bg-gray-600/40 text-white px-4 py-2 font-bold text-center">1단계 — AI에게 묻기</div>
-<div class="bg-gray-50/40 dark:bg-gray-700/20 px-4 py-4">
-
-"다운로드 폴더에 쌓인 파일 정리하는 방법 알려줘"
-
-→ AI는 **방법만 알려주고**,
-실제 정리는 사용자가 직접
-
-</div>
-</div>
-
-<div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-500/40 dark:bg-green-600/40 text-white px-4 py-2 font-bold text-center">2·3단계 — AI에게 일 맡기기</div>
-<div class="bg-green-50/40 dark:bg-green-900/15 px-4 py-4">
-
-"다운로드 폴더의 PDF는 documents/, 이미지는 pictures/로 옮겨줘"
-
-→ AI가 **직접 파일을 옮기고** 결과만 보고
-
-</div>
-</div>
-
-</div>
-
-<!--
-1·2 → 3단계 차이의 핵심 — "AI가 일을 직접 수행한다"는 점.
-폴더 정리는 비개발자 청중이 본인 PC에서 매번 미루는 일이라 공감 진입이 쉬움.
--->
-
 
 ---
 layout: section
