@@ -29,7 +29,9 @@
   - `mkdocs.yml`: palette `indigo` → `custom`(라이트/다크 토글 유지), `font.text=Inter`·`font.code=JetBrains Mono` 추가, `extra_css`에 `claude-theme.css` 등록.
   - `docs/assets/css/claude-theme.css` 신규: 확정 토큰을 Material CSS 변수에 주입(라이트/다크 스킴별 배경·텍스트·코드·푸터, 코랄 액센트, Noto Sans KR @import).
   - `python3 -m mkdocs build --strict` 통과, 산출물에 CSS·custom 속성·폰트 로드 확인.
-- **특이 사항**: 헤더를 Material 기본 "코랄 바" 대신 **배경색(아이보리/다크) + 잉크 텍스트**로 처리(Claude의 가벼운 톤). 코랄 바를 원하면 되돌리기 쉬움 — 시각 점검 시 결정.
+- **특이 사항**:
+  - 헤더를 Material 기본 "코랄 바" 대신 **배경색(아이보리/다크) + 잉크 텍스트**로 처리(Claude의 가벼운 톤). 코랄 바를 원하면 되돌리기 쉬움.
+  - **admonition 색 검토(사용자 요청)**: 쿨/네온 5종(info/tip/note/abstract/example)을 Claude 웜뮤트 톤(더스티블루/세이지/토프/슬레이트/플럼)으로 재조정. warning/success/failure/quote는 의미색 유지. `claude-theme.css`에 border·title·아이콘 색만 덮어씀(아이콘 모양은 Material 기본). docs 빌드 `--strict` 통과.
 
 ---
 
@@ -42,7 +44,10 @@
   - `style.css` 전면 재작성: 아이보리 배경·잉크 텍스트·코랄 링크·터라코타 인라인 코드·라이트 코드카드·Inter/Noto Sans KR/JetBrains Mono. 강조 박스(`bg-*-50` 등)는 콘텐츠 강조라 미변경(라이트 변형 자동 적용).
   - `setup/mermaid.ts`: `dark` → `neutral`(라이트).
   - `slidev build` 통과(✓ 10.98s), 번들에 Claude 토큰·폰트 반영 확인, the-unnamed 잔존 없음.
-- **특이 사항**: default 테마는 Slidev 52에서 별도 패키지라 신규 설치 필요했음. the-unnamed의 프리미엄 코드블록(ADR-0004 채택 사유)은 포기 — Claude 라이트 톤 전환이 ADR-0004를 대체하므로 Task 4에서 명문화.
+- **특이 사항**:
+  - default 테마는 Slidev 52에서 별도 패키지라 신규 설치 필요했음. the-unnamed의 프리미엄 코드블록(ADR-0004 채택 사유)은 포기 — Claude 라이트 톤 전환이 ADR-0004를 대체하므로 Task 4에서 명문화.
+  - **박스/카드 색 정합 검토(사용자 요청)**: 다크→라이트 전환으로 `text-white` 헤더 바 34개가 아이보리 위에서 흐려지는 문제 발견. docs admonition과 동일 결로 `bg-{색}-500/40 text-white` → `bg-{색}-100 text-{색}-800`(옅은 틴트 + 같은색 진한 글씨) 일괄 변환.
+  - **카드 본문 투명도 보정(사용자 요청)**: 본문/박스 틴트가 `bg-{색}-50/40·/30`(40·30% 불투명)이라 아이보리 위에서 흐려 58건을 `bg-{색}-50` 풀 틴트로. 헤더(-100) > 본문(-50) 위계 유지. (이 투명도는 본래 다크 the-unnamed 톤에 맞춰 사용자가 설정했던 값.)
 
 ---
 
