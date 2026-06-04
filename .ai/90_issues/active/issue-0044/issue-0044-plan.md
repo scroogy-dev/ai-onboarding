@@ -11,7 +11,7 @@
 
 ### Task 1: 스타일 방향 결정 및 현황 조사
 
-- [ ] 완료
+- [x] 완료
 - **목표**: Claude 스타일 ↔ GitHub 스타일 중 적용 방향을 정하고, 현재 테마 구성 파일을 파악한다.
 - **작업 내용**:
   1. `mkdocs.yml`의 theme(palette·font·features), `overrides/`, `docs/assets/` css 현황 정리
