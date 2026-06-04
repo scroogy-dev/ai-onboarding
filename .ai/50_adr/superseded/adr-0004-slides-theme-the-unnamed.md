@@ -1,9 +1,12 @@
 # ADR-0004: 발표 슬라이드 테마 — `slidev-theme-the-unnamed` 채택 + 다크 mermaid 셋업
 
-- **상태**: Accepted
+> ⚠️ **이 결정은 [ADR-0009](../active/adr-0009-unified-ui-theme-claude-style.md)로 대체되었습니다 (2026-06-04).**
+> Issue #44에서 docs·slides를 Claude 스타일(라이트)로 통일하면서, 슬라이드 다크 `the-unnamed` 테마 → `@slidev/theme-default`(라이트) + Claude 토큰으로 전환했다. 이 문서는 당시 결정의 역사 기록으로 보존한다. (변형 금지 자산의 "메시지·구조 보호, 색·여백은 매체 적응" 해석은 ADR-0009가 승계)
+
+- **상태**: Superseded — [ADR-0009](../active/adr-0009-unified-ui-theme-claude-style.md)로 대체 (2026-06-04)
 - **결정일**: 2026-04-27
 - **연관 이슈**: [Issue #13](https://github.com/scroogy-dev/ai-onboarding/issues/13)
-- **연관 ADR**: [ADR-0002](adr-0002-publishing-structure-docs-ssot-slides-derivative.md) — 콘텐츠 발행 구조 (변형 금지 자산 해석 보완 포함)
+- **연관 ADR**: [ADR-0002](../active/adr-0002-publishing-structure-docs-ssot-slides-derivative.md) — 콘텐츠 발행 구조 (변형 금지 자산 해석 보완 포함)
 - **대체 대상**: 이슈 #9에서 도입한 `@slidev/theme-seriph` (`slides/package.json`)
 - **영향 범위**: `slides/package.json`, `slides/slides.md`(frontmatter + mermaid `style` 라인), `slides/style.css`(신규), `slides/setup/mermaid.ts`(신규), ADR-0002 본문 보완
 
