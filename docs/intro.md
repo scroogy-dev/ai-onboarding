@@ -50,7 +50,7 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 | **Claude Cowork** | 데스크톱 환경의 범용 에이전트    | **3단계 본격 실습**                  |
 | **Claude Code**   | 터미널·IDE 코딩 특화 에이전트   | 3단계 보조 도구 (옵션 안내)          |
 
-> 세 제품 모두 **Claude Pro 이상 유료 요금제**가 필요하며, Cowork·Code 사용에는 **Claude Desktop 설치**가 전제됩니다. [홈 — 준비사항](index.md#preparation) 참조.
+> 세 제품 모두 **유료 플랜**이 필요합니다 — 개인은 **Claude Pro 이상**, 임직원은 **회사 Team·Enterprise**(개인 플랜 사용 금지). Cowork·Code 사용에는 **Claude Desktop 설치**가 전제됩니다. [홈 — 준비사항](index.md#preparation) 참조.
 
 ---
 
@@ -124,7 +124,7 @@ Claude는 한 모델이 아니라 **세 라인업**으로 구성됩니다. claud
 
 ### 사용량 확인 방법 { #claude-usage }
 
-Pro·Max 요금제에는 시간·기간별 한도가 있습니다. 사용 현황은 **두 가지 화면**으로 봅니다. *한도 숫자*(설정)와 *누적 사용량*(Code 탭)입니다.
+Pro·Max 플랜에는 시간·기간별 한도가 있습니다. 사용 현황은 **두 가지 화면**으로 봅니다. *한도 숫자*(설정)와 *누적 사용량*(Code 탭)입니다.
 
 #### ① 한도 숫자 — 설정 → 사용량 (Settings → Usage)
 
@@ -158,7 +158,7 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 !!! tip "Cowork은 채팅보다 한도 소비가 큽니다"
     [공식 안내](https://support.claude.com/ko/articles/11647753) — *"Cowork에서의 작업은 Claude와 채팅하는 것보다 사용량을 더 많이 소비합니다."* 멀티 스텝·도구 호출이 많기 때문입니다. 단순한 질문·정리는 chat, 본격 작업만 Cowork으로 분리하면 한도가 오래 갑니다.
 
-**한도에 도달했다면** — 5시간 세션 초기화를 기다리거나, 요금제를 상향하거나, [추가 사용량 구매](https://support.claude.com/ko/articles/12429409)로 이어서 사용합니다. claude.ai · Cowork · Claude Code는 **하나의 한도 풀**을 함께 씁니다.
+**한도에 도달했다면** — 5시간 세션 초기화를 기다리거나, 플랜을 상향하거나, [추가 사용량 구매](https://support.claude.com/ko/articles/12429409)로 이어서 사용합니다. claude.ai · Cowork · Claude Code는 **하나의 한도 풀**을 함께 씁니다.
 
 !!! info "Claude Code 사용량 확인 (옵션)"
     터미널 세션 안에서 `/usage` 로 Pro·Max 플랜 한도 사용량을, `/extra-usage` 로 추가 사용량 관리를 확인합니다 ([Pro 또는 Max 플랜으로 Claude Code 사용하기](https://support.claude.com/ko/articles/11145838)).
@@ -186,7 +186,7 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 
 ### 운영·지원
 
-- [Anthropic 요금제](https://www.anthropic.com/pricing) — 플랜 비교·가격 *(영문만 제공)*
+- [Anthropic 플랜](https://www.anthropic.com/pricing) — 플랜 비교·가격 *(영문만 제공)*
 - [공식 Support 홈](https://support.claude.com/ko/) — 한국어 도움말 모음
 - [Claude 상태(Status)](https://status.claude.com/) — 서비스 장애·점검 확인
 

@@ -206,18 +206,43 @@ AI 활용으로 강화할 수 있는 역량은 **세 갈래**입니다.
 
 ---
 
-# 준비사항 — Claude Pro 필수
+# 준비사항 — 유료 플랜 필수 <span class="opacity-50 text-2xl">(트랙별로 다름)</span>
 
-<div class="border-l-4 border-red-400 pl-6 py-4 my-6 bg-red-50 dark:bg-red-900/15 rounded-r">
+<div class="border-l-4 border-red-400 pl-6 py-3 my-4 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ 본 교육의 **모든 실습은 Claude에서 진행**되며,
-Claude Cowork · Code 사용을 위해
-**Claude Pro 이상 유료 요금제가 반드시 필요합니다.**
+⚠️ 모든 실습은 Claude에서 진행 — Cowork · Code 사용에 **유료 플랜이 반드시 필요합니다.**
 
 </div>
 
-- 요금제 안내: [claude.com/pricing](https://claude.com/pricing)
-- 계정 생성·결제는 **교육 시작 전**에 미리 완료해 주세요
+<div grid="~ cols-2 gap-4" class="mt-2">
+
+<div class="border-l-4 border-blue-400 pl-4 py-3 bg-blue-50 dark:bg-blue-900/15 rounded-r">
+
+**학생·일반인 (개인)**
+
+**Claude Pro 이상** (Pro·Max) 개인 플랜
+
+</div>
+
+<div class="border-l-4 border-red-400 pl-4 py-3 bg-red-50 dark:bg-red-900/15 rounded-r">
+
+**임직원 (회사 업무)**
+
+❌ **개인 플랜 절대 금지** <span class="opacity-70">(무료·유료)</span><br/>→ **반드시 회사 Team / Enterprise**
+
+</div>
+
+</div>
+
+<div class="text-sm opacity-70 mt-4">
+
+플랜 안내: [claude.com/pricing](https://claude.com/pricing) · 계정·결제(임직원은 사내 계정 발급)는 **교육 시작 전** 완료
+
+</div>
+
+<!--
+임직원은 개인 플랜 전부(무료·Pro·Max) 금지 — 회사 계정으로 가입했더라도 개인 플랜이면 금지. 회사 업무·자료를 개인 플랜에서 다루지 않기 위함. 회사가 계약한 Team/Enterprise로만 진행. 배경은 보안 파트 「엔터프라이즈 AI」 슬라이드와 정합.
+-->
 
 ---
 
@@ -231,7 +256,7 @@ Claude Cowork · Code 사용을 위해
 
 - 개인 노트북 (웹 브라우저)
 - 본인이 반복하는 업무·학습 작업 **1개 아이디어**
-- **Claude Pro 이상 계정**
+- **유료 Claude 플랜** — 개인 Pro↑ / **임직원 회사 Team·Enterprise (❌ 개인 플랜 절대 금지)**
 - **Claude Desktop 설치**
 - (임직원) 사내 AI 도구 로그인 사전 확인
 
@@ -637,7 +662,7 @@ docs 「도구와 제품」(intro.md) 정합 — 도구 블록 오프너. 개념
 | **Claude Cowork** | 데스크톱 범용 에이전트 | **3단계 본격 실습** |
 | **Claude Code** | 터미널·IDE 코딩 에이전트 | 3단계 보조 (옵션) |
 
-> Cowork·Code는 **Claude Pro 이상 + Claude Desktop** 필요 — Who 섹션의 「준비사항」 슬라이드에서 다룸.
+> Cowork·Code는 **유료 플랜 + Claude Desktop** 필요 (개인 Pro↑·임직원 회사 Team/Enterprise) — Who 섹션의 「준비사항」 슬라이드에서 다룸.
 
 <style>
 table { font-size: 0.9em; }
@@ -722,7 +747,7 @@ docs/intro.md 「모델 비교 — Opus · Sonnet · Haiku」(#claude-models)의
 
 # Claude 사용량 확인하기
 
-요금제 한도는 **두 화면**으로 봅니다 — *한도 숫자*(설정)와 *누적 사용량*(Code 탭).
+플랜 한도는 **두 화면**으로 봅니다 — *한도 숫자*(설정)와 *누적 사용량*(Code 탭).
 
 <div grid="~ cols-2 gap-4" class="mt-6">
 
@@ -1665,7 +1690,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 <div class="border-l-4 border-orange-400 pl-6 py-4 my-6 bg-orange-50 dark:bg-orange-900/15 rounded-r">
 
-본 교육 실습은 **Claude Pro(유료)** 를 사용하지만,
+본 교육 실습은 **유료 Claude**(개인 Pro↑·임직원 회사 Team/Enterprise)를 사용하지만,
 평소 쓰는 다른 무료 AI에도 **같은 원칙이 적용**됩니다.
 
 </div>
@@ -1768,7 +1793,7 @@ table { font-size: 0.78em; }
 
 **운영·지원**
 
-- [요금제](https://www.anthropic.com/pricing) *(영문)*
+- [플랜](https://www.anthropic.com/pricing) *(영문)*
 - [Support 홈](https://support.claude.com/ko/)
 - [Status](https://status.claude.com/)
 

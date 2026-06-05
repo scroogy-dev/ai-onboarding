@@ -55,5 +55,5 @@
 
 실습 진행에 필요한 도구·계정은 [홈 페이지 안내](index.md#preparation)를 참고하세요. 핵심 준비물은 다음과 같습니다.
 
-- Claude Pro 이상 유료 요금제
+- 유료 Claude 플랜 — 개인은 Pro 이상 / **임직원은 회사 Team·Enterprise (❌ 개인 플랜 절대 금지)**
 - Claude Desktop 설치 (stage 3 실습에 필요)
