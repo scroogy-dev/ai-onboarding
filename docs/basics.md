@@ -60,7 +60,7 @@
 !!! note "고르고·연결만 하는 것 (안 만듦)"
     이미 만들어진 것을 고르고 잇기만 합니다.
 
-    - **제품·모델 고르기** — claude.ai / Cowork / Code, 그리고 모델(Opus·Sonnet·Haiku) 중 무엇을 쓸지 (→ [기능 비교표](intro.md#claude-comparison))
+    - **제품·모델 고르기** — claude.ai / Cowork / Code, 그리고 모델(Fable·Opus·Sonnet·Haiku) 중 무엇을 쓸지 (→ [기능 비교표](intro.md#claude-comparison))
     - **외부 서비스 잇기** — 이미 있는 GitHub·Slack 같은 서비스에 로그인·승인해 연결 (→ [외부 컨텍스트](#external-context)). 직접 만드는 게 아니라 연결.
 
 </div>

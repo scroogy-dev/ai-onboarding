@@ -713,19 +713,20 @@ nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞 — docs int
 
 ---
 
-# 모델은 어떤 걸 쓸까 — Opus · Sonnet · Haiku
+# 모델은 어떤 걸 쓸까 — Fable · Opus · Sonnet · Haiku
 
 | 라인업 | 한 줄 포지션 | 어울리는 상황 |
 |--------|-------------|---------------|
-| **Opus** | 가장 똑똑함 (추론 강함) | 본인도 잘 모르는 주제 의논, 다단계 작업 |
+| **Fable** | 가장 똑똑함 — 최상위 (새로 추가) | 가장 어려운 문제, 장시간 자율 작업 |
+| **Opus** | 깊은 추론의 기본 | 본인도 잘 모르는 주제 의논, 다단계 작업 |
 | **Sonnet** | 균형 — 일상 기본 | 검색·요약·찾아바꾸기 등 지시 이행 |
 | **Haiku** | 가장 빠름 | 짧은 답·반복 |
 
-> 기준은 **추론이 얼마나 필요한가** — 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로.
+> 기준은 **추론이 얼마나 필요한가** — 헷갈리면 Sonnet으로 시작, 추론이 더 필요하면 Opus, 가장 어려운 문제는 Fable.
 
 <div class="text-sm opacity-80 mt-3">
 
-버전 번호(Opus 4.8·Sonnet 4.6·Haiku 4.5 등)는 자주 갱신 — 라인업만 기억하고 최신 사양은 docs. 사용량·한도 확인은 <strong>다음 슬라이드</strong>에서.
+버전 번호(Fable 5·Opus 4.8 등)는 자주 갱신 — 라인업만 기억하고 최신 사양은 docs. 사용량·한도 확인은 <strong>다음 슬라이드</strong>에서.
 
 </div>
 
@@ -734,11 +735,12 @@ table { font-size: 0.85em; }
 </style>
 
 <!--
-docs/intro.md 「모델 비교 — Opus · Sonnet · Haiku」(#claude-models)의 슬라이드 압축. 핵심 축은 「추론 vs 지시 이행」.
+docs/intro.md 「모델 비교 — Fable · Opus · Sonnet · Haiku」(#claude-models)의 슬라이드 압축. 핵심 축은 「추론 vs 지시 이행」.
+- Fable: 기존 세 라인업 위에 추가된 최상위 모델 (대체 아님). 가장 어려운 문제·장시간 자율 작업 — Opus로도 부족할 때.
 - Opus: 본인도 잘 모르는 주제·다단계 — 추론이 핵심일 때.
 - Sonnet: 일상 기본값. 검색·요약·찾아바꾸기 같은 지시 이행 작업.
 - Haiku: 짧은 답·반복.
-버전 번호(Opus 4.8 등)는 본문 생략 — 라인업 시그니처가 안정, 버전은 자주 갱신되므로 docs로 위임.
+버전 번호(Fable 5·Opus 4.8 등)는 본문 생략 — 라인업 시그니처가 안정, 버전은 자주 갱신되므로 docs로 위임.
 사용량은 다음 슬라이드(사용량 확인)로 — docs intro가 모델 다음에 사용량을 두는 순서와 정합.
 -->
 
@@ -770,7 +772,7 @@ claude.ai 웹·Claude Desktop 공통.
 Claude Desktop의 **Code 탭 → 사용량 링**(모델 표시 옆).
 
 - **개요** — 세션·메시지·토큰·연속 일수
-- **모델** — 일별·모델별(Opus·Sonnet·Haiku) 토큰 분포
+- **모델** — 일별·모델별(Fable·Opus·Sonnet·Haiku) 토큰 분포
 
 </div>
 </div>
