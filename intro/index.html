@@ -425,7 +425,7 @@
   <a href="#claude-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        모델 비교 — Opus · Sonnet · Haiku
+        모델 비교 — Fable · Opus · Sonnet · Haiku
       
     </span>
   </a>
@@ -757,7 +757,7 @@
   <a href="#claude-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        모델 비교 — Opus · Sonnet · Haiku
+        모델 비교 — Fable · Opus · Sonnet · Haiku
       
     </span>
   </a>
@@ -1100,8 +1100,8 @@
 <p><strong>범례</strong>: ✓ 지원 · △ 제한적·조건부 · ✗ 미지원</p>
 </blockquote>
 <hr />
-<h3 id="claude-models">모델 비교 — Opus · Sonnet · Haiku<a class="headerlink" href="#claude-models" title="Permanent link">&para;</a></h3>
-<p>Claude는 한 모델이 아니라 <strong>세 라인업</strong>으로 구성됩니다. claude.ai·Cowork·Code 어디에서나 동일한 라인업을 공유하며, 사용 화면에서 직접 고를 수 있습니다.</p>
+<h3 id="claude-models">모델 비교 — Fable · Opus · Sonnet · Haiku<a class="headerlink" href="#claude-models" title="Permanent link">&para;</a></h3>
+<p>Claude는 한 모델이 아니라 <strong>여러 라인업</strong>으로 구성됩니다. claude.ai·Cowork·Code 어디에서나 동일한 라인업을 공유하며, 사용 화면에서 직접 고를 수 있습니다. 기존 세 라인업 <strong>위에</strong> 최상위 모델 <strong>Fable</strong>이 더해졌습니다 — 기존 라인업을 대체하는 게 아니라 한 층이 추가된 것입니다.</p>
 <table>
 <thead>
 <tr>
@@ -1112,8 +1112,13 @@
 </thead>
 <tbody>
 <tr>
+<td><strong>Fable</strong></td>
+<td>가장 똑똑함 — 최상위 (새로 추가)</td>
+<td>가장 어려운 문제 의논, 오래 걸리는 대규모 자율 작업</td>
+</tr>
+<tr>
 <td><strong>Opus</strong></td>
-<td>가장 똑똑함 (추론 강함, 속도는 보통)</td>
+<td>깊은 추론의 기본 (추론 강함, 속도는 보통)</td>
 <td>본인도 잘 모르는 주제 의논, 깊은 분석, 다단계 에이전트 작업</td>
 </tr>
 <tr>
@@ -1130,10 +1135,10 @@
 </table>
 <div class="admonition tip">
 <p class="admonition-title">어느 모델을 쓸까?</p>
-<p>기준은 <strong>추론이 얼마나 필요한가</strong>입니다. 본인도 잘 모르는 주제를 함께 풀어 가야 한다면 <strong>Opus</strong>, 검색·찾아바꾸기·요약처럼 지시 이행이 핵심이라면 <strong>Sonnet</strong>으로 충분합니다. 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로 옮기면 됩니다 (Anthropic도 <a href="https://docs.claude.com/ko/docs/about-claude/models/overview">복잡한 작업이라면 Opus 시작을 권장</a>).</p>
+<p>기준은 <strong>추론이 얼마나 필요한가</strong>입니다. 본인도 잘 모르는 주제를 함께 풀어 가야 한다면 <strong>Opus</strong>, 검색·찾아바꾸기·요약처럼 지시 이행이 핵심이라면 <strong>Sonnet</strong>으로 충분합니다. 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로 옮기면 됩니다 (Anthropic도 <a href="https://platform.claude.com/docs/ko/about-claude/models/overview">복잡한 작업이라면 Opus 시작을 권장</a>). <strong>Fable</strong>은 그 위의 선택지입니다 — Opus로도 부족한 가장 어려운 문제나 장시간 자율 작업에서 고려하세요.</p>
 </div>
 <blockquote>
-<p>라인업(Opus·Sonnet·Haiku)은 안정적으로 유지되지만 버전 번호(예: Opus <strong>4.8</strong>, Sonnet <strong>4.6</strong>, Haiku <strong>4.5</strong>)는 자주 갱신됩니다. 최신 사양은 <a href="https://docs.claude.com/ko/docs/about-claude/models/overview">Anthropic 공식 모델 안내</a>에서 확인할 수 있습니다.</p>
+<p>라인업은 비교적 안정적으로 유지되지만, 이번 Fable처럼 새 라인업이 더해지기도 하고 버전 번호(예: Fable <strong>5</strong>, Opus <strong>4.8</strong>, Sonnet <strong>4.6</strong>, Haiku <strong>4.5</strong>)는 자주 갱신됩니다. 최신 사양과 플랜별 제공 조건은 <a href="https://platform.claude.com/docs/ko/about-claude/models/overview">Anthropic 공식 모델 안내</a>에서 확인할 수 있습니다.</p>
 </blockquote>
 <hr />
 <h3 id="claude-ai">claude.ai (Chat) — 1단계의 시작점<a class="headerlink" href="#claude-ai" title="Permanent link">&para;</a></h3>
@@ -1195,7 +1200,7 @@
 <p><img alt="누적 사용량 개요" src="../assets/images/claude-desktop-usage-02.png" /></p>
 <p><strong>모델 — 일별·모델별 토큰 분포</strong></p>
 <p><img alt="모델별 일별 사용량 막대그래프" src="../assets/images/claude-desktop-usage-03.png" /></p>
-<p>추론이 많이 필요한 작업과 단순 지시 이행은 같은 시간에도 토큰 차이가 큽니다. 모델별 비율(Opus·Sonnet·Haiku)을 보며 <strong>작업 성격에 맞춰 모델을 골라</strong>(→ <a href="#claude-models">모델 비교</a>) 직접 차이를 체감해 보세요.</p>
+<p>추론이 많이 필요한 작업과 단순 지시 이행은 같은 시간에도 토큰 차이가 큽니다. 모델별 비율(Fable·Opus·Sonnet·Haiku)을 보며 <strong>작업 성격에 맞춰 모델을 골라</strong>(→ <a href="#claude-models">모델 비교</a>) 직접 차이를 체감해 보세요.</p>
 <p><em>이미지는 Claude Desktop UI가 바뀌면 옛 화면일 수 있어요. 본 페이지가 캡처 갱신 책임 자리입니다.</em></p>
 <div class="admonition tip">
 <p class="admonition-title">Cowork은 채팅보다 한도 소비가 큽니다</p>
