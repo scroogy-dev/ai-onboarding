@@ -72,20 +72,21 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 
 ---
 
-### 모델 비교 — Opus · Sonnet · Haiku { #claude-models }
+### 모델 비교 — Fable · Opus · Sonnet · Haiku { #claude-models }
 
-Claude는 한 모델이 아니라 **세 라인업**으로 구성됩니다. claude.ai·Cowork·Code 어디에서나 동일한 라인업을 공유하며, 사용 화면에서 직접 고를 수 있습니다.
+Claude는 한 모델이 아니라 **여러 라인업**으로 구성됩니다. claude.ai·Cowork·Code 어디에서나 동일한 라인업을 공유하며, 사용 화면에서 직접 고를 수 있습니다. 기존 세 라인업 **위에** 최상위 모델 **Fable**이 더해졌습니다 — 기존 라인업을 대체하는 게 아니라 한 층이 추가된 것입니다.
 
 | 라인업     | 한 줄 포지션                          | 어울리는 상황                                                 |
 |------------|---------------------------------------|---------------------------------------------------------------|
-| **Opus**   | 가장 똑똑함 (추론 강함, 속도는 보통)   | 본인도 잘 모르는 주제 의논, 깊은 분석, 다단계 에이전트 작업    |
+| **Fable**  | 가장 똑똑함 — 최상위 (새로 추가)       | 가장 어려운 문제 의논, 오래 걸리는 대규모 자율 작업           |
+| **Opus**   | 깊은 추론의 기본 (추론 강함, 속도는 보통) | 본인도 잘 모르는 주제 의논, 깊은 분석, 다단계 에이전트 작업    |
 | **Sonnet** | 똑똑함과 빠름의 균형 — 일상 업무 기본  | 글 다듬기, 검색·요약·찾아바꾸기 같은 지시 이행 작업            |
 | **Haiku**  | 가장 빠름 (가벼운 작업·반복)          | 짧은 답이면 충분한 단순 질문, 동일 패턴 반복                  |
 
 !!! tip "어느 모델을 쓸까?"
-    기준은 **추론이 얼마나 필요한가**입니다. 본인도 잘 모르는 주제를 함께 풀어 가야 한다면 **Opus**, 검색·찾아바꾸기·요약처럼 지시 이행이 핵심이라면 **Sonnet**으로 충분합니다. 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로 옮기면 됩니다 (Anthropic도 [복잡한 작업이라면 Opus 시작을 권장](https://docs.claude.com/ko/docs/about-claude/models/overview)).
+    기준은 **추론이 얼마나 필요한가**입니다. 본인도 잘 모르는 주제를 함께 풀어 가야 한다면 **Opus**, 검색·찾아바꾸기·요약처럼 지시 이행이 핵심이라면 **Sonnet**으로 충분합니다. 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로 옮기면 됩니다 (Anthropic도 [복잡한 작업이라면 Opus 시작을 권장](https://platform.claude.com/docs/ko/about-claude/models/overview)). **Fable**은 그 위의 선택지입니다 — Opus로도 부족한 가장 어려운 문제나 장시간 자율 작업에서 고려하세요.
 
-> 라인업(Opus·Sonnet·Haiku)은 안정적으로 유지되지만 버전 번호(예: Opus **4.8**, Sonnet **4.6**, Haiku **4.5**)는 자주 갱신됩니다. 최신 사양은 [Anthropic 공식 모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview)에서 확인할 수 있습니다.
+> 라인업은 비교적 안정적으로 유지되지만, 이번 Fable처럼 새 라인업이 더해지기도 하고 버전 번호(예: Fable **5**, Opus **4.8**, Sonnet **4.6**, Haiku **4.5**)는 자주 갱신됩니다. 최신 사양과 플랜별 제공 조건은 [Anthropic 공식 모델 안내](https://platform.claude.com/docs/ko/about-claude/models/overview)에서 확인할 수 있습니다.
 
 ---
 
@@ -151,7 +152,7 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 
 ![모델별 일별 사용량 막대그래프](assets/images/claude-desktop-usage-03.png)
 
-추론이 많이 필요한 작업과 단순 지시 이행은 같은 시간에도 토큰 차이가 큽니다. 모델별 비율(Opus·Sonnet·Haiku)을 보며 **작업 성격에 맞춰 모델을 골라**(→ [모델 비교](#claude-models)) 직접 차이를 체감해 보세요.
+추론이 많이 필요한 작업과 단순 지시 이행은 같은 시간에도 토큰 차이가 큽니다. 모델별 비율(Fable·Opus·Sonnet·Haiku)을 보며 **작업 성격에 맞춰 모델을 골라**(→ [모델 비교](#claude-models)) 직접 차이를 체감해 보세요.
 
 *이미지는 Claude Desktop UI가 바뀌면 옛 화면일 수 있어요. 본 페이지가 캡처 갱신 책임 자리입니다.*
 
