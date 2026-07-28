@@ -57,8 +57,13 @@ extra_css:
 
 nav:
   - 홈: index.md
-  - 기본 용어와 범위: basics.md
-  - 도구와 제품: intro.md
-  - 실습: labs.md
+  - 1부 — AI 활용 기본:
+      - 기본 용어와 범위: basics.md
+      - 도구와 제품: intro.md
+      - 실습: labs.md
+  - 2부 — 도구·데이터 연결:
+      - 개요 — 연결이 왜 필요한가: connect/index.md
+      - 기본 커넥터 — GitHub·Atlassian: connect/connectors.md
+      - MCP 서버 이용하기: connect/mcp-servers.md
   - 보안 및 개인정보 가이드: security-guide.md
   - 교육 운영 가이드: operation-guide.md

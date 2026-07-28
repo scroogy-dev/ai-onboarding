@@ -62,7 +62,7 @@
 
 ### Task 2: 2부 골격 — docs/connect/ 3페이지 스텁 + nav 부 구분
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 2부의 자리(디렉토리·nav)를 만들고 빌드가 통과하는 골격을 세운다.
 - **작업 내용**:
   1. `docs/connect/index.md`·`connectors.md`·`mcp-servers.md` 스텁 생성 (H1 제목 + 개요 1~2문단).

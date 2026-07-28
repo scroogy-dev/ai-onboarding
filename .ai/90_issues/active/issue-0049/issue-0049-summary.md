@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 2 — 2부 골격 (`docs/connect/` 3페이지 스텁 + `mkdocs.yml` nav 부 구분)
+> ▶️ 다음 작업: Task 3 — 2부 개요 페이지 본문 (`docs/connect/index.md` — 연결이 왜 필요한가)
 
 ## 모델 기록
 
@@ -44,13 +44,13 @@
 
 ### Task 2: 2부 골격 — docs/connect/ 3페이지 스텁 + nav 부 구분
 
-- **결과**: <!-- 완료 / 부분 완료 / 스킵 -->
-- **수행 모델**: -
+- **결과**: 완료
+- **수행 모델**: Anthropic, Claude Opus 5 (claude-opus-5)
 - **audit 발견**: 0건
 - **보정 반영**: 0건
 - **재시도**: 0회
-- **수행 내용 요약**:
-- **특이 사항**:
+- **수행 내용 요약**: `docs/connect/` 신설하고 3페이지 스텁(H1 + 개요 2~3문단)을 작성했다 — `index.md`(2부 개요 — 연결이 왜 필요한가), `connectors.md`(기본 커넥터 — GitHub·Atlassian), `mcp-servers.md`(MCP 서버 이용하기). `mkdocs.yml` nav를 Task 0 확정대로 재편 — 기존 본문 3페이지를 `1부 — AI 활용 기본` 섹션으로 묶고 그 아래 `2부 — 도구·데이터 연결` 섹션에 2부 3페이지를 등재, 홈·보안 가이드·운영 가이드는 부 공통이라 최상위 유지. 스텁 단계에서 이미 `../basics.md#external-context` 재사용 링크(Task 3 완료 기준)와 `connectors.md` ↔ `mcp-servers.md` 상호 링크(Task 5 완료 기준)를 걸어 두었다.
+- **특이 사항**: 검증 3건 통과 — H1 위반 0건, `grep -c 'connect/' mkdocs.yml` = 3(≥3), `mkdocs build` 종료 코드 0. `--strict` 빌드도 종료 코드 0이며 링크 경고 0건이라 스텁의 내부 링크가 전부 유효함을 함께 확인했다. 로컬에 `mkdocs` 명령이 PATH에 없어 repo의 `.venv/bin/mkdocs`로 실행했다(빌드 산출물 `site/`는 `.gitignore` 대상).
 
 ---
 
