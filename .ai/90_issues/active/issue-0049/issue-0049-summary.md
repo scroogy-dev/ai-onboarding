@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 3 — 2부 개요 페이지 본문 (`docs/connect/index.md` — 연결이 왜 필요한가)
+> ▶️ 다음 작업: Task 4 — 기본 커넥터 페이지 본문 (`docs/connect/connectors.md` — GitHub·Atlassian)
 
 ## 모델 기록
 
@@ -56,13 +56,13 @@
 
 ### Task 3: 2부 개요 페이지 본문 — 연결이 왜 필요한가
 
-- **결과**: <!-- 완료 / 부분 완료 / 스킵 -->
-- **수행 모델**: -
+- **결과**: 완료
+- **수행 모델**: Anthropic, Claude Opus 5 (claude-opus-5)
 - **audit 발견**: 0건
 - **보정 반영**: 0건
 - **재시도**: 0회
-- **수행 내용 요약**:
-- **특이 사항**:
+- **수행 내용 요약**: `docs/connect/index.md`를 스텁에서 본문으로 확장했다. 절 구성 6개 — ① 1부의 도착점에서 이어짐(3단계 모델은 세로축=활용 수준, 연결은 가로축=닿는 범위, "4단계가 아니다"를 abstract 박스로 명시 → ADR-0010 결정 1 반영) ② 무엇이 달라지나(연결 전/후 grid 카드 대비 + 검토 의무가 오히려 더 중요해지는 이유) ③ 두 갈래 비교표(무엇인가·절차·폭·판단할 것·링크 5행)와 고르는 순서 ④ 준비물(플랜·서비스 계정·회사 관리자 정책) + 연결 보안 주의 ⑤ 다루는 선("이용까지, 개발은 제외") ⑥ 읽는 순서. 용어는 재정의하지 않고 `../basics.md#external-context`·`#model-harness`, `../index.md#stage-model`·`#preparation`·`#meta-principles`, `../intro.md#claude-comparison` 링크로 재사용했다.
+- **특이 사항**: 검증 통과 — `grep -c 'basics.md' docs/connect/index.md` = 2(≥1), `--strict` 빌드 종료 코드 0·경고 0건. 참조한 앵커 6종이 1부 원본에 모두 실재함을 확인했다. 초안에 `!!! danger`를 썼다가 `warning`으로 교체 — 테마 CSS(`claude-theme.css`)가 info·tip·note·abstract·example 5종만 웜뮤트로 재조정하고 danger는 커스텀 대상이 아니며, 기존 docs 6개 파일에서 danger 사용 이력이 0건이라 강조 위계가 어긋난다. 준비물 박스도 1부 관례(정보성 목록은 info)에 맞춰 warning → info로 조정해 보안 주의 박스만 warning으로 남겼다. 플랜 금지 서술은 "무료·유료를 가리지 않고" 포괄 표현으로 썼다.
 
 ---
 
