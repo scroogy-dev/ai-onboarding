@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 7 — 1부 접합부 갱신 (`docs/basics.md`의 "본 강의의 범위 밖" 선언을 2부 포워드 링크로 전환, `docs/intro.md` MCP 서술 정합)
+> ▶️ 다음 작업: Task 8 — 사용자 점검·피드백 루프 (`mkdocs serve`로 2부 3페이지 + 1부 접합부를 페이지 단위 점검 → 피드백 반영 → 승인)
 
 ## 모델 기록
 
@@ -104,13 +104,13 @@
 
 ### Task 7: 1부 접합부 갱신 — basics.md·intro.md
 
-- **결과**: <!-- 완료 / 부분 완료 / 스킵 -->
-- **수행 모델**: -
+- **결과**: 완료
+- **수행 모델**: Anthropic, Claude Opus 5 (claude-opus-5)
 - **audit 발견**: 0건
 - **보정 반영**: 0건
 - **재시도**: 0회
-- **수행 내용 요약**:
-- **특이 사항**:
+- **수행 내용 요약**: 1부의 "범위 밖" 선언을 2부 포워드로 전환하고 MCP 관련 서술 4곳을 2부와 정합화했다. ① `basics.md#external-context` 마지막 문단 교체 — "**본 강의의 범위 밖**입니다 … MCP 서버 설치·등록, RAG 내부 구조·구현 패턴 모두 다루지 않습니다"를 "실제로 연결하는 방법은 [2부](connect/index.md)에서 다룹니다"로 바꾸고, 1부가 Claude 단독 기준임은 유지했다. MCP·RAG **정의 bullet 2건은 그대로 존치**(정의의 자리는 basics.md). RAG 내부 구조·구현 패턴은 2부에서도 범위 밖이므로 별도 문단으로 분리해 "MCP는 2부로 / RAG 내부는 계속 범위 밖"의 구분을 남겼다. ② `intro.md#claude-comparison` 비교표 행 교체 — `MCP 연동 (외부 도구·데이터) | △ (Connectors) | ✓ | ✓ 전체` → `외부 도구·데이터 연결 (커넥터·MCP 서버) | ✓ 원격 연결 | ✓ 원격 연결 | ✓ 전체`. 영문 "Connectors"를 2부 용어 "커넥터"로 통일했다. ③ 범례 아래에 원격/로컬 구분 안내 한 줄 신설 — 원격 연결은 웹·데스크톱 공통, 로컬 확장 프로그램은 Claude Desktop 앱에서 설치, `connect/mcp-servers.md#remote-vs-local` 링크. ④ 공식 문서 목록의 「MCP 안내」 설명을 "개발자용"에서 "**직접 만들 때** 보는 개발자용 문서, 이용은 2부로 충분"으로 바꿔 `mcp-servers.md#out-of-scope`의 같은 링크 안내와 방향을 맞췄다. ⑤ `intro.md` "함께 읽어보세요"에 2부 개요 링크 1행 추가.
+- **특이 사항**: 비교표 갱신은 2부 두 페이지가 제품별 지원 범위를 `intro.md#claude-comparison`으로 넘겨 둔 상태(Task 3·5)를 실제로 받아 주기 위한 것이라, 표가 그 질문에 답하도록 원격/로컬 구분을 추가했다. 근거는 공식 문서 [데스크톱 및 웹 커넥터를 사용하는 시기](https://support.claude.com/ko/articles/11725091)의 "원격 웹 커넥터는 Claude, Cowork, Claude Desktop, Claude Mobile의 모든 사용자가 사용할 수 있습니다. 로컬 데스크톱 확장 프로그램은 Claude Desktop의 모든 사용자가 사용할 수 있습니다" 문장 — `curl`로 본문을 직접 확인했다(WebFetch는 이 URL에서 리다이렉트 루프로 실패). Cowork에서 로컬 확장 프로그램을 쓸 수 있는지는 공식 문서가 명시하지 않아 **표의 셀로 단정하지 않고**, 설치 주체를 "Claude Desktop 앱"으로만 적어 검증되지 않은 주장을 피했다. `basics.md:97`의 "다루는 범위 밖"(애플리케이션)은 ADR-0010이 유지하기로 한 1부 경계라 건드리지 않았다. 검증 5건 통과 — `grep -c 'connect/' docs/basics.md` = 1(≥1), `grep -c '본 강의의 범위 밖' docs/basics.md` = 0, H1 각 1개, `--strict` 빌드 종료 코드 0(링크 경고 0건), 참조 앵커 `#remote-vs-local` 실재 확인. 1부 4개 파일(`basics`·`intro`·`index`·`labs`)에서 "MCP·RAG + 범위 밖/다루지 않음" 표현을 재스캔한 결과 잔존 1건은 새로 쓴 RAG 문장(의도된 존치)뿐이다.
 
 ---
 
