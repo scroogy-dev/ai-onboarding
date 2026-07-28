@@ -22,6 +22,7 @@ AI는 작업 시 이 파일을 먼저 읽고, 관련된 ADR만 선택적으로 �
 | [ADR-0007](active/adr-0007-data-view-separation.md) | 데이터와 뷰의 분리 — 시리즈 차원의 산출물 사고 원칙 | 산출물의 데이터(값)와 뷰(표현)를 평행 형제로 분리하는 사고를 시리즈 차원 원칙으로 둔다. ADR-0006 결정 5(stage 3 자산 패턴)의 "데이터/뷰 분리" 부속 메시지를 별 ADR로 분리해 격상. step01·step04 가시 사례 |
 | [ADR-0008](active/adr-0008-determinism-explicit-visualization-comparison-table.md) | 결정성/비결정성 메커니즘의 명시적 가시화 — 비교표 형태로 도입 | 본문 기본은 ADR-0005 §3에 따라 결과형 유지, 메커니즘 단어 명시는 비교표 1곳(`docs/basics.md` 첫 H2 + 짝 슬라이드)에 한정. 1회성 프롬프트 · 에이전트 스킬 · 애플리케이션 3종 분류는 ADR-0001 3단계 모델과 다른 차원의 비교 분류. ADR-0005 §3와 짝으로 운용 |
 | [ADR-0009](active/adr-0009-unified-ui-theme-claude-style.md) | docs·slides 통합 UI 테마 — Claude 스타일(라이트) 채택 | docs(indigo)·slides(the-unnamed 다크)의 톤 불일치를 Claude 스타일(아이보리+코랄, 라이트)로 통일. docs는 라이트/다크 토글 유지, slides는 default 테마로 라이트 전용. admonition·색 카드 정합, 토큰(색·폰트) 명시. ADR-0004 대체 |
+| [ADR-0010](active/adr-0010-part2-connection-scope-expansion.md) | 2부(도구·데이터 연결) 신설 — 같은 사이트 안에서 범위 축 확장 | ADR-0001을 대체가 아니라 확장. 같은 repo·사이트에서 nav를 1부(AI 활용 기본)/2부(도구·데이터 연결)로 구분하고 가이드는 부 공통 유지. 커넥터·MCP는 "이용까지만", 개발·RAG 내부는 범위 밖. 연결 보안 본문은 security-guide.md가 SSoT. 도구 축(ChatGPT 등) 다원화는 이 ADR의 결정 대상 아님 |
 
 ## Superseded ADR
 
