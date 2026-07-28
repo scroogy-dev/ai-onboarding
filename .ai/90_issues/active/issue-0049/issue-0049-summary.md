@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 4 — 기본 커넥터 페이지 본문 (`docs/connect/connectors.md` — GitHub·Atlassian)
+> ▶️ 다음 작업: Task 5 — MCP 서버 페이지 본문 (`docs/connect/mcp-servers.md` — 커넥터 너머)
 
 ## 모델 기록
 
@@ -68,13 +68,13 @@
 
 ### Task 4: 기본 커넥터 페이지 본문 — GitHub·Atlassian
 
-- **결과**: <!-- 완료 / 부분 완료 / 스킵 -->
-- **수행 모델**: -
+- **결과**: 완료
+- **수행 모델**: Anthropic, Claude Opus 5 (claude-opus-5)
 - **audit 발견**: 0건
 - **보정 반영**: 0건
 - **재시도**: 0회
-- **수행 내용 요약**:
-- **특이 사항**:
+- **수행 내용 요약**: `docs/connect/connectors.md`를 스텁(7행)에서 본문(152행)으로 확장했다. 절 구성 7개 — ① 커넥터는 새로 만드는 게 아님(`basics.md#model-harness`의 "고르고·연결만 하는 것" 칸 재사용, 재정의 없음) ② 연결하는 순서(대화 화면·설정 화면 두 경로를 grid 카드로 대비 + 공통 5단계) ③ 승인 화면에서 확인할 것(읽기/쓰기·범위·누구의 권한 3행 표 + "내 권한 그대로"가 안심이자 경고라는 warning) ④ GitHub(비개발자 시나리오 3건 + 프로젝트 지식 동기화 경로와의 구분) ⑤ Atlassian(Confluence·Jira 시나리오를 grid 카드로 + 쓰기 결과가 내 이름으로 남는다는 warning) ⑥ 연결 점검·해제(끊을 기준 3가지) ⑦ 회사 환경(관리자 선활성화·도구 권한). 마무리는 `mcp-servers.md`로 넘기는 다음 안내.
+- **특이 사항**: 본문의 UI 절차·권한 서술은 공식 문서를 직접 대조해 고정했다 — 한국어 UI 용어("사용자 정의 → 커넥터", "커넥터 관리", "연결/설치", "도구 액세스 — 자동/필요할 때", 관리자 "항상 허용/승인 필요/차단")는 [커넥터를 사용하여 Claude의 기능 확장하기](https://support.claude.com/ko/articles/11176164), GitHub 두 경로의 차이(커넥터 = 저장소·이슈·PR 읽기·쓰기 / "GitHub에서 추가" = 지정 브랜치의 파일 이름·내용만, 커밋 이력·PR 제외)는 [GitHub 통합 사용하기](https://support.claude.com/ko/articles/10167454), Atlassian Rovo 커넥터의 읽기·쓰기 범위와 기존 Jira·Confluence 권한 상속은 커넥터 디렉토리 페이지에서 확인했다. 외부 링크는 `/ko/` 경로 2건이며 `curl`로 HTTP 200을 확인했다(WebFetch는 slug 없는 `/ko/` URL에서 리다이렉트 루프로 실패하지만 브라우저·curl에서는 정상 — 기존 `intro.md` 관례와 같은 짧은 형태를 유지). 검증 4건 통과 — `grep -ci 'github'` = 7(≥1), `grep -ciE 'atlassian|jira|confluence'` = 8(≥1), H1 1개, `--strict` 빌드 종료 코드 0(링크 경고 0건, 유일한 WARNING은 Material 팀의 MkDocs 2.0 안내 배너로 문서와 무관). admonition은 1부·2부 관례대로 info·note·tip·example·warning만 사용했다.
 
 ---
 
