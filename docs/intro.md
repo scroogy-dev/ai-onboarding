@@ -70,7 +70,7 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 
 > **범례**: ✓ 지원 · △ 제한적·조건부 · ✗ 미지원
 
-> 연결을 실제로 잇는 방법은 **[2부 — 도구·데이터 연결](connect/index.md)** 에서 다룹니다. 클라우드 서비스를 잇는 **원격 연결**은 웹·데스크톱 어디서나 같지만, **내 컴퓨터 안의 자료**를 잇는 로컬 확장 프로그램은 **Claude Desktop 앱**에서 설치합니다 (→ [2부 — 원격과 로컬](connect/mcp-servers.md#remote-vs-local)).
+> 실제로 연결하는 방법은 **[2부 — 도구·데이터 연결](connect/index.md)** 에서 다룹니다. 클라우드 서비스를 다루는 **원격 연결**은 웹·데스크톱 어디서나 같지만, **내 컴퓨터 안의 자료**를 다루는 로컬 확장 프로그램은 **Claude Desktop 앱**에서 설치합니다 (→ [2부 — 원격과 로컬](connect/mcp-servers.md#remote-vs-local)).
 
 ---
 
@@ -200,5 +200,5 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 - [홈 — 본 교육의 Why·What·How](index.md)
 - [홈 — 준비사항](index.md#preparation) — Claude Pro·Desktop 설치 등 사전 준비
 - [홈 — 3단계 모델](index.md#stage-model) — 본 교육이 다루는 학습 사다리
-- [2부 — 도구·데이터 연결](connect/index.md) — 커넥터·MCP 서버로 외부 자료를 잇기
+- [2부 — 도구·데이터 연결](connect/index.md) — 커넥터·MCP 서버로 외부 자료를 연결하기
 - [보안 및 개인정보 가이드](security-guide.md)
