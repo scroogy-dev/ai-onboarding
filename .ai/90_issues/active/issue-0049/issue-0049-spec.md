@@ -18,6 +18,7 @@
   - MCP 서버 이용 방법 — 기본 커넥터에 없는 도구·데이터 연결
 - 외부 연결에 따른 보안·주의사항 안내
 - 1부 접합부 최소 수정: `docs/basics.md`의 "MCP·RAG는 범위 밖" 박스 → 2부 포워드 링크, `docs/intro.md` 관련 행 정합
+- 공용 이슈 워크플로우 가이드(`.ai/90_issues/active/issue-workflow.md`) 정비 — Task 0 게이트·audit 리포트 `--response` 검토·완료 시 Task N 확인 절차 명시 (구현 중 이뤄진 프로세스 개선을 범위에 소급 명시, 교차모델 audit F-4 승인 반영)
 
 **비포함 (Out)**
 
