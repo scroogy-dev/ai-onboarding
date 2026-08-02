@@ -12,7 +12,7 @@
 | Claude Code | 터미널·IDE에서 동작하는 **코딩 특화 에이전트**. 본 교육에서는 옵션·보조 도구로만 다룬다. | 본 교육 3단계 보조 / 출처: `docs/intro.md` |
 | Agent Skills | Claude에 **재사용 가능한 절차·지식을 등록**해 두는 기능. 사전 제작 Skill과 사용자 정의 Skill을 모두 지원한다. 한국어 라벨로는 「에이전트 스킬」을 사용한다. | 출처: `docs/intro.md` 기능 비교표 |
 | MCP (Model Context Protocol) | 외부 자료원을 AI 클라이언트에 **표준 방식으로 연결**하는 프로토콜. 커넥터·MCP 서버 연결이 모두 이 프로토콜 위에서 동작한다. | 출처: `docs/basics.md` 외부 컨텍스트 |
-| 커넥터 | Claude가 미리 준비해 둔 연결 목록에서 **고르고 로그인·승인만으로** 외부 서비스를 연결하는 방식. | 본 교육 2부 / 출처: `docs/connect/connectors.md` |
+| 커넥터 | Claude가 미리 준비해 둔 연결 목록에서 **고르고 로그인·승인만으로** 외부 서비스를 연결하는 방식. 목록 안에서도 Anthropic이 자세히 검토한 항목과 자동 검사만 거친 항목으로 **검토 수준이 갈린다.** | 본 교육 2부 / 출처: `docs/connect/connectors.md` |
 | MCP 서버 (사용자 정의 커넥터) | 기본 커넥터 목록에 없는 도구·자료를 **주소를 직접 등록해** 연결하는 방식. 원격(주소 등록)과 로컬(Claude Desktop 확장 프로그램)로 나뉜다. | 본 교육 2부 / 출처: `docs/connect/mcp-servers.md` |
 | 결정성 (Deterministic) | **동일한 입력 → 동일한 출력**을 보장하는 동작 성격. 일반 소프트웨어가 여기에 해당한다. | 출처: `docs/basics.md` AI 활용의 세 형태 |
 | 비결정성 (Non-deterministic) | **동일한 입력에도 출력이 달라질 수 있는** 동작 성격. 생성형 AI(LLM 호출)는 기본적으로 비결정적이다. | 출처: `docs/basics.md` AI 활용의 세 형태 |
