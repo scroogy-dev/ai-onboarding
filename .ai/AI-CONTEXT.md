@@ -69,7 +69,7 @@ MkDocs + Material 기반 정적 사이트(GitHub Pages)와 컨플루언스 위�
 ai-onboarding/
 ├── .ai/                    # AI 협업 컨텍스트
 ├── .github/workflows/      # CI/CD
-├── docs/                   # SSoT: 모든 원본 마크다운 (홈·도입·기본 용어·실습·보안·운영)
+├── docs/                   # SSoT: 모든 원본 마크다운 (홈·도입·기본 용어·실습·연결·보안·운영)
 │   └── assets/             # css·images 등 정적 자산
 ├── labs/                   # 실습 자료 본문 (step01~step04 + README)
 ├── overrides/              # Material 테마 커스터마이징
