@@ -102,7 +102,6 @@ flowchart LR
     subgraph PC["내 컴퓨터"]
         U["나<br/>(Claude Desktop)"]
         MS1["MCP 서버<br/>(내 컴퓨터에서 실행)"]
-        MY["내 폴더의 파일"]
     end
     subgraph LAN["사내망 (VPN에 붙어 있을 때)"]
         MS2["MCP 서버<br/>(회사 제공)"]
@@ -112,7 +111,7 @@ flowchart LR
         CS["<b>Claude 서비스</b>"]
     end
     U -->|"내 컴퓨터에서 실행"| MS1
-    MS1 -->|"읽고 쓴다"| MY
+    MS1 -->|"VPN을 거쳐 읽고 쓴다"| D2
     U -->|"내 컴퓨터에서 접속"| MS2
     MS2 -->|"사내망 안에서 읽고 쓴다"| D2
     U -->|"읽은 내용은 여기로"| CS
