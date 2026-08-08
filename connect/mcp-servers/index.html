@@ -1,0 +1,1370 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="비개발자를 위한 AI 활용 교육 사이트">
+      
+      
+      
+      
+        <link rel="prev" href="../connectors/">
+      
+      
+        <link rel="next" href="../../security-guide/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>MCP 서버 이용하기 - AI 활용 교육</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/claude-theme.css">
+    
+      <link rel="stylesheet" href="../../assets/css/slide-link.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mcp" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AI 활용 교육" class="md-header__button md-logo" aria-label="AI 활용 교육" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 활용 교육
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MCP 서버 이용하기
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 활용 교육" class="md-nav__button md-logo" aria-label="AI 활용 교육" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 활용 교육
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1부 — AI 활용 기본
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1부 — AI 활용 기본
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    기본 용어와 범위
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    도구와 제품
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2부 — 도구·데이터 연결
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2부 — 도구·데이터 연결
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    개요 — 연결이 왜 필요한가
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    기본 커넥터 — Atlassian·GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP 서버 이용하기
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP 서버 이용하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vs-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        커넥터와 무엇이 다른가요
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-vs-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        어디에 설정하느냐가 갈림길입니다
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        등록하는 순서
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="등록하는 순서">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        내 계정에 등록 — 커넥터 화면에 주소를 넣기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        내 컴퓨터에 설정 — 확장 프로그램 설치
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        믿을 만한 서버 고르기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        연결한 뒤에 할 일
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        잘 안 될 때
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#out-of-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        만드는 일은 다루지 않습니다
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다음으로
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    보안 및 개인정보 가이드
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    교육 운영 가이드
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vs-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        커넥터와 무엇이 다른가요
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-vs-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        어디에 설정하느냐가 갈림길입니다
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        등록하는 순서
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="등록하는 순서">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        내 계정에 등록 — 커넥터 화면에 주소를 넣기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        내 컴퓨터에 설정 — 확장 프로그램 설치
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        믿을 만한 서버 고르기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        연결한 뒤에 할 일
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        잘 안 될 때
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#out-of-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        만드는 일은 다루지 않습니다
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다음으로
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <a id="slide-mode-btn" class="slide-link-btn"
+     href="/ai-onboarding/slides/"
+     target="_blank" rel="noopener noreferrer"
+     role="button"
+     title="발표 슬라이드(Slidev) 새 탭에서 열기">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M10 8v8l5-4-5-4zm9-5H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+    </svg>
+    슬라이드 모드
+  </a>
+
+  
+                  
+
+
+
+<h1 id="mcp">MCP 서버 이용하기<a class="headerlink" href="#mcp" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>기본 커넥터 목록에 <strong>없는</strong> 도구·자료를 연결하는 방법입니다. 서버를 만드는 이야기가 아니라, <strong>이미 제공되고 있는 것 중 선택하여 등록하여 사용하는 것</strong>입니다.</p>
+</blockquote>
+<p><a href="../connectors/">기본 커넥터</a>는 편하지만 목록에 있는 서비스만 연결할 수 있습니다. 목록에 없는 도구가 필요할 때 쓰는 것이 <strong>MCP 서버</strong>입니다. 누군가 만들어 공개해 둔 연결 통로를 내 Claude에 <strong>등록하여 사용하는 방식</strong>이라, 고를 수 있는 폭이 훨씬 넓은 대신 <strong>무엇을 고르고 무엇을 허용할지 직접 판단</strong>해야 합니다.</p>
+<p>이 페이지에서는 커넥터와의 차이, 등록 절차, 믿을 만한 서버를 고르는 기준, 잘 안 될 때 확인할 것을 다룹니다. MCP 서버를 <strong>직접 만드는 일은 다루지 않습니다.</strong> 여기서는 이용하는 것까지만 다루고 있습니다.</p>
+<hr />
+<h2 id="vs-connector">커넥터와 무엇이 다른가요<a class="headerlink" href="#vs-connector" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">화면에서는 둘 다 「커넥터」입니다</p>
+<p>서버 주소를 넣어 등록하는 화면은 앞 페이지에서 본 <strong>사용자 지정 → 커넥터</strong> 그대로입니다. 거기서 목록에 있는 서비스를 고르면 기본 커넥터, <strong>추가</strong> → <strong>커스텀 커넥터 추가</strong>로 주소를 넣으면 이 페이지의 방식입니다. 새 기능이 아니라 <strong>같은 화면에서 등록하는 방법만 다른 것</strong>입니다. 내 컴퓨터에 설치하는 방식은 메뉴가 따로 있습니다 (→ <a href="#remote-vs-local">원격과 로컬</a>).</p>
+<p>앞 페이지의 기본 커넥터도 <strong>같은 MCP로 동작합니다.</strong> 기술이 다른 게 아니라, 찾아서 등록하는 방법이 다를 뿐입니다.</p>
+<p>MCP가 무엇인지는 1부 <a href="../../basics/#external-context">기본 용어와 범위 — 외부 컨텍스트</a>에 정의돼 있습니다. 여기서는 그 정의를 그대로 쓰고 다시 설명하지 않습니다.</p>
+</div>
+<p>차이는 딱 한 줄입니다. <strong>기본 커넥터는 준비된 목록에서 고르고, 이 페이지의 방식은 그 목록에 없는 것을 다른 경로로 직접 찾아 등록합니다.</strong> 아래 표와 이 페이지에서 「MCP 서버」라고 할 때는 그중 <strong>기본 커넥터 목록에 준비돼 있지 않은 쪽</strong>을 가리킵니다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>기본 커넥터</th>
+<th>MCP 서버</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>어떻게 연결하나</strong></td>
+<td>목록에서 서비스를 고름</td>
+<td>서버 주소를 넣거나, 확장 프로그램을 설치해 직접 등록</td>
+</tr>
+<tr>
+<td><strong>누가 확인했나</strong></td>
+<td>목록 안에서도 검토 수준이 갈림</td>
+<td><strong>아무도 검토하지 않은 곳도 등록 가능</strong></td>
+</tr>
+<tr>
+<td><strong>고를 수 있는 폭</strong></td>
+<td>준비된 서비스</td>
+<td>훨씬 넓음 (Claude가 지원하는 연결 방식에 한해)</td>
+</tr>
+<tr>
+<td><strong>내 판단의 몫</strong></td>
+<td>어떤 권한을 넘길지</td>
+<td>어떤 권한을 넘길지 <strong>+ 이 서버를 믿을 수 있는지</strong></td>
+</tr>
+</tbody>
+</table>
+<p>늘어난 폭만큼 판단도 내 쪽으로 넘어옵니다. 그래서 순서는 하나뿐입니다. <strong>커넥터 목록에 있으면 그걸 쓰고, 없을 때만 이쪽을 봅니다.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">목록에 있다고 다 같은 수준으로 검토된 것은 아닙니다</p>
+<p>커넥터 목록에는 Anthropic이 보안·안정성까지 살펴본 항목과, 자동 검사만 통과하고 <strong>자세한 검토는 받지 않은</strong> 항목이 섞여 있습니다. 뒤쪽에는 목록과 설정 화면에 별도 표시가 붙고, 연결하기 전에 자세한 검토를 거치지 않았다는 안내가 한 번 뜹니다.</p>
+<p>표시가 다르다고 동작이 달라지는 것은 아닙니다. 달라지는 것은 <strong>내가 얼마나 확인해야 하는가</strong>입니다. 검토 표시가 없는 항목은 목록에 있더라도 만든 곳이 어디인지 한 번 더 보고 연결하세요.</p>
+<p>표시의 종류와 기준은 <a href="https://claude.com/docs/connectors/verification">Connector verification</a>에 정리돼 있습니다 (영문). 화면의 표시 이름이 바뀌면 이 문서가 기준입니다.</p>
+</div>
+<hr />
+<h2 id="remote-vs-local">어디에 설정하느냐가 갈림길입니다<a class="headerlink" href="#remote-vs-local" title="Permanent link">&para;</a></h2>
+<p>방식은 흔히 <strong>원격</strong>과 <strong>로컬</strong>로 부릅니다. 이름만 보면 서버가 어디에 위치하느냐의 문제 같지만, 실제로 판가름하는 것은 <strong>설정을 어디에 두느냐</strong>입니다. 거기서 <strong>누가 접속하는지</strong>가 정해지고, 그것이 무엇에 접근할 수 있는지를 결정합니다.</p>
+<div class="grid">
+<div class="admonition note">
+<p class="admonition-title">내 계정에 등록 — Anthropic 쪽에서 접속합니다</p>
+<p>앞에서 본 <strong>사용자 지정 → 커넥터</strong> 화면에 주소를 넣는 방식입니다. 등록이 내 계정에 저장되어 웹·데스크톱·모바일 어디서나 같은 연결을 씁니다.</p>
+<p><strong>누가 접속하나</strong>: Anthropic 서버입니다. 내 컴퓨터는 시키기만 합니다.</p>
+<p><strong>접근 범위</strong>: 인터넷에서 열려 있는 주소까지입니다. 내 컴퓨터 안의 파일이나, 사내망 안에서만 열리는 주소에는 접근하지 못합니다.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">내 컴퓨터에 설정 — 내 컴퓨터에서 접속합니다</p>
+<p><strong>설정 → 확장 프로그램</strong>으로 설치하는 방식입니다. 설치한 컴퓨터에서 Claude Desktop을 열었을 때만 동작하고, 다른 기기에서 쓰려면 거기서 다시 설치합니다.</p>
+<p><strong>누가 접속하나</strong>: 내 컴퓨터입니다.</p>
+<p><strong>접근 범위</strong>: 내 컴퓨터에서 열 수 있는 자료라면 모두입니다. VPN을 켜야 열리는 사내 자료도, 이 컴퓨터 안에서만 열리는 자료도 여기 들어갑니다.</p>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">내 컴퓨터에 설정한다고 서버까지 내 컴퓨터에 있는 것은 아닙니다</p>
+<p>가장 헷갈리는 지점입니다. <strong>설정을 두는 위치</strong>와 <strong>서버가 실행되는 위치</strong>는 별개입니다.</p>
+<ul>
+<li><strong>설정도 내 컴퓨터, 서버도 내 컴퓨터</strong>: 설치한 프로그램이 통째로 내 기기에서 실행되는 경우</li>
+<li><strong>설정은 내 컴퓨터, 서버는 다른 곳의 주소</strong>: 설정만 내 기기에 두고, 접속은 내 컴퓨터에서 그 주소로 나갑니다</li>
+</ul>
+<p>두 번째가 <strong>회사 사내망 MCP 서버</strong>를 쓰는 방식입니다. 접속이 내 컴퓨터에서 나가니, VPN이 붙어 있으면 사내 주소에 접근할 수 있습니다.</p>
+</div>
+<p>연결이 어디를 거치는지 그려 보면 차이가 분명해집니다.</p>
+<p><strong>내 계정에 등록했을 때</strong></p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph PC["내 컴퓨터"]
+        U["나"]
+    end
+    subgraph NET["인터넷"]
+        CS["&lt;b&gt;Claude 서비스&lt;/b&gt;"]
+        MS["MCP 서버"]
+        D1["Atlassian · GitHub&lt;br/&gt;클라우드"]
+    end
+    subgraph LAN["사내망 (VPN 안에서만 열림)"]
+        X["사내 MCP 서버 ·&lt;br/&gt;사내 자료"]
+    end
+    U --&gt;|"시킨다"| CS
+    CS --&gt;|"주소로 접속"| MS
+    MS --&gt;|"읽고 쓴다"| D1
+    CS -.-&gt;|"접속할 수 없음"| X
+    style CS fill:#90caf9,stroke:#42a5f5
+    style MS fill:#bbdefb,stroke:#64b5f6
+    style X fill:#e5e7eb,stroke:#9ca3af,color:#6b7280</code></pre>
+<p>내 컴퓨터는 시키기만 할 뿐이고, 실제 접속은 Anthropic 쪽에서 시작합니다. 그래서 조건은 하나입니다: <strong>그 주소가 인터넷에서 열려 있는가.</strong> 사내망 주소는 내가 VPN에 붙어 있어도 접근하지 못합니다. 접속하는 쪽이 내 컴퓨터가 아니기 때문입니다.</p>
+<p><strong>내 컴퓨터에 설정했을 때</strong></p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph PC["내 컴퓨터"]
+        U["나&lt;br/&gt;(Claude Desktop)"]
+        MS1["MCP 서버&lt;br/&gt;(내 컴퓨터에서 실행)"]
+    end
+    subgraph LAN["사내망 (VPN에 붙어 있을 때)"]
+        MS2["MCP 서버&lt;br/&gt;(회사 제공)"]
+        D2["사내 위키 ·&lt;br/&gt;GitHub Enterprise&lt;br/&gt;&lt;i&gt;사내 데이터&lt;/i&gt;"]
+    end
+    subgraph NET["인터넷"]
+        CS["&lt;b&gt;Claude 서비스&lt;/b&gt;"]
+    end
+    U --&gt;|"내 컴퓨터에서 실행"| MS1
+    MS1 --&gt;|"VPN을 거쳐 읽고 쓴다"| D2
+    U --&gt;|"내 컴퓨터에서 접속"| MS2
+    MS2 --&gt;|"사내망 안에서 읽고 쓴다"| D2
+    U --&gt;|"읽은 내용은 여기로"| CS
+    style CS fill:#90caf9,stroke:#42a5f5
+    style MS1 fill:#bbdefb,stroke:#64b5f6
+    style MS2 fill:#bbdefb,stroke:#64b5f6</code></pre>
+<p>접속이 내 컴퓨터에서 나가니, <strong>내가 열 수 있는 자료는 모두 범위 안</strong>입니다. 내 컴퓨터에서 실행되는 서버(왼쪽)든, 사내망에 있는 회사 서버(가운데)든 같습니다.</p>
+<p>다만 Claude 서비스로 향하는 화살표를 보세요. 읽은 내용은 결국 그쪽으로 올라갑니다. 내 컴퓨터에 설정했다고 자료가 내 컴퓨터 안에만 머무는 것이 아닙니다 (→ 이 절 아래 주의 박스).</p>
+<div class="admonition info">
+<p class="admonition-title">회사 자료를 연결할 때 — 임직원</p>
+<p>회사가 사내 자료용 MCP 서버를 마련해 제공하는 경우가 있습니다. 사내 위키, 온프레미스로 운영하는 Atlassian·GitHub Enterprise 같은 것들입니다. <strong>방법은 회사가 정해서 안내합니다.</strong></p>
+<ul>
+<li><strong>회사가 확장 프로그램으로 배포</strong>: 목록에서 찾아 설치하거나, 회사가 준 파일로 설치합니다.</li>
+<li><strong>회사가 서버 주소를 안내</strong>: 안내받은 대로 내 컴퓨터 설정에 등록합니다.</li>
+</ul>
+<p>어느 쪽이든 <strong>담당 부서 안내를 그대로 따르세요.</strong> 주소·계정·설치 파일을 임의로 구해 쓰지 않습니다. 연결이 되지 않을 때도 설정을 바꿔 보기 전에 먼저 문의하는 편이 빠릅니다.</p>
+<p>커넥터 화면에 사내 주소를 직접 넣는 방식은 대개 되지 않습니다. 그쪽은 Anthropic 쪽에서 접속하므로, 회사가 인터넷에서 접근할 수 있도록 따로 열어 둔 경우에만 연결됩니다.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">내 컴퓨터에 설정해야 되는 일은 이런 때입니다</p>
+<p>계정 등록으로 안 되는 자료는 <strong>인터넷에 공개되어 있지 않은 자료</strong>입니다. 비개발자에게 해당하는 경우는 사실상 하나입니다.</p>
+<ul>
+<li><strong>사내망 안에서만 열리는 자료</strong>: 회사 네트워크나 VPN을 켜야 열리는 사내 위키·파일 서버</li>
+</ul>
+<p><strong>내 폴더의 파일은 여기 들어가지 않습니다.</strong> 파일을 읽고 쓰는 일은 MCP 서버 없이 <a href="../../intro/#claude-cowork">폴더 연결</a>로 됩니다.</p>
+<p>이 밖에 내 컴퓨터에 설정하는 연결은 개발 도구를 연결하는 쪽이 대부분이라 이 시리즈에서는 다루지 않습니다.</p>
+<p>반대로 인터넷에 열려 있는 서비스라면 계정에 등록하는 쪽이 편합니다. 내 컴퓨터에 설치할 것이 없고, 기기를 옮겨도 그대로 쓸 수 있습니다.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">방식은 내가 고르는 것이 아니라 만든 쪽이 정해서 내놓습니다</p>
+<p>같은 도구라도 주소로만 나온 것이 있고, 확장 프로그램으로만 나온 것이 있습니다. 그러니 쓰려는 도구가 <strong>어느 방식으로 나와 있는지부터</strong> 봅니다. 둘 다 있다면 내 컴퓨터에 설치하지 않는 쪽이 손이 덜 갑니다.</p>
+<p>둘을 같이 써도 됩니다. 사내 위키의 자료를 확장 프로그램으로 읽고, 정리한 결과를 계정에 등록해 둔 업무 도구에 올리는 식입니다.</p>
+<p>제품마다 지원 범위가 다르니 1부 <a href="../../intro/#claude-comparison">도구와 제품 — 기능 비교</a> 표도 함께 보세요.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">내 컴퓨터에 설정해도 자료는 Claude 서비스로 보내져 처리됩니다</p>
+<p>설정과 서버가 내 컴퓨터에 있더라도, Claude가 읽은 내용은 대화에 붙여 넣은 자료와 <strong>똑같이</strong> Claude 서비스로 보내져 처리됩니다. 밖으로 나가면 안 되는 자료라면 내 컴퓨터에서 실행된다고 안심할 것이 아니라, 처음부터 연결 대상에서 빼는 것이 맞습니다 (→ <a href="../../security-guide/#external-connection">보안 및 개인정보 가이드 — 외부 연결</a>).</p>
+</div>
+<p>공식 안내: <a href="https://support.claude.com/ko/articles/11725091">데스크톱 및 웹 커넥터를 사용하는 시기</a> · <a href="https://support.claude.com/ko/articles/11175166">원격 MCP를 사용하여 사용자 정의 커넥터 시작하기</a></p>
+<hr />
+<h2 id="how-to-register">등록하는 순서<a class="headerlink" href="#how-to-register" title="Permanent link">&para;</a></h2>
+<h3 id="register-remote">내 계정에 등록 — 커넥터 화면에 주소를 넣기<a class="headerlink" href="#register-remote" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>사용자 지정 → 커넥터</strong>로 들어갑니다. 기본 커넥터를 관리하던 그 화면입니다.</li>
+<li>오른쪽 위 <strong>추가</strong>를 누르고 <strong>커스텀 커넥터 추가</strong>를 고릅니다.</li>
+<li><strong>이름</strong>과 <strong>서버 주소</strong>를 넣습니다. 이름은 커넥터 목록에 표시될 이름이고, 주소는 서버를 공개한 쪽이 안내합니다 (→ <a href="#choosing">고르는 기준</a>).</li>
+<li><strong>추가</strong>를 눌러 등록을 마칩니다.</li>
+<li>목록에 생긴 커넥터에서 <strong>연결</strong>을 눌러 로그인·권한 승인을 진행합니다. 확인할 것은 기본 커넥터와 같습니다 (→ <a href="../connectors/#approval-screen">승인 화면에서 확인할 것</a>).</li>
+<li>대화창 <code>+</code> 버튼 → <strong>커넥터</strong>에서 <strong>토글을 켜야</strong> 그 대화에서 쓰입니다.</li>
+</ol>
+<p><img alt="커스텀 커넥터 추가 창. 이름 칸과 「원격 MCP 서버 URL」 칸이 있고, 그 아래 고급 설정에 OAuth 값 칸이 있습니다" src="../../assets/images/claude-desktop-connector-05.png" /></p>
+<p>주소 칸에는 <strong>HTTPS로 시작하는 주소</strong>를 넣습니다. 창 아래쪽에는 신뢰할 수 있는 곳에서 만든 커넥터만 쓰라는 안내가 함께 뜹니다 — 목록에서 고를 때와 달리 <strong>확인이 내 몫</strong>이 되는 지점입니다 (→ <a href="#choosing">믿을 만한 서버 고르기</a>).</p>
+<p><em>이미지는 Claude Desktop 화면이며, 앱이 업데이트되면 조금 달라질 수 있습니다.</em></p>
+<div class="admonition info">
+<p class="admonition-title">회사 플랜이라면 관리자가 먼저 열어 줘야 합니다</p>
+<p>Team·Enterprise 플랜에서는 <strong>조직 소유자만</strong> 이렇게 등록하는 커넥터를 조직에 추가할 수 있습니다. 소유자가 <strong>조직 설정 → 커넥터</strong>에서 추가하고 나면, 구성원은 <strong>사용자 지정 → 커넥터</strong> 목록에서 그 커넥터를 찾아 <strong>연결</strong>만 누르면 됩니다. 이렇게 추가되는 커넥터에는 회사가 사내 자료용으로 운영하는 서버도 들어갑니다.</p>
+<p>구성원 각자가 자기 계정으로 인증하므로, <strong>각자 원래 가진 권한 범위 안에서만</strong> 동작합니다. 목록에 없다면 아직 조직에 추가되지 않은 것이니 담당 부서에 문의하세요.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">고급 설정은 지나쳐도 됩니다</p>
+<p>주소를 넣는 화면에 <strong>고급 설정</strong>이 함께 보이지만, 대부분은 손댈 일이 없습니다. 서버를 공개한 쪽이 별도 값을 안내한 경우에만 채우면 됩니다.</p>
+<p>등록한 커넥터는 <strong>수정이 안 됩니다.</strong> 주소를 잘못 넣었다면 제거하고 다시 추가하세요.</p>
+</div>
+<h3 id="register-local">내 컴퓨터에 설정 — 확장 프로그램 설치<a class="headerlink" href="#register-local" title="Permanent link">&para;</a></h3>
+<p>이 문서에서는 Claude Desktop 기준으로 설명합니다. 설정 파일을 직접 만질 필요가 없습니다.</p>
+<div class="admonition note">
+<p class="admonition-title">설치하는 것은 앱이 아니라, 앱 안에 얹는 프로그램입니다</p>
+<p>Claude Desktop 앱은 이미 설치돼 있다고 보고, 그 <strong>안에 확장 프로그램 하나를 더 얹는</strong> 절차입니다. 앱을 새로 설치하는 일이 아닙니다.</p>
+<p>「설정」이라는 말도 아래에서 두 번 나오는데, 가리키는 것이 다릅니다.</p>
+<ul>
+<li><strong>설정 → 확장 프로그램</strong> (1번): Claude Desktop의 <strong>메뉴 이름</strong>입니다. 확장 프로그램을 찾아 설치하는 장소입니다.</li>
+<li><strong>설정값</strong> (4번): 설치한 <strong>확장 프로그램이 동작하는 데 필요한 값</strong>입니다. 프로그램마다 다르고, 채울 것이 없는 프로그램도 있습니다.</li>
+</ul>
+</div>
+<ol>
+<li>Claude Desktop에서 <strong>설정 → 확장 프로그램</strong>으로 들어갑니다.</li>
+<li><strong>확장 프로그램 찾아보기</strong>를 눌러 목록을 봅니다.</li>
+<li>쓸 것을 고르고 <strong>설치</strong>를 누릅니다.</li>
+<li>필요한 설정값(예: 서비스에서 발급받은 열쇠 값)을 화면 안내대로 채웁니다.</li>
+<li>설치가 끝나면 대화에서 자동으로 쓸 수 있게 됩니다.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">설치하는 형태가 두 가지입니다</p>
+<p>위 2번처럼 <strong>목록에서 찾아 설치</strong>하는 것이 기본입니다. 이와 별개로 확장 프로그램을 <strong>파일 하나로 포장한 형태</strong>(MCPB)도 있어서, 회사나 만든 곳이 그 파일을 주면 받아서 설치합니다. 목록에 없는 사내용 도구가 이렇게 배포되기도 합니다.</p>
+<p>설치한 뒤에는 둘 다 같습니다. 어느 쪽이든 <strong>만든 곳이 믿을 만한지 먼저 확인</strong>하세요.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">확장 프로그램은 내 컴퓨터에서 실행되는 프로그램입니다</p>
+<p>설치한 확장 프로그램은 <strong>일반 프로그램과 같은 권한으로 내 컴퓨터에서 실행됩니다.</strong> 목록에서 골랐더라도 새 프로그램을 설치하는 것과 같은 관점으로 판단하세요. 만든 곳이 믿을 만한지 확인하고(기준은 <a href="#choosing">믿을 만한 서버 고르기</a>와 같습니다), 회사 컴퓨터라면 회사의 프로그램 설치 규정을 그대로 따릅니다.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">열쇠 값(토큰)을 만들 때는 필요한 만큼만</p>
+<p>4번에서 채우는 <strong>열쇠 값</strong>은 서비스가 "이 사람이 맞다"고 확인하는 데 쓰는 문자열입니다. 흔히 토큰·API 키라고 부릅니다. 비밀번호와 달리 <strong>여러 개를 만들 수 있고, 필요 없어지면 하나씩 지울 수 있습니다.</strong></p>
+<p>만드는 화면에서 <strong>무엇을 할 수 있는지 골라 주는 서비스가 많습니다.</strong> 고를 수 있다면 지금 필요한 것만 남기세요. 앞 페이지 <a href="../connectors/#approval-screen">승인 화면에서 확인할 것</a>에서 하던 판단을 열쇠 값을 발급할 때 미리 하는 것이고, 기준도 <a href="../../security-guide/#external-connection">연결 보안 — 맡기는 권한은 최소로</a>와 같습니다.</p>
+<ul>
+<li><strong>범위</strong>: 이 연결이 실제로 건드릴 자료만 고릅니다 (계정 전체 대신 저장소 하나, 스페이스 하나)</li>
+<li><strong>권한</strong>: 읽기로 되는 일이면 쓰기는 빼 둡니다</li>
+<li><strong>기간</strong>: 만료일을 고를 수 있으면 짧게 잡고, 필요할 때 다시 발급합니다</li>
+</ul>
+<p>고를 수 없는 서비스도 있습니다. 그때는 발급한 열쇠 값이 <strong>내 계정 전체를 여는 값</strong>이라는 뜻이니, 쓰지 않게 되면 발급 화면에서 지우는 것까지 한 묶음으로 생각하세요.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">열쇠 값은 대화창에 붙여넣지 않습니다</p>
+<p>설정 칸에 넣는 것과 대화에 붙여넣는 것은 다릅니다. <strong>설정 칸은 연결을 세우는 곳</strong>이고, <strong>대화창은 자료가 오가는 곳</strong>입니다. 열쇠 값은 <a href="../../security-guide/#never-input">절대 입력하면 안 되는 정보</a>의 「인증 정보」에 해당하니, 확장 프로그램을 설정할 때 말고는 어디에도 넣지 마세요.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">먼저 목록부터 둘러보세요</p>
+<p>주소를 직접 넣기 전에, 필요한 것이 이미 목록에 있는지부터 봅니다. 계정에 등록하는 쪽은 <strong>사용자 지정 → 커넥터</strong>의 <strong>추가 → 찾아보기</strong>에서 앞 페이지의 기본 커넥터 목록을, 내 컴퓨터에 설정하는 쪽은 위에서 본 <strong>설정 → 확장 프로그램</strong>에서 확장 프로그램 목록을 볼 수 있습니다. 서로 다른 목록이지만, 어느 쪽이든 주소를 직접 넣는 것보다 안전한 출발점입니다.</p>
+<p><strong>필요한 것이 이 목록에 있다면 주소를 직접 넣을 이유가 없습니다.</strong> 다만 목록에 있다는 것과 검토를 마쳤다는 것은 다르니, <a href="#vs-connector">검토 표시</a>를 함께 보세요.</p>
+</div>
+<p>공식 안내: <a href="https://support.claude.com/ko/articles/11175166">원격 MCP를 사용하여 사용자 정의 커넥터 시작하기</a> · <a href="https://support.claude.com/ko/articles/10949351">Claude Desktop에서 로컬 MCP 서버 시작하기</a></p>
+<hr />
+<h2 id="choosing">믿을 만한 서버 고르기<a class="headerlink" href="#choosing" title="Permanent link">&para;</a></h2>
+<p>목록에서 고를 때는 검토 표시가 확인의 일부를 대신해 줍니다. 주소를 직접 넣어 등록할 때는 검토를 마쳤다는 표시가 붙지 않으니, <strong>확인이 전부 내 몫</strong>이 됩니다. 등록 전에 다섯 가지만 보세요.</p>
+<table>
+<thead>
+<tr>
+<th>확인할 것</th>
+<th>무엇을 보나요</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>목록의 검토 표시</strong></td>
+<td>목록에서 고르는 경우, 자세한 검토를 마친 항목인지 자동 검사만 거친 항목인지 (→ <a href="#vs-connector">위 설명</a>)</td>
+</tr>
+<tr>
+<td><strong>누가 만들었나</strong></td>
+<td>그 서비스를 만든 회사가 직접 공개한 것인가, 제3자가 만든 것인가</td>
+</tr>
+<tr>
+<td><strong>주소가 공식인가</strong></td>
+<td>그 회사 공식 문서·홈페이지에 적힌 주소인가. 사내 서버라면 담당 부서가 안내한 주소인가. 채팅·메일로 받은 주소는 한 번 더 확인</td>
+</tr>
+<tr>
+<td><strong>어떤 권한을 요구하나</strong></td>
+<td>승인 화면에 나오는 범위가 하려는 일에 비해 넓지 않은가</td>
+</tr>
+<tr>
+<td><strong>쓰기가 꼭 필요한가</strong></td>
+<td>읽기만으로 되는 일이라면 쓰기는 허용하지 않기</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">서버가 응답하는 내용에 지시가 섞여 있을 수 있습니다</p>
+<p>AI는 서버에서 받아 온 내용을 읽고 다음 행동을 정합니다. 그 내용 안에 <em>"이 파일도 함께 보내라"</em> 같은 문장이 숨어 있으면, AI가 그것을 사용자의 지시로 착각할 수 있습니다. 이런 수법을 <strong>프롬프트 주입</strong>이라고 부릅니다.</p>
+<p>Claude에는 이를 막는 보호 장치가 있지만 완전하지는 않습니다. <strong>믿을 수 있는 곳에서 만든 서버만 등록하는 것</strong>이 가장 확실한 방어입니다.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">「항상 허용」은 마지막에 누르세요</p>
+<p>작업 중 AI가 도구 사용 승인을 물어볼 때 <strong>항상 허용</strong>을 고르면 이후로는 묻지 않습니다. 편하지만, 그만큼 무슨 일이 일어나는지 보지 못하게 됩니다. <strong>처음 몇 번은 매번 읽고 승인</strong>하면서 그 서버가 실제로 무엇을 하는지 확인한 뒤에 결정하세요.</p>
+<p>지금 하는 일과 관계없는 도구는 꺼 두는 편이 안전하고 결과도 깔끔합니다.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">회사에서는 쓸 수 있는 서버가 미리 정해져 있을 수 있습니다</p>
+<p>위 다섯 가지는 내가 직접 고를 때의 기준입니다. 회사 자료를 다루는 환경이라면 <strong>그 판단에 앞서 회사가 정한 범위</strong>가 있습니다. 허용 목록이 있으면 그 안에서 고르고, 사내에 서버 등록·승인 절차가 있으면 그 절차가 먼저입니다.</p>
+<p>직접 등록하는 방식은 검토하는 사람이 나뿐이라, 잘못 고르면 <strong>회사 자료가 어디로 나가는지 회사도 나도 모르는 상태</strong>가 됩니다. 기준이 있는지부터 담당 부서에 확인하세요.</p>
+<p>회사 자료가 오가는 연결의 기준은 <a href="../../security-guide/#external-connection">보안 및 개인정보 가이드 — 외부 연결</a>에 정리돼 있습니다.</p>
+</div>
+<hr />
+<h2 id="after-connect">연결한 뒤에 할 일<a class="headerlink" href="#after-connect" title="Permanent link">&para;</a></h2>
+<p>등록은 시작일 뿐이고, 쓰는 동안 확인해야 할 것이 남습니다.</p>
+<ul>
+<li><strong>무엇을 읽고 썼는지 물어보기</strong>: 결과만 받지 말고 "어느 자료를 봤는지" 함께 물으면 확인이 쉬워집니다.</li>
+<li><strong>쓰기 작업은 결과를 직접 열어 보기</strong>: 문서 생성·항목 수정처럼 흔적이 남는 일은 실제 화면에서 확인합니다.</li>
+<li><strong>안 쓰는 서버는 끊기</strong>: 기본 커넥터와 같은 화면에서 정리합니다 (→ <a href="../connectors/#manage-disconnect">연결을 점검하고 끊기</a>).</li>
+</ul>
+<div class="admonition abstract">
+<p class="admonition-title">판단이 늘어난 만큼 검토도 늘어납니다</p>
+<p>MCP 서버는 커넥터보다 폭이 넓고, 넓어진 만큼 AI가 예상 밖의 자료에 접근할 여지도 커집니다. <a href="../../#meta-principles">메타 원칙 ③ AI 결과물 검토·이해 의무</a>가 가장 중요해지는 곳입니다.</p>
+<p>편의가 늘어난 만큼 검토를 줄이는 게 아니라, <strong>늘어난 편의에 비례해 검토도 늘린다</strong>고 생각하는 편이 맞습니다.</p>
+</div>
+<hr />
+<h2 id="troubleshooting">잘 안 될 때<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>증상</th>
+<th>확인할 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>대화에서 서버가 안 쓰임</td>
+<td>대화창 <code>+</code> → <strong>커넥터</strong>에서 <strong>토글이 켜져 있는지</strong></td>
+</tr>
+<tr>
+<td>목록에 커넥터가 안 보임</td>
+<td>회사 플랜이라면 <strong>조직 소유자가 먼저 추가</strong>했는지</td>
+</tr>
+<tr>
+<td>커넥터 화면에 주소를 넣었는데 연결 실패</td>
+<td>그 주소가 <strong>인터넷에서 열려 있는지</strong>. 이 방식은 접속이 내 컴퓨터가 아니라 <strong>Anthropic 쪽에서 시작</strong>하므로, 사내망 주소는 내 컴퓨터에서 열리더라도 연결되지 않습니다. 사내 서버라면 회사 안내대로 <strong>내 컴퓨터에 설정</strong>하는 방식을 쓰세요 (→ <a href="#remote-vs-local">어디에 설정하느냐</a>)</td>
+</tr>
+<tr>
+<td>주소를 잘못 넣음</td>
+<td>등록한 커넥터는 수정이 안 됩니다. <strong>제거 후 다시 추가</strong>하세요</td>
+</tr>
+<tr>
+<td>확장 프로그램은 설치됐는데 도구가 없음</td>
+<td>Claude Desktop을 <strong>다시 시작</strong>하고, 설정에서 <strong>비어 있는 필수 항목</strong>이 없는지 확인</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="out-of-scope">만드는 일은 다루지 않습니다<a class="headerlink" href="#out-of-scope" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">여기서 다루는 것은 이용하는 것까지입니다</p>
+<p>MCP 서버를 <strong>직접 만드는 일</strong>은 코드 작성과 서버 운영이 따르는 개발자 영역이라 여기서 다루지 않습니다. 1부에서 <a href="../../basics/#three-forms">애플리케이션을 범위 밖으로 둔 것</a>과 같은 기준입니다.</p>
+<p>관심이 생겼다면 개발자용 공식 문서인 <a href="https://docs.claude.com/ko/docs/agents-and-tools/mcp">MCP 안내</a>에서 이어 갈 수 있습니다.</p>
+</div>
+<p>비개발자에게 필요한 것은 <strong>고르는 눈</strong>입니다. 만드는 법을 몰라도, 무엇을 고르고 어디까지 허용할지 정할 수 있으면 충분합니다.</p>
+<hr />
+<h2 id="next">다음으로<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<p>2부에서 다루는 두 갈래를 모두 지났습니다.</p>
+<ul>
+<li>대부분의 업무 자료는 <a href="../connectors/">기본 커넥터</a>로 해결됩니다. 먼저 그쪽 목록을 확인하세요.</li>
+<li>목록에 없는 도구가 필요할 때, 이 페이지의 기준으로 골라 등록하면 됩니다.</li>
+<li>회사 자료를 다루기 전에 <a href="../../security-guide/#external-connection">보안 및 개인정보 가이드 — 외부 연결</a>을 한 번 읽어 두세요.</li>
+</ul>
+<p>연결은 <strong>한 번에 다 열어 두는 것보다, 지금 하는 일에 필요한 하나부터 연결하는 편</strong>이 훨씬 잘 굴러갑니다. 1부에서 골라 둔 반복 작업이 있다면, 그 작업이 어떤 자료를 필요로 하는지부터 짚어 보세요 (→ <a href="../">2부 개요</a>).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../connectors/" class="md-footer__link md-footer__link--prev" aria-label="이전: 기본 커넥터 — Atlassian·GitHub">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                기본 커넥터 — Atlassian·GitHub
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../security-guide/" class="md-footer__link md-footer__link--next" aria-label="다음: 보안 및 개인정보 가이드">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                보안 및 개인정보 가이드
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
