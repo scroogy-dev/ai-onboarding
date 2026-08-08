@@ -40,7 +40,7 @@
 | **[step01-weather](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step01-weather)** | 날씨 — 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약 |
 | **[step02-file-classifier](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step02-file-classifier)** | 파일 분류 | 1·2 | Skill 옵션(파라미터) 설계 |
 | **[step03-voca-quiz](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step03-voca-quiz)** | 영어 단어 출제기 | 1·2 | Skill 활용 다양화 |
-| **[step04-wrong-answer-note](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step04-wrong-answer-note)** | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 + 검수 자리 + 데이터·뷰 분리 |
+| **[step04-wrong-answer-note](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step04-wrong-answer-note)** | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 + 검수 단계 + 데이터·뷰 분리 |
 
 ---
 
