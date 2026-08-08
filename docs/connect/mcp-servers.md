@@ -79,7 +79,7 @@ flowchart LR
     subgraph NET["인터넷"]
         CS["<b>Claude 서비스</b>"]
         MS["MCP 서버"]
-        D1["GitHub · Atlassian<br/>클라우드"]
+        D1["Atlassian · GitHub<br/>클라우드"]
     end
     subgraph LAN["사내망 (VPN 안에서만 열림)"]
         X["사내 MCP 서버 ·<br/>사내 자료"]
@@ -105,7 +105,7 @@ flowchart LR
     end
     subgraph LAN["사내망 (VPN에 붙어 있을 때)"]
         MS2["MCP 서버<br/>(회사 제공)"]
-        D2["GitHub Enterprise ·<br/>사내 위키<br/><i>사내 데이터</i>"]
+        D2["사내 위키 ·<br/>GitHub Enterprise<br/><i>사내 데이터</i>"]
     end
     subgraph NET["인터넷"]
         CS["<b>Claude 서비스</b>"]
@@ -125,7 +125,7 @@ flowchart LR
 다만 Claude 서비스로 향하는 화살표를 보세요. 읽은 내용은 결국 그쪽으로 올라갑니다. 내 컴퓨터에 설정했다고 자료가 내 컴퓨터 안에만 머무는 것이 아닙니다 (→ 이 절 아래 주의 박스).
 
 !!! info "회사 자료를 연결할 때 — 임직원"
-    회사가 사내 자료용 MCP 서버를 마련해 제공하는 경우가 있습니다. 사내 위키, 온프레미스로 운영하는 GitHub Enterprise·Atlassian 같은 것들입니다. **방법은 회사가 정해서 안내합니다.**
+    회사가 사내 자료용 MCP 서버를 마련해 제공하는 경우가 있습니다. 사내 위키, 온프레미스로 운영하는 Atlassian·GitHub Enterprise 같은 것들입니다. **방법은 회사가 정해서 안내합니다.**
 
     - **회사가 확장 프로그램으로 배포**: 목록에서 찾아 설치하거나, 회사가 준 파일로 설치합니다.
     - **회사가 서버 주소를 안내**: 안내받은 대로 내 컴퓨터 설정에 등록합니다.
