@@ -98,7 +98,7 @@ Claude는 한 모델이 아니라 **여러 라인업**으로 구성됩니다. cl
 !!! tip "어느 모델을 쓸까?"
     기준은 **추론이 얼마나 필요한가**입니다. 본인도 잘 모르는 주제를 함께 풀어 가야 한다면 **Opus**, 검색·찾아바꾸기·요약처럼 지시 이행이 핵심이라면 **Sonnet**으로 충분합니다. 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로 옮기면 됩니다 (Anthropic도 [복잡한 작업이라면 Opus 시작을 권장](https://platform.claude.com/docs/ko/about-claude/models/overview)). **Fable**은 그 위의 선택지입니다. Opus로도 부족한 가장 어려운 문제나 장시간 자율 작업에서 고려하세요.
 
-> 라인업은 비교적 안정적으로 유지되지만, 이번 Fable처럼 새 라인업이 더해지기도 하고 버전 번호(예: Fable **5**, Opus **4.8**, Sonnet **4.6**, Haiku **4.5**)는 자주 갱신됩니다. 최신 사양과 플랜별 제공 조건은 [Anthropic 공식 모델 안내](https://platform.claude.com/docs/ko/about-claude/models/overview)에서 확인할 수 있습니다.
+> 라인업은 비교적 안정적으로 유지되지만, 이번 Fable처럼 새 라인업이 더해지기도 하고 버전 번호(예: Fable **5**, Opus **5**, Sonnet **5**, Haiku **4.5**)는 자주 갱신됩니다. 최신 사양과 플랜별 제공 조건은 [Anthropic 공식 모델 안내](https://platform.claude.com/docs/ko/about-claude/models/overview)에서 확인할 수 있습니다.
 
 ---
 

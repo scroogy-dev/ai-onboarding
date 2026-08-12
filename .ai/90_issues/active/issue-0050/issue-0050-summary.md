@@ -76,6 +76,8 @@
 - **수행 내용 요약**: (진행 중) 피드백 라운드 1 ― 번외 지시로 제품 나열 순서를 Claude → ChatGPT → Gemini로 통일했다(spec 「기타 피드백 (번외)」 참조). 가로 나열 6곳과 표 세로 행 순서 3곳, 합계 9곳이다: `docs/intro.md` 3곳(절 제목·대표 제품 표·회사별 짝꿍 표), `docs/index.md` 2곳(참가 대상 산문·3단계 표 셀), `docs/operation-guide.md` 1곳(대상 안내 산문), `slides/slides.md` 3곳(회사별 짝꿍 표·발표자 노트·3단계 표 셀). 회사별 표는 챗봇 열이 같은 세 제품이라 행 순서를 Anthropic → OpenAI → Google로 함께 맞췄다. 검증 3건 통과: `Gemini.*ChatGPT` 잔존 0건, `mkdocs build --strict` 종료 코드 0, Slidev 빌드 종료 코드 0.
 - **특이 사항**: 손대지 않은 곳 1건 ― `docs/operation-guide.md` 22행 사전설문 보기(`Claude, ChatGPT, Gemini, 기타`)는 이미 이 순서였다. `docs/intro.md` 절 제목의 앵커 `{ #products }`는 그대로 두어 같은 파일 133행의 참조 링크가 유지된다. slides는 ADR-0002상 docs 파생이라 Task 6이 정식 처리 자리지만, 이 항목은 문장 구조를 건드리지 않는 나열 순서 변경이라 같은 회차에 반영했다.
 
+  피드백 라운드 2 ― 모델 버전 번호를 현행화했다(번외). 낡은 표기 `Fable 5·Opus 4.8·Sonnet 4.6·Haiku 4.5`를 **`Fable 5·Opus 5·Sonnet 5·Haiku 4.5`**로 고쳤다(Haiku만 4.5 유지). 대상 3곳: `docs/intro.md` 101행 라인업 안내 인용문, `slides/slides.md` 729행 슬라이드 하단 주석·743행 발표자 노트. 값은 `claude-api` 레퍼런스로 대조했다(모델 ID `claude-fable-5`·`claude-opus-5`·`claude-sonnet-5`·`claude-haiku-4-5`, 컨텍스트 1M/1M/1M/200K). 라인업 이름만 나오는 자리(모델 비교 표, 절 제목, 사용량 화면 설명)는 버전 번호가 없어 손대지 않았고, `docs/index.md`의 「참고: 컨텍스트 크기」(200K·500K·1M)는 claude.ai·Enterprise 플랜의 **서비스 한도**를 공식 지원 문서 링크와 함께 인용한 것이라 모델 스펙과 별개여서 제외했다. 검증 3건 통과: 낡은 Opus·Sonnet 버전 번호 잔존 0건, `mkdocs build --strict` 종료 코드 0, Slidev 빌드 종료 코드 0.
+
 ---
 
 ### Task 5: labs/ 실습 자료 정리

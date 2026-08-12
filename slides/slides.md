@@ -726,7 +726,7 @@ nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞 ― docs int
 
 <div class="text-sm opacity-80 mt-3">
 
-버전 번호(Fable 5·Opus 4.8 등)는 자주 갱신 ― 라인업만 기억하고 최신 사양은 docs. 사용량·한도 확인은 <strong>다음 슬라이드</strong>에서.
+버전 번호(Fable 5·Opus 5 등)는 자주 갱신 ― 라인업만 기억하고 최신 사양은 docs. 사용량·한도 확인은 <strong>다음 슬라이드</strong>에서.
 
 </div>
 
@@ -740,7 +740,7 @@ docs/intro.md 「모델 비교 ― Fable · Opus · Sonnet · Haiku」(#claude-m
 - Opus: 본인도 잘 모르는 주제·다단계 ― 추론이 핵심일 때.
 - Sonnet: 일상 기본값. 검색·요약·찾아바꾸기 같은 지시 이행 작업.
 - Haiku: 짧은 답·반복.
-버전 번호(Fable 5·Opus 4.8 등)는 본문 생략 ― 라인업 시그니처가 안정, 버전은 자주 갱신되므로 docs로 위임.
+버전 번호(Fable 5·Opus 5 등)는 본문 생략 ― 라인업 시그니처가 안정, 버전은 자주 갱신되므로 docs로 위임.
 사용량은 다음 슬라이드(사용량 확인)로 ― docs intro가 모델 다음에 사용량을 두는 순서와 정합.
 -->
 
