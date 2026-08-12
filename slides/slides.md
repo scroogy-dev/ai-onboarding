@@ -1362,7 +1362,7 @@ labs/README.md·docs/labs.md의 "결과물은 반드시 읽고 이해합니다" 
 </div>
 
 <div class="mt-5 text-center text-xs opacity-70 max-w-4xl mx-auto">
-참고 ― 컨텍스트 크기: <strong>모든 모델·유료 플랜 200K</strong>, Enterprise 일부 모델 <strong>500K</strong>; <strong>Claude Code 일부 모델 1M</strong> (<code>/model</code>로 선택). <a href="https://platform.claude.com/docs/ko/build-with-claude/context-windows">기술 배경</a> · <a href="https://support.claude.com/ko/articles/8606394">Claude.ai 한도</a>
+참고 ― 컨텍스트 크기: 최신 모델(Fable 5·Opus 5·Sonnet 5) <strong>1M</strong>, claude.ai 챗의 이전 세대 모델 <strong>500K</strong>; Claude Code는 이전 세대 Opus까지 1M. <a href="https://platform.claude.com/docs/ko/build-with-claude/context-windows">기술 배경</a> · <a href="https://support.claude.com/ko/articles/8606394">Claude.ai 한도</a>
 </div>
 
 <!--
@@ -1370,7 +1370,7 @@ docs/index.md `### AI 활용 메타 원칙` ④ 박스 압축 ― ADR-0002 단�
 사용자 보강 가이드(2026-05-09 보강 #2):
 - 박스 도입부에 컨텍스트 정의 단락 신설(슬라이드는 본문 첫 줄에 흡수).
 - "새 대화를 시작하는 방법" 표면별 명령(챗봇/Cowork 새 대화·Code /clear) ― 슬라이드는 두 카드 중 우측 카드로 시각 분리.
-- "참고 ― 컨텍스트 크기" 인용 단락(200K/500K/1M·외부 docs 한국어 링크 2개) ― 슬라이드는 footer 작은 글자로 노출(발표 매체 특성, 본문 무게감 보존).
+- "참고 ― 컨텍스트 크기" 인용 단락(1M/500K·외부 docs 한국어 링크 2개) ― 슬라이드는 footer 작은 글자로 노출(발표 매체 특성, 본문 무게감 보존).
 회의록 메타포는 우측 카드 마지막 한 줄로 압축 ― docs는 두 자리에서 풀지만 슬라이드는 한 줄.
 -->
 
