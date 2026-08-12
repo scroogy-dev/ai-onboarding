@@ -139,7 +139,7 @@ Claude는 한 모델이 아니라 **여러 라인업**으로 구성됩니다. cl
 
 ### 사용량 확인 방법 { #claude-usage }
 
-Pro·Max 플랜에는 시간·기간별 한도가 있습니다. 사용 현황은 **두 가지 화면**으로 봅니다. *한도 숫자*(설정)와 *누적 사용량*(Code 탭)입니다.
+Pro·Max·Team 플랜에는 시간·기간별 한도가 있습니다. 사용 현황은 **두 가지 화면**으로 봅니다. *한도 숫자*(설정)와 *누적 사용량*(Code 탭)입니다.
 
 #### ① 한도 숫자 ― 설정 → 사용량 (Settings → Usage)
 
@@ -147,8 +147,8 @@ Pro·Max 플랜에는 시간·기간별 한도가 있습니다. 사용 현황은
 
 | 화면 항목 | 의미 |
 |-----------|------|
-| 현재 세션 (Current session) | 5시간 세션 한도 중 사용한 양과 남은 시간 |
-| 주간 한도 (Weekly usage limit reset) | Opus / 그 외 모델별 다음 주간 초기화 시점 |
+| 5시간 한도 | 전체 모델 기준 사용한 양과 다음 재설정까지 남은 시간 |
+| 주간 한도 | 전체 모델 기준 사용한 양과 다음 재설정 시점 |
 
 #### ② 누적 사용량 ― Claude Desktop의 Code 탭 → 사용량 링
 
@@ -173,10 +173,13 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 !!! tip "Cowork은 채팅보다 한도 소비가 큽니다"
     [공식 안내](https://support.claude.com/ko/articles/11647753): *"Cowork에서의 작업은 Claude와 채팅하는 것보다 사용량을 더 많이 소비합니다."* 멀티 스텝·도구 호출이 많기 때문입니다. 단순한 질문·정리는 chat, 본격 작업만 Cowork으로 분리하면 한도가 오래 갑니다.
 
-**한도에 도달했다면**: 5시간 세션 초기화를 기다리거나, 플랜을 상향하거나, [추가 사용량 구매](https://support.claude.com/ko/articles/12429409)로 이어서 사용합니다. claude.ai · Cowork · Claude Code는 **하나의 한도 풀**을 함께 씁니다.
+**한도에 도달했다면**: 5시간 한도 초기화를 기다리거나, 플랜을 상향하거나, [추가 사용량 구매](https://support.claude.com/ko/articles/12429409)로 이어서 사용합니다. claude.ai · Cowork · Claude Code는 **하나의 한도 풀**을 함께 씁니다.
 
 !!! info "Claude Code 사용량 확인 (옵션)"
-    터미널 세션 안에서 `/usage` 로 Pro·Max 플랜 한도 사용량을, `/extra-usage` 로 추가 사용량 관리를 확인합니다 ([Pro 또는 Max 플랜으로 Claude Code 사용하기](https://support.claude.com/ko/articles/11145838)).
+    터미널 세션 안에서 `/usage` 로 플랜 한도 사용량을, `/extra-usage` 로 추가 사용량 관리를 확인합니다. 플랜별 안내는 아래 공식 문서를 참고하세요.
+
+    - [Pro 또는 Max 플랜으로 Claude Code 사용하기](https://support.claude.com/ko/articles/11145838)
+    - [팀 또는 엔터프라이즈 플랜으로 Claude Code 사용하기](https://support.claude.com/ko/articles/11845131)
 
 > 공식 안내: [Claude Code Desktop ― 사용량 확인하기](https://code.claude.com/docs/ko/desktop#check-usage)
 

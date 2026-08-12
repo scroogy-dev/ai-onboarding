@@ -759,8 +759,8 @@ docs/intro.md 「모델 비교 ― Fable · Opus · Sonnet · Haiku」(#claude-m
 
 claude.ai 웹·Claude Desktop 공통.
 
-- **현재 세션** ― 5시간 한도 중 사용량·남은 시간
-- **주간 한도** ― Opus / 그 외 모델별 초기화 시점
+- **5시간 한도** ― 전체 모델 기준 사용량·남은 시간
+- **주간 한도** ― 전체 모델 기준 사용량·재설정 시점
 
 </div>
 </div>
