@@ -1,4 +1,4 @@
-# AI 도구와 제품 — 생성형 AI 지형과 Claude
+# AI 도구와 제품 ― 생성형 AI 지형과 Claude
 
 > 생성형 AI 시장의 큰 그림과, 본 교육에서 쓰는 도구(Claude 생태계)를 한데 모은 페이지입니다.
 > 도구 선택·기능 비교·사용량 확인이 필요할 때 펼쳐 보세요. 용어가 낯설면 [기본 용어와 범위](basics.md)를 먼저 봐도 됩니다.
@@ -8,9 +8,9 @@
 ## 생성형 AI 소개
 
 !!! note "용어 안내"
-    이 페이지에서 «챗봇», «에이전트»는 모두 **AI 챗봇**, **AI 에이전트**를 짧게 쓴 표기입니다. 두 사용 방식이 각각 무엇인지는 [기본 용어 — 챗봇 vs 에이전트](basics.md#chatbot-vs-agent)에서 정의합니다.
+    이 페이지에서 «챗봇», «에이전트»는 모두 **AI 챗봇**, **AI 에이전트**를 짧게 쓴 표기입니다. 두 사용 방식이 각각 무엇인지는 [기본 용어 ― 챗봇 vs 에이전트](basics.md#chatbot-vs-agent)에서 정의합니다.
 
-### 대표 제품 — Claude · Gemini · ChatGPT { #products }
+### 대표 제품 ― Claude · Gemini · ChatGPT { #products }
 
 생성형 AI는 글·코드·이미지처럼 **새로운 결과물을 만들어내는 AI**를 말합니다. 그중 대화형 제품은 다음 3종이 가장 널리 알려져 있습니다.
 
@@ -21,12 +21,12 @@
 | **ChatGPT** | OpenAI | 가장 널리 알려진 대화형 AI. 음성·이미지 멀티모달 강세 |
 
 !!! info "본 교육은 Claude로 진행합니다"
-    실습은 **Claude 단독**으로 운영합니다. 챗봇 사용 경험(1단계)은 어떤 제품이든 비슷한 감각을 줄 수 있어 본인이 익숙한 도구로 시작해도 괜찮습니다. 다만 본 교육의 **2·3단계 실습은 Claude의 자산화·에이전트 기능**을 활용하므로 도구는 Claude로 통일합니다 (자세한 배경은 [홈 — 준비사항](index.md#preparation) 참조).
+    실습은 **Claude 단독**으로 운영합니다. 챗봇 사용 경험(1단계)은 어떤 제품이든 비슷한 감각을 줄 수 있어 본인이 익숙한 도구로 시작해도 괜찮습니다. 다만 본 교육의 **2·3단계 실습은 Claude의 자산화·에이전트 기능**을 활용하므로 도구는 Claude로 통일합니다 (자세한 배경은 [홈 ― 준비사항](index.md#preparation) 참조).
 
 !!! tip "어느 제품이 가장 좋나요?"
     제품마다 강점이 다르고, 같은 제품도 모델·기능이 매달 빠르게 바뀝니다. **'정답 하나'를 고르는 시점은 지났습니다.** 업무·환경에 맞춰 1~2개를 꾸준히 익히는 편이 실용적입니다.
 
-#### 챗봇만 알지 마세요 — 같은 회사에 코딩 에이전트도 있습니다
+#### 챗봇만 알지 마세요 ― 같은 회사에 코딩 에이전트도 있습니다
 
 같은 회사가 만든 챗봇과 코딩 에이전트는 **짝으로 묶여** 있습니다. 챗봇은 익숙해도 에이전트 쪽은 잘 모르는 경우가 많은데, **본격적인 자동화 무대는 이쪽**입니다.
 
@@ -50,11 +50,11 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 | **Claude Cowork** | 파일·도구를 직접 다루는 범용 에이전트 | **3단계 본격 실습**                  |
 | **Claude Code**   | 터미널·IDE 코딩 특화 에이전트   | 3단계 보조 도구 (옵션 안내)          |
 
-> 세 제품 모두 **유료 플랜**이 필요합니다. 개인은 **Claude Pro 이상**, 임직원은 **회사 Team·Enterprise**입니다 (개인 플랜 사용 금지). 본 교육의 Cowork·Code 실습에는 **Claude Desktop 설치**가 전제됩니다. [홈 — 준비사항](index.md#preparation) 참조.
+> 세 제품 모두 **유료 플랜**이 필요합니다. 개인은 **Claude Pro 이상**, 임직원은 **회사 Team·Enterprise**입니다 (개인 플랜 사용 금지). 본 교육의 Cowork·Code 실습에는 **Claude Desktop 설치**가 전제됩니다. [홈 ― 준비사항](index.md#preparation) 참조.
 
 ---
 
-### 기능 비교 — 한눈에 { #claude-comparison }
+### 기능 비교 ― 한눈에 { #claude-comparison }
 
 세 제품의 능력 차이를 한 표로 정리합니다. **로컬 파일·터미널 접근 여부**가 챗봇과 에이전트를 가르는 핵심 분기선입니다.
 
@@ -80,11 +80,11 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 - **내 계정에 등록**: 접속을 Anthropic 쪽에서 하므로 웹·데스크톱·모바일 어디서나 같지만, 인터넷에서 열려 있는 주소만 연결됩니다.
 - **내 컴퓨터에 설정**: 접속이 내 컴퓨터에서 시작합니다. 사내망 서버는 로컬 서버처럼 이 방식으로 연결하며, 이때도 데스크톱 앱이 필요합니다.
 
-두 구분이 어떻게 맞물리는지는 **[2부 — 어디에 설정하느냐](connect/mcp-servers.md#remote-vs-local)** 에서 다룹니다.
+두 구분이 어떻게 맞물리는지는 **[2부 ― 어디에 설정하느냐](connect/mcp-servers.md#remote-vs-local)** 에서 다룹니다.
 
 ---
 
-### 모델 비교 — Fable · Opus · Sonnet · Haiku { #claude-models }
+### 모델 비교 ― Fable · Opus · Sonnet · Haiku { #claude-models }
 
 Claude는 한 모델이 아니라 **여러 라인업**으로 구성됩니다. claude.ai·Cowork·Code 어디에서나 동일한 라인업을 공유하며, 사용 화면에서 직접 고를 수 있습니다. 기존 세 라인업 **위에** 최상위 모델 **Fable**이 더해졌습니다. 기존 라인업을 대체하는 게 아니라 한 층이 추가된 것입니다.
 
@@ -102,7 +102,7 @@ Claude는 한 모델이 아니라 **여러 라인업**으로 구성됩니다. cl
 
 ---
 
-### claude.ai (Chat) — 1단계의 시작점 { #claude-ai }
+### claude.ai (Chat) ― 1단계의 시작점 { #claude-ai }
 
 웹·모바일 브라우저에서 바로 쓰는 대화형 챗봇입니다. 빠른 질문, 정보 정리, 글 다듬기 같은 **1회성 작업**에 적합합니다.
 
@@ -111,7 +111,7 @@ Claude는 한 모델이 아니라 **여러 라인업**으로 구성됩니다. cl
 
 ---
 
-### Claude Cowork — 3단계 본격 무대 { #claude-cowork }
+### Claude Cowork ― 3단계 본격 무대 { #claude-cowork }
 
 **AI가 직접 파일을 열고 작업을 수행**하는 에이전트입니다. 반복 작업 자동화, 로컬 파일 일괄 처리, 여러 단계로 이어지는 워크플로우에 적합합니다.
 
@@ -128,7 +128,7 @@ Claude는 한 모델이 아니라 **여러 라인업**으로 구성됩니다. cl
 
 ---
 
-### Claude Code — 3단계 보조 도구 { #claude-code }
+### Claude Code ― 3단계 보조 도구 { #claude-code }
 
 터미널·IDE에서 동작하는 **코딩 특화 에이전트**입니다 ([앞 표의 회사별 코딩 에이전트](#products) 중 Anthropic 항목). 본격적인 코딩·자동화 스크립트 작성에 적합합니다.
 
@@ -141,7 +141,7 @@ Claude는 한 모델이 아니라 **여러 라인업**으로 구성됩니다. cl
 
 Pro·Max 플랜에는 시간·기간별 한도가 있습니다. 사용 현황은 **두 가지 화면**으로 봅니다. *한도 숫자*(설정)와 *누적 사용량*(Code 탭)입니다.
 
-#### ① 한도 숫자 — 설정 → 사용량 (Settings → Usage)
+#### ① 한도 숫자 ― 설정 → 사용량 (Settings → Usage)
 
 **claude.ai 웹**과 **Claude Desktop** 모두 같은 화면에서 확인합니다.
 
@@ -150,7 +150,7 @@ Pro·Max 플랜에는 시간·기간별 한도가 있습니다. 사용 현황은
 | 현재 세션 (Current session) | 5시간 세션 한도 중 사용한 양과 남은 시간 |
 | 주간 한도 (Weekly usage limit reset) | Opus / 그 외 모델별 다음 주간 초기화 시점 |
 
-#### ② 누적 사용량 — Claude Desktop의 Code 탭 → 사용량 링
+#### ② 누적 사용량 ― Claude Desktop의 Code 탭 → 사용량 링
 
 Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우측 하단의 **사용량 링**(현재 모델 표시 옆)을 클릭하면 짧은 요약 화면이 먼저 펼쳐집니다.
 
@@ -178,7 +178,7 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 !!! info "Claude Code 사용량 확인 (옵션)"
     터미널 세션 안에서 `/usage` 로 Pro·Max 플랜 한도 사용량을, `/extra-usage` 로 추가 사용량 관리를 확인합니다 ([Pro 또는 Max 플랜으로 Claude Code 사용하기](https://support.claude.com/ko/articles/11145838)).
 
-> 공식 안내: [Claude Code Desktop — 사용량 확인하기](https://code.claude.com/docs/ko/desktop#check-usage)
+> 공식 안내: [Claude Code Desktop ― 사용량 확인하기](https://code.claude.com/docs/ko/desktop#check-usage)
 
 ---
 
@@ -197,7 +197,7 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 
 - [Projects(프로젝트)란 무엇입니까](https://support.claude.com/ko/articles/9517075): 자료·지침을 묶어 재사용
 - [스킬이란 무엇인가요](https://support.claude.com/ko/articles/12512176): 반복 작업을 스킬로 자산화
-- [MCP 안내](https://docs.claude.com/ko/docs/agents-and-tools/mcp): MCP 서버를 **직접 만들 때** 보는 개발자용 문서. 이용하는 방법은 [2부 — MCP 서버 이용하기](connect/mcp-servers.md)로 충분합니다
+- [MCP 안내](https://docs.claude.com/ko/docs/agents-and-tools/mcp): MCP 서버를 **직접 만들 때** 보는 개발자용 문서. 이용하는 방법은 [2부 ― MCP 서버 이용하기](connect/mcp-servers.md)로 충분합니다
 
 ### 운영·지원
 
@@ -209,8 +209,8 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 
 ## 함께 읽어보세요
 
-- [홈 — 본 교육의 Why·What·How](index.md)
-- [홈 — 준비사항](index.md#preparation): Claude Pro·Desktop 설치 등 사전 준비
-- [홈 — 3단계 모델](index.md#stage-model): 본 교육이 다루는 학습 사다리
-- [2부 — 도구·데이터 연결](connect/index.md): 커넥터·MCP 서버로 외부 자료를 연결하기
+- [홈 ― 본 교육의 Why·What·How](index.md)
+- [홈 ― 준비사항](index.md#preparation): Claude Pro·Desktop 설치 등 사전 준비
+- [홈 ― 3단계 모델](index.md#stage-model): 본 교육이 다루는 학습 사다리
+- [2부 ― 도구·데이터 연결](connect/index.md): 커넥터·MCP 서버로 외부 자료를 연결하기
 - [보안 및 개인정보 가이드](security-guide.md)

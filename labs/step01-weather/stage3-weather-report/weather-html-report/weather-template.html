@@ -2,13 +2,13 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>오늘의 날씨 — {{location}}</title>
+<title>오늘의 날씨 ― {{location}}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
   본 파일은 weather-html-report Skill이 사용하는 HTML 슬롯 템플릿입니다.
 
   슬롯 형식
-  - 스칼라 슬롯: {{slot_name}} — 단일 값으로 치환
+  - 스칼라 슬롯: {{slot_name}} ― 단일 값으로 치환
   - 자동 매핑(슬롯에 알맞은 텍스트만 넣어도 색·아이콘이 자동 결정):
     - hero[data-weather] → 9가지 weather state별 그라데이션·SVG 아이콘 자동 표시
     - .aq-badge[data-grade] → 4가지 등급(좋음/보통/나쁨/매우 나쁨)별 배지 색
@@ -75,7 +75,7 @@
   }
   .screen::-webkit-scrollbar { display: none; }
 
-  /* Hero — weather state별 9가지 그라데이션 자동 매핑 */
+  /* Hero ― weather state별 9가지 그라데이션 자동 매핑 */
   .hero {
     color: #fff; padding-top: 56px; padding-bottom: 26px; position: relative;
     background: linear-gradient(165deg, #2D6FB5 0%, #4F9CD9 60%, #6FB3E5 100%);
@@ -121,7 +121,7 @@
     margin-top: 14px;
   }
 
-  /* Weather icon — 9가지 자동 매핑 */
+  /* Weather icon ― 9가지 자동 매핑 */
   #weather-icon { width: 108px; height: 108px; flex-shrink: 0; }
   #weather-icon svg { width: 100%; height: 100%; display: none; }
   .hero[data-weather="맑음"]     #weather-icon .wt-sunny         { display: block; }
@@ -243,7 +243,7 @@
   </div>
 
   <div class="screen">
-    <!-- HERO — data-weather에 9가지 weather state 중 하나를 넣으면 그라데이션·아이콘이 자동 매핑 -->
+    <!-- HERO ― data-weather에 9가지 weather state 중 하나를 넣으면 그라데이션·아이콘이 자동 매핑 -->
     <div class="hero" data-weather="{{weather_state}}">
       <div class="hero-top">
         <div class="hero-loc">
@@ -279,7 +279,7 @@
           </div>
 
           <div id="weather-icon">
-            <!-- 9가지 SVG 모두 포함 — CSS가 hero[data-weather]를 보고 1개만 표시 -->
+            <!-- 9가지 SVG 모두 포함 ― CSS가 hero[data-weather]를 보고 1개만 표시 -->
             <svg class="wt-sunny" viewBox="0 0 120 120" fill="none">
               <circle cx="60" cy="60" r="36" fill="#FFE17A" opacity="0.25"/>
               <circle cx="60" cy="60" r="26" fill="#FFE17A"/>
@@ -373,7 +373,7 @@
       </div>
     </div>
 
-    <!-- CATEGORY 1 — 날씨 정보 -->
+    <!-- CATEGORY 1 ― 날씨 정보 -->
     <div class="section">
       <div class="section-title">날씨 정보</div>
       <div class="card-grid">
@@ -426,7 +426,7 @@
       </div>
     </div>
 
-    <!-- CATEGORY 2 — 대기질 -->
+    <!-- CATEGORY 2 ― 대기질 -->
     <div class="section">
       <div class="section-title">대기질</div>
       <div class="grid-row">
