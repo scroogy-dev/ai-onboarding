@@ -69,12 +69,12 @@
 ### Task 4: docs 사용자 점검·피드백 루프
 
 - **결과**: <!-- 완료 / 부분 완료 / 스킵 -->
-- **수행 모델**: -
+- **수행 모델**: Anthropic, Claude Opus 5 (claude-opus-5)
 - **audit 발견**: 0건
 - **보정 반영**: 0건
 - **재시도**: 0회
-- **수행 내용 요약**:
-- **특이 사항**:
+- **수행 내용 요약**: (진행 중) 피드백 라운드 1 ― 번외 지시로 제품 나열 순서를 Claude → ChatGPT → Gemini로 통일했다(spec 「기타 피드백 (번외)」 참조). 가로 나열 6곳과 표 세로 행 순서 3곳, 합계 9곳이다: `docs/intro.md` 3곳(절 제목·대표 제품 표·회사별 짝꿍 표), `docs/index.md` 2곳(참가 대상 산문·3단계 표 셀), `docs/operation-guide.md` 1곳(대상 안내 산문), `slides/slides.md` 3곳(회사별 짝꿍 표·발표자 노트·3단계 표 셀). 회사별 표는 챗봇 열이 같은 세 제품이라 행 순서를 Anthropic → OpenAI → Google로 함께 맞췄다. 검증 3건 통과: `Gemini.*ChatGPT` 잔존 0건, `mkdocs build --strict` 종료 코드 0, Slidev 빌드 종료 코드 0.
+- **특이 사항**: 손대지 않은 곳 1건 ― `docs/operation-guide.md` 22행 사전설문 보기(`Claude, ChatGPT, Gemini, 기타`)는 이미 이 순서였다. `docs/intro.md` 절 제목의 앵커 `{ #products }`는 그대로 두어 같은 파일 133행의 참조 링크가 유지된다. slides는 ADR-0002상 docs 파생이라 Task 6이 정식 처리 자리지만, 이 항목은 문장 구조를 건드리지 않는 나열 순서 변경이라 같은 회차에 반영했다.
 
 ---
 

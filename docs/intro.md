@@ -10,15 +10,15 @@
 !!! note "용어 안내"
     이 페이지에서 «챗봇», «에이전트»는 모두 **AI 챗봇**, **AI 에이전트**를 짧게 쓴 표기입니다. 두 사용 방식이 각각 무엇인지는 [기본 용어 ― 챗봇 vs 에이전트](basics.md#chatbot-vs-agent)에서 정의합니다.
 
-### 대표 제품 ― Claude · Gemini · ChatGPT { #products }
+### 대표 제품 ― Claude · ChatGPT · Gemini { #products }
 
 생성형 AI는 글·코드·이미지처럼 **새로운 결과물을 만들어내는 AI**를 말합니다. 그중 대화형 제품은 다음 3종이 가장 널리 알려져 있습니다.
 
 | 제품 | 만든 곳 | 특징 한 줄 |
 |------|---------|------------|
 | **Claude** | Anthropic | 긴 글·문서 처리와 코딩·에이전트 작업에 강점 |
-| **Gemini** | Google | Google 검색·Workspace와 자연스럽게 연동 |
 | **ChatGPT** | OpenAI | 가장 널리 알려진 대화형 AI. 음성·이미지 멀티모달 강세 |
+| **Gemini** | Google | Google 검색·Workspace와 자연스럽게 연동 |
 
 !!! info "본 교육은 Claude로 진행합니다"
     실습은 **Claude 단독**으로 운영합니다. 챗봇 사용 경험(1단계)은 어떤 제품이든 비슷한 감각을 줄 수 있어 본인이 익숙한 도구로 시작해도 괜찮습니다. 다만 본 교육의 **2·3단계 실습은 Claude의 자산화·에이전트 기능**을 활용하므로 도구는 Claude로 통일합니다 (자세한 배경은 [홈 ― 준비사항](index.md#preparation) 참조).
@@ -33,8 +33,8 @@
 | 회사      | 챗봇 (보통 아는 것) | 코딩 에이전트                    |
 |-----------|--------------------|----------------------------------|
 | Anthropic | Claude             | **Claude Code**                  |
-| Google    | Gemini             | **Antigravity**                  |
 | OpenAI    | ChatGPT            | **Codex**                        |
+| Google    | Gemini             | **Antigravity**                  |
 
 Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합니다. 본 교육 3단계 실습은 **Claude Cowork**로 진행하며, Claude Code는 비개발자에게 진입 장벽이 있어 보조 도구로만 안내합니다 (자세한 내용은 아래 [Claude 소개](#claude) 참조).
 
