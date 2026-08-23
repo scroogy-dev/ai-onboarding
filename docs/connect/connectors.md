@@ -68,7 +68,7 @@
 
     켜 둔 커넥터가 많을수록 AI가 엉뚱한 곳을 뒤질 여지도 늘어나니, 어느 모드든 지금 하는 일에 필요한 것만 켜는 편이 결과도 깔끔합니다. 고르는 기준은 [Claude의 도구 접근 관리](https://support.claude.com/ko/articles/13730515)에 정리돼 있습니다.
 
-공식 안내: [커넥터를 사용하여 Claude의 기능 확장하기](https://support.claude.com/ko/articles/11176164) ― 화면이 바뀌면 이쪽이 기준입니다.
+공식 안내: [커넥터를 사용하여 Claude의 기능 확장하기](https://support.claude.com/ko/articles/11176164). 화면이 바뀌면 이쪽이 기준입니다.
 
 ---
 
