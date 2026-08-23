@@ -1,6 +1,6 @@
 # stage 3 ― HTML 리포트 파일 생성 (날씨)
 
-> stage 2의 텍스트 응답을 한 단계 더 ― **HTML 리포트 파일**로 자동 저장합니다. "텍스트 답" → "파일 산출물"의 도약이 이 stage의 핵심입니다.
+> stage 2의 텍스트 응답을 한 단계 더 나아가 **HTML 리포트 파일**로 자동 저장합니다. "텍스트 답" → "파일 산출물"의 도약이 이 stage의 핵심입니다.
 
 ---
 
@@ -15,7 +15,7 @@
 
 - [stage 2](../stage2-weather-skill/) 수료 (정형 텍스트 출력 Skill 동작 확인)
 - **Claude Desktop 설치** + **Claude Cowork** 사용 가능 환경 ([홈 페이지 준비물](https://scroogy-dev.github.io/ai-onboarding/#preparation) 참조)
-- HTML 파일 ― 본 stage에서 사용할 **템플릿 파일**을 준비해 둡니다 (아래 절차에서 안내)
+- HTML 파일: 본 stage에서 사용할 **템플릿 파일**을 준비해 둡니다 (아래 절차에서 안내)
 
 > stage 1·2와 달리 stage 3부터는 **로컬 파일을 다루는 매체**가 필요합니다. 본 교육은 그 매체로 **Claude Cowork**(Claude Desktop의 작업공간)을 표준으로 씁니다.
 
@@ -33,13 +33,13 @@
 | 옷차림·우산 | `{{outfit}}`·`{{outfit_detail}}`·`{{umbrella}}`·`{{umbrella_detail}}` |
 | 날씨 정보 | `{{humidity}}`·`{{wind}}`·`{{wind_dir}}`·`{{rain_prob}}`·`{{uv_label}}`·`{{uv}}` |
 | 대기질 | `{{pm10}}`·`{{pm10_value}}`·`{{pm25}}`·`{{pm25_value}}` |
-| 자동 매핑 | `{{weather_state}}` (9가지 weather 단어 중 하나 ― 그라데이션·아이콘 자동 결정) |
+| 자동 매핑 | `{{weather_state}}` (9가지 weather 단어 중 하나이며 그라데이션·아이콘을 자동 결정) |
 
 전체 슬롯 매핑 표·기본값·자동 매핑 동작은 [`weather-html-report/SKILL.md`](./weather-html-report/SKILL.md)의 "슬롯 치환" 섹션을 참조하세요.
 
-> **자동 매핑이 동작하는 텍스트 토큰** ― `{{weather_state}}`는 `맑음·구름조금·구름많음·흐림·비·소나기·천둥번개·눈·안개` 9가지 중 하나, `{{pm10}}`·`{{pm25}}`는 `좋음·보통·나쁨·매우 나쁨` 4가지 중 하나, `{{umbrella}}`는 `필요해요`/`필요없음` 두 단어 중 하나여야 합니다. 이 외 표현은 자동 매핑이 깨집니다.
+> **자동 매핑이 동작하는 텍스트 토큰**: `{{weather_state}}`는 `맑음·구름조금·구름많음·흐림·비·소나기·천둥번개·눈·안개` 9가지 중 하나, `{{pm10}}`·`{{pm25}}`는 `좋음·보통·나쁨·매우 나쁨` 4가지 중 하나, `{{umbrella}}`는 `필요해요`/`필요없음` 두 단어 중 하나여야 합니다. 이 외 표현은 자동 매핑이 깨집니다.
 
-> **디자인 톤 미리보기** ― [`example-output.html`](./example-output.html)을 브라우저에서 먼저 열어 슬롯이 모두 채워졌을 때의 결과를 확인할 수 있습니다.
+> **디자인 톤 미리보기**: [`example-output.html`](./example-output.html)을 브라우저에서 먼저 열어 슬롯이 모두 채워졌을 때의 결과를 확인할 수 있습니다.
 
 ---
 
@@ -62,11 +62,11 @@ stage 2의 텍스트 출력 Skill을 그대로 두고, 다음 내용으로 **새
 
 [`weather-html-report/SKILL.md`](./weather-html-report/SKILL.md)의 본문(frontmatter 제외)을 그대로 붙여넣습니다. 핵심은 다음 5단계입니다.
 
-1. **오늘 날씨 정리** ― stage 2와 동일한 9개 항목 + stage 3 자체 보강 항목(시각·최고/최저·한 줄 설명·풍향·강수확률·자외선·미세먼지 농도·옷차림 부연·우산 부연·외출 코멘트)을 함께 산출
-2. **슬롯 템플릿 읽기** ― Skill 리소스에서 `weather-template.html` 로드
-3. **슬롯 치환** ― 위 표의 슬롯들을 정확한 텍스트로 치환 (`{{weather_state}}`·`{{pm10}}`·`{{pm25}}`·`{{umbrella}}`는 자동 매핑되는 토큰만 사용)
-4. **저장** ― `weather-report-<도시>-<YYYY-MM-DD>.html`로 작업공간에 저장
-5. **안내** ― 저장 경로 한 줄
+1. **오늘 날씨 정리**: stage 2와 동일한 9개 항목 + stage 3 자체 보강 항목(시각·최고/최저·한 줄 설명·풍향·강수확률·자외선·미세먼지 농도·옷차림 부연·우산 부연·외출 코멘트)을 함께 산출
+2. **슬롯 템플릿 읽기**: Skill 리소스에서 `weather-template.html` 로드
+3. **슬롯 치환**: 위 표의 슬롯들을 정확한 텍스트로 치환 (`{{weather_state}}`·`{{pm10}}`·`{{pm25}}`·`{{umbrella}}`는 자동 매핑되는 토큰만 사용)
+4. **저장**: `weather-report-<도시>-<YYYY-MM-DD>.html`로 작업공간에 저장
+5. **안내**: 저장 경로 한 줄
 
 도시 미지정 시 한 줄로 다시 묻습니다. 자세한 슬롯 매핑·기본값·자동 매핑 토큰 목록은 SKILL.md의 표를 참고하세요.
 
@@ -87,7 +87,7 @@ stage 2의 텍스트 출력 Skill을 그대로 두고, 다음 내용으로 **새
 ## 관찰 포인트
 
 - **같은 정보**(stage 2의 텍스트 출력)가 **다른 매체**(HTML 파일)로 자동 변환되는 것을 확인합니다.
-- 텍스트 답은 화면에서 사라지지만, **파일 산출물은 남습니다** ― 이메일 첨부, 폴더 누적, 다른 도구로 후처리가 가능해집니다.
+- 텍스트 답은 화면에서 사라지지만, **파일 산출물은 남습니다**. 이메일 첨부, 폴더 누적, 다른 도구로 후처리가 가능해집니다.
 - 비개발자에게 "소프트웨어를 만든다"는 감각이 가장 직관적으로 드러나는 stage입니다.
 
 ---
@@ -107,8 +107,8 @@ stage 2의 텍스트 출력 Skill을 그대로 두고, 다음 내용으로 **새
 
 본 stage의 동작하는 Skill 패키지는 [`weather-html-report/`](./weather-html-report/)에 들어 있습니다.
 
-- [`weather-html-report/SKILL.md`](./weather-html-report/SKILL.md) ― instructions 전문 (슬롯 매핑 표 포함)
-- [`weather-html-report/weather-template.html`](./weather-html-report/weather-template.html) ― iPhone mockup 톤·9가지 weather state별 hero 그라데이션·9가지 SVG 아이콘·4가지 미세먼지 등급 배지·우산 강조 색이 모두 내장된 슬롯 템플릿
+- [`weather-html-report/SKILL.md`](./weather-html-report/SKILL.md): instructions 전문 (슬롯 매핑 표 포함)
+- [`weather-html-report/weather-template.html`](./weather-html-report/weather-template.html): iPhone mockup 톤·9가지 weather state별 hero 그라데이션·9가지 SVG 아이콘·4가지 미세먼지 등급 배지·우산 강조 색이 모두 내장된 슬롯 템플릿
 
 따라하다 막혔거나 결과가 깨질 때:
 - SKILL.md의 instructions를 본인 Skill에 그대로 복사해 비교
@@ -116,16 +116,16 @@ stage 2의 텍스트 출력 Skill을 그대로 두고, 다음 내용으로 **새
 
 ## 시각 미리보기
 
-- [`example-output.html`](./example-output.html) ― 슬롯이 모두 채워진 결과의 예시 (서울특별시 강남구 역삼동·2026-05-09·맑음)
-- [`preview-icons.html`](./preview-icons.html) ― 9가지 weather state별 그라데이션·아이콘 갤러리
+- [`example-output.html`](./example-output.html): 슬롯이 모두 채워진 결과의 예시 (서울특별시 강남구 역삼동·2026-05-09·맑음)
+- [`preview-icons.html`](./preview-icons.html): 9가지 weather state별 그라데이션·아이콘 갤러리
 
 ---
 
 ## 정리 ― step01에서 얻은 것
 
-- **stage 1** ― 매번 흔들리는 자유응답을 직접 봤다.
-- **stage 2** ― Skill로 **형식**을 잠갔다.
-- **stage 3** ― 같은 작업을 **파일 산출물**로 만들었다.
+- **stage 1**: 매번 흔들리는 자유응답을 직접 봤다.
+- **stage 2**: Skill로 **형식**을 잠갔다.
+- **stage 3**: 같은 작업을 **파일 산출물**로 만들었다.
 
 세 stage가 같은 주제(날씨)를 따라가며 [3단계 모델](https://scroogy-dev.github.io/ai-onboarding/#stage-model) 전체를 동일 콘텐츠로 체감했습니다. 다음 step부터는 같은 패턴을 다른 주제·다른 학습 포인트에 적용해 봅니다.
 
