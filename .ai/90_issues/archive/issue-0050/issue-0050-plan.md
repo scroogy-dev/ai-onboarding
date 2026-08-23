@@ -65,7 +65,11 @@
     EM=$(printf '\xe2\x80\x94'); HB=$(printf '\xe2\x80\x95')
     for f in docs/index.md docs/intro.md; do
       n=$(sed -E "s/\[[^][]*\]\([^()]*\)//g; s/\|[[:space:]]*[$HB$EM][[:space:]]*/|/g" "$f" \
-          | grep -vE '^#{1,6} |^[[:space:]]*(!!!|\?\?\?\+?) ' \
+          | awk '/^[[:space:]]*```/ {fence=!fence; next}
+                 fence {print; next}
+                 /^#{1,6} / {next}
+                 /^[[:space:]]*(!!!|\?\?\?\+?) / {next}
+                 {print}' \
           | grep -c "[$HB$EM]")
       [ "$n" -gt 0 ] && echo "위반: $f ($n곳)"
     done; true
@@ -95,7 +99,11 @@
     EM=$(printf '\xe2\x80\x94'); HB=$(printf '\xe2\x80\x95')
     for f in docs/basics.md docs/labs.md docs/operation-guide.md docs/security-guide.md; do
       n=$(sed -E "s/\[[^][]*\]\([^()]*\)//g; s/\|[[:space:]]*[$HB$EM][[:space:]]*/|/g" "$f" \
-          | grep -vE '^#{1,6} |^[[:space:]]*(!!!|\?\?\?\+?) ' \
+          | awk '/^[[:space:]]*```/ {fence=!fence; next}
+                 fence {print; next}
+                 /^#{1,6} / {next}
+                 /^[[:space:]]*(!!!|\?\?\?\+?) / {next}
+                 {print}' \
           | grep -vE '^[[:space:]]*(\*\*)?범례(\*\*)?:.*해당 없음' \
           | grep -c "[$HB$EM]")
       [ "$n" -gt 0 ] && echo "위반: $f ($n곳)"
@@ -194,7 +202,11 @@
     EM=$(printf '\xe2\x80\x94'); HB=$(printf '\xe2\x80\x95')
     for f in $(find labs -name '*.md' | sort); do
       n=$(sed -E "s/\[[^][]*\]\([^()]*\)//g; s/\`[^\`]*[$HB$EM][^\`]*\`//g; s/「[^」]*[$HB$EM][^」]*」//g; s/\|[[:space:]]*[$HB$EM][[:space:]]*/|/g" "$f" \
-          | grep -vE '^#{1,6} |^[[:space:]]*(!!!|\?\?\?\+?) ' \
+          | awk '/^[[:space:]]*```/ {fence=!fence; next}
+                 fence {print; next}
+                 /^#{1,6} / {next}
+                 /^[[:space:]]*(!!!|\?\?\?\+?) / {next}
+                 {print}' \
           | grep -vE '^[[:space:]]*(\*\*)?범례(\*\*)?:.*해당 없음' \
           | grep -c "[$HB$EM]")
       [ "$n" -gt 0 ] && echo "위반: $f ($n곳)"
@@ -204,6 +216,7 @@
     - 설계 주의: 대상은 23개 파일이다 (설계 시점 "22개"는 `labs/step02-file-classifier/sample-files/README.md` 누락, Task 0에서 보정). 이 파일은 줄표 0건이라 작업량 변화는 없다.
     - 제목 인용 예외·백틱 이스케이프 보정(Task 7에서 추가): 제목을 원문 그대로 인용한 자리를 유지 자리로 두고, `sed` 2식이 줄표를 품은 코드스팬을·3식이 줄표를 품은 「」 인용을 걷어낸다. 함께 `sed` 식 안의 백틱을 이스케이프해 명령이 실제로 실행되게 했다(보정 전에는 셸이 명령 치환으로 해석해 실행 자체가 안 됐다). 근거는 spec 완료의 정의 2번 접기 참조.
     - 코드스팬 예외(Task 5에서 추가): `sed` 2식이 줄표로 시작하는 코드스팬을 걷어낸다. `wrong-answer-html-report/SKILL.md`가 지정하는 슬롯 값 4건이 대상이며, 근거는 spec 완료의 정의 2번 접기 참조.
+    - **펜스 예외 제거**(PR #53 리뷰 대응, 2026-08-23): 제목 예외를 펜스 인식 `awk`로 바꿨다. 옛 필터가 코드블록 안의 `#### ` 행을 제목으로 걷어내 `wrong-answer-note/SKILL.md` 52행의 산문 줄표를 놓치던 것을 막는다 (근거는 spec 완료의 정의 2번 접기).
     </details>
   - [D] labs HTML 자산에서 유지 자리를 걷어낸 뒤 잔존 줄표 0건
     <details>
@@ -242,7 +255,11 @@
     ```bash
     EM=$(printf '\xe2\x80\x94'); HB=$(printf '\xe2\x80\x95')
     n=$(sed -E "s/\[[^][]*\]\([^()]*\)//g; s/\`[^\`]*[$HB$EM][^\`]*\`//g; s/「[^」]*[$HB$EM][^」]*」//g; s/\|[[:space:]]*[$HB$EM][[:space:]]*/|/g" slides/slides.md \
-        | grep -vE '^#{1,6} |^[[:space:]]*(!!!|\?\?\?\+?) ' \
+        | awk '/^[[:space:]]*```/ {fence=!fence; next}
+               fence {print; next}
+               /^#{1,6} / {next}
+               /^[[:space:]]*(!!!|\?\?\?\+?) / {next}
+               {print}' \
         | grep -vE '^[[:space:]]*(\*\*)?범례(\*\*)?:.*해당 없음' \
         | grep -c "[$HB$EM]")
     [ "$n" -gt 0 ] && echo "위반: slides/slides.md ($n곳)"; true
