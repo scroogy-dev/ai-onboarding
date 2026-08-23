@@ -18,7 +18,7 @@
 - [step02 stage 2](../../step02-file-classifier/stage2-file-classifier-skill/) 수료 권장 (옵션 받는 Skill을 만들어 본 상태)
 - Claude Pro 이상 요금제, **Claude Desktop**에 Skill을 설치할 수 있는 환경
 - **이미지 업로드가 가능한 환경**: Claude Desktop·claude.ai 웹 모두 지원
-- 단어장 사진 1장 (stage 1과 같은 사진을 쓰면 비교가 쉬워집니다)
+- 단어장 사진 1장 (stage 1과 같은 사진 권장. 비교가 쉬워집니다)
 
 ---
 

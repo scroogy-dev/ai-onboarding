@@ -17,7 +17,7 @@
 - [stage 1](../stage1-wrong-answer-note-prompt/) 수료 (자유응답의 흔들림과 재인식 비용을 직접 본 상태)
 - [step03 stage 2](../../../step03-voca-quiz/stage2-voca-quiz-skill/) 수료 권장 (멀티모달 + 출처 충실성 패턴 익힌 상태)
 - Claude Pro 이상 요금제 + **Claude Desktop** + **Cowork** 사용 가능 환경 (엑셀 파일 생성·재읽기 필요)
-- 자녀가 풀고 채점된 학습지 사진 1장 (stage 1과 같은 사진을 쓰면 비교가 쉬워집니다)
+- 자녀가 풀고 채점된 학습지 사진 1장 (stage 1과 같은 사진 권장. 비교가 쉬워집니다)
 
 ---
 
