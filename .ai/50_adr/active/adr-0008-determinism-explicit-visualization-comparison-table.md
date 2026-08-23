@@ -4,7 +4,7 @@
 - **결정일**: 2026-05-19
 - **연관 이슈**: [Issue #40](https://github.com/scroogy-dev/ai-onboarding/issues/40)
 - **영향 범위**: `docs/basics.md` 첫 H2 "AI 활용의 세 형태", `docs/index.md` 결정 룰 박스 직후 링크, `slides/slides.md` "AI 활용의 세 형태" 슬라이드
-- **연관 ADR**: [ADR-0005](adr-0005-core-message-non-developers-make-software.md) (§3 운용 변경의 짝), [ADR-0001](adr-0001-practice-tool-scope-and-stage-model.md) (3단계 모델과 다른 차원의 분류)
+- **연관 ADR**: [ADR-0005](adr-0005-core-message-non-developers-make-software.md) (§3 운용 변경의 짝), [ADR-0001](adr-0001-practice-tool-scope-and-stage-model.md) (3단계 모델과 다른 차원의 분류), [ADR-0011](adr-0011-education-scope-personal-webapp.md) (결정 2의 끝점 경계를 갱신)
 
 ---
 
@@ -45,6 +45,8 @@ ADR-0005 §3의 원칙은 본문 흐름에서 메커니즘 단어를 회피해 �
 | 본 ADR 3종 | 결과물의 형태·체계화 수준 (비교) | `docs/basics.md` 첫 H2 |
 
 두 분류는 서로 대체하지 않으며, 같은 학습자가 두 좌표축으로 자신을 인지하게 한다. `애플리케이션`은 ADR-0001 3단계 바깥에 위치하는 **비교 기준** — 학습자가 "내가 만드는 에이전트 스킬은 결정성·비용 두 축 위에서 어디에 있는가"를 두 끝점 사이에서 인지하게 하는 장치다.
+
+> **후속 변경 (Issue #50, 2026-08-23)**: `애플리케이션`을 통째로 본 교육의 직접 제작 범위 밖에 두던 배치가 [ADR-0011](adr-0011-education-scope-personal-webapp.md)로 갱신됐다. 경계가 애플리케이션 **안쪽**으로 옮겨져, 개인용 HTML·자바스크립트 웹앱까지는 범위 안이고 여러 사람이 함께 쓰거나 별도 서버·설치·빌드 도구가 필요하거나 웹사이트로 배포하는 앱만 범위 밖이다. 본 ADR의 나머지 결정(메커니즘 단어를 비교표 1곳에 한정, 두 좌표축 구조)은 그대로 유지된다.
 
 ### 3. 비교축 5개 — 결과형 표현이 메커니즘 단어를 받쳐주는 구조
 

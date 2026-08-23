@@ -14,25 +14,25 @@ description: 검수된 채점 결과 엑셀과 같은 디렉토리의 슬롯 템
 | 입력 | 형태 | 출처 |
 |------|------|------|
 | 검수된 채점 결과 엑셀(또는 CSV) | 파일 첨부 또는 작업공간 파일 경로 | `quiz-recognize` Skill 출력 + 부모 검수 |
-| 슬롯 템플릿 HTML | 작업공간 파일 — 기본 `wrong-answer-note-template.html` | 본 Skill 디렉토리에 동봉 |
+| 슬롯 템플릿 HTML | 작업공간 파일 (기본 `wrong-answer-note-template.html`) | 본 Skill 디렉토리에 동봉 |
 | 학생 이름 | (선택) 문자열 | 호출 prompt |
 | 학원 이름·튜터 이름 | (선택) 문자열 | 호출 prompt |
-| 정답 표 | (선택) 사진 또는 텍스트 — 엑셀 정답 컬럼이 비어있을 때 보강 | 호출 prompt |
-| 총문항수 | (선택) 정수 — 미지정 시 엑셀 메타 또는 본문 행 수 | 호출 prompt |
+| 정답 표 | (선택) 사진 또는 텍스트. 엑셀 정답 컬럼이 비어있을 때 보강 | 호출 prompt |
+| 총문항수 | (선택) 정수. 미지정 시 엑셀 메타 또는 본문 행 수 | 호출 prompt |
 
-엑셀 미첨부면 한 줄로 답한다 — `검수된 채점 결과 엑셀을 첨부해 주세요.`
-슬롯 템플릿이 작업공간에 없으면 한 줄로 답한다 — `슬롯 템플릿 wrong-answer-note-template.html이 작업공간에 없습니다.`
+엑셀 미첨부면 한 줄로 답한다: `검수된 채점 결과 엑셀을 첨부해 주세요.`
+슬롯 템플릿이 작업공간에 없으면 한 줄로 답한다: `슬롯 템플릿 wrong-answer-note-template.html이 작업공간에 없습니다.`
 
 ## 처리 단계
 
-### 1단계 — 슬롯 템플릿 읽기
+### 1단계 ― 슬롯 템플릿 읽기
 
 같은 디렉토리의 `wrong-answer-note-template.html`을 작업공간에서 읽는다. 다음 두 가지를 그대로 보존한다.
 
-- `<head>` 전체 — 폰트 로딩 `<link>`, `<style>` 블록, `<title>` 등
+- `<head>` 전체: 폰트 로딩 `<link>`, `<style>` 블록, `<title>` 등
 - 본문의 모든 CSS 클래스 이름·구조·인쇄 친화 `@media print` 규칙
 
-### 2단계 — 엑셀 컬럼·메타데이터 매핑
+### 2단계 ― 엑셀 컬럼·메타데이터 매핑
 
 엑셀 상단 메타데이터(시트 또는 첫 5행)와 본문 컬럼을 다음과 같이 매핑한다.
 
@@ -57,9 +57,9 @@ description: 검수된 채점 결과 엑셀과 같은 디렉토리의 슬롯 템
 | 개념태그 + 분석메모 오답유형 | `{{tags_html}}` / `{{sc_tags_html}}` (8단계 참조) |
 | 학년·문제·답·분석메모 (Skill 자체 생성) | `{{why_html}}`·`{{steps_ol_html}}`·`{{key_point_html}}` / `{{sc_note_html}}`·`{{sc_key_point_html}}` (4단계 참조) |
 
-### 3단계 — 처리 범위 결정 (PROBLEMS / SELF_CHECK 분기)
+### 3단계 ― 처리 범위 결정 (PROBLEMS / SELF_CHECK 분기)
 
-엑셀 본문 행을 두 갈래로 나눈다.
+엑셀 본문 행을 두 가지로 나눈다.
 
 - **PROBLEMS** (오답): `정오: false` 인 모든 행
 - **SELF_CHECK** (자체 체크): `정오: true ∧ 학생표시: 1` 인 모든 행
@@ -67,24 +67,24 @@ description: 검수된 채점 결과 엑셀과 같은 디렉토리의 슬롯 템
 - 학생답안이 비어 있으면 `정오: false`(미기재)로 처리해 PROBLEMS에 포함
 - 정답 컬럼이 비어 있고 호출 입력에도 정답 표가 없으면 그 행은 빈 칸으로 두고 응답 마지막에 한 줄 안내 (`<번호 목록> 문항은 정답 미상으로 비워뒀습니다.`)
 
-### 4단계 — 자녀 친화 해설 생성 (학년·과목 톤)
+### 4단계 ― 자녀 친화 해설 생성 (학년·과목 톤)
 
-각 문항 카드에 대해 다음 슬롯의 본문을 자체 생성한다 — `wrong-answer-note` 마크다운 Skill과 같은 말투 규칙을 따른다.
+각 문항 카드에 대해 다음 슬롯의 본문을 자체 생성한다. `wrong-answer-note` 마크다운 Skill과 같은 말투 규칙을 따른다.
 
-- `{{why_html}}` / `{{sc_note_html}}` — `왜 헷갈렸을까?` 본문. 분석메모·학생답안의 오인 패턴을 보고 공감하는 말로 시작 (`~했구나. 그런데 사실은…` 형식). 강조 단어는 `<strong>`.
-- `{{steps_ol_html}}` — `이렇게 풀어 보자` 단계 풀이. 전체를 `<ol class="steps"><li>…</li>…</ol>`로 감싼다. 한 문항에 단계 5개 이내.
-- `{{key_point_html}}` / `{{sc_key_point_html}}` — `기억 포인트` 한 문장. `앞으로는 ~할 때 꼭 ~을 기억하자` 형식 권장.
+- `{{why_html}}` / `{{sc_note_html}}`: `왜 헷갈렸을까?` 본문. 분석메모·학생답안의 오인 패턴을 보고 공감하는 말로 시작 (`~했구나. 그런데 사실은…` 형식). 강조 단어는 `<strong>`.
+- `{{steps_ol_html}}`: `이렇게 풀어 보자` 단계 풀이. 전체를 `<ol class="steps"><li>…</li>…</ol>`로 감싼다. 한 문항에 단계 5개 이내.
+- `{{key_point_html}}` / `{{sc_key_point_html}}`: `기억 포인트` 한 문장. `앞으로는 ~할 때 꼭 ~을 기억하자` 형식 권장.
 
 말투·용어 규칙:
 
 - 친근하고 따뜻하게 (`~했구나`, `~해 보자`, `잘 기억해 두자`).
 - `틀렸다`·`실수했다` 반복 강조 금지.
 - 어려운 개념어는 괄호로 짧게 풀이 (`통분(분모를 같게 만들기)`).
-- 학년 어휘 — 저학년(1~2)은 더 짧게·더 쉽게, 고학년(5~6)은 좀 더 자세히.
+- 학년 어휘: 저학년(1~2)은 더 짧게·더 쉽게, 고학년(5~6)은 좀 더 자세히.
 
-> 본 단계는 `wrong-answer-note` Skill이 마크다운 뷰에서 만드는 해설과 같은 책임이다 — 같은 엑셀 위에서 마크다운 뷰와 HTML 뷰가 각자 독립적으로 자녀 톤 해설을 생성한다. 마크다운을 따로 만들어 둔 회차에서도 본 Skill은 마크다운을 참조하지 않고 엑셀에서 직접 만든다.
+> 본 단계는 `wrong-answer-note` Skill이 마크다운 뷰에서 만드는 해설과 같은 책임이다. 같은 엑셀 위에서 마크다운 뷰와 HTML 뷰가 각자 독립적으로 자녀 톤 해설을 생성한다. 마크다운을 따로 만들어 둔 회차에서도 본 Skill은 마크다운을 참조하지 않고 엑셀에서 직접 만든다.
 
-### 5단계 — 스칼라 슬롯 채우기
+### 5단계 ― 스칼라 슬롯 채우기
 
 템플릿의 `{{...}}` 슬롯을 다음 표에 따라 치환한다. 호출 입력값 → 엑셀 메타 → 기본값 순서.
 
@@ -96,13 +96,13 @@ description: 검수된 채점 결과 엑셀과 같은 디렉토리의 슬롯 템
 | `{{doc_no}}` | `<YYYYMMDD>·<과목 이니셜>·<순번>` 자동 생성 (예: `20260308·M·001`). 분석일과 과목으로 구성 |
 | `{{publish_date}}` | 엑셀 메타 분석일 → `YYYY. MM. DD` |
 | `{{publisher}}` | 호출 입력값 또는 기본값 `수석튜터팀` |
-| `{{term_label}}` | 분석일의 학기 자동 생성 (예: `Spring Term 2026`). 미지정 가능 — 빈 문자열 |
+| `{{term_label}}` | 분석일의 학기 자동 생성 (예: `Spring Term 2026`). 미지정 가능 (빈 문자열) |
 | `{{unit}}` | 엑셀 메타 단원 (없으면 `종합 복습`) |
 | `{{subject_grade_label}}` | `<과목 영문 라벨> · Grade <학년> Review` 또는 한글 `<과목> · <학년>학년 복습` |
 | `{{student_name}}` | 호출 입력값 또는 기본값 `학생` |
 | `{{grade_label}}` | `초등 N학년` / `중학교 N학년` (학년 값에서 추정) |
 | `{{subject_unit_label}}` | `<과목> · <단원 짧은 라벨>` |
-| `{{tutor_name}}` | 호출 입력값 또는 기본값 `—` |
+| `{{tutor_name}}` | 호출 입력값 또는 기본값 `―` |
 | `{{exec_summary_html}}` | **엑셀의 처리 범위(오답·자체체크) 행과 개념태그·분석메모를 보고 자동 생성한 한 단락(3~5문장)**. 자녀 학년 톤 유지. `<em>`으로 핵심 키워드 1~2개 강조 가능. **새로운 정보는 만들지 않고 엑셀 본문 요약만** |
 | `{{total_count}}` | 호출 입력값 또는 엑셀 메타 총문항수 또는 본문 행 수 |
 | `{{total_unit}}` | `문항` |
@@ -120,12 +120,12 @@ description: 검수된 채점 결과 엑셀과 같은 디렉토리의 슬롯 템
 | `{{review_recommendation}}` | 호출 입력값. **미지정 시 빈 문자열**(`<b>`는 비움. 엑셀에 없는 정보를 창작하지 않는다) |
 | `{{tutor_opinion}}` | 호출 입력값. 미지정 시 빈 문자열 |
 | `{{closing_quote_text}}` | 학년·정답률을 보고 한 문장 격려를 자체 생성 (자신감을 주는 톤) |
-| `{{closing_cite}}` | `— 담당 튜터 <tutor_name>` (튜터 이름이 없으면 `— 함께 공부한 사람`) |
+| `{{closing_cite}}` | `― 담당 튜터 <tutor_name>` (튜터 이름이 없으면 `― 함께 공부한 사람`) |
 | `{{footer_left}}` | `<academy_name> · Confidential Tutoring Report` |
 | `{{footer_signature}}` | 학원 이름의 영문/짧은 표현. 미지정 시 academy_name 그대로 |
-| `{{page_no}}` | `— 1 / 1 —` (한 페이지 고정) |
+| `{{page_no}}` | `― 1 / 1 ―` (한 페이지 고정) |
 
-### 6단계 — PROBLEMS 블록 반복
+### 6단계 ― PROBLEMS 블록 반복
 
 `<!-- PROBLEMS:START --> ... <!-- PROBLEMS:END -->` 사이의 한 단위는:
 
@@ -138,9 +138,9 @@ description: 검수된 채점 결과 엑셀과 같은 디렉토리의 슬롯 템
 2. 0건이면 `<!-- PROBLEMS:START -->`부터 `<!-- PROBLEMS:END -->`까지를 통째로 제거한다.
 3. 1건 이상이면:
    - section-head는 그대로 1번만 둔다.
-   - `.problem` 카드를 행 수만큼 복제하면서 슬롯을 채운다 — `{{problem_number_padded}}`, `{{tags_html}}`(8단계), `{{problem_question_html}}`, `{{student_answer}}`, `{{correct_answer}}`, 4단계에서 만든 `{{why_html}}`·`{{steps_ol_html}}`·`{{key_point_html}}`.
+   - `.problem` 카드를 행 수만큼 복제하면서 슬롯을 채운다: `{{problem_number_padded}}`, `{{tags_html}}`(8단계), `{{problem_question_html}}`, `{{student_answer}}`, `{{correct_answer}}`, 4단계에서 만든 `{{why_html}}`·`{{steps_ol_html}}`·`{{key_point_html}}`.
 
-### 7단계 — SELF_CHECK 블록 반복
+### 7단계 ― SELF_CHECK 블록 반복
 
 `<!-- SELF_CHECK:START --> ... <!-- SELF_CHECK:END -->` 사이의 한 단위도 동일 패턴.
 
@@ -148,9 +148,9 @@ description: 검수된 채점 결과 엑셀과 같은 디렉토리의 슬롯 템
 2. 0건이면 `<!-- SELF_CHECK:START -->`부터 `<!-- SELF_CHECK:END -->`까지를 통째로 제거한다. (PART · II 섹션 헤더 자체가 사라짐)
 3. 1건 이상이면:
    - section-head는 1번만 둔다.
-   - `.problem.self-check` 카드를 행 수만큼 복제하면서 슬롯을 채운다 — `{{sc_problem_number_padded}}`, `{{sc_tags_html}}`(자체 체크 표시 태그 + 개념태그), `{{sc_problem_question_html}}`, `{{sc_student_answer}}`, `{{sc_correct_answer}}`, `{{sc_note_heading}}`(기본값 `내 메모` 또는 `<student_name>의 메모`), `{{sc_note_html}}`, `{{sc_key_point_html}}`.
+   - `.problem.self-check` 카드를 행 수만큼 복제하면서 슬롯을 채운다: `{{sc_problem_number_padded}}`, `{{sc_tags_html}}`(자체 체크 표시 태그 + 개념태그), `{{sc_problem_question_html}}`, `{{sc_student_answer}}`, `{{sc_correct_answer}}`, `{{sc_note_heading}}`(기본값 `내 메모` 또는 `<student_name>의 메모`), `{{sc_note_html}}`, `{{sc_key_point_html}}`.
 
-### 8단계 — 태그 HTML 생성
+### 8단계 ― 태그 HTML 생성
 
 `{{tags_html}}` / `{{sc_tags_html}}`는 다음 형태로 생성한다.
 
@@ -165,13 +165,13 @@ description: 검수된 채점 결과 엑셀과 같은 디렉토리의 슬롯 템
 - 자체 체크 행: 첫 태그 `<span class="tag green">정답 · 스스로 체크</span>` 고정. 이후 개념태그 1개.
 - 태그 최대 3개.
 
-### 9단계 — 저장
+### 9단계 ― 저장
 
 완성된 HTML을 작업공간에 저장한다.
 
 파일명: `wrong-answer-note-html-<과목>-<YYYY-MM-DD>.html`
 
-### 10단계 — 응답
+### 10단계 ― 응답
 
 저장된 파일 경로와 다음을 한 줄로 알려준다.
 
@@ -203,8 +203,8 @@ HTML 리포트 작성 완료. <경로>
 ## 추가 규칙
 
 - 인사말·격려·결과 외 텍스트를 응답에 추가하지 않는다 (응답은 저장 결과 한 줄).
-- **엑셀에 없는 정보를 창작해 채우지 않는다** — 다음 학습 권장·튜터 의견 등이 호출 입력에도 없으면 빈 문자열로 둔다 (`<b></b>` 빈 칸).
-- **자녀 친화 해설(왜 헷갈렸을까·이렇게 풀어 보자·기억 포인트)은 예외** — 학년·문제·답·분석메모를 근거로 본 Skill이 자체 생성한다. 같은 데이터에서 마크다운 뷰가 만들던 해설을 HTML 뷰가 평행으로 만든다는 의미다.
+- **엑셀에 없는 정보를 창작해 채우지 않는다**. 다음 학습 권장·튜터 의견 등이 호출 입력에도 없으면 빈 문자열로 둔다 (`<b></b>` 빈 칸).
+- **자녀 친화 해설(왜 헷갈렸을까·이렇게 풀어 보자·기억 포인트)은 예외**: 학년·문제·답·분석메모를 근거로 본 Skill이 자체 생성한다. 같은 데이터에서 마크다운 뷰가 만들던 해설을 HTML 뷰가 평행으로 만든다는 의미다.
 - `wrong-answer-note-template.html` 외 다른 슬롯 템플릿(`minimal-template.html` 등)이 작업공간에 있으면 사용자가 prompt에 명시한 파일을 우선 사용. 미지정이면 기본 템플릿.
 - 같은 엑셀로 다시 호출하면 새 파일을 만들지 않고 기존 파일을 갱신한다 (파일명 동일).
 
