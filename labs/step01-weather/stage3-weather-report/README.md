@@ -33,7 +33,7 @@
 | 옷차림·우산 | `{{outfit}}`·`{{outfit_detail}}`·`{{umbrella}}`·`{{umbrella_detail}}` |
 | 날씨 정보 | `{{humidity}}`·`{{wind}}`·`{{wind_dir}}`·`{{rain_prob}}`·`{{uv_label}}`·`{{uv}}` |
 | 대기질 | `{{pm10}}`·`{{pm10_value}}`·`{{pm25}}`·`{{pm25_value}}` |
-| 자동 매핑 | `{{weather_state}}` (9가지 weather 단어 중 하나이며 그라데이션·아이콘을 자동 결정) |
+| 자동 매핑 | `{{weather_state}}` (9가지 weather 단어 중 하나). 그라데이션·아이콘 자동 결정 |
 
 전체 슬롯 매핑 표·기본값·자동 매핑 동작은 [`weather-html-report/SKILL.md`](./weather-html-report/SKILL.md)의 "슬롯 치환" 섹션을 참조하세요.
 
