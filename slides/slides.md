@@ -992,9 +992,9 @@ What 섹션에 위치한 이유: 학습자 분류가 아니라 "교육이 다루
 
 | 단계 | 무엇을 하나요? | 대표 도구·기능 | 본 교육에서 |
 |------|-------------|--------------|------------|
-| **1단계 :<br/>챗봇&nbsp;사용** | 단발성 대화로 답을 얻음 | Claude·ChatGPT·Gemini 웹&nbsp;챗봇 | **참가&nbsp;전제**<br/>(이미&nbsp;경험) |
-| **2단계 :<br/>프롬프트&nbsp;재활용** | 반복 사용 가능한 맞춤 프롬프트·챗봇을 자산으로 만듦 | **Agent&nbsp;Skills&nbsp;기초**,<br/>Claude&nbsp;Projects | **2단계&nbsp;실습** |
-| **3단계 :<br/>에이전트&nbsp;활용** | 로컬 파일·작업을 자동화하는 에이전트를&nbsp;운영함 | **Claude&nbsp;Cowork**,<br/>Claude&nbsp;Code | **3단계&nbsp;실습** |
+| **1단계:<br/>챗봇&nbsp;사용** | 단발성 대화로 답을 얻음 | Claude·ChatGPT·Gemini 웹&nbsp;챗봇 | **참가&nbsp;전제**<br/>(이미&nbsp;경험) |
+| **2단계:<br/>프롬프트&nbsp;재활용** | 반복 사용 가능한 맞춤 프롬프트·챗봇을 자산으로 만듦 | **Agent&nbsp;Skills&nbsp;기초**,<br/>Claude&nbsp;Projects | **2단계&nbsp;실습** |
+| **3단계:<br/>에이전트&nbsp;활용** | 로컬 파일·작업을 자동화하는 에이전트를&nbsp;운영함 | **Claude&nbsp;Cowork**,<br/>Claude&nbsp;Code | **3단계&nbsp;실습** |
 
 > 💡 2단계에서 익히는 **프롬프트 재활용·Agent Skills** 개념은 3단계에서도 그대로 재활용됩니다.
 
