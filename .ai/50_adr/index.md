@@ -23,6 +23,7 @@ AI는 작업 시 이 파일을 먼저 읽고, 관련된 ADR만 선택적으로 �
 | [ADR-0008](active/adr-0008-determinism-explicit-visualization-comparison-table.md) | 결정성/비결정성 메커니즘의 명시적 가시화 — 비교표 형태로 도입 | 본문 기본은 ADR-0005 §3에 따라 결과형 유지, 메커니즘 단어 명시는 비교표 1곳(`docs/basics.md` 첫 H2 + 짝 슬라이드)에 한정. 1회성 프롬프트 · 에이전트 스킬 · 애플리케이션 3종 분류는 ADR-0001 3단계 모델과 다른 차원의 비교 분류. ADR-0005 §3와 짝으로 운용 |
 | [ADR-0009](active/adr-0009-unified-ui-theme-claude-style.md) | docs·slides 통합 UI 테마 — Claude 스타일(라이트) 채택 | docs(indigo)·slides(the-unnamed 다크)의 톤 불일치를 Claude 스타일(아이보리+코랄, 라이트)로 통일. docs는 라이트/다크 토글 유지, slides는 default 테마로 라이트 전용. admonition·색 카드 정합, 토큰(색·폰트) 명시. ADR-0004 대체 |
 | [ADR-0010](active/adr-0010-part2-connection-scope-expansion.md) | 2부(도구·데이터 연결) 신설 — 같은 사이트 안에서 범위 축 확장 | ADR-0001을 대체가 아니라 확장. 같은 repo·사이트에서 nav를 1부(AI 활용 기본)/2부(도구·데이터 연결)로 구분하고 가이드는 부 공통 유지. 커넥터·MCP는 "이용까지만", 개발·RAG 내부는 범위 밖. 연결 보안 본문은 security-guide.md가 SSoT. 도구 축(ChatGPT 등) 다원화는 이 ADR의 결정 대상 아님 |
+| [ADR-0011](active/adr-0011-education-scope-personal-webapp.md) | 교육 범위 경계 이동 ― 개인용 로컬 HTML·자바스크립트 웹앱까지 확장 | ADR-0008이 애플리케이션 전체를 범위 밖 비교 기준으로 두던 배치를 갱신. 경계를 애플리케이션 안쪽으로 옮겨 개인용 HTML·자바스크립트 웹앱까지 범위 안, 다수 사용자·별도 서버나 설치·빌드 도구·웹사이트 배포는 범위 밖. 「퍼블리싱」 낱말 대신 로컬 사용과 배포의 대비로 서술. ADR-0001 3단계 모델은 불변 |
 
 ## Superseded ADR
 
