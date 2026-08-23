@@ -164,7 +164,7 @@ layout: section
 
 <div class="border-l-4 border-blue-400 pl-6 py-4 my-8 bg-blue-50 dark:bg-blue-900/15 rounded-r">
 
-AI 활용으로 강화할 수 있는 역량은 **세 갈래**입니다.
+AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 
 - **개인 역량 강화** ― 본인의 업무·학습·일상 효율 *(본 교육의 초점)*
 - **조직 역량 강화** ― 팀·전사 차원의 AI 도입·거버넌스
@@ -1102,7 +1102,7 @@ flowchart LR
 </div>
 
 <div class="mt-10 text-center text-base opacity-75 italic">
-"사람도 의사소통이 잘못되면 비용이 큽니다. AI에게도 마찬가지죠."
+"사람도 의사소통이 잘못되면 비용이 큽니다. AI에게도 마찬가지입니다."
 </div>
 
 <!--
