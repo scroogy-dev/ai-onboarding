@@ -122,6 +122,7 @@
     - 설계 주의(Task 2 보정): `grep`에 `--`를 넣어 패턴과 옵션을 갈랐다. 이 절은 본문 대부분이 `- `로 시작하는 목록 행이라, `--`가 없으면 그 행들이 전부 옵션으로 해석되어 `invalid option` 오류와 함께 **위반으로 오탐**된다(보정 전 실행에서 24건 오탐). 오탐은 통과를 막는 방향이라 위험하진 않지만, 매번 실패로 나오면 판정이 무의미해진다.
     - 설계 주의(Task 0 보정): 설계 시점 명령은 diff에서 절 제목 행만 찾는 방식이라 절 **안쪽** 본문 변경을 놓쳤다. Task 0에서 절 경계를 실측(`{ #external-connection }` 115행 ~ `## 정리` 191행 직전)해 판정 방식을 "base 시점 절 본문의 각 행이 현재 파일에 잔존하는가"로 바꿨다. 행 번호가 아니라 앵커와 내용으로 판정해 앞 절 편집으로 행이 밀려도 통과한다.
     - 한계: 절 안에 행을 **추가**하는 변경은 이 명령이 잡지 못한다(기존 행은 전부 잔존하므로). 이 Task의 작업 내용은 기존 문장 전환뿐이라 추가는 발생하지 않으며, 발생시키려면 spec 범위 변경이 선행되어야 한다.
+    - **판정 시점은 Task 2 직후로 한정된다**(Task N audit 대응 F-2 보정). 이 명령은 `main` 시점 행이 **바이트 단위로** 잔존하는지 보는데, 뒤의 Task 3이 같은 절의 제목·링크 라벨을 U+2014에서 U+2015로 의도적으로 통일한다. 그래서 최종 HEAD에서 재실행하면 제목 1건·링크 라벨 1건·H3 제목 3건 합계 5건이 위반으로 출력되며, 이는 회귀가 아니라 정상 변경이다. Task 2 시점 이후의 합·불은 spec 완료의 정의 1·2번 게이트가 판정한다.
     </details>
   - [QD] 전환이 기준에 정합  (검증: 교차모델 audit이 채점)  ← 강등 사유: Task 1과 동일
 
@@ -145,7 +146,7 @@
 
     ```bash
     EM=$(printf '\xe2\x80\x94'); HB=$(printf '\xe2\x80\x95')
-    FILES="$(find docs labs -name '*.md' -o -name '*.html' | sort) slides/slides.md mkdocs.yml $(find .ai/90_issues/active/issue-0050 -name '*.md' | sort)"
+    FILES="$(find docs labs -name '*.md' -o -name '*.html' | sort) slides/slides.md mkdocs.yml $(find .ai/90_issues/archive/issue-0050 -name '*.md' | sort)"
     before=562   # 착수 시점 U+2014 실측치(발행물 562건). 작업 문서분은 치환 직전에 다시 센다
     now=$(cat $FILES | grep -o "$HB" | wc -l | tr -d ' ')
     echo "U+2015 현재 ${now}건 / 전환 전 U+2014 ${before}건 + 기존 U+2015 0건"
@@ -271,7 +272,7 @@
 
 ### Task N (고정): 교차모델 issue-audit 검증 ― 사용자 수동 수행
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 스펙 위반·누락·소스코드와의 모순을 구현 모델과 다른 시각으로 잡는다.
 - **실행 주체**: **사용자가 직접** 수행한다. 구현 AI는 이 Task를 **자동으로 닫지 않으며**, `issue-audit`를 자동 실행하지도 않는다.
 - **작업 내용**:
@@ -286,8 +287,8 @@
     <summary>검증 명령 ― repo 루트에서 실행, 출력 0건이면 통과</summary>
 
     ```bash
-    P=.ai/90_issues/active/issue-0050/issue-0050-plan.md
-    S=.ai/90_issues/active/issue-0050/issue-0050-summary.md
+    P=.ai/90_issues/archive/issue-0050/issue-0050-plan.md
+    S=.ai/90_issues/archive/issue-0050/issue-0050-summary.md
     { grep -qE '^### Task ' "$P" && grep -qE '^### Task ' "$S" \
       && diff <(grep -E '^### Task ' "$P") <(grep -E '^### Task ' "$S") \
       || echo '위반: 입력 접근 실패 또는 Task 집합 불일치'; }
@@ -301,7 +302,7 @@
     <summary>검증 명령 ― repo 루트에서 실행, 출력 0이면 통과</summary>
 
     ```bash
-    S=.ai/90_issues/active/issue-0050/issue-0050-summary.md
+    S=.ai/90_issues/archive/issue-0050/issue-0050-summary.md
     awk '
       /^### Task / { if (o && !n && v != 1) b++; o = 1; v = 0; n = ($0 ~ /^### Task N/) }
       o && /^- \*\*결과\*\*:/ {
@@ -320,7 +321,7 @@
     <summary>검증 명령 ― repo 루트에서 실행, 출력 0이면 통과</summary>
 
     ```bash
-    S=.ai/90_issues/active/issue-0050/issue-0050-summary.md
+    S=.ai/90_issues/archive/issue-0050/issue-0050-summary.md
     awk '
       /^### Task / { if (o && !n && d && (t != 1 || m != 1)) b++; o = 1; d = 0; t = 0; m = 0; n = ($0 ~ /^### Task N/) }
       o && /^- \*\*결과\*\*: (완료|부분 완료)[[:space:]]*$/ { d = 1 }
