@@ -80,12 +80,19 @@ layout: default
 <div class="opacity-80">안전한 AI 사용</div>
 </div>
 
+<div class="mt-5 pt-4 border-t border-slate-300 dark:border-slate-700 flex items-center text-lg opacity-70">
+<div class="font-mono text-lg w-14">2부</div>
+<div class="font-bold w-44">도구·데이터 연결</div>
+<div>커넥터·MCP로 내 자료 붙이기 <span class="opacity-70">(별도 세션)</span></div>
+</div>
+
 </div>
 
 <!--
 오늘 90분 교육의 전체 흐름을 한눈에 보여주는 신호등.
 docs SSoT 정합: Who → Why → [기본 용어와 범위 → 도구와 제품] → What → How → 보안. 개념(basics)·도구(intro)는 docs에선 별도 참조 페이지지만, 선형 강의에선 What·How가 기대는 어휘라 Why와 What 사이에 먼저 깐다.
 복잡한 다이어그램보다 간결한 목차 한 장으로 정렬.
+2부 구간 추가(이슈 #52 Task 4): 01~07과 구분선으로 갈라 번호를 잇지 않고 「별도 세션」으로 표기. 2부는 오늘 90분에 포함되지 않는다(2부의 흐름 슬라이드가 같은 문구로 다시 알린다). 덱에서의 물리 위치는 How 뒤·실습 앞이다.
 -->
 
 
@@ -575,7 +582,7 @@ viewport 점검 필요: 5축×3종 표가 가로폭·세로폭에 다 들어가�
 
 # 그 밖의 기본 용어 ― 마크다운 · 외부 컨텍스트
 
-> 사이트·슬라이드에서 만나게 될 **두 용어**와, **본 강의가 다루지 않는 영역**을 한 번에 짚습니다.
+> 사이트·슬라이드에서 만나게 될 **두 용어**와, **어디까지 다루는지**를 한 번에 짚습니다.
 
 <div class="mt-6 grid grid-cols-2 gap-4 max-w-4xl mx-auto">
 
@@ -601,7 +608,8 @@ viewport 점검 필요: 5축×3종 표가 가로폭·세로폭에 다 들어가�
 **MCP** <span class="opacity-60">(Model Context Protocol)</span>: 어떻게 연결.<br/>
 **RAG** <span class="opacity-60">(Retrieval-Augmented Generation)</span>: 무엇을 하느냐.
 
-→ **설치·내부 구조 모두 범위 밖.**
+→ **연결하는 방법은 2부에서 다룹니다.**<br/>
+단, RAG 내부 구조는 2부에서도 **범위 밖**.
 
 </div>
 </div>
@@ -616,7 +624,8 @@ viewport 점검 필요: 5축×3종 표가 가로폭·세로폭에 다 들어가�
 docs/basics.md 「기본 용어와 범위」 페이지 1장 압축: ADR-0002 단방향 파생.
 두 용어(마크다운 / 외부 컨텍스트)를 가로 2분할 카드로 한 슬라이드에 묶음. (바이브↔에이전틱은 docs와 함께 제거: 비개발자 실익 낮음)
 메타 원칙 5장(②blue / ③purple / ④teal / ⑤emerald·amber)과는 색상(slate 회색조)·비중(작은 카드 2분할) 분리: 「원칙」이 아닌 「용어 해소·범위 밖 안내」 결.
-청중 메시지: 「이 단어들이 본 강의에 나오면 멈추지 마세요. 다만 본격 학습·설치·내부 구조는 본 강의 밖입니다.」
+청중 메시지: 「이 단어들이 본 강의에 나오면 멈추지 마세요. 실제로 연결하는 방법은 2부에서 화면 기준으로 다룹니다. 다만 마크다운 문법 학습과 RAG 내부 구조는 그때도 밖입니다.」
+접합부 전환(이슈 #52 Task 4): 종전에는 설치와 내부 구조를 한데 묶어 범위 밖으로 선언했으나, docs/basics.md 「외부 컨텍스트」 절의 현행 서술과 같은 구도로 바꿈. 연결 방법은 2부로 넘기고, RAG 내부 구조가 범위 밖이라는 선언만 남긴다.
 nav 위치(개념 블록 끝): 「결과물의 성격」 직후, 도구 블록(Claude 3종) 앞. docs는 개념(기본 용어와 범위) → 도구(도구와 제품) 순으로 정합.
 -->
 
@@ -1321,7 +1330,7 @@ ADR 격상 후보(이슈 #32 Task 8에서 결정): 데이터/뷰 분리를 별 A
 </div>
 
 <div class="mt-6 text-center text-sm opacity-75 italic max-w-3xl mx-auto">
-"프롬프트로만 진행"의 짝 원칙: 손으로 안 쓰지만 검토는 합니다. 사례: <code>step04</code>의 인식 엑셀 검수 자리.
+"프롬프트로만 진행"의 짝 원칙: 손으로 안 쓰지만 검토는 합니다. 사례: <code>step04</code>의 인식 엑셀 검수 단계.
 </div>
 
 <!--
@@ -1557,7 +1566,7 @@ layout: default
 <!--
 docs/connect/index.md `## 1부에 이어서 진행됩니다 { #from-part1 }` 앞 두 문단 압축: ADR-0002 단방향 파생.
 2부 전체의 문제 제기 슬라이드. 앞의 「AI 활용 3단계」 슬라이드를 그대로 받아 이어 붙인다: 청중이 이미 본 사다리 그림 위에서 「그 사다리로 안 되는 것」을 짚는 자리.
-Confluence·Jira 두 카드는 slate 회색조: 「기본 용어와 범위」 카드와 같은 톤 ― 원칙이 아니라 상황 예시라는 결.
+Confluence·Jira 두 카드는 slate 회색조: 「기본 용어와 범위」 카드와 같은 톤. 원칙이 아니라 상황 예시라는 결.
 -->
 
 
@@ -1653,7 +1662,7 @@ Confluence에서 문서를 찾아 열고, 본문을 **복사해 대화창에 붙
 
 <!--
 docs/connect/index.md `## 무엇이 달라지나요 { #what-changes }` 압축: ADR-0002 단방향 파생.
-docs의 example/success 2분할 카드를 그대로 슬라이드 2분할로. 연결 전은 slate(중립), 연결 후는 emerald(권장) ― 「메타 원칙 ⑤」의 권장/보수 색 규칙과 정합.
+docs의 example/success 2분할 카드를 그대로 슬라이드 2분할로. 연결 전은 slate(중립), 연결 후는 emerald(권장). 「메타 원칙 ⑤」의 권장/보수 색 규칙과 정합.
 하단 purple 바는 메타 원칙 ③과 같은 색: 1부에서 본 원칙이 2부에서 다시 호출된다는 신호를 색으로 준다. 연결의 효용만 말하고 끝내면 검토 의무가 약해 보이므로 같은 화면에 붙여 둔다.
 -->
 
@@ -1686,7 +1695,7 @@ table th, table td { padding: 0.35em 0.5em; }
 
 <!--
 docs/connect/index.md `## 연결하는 방법에는 두 가지가 있습니다 { #two-paths }` 표 압축: ADR-0002 단방향 파생.
-docs 표 5행 중 「자세히 보기」 행(페이지 링크)은 슬라이드에서 뺀다 ― 발표 화면에서 클릭할 자리가 아니고, 두 방법은 뒤따르는 두 블록이 그대로 이어받는다.
+docs 표 5행 중 「자세히 보기」 행(페이지 링크)은 슬라이드에서 뺀다. 발표 화면에서 클릭할 자리가 아니고, 두 방법은 뒤따르는 두 블록이 그대로 이어받는다.
 편의와 판단 부담이 정확히 반대 방향이라 어려운 쪽부터 갈 이유가 없다는 것이 순서의 근거: 표 「내가 판단할 것」 행이 그 근거를 이미 보여주므로 아래 바에서는 결론만 말한다.
 용어(외부 컨텍스트·MCP)는 1부 「그 밖의 기본 용어」에서 이미 정의: 2부는 다시 정의하지 않는다.
 -->
@@ -1911,7 +1920,7 @@ table th, table td { padding: 0.35em 0.5em; }
 
 <!--
 docs/connect/connectors.md `## 승인 화면에서 확인할 것 { #approval-screen }` 표 그대로 파생: ADR-0002 단방향 파생.
-docs 표 3행을 줄이지 않는다 ― 이 세 가지가 연결에서 사람이 내리는 결정의 전부라, 압축하면 남길 것이 없다.
+docs 표 3행을 줄이지 않는다. 이 세 가지가 연결에서 사람이 내리는 결정의 전부라, 압축하면 남길 것이 없다.
 셋째 행 「어떻게 하나」 칸은 docs의 두 문장 중 앞 문장만: 뒤 문장(내가 볼 수 있는 것까지가 가장 넓은 범위)은 다음 장 전체가 받는다.
 선택지가 없을 때 줄이는 두 방법도 다음 장으로 넘긴다.
 -->
@@ -1940,7 +1949,7 @@ docs 표 3행을 줄이지 않는다 ― 이 세 가지가 연결에서 사람�
 
 **내가 볼 수 있는 것까지가** AI에게 열릴 수 있는 **가장 넓은 범위**입니다.
 
-내 계정이 회사 자료 대부분에 닿는다면 그만큼 넓어집니다.
+내 계정이 회사 자료 대부분에 접근할 수 있다면 그만큼 넓어집니다.
 
 </div>
 </div>
@@ -1977,7 +1986,7 @@ AI가 쓰기 작업 승인을 물어오면 지금 필요하지 않은 것은 거
 <!--
 docs/connect/connectors.md `!!! warning "「내 권한 그대로」는 안심과 경고를 같이 줍니다"` + `#approval-screen` 말미 두 항목 압축: ADR-0002 단방향 파생.
 카드 색은 「메타 원칙 ⑤」의 emerald(권장)/amber(보수)를 그대로 재사용: 같은 사실의 두 얼굴이라는 구도를 색으로 반복한다.
-승인 화면에 선택지가 없을 때의 대안을 같은 화면에 두는 것이 요점 ― 「줄일 방법이 없다」로 끝나면 청중이 승인 화면에서 할 일이 없어진다.
+승인 화면에 선택지가 없을 때의 대안을 같은 화면에 두는 것이 요점. 「줄일 방법이 없다」로 끝나면 청중이 승인 화면에서 할 일이 없어진다.
 -->
 
 
@@ -1991,7 +2000,7 @@ Confluence는 회의록·규정·기획서를, Jira는 업무 요청과 진행 �
 <div class="mt-5 grid grid-cols-2 gap-4 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
-<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center text-sm">Confluence ― 읽고 정리하기</div>
+<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center text-sm">Confluence: 읽고 정리하기</div>
 <div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-xs">
 
 - <em>"지난주 팀 회의록을 찾아 결정사항만 정리해 줘"</em>
@@ -2001,7 +2010,7 @@ Confluence는 회의록·규정·기획서를, Jira는 업무 요청과 진행 �
 </div>
 
 <div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
-<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center text-sm">Jira ― 상태 파악하기</div>
+<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center text-sm">Jira: 상태 파악하기</div>
 <div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-xs">
 
 - <em>"내 담당 이슈 중 이번 주 마감인 것만 골라 정리해 줘"</em>
@@ -2026,7 +2035,7 @@ Atlassian 커넥터는 읽기와 쓰기를 모두 지원합니다. 내 계정으
 
 <!--
 docs/connect/connectors.md `## Atlassian ― Jira와 Confluence { #atlassian }` 압축: ADR-0002 단방향 파생.
-docs의 예시 프롬프트는 각 3개지만 슬라이드는 2개씩 ― 발표에서 읽어 줄 분량이고, 나머지는 사이트에서 본다.
+docs의 예시 프롬프트는 각 3개지만 슬라이드는 2개씩. 발표에서 읽어 줄 분량이고, 나머지는 사이트에서 본다.
 red 경고 바는 보안 섹션의 「공통 원칙」 바와 같은 톤: 트랙 무관하게 지켜야 할 것이라는 신호. 이 장에서 가장 오래 머무를 자리다.
 메타 원칙 ③이 연결 이후 더 중요해진다는 연결고리는 5장에서 이미 깔았으므로 여기서는 실행 지침(읽기부터, 승인은 거절)만 남긴다.
 -->
@@ -2077,7 +2086,7 @@ Jira·Confluence 같은 업무 도구가 따로 있다면 비개발자가 GitHub
 docs/connect/connectors.md `## GitHub ― 소스코드를 관리하는 곳 { #github }` 압축: ADR-0002 단방향 파생.
 슬라이드 제목은 docs 제목(소스코드를 관리하는 곳)이 아니라 이 장의 결론(판단이 갈린다)으로 잡는다: 발표에서는 도구 정의보다 「나는 연결해야 하나」가 먼저 걸린다. 도구 정의는 첫 줄에 그대로 남겼다.
 트랙 2분할은 「메타 원칙 ⑤」와 같은 emerald/amber: 권장/보수의 대비를 반복.
-docs의 상세(지원 범위·프로젝트에 저장소 붙이기·SSO 승인)는 슬라이드에서 뺀다 ― 연결하기로 정한 사람만 필요한 내용이라 사이트에서 본다.
+docs의 상세(지원 범위·프로젝트에 저장소 붙이기·SSO 승인)는 슬라이드에서 뺀다. 연결하기로 정한 사람만 필요한 내용이라 사이트에서 본다.
 -->
 
 
@@ -2123,7 +2132,7 @@ Team·Enterprise 플랜에서는 **조직 관리자가 먼저 커넥터를 켜 �
 
 <!--
 docs/connect/connectors.md `## 연결을 점검하고 끊기 { #manage-disconnect }`·`## 회사 환경이라면 { #enterprise }` 두 절 병합: ADR-0002 단방향 파생.
-분량 압축을 위해 두 절을 한 장에 묶는다(이슈 #52 Task 1 구성안의 ⊗ 표시 ― 늘릴 때 쪼갤 후보). 왼쪽은 개인이 하는 점검, 오른쪽은 조직이 정하는 경계로 축이 갈려 한 화면에서 대비된다.
+분량 압축을 위해 두 절을 한 장에 묶는다(이슈 #52 Task 1 구성안의 ⊗ 표시, 늘릴 때 쪼갤 후보). 왼쪽은 개인이 하는 점검, 오른쪽은 조직이 정하는 경계로 축이 갈려 한 화면에서 대비된다.
 회사 자료를 다루는 연결은 회사가 계약한 플랜에서만 진행한다는 서술은 7장(준비물)에서 이미 red 바로 세웠으므로 여기서 반복하지 않는다.
 -->
 
@@ -2191,7 +2200,7 @@ docs/connect/mcp-servers.md `## 커넥터와 무엇이 다른가요 { #vs-connec
 
 **누가 접속하나**: **Anthropic 서버**입니다. 내 컴퓨터는 시키기만 합니다.
 
-**접근 범위**: **인터넷에서 열려 있는 주소**까지입니다. 내 컴퓨터 안의 파일이나 사내망 주소에는 닿지 않습니다.
+**접근 범위**: **인터넷에서 열려 있는 주소**까지입니다. 내 컴퓨터 안의 파일이나 사내망 주소에는 접근하지 못합니다.
 
 **어디서 쓰나**: 등록이 내 계정에 저장되어 **웹·데스크톱·모바일 어디서나** 같은 연결을 씁니다.
 
@@ -2219,7 +2228,7 @@ docs/connect/mcp-servers.md `## 커넥터와 무엇이 다른가요 { #vs-connec
 
 <!--
 docs/connect/mcp-servers.md `## 어디에 설정하느냐가 갈림길입니다 { #remote-vs-local }` 2분할 카드 파생: ADR-0002 단방향 파생.
-ADR-0010 결정 3-1의 첫째 갈래를 한 장으로 세운다 ― 이 갈래가 접속 주체를 정하고, 사내망 주소에 닿는지도 여기서 갈린다.
+ADR-0010 결정 3-1의 첫째 갈래를 한 장으로 세운다. 이 갈래가 접속 주체를 정하고, 사내망 주소에 접근할 수 있는지도 여기서 갈린다.
 슬라이드 본문에 「축」이라는 말을 쓰지 않는다(이슈 #52 Task 1 확정): 나누는 기준을 제목에 직접 써서 비개발자가 용어 없이 읽게 한다. ADR의 두 갈래 구도는 19·20장 두 장으로 나뉘어 유지된다.
 세 항목의 순서(누가 접속하나 → 접근 범위 → 어디서 쓰나)를 양쪽 카드에서 맞춰, 청중이 가로로 읽어 비교할 수 있게 한다.
 -->
@@ -2253,7 +2262,7 @@ ADR-0010 결정 3-1의 첫째 갈래를 한 장으로 세운다 ― 이 갈래�
 
 <div class="border-l-4 border-purple-400 pl-6 py-4 my-7 bg-purple-50 dark:bg-purple-900/15 rounded-r max-w-5xl mx-auto">
 
-**B가 회사 사내망 MCP 서버를 쓰는 방식입니다.** 접속이 내 컴퓨터에서 나가니, VPN이 붙어 있으면 사내 주소에 닿습니다.
+**B가 회사 사내망 MCP 서버를 쓰는 방식입니다.** 접속이 내 컴퓨터에서 나가니, VPN이 붙어 있으면 사내 주소에 접근할 수 있습니다.
 
 </div>
 
@@ -2298,14 +2307,14 @@ flowchart LR
 
 내 컴퓨터는 시키기만 하고, 실제 접속은 **Anthropic 쪽에서 시작합니다.** 그래서 조건은 하나입니다: **그 주소가 인터넷에서 열려 있는가.**
 
-**사내망 주소는 내가 VPN에 붙어 있어도 닿지 않습니다.** 접속하는 쪽이 내 컴퓨터가 아니기 때문입니다.
+**사내망 주소는 내가 VPN에 붙어 있어도 접근하지 못합니다.** 접속하는 쪽이 내 컴퓨터가 아니기 때문입니다.
 
 </div>
 
 <!--
 docs/connect/mcp-servers.md `#remote-vs-local` 첫 mermaid 그대로 파생: ADR-0002 단방향 파생. 노드·간선·색 지정을 docs와 동일하게 유지해 두 표면이 같은 그림을 보여주게 한다.
 덱 mermaid는 `setup/mermaid.ts`에서 neutral(라이트) 고정: docs의 연한 파랑 style 지정이 그대로 산다.
-회색 점선 간선(접속할 수 없음)이 이 장의 메시지다 ― 사내망에 닿지 않는다는 것을 말이 아니라 그림에서 먼저 본다.
+회색 점선 간선(접속할 수 없음)이 이 장의 메시지다. 사내망에 접근하지 못한다는 것을 말이 아니라 그림에서 먼저 본다.
 scale 0.72는 슬라이드 폭 기준 조정값: Task 6 viewport 점검 대상.
 -->
 
@@ -2347,7 +2356,7 @@ flowchart LR
 
 <!--
 docs/connect/mcp-servers.md `#remote-vs-local` 둘째 mermaid 파생: ADR-0002 단방향 파생.
-docs 노드 라벨에서 「사내 데이터」 이탤릭 한 줄만 뺐다 ― 슬라이드 폭에서 노드가 3행이 되면 그림이 눌린다. 나머지 노드·간선·색은 docs와 같다.
+docs 노드 라벨에서 「사내 데이터」 이탤릭 한 줄만 뺐다. 슬라이드 폭에서 노드가 3행이 되면 그림이 눌린다. 나머지 노드·간선·색은 docs와 같다.
 20장의 A·B 라벨을 여기서 회수해 두 조합이 같은 그림 안에 있음을 보여준다.
 마지막 화살표(읽은 내용은 여기로)가 23장 경고 블록의 근거다: 내 컴퓨터에서 실행돼도 자료는 Claude 서비스로 간다.
 scale 0.62는 노드가 많아 21장보다 더 줄인 값: Task 6 viewport 점검 대상.
@@ -2414,7 +2423,7 @@ red 경고는 22장 mermaid의 마지막 화살표를 말로 받는 자리. 그�
 <div class="mt-4 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
-<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center text-sm">내 계정에 등록 ― 주소 넣기</div>
+<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center text-sm">내 계정에 등록: 주소 넣기</div>
 <div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-xs">
 
 1. **사용자 지정 → 커넥터**로 들어갑니다.
@@ -2428,7 +2437,7 @@ red 경고는 22장 mermaid의 마지막 화살표를 말로 받는 자리. 그�
 </div>
 
 <div class="rounded-lg overflow-hidden border border-purple-200 dark:border-purple-800">
-<div class="bg-purple-100 text-purple-800 px-4 py-2 font-bold text-center text-sm">내 컴퓨터에 설정 ― 확장 프로그램</div>
+<div class="bg-purple-100 text-purple-800 px-4 py-2 font-bold text-center text-sm">내 컴퓨터에 설정: 확장 프로그램</div>
 <div class="bg-purple-50 dark:bg-purple-900/15 px-4 py-3 text-xs">
 
 1. **설정 → 확장 프로그램**으로 들어갑니다.
@@ -2468,7 +2477,7 @@ red 경고는 22장 mermaid의 마지막 화살표를 말로 받는 자리. 그�
 docs/connect/mcp-servers.md `## 등록하는 순서 { #how-to-register }` 두 절(#register-remote·#register-local) 압축: ADR-0002 단방향 파생.
 19·20장에서 나눈 두 방식이 여기서 절차로 내려온다: 카드 색을 19장과 맞춰(계정 blue / 내 컴퓨터 purple) 어느 갈래의 절차인지 색으로 잇는다.
 docs의 스크린샷 1장(커스텀 커넥터 추가 창)은 덱 관례대로 가져오지 않고 화면 경로만 텍스트로 쓴다.
-고급 설정·MCPB 파일 배포·확장 프로그램 권한 경고는 슬라이드에서 뺀다 ― 실제로 등록하는 사람만 필요한 상세라 사이트에서 본다. 다만 열쇠 값과 「항상 허용」은 판단이 갈리는 자리라 다음 장으로 살린다.
+고급 설정·MCPB 파일 배포·확장 프로그램 권한 경고는 슬라이드에서 뺀다. 실제로 등록하는 사람만 필요한 상세라 사이트에서 본다. 다만 열쇠 값과 「항상 허용」은 판단이 갈리는 자리라 다음 장으로 살린다.
 -->
 
 
@@ -2503,8 +2512,8 @@ table th, table td { padding: 0.3em 0.5em; }
 
 <!--
 docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` 표 + 두 warning 압축: ADR-0002 단방향 파생.
-표 5행을 줄이지 않는다 ― 「고르는 눈」이 이 구간이 비개발자에게 주려는 것 전부라, 압축하면 남길 것이 없다.
-프롬프트 주입은 이 구간에서 유일하게 새로 나오는 위험 개념이라 red 바로 세운다. 용어는 괄호로 한 번만 붙이고 본문은 현상 서술로 간다 ― 비개발자에게 필요한 것은 이름이 아니라 「믿을 수 있는 곳만」이라는 행동 기준이다.
+표 5행을 줄이지 않는다. 「고르는 눈」이 이 구간이 비개발자에게 주려는 것 전부라, 압축하면 남길 것이 없다.
+프롬프트 주입은 이 구간에서 유일하게 새로 나오는 위험 개념이라 red 바로 세운다. 용어는 괄호로 한 번만 붙이고 본문은 현상 서술로 간다. 비개발자에게 필요한 것은 이름이 아니라 「믿을 수 있는 곳만」이라는 행동 기준이다.
 서술은 가능성형(착각할 수 있습니다)으로: 단정하면 보호 장치가 없는 것처럼 읽힌다.
 -->
 
@@ -2551,7 +2560,7 @@ docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` �
 
 <!--
 docs/connect/mcp-servers.md `!!! tip "열쇠 값(토큰)을 만들 때는 필요한 만큼만"` + `!!! warning "열쇠 값은 대화창에 붙여넣지 않습니다"` + `#choosing`의 `!!! warning "「항상 허용」은 마지막에 누르세요"` 병합: ADR-0002 단방향 파생.
-분량 압축을 위해 세 박스를 한 장에 묶는다(구성안의 ⊕ 표시 ― 줄일 때 병합 후보). 묶이는 축은 「승인을 미리 좁히기 vs 승인을 나중에 열기」로, 같은 판단의 앞뒤다.
+분량 압축을 위해 세 박스를 한 장에 묶는다(구성안의 ⊕ 표시, 줄일 때 병합 후보). 묶이는 축은 「승인을 미리 좁히기 vs 승인을 나중에 열기」로, 같은 판단의 앞뒤다.
 red 바는 1부 보안 섹션의 「절대 입력하면 안 되는 정보」 표를 되짚는 자리: 그 표의 「인증 정보」 행이 여기서 실물로 등장한다. 슬라이드는 되짚기만 하고 표는 다시 그리지 않는다.
 -->
 
@@ -2594,7 +2603,7 @@ red 바는 1부 보안 섹션의 「절대 입력하면 안 되는 정보」 표
 <!--
 docs/connect/mcp-servers.md `## 연결한 뒤에 할 일 { #after-connect }` + `## 잘 안 될 때 { #troubleshooting }` 두 절 병합: ADR-0002 단방향 파생.
 구성안의 ⊕ 표시(줄일 때 병합 후보)를 적용한 장. 왼쪽은 잘 될 때 할 일, 오른쪽은 안 될 때 볼 것으로 축이 갈린다.
-문제 해결 표는 docs 5행 중 「주소를 잘못 넣음」 행을 뺐다 ― 24장 하단 orange 바에서 이미 다뤘다.
+문제 해결 표는 docs 5행 중 「주소를 잘못 넣음」 행을 뺐다. 24장 하단 orange 바에서 이미 다뤘다.
 하단 purple 바가 이 구간의 닫는 메시지: 5장·14장에 이어 메타 원칙 ③이 세 번째로 호출되는 자리이고, 2부에서 가장 세게 말해야 하는 지점이다. 색도 purple로 계속 맞춘다.
 -->
 
@@ -2637,14 +2646,14 @@ docs/connect/mcp-servers.md `## 연결한 뒤에 할 일 { #after-connect }` + `
 </div>
 
 <div class="mt-6 text-center text-sm opacity-75 italic">
-자세한 기준은 사이트 페이지 <code>보안 및 개인정보 가이드 ― 외부 연결</code>에 있습니다.
+자세한 기준은 사이트 페이지 <code>보안 및 개인정보 가이드</code>의 「외부 연결」 절에 있습니다.
 </div>
 
 <!--
 docs/security-guide.md `## 외부 연결 ― 커넥터와 MCP 서버 { #external-connection }` 리드 + 핵심 원칙 warning 파생: ADR-0002 단방향 파생.
 보안 서술의 SSoT는 security-guide.md이므로(ADR-0010 결정 4) 이 구간 3장은 요약만 담고 상세는 사이트로 넘긴다. 슬라이드에서 기준을 다시 정의하지 않는다.
 red 바 한 줄이 이 장의 전부다: 「판단이 사라진 것이 아니라 시점이 앞으로 옮겨졌다」가 연결 보안의 핵심이고, 이것이 서면 나머지는 따라온다.
-두 개의 작은 바는 넓어지는 방향과 좁아지는 방향을 같은 화면에 둔다 ― 앞쪽만 말하면 겁을 주고, 뒤쪽만 말하면 안심시킨다.
+두 개의 작은 바는 넓어지는 방향과 좁아지는 방향을 같은 화면에 둔다. 앞쪽만 말하면 겁을 주고, 뒤쪽만 말하면 안심시킨다.
 -->
 
 
@@ -2699,7 +2708,7 @@ red 바 한 줄이 이 장의 전부다: 「판단이 사라진 것이 아니라
 <!--
 docs/security-guide.md `### 공통 ― 트랙과 관계없이 지킵니다` 세 항목 압축: ADR-0002 단방향 파생.
 세 카드의 색을 위험 강도 순으로 배열(red → orange → blue): 첫째는 하지 말 것, 둘째는 줄일 것, 셋째는 유지할 것이라 성격이 다르다.
-하단 문장이 첫째 카드의 근거다 ― 「왜 연결에서 더 엄격해야 하는가」를 말하지 않으면 「연결하지 않습니다」가 과한 금지로 들린다.
+하단 문장이 첫째 카드의 근거다. 「왜 연결에서 더 엄격해야 하는가」를 말하지 않으면 「연결하지 않습니다」가 과한 금지로 들린다.
 1부 보안 섹션의 「절대 입력하면 안 되는 정보」 기준이 연결에도 그대로 적용된다는 것이 이 장의 전제: 그 표는 1부에서 이미 봤으므로 다시 그리지 않는다.
 -->
 
@@ -2711,7 +2720,7 @@ docs/security-guide.md `### 공통 ― 트랙과 관계없이 지킵니다` 세 
 <div class="mt-6 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-orange-200 dark:border-orange-800">
-<div class="bg-orange-100 text-orange-800 px-4 py-2 font-bold text-center text-sm">임직원 ― 회사 자료를 다루는 연결</div>
+<div class="bg-orange-100 text-orange-800 px-4 py-2 font-bold text-center text-sm">임직원: 회사 자료를 다루는 연결</div>
 <div class="bg-orange-50 dark:bg-orange-900/15 px-4 py-3 text-xs">
 
 문서의 **보안 등급 기준은 연결로 읽히는 경우에도 똑같이 적용됩니다.** 직접 입력하지 않았다는 이유로 예외가 되지 않습니다.
@@ -2724,7 +2733,7 @@ docs/security-guide.md `### 공통 ― 트랙과 관계없이 지킵니다` 세 
 </div>
 
 <div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
-<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center text-sm">학생·일반인 ― 개인 계정을 연결할 때</div>
+<div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center text-sm">학생·일반인: 개인 계정을 연결할 때</div>
 <div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-xs">
 
 개인 드라이브·노트를 연결하면 **그 공간에 쌓아 둔 자료 전부**가 접근 대상이 됩니다.
@@ -2747,7 +2756,7 @@ docs/security-guide.md `### 공통 ― 트랙과 관계없이 지킵니다` 세 
 
 <!--
 docs/security-guide.md `### 임직원(비개발자) ― 회사 자료를 다루는 연결` + `### 비개발자 학생·일반인 ― 개인 계정을 연결할 때` + `!!! tip "한 줄 요약"` 압축: ADR-0002 단방향 파생.
-트랙마다 한 가지씩만 남긴다 ― 임직원은 「보안 등급은 연결에도 그대로」, 학생·일반인은 「개인 공간을 열면 타인 자료까지」. 각 트랙에서 가장 놓치기 쉬운 것 하나씩이고, 나머지는 사이트에서 본다.
+트랙마다 한 가지씩만 남긴다. 임직원은 「보안 등급은 연결에도 그대로」, 학생·일반인은 「개인 공간을 열면 타인 자료까지」. 각 트랙에서 가장 놓치기 쉬운 것 하나씩이고, 나머지는 사이트에서 본다.
 임직원 카드의 GitHub Enterprise 판단은 15장에서 이미 다뤘으므로 반복하지 않는다.
 emerald 요약 바는 1부 보안 섹션의 「한 줄 요약」 관례와 같은 자리·같은 형식.
 -->
@@ -2832,7 +2841,7 @@ docs/labs.md → labs/ SSoT의 단방향 파생(ADR-0002).
 | **[step01](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step01-weather)** | 날씨: 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약 |
 | **[step02](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step02-file-classifier)** | 파일 분류 | 1·2 | Skill 옵션(파라미터) 설계 |
 | **[step03](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step03-voca-quiz)** | 영어 단어 출제기 | 1·2 | 사진 입력·출처 충실성·외부 도구 연결 |
-| **[step04](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step04-wrong-answer-note)** | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 · 검수 자리 · 데이터/뷰 분리 |
+| **[step04](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step04-wrong-answer-note)** | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 · 검수 단계 · 데이터/뷰 분리 |
 
 <div class="border-l-4 border-emerald-400 pl-6 py-3 my-4 bg-emerald-50 dark:bg-emerald-900/15 rounded-r">
 
