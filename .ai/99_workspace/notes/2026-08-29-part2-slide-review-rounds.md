@@ -9,8 +9,8 @@ related-files:
   - docs/connect/connectors.md
   - docs/security-guide.md
   - docs/connect/mcp-servers.md
-  - .ai/90_issues/active/issue-0052/issue-0052-plan.md
-  - .ai/90_issues/active/issue-0052/issue-0052-spec.md
+  - .ai/90_issues/archive/issue-0052/issue-0052-plan.md
+  - .ai/90_issues/archive/issue-0052/issue-0052-spec.md
 tags: [issue-0052, task6, slides, docs]
 ---
 
@@ -93,9 +93,9 @@ MkDocs(`127.0.0.1:8000`)와 Slidev(`localhost:3030`) dev 서버를 띄워 사용
 <details>
 <summary>상세 펼치기</summary>
 
-- 이슈 문서: `.ai/90_issues/active/issue-0052/` (spec·plan·summary)
-- 구성안: `.ai/99_workspace/issue-0052-storyboard.md`
-- 1부 동기화 점검표: `.ai/99_workspace/issue-0052-part1-sync-check.md`
+- 이슈 문서: `.ai/90_issues/archive/issue-0052/` (spec·plan·summary)
+- 구성안: `.ai/90_issues/archive/issue-0052/issue-0052-storyboard.md`
+- 1부 동기화 점검표: `.ai/90_issues/archive/issue-0052/issue-0052-part1-sync-check.md`
 - 브랜치 `issue-0052`의 기존 커밋 4건: `bc1c437`·`96c59dc`·`7b1a262`·`f4561d3`
 - 점검 기준 커밋(#50 병합): `0515ca3`
 - 근거 ADR: ADR-0002(docs SSoT·slides 단방향 파생), ADR-0010(2부 범위·두 갈래 구도), ADR-0009(테마), ADR-0005(비개발자 경계)

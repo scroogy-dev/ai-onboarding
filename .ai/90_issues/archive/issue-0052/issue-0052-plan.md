@@ -78,7 +78,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
 - [x] 완료
 - **목표**: docs 4곳을 발표 호흡으로 추린 장별 구성안을 확정해, 작성 Task(2·3)의 기준을 만든다.
 - **작업 내용**:
-  1. 파생 원본 4곳(`docs/connect/index.md`·`connectors.md`·`mcp-servers.md`·`security-guide.md` 외부 연결 절)을 읽고, 장별 구성안(가제 · 핵심 메시지 · 원본 절 매핑 · 레이아웃 감)을 `.ai/99_workspace/issue-0052-storyboard.md`에 작성한다.
+  1. 파생 원본 4곳(`docs/connect/index.md`·`connectors.md`·`mcp-servers.md`·`security-guide.md` 외부 연결 절)을 읽고, 장별 구성안(가제 · 핵심 메시지 · 원본 절 매핑 · 레이아웃 감)을 `./issue-0052-storyboard.md`에 작성한다 (작성 시점 경로는 `.ai/99_workspace/issue-0052-storyboard.md`, --clear로 이관).
   2. Task 0에서 정한 덱 구성·분량 목표를 구성안에 반영한다.
   3. 사용자 승인을 받고, 확정된 장수·장 제목을 Task 2·3의 검증 명령에 기입한다 (plan은 가변 문서라 이 보정은 허용된다).
   4. (수행 결과) 승인 시 결정된 사항: 배치는 실습 섹션 앞, 분량은 31장, 상세 검토는 31장 완성 후 Task 6 피드백 루프에서 일괄 수행한다.
@@ -92,7 +92,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
 - [x] 완료
 - **목표**: `docs/connect/index.md`(연결이 왜 필요한가)와 `docs/connect/connectors.md`(기본 커넥터)를 슬라이드로 파생한다.
 - **작업 내용**:
-  1. Task 1 구성안(`.ai/99_workspace/issue-0052-storyboard.md` 4절)의 1~16장을 작성한다. 기존 덱의 시각 관례(spec 전제 2)와 줄표 규칙(spec 전제 1)을 따른다.
+  1. Task 1 구성안(`./issue-0052-storyboard.md` 4절)의 1~16장을 작성한다. 기존 덱의 시각 관례(spec 전제 2)와 줄표 규칙(spec 전제 1)을 따른다.
   2. 2부 블록은 기존 1부 「실습」 섹션 divider 바로 앞에 넣는다 (Task 1 확정, 구성안 2절).
   3. 각 슬라이드에 HTML 주석으로 발표자 노트·원본 매핑을 남긴다.
   4. 덱 전체에 이미지가 0건인 관례를 따라 스크린샷을 넣지 않고, 화면 경로를 텍스트로 쓰고 이미지는 docs로 위임한다 (구성안 1절).
@@ -147,7 +147,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
 - [x] 완료
 - **목표**: `docs/connect/mcp-servers.md`와 `docs/security-guide.md` 외부 연결 절을 슬라이드로 파생한다.
 - **작업 내용**:
-  1. Task 1 구성안(`.ai/99_workspace/issue-0052-storyboard.md` 4절)의 17~31장을 작성한다. ADR-0010 결정 3-1의 두 축(설정 위치 / 서버 위치)은 19·20장 두 장으로 나눠 유지한다 (Task 1 확정). 슬라이드 본문에는 「축」이라는 말 대신 「설정을 어디에 두나 / 서버가 어디에서 실행되나」 기준을 제목에 직접 쓴다.
+  1. Task 1 구성안(`./issue-0052-storyboard.md` 4절)의 17~31장을 작성한다. ADR-0010 결정 3-1의 두 축(설정 위치 / 서버 위치)은 19·20장 두 장으로 나눠 유지한다 (Task 1 확정). 슬라이드 본문에는 「축」이라는 말 대신 「설정을 어디에 두나 / 서버가 어디에서 실행되나」 기준을 제목에 직접 쓴다.
   2. 보안 유의점 장(28~30장)은 요약만 담고 상세는 `docs/security-guide.md`로 안내한다 (보안 서술의 SSoT는 security-guide, ADR-0010 결정 4).
   3. 2부 마지막 장(31장 「2부 정리」) 뒤에 `layout: end` 슬라이드를 두지 않는다. 2부 블록이 덱 중간에 있어 종료 슬라이드가 1부 실습·보안 섹션을 가리게 되기 때문이다 (구성안 2절).
 - **완료 기준**:
@@ -220,7 +220,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
 - [x] 완료
 - **목표**: #50이 docs에 반영한 변경 중 슬라이드에 누락된 것이 없음을 확인하고 누락만 보정한다 (ADR-0002가 예정한 「발표 마일스톤 직전 docs 변경 이력 점검」을 이 마일스톤에서 수행).
 - **작업 내용**:
-  1. #50의 docs 변경 커밋(PR #53 병합 커밋 `0515ca3`의 두 부모 범위, 착수 시점 실측 12건)을 열거해 점검표를 `.ai/99_workspace/issue-0052-part1-sync-check.md`에 작성한다. 행 형식은 `| <짧은 해시> | <커밋 제목> | <판정> | <근거·대응 슬라이드> |`이며, 이슈 #50 완료 댓글의 Task 4 점검 라운드 1~10 목록을 판정 참고로 쓴다.
+  1. #50의 docs 변경 커밋(PR #53 병합 커밋 `0515ca3`의 두 부모 범위, 착수 시점 실측 12건)을 열거해 점검표를 `./issue-0052-part1-sync-check.md`에 작성한다 (작성 시점 경로는 `.ai/99_workspace/issue-0052-part1-sync-check.md`, --clear로 이관). 행 형식은 `| <짧은 해시> | <커밋 제목> | <판정> | <근거·대응 슬라이드> |`이며, 이슈 #50 완료 댓글의 Task 4 점검 라운드 1~10 목록을 판정 참고로 쓴다.
   2. 커밋별로 대응 슬라이드를 대조해 반영 / 해당 없음(슬라이드에 대응 서술 자체가 없음) / 누락 중 하나로 판정한다.
   3. 누락 판정 항목은 docs 서술 기준으로 슬라이드를 보정한다 (두 표면이 다르면 docs가 정답, ADR-0002 결정 5). 1부 전수 대조·재구성으로 확장하지 않는다 (spec 전제 9).
 - **완료 기준**:
@@ -252,7 +252,7 @@ audit은 L2 [QD] 보완 검증 ― L1 [D] 결정적 게이트의 대체가 아�
 이 Task는 사용자가 직접 수행하며, 구현 AI는 자동으로 닫지 않는다.
 -->
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 스펙 위반·누락·소스코드와의 모순을 구현 모델과 다른 시각으로 잡는다.
 - **실행 주체**: **사용자가 직접** 수행한다. 구현 AI는 이 Task를 **자동으로 닫지 않으며**, `issue-audit`를 자동 실행하지도 않는다.
 - **작업 내용**:
@@ -267,8 +267,8 @@ audit은 L2 [QD] 보완 검증 ― L1 [D] 결정적 게이트의 대체가 아�
     <summary>검증 명령 ― repo 루트에서 실행, 출력 0건이면 통과</summary>
 
     ```bash
-    P=.ai/90_issues/active/issue-0052/issue-0052-plan.md
-    S=.ai/90_issues/active/issue-0052/issue-0052-summary.md
+    P=.ai/90_issues/archive/issue-0052/issue-0052-plan.md
+    S=.ai/90_issues/archive/issue-0052/issue-0052-summary.md
     { grep -qE '^### Task ' "$P" && grep -qE '^### Task ' "$S" \
       && diff <(grep -E '^### Task ' "$P") <(grep -E '^### Task ' "$S") \
       || echo '위반: 입력 접근 실패 또는 Task 집합 불일치'; }
@@ -282,7 +282,7 @@ audit은 L2 [QD] 보완 검증 ― L1 [D] 결정적 게이트의 대체가 아�
     <summary>검증 명령 ― repo 루트에서 실행, 출력 0이면 통과</summary>
 
     ```bash
-    S=.ai/90_issues/active/issue-0052/issue-0052-summary.md
+    S=.ai/90_issues/archive/issue-0052/issue-0052-summary.md
     awk '
       /^### Task / { if (o && !n && v != 1) b++; o = 1; v = 0; n = ($0 ~ /^### Task N/) }
       o && /^- \*\*결과\*\*:/ {
@@ -301,7 +301,7 @@ audit은 L2 [QD] 보완 검증 ― L1 [D] 결정적 게이트의 대체가 아�
     <summary>검증 명령 ― repo 루트에서 실행, 출력 0이면 통과</summary>
 
     ```bash
-    S=.ai/90_issues/active/issue-0052/issue-0052-summary.md
+    S=.ai/90_issues/archive/issue-0052/issue-0052-summary.md
     awk '
       /^### Task / { if (o && !n && d && (t != 1 || m != 1)) b++; o = 1; d = 0; t = 0; m = 0; n = ($0 ~ /^### Task N/) }
       o && /^- \*\*결과\*\*: (완료|부분 완료)[[:space:]]*$/ { d = 1 }
