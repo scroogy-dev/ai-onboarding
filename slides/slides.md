@@ -562,7 +562,7 @@ viewport 점검 필요: 2카드 + 오해 박스가 한 화면에 들어가는지
 </div>
 
 <div class="mt-2 text-center text-xs opacity-90">
-<strong>에이전트 스킬</strong>: 비개발자도 만들 수 있고, 한 번 만들어 두면 반복 작업을 크게 줄여 줍니다
+<strong>에이전트 스킬</strong>: 비개발자도 만들 수 있고, 한 번 만들어 두면 반복 작업을 크게 줄여 줍니다.
 </div>
 
 <div class="mt-1 text-center text-xs opacity-80">
