@@ -37,9 +37,9 @@
 
 | step | 주제 | stage 구성 | 핵심 학습 포인트 |
 |------|------|-----------|----------------|
-| **[step01-weather](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step01-weather)** | 날씨: 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약 |
+| **[step01-weather](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step01-weather)** | 날씨: 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약, 데이터·뷰 분리 |
 | **[step02-file-classifier](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step02-file-classifier)** | 파일 분류 | 1·2 | Skill 옵션(파라미터) 설계 |
-| **[step03-voca-quiz](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step03-voca-quiz)** | 영어 단어 출제기 | 1·2 | Skill 활용 다양화 |
+| **[step03-voca-quiz](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step03-voca-quiz)** | 영어 단어 출제기 | 1·2 | 이미지 입력, 출처 충실성 제약, 외부 사전 링크 자동 연결 |
 | **[step04-wrong-answer-note](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step04-wrong-answer-note)** | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 + 검수 단계 + 데이터·뷰 분리 |
 
 ---
@@ -56,4 +56,4 @@
 실습 진행에 필요한 도구·계정은 [홈 페이지 안내](index.md#preparation)를 참고하세요. 핵심 준비물은 다음과 같습니다.
 
 - 유료 Claude 플랜: 개인은 Pro 이상 / **임직원은 회사 Team·Enterprise (❌ 개인 플랜 절대 금지)**
-- Claude Desktop 설치 (stage 3 실습에 필요)
+- Claude Desktop 설치 (모든 실습에 필요합니다. step에 따라 stage 1부터 필요합니다)

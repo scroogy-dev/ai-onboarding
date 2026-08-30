@@ -50,7 +50,7 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 | **Claude Cowork** | 파일·도구를 직접 다루는 범용 에이전트 | **3단계 본격 실습**                  |
 | **Claude Code**   | 터미널·IDE 코딩 특화 에이전트   | 3단계 보조 도구 (옵션 안내)          |
 
-> 세 제품 모두 **유료 플랜**이 필요합니다. 개인은 **Claude Pro 이상**, 임직원은 **회사 Team·Enterprise**입니다 (개인 플랜 사용 금지). 본 교육의 Cowork·Code 실습에는 **Claude Desktop 설치**가 전제됩니다. [홈 ― 준비사항](index.md#preparation) 참조.
+> 본 교육의 **Cowork·Code 실습에 유료 플랜**이 필요합니다. 개인은 **Claude Pro 이상**, 임직원은 **회사 Team·Enterprise**입니다 (개인 플랜 사용 금지). **Claude Desktop 설치**는 모든 실습에 필요합니다. [홈 ― 준비사항](index.md#preparation) 참조.
 
 ---
 
@@ -65,7 +65,7 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 | 파일·시스템 접근 | ✗ | △ 연결 폴더만 | ✓ 전체 |
 | 터미널 명령 실행 | ✗ | △ 격리 VM | ✓ 전체 |
 | Agent Skills | ✓ | ✓ | ✓ |
-| 외부 도구·데이터 연결 (커넥터·MCP 서버) | ✓ 원격 · △ 로컬 | ✓ 원격 · △ 로컬 | ✓ 전체 |
+| 외부 도구·데이터 연결 (커넥터·MCP 서버) | ✓ 원격 · ✗ 로컬 | ✓ 원격 · △ 로컬 | ✓ 전체 |
 | 외부 API 호출 | ✗ | △ 송신 정책 | ✓ 전체 |
 
 > **범례**: ✓ 지원 · △ 제한적·조건부 · ✗ 미지원
@@ -73,7 +73,7 @@ Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공합�
 표의 **✓ 원격 · △ 로컬**은 **연결할 MCP 서버가 어디에서 실행되느냐**의 구분입니다.
 
 - **원격**은 서버가 **내 컴퓨터 밖**에서 실행되는 경우 전부로, 기본 커넥터로 연결하는 서비스도, 인터넷에 공개된 MCP 서버도, 회사가 **사내망**에 제공하는 MCP 서버도 모두 여기에 속합니다.
-- **로컬**은 서버가 **내 컴퓨터 안**에서 실행되는 경우로, 쓰려는 컴퓨터마다 설치해야 하니 **Claude Desktop 앱에서만** 동작해 △입니다.
+- **로컬**은 서버가 **내 컴퓨터 안**에서 실행되는 경우로, 쓰려는 컴퓨터마다 설치해야 합니다. **Claude Desktop 앱에서만** 동작하므로 claude.ai 웹에서는 쓸 수 없고(✗), Cowork·Code에서는 조건부(△)입니다.
 
 서버 위치와 별개로 **설정을 어디에 두느냐**의 구분이 따로 있습니다.
 
@@ -96,9 +96,9 @@ Claude는 한 모델이 아니라 **여러 라인업**으로 구성됩니다. cl
 | **Haiku**  | 가장 빠름 (가벼운 작업·반복)          | 짧은 답이면 충분한 단순 질문, 동일 패턴 반복                  |
 
 !!! tip "어느 모델을 쓸까?"
-    기준은 **추론이 얼마나 필요한가**입니다. 본인도 잘 모르는 주제를 함께 풀어 가야 한다면 **Opus**, 검색·찾아바꾸기·요약처럼 지시 이행이 핵심이라면 **Sonnet**으로 충분합니다. 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로 옮기면 됩니다 (Anthropic도 [복잡한 작업이라면 Opus 시작을 권장](https://platform.claude.com/docs/ko/about-claude/models/overview)). **Fable**은 그 위의 선택지입니다. Opus로도 부족한 가장 어려운 문제나 장시간 자율 작업에서 고려하세요.
+    기준은 **추론이 얼마나 필요한가**입니다. 본인도 잘 모르는 주제를 함께 풀어 가야 한다면 **Opus**, 검색·찾아바꾸기·요약처럼 지시 이행이 핵심이라면 **Sonnet**으로 충분합니다. 헷갈리면 Sonnet으로 시작해 추론이 더 필요할 때 Opus로 옮기면 됩니다 (Anthropic도 [복잡한 작업이라면 Opus 시작을 권장](https://docs.claude.com/ko/docs/about-claude/models/overview)). **Fable**은 그 위의 선택지입니다. Opus로도 부족한 가장 어려운 문제나 장시간 자율 작업에서 고려하세요.
 
-> 라인업은 비교적 안정적으로 유지되지만, 이번 Fable처럼 새 라인업이 더해지기도 하고 버전 번호(예: Fable **5**, Opus **5**, Sonnet **5**, Haiku **4.5**)는 자주 갱신됩니다. 최신 사양과 플랜별 제공 조건은 [Anthropic 공식 모델 안내](https://platform.claude.com/docs/ko/about-claude/models/overview)에서 확인할 수 있습니다.
+> 라인업은 비교적 안정적으로 유지되지만, 이번 Fable처럼 새 라인업이 더해지기도 하고 버전 번호(예: Fable **5**, Opus **5**, Sonnet **5**, Haiku **4.5**)는 자주 갱신됩니다. 최신 사양과 플랜별 제공 조건은 [Anthropic 공식 모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview)에서 확인할 수 있습니다.
 
 ---
 
@@ -116,6 +116,8 @@ Claude는 한 모델이 아니라 **여러 라인업**으로 구성됩니다. cl
 **AI가 직접 파일을 열고 작업을 수행**하는 에이전트입니다. 반복 작업 자동화, 로컬 파일 일괄 처리, 여러 단계로 이어지는 워크플로우에 적합합니다.
 
 작업 세션은 클라우드에서 실행되어 웹·데스크톱·모바일 어디서나 이어서 볼 수 있습니다. 다만 **내 컴퓨터의 파일을 직접 다루는 일과 내 컴퓨터에 설정하는 연결은 데스크톱 앱에서만** 됩니다 (→ [기능 비교](#claude-comparison)).
+
+내 컴퓨터의 파일을 다룰 때는 작업할 **폴더를 하나 골라 Cowork에 여는데**, 이것을 **폴더 연결**이라고 합니다. Claude는 이렇게 연결한 폴더 안의 파일만 읽고 쓸 수 있습니다.
 
 !!! tip "본 교육에서의 위치"
     **3단계 본격 실습 도구**: 비개발자 친화적 인터페이스로, 본 교육의 3단계 실습은 Cowork으로 진행합니다. 실습에서 내 컴퓨터의 파일을 다루므로 [Claude Desktop 설치](index.md#preparation)가 필요합니다.
@@ -199,12 +201,12 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 ### 자산화·확장
 
 - [Projects(프로젝트)란 무엇입니까](https://support.claude.com/ko/articles/9517075): 자료·지침을 묶어 재사용
-- [스킬이란 무엇인가요](https://support.claude.com/ko/articles/12512176): 반복 작업을 스킬로 자산화
+- [스킬이란 무엇인가요](https://support.claude.com/ko/articles/12512176): 반복 작업을 Skill로 자산화
 - [MCP 안내](https://docs.claude.com/ko/docs/agents-and-tools/mcp): MCP 서버를 **직접 만들 때** 보는 개발자용 문서. 이용하는 방법은 [2부 ― MCP 서버 이용하기](connect/mcp-servers.md)로 충분합니다
 
 ### 운영·지원
 
-- [Anthropic 플랜](https://www.anthropic.com/pricing): 플랜 비교·가격 *(영문만 제공)*
+- [Claude 플랜](https://claude.com/pricing): 플랜 비교·가격
 - [공식 Support 홈](https://support.claude.com/ko/): 한국어 도움말 모음
 - [Claude 상태(Status)](https://status.claude.com/): 서비스 장애·점검 확인
 

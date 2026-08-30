@@ -33,10 +33,10 @@
 
 | step | 주제 | stage 구성 | 핵심 학습 포인트 |
 |------|------|-----------|----------------|
-| [step01-weather](./step01-weather/) | 날씨: 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약 |
+| [step01-weather](./step01-weather/) | 날씨: 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약, 데이터·뷰 분리 |
 | [step02-file-classifier](./step02-file-classifier/) | 파일 분류 | 1·2 | Skill 옵션(파라미터) 설계 |
-| [step03-voca-quiz](./step03-voca-quiz/) | 영어 단어 출제기 | 1·2 | Skill 활용 다양화 |
-| [step04-wrong-answer-note](./step04-wrong-answer-note/) | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 + 검수 자리 + 데이터·뷰 분리 |
+| [step03-voca-quiz](./step03-voca-quiz/) | 영어 단어 출제기 | 1·2 | 이미지 입력, 출처 충실성 제약, 외부 사전 링크 자동 연결 |
+| [step04-wrong-answer-note](./step04-wrong-answer-note/) | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 + 검수 단계 + 데이터·뷰 분리 |
 
 ---
 
@@ -62,6 +62,6 @@ labs/step<NN>-<topic>/stage<N>-<topic>-<설명>/
 
 ## 사전 준비
 
-- Claude Pro 이상 유료 요금제
-- Claude Desktop 설치 (stage 3 실습에 필요)
+- Claude Pro 이상 유료 플랜
+- Claude Desktop 설치 (모든 실습에 필요합니다. step에 따라 stage 1부터 필요합니다)
 - 자세한 준비물은 [사이트 안내](https://scroogy-dev.github.io/ai-onboarding/#preparation)를 참고하세요.
