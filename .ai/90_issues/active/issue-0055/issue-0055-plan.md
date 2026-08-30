@@ -143,7 +143,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
 
 ### Task 3: `docs/index.md` 정리
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 홈이 가장 많은 페이지(D1·D2·D5·D6·D8, 카드 26개)를 먼저 확정해 다른 페이지가 링크할 대상을 만든다.
 - **작업 내용**:
   1. 공통 절차 ①~⑤를 수행한다. 이 페이지의 처리 대상은 최소 다음이다: 메타 원칙 ①~⑤ 카드를 본문 절로, 「왜 계획부터」(D8)를 메타 원칙 ①로 흡수, 「어떤 결과물」 표와 「대상별 실행 계획」(D6) 중 하나로 통합, 「요구합니다/요구하지 않습니다」 대비 쌍 유지 여부 판단, Why 3카드 유형 정리, 결정 룰 편입(Task 0에서 이 페이지로 정했을 때).
@@ -156,13 +156,15 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
 
     ```bash
     F=docs/index.md
-    grep -nE '^\s*(!!!|\?\?\?\+?) +[a-z]+' "$F" | grep -vE '^[0-9]+:\s*(!!!|\?\?\?\+?) +(warning|tip|note|example)\b'
+    grep -nE '^\s*(!!!|\?\?\?\+?) +[a-z]+' "$F" | sed "s|^|$F:|" \
+      | grep -vE '^[^:]+:[0-9]+:\s*(!!!|\?\?\?\+?) +(warning|tip|note|example)\b'
     grep -oE '^\s*!!! [a-z]+ "[^"]+"' "$F" | sed -E 's/^ *!!! ([a-z]+) "(.*)"/\2|\1/' | sort -u | cut -d'|' -f1 | uniq -d
     BAD=$(printf '\xe2\x80\x94'); grep -n "$BAD" "$F"
     .venv/bin/mkdocs build --strict -d "${TMPDIR:-/tmp}/issue-55-site" >/dev/null 2>&1 || echo '위반: MkDocs strict 빌드 실패'
     ```
 
     - 설계 주의: 허용 유형 목록은 Task 1에서 확정한 값과 같아야 한다. spec DoD 명령을 고쳤으면 여기도 같이 고친다.
+    - 파일 한정 실행이라 `grep -n` 출력에 파일명이 없으므로 `sed`로 `$F:` 접두를 붙여 spec 쪽 명령과 입력 형태를 맞춘다.
     </details>
   - [D] 이 파일에 `(#55)` 커밋이 존재한다  (검증: `git log --format=%s main..HEAD -- docs/index.md | grep -q '(#55)'`)
 
