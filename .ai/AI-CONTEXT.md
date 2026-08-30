@@ -1,6 +1,6 @@
 # AI-CONTEXT.md
 
-> last updated: 2026-05-23
+> last updated: 2026-08-24
 > SSoT: 소스 코드. 이 파일은 안내도일 뿐 진실의 원천이 아니다.
 
 이 파일은 AI 어시스턴트를 위한 프로젝트 가이드입니다.
@@ -35,7 +35,7 @@ MkDocs + Material 기반 정적 사이트(GitHub Pages)와 컨플루언스 위�
 **아래 규칙은 모든 작업(스킬 실행 포함)에 선행 적용됩니다.**
 
 - 교육 대상이 비개발자이므로, 모든 콘텐츠는 전문 용어를 최소화하고 평이한 톤으로 작성한다
-- `docs/` 디렉토리의 마크다운이 SSoT — 콘텐츠 수정은 항상 여기서 한다
+- `docs/` 디렉토리의 마크다운이 SSoT다. 콘텐츠 수정은 항상 여기서 한다
 - nav 순서는 `mkdocs.yml`에서 명시적으로 제어한다 (파일명에 번호 접두사 붙이지 않음)
 - `docs/` 하위 디렉토리명은 URL 경로가 되므로 영문 소문자, 하이픈만 사용한다
 - 마크다운 파일은 한국어로 작성하고, 제목은 `#` 1개로 시작한다
@@ -45,6 +45,7 @@ MkDocs + Material 기반 정적 사이트(GitHub Pages)와 컨플루언스 위�
 |------|------|----------|
 | `.ai/10_rules/context-loading.md`    | 작업 전 컨텍스트 확인 절차 | 문서 작업 전      |
 | `.ai/10_rules/file-change-policy.md` | 파일 변경 규칙             | 파일 추가·삭제 시 |
+| `.ai/10_rules/writing-principles.md` | 산출물 작성 원칙 (소스 코드 미적용) | 산출 문서·PR·이슈·리뷰 코멘트 작성 시 |
 
 ---
 
@@ -52,8 +53,8 @@ MkDocs + Material 기반 정적 사이트(GitHub Pages)와 컨플루언스 위�
 
 - MkDocs + Material for MkDocs (정적 사이트 빌더)
 - GitHub Pages (호스팅)
-- GitHub Actions (CI/CD — main push → gh-pages 배포)
-- Atlassian Confluence (위키 발행 — MCP 연동)
+- GitHub Actions (CI/CD: main push → gh-pages 배포)
+- Atlassian Confluence (위키 발행, MCP 연동)
 
 ---
 
@@ -63,6 +64,7 @@ MkDocs + Material 기반 정적 사이트(GitHub Pages)와 컨플루언스 위�
 주요 디렉토리와 파일의 역할을 설명하세요.
 `.ai/`는 한 줄로만 표시합니다 (예: `├── .ai/  # AI 협업 가이드 (상세는 ".ai 디렉토리 구조" 섹션)`).
 내부 구조는 별도 섹션이 다루므로, 여기서는 콘텐츠 트리 개관만 담습니다.
+표현 순서는 같은 단계 내에서 **대소문자 무시 알파벳순**으로 정렬하되 **디렉토리를 파일보다 위**에 둡니다(IDE 기본 표시 순서). `.`로 시작하는 숨김 항목도 같은 알파벳순으로 처리하며 별도 위치에 두지 않습니다.
 -->
 
 ```
@@ -96,6 +98,7 @@ ai-onboarding/
 │   └── specs/       # 기능 명세
 ├── 50_adr/          # [4순위] 의사결정 기록 (index.md로 선택적 참조)
 ├── 60_codebase/     # [5순위] 소스코드 엔트리포인트·호출 흐름 색인 (index.md로 선택적 참조)
+├── 70_ledger/       # [6순위] 수용한 기술부채·known issue 원장 (index.md로 선택적 참조)
 ├── 90_issues/       # 이슈 단위 작업 (active/ + archive/)
 └── 99_workspace/    # AI 임시 작업공간
 ```
@@ -109,14 +112,14 @@ ai-onboarding/
 1. **진입 경로 식별**
    - **상위 워크스페이스에서 진입한 경우** (상위 안내도를 먼저 읽고 이 repo로 들어옴): `## 프로젝트 도메인`의 `domain` / `keywords`가 상위 안내도 `Repos` 행과 일치하는지 확인한다.
    - **이 repo를 직접 열고 진입한 경우** (IDE가 이 repo 폴더만 연 상태):
-     - `../.ai/AI-CONTEXT.md`가 존재하면 상위 워크스페이스의 일부 — 인접 repo가 필요한 질의면 그 경로로 거슬러 올라가 다른 repo를 참조한다.
-     - `../.ai/AI-CONTEXT.md`가 없으면 단독 repo — 이 안내도만으로 답변을 시작한다.
-2. `.ai/10_rules/context-loading.md`를 먼저 적재하고, 질의 유형에 따라 `30_contract/index.md`(계약) → `40_domain/index.md`(도메인 본문/정책) → `50_adr/index.md`(결정 이력) → `60_codebase/index.md`(코드 진입점) 중 필요한 항목만 **선택 적재**한다.
+     - `../.ai/AI-CONTEXT.md`가 존재하면 상위 워크스페이스의 일부다. 인접 repo가 필요한 질의면 그 경로로 거슬러 올라가 다른 repo를 참조한다.
+     - `../.ai/AI-CONTEXT.md`가 없으면 단독 repo다. 이 안내도만으로 답변을 시작한다.
+2. `.ai/10_rules/context-loading.md`를 먼저 적재하고, 질의 유형에 따라 `30_contract/index.md`(계약) → `40_domain/index.md`(도메인 본문/정책) → `50_adr/index.md`(결정 이력) → `60_codebase/index.md`(코드 진입점) → `70_ledger/index.md`(수용한 기술부채·known issue) 중 필요한 항목만 **선택 적재**한다.
 3. 답변 직전 정보 충돌 시 우선순위: **소스 코드 > 이 repo 안내도 > 상위 워크스페이스 안내도**.
 
 ### 작성 규칙 (이 파일을 손볼 때)
 
-- 도메인 본문은 `40_domain/`, 계약은 `30_contract/`, 결정 이력은 `50_adr/`, 코드 상세는 `60_codebase/`에 둔다. 이 파일에는 포인터만.
+- 도메인 본문은 `40_domain/`, 계약은 `30_contract/`, 결정 이력은 `50_adr/`, 코드 상세는 `60_codebase/`, 수용한 기술부채·known issue는 `70_ledger/`에 둔다. 이 파일에는 포인터만.
 - `domain`/`keywords`를 바꾸면 상위 워크스페이스 안내도의 `Repos` 행도 같이 갱신한다 (멀티 워크스페이스의 일부일 때에 한함).
 
 ## Git 정책
@@ -127,6 +130,7 @@ ai-onboarding/
 |-------|------|----------|
 | `/git-commit` | 커밋 메시지 규칙 | 커밋 생성 시 |
 | `/git-pr` | PR 생성 규칙 | PR 생성 시 |
+| `/git-pr-feedback` | PR 리뷰 코멘트 검토·대응 규칙 | PR 리뷰 코멘트 대응 시 |
 | `/git-review-context` | 리뷰 전 변경사항 사전 분석 | 사용자 요청 시 |
 | `/git-review` | 리뷰 수행 절차 | 리뷰 수행 시 |
 
