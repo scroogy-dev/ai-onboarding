@@ -124,3 +124,12 @@
 .md-typeset .example > summary { background-color: #9b7ba01a; }
 .md-typeset .example > .admonition-title::before,
 .md-typeset .example > summary::before { background-color: #9B7BA0; }
+
+/* 비교표 강조 행 (Issue #55) — 첫 칸 굵은 글씨에 { .row-accent }를 붙인 행만 배경을 살짝 띄운다.
+   행 순서가 바뀌어도 따라오도록 nth-child가 아니라 클래스로 고정한다. */
+.md-typeset table:not([class]) tr:has(td:first-child > strong.row-accent) {
+  background-color: #d9775714;
+}
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:has(td:first-child > strong.row-accent) {
+  background-color: #d9775726;
+}
