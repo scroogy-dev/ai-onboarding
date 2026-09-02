@@ -185,7 +185,7 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 - [Claude 모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview): 라인업·최신 사양·버전별 차이
 - [Claude Cowork 시작하기](https://support.claude.com/ko/articles/13345190): 프로젝트 단위 작업 사용법
 - [Claude Code 안내](https://docs.claude.com/ko/docs/claude-code/overview): 터미널·IDE에서 쓰는 코딩 에이전트
-- [Claude Academy](https://academy.claude.com/): 프롬프트 작성·활용 가이드 모음
+- [Claude Academy](https://academy.claude.com/): 제품별 학습 가이드와 강좌 모음
 
 ### 자산화·확장
 

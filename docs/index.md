@@ -264,7 +264,7 @@ AI에게 만들기를 맡겼더라도, **결과물은 본인이 직접 읽고 �
 이 "회의록"이 [메타 원칙 ①](#meta-principles)에서 말한 **계획 문서·실행요약**과 같은 역할입니다. 한 번 잘 정리해 두면 다음 대화의 깨끗한 입력이 되고, 대화방을 새로 열어도 통제권이 유지됩니다. 한 대화방에 모든 걸 누적하면 입력이 흐려져 통제권을 잃습니다.
 
 ??? note "참고: 컨텍스트 크기는 얼마나 되나요?"
-    공식 문서에 따르면 최신 모델(Fable 5·Opus 5·Sonnet 5)의 컨텍스트 윈도우는 **1M 토큰**입니다. claude.ai 챗에서는 Opus 5·Sonnet 5가 **유료 플랜 전부에서 1M**을 쓰고, 이전 세대 모델(Opus 4.8·4.7·4.6, Sonnet 4.6)은 500K입니다 ([Claude.ai 컨텍스트 한도](https://support.claude.com/ko/articles/8606394)). Claude Code에서는 이전 세대 Opus까지 1M을 씁니다. 기술 배경은 [컨텍스트 윈도우 ― Claude API 문서](https://platform.claude.com/docs/ko/build-with-claude/context-windows)를 참고하세요.
+    공식 문서에 따르면 최신 모델(Fable 5.1·Opus 5·Sonnet 5)의 컨텍스트 윈도우는 **1M 토큰**입니다. claude.ai 챗에서는 Opus 5·Sonnet 5가 **유료 플랜 전부에서 1M**을 쓰고, 이전 세대 모델(Opus 4.8·4.7·4.6, Sonnet 4.6)은 500K입니다 ([Claude.ai 컨텍스트 한도](https://support.claude.com/ko/articles/8606394)). Claude Code에서는 이전 세대 Opus까지 1M을 씁니다. 기술 배경은 [컨텍스트 윈도우 ― Claude API 문서](https://platform.claude.com/docs/ko/build-with-claude/context-windows)를 참고하세요.
 
 ---
 
