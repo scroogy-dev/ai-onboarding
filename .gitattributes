@@ -1,0 +1,14 @@
+# GitHub 소스 zip(archive)에는 실습 자료 `labs/`만 남긴다.
+# 학습자가 zip을 받아 곧바로 실습 디렉토리를 열 수 있게 하고,
+# 사이트 소스·발표자료·AI 협업 문서 같은 제작용 파일은 내려받지 않게 한다.
+.ai              export-ignore
+.github          export-ignore
+.gitattributes   export-ignore
+.gitignore       export-ignore
+README.md        export-ignore
+docs             export-ignore
+mkdocs.yml       export-ignore
+overrides        export-ignore
+requirements.txt export-ignore
+scripts          export-ignore
+slides           export-ignore
