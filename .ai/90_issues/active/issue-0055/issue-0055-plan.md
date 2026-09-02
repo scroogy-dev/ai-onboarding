@@ -186,16 +186,32 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
 
 ### Task 5: `docs/labs.md`·`labs/README.md` 정리
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 실습 인덱스와 zip 동봉 README의 복붙 중복(6행)을 README 자기완결을 지키며 푼다.
 - **작업 내용**:
   1. 공통 절차 ①~⑤를 수행한다. `docs/labs.md`의 진행 원칙 ①·②를 `labs/README.md` 링크와 한 줄 요약으로 바꾸고, 사전 준비(D1)를 `index.md#preparation` 링크로, 시리즈 구성 표를 `labs/README.md` 표와 같은 내용으로 맞춘다.
   2. `labs/README.md`는 원문을 유지하되 Task 2에서 정정한 step03·「검수 단계」를 반영한 상태인지 확인한다.
+  3. (2026-09-02 사용자 추가 확정) `.gitattributes`를 신설해 GitHub 소스 zip에 `labs/`만 남기고, `docs/labs.md` 「자료 받기」의 방어 문구(「`labs/` 디렉토리만 열어 사용」)를 지운다. 근거와 대상 목록은 spec 전제 3의 「zip 배포물 정리」에 있다.
 - **완료 기준**:
   - [ND] 사용자가 두 파일의 승인을 명시하고 summary에 기록된다  (검증: 사람 리뷰)  ← 강등 사유: 승인은 사용자 행위
   - [D] spec DoD의 교차 파일 동일 산문 행 게이트에서 `docs/labs.md`↔`labs/README.md` 쌍이 0건  (검증: 해당 명령 재실행 후 출력에 `labs` 포함 행 0건)
   - [D] 두 파일 각각 페이지 게이트 통과 (README는 admonition이 없으므로 U+2014·빌드만)  (검증: Task 3 접기 명령 재실행)
   - [D] 두 파일 각각 `(#55)` 커밋 존재  (검증: `git log --format=%s main..HEAD -- <파일> | grep -q '(#55)'`)
+  - [D] GitHub 소스 zip 최상위에 `labs/`만 남는다. 커밋 전 로컬 검증과 푸시 후 실물 검증을 모두 거친다
+    <details>
+    <summary>검증 명령 ― 출력이 `labs` 한 줄이면 통과</summary>
+
+    ```bash
+    # 커밋 전 (worktree의 .gitattributes를 반영)
+    git archive --worktree-attributes --format=tar HEAD | tar -t | cut -d/ -f1 | sort -u
+
+    # 푸시 후 실물 (머지 전 브랜치 zip)
+    curl -sL https://github.com/scroogy-dev/ai-onboarding/archive/refs/heads/issue-0055.zip -o "${TMPDIR:-/tmp}/issue-0055.zip"
+    unzip -Z1 "${TMPDIR:-/tmp}/issue-0055.zip" | cut -d/ -f2 | sort -u
+    ```
+
+    - 설계 주의: GitHub의 소스 zip은 최상위에 `<repo>-<ref>/` 한 겹을 더 씌우므로 실물 검증은 `cut -d/ -f2`로 한 단계 안쪽을 본다. 로컬 `git archive`에는 그 겹이 없어 `-f1`이다.
+    </details>
 
 ---
 
