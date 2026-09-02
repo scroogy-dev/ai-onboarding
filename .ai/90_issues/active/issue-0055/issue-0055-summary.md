@@ -4,7 +4,7 @@
 
 ## 다음 작업
 
-> ▶️ 다음 작업: Task 6 `docs/connect/` 3페이지 정리. 공통 절차 ①(처리 목록 제시)부터 시작한다. Task 5는 2026-09-02 승인·커밋 완료이며, `.gitattributes`의 zip 실물 검증(브랜치 푸시 후)만 남아 있다.
+> ▶️ 다음 작업: Task 6 `docs/connect/` 3페이지 정리. 공통 절차 ①(처리 목록 제시)부터 시작한다. Task 5는 2026-09-02 승인·커밋 완료이며 zip 실물 검증까지 마쳤다.
 
 ## 모델 기록
 
@@ -177,7 +177,7 @@ plan 템플릿의 첫 고정 Task에 대응하는 블록이다. 삭제하지 말
     - **spec 범위를 확장했다 (2026-09-02)**: 「docs에 노출된 main.zip은 나중에 교체해야 하지?」라는 사용자 질의에서 시작했다. 처음에 원장 이관을 제안했으나 사용자가 이번 이슈에 있어야 한다고 지적해 바로잡았다. 근거는 **의존 관계**다. `docs/labs.md`의 방어 문구(「`labs/` 디렉토리만 열어 사용」)를 지우는 간결화가 zip 내용물 정리에 의존하므로, zip을 미루면 docs 쪽 간결화도 못 한다. spec `## 범위` 포함에 한 줄, 전제 3에 확정값을 기록했다.
     - **`.gitattributes`는 repo 인프라 변경이다**: spec 비포함이 `scripts/`·`overrides/`·`docs/assets/` 같은 인프라를 빼 놓았으므로 결이 같다. 예외로 포함한 근거는 위 의존 관계이며 전제 3에 있다. 제외 대상은 `labs/`를 뺀 최상위 전부이고, 애매한 `README.md`·`requirements.txt`·`.gitignore`와 `.gitattributes` 자신도 사용자 확정으로 함께 뺐다. audit이 범위 이탈로 보지 않도록 여기 남긴다.
     - **동일 산문 해소 방향이 spec 설계 주의와 반대다**: spec DoD의 설계 주의는 「`labs/README.md` 원문을 남기고 `docs/labs.md` 쪽을 링크로 바꿔 해소」였다. 그러나 사용자가 카드를 풀되 **하위 목록은 그대로 두라**고 지시해 docs 쪽 문구가 보존됐고, 대신 `labs/README.md` 4행의 어순·표현을 바꿔 해소했다(뜻은 그대로). D2 배정표의 「README 원문 유지(자기완결)」와도 어긋나지만, 자기완결성 자체는 유지됐다(내용을 링크로 빼지 않고 표현만 바꿈). spec 84행과 부록 A D2는 착수 시점 서술이라 고치지 않았다.
-    - **zip 실물 검증이 남았다**: 로컬 `git archive --worktree-attributes`로 최상위 `labs/` 1개(파일 42개)까지 확인했다. GitHub codeload 실물은 사용자 확정대로 **머지 전에 브랜치를 푸시해** `archive/refs/heads/issue-0055.zip`으로 확인한다. 명령은 plan Task 5 완료 기준 접기에 있다.
+    - **zip 실물 검증 완료 (2026-09-02)**: 로컬 `git archive --worktree-attributes`로 최상위 `labs/` 1개(파일 42개)를 확인한 뒤, 사용자 확정대로 **머지 전에 브랜치를 푸시해** `archive/refs/heads/issue-0055.zip`을 실제로 받아 확인했다. 최상위는 `labs/` 하나뿐이고 크기는 56KB다. GitHub 소스 zip이 `export-ignore`를 따른다는 것이 실물로 확인됐다. 명령은 plan Task 5 완료 기준 접기에 있다.
     - **공통 절차 ②를 썼다**: Task 3·4와 달리 카드 전수 표(2개)와 삭제 후보 표(S1~S3 + README R1)를 먼저 제시하고 사용자가 항목별로 정했다.
     - **`main.zip` 링크는 그대로 두었다**: 시점 고정(태그 zip)·Release 첨부는 채택하지 않았다. `export-ignore`가 노출 문제만 정확히 해결하고 docs 링크 변경이 0이기 때문이다. 교육 회차별 시점 고정이 필요해지면 `archive/refs/tags/<태그>.zip`으로 바꾸는 것이 다음 수단이다 (이 이슈 범위 밖).
 
