@@ -204,6 +204,6 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 
 - [홈 ― 본 교육의 Why·What·How](index.md)
 - [홈 ― 준비사항](index.md#preparation): Claude Pro·Desktop 설치 등 사전 준비
-- [홈 ― 3단계 모델](index.md#stage-model): 본 교육이 다루는 학습 사다리
+- [홈 ― 3단계 모델](index.md#stage-model): 본 교육이 다루는 AI 활용 단계 구분
 - [2부 ― 도구·데이터 연결](connect/index.md): 커넥터·MCP 서버로 외부 자료를 연결하기
 - [보안 및 개인정보 가이드](security-guide.md)
