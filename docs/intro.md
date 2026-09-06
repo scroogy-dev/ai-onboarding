@@ -190,7 +190,7 @@ Claude Desktop을 연 다음 좌측의 **Code** 탭을 선택하고, 화면 우�
 ### 자산화·확장
 
 - [스킬이란 무엇인가요](https://support.claude.com/ko/articles/12512176): 반복 작업을 Skill로 자산화
-- [MCP 안내](https://docs.claude.com/ko/docs/agents-and-tools/mcp): MCP 서버를 **직접 만들 때** 보는 개발자용 문서. 이용하는 방법은 [2부 ― MCP 서버 이용하기](connect/mcp-servers.md)로 충분합니다
+- [MCP 안내](https://claude.com/docs/connectors/building/mcp): MCP 서버를 **직접 만들 때** 보는 개발자용 문서(영문). 이용하는 방법은 [2부 ― MCP 서버 이용하기](connect/mcp-servers.md)로 충분합니다
 
 ### 운영·지원
 
