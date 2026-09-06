@@ -18,7 +18,7 @@ AI는 작업 시 이 파일을 먼저 읽고, 관련된 항목만 선택적으�
 
 | 번호 | 제목 | 유형 | 위험도 | 상태 | 재검토 조건 |
 |------|------|------|--------|------|-------------|
-| K-0001 | [커넥터 검토 분류 「Custom」을 교육 자료에서 이름으로 부르지 않음](active/K-0001-connector-custom-label-omitted.md) | known issue | 낮음(LOW) | 수용 | 화면에서 `Custom` 표시가 확인되거나 공식 문서가 표시를 명시할 때. `mcp-servers.md`의 `#vs-connector` note·`#choosing` 표를 다시 손볼 때 함께 판단 |
+| K-0001 | [커넥터 검토 분류 「Custom」을 교육 자료에서 이름으로 부르지 않음](active/K-0001-connector-custom-label-omitted.md) | known issue | 낮음(LOW) | 수용 | 화면에서 `Custom` 표시가 확인되거나 공식 문서가 표시를 명시할 때. `mcp-servers.md`의 검토 표시 note 본문이나 `#choosing` 표 행 내용을 손볼 때 함께 판단 (2026-09-06 재검토: 계속 수용) |
 
 ## 수명 주기
 
