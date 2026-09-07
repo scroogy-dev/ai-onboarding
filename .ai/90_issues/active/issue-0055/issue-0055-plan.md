@@ -386,9 +386,9 @@ audit은 L2 [QD] 보완 검증 ― L1 [D] 결정적 게이트의 대체가 아�
 
 | 번호 | 주제 | 홈 (파일 · 절) | 링크로 바꿀 위치 |
 |------|------|----------------|------------------|
-| D1 | 유료 플랜 필수 · 개인 플랜 금지 · 준비물 | `index.md#preparation` | `labs.md` 57~59 / `connect/index.md` 74 / `connectors.md` 185 / `security-guide.md` 86·165 |
+| D1 | 유료 플랜 필수 · 개인 플랜 금지 · 준비물 | `index.md#preparation` | `labs.md` 57~59 / `connectors.md` 185 / `security-guide.md` 86·165 (`connect/index.md`는 유지 ― 아래 변경 2건 ①) |
 | D2 | AI 결과물 검토·이해 의무 / 틀릴 수 있다 | `index.md#meta-principles` ③ | `docs/labs.md` 27~30. `labs/README.md` 원문 유지(자기완결). `connectors.md` 117~120·`mcp-servers.md` 275~278·`basics.md` 72~81·`security-guide.md` 32~38은 각도가 달라 유지 |
-| D3 | 권한 최소화 · 「내 권한 그대로」 · 승인 범위 | 이원화: 원칙은 `security-guide.md#external-connection`, 화면은 `connectors.md#approval-screen` | `connectors.md` 81~88의 원칙 서술 / `mcp-servers.md` 213~222는 「기간」만 남기고 링크 / `connect/index.md` 78~79 |
+| D3 | 권한 최소화 · 「내 권한 그대로」 · 승인 범위 | 이원화: 원칙은 `security-guide.md#external-connection`, 화면은 `connectors.md#approval-screen` | `mcp-servers.md` 213~222는 「기간」만 남기고 링크 / `connect/index.md` 78~79 (`connectors.md` 81~88 warning은 유지 ― 아래 변경 2건 ②) |
 | D4 | 커넥터 vs MCP 서버 비교표 · 선택 순서 | `mcp-servers.md#vs-connector` | `connect/index.md` 53~61 표를 2행으로 축약 / `connectors.md` 5·191 / `mcp-servers.md` 309~310 |
 | D5 | 3단계 모델 · 「3단계 ≠ 결과물 세 형태」 | `index.md#stage-model` | `basics.md` 87~97 통합 / `intro.md` 110·121·136 제품별 반복을 1회로 / `connect/index.md` 13~16 / `labs.md` 36 |
 | D6 | 실습 결과물 예시 · step 매핑 | `docs/labs.md` 「시리즈 구성」 (34행, 앵커 `{ #series }` 신설) | `index.md` 174~179 표와 303~318 중 하나를 삭제하고 링크로. `labs/README.md` 표는 자기완결 예외라 유지 |
@@ -407,5 +407,13 @@ audit은 L2 [QD] 보완 검증 ― L1 [D] 결정적 게이트의 대체가 아�
 1. D1·D2·D5의 등장 위치에서 `operation-guide.md`를 뺐다. Task 7에서 페이지째 삭제되므로 링크로 바꿀 대상이 아니다.
 2. D2·D6의 링크 대상에서 `labs/README.md`를 뺐다. zip 동봉 자료라 자기완결을 지킨다 (spec 전제 11). 그 쌍의 중복은 `docs/labs.md` 쪽만 링크로 바꿔 푼다.
 3. D11·D14의 홈을 실제 앵커로 특정했다. 노트는 각각 「`connect/index.md`」·「`connectors.md` 연결하는 순서 5단계」로만 적혀 있었다.
+
+**`--response` 1차 감사 대응에서 바꾼 곳 2건** (2026-09-07 사용자 판정)
+
+① D1의 링크로 바꿀 위치에서 `connect/index.md`를 뺐다. 그 자리(현재 70행)는 홈 링크를 이미 달고 있으면서 개인/임직원 플랜 구분과 **개인 플랜 금지**를 다시 적는다. 한 문장 링크로 줄이면 이 페이지에서 금지 문구가 사라져 spec DoD의 「금지는 삭제되지 않는다」와 부딪친다. Task 5에서 `labs/README.md`에 금지 문구를 되살린 것과 같은 판단이다.
+
+② D3의 링크로 바꿀 위치에서 `connectors.md` 81~88을 뺐다. 그 자리의 warning 「「내 권한 그대로」는 안심과 경고를 같이 줍니다」는 `security-guide.md#external-connection`의 원칙 절과 내용이 겹치지만 경고 박스라, 같은 DoD 항목의 「경고는 삭제되지 않는다」에 걸린다.
+
+두 건 모두 **중복이 아니라고 판정한 것이 아니라, 중복을 알면서 보존 규칙을 우선한 것**이다. 이후 감사는 이 두 자리를 신규 위반이 아니라 기록된 예외로 대조한다.
 
 **앵커 신설 1건**: D6의 홈 `docs/labs.md` 「시리즈 구성」에는 명시 앵커가 없다 (이 파일에 명시 앵커가 하나도 없음). Task 5에서 `{ #series }`를 붙인다. 절 제목·순서는 그대로라 nav에 영향이 없다.
