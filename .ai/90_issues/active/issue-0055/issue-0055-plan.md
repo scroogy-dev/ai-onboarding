@@ -197,20 +197,27 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
   - [D] spec DoD의 교차 파일 동일 산문 행 게이트에서 `docs/labs.md`↔`labs/README.md` 쌍이 0건  (검증: 해당 명령 재실행 후 출력에 `labs` 포함 행 0건)
   - [D] 두 파일 각각 페이지 게이트 통과 (README는 admonition이 없으므로 U+2014·빌드만)  (검증: Task 3 접기 명령 재실행)
   - [D] 두 파일 각각 `(#55)` 커밋 존재  (검증: `git log --format=%s main..HEAD -- <파일> | grep -q '(#55)'`)
-  - [D] GitHub 소스 zip 최상위에 `labs/`만 남는다. 커밋 전 로컬 검증과 푸시 후 실물 검증을 모두 거친다
+  - [D] GitHub 소스 zip에 `labs/`가 **온전히** 담긴다. 최상위가 `labs/` 하나이고, 그 안의 파일 집합이 HEAD와 같다. 커밋 전 로컬 검증과 푸시 후 실물 검증을 모두 거친다. 최상위만 세는 검사는 `labs/` 내부가 비어도 통과하므로 두 검사를 함께 건다 (1차 감사 F-1이 이 빈틈으로 README 16개와 `generate-samples.py` 누락을 잡아냈다)
     <details>
-    <summary>검증 명령 ― 출력이 `labs` 한 줄이면 통과</summary>
+    <summary>검증 명령 ― 네 검사 모두 출력 0건이면 통과</summary>
 
     ```bash
     # 커밋 전 (worktree의 .gitattributes를 반영)
-    git archive --worktree-attributes --format=tar HEAD | tar -t | cut -d/ -f1 | sort -u
+    git archive --worktree-attributes --format=tar HEAD | tar -t | cut -d/ -f1 | sort -u | grep -vx labs
+    diff <(git archive --worktree-attributes --format=tar HEAD | tar -t | grep -v '/$' | sort) \
+         <(git ls-tree -r --name-only HEAD -- labs/ | sort)
 
     # 푸시 후 실물 (머지 전 브랜치 zip)
-    curl -sL https://github.com/scroogy-dev/ai-onboarding/archive/refs/heads/issue-0055.zip -o "${TMPDIR:-/tmp}/issue-0055.zip"
-    unzip -Z1 "${TMPDIR:-/tmp}/issue-0055.zip" | cut -d/ -f2 | sort -u
+    Z="${TMPDIR:-/tmp}/issue-0055.zip"
+    curl -sL https://github.com/scroogy-dev/ai-onboarding/archive/refs/heads/issue-0055.zip -o "$Z"
+    unzip -Z1 "$Z" | sed -E 's|^[^/]+/||' | grep -v '^$' | cut -d/ -f1 | sort -u | grep -vx labs
+    diff <(unzip -Z1 "$Z" | sed -E 's|^[^/]+/||' | grep -vE '(/|^)$' | sort) \
+         <(git ls-tree -r --name-only HEAD -- labs/ | sort)
     ```
 
-    - 설계 주의: GitHub의 소스 zip은 최상위에 `<repo>-<ref>/` 한 겹을 더 씌우므로 실물 검증은 `cut -d/ -f2`로 한 단계 안쪽을 본다. 로컬 `git archive`에는 그 겹이 없어 `-f1`이다.
+    - 설계 주의: GitHub의 소스 zip은 최상위에 `<repo>-<ref>/` 한 겹을 더 씌우므로 실물 검증은 그 겹을 먼저 벗긴다. 로컬 `git archive`에는 그 겹이 없다.
+    - 설계 주의: `tar -t`·`unzip -Z1`은 디렉토리도 엔트리로 세므로 파일 집합 대조에서는 `/`로 끝나는 줄을 걸러낸다. 엔트리 수를 파일 수로 읽으면 실제보다 많게 기록된다 (1차 감사 전까지 「파일 42개」로 잘못 기록돼 있던 원인이다).
+    - 설계 주의: `.gitattributes`의 제외 패턴은 `/`로 시작해 최상위로 한정한다. 슬래시가 없으면 같은 이름이 모든 깊이에서 걸려 `labs/README.md`·`labs/**/scripts/`까지 빠진다.
     </details>
 
 ---
