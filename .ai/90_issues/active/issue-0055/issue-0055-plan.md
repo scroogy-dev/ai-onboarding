@@ -242,7 +242,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
 
 ### Task 7: `docs/security-guide.md` 정리와 `docs/operation-guide.md` 삭제
 
-- [ ] 완료
+- [x] 완료
 - **목표**: `security-guide.md`의 파일 내부 3중 서술(D13)과 connect 쪽 재서술(D3·D9·D11·D12)을 정리하고, 강사용 `operation-guide.md`를 참조까지 함께 걷어낸다.
 - **작업 내용**:
   1. `security-guide.md`에 공통 절차 ①~⑤를 수행한다. 절대 입력 금지 정보(D13)를 표 1곳으로, 권한 최소화(D3)는 원칙만 남기고 화면은 `connectors.md` 링크, 연결 점검(D9)·GHE 문단(D12)을 링크로, 검토 강도(X3)를 전제 4의 확정 방향(영향 범위 비례를 원칙으로 두고 외부 공유·개인정보·사실 확인은 항상 깊게 본다는 예외 단서)으로 고친다.
