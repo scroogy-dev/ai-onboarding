@@ -52,6 +52,7 @@ MkDocs + Material 기반 정적 사이트(GitHub Pages)와 컨플루언스 위�
 ## 기술 스택
 
 - MkDocs + Material for MkDocs (정적 사이트 빌더)
+- Slidev (발표자료 빌더, 같은 배포에서 `/slides/` 경로로 함께 발행)
 - GitHub Pages (호스팅)
 - GitHub Actions (CI/CD: main push → gh-pages 배포)
 - Atlassian Confluence (위키 발행, MCP 연동)
@@ -77,6 +78,7 @@ ai-onboarding/
 ├── overrides/              # Material 테마 커스터마이징
 ├── scripts/                # 자동화 스크립트 (컨플루언스 동기화 등)
 ├── slides/                 # docs/의 발표용 파생 (Slidev로 발행)
+├── .gitattributes          # 소스 zip 배포 범위 (labs/만 포함)
 ├── mkdocs.yml              # 사이트 설정 (네비게이션, 테마, 플러그인)
 └── requirements.txt        # Python 의존성
 ```
