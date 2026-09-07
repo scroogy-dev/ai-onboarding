@@ -71,17 +71,17 @@ docs 9개 파일과 `labs/README.md`에서 같은 주제의 본문을 홈 1곳�
   ```
 
   </details>
-- [ ] [D] 대상 파일 10개 사이에 60자 이상 동일한 산문 행이 0건이다 (복붙 중복 차단). 착수 시점 8건(`docs/labs.md`↔`labs/README.md` 6건, `connectors.md`↔`mcp-servers.md` 2건)이라 실제로 실패하는 상태에서 시작한다.
+- [ ] [D] 대상 파일 10개 사이에 60자 이상 동일한 산문 행이 0건이다 (복붙 중복 차단). 착수 시점 8건(`docs/labs.md`↔`labs/README.md` 6건, `connectors.md`↔`mcp-servers.md` 2건)이라 실제로 실패하는 상태에서 시작한다. 이미지 캡션은 판정 대상이 아니다 (Task 8 확정. 근거는 아래 설계 주의).
   <details>
   <summary>검증 명령 ― 출력 0건이면 통과</summary>
 
   ```bash
   for f in docs/*.md docs/connect/*.md labs/README.md; do
-    sed 's/^[[:space:]]*//' "$f" | grep -vE '^(\||#|<|!!!|\?\?\?|```|>|---|$)' | awk 'length($0)>=60' | sort -u | sed "s|$|\t$f|"
+    sed 's/^[[:space:]]*//' "$f" | grep -vE '^(\||#|<|!!!|\?\?\?|```|>|---|$)' | grep -vE '^\*[^*].*[^*]\*$' | awk 'length($0)>=60' | sort -u | sed "s|$|\t$f|"
   done | sort | awk -F'\t' '{c[$1]++; f[$1]=f[$1]" "$2} END{for(k in c) if(c[k]>1) print c[k]"x\t"k"\t"f[k]}'
   ```
 
-  - 설계 주의: 표·제목·카드 헤더·HTML·인용은 제외해 산문만 센다. 임계 60자는 착수 시점 실측에서 관용구 오탐이 없는 값이다. `labs/README.md`는 zip 동봉 자료라 자기완결이 필요하므로, 그 쌍의 중복은 README 원문을 남기고 `docs/labs.md` 쪽을 링크로 바꿔 해소한다.
+  - 설계 주의: 표·제목·카드 헤더·HTML·인용·이미지 캡션은 제외해 산문만 센다. 캡션 제외(`^\*…\*$` 이탤릭 단독 행)는 Task 8에서 추가했다. `connectors.md`·`mcp-servers.md`가 각자 자기 이미지에 단 정형 주석 한 줄이 걸렸는데, 이는 복붙 중복이 아니라 같은 성격의 마크업 주석이라 앞의 제외 5종과 같은 부류다. 문구를 갈라 쓰면 오히려 표기가 갈리므로 게이트 쪽을 고쳤다. 임계 60자는 착수 시점 실측에서 관용구 오탐이 없는 값이다. `labs/README.md`는 zip 동봉 자료라 자기완결이 필요하므로, 그 쌍의 중복은 README 원문을 남기고 `docs/labs.md` 쪽을 링크로 바꿔 해소한다.
   </details>
 - [ ] [D] 발행물(docs·labs·slides)과 이 이슈 작업 문서에서 U+2014가 0건으로 유지된다 (#50·#52 게이트 승계. 남기는 줄표는 U+2015).
   <details>
