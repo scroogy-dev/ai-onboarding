@@ -60,6 +60,7 @@ ai-onboarding/
 ├── overrides/              # MkDocs Material 테마 커스터마이징
 ├── scripts/                # 자동화 스크립트 (컨플루언스 동기화 등)
 ├── slides/                 # docs/의 발표용 파생 (Slidev로 발행)
+├── .gitattributes          # GitHub 소스 zip 범위 (labs/만 포함)
 ├── mkdocs.yml              # MkDocs 사이트 설정
 └── requirements.txt        # MkDocs Python 의존성
 ```
