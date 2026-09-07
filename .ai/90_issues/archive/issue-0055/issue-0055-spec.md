@@ -89,7 +89,7 @@ docs 9개 파일과 `labs/README.md`에서 같은 주제의 본문을 홈 1곳�
 
   ```bash
   BAD=$(printf '\xe2\x80\x94')
-  git grep -In --untracked "$BAD" -- 'docs/*.md' 'docs/connect/*.md' 'labs/' 'slides/*.md' '.ai/90_issues/active/issue-0055/' '.ai/99_workspace/notes/'
+  git grep -In --untracked "$BAD" -- 'docs/*.md' 'docs/connect/*.md' 'labs/' 'slides/*.md' '.ai/90_issues/archive/issue-0055/'
   ```
 
   - 설계 주의: U+2014를 리터럴로 담으면 이 문서가 스스로 위반을 만든다. printf 바이트 조립으로 우회한다.
@@ -138,7 +138,7 @@ docs 9개 파일과 `labs/README.md`에서 같은 주제의 본문을 홈 1곳�
 
 ## 전제 (Assumptions)
 
-1. 사전 분석 노트: `.ai/99_workspace/notes/2026-08-30-docs-slides-overall-review.md` (커밋 `6bad27c`). 중복 15건·불일치 11건·카드 실측·슬라이드 매핑이 부록에 있다. 노트의 줄 번호는 커밋 `3e57651` 기준이며, 이 이슈가 진행되면 어긋나므로 페이지 착수 시 다시 잰다.
+1. 사전 분석 노트: [`2026-08-30-docs-slides-overall-review.md`](./2026-08-30-docs-slides-overall-review.md) (커밋 `6bad27c`. 작성 시점 경로는 `.ai/99_workspace/notes/2026-08-30-docs-slides-overall-review.md`, --clear로 이관). 중복 15건·불일치 11건·카드 실측·슬라이드 매핑이 부록에 있다. 노트의 줄 번호는 커밋 `3e57651` 기준이며, 이 이슈가 진행되면 어긋나므로 페이지 착수 시 다시 잰다.
 2. 사용자 확정값(2026-08-30): 범위는 `labs/README.md`를 포함한 대상 파일 전부다. 강사용 `docs/operation-guide.md`는 Task 0에서 페이지째 삭제로 확정되어 정리 대상이 아니라 삭제 대상이 되었고, 정리 대상 파일은 9개다. 삭제를 허용한다. 삭제·카드·간결화 결과는 페이지 단위로 사용자가 확인한 뒤 명시적으로 승인한다. 이슈는 둘로 나눠 이 이슈(docs) 완료 후 #56(slides)을 착수한다.
 3. Task 0 확정값 (2026-08-30 사용자 확정. 이 목록에 없는 전제로 구현 방향을 바꾸지 않는다):
     - **홈 배정표**: 지금 확정하지 않는다. Task 1에서 15행 초안을 제시하고 행 단위로 승인받아 확정한다.
@@ -185,7 +185,7 @@ docs 9개 파일과 `labs/README.md`에서 같은 주제의 본문을 홈 1곳�
 
 | 문서 | 역할 |
 |------|------|
-| [사전 분석 노트](../../../99_workspace/notes/2026-08-30-docs-slides-overall-review.md) | 중복 15건·불일치 11건·카드 실측·슬라이드 매핑. 결정사항과 Task 0 확정 대상의 출처 |
+| [사전 분석 노트](./2026-08-30-docs-slides-overall-review.md) | 중복 15건·불일치 11건·카드 실측·슬라이드 매핑. 결정사항과 Task 0 확정 대상의 출처 |
 | [ADR-0002](../../../50_adr/active/adr-0002-publishing-structure-docs-ssot-slides-derivative.md) | docs SSoT·slides 단방향 파생. 이 이슈가 docs를 먼저 확정하는 근거 |
 | [ADR-0005](../../../50_adr/active/adr-0005-core-message-non-developers-make-software.md) | 본질 메시지 3곳 한정과 결정 룰 박스. 카드 「남김」 기준과 결정 룰 편입의 근거 |
 | [ADR-0006](../../../50_adr/active/adr-0006-labs-structure-and-naming.md) | `labs/` SSoT·`docs/labs.md` 인덱스 관계. README 자기완결 전제의 근거 |
