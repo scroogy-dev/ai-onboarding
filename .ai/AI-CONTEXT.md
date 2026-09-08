@@ -1,6 +1,6 @@
 # AI-CONTEXT.md
 
-> last updated: 2026-08-24
+> last updated: 2026-09-07
 > SSoT: 소스 코드. 이 파일은 안내도일 뿐 진실의 원천이 아니다.
 
 이 파일은 AI 어시스턴트를 위한 프로젝트 가이드입니다.
@@ -52,6 +52,7 @@ MkDocs + Material 기반 정적 사이트(GitHub Pages)와 컨플루언스 위�
 ## 기술 스택
 
 - MkDocs + Material for MkDocs (정적 사이트 빌더)
+- Slidev (발표자료 빌더, 같은 배포에서 `/slides/` 경로로 함께 발행)
 - GitHub Pages (호스팅)
 - GitHub Actions (CI/CD: main push → gh-pages 배포)
 - Atlassian Confluence (위키 발행, MCP 연동)
@@ -71,12 +72,13 @@ MkDocs + Material 기반 정적 사이트(GitHub Pages)와 컨플루언스 위�
 ai-onboarding/
 ├── .ai/                    # AI 협업 컨텍스트
 ├── .github/workflows/      # CI/CD
-├── docs/                   # SSoT: 모든 원본 마크다운 (홈·도입·기본 용어·실습·연결·보안·운영)
+├── docs/                   # SSoT: 모든 원본 마크다운 (홈·도입·기본 용어·실습·연결·보안)
 │   └── assets/             # css·images 등 정적 자산
 ├── labs/                   # 실습 자료 본문 (step01~step04 + README)
 ├── overrides/              # Material 테마 커스터마이징
 ├── scripts/                # 자동화 스크립트 (컨플루언스 동기화 등)
 ├── slides/                 # docs/의 발표용 파생 (Slidev로 발행)
+├── .gitattributes          # 소스 zip 배포 범위 (labs/만 포함)
 ├── mkdocs.yml              # 사이트 설정 (네비게이션, 테마, 플러그인)
 └── requirements.txt        # Python 의존성
 ```
