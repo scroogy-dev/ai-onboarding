@@ -235,7 +235,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 
 **임직원 (회사 업무)**
 
-❌ **개인 플랜 절대 금지** <span class="opacity-70">(무료·유료)</span><br/>→ **반드시 회사 Team / Enterprise**
+❌ **개인 플랜 절대 금지** <span class="opacity-70">(무료·유료)</span><br/>→ **반드시 회사 Team·Enterprise**
 
 </div>
 
@@ -543,7 +543,7 @@ viewport 점검 필요: 2카드 + 오해 박스가 한 화면에 들어가는지
 
 ---
 
-# 결과물의 성격 ― 1회성 · 스킬 · 애플리케이션
+# 결과물의 성격
 
 <div class="mt-2 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-2 bg-amber-50 dark:bg-amber-900/15 text-sm">
 <strong>⚠ 생성형 AI는 기본적으로 비결정적입니다</strong>. 같은 지시에도 매번 답이 조금씩 다를 수 있습니다.
@@ -551,7 +551,7 @@ viewport 점검 필요: 2카드 + 오해 박스가 한 화면에 들어가는지
 
 <div class="mt-3 text-xs">
 
-| | 1회성 프롬프트 | 에이전트 스킬 *(본 교육)* | 애플리케이션 *(개인용 웹앱까지 본 교육)* |
+| | 1회성 결과물 | Agent Skills *(본 교육)* | 애플리케이션 *(개인용 웹앱까지 본 교육)* |
 |---|---|---|---|
 | **무엇** | 챗봇에 그때그때 입력하는 한 번짜리 지시 | 자주 쓰는 프롬프트·절차를 재사용 자산으로 묶음 | 코드로 작성된 프로그램 |
 | **결정성** | 비결정 | 비결정 *(내부 LLM)* | 결정 |
@@ -562,7 +562,7 @@ viewport 점검 필요: 2카드 + 오해 박스가 한 화면에 들어가는지
 </div>
 
 <div class="mt-2 text-center text-xs opacity-90">
-<strong>에이전트 스킬</strong>: 비개발자도 만들 수 있고, 한 번 만들어 두면 반복 작업을 크게 줄여 줍니다.
+<strong>Skill</strong>: 비개발자도 만들 수 있고, 한 번 만들어 두면 반복 작업을 크게 줄여 줍니다.
 </div>
 
 <div class="mt-1 text-center text-xs opacity-80">
@@ -869,7 +869,7 @@ AI에게 그때그때 작업을 지시
 <div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">② 소프트웨어로 만들기 (본 교육이 강조하는 쪽)</div>
 <div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4">
 
-AI로 작은 소프트웨어(에이전트 스킬)를 만들어 활용
+AI로 작은 소프트웨어(Skill)를 만들어 활용
 
 **적합**: 반복·일관성·재사용이 필요한 작업
 
@@ -1004,7 +1004,7 @@ What 섹션에 위치한 이유: 학습자 분류가 아니라 "교육이 다루
 | 단계 | 무엇을 하나요? | 대표 도구·기능 | 본 교육에서 |
 |------|-------------|--------------|------------|
 | **1단계:<br/>챗봇&nbsp;사용** | 단발성 대화로 답을 얻음 | Claude·ChatGPT·Gemini 웹&nbsp;챗봇 | **참가&nbsp;전제**<br/>(이미&nbsp;경험) |
-| **2단계:<br/>프롬프트&nbsp;재활용** | 반복 사용 가능한 맞춤 프롬프트·챗봇을 자산으로 만듦 | **Agent&nbsp;Skills&nbsp;기초**,<br/>Claude&nbsp;Projects | **2단계&nbsp;실습** |
+| **2단계:<br/>프롬프트&nbsp;재활용** | 반복 사용 가능한 맞춤 프롬프트·챗봇을 자산으로 만듦 | **Agent&nbsp;Skills&nbsp;기초** | **2단계&nbsp;실습** |
 | **3단계:<br/>에이전트&nbsp;활용** | 로컬 파일·작업을 자동화하는 에이전트를&nbsp;운영함 | **Claude&nbsp;Cowork**,<br/>Claude&nbsp;Code | **3단계&nbsp;실습** |
 
 > 💡 2단계에서 익히는 **프롬프트 재활용·Agent Skills** 개념은 3단계에서도 그대로 재활용됩니다.
@@ -1171,7 +1171,7 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 
 # AI 활용 메타 원칙
 
-도구·실습이 바뀌어도 그대로 통하는 **시리즈 차원의 자세** 5종.
+도구·실습이 바뀌어도 그대로 통하는 **공통 원칙** 5가지.
 
 <div grid="~ cols-3 gap-3" class="mt-8 max-w-2xl mx-auto">
 
@@ -3152,7 +3152,7 @@ table { font-size: 0.78em; }
 - [모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview)
 - [Cowork 시작](https://support.claude.com/ko/articles/13345190)
 - [Claude Code](https://docs.claude.com/ko/docs/claude-code/overview)
-- [Anthropic Learn](https://www.anthropic.com/learn) *(영문)*
+- [Claude Academy](https://academy.claude.com/) *(영문)*
 
 </div>
 
@@ -3160,9 +3160,8 @@ table { font-size: 0.78em; }
 
 **자산화·확장**
 
-- [Projects](https://support.claude.com/ko/articles/9517075)
 - [스킬](https://support.claude.com/ko/articles/12512176)
-- [MCP](https://docs.claude.com/ko/docs/agents-and-tools/mcp) *(개발자용)*
+- [MCP](https://claude.com/docs/connectors/building/mcp) *(개발자용·영문)*
 
 </div>
 
@@ -3170,7 +3169,7 @@ table { font-size: 0.78em; }
 
 **운영·지원**
 
-- [플랜](https://www.anthropic.com/pricing) *(영문)*
+- [플랜](https://claude.com/pricing) *(영문)*
 - [Support 홈](https://support.claude.com/ko/)
 - [Status](https://status.claude.com/)
 
