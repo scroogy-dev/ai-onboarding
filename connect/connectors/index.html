@@ -700,33 +700,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../operation-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    교육 운영 가이드
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -878,11 +851,8 @@
 <p>이 페이지에서는 <strong>Atlassian</strong>(Jira·Confluence)과 <strong>GitHub</strong>을 예로, 연결하고 해제하는 절차와 승인 화면에서 반드시 확인해야 할 것을 다룹니다. 업무 자료를 다루는 연결은 대개 Atlassian 쪽이 먼저이고, GitHub은 <a href="#github">연결할지부터 판단이 갈리는 도구</a>라 뒤에 두었습니다.</p>
 <hr />
 <h2 id="what-is-connector">커넥터는 새로 만드는 게 아닙니다<a class="headerlink" href="#what-is-connector" title="Permanent link">&para;</a></h2>
-<div class="admonition info">
-<p class="admonition-title">1부에서 이미 나온 이야기입니다</p>
-<p>1부 <a href="../../basics/#model-harness">기본 용어 ― 하네스는 결국 "내가 세팅하는 것들"</a>에서 하네스의 출처를 셋으로 나눴고, 그중 <strong>"고르고·연결만 하는 것"</strong> 칸에 <em>외부 서비스 연결</em>이 있었습니다. 커넥터가 바로 그 칸의 실물입니다.</p>
+<p>1부 <a href="../../basics/#model-harness">기본 용어 ― 하네스는 결국 '내가 세팅하는 것들'</a>에서 하네스의 출처를 셋으로 나눴고, 그중 <strong>「고르고·연결만 하는 것」</strong>에 「외부 서비스 연결」이 있었습니다. 커넥터가 바로 그 실제 예입니다.</p>
 <p>통로를 만드는 일은 서비스를 만든 쪽과 Anthropic이 이미 해 두었습니다. 내 몫은 <strong>고를 것을 고르고, 무엇을 허용할지 정하는 것</strong>입니다.</p>
-</div>
 <p>그래서 커넥터를 쓰는 데 필요한 건 기술이 아니라 <strong>판단</strong>입니다. 어떤 서비스를 연결할지, 어디까지 허용할지, 결과를 어떻게 확인할지, 이 세 가지만 정하면 됩니다.</p>
 <hr />
 <h2 id="how-to-connect">연결하는 순서<a class="headerlink" href="#how-to-connect" title="Permanent link">&para;</a></h2>
@@ -920,16 +890,13 @@
 <li><strong>권한 승인</strong>: 어떤 자료에 접근할지 화면에 나옵니다. <strong>여기서 멈춰 읽으세요</strong> (→ <a href="#approval-screen">바로 아래</a>).</li>
 <li><strong>대화에서 켜기</strong>: 연결했다고 항상 쓰이는 건 아닙니다. <code>+</code> 버튼 → <strong>커넥터</strong>에서 해당 서비스의 <strong>토글</strong>을 켜면 그 대화에서 사용됩니다.</li>
 </ol>
-<div class="admonition tip">
-<p class="admonition-title">쓸 만큼만 켜 두세요</p>
-<p>같은 메뉴의 <strong>도구 액세스</strong>에서 켜 둔 커넥터를 언제 불러올지 세 가지 중 고를 수 있습니다.</p>
+<p><strong>쓸 만큼만 켜 두세요.</strong> 같은 메뉴의 <strong>도구 액세스</strong>에서 켜 둔 커넥터를 언제 불러올지 세 가지 중 고를 수 있습니다.</p>
 <ul>
 <li><strong>자동</strong>(기본값): 지금 하는 일에 맞춰 Claude가 필요한 것만 불러옵니다. 대부분은 이대로 두면 됩니다.</li>
 <li><strong>항상 사용 가능</strong>: 켜 둔 커넥터를 대화 시작 때 전부 불러옵니다. 몇 개를 늘 쓰는 경우에 편합니다.</li>
 <li><strong>필요할 때</strong>: 찾아야 할 상황이 되면 그때 불러옵니다. 연결이 많아 대화가 무거워질 때 씁니다.</li>
 </ul>
-<p>켜 둔 커넥터가 많을수록 AI가 엉뚱한 곳을 뒤질 여지도 늘어나니, 어느 모드든 지금 하는 일에 필요한 것만 켜는 편이 결과도 깔끔합니다. 고르는 기준은 <a href="https://support.claude.com/ko/articles/13730515">Claude의 도구 접근 관리</a>에 정리돼 있습니다.</p>
-</div>
+<p>켜 둔 커넥터가 많을수록 AI가 엉뚱한 곳을 뒤질 여지도 늘어납니다. 고르는 기준은 <a href="https://support.claude.com/ko/articles/13730515">Claude의 도구 접근 관리</a>에 정리돼 있습니다.</p>
 <p>공식 안내: <a href="https://support.claude.com/ko/articles/11176164">커넥터를 사용하여 Claude의 기능 확장하기</a>. 화면이 바뀌면 이쪽이 기준입니다.</p>
 <hr />
 <h2 id="approval-screen">승인 화면에서 확인할 것<a class="headerlink" href="#approval-screen" title="Permanent link">&para;</a></h2>
@@ -967,7 +934,7 @@
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">「내 권한 그대로」는 안심과 경고를 같이 줍니다</p>
-<p>권한이 새로 생기지 않는다는 점은 안심할 만합니다. 하지만 내 계정이 회사 자료 대부분에 접근할 수 있다면, <strong>연결한 AI에게 열릴 수 있는 범위도 그만큼 넓어집니다.</strong> "나는 권한이 넓은 편인가"를 한 번 떠올려 보고, 넓다면 승인 범위든 대화에서 켜는 범위든 한 단계 줄여 두세요.</p>
+<p>권한이 새로 생기지 않는다는 점은 안심할 만합니다. 하지만 내 계정이 회사 자료 대부분에 접근할 수 있다면, <strong>연결한 AI에게 열릴 수 있는 범위도 그만큼 넓어집니다.</strong> '나는 권한이 넓은 편인가'를 한 번 떠올려 보고, 넓다면 승인 범위든 대화에서 켜는 범위든 한 단계 줄여 두세요.</p>
 <p>회사 자료가 오가는 연결의 기준은 <a href="../../security-guide/#external-connection">보안 및 개인정보 가이드 ― 외부 연결</a>에 정리돼 있습니다.</p>
 </div>
 <hr />
@@ -992,41 +959,33 @@
 </div>
 </div>
 <p>Atlassian 커넥터는 <strong>읽기와 쓰기를 모두</strong> 지원합니다. Confluence 페이지를 새로 만들고 Jira 이슈에 코멘트를 남기는 일까지 가능하다는 뜻입니다. 편리한 만큼, 팀 전체가 보는 공간에 결과가 그대로 남는다는 점을 잊기 쉽습니다.</p>
-<div class="admonition warning">
-<p class="admonition-title">AI가 쓴 것도 내 이름으로 팀에 공개됩니다</p>
-<p>내 계정으로 연결했으니 AI가 만든 문서나 코멘트도 <strong>내가 쓴 것으로</strong> 올라갑니다. 초안을 만들게 하되 <strong>올리기 전에 직접 읽고 고치는 단계</strong>를 반드시 두세요. 이것이 <a href="../../#meta-principles">메타 원칙 ③ AI 결과물 검토·이해 의무</a>가 연결 이후에 더 중요해지는 이유입니다.</p>
+<p><strong>AI가 쓴 것도 내 이름으로 팀에 공개됩니다.</strong> 내 계정으로 연결했으니 AI가 만든 문서나 코멘트도 <strong>내가 쓴 것으로</strong> 올라갑니다. 초안을 만들게 하되 <strong>올리기 전에 직접 읽고 고치는 단계</strong>를 반드시 두세요. 이것이 <a href="../../#meta-principles">메타 원칙 ③ AI 결과물 검토·이해 의무</a>가 연결 이후에 더 중요해지는 이유입니다.</p>
 <p>처음 몇 번은 읽기만 시켜 보고, 쓰기 작업 승인을 물어오면 결과가 믿을 만해질 때까지 거절하는 순서를 권합니다.</p>
-</div>
 <p>접근 범위는 여기서도 <strong>내가 이미 가진 Jira·Confluence 권한을 그대로</strong> 따릅니다. 내게 안 보이는 스페이스는 AI에게도 안 보입니다.</p>
 <hr />
 <h2 id="github">GitHub ― 소스코드를 관리하는 곳<a class="headerlink" href="#github" title="Permanent link">&para;</a></h2>
 <p>GitHub은 기본적으로 <strong>소스코드를 보관하고 변경 이력을 관리하는 도구</strong>입니다. 개발 과정에서 생긴 문서와 이슈가 함께 쌓이기는 하지만, 그것이 이 도구의 본래 용도는 아닙니다. 그래서 비개발자가 연결할지는 앞의 Atlassian과 달리 <strong>어느 쪽에 해당하느냐에 따라 판단이 갈립니다.</strong></p>
-<div class="admonition info">
-<p class="admonition-title">학생·일반인: 읽기만이라면 연결하지 않아도 됩니다</p>
-<p>코드를 읽고 배우는 단계라면 GitHub만 한 자료실이 없습니다. 다만 공개 저장소는 <strong>계정 없이도 볼 수 있어서</strong>, 관심 있는 프로젝트의 README나 이슈를 읽는 정도는 <strong>주소를 알려 주고 물어보면 됩니다.</strong> 커넥터를 붙일 일이 아닙니다.</p>
-<p>커넥터가 필요해지는 것은 <strong>로그인과 권한 확인이 필요한 일</strong>입니다. 로그인해야 보이는 비공개 저장소를 읽거나, 공개 저장소라도 이슈·PR에 코멘트를 남기는 일이 그렇습니다.</p>
-<p>이 교육의 실습 자료도 공개 저장소에 두었습니다 (→ <a href="../../labs/">실습 자료</a>).</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">임직원: 업무 도구가 따로 있다면 연결하지 않는 쪽을 권합니다</p>
-<p>회사에 이슈와 업무를 관리하는 도구(Jira·Confluence 등)가 따로 있다면, 비개발자가 GitHub까지 연결할 이유는 대개 없습니다. 개발자와 비개발자가 <strong>함께 봐야 하는 내용이라면 그 도구에서 관리하는 편이</strong> 양쪽 모두에게 낫습니다.</p>
-<p>사내에서 운영하는 <strong>GitHub Enterprise</strong>는 조건이 더 까다롭습니다. 공개로 열어 둔 저장소라도 <strong>로그인해야 볼 수 있고</strong>, 계정마다 라이선스 비용이 붙어 비개발자에게 계정을 내주는 것 자체가 회사의 판단 사항입니다.</p>
-<p>커넥터는 <strong>로그인과 권한 확인이 필요한 일</strong>에 쓰는 수단입니다. 회사 자료를 다루는 연결에 공통으로 걸리는 기준(플랜·관리자 정책)은 다른 커넥터와 같습니다 (→ <a href="../../security-guide/#external-connection">연결 보안 기준</a>).</p>
-</div>
-<p>연결하기로 정했다면 다룰 수 있는 범위는 이렇습니다. GitHub 커넥터는 저장소와 코드 파일을 읽고, 이슈·PR을 다루는 범위까지 지원합니다. 쓰기까지 허용하면 이슈 코멘트를 남기는 일도 가능합니다. <strong>읽기만 필요한 용도라면</strong> 승인 화면에서 접근할 저장소를 필요한 것만 고르고, 쓰기 작업 승인을 물어올 때 거절하는 쪽으로 좁히세요. 정확한 지원 범위는 커넥터 목록에서 GitHub 항목을 눌렀을 때 나오는 설명이 기준이니, 연결 전에 한 번 읽어 두세요.</p>
 <div class="admonition example">
-<p class="admonition-title">이런 부탁이 됩니다</p>
+<p class="admonition-title">GitHub ― 애플리케이션 개발하기</p>
 <ul>
-<li>"지난달에 닫힌 이슈들을 훑어서 무엇이 바뀌었는지 항목별로 정리해 줘"</li>
-<li>"README와 최근 릴리스 내용을 비교해서 안내문에서 낡은 문장을 찾아 줘"</li>
+<li>"이 이슈가 요구하는 것을 정리하고 어떤 파일부터 봐야 할지 알려 줘"</li>
+<li>"이 이슈를 해결하는 코드를 작성해 줘"</li>
+<li>"이 PR을 코드 리뷰해 줘"</li>
 </ul>
 </div>
+<ul>
+<li><strong>읽기만이라면 연결하지 않아도 됩니다.</strong> 공개(Public) 저장소는 계정 없이도 볼 수 있어서, README나 이슈를 읽는 정도는 주소를 알려 주고 물어보면 됩니다. 이 교육의 <a href="../../labs/">실습 자료</a>도 공개 저장소에 있습니다.</li>
+<li><strong>업무 도구가 따로 있다면 연결하지 않는 쪽을 권합니다.</strong> 회사에 이슈·업무를 관리하는 도구(Jira·Confluence 등)가 있다면 비개발자가 GitHub까지 연결할 이유는 대개 없습니다. 함께 봐야 하는 내용은 그 도구에서 관리하는 편이 양쪽 모두에게 낫습니다.</li>
+<li><strong>GitHub Enterprise는 조건이 다릅니다.</strong> 사내에서 운영하는 쪽은 회사 설정에 따라 공개로 열어 둔 저장소도 로그인해야 보일 수 있고, 계정마다 라이선스 비용이 붙습니다. 볼 수 있는지부터 회사 정책이 정합니다.</li>
+<li><strong>커넥터가 필요해지는 것은 개발 활동에 들어갈 때입니다.</strong> 공개 저장소를 읽는 데서 그치지 않고, 로그인해야 보이는 비공개 저장소를 그때그때 찾아 읽거나 이슈·PR에 내용을 남기는 일이 그렇습니다. 로그인과 권한 확인을 거쳐야 하는 순간부터 커넥터의 몫입니다 (→ <a href="../../security-guide/#external-connection">연결 보안 기준</a>).</li>
+<li><strong>연결한다면 범위를 좁혀 두세요.</strong> 저장소·코드 파일 읽기와 이슈·PR 다루기까지 지원합니다. 읽기만 필요하면 승인 화면에서 저장소를 골라 좁히고, 쓰기 작업 승인은 거절하세요. 정확한 범위는 커넥터 목록의 GitHub 항목 설명이 기준입니다.</li>
+<li><strong>비공개 저장소는 승인이 한 단계 더 있습니다.</strong> GitHub 쪽에서 앱 접근을 승인해야 하고, 조직이 SSO(회사 계정 통합 로그인)를 쓰면 각자 한 번 더 승인해야 합니다.</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">저장소를 프로젝트에 통째로 붙이는 별도 경로도 있습니다</p>
-<p>커넥터와 별개로, 대화창 <code>+</code> 버튼의 <strong>GitHub에서 추가</strong>로 저장소를 <a href="../../intro/#claude-ai">프로젝트</a> 자료에 붙여 둘 수 있습니다. 이쪽은 <strong>지정한 브랜치의 파일 이름과 내용만</strong> 가져오며 커밋 이력·이슈·PR 같은 기록은 가져오지 않습니다 (이 경로의 공식 안내: <a href="https://support.claude.com/ko/articles/10167454">GitHub 통합 사용하기</a>).</p>
+<p>커넥터와 별개로, 프로젝트 화면의 <strong>프로젝트 지식</strong> 영역 <code>+</code> 버튼에서 <strong>GitHub</strong>를 골라 저장소를 <strong>프로젝트</strong>(claude.ai에서 자료를 모아 두는 작업 공간) 자료에 붙여 둘 수 있습니다. 이 경로는 <strong>지정한 브랜치의 파일 이름과 내용만</strong> 가져오며 커밋 이력·이슈·PR 같은 기록은 가져오지 않습니다 (이 경로의 공식 안내: <a href="https://support.claude.com/ko/articles/10167454">GitHub 통합 사용하기</a>).</p>
 <p>같은 자료를 매번 물어본다면 프로젝트에 붙여 두는 쪽이, 그때그때 찾아 읽어야 한다면 커넥터 쪽이 편합니다.</p>
 </div>
-<p>비공개 저장소라면 GitHub 쪽에서 앱 접근을 승인해야 하고, 조직이 SSO(회사 계정 통합 로그인)를 쓰면 각자 한 번 더 승인이 필요합니다. 목록에서 저장소가 보이지 않는다면 대개 이 승인이 빠진 것입니다.</p>
 <hr />
 <h2 id="manage-disconnect">연결을 점검하고 끊기<a class="headerlink" href="#manage-disconnect" title="Permanent link">&para;</a></h2>
 <p>연결은 한 번 걸어 두면 잊히기 쉽습니다. <strong>분기에 한 번쯤</strong> 점검하는 습관을 권합니다.</p>
@@ -1038,24 +997,17 @@
 </ul>
 <hr />
 <h2 id="enterprise">회사 환경이라면<a class="headerlink" href="#enterprise" title="Permanent link">&para;</a></h2>
-<div class="admonition info">
-<p class="admonition-title">목록에 서비스가 안 보인다면 권한 문제일 수 있습니다</p>
-<p>Team·Enterprise 플랜에서는 <strong>조직 관리자가 먼저 커넥터를 켜 주어야</strong> 구성원이 쓸 수 있습니다. 관리자가 조직 설정에서 커넥터를 팀에 추가하고, 서비스별로 <strong>항상 허용 / 승인 필요 / 차단</strong> 같은 도구 권한을 정할 수 있습니다.</p>
-<p>그래서 목록이 비어 있거나 원하는 서비스가 없다면 내 문제가 아니라 조직 정책일 가능성이 큽니다. 담당 부서에 문의하세요.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">연결해도 되는지는 회사 정책이 정합니다</p>
-<p>관리자가 켜 둔 목록은 <strong>쓸 수 있는 범위</strong>를 정한 것이고, 그 안에서 <strong>어느 자료를 연결할지는 내가 고릅니다.</strong> 커넥터는 내 계정 권한을 그대로 쓰기 때문에, 이 선택에서 회사 자료가 의도치 않게 밖으로 나갈 수 있습니다.</p>
+<p><strong>목록에 서비스가 안 보인다면 권한 문제일 수 있습니다.</strong> Team·Enterprise 플랜에서는 <strong>조직 관리자가 먼저 커넥터를 켜 주어야</strong> 구성원이 쓸 수 있습니다. 관리자가 조직 설정에서 커넥터를 팀에 추가하고, 서비스별로 <strong>항상 허용 / 승인 필요 / 차단</strong> 같은 도구 권한을 정할 수 있습니다. 목록이 비어 있거나 원하는 서비스가 없다면 내 문제가 아니라 조직 정책일 가능성이 크니, 담당 부서에 문의하세요.</p>
+<p><strong>연결해도 되는지는 회사 정책이 정합니다.</strong> 관리자가 켜 둔 목록은 <strong>쓸 수 있는 범위</strong>를 정한 것이고, 그 안에서 <strong>어느 자료를 연결할지는 내가 고릅니다.</strong> 커넥터는 내 계정 권한을 그대로 쓰기 때문에, 이 선택에서 회사 자료가 의도치 않게 밖으로 나갈 수 있습니다.</p>
 <ul>
 <li><strong>어느 계정으로 로그인하는지 봅니다.</strong> 회사 자료를 다루는 연결에 개인 계정으로 로그인하면 회사 자료가 개인 공간을 거쳐 나갑니다. 개인 용도 연결에 회사 계정을 쓰는 것도 같은 문제입니다.</li>
 <li><strong>연결할 자료가 사내 기준에 맞는지 봅니다.</strong> 보안 등급이 정해진 문서는 연결로 읽히는 경우에도 그 기준이 그대로 적용됩니다.</li>
 <li><strong>사내 승인 절차가 있으면 그 절차가 먼저입니다.</strong> 목록에 보인다는 것이 승인을 대신하지 않습니다.</li>
 </ul>
-</div>
 <p>회사 업무·자료를 다루는 연결은 <strong>회사가 계약한 플랜에서만</strong> 진행합니다. 개인 플랜은 무료·유료를 가리지 않고 회사 보안 정책 위반입니다 (→ <a href="../../security-guide/#external-connection">연결 보안 기준</a>).</p>
 <hr />
 <h2 id="next">다음으로<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
-<p>필요한 서비스가 커넥터 목록에 있었다면 여기까지로 충분합니다. 목록에 없는 도구가 필요하다면 다음 페이지로 넘어가세요.</p>
+<p>목록에 없는 도구가 필요하다면 다음 페이지로 넘어가세요.</p>
 <p><strong><a href="../mcp-servers/">MCP 서버 이용하기</a></strong> 에서는 준비된 목록 너머의 도구·자료를 연결하는 방법과, 그때 늘어나는 판단의 몫을 다룹니다.</p>
 
 
