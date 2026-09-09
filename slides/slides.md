@@ -2771,7 +2771,7 @@ layout: section
 
 # 실습
 
-손으로 따라가는 4개 step
+프롬프트로만 진행하는 4개 step
 
 <!--
 docs nav 정합: `mkdocs.yml`의 top-level은 「홈 / 도입 / 실습 / 보안 / 운영」으로 실습이 도입·보안과 동급 형제다.
@@ -2788,14 +2788,16 @@ docs/labs.md → labs/ SSoT의 단방향 파생(ADR-0002).
 
 | step | 주제 | stage | 핵심 학습 포인트 |
 |------|------|:-----:|----------------|
-| **[step01](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step01-weather)** | 날씨: 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약 |
+| **[step01](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step01-weather)** | 날씨: 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약, 데이터·뷰 분리 |
 | **[step02](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step02-file-classifier)** | 파일 분류 | 1·2 | Skill 옵션(파라미터) 설계 |
-| **[step03](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step03-voca-quiz)** | 영어 단어 출제기 | 1·2 | 사진 입력·출처 충실성·외부 도구 연결 |
-| **[step04](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step04-wrong-answer-note)** | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 · 검수 단계 · 데이터/뷰 분리 |
+| **[step03](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step03-voca-quiz)** | 영어 단어 출제기 | 1·2 | 이미지 입력, 출처 충실성 제약, 외부 사전 링크 자동 연결 |
+| **[step04](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step04-wrong-answer-note)** | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 + 검수 단계 + 데이터·뷰 분리 |
 
 <div class="border-l-4 border-emerald-400 pl-6 py-3 my-4 bg-emerald-50 dark:bg-emerald-900/15 rounded-r">
 
-🛠️ **진행 원칙: 프롬프트로만 진행합니다.** 파일·코드·템플릿을 에디터로 직접 고치지 않고, AI에게 프롬프트로 요청합니다.
+🛠️ **진행 원칙 ① 프롬프트로만 진행합니다.** 파일·코드·템플릿을 에디터로 직접 고치지 않고, AI에게 프롬프트로 요청합니다.
+
+📖 **진행 원칙 ② 결과물은 반드시 읽고 이해합니다.** 손으로 쓰지 않더라도, AI가 만든 결과물은 본인이 직접 읽고 이해한 상태에서 사용·수정합니다.
 
 </div>
 
@@ -2841,9 +2843,9 @@ docs/labs.md의 시리즈 구성 표 슬라이드 압축: ADR-0002 단방향 파
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-purple-200 dark:border-purple-800">
+<div class="rounded-lg overflow-hidden border border-purple-200 dark:border-purple-800 flex flex-col">
 <div class="bg-purple-100 text-purple-800 px-4 py-2 font-bold">step03: 영어 단어 출제기</div>
-<div class="bg-purple-50 dark:bg-purple-900/15 px-4 py-3 text-sm">
+<div class="bg-purple-50 dark:bg-purple-900/15 px-4 py-3 text-sm flex-1">
 
 단어장 사진 + 옵션을 받는 출제 Skill.
 
@@ -2858,7 +2860,7 @@ docs/labs.md의 시리즈 구성 표 슬라이드 압축: ADR-0002 단방향 파
 
 채점지 사진 → 인식 엑셀 → **검수** → 자녀용 마크다운·인쇄용 HTML.
 
-다단계 파이프라인 + 데이터/뷰 분리.
+다단계 파이프라인 + 데이터·뷰 분리.
 
 </div>
 </div>
@@ -2873,6 +2875,7 @@ docs/labs.md의 시리즈 구성 표 슬라이드 압축: ADR-0002 단방향 파
 4개 step의 한 줄 메시지를 카드 그리드로 정렬: 단순 bullet 나열 회피(memory: 의도적 강조 카드 유지, 그룹핑은 시각 구분 권장).
 색상 사다리: step01 blue(입문) → step02 cyan(옵션) → step03 purple(사진) → step04 orange(파이프라인): 학습 단계 톤 변화.
 하단 한 줄로 강사 안내 메시지(이전 「실행 안내」 슬라이드 핵심) 흡수.
+이슈 #56 Task 6 화면 확인 보정: step03 카드에 `flex flex-col`·`flex-1`을 걸어 그리드가 맞춘 높이를 몸통 배경이 채우게 했다. 같은 행의 step04 카드가 더 길어 왼쪽 아래가 배경 없이 비어 보였다(29·37·59장과 같은 계열).
 -->
 
 
@@ -2896,14 +2899,13 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 <div class="border-l-4 border-red-400 pl-6 py-4 my-8 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **AI에 입력하는 모든 내용은 "누군가 볼 수 있다"고 가정하세요.**
+⚠️ **AI에게 입력하는 모든 내용은 "누군가 볼 수 있다"고 가정하세요.**
 
 엔터프라이즈 환경이라도 이 기본 태도는 유지합니다.
 
 </div>
 
-도구·버전은 계속 바뀌지만 **보안 원칙은 동일**합니다.
-입력 단계에서 민감한 정보를 넣지 않는 것이 가장 확실한 보호 방법입니다.
+아무리 안전한 시스템이라도, **입력 단계에서 민감한 정보를 넣지 않는 것**이 가장 확실한 보호 방법입니다.
 
 ---
 
@@ -2914,7 +2916,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 | **개인 식별 정보** | 주민등록번호, 여권번호, 운전면허번호 |
 | **금융 정보** | 카드번호, 계좌번호 |
 | **인증 정보** | 비밀번호, API 키, 인증 토큰 |
-| **타인의 개인정보** | 타인 이름·연락처 조합, 동의받지 않은 타인 사진 |
+| **타인의 개인정보** | 다른 사람의 이름·연락처, 동의 없이 찍힌 사진 |
 
 > 위 정보는 **트랙 무관 공통 금지**: 엔터프라이즈 환경에서도 동일하게 적용
 
@@ -3001,7 +3003,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 <div class="border-l-4 border-orange-400 pl-6 py-4 my-6 bg-orange-50 dark:bg-orange-900/15 rounded-r">
 
-본 교육 실습은 **유료 Claude**(개인 Pro↑·임직원 회사 Team/Enterprise)를 사용하지만,
+본 교육 실습은 **유료 Claude**(개인은 Pro 이상 / 임직원은 회사 Team·Enterprise)를 사용하지만,
 평소 쓰는 다른 무료 AI에도 **같은 원칙이 적용**됩니다.
 
 </div>
@@ -3059,18 +3061,24 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 | 개인 식별 정보 입력 금지 | ✅ | ✅ |
 | 타인 개인정보 입력 금지 | ✅ | ✅ |
 | 사진 속 개인정보 확인 | ✅ | ✅ |
-| 비식별 처리 | ✅ | ✅ |
-| AI 결과물 원본 검증 | ✅ | ✅ |
+| 개인정보 가리고 입력하기(비식별 처리) | ✅ | ✅ |
+| AI 결과물을 원본으로 검증 | ✅ | ✅ |
 | AI 결과물 외부 공유 전 검토 | ✅ | ✅ |
+| 개인정보가 있는 자료에 연결 금지 | ✅ | ✅ |
+| 연결에 맡기는 권한 최소화 | ✅ | ✅ |
+| 안 쓰는 연결 점검·해제 | ✅ | ✅ |
 | 문서 보안 등급 확인 | ✅ (사내 문서) | ― |
+| 연결은 회사 계약 플랜에서만 | ✅ (사내 자료) | ― |
+| 개인 계정 연결 전 개인·타인 자료 확인 | ― | ✅ |
 | 서비스 약관 확인 | ― (회사가 계약) | ✅ |
 
-<div class="text-sm opacity-70 mt-4">
+<div class="text-xs opacity-70 mt-3">
 범례: ✅ 반드시 준수 / ― 해당 없음 또는 트랙 특성상 적용 수준이 다름
 </div>
 
 <style>
-table { font-size: 0.78em; }
+table { font-size: 0.66em; }
+table th, table td { padding: 0.18em 0.5em; }
 </style>
 
 ---
