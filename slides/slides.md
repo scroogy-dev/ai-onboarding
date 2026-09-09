@@ -541,7 +541,7 @@ AI가 직접 파일을 열고 작업
 앞 「챗봇 vs 에이전트」(에이전트=맡기기)에서 이어짐: 그 에이전트가 무엇으로 이뤄졌나.
 하네스 출처 셋(회사가 만든 구조 / 고르고·연결만 하는 것 / 내가 만드는·정하는 것)은 이슈 #56 Task 7에서 하네스 카드에 편입했다: docs/basics.md 「하네스는 결국 '내가 세팅하는 것들'」 파생.
 52장이 「하네스의 출처를 셋으로 나눴고 그중 「고르고·연결만 하는 것」 칸에 외부 서비스 연결이 있었다」로 되짚는 원본이 이 목록이다.
-「지시를 정리해 저장」은 docs 원문 표기: 「Agent Skills」 완전형의 덱 첫 등장 자리가 19장 제목이라(전제 15) 여기서는 Skill 토큰을 쓰지 않는다.
+「지시를 정리해 저장」은 docs 원문 표기: 「Agent Skills」 완전형의 덱 첫 등장 자리가 19장 표 머리글이라(전제 15) 여기서는 Skill 토큰을 쓰지 않는다.
 멀티에이전트 긍정 사례(역할 분업 + 명시적 기준 + 사람 검토)는 발화로 보충: 단일 에이전트로도 핵심 획득 가능.
 viewport 점검 필요: 2카드 + 오해 박스가 한 화면에 들어가는지 사용자 확인. 3분류 편입으로 하네스 카드가 3행 늘었다.
 -->
@@ -712,7 +712,7 @@ Cowork이 3단계 본격 무대, Code는 진입 장벽이 있어 옵션 안내�
 | 대화에 파일 업로드 | ✓ | ✓ | ✓ |
 | **파일·시스템 접근** | ✗ | △ 연결 폴더만 | ✓ 전체 |
 | **터미널 명령 실행** | ✗ | △ 격리 VM | ✓ 전체 |
-| Agent Skills | ✓ | ✓ | ✓ |
+| Skill | ✓ | ✓ | ✓ |
 | 외부 도구·데이터 연결 | ✓ 원격 · ✗ 로컬 | ✓ 원격 · △ 로컬 | ✓ 전체 |
 | 외부 API 호출 | ✗ | △ 송신 정책 | ✓ 전체 |
 
@@ -736,6 +736,7 @@ docs/intro.md의 「기능 비교 ― 한눈에」(#claude-comparison) 표 슬�
 Cowork의 「△」가 「제한」이 아닌 「제어된 안전 동작」임을 발화로 보충: 비개발자가 가장 안전하게 에이전트를 쓸 수 있는 도구라는 메시지.
 nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞. docs intro 순서(기능비교 → 모델 → 사용량) 정합.
 이슈 #56 Task 3 보정: 외부 연결 행을 docs 표기로 맞추면서 부연 괄호 「(커넥터·MCP 서버)」는 생략했다. 기능 열만 두 배로 넓어져 나머지 3열을 밀어냈고, 커넥터·MCP 서버가 무엇인지는 20장과 2부가 맡는다. 첫 열은 `white-space: nowrap`으로 한 줄을 고정.
+이슈 #56 audit 1차 F-4 보정: 기능 행 「Agent Skills」를 「Skill」로. docs intro.md 표는 페이지 첫 등장이라 완전형이지만 덱은 전체 1회(19장 표 머리글)로 확정했다(spec 전제 15).
 -->
 
 
@@ -970,7 +971,7 @@ docs의 W3 quote 박스에 1:1 정합. ❌/✅ 시각 비교가 청중 인지에
 ```mermaid {scale: 0.85}
 flowchart LR
     A("<b>1단계</b><br/>챗봇 사용<br/><i>(참가 전제)</i>")
-    B("<b>2단계</b><br/>프롬프트 재활용<br/>Agent Skills")
+    B("<b>2단계</b><br/>프롬프트 재활용<br/>Skill")
     C("<b>3단계</b><br/>에이전트 활용<br/>Claude Cowork")
     A --> B --> C
     classDef stage1 fill:#1e293b,stroke:#6b7280,color:#9ca3af,stroke-width:1px
@@ -1004,6 +1005,7 @@ ADR-0001의 핵심 모델: 본 교육이 다루는 결과물의 단계.
 What 섹션에 위치한 이유: 학습자 분류가 아니라 "교육이 다루는 범위·산출물의 단계"이기 때문.
 다음 슬라이드(상세표)로 이어 단계별 차이를 풀어 설명.
 2→3단계로 갈수록 "AI에게 시키는 일의 자동화 폭"이 넓어진다는 점을 강조.
+이슈 #56 audit 1차 F-4 보정: 2단계 노드 「Agent Skills」를 「Skill」로. docs index.md mermaid는 페이지 첫 등장이라 완전형이지만 덱은 전체 1회(19장 표 머리글)로 확정했다(spec 전제 15).
 -->
 
 ---
@@ -1292,7 +1294,7 @@ ADR 격상 후보(이슈 #32 Task 8에서 결정): 데이터/뷰 분리를 별 A
 
 **검토의 깊이는 결과물의 영향 범위에 비례합니다.**
 
-반복해서 쓰거나 다른 사람에게 영향을 주는 산출물일수록 깊이 있게, 1회성·프로토타입은 가볍게.
+반복해서 쓰거나 다른 사람에게 영향을 주는 산출물일수록 깊이 있게, 한 번 쓰고 버리는 가벼운 산출물은 가볍게.
 
 </div>
 
@@ -1304,6 +1306,7 @@ ADR 격상 후보(이슈 #32 Task 8에서 결정): 데이터/뷰 분리를 별 A
 docs/index.md `### AI 활용 메타 원칙` ③ 박스 압축: ADR-0002 단방향 파생.
 labs/README.md·docs/labs.md의 "결과물은 반드시 읽고 이해합니다" ② 항목과도 짝: 시리즈 차원에서 도입(원칙)·실습(진행 원칙) 두 자리 모두 호출.
 검토 깊이 차등화 단서는 비개발자 청중이 "전부 이해 못 하면 못 쓴다"로 오독하지 않도록(2026-05-09 사용자 보강 가이드).
+이슈 #56 audit 1차 F-3 보정: 「1회성·프로토타입은 가볍게」를 docs 표현 「한 번 쓰고 버리는 가벼운 산출물」로 바꿨다. docs에 프로토타입이라는 완화 범주가 없고, 「1회성」은 19장 「1회성 결과물」 분류와 겹쳐 읽힌다.
 -->
 
 
@@ -1871,9 +1874,9 @@ docs 표 3행을 줄이지 않는다. 이 세 가지가 연결에서 사람이 �
 
 <div class="mt-6 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
-<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
+<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800 flex flex-col">
 <div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">안심 ✓</div>
-<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4 text-sm">
+<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4 text-sm flex-1">
 
 권한이 **새로 생기지는 않습니다.**
 
@@ -1882,9 +1885,9 @@ docs 표 3행을 줄이지 않는다. 이 세 가지가 연결에서 사람이 �
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800">
+<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800 flex flex-col">
 <div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center">경고 ⚠</div>
-<div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-4 text-sm">
+<div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-4 text-sm flex-1">
 
 **내가 볼 수 있는 것까지가** AI에게 열릴 수 있는 **가장 넓은 범위**입니다.
 
@@ -1904,6 +1907,7 @@ docs 표 3행을 줄이지 않는다. 이 세 가지가 연결에서 사람이 �
 <!--
 docs/connect/connectors.md `!!! warning "「내 권한 그대로」는 안심과 경고를 같이 줍니다"` 압축: ADR-0002 단방향 파생.
 카드 색은 「메타 원칙 ⑤」의 emerald(권장)/amber(보수)를 그대로 재사용: 같은 사실의 두 얼굴이라는 구도를 색으로 반복한다.
+이슈 #56 audit 2차 화면 확인 보정: 두 카드에 `flex flex-col`·`flex-1`을 걸어 그리드가 맞춘 높이를 몸통 배경이 채우게 했다. 왼쪽 안심 카드가 짧아 테두리 안 아래가 배경 없이 비었다(29·37·59·78장과 같은 계열).
 이슈 #52 Task 6 보정: 카드 4개가 한 화면에 들어가 아래쪽이 화면 끝까지 차서 두 장으로 나눔. 이 장은 사실(안심·경고)까지만 맡고, 줄이는 방법은 다음 장으로 넘긴다. 마지막 질문 줄이 다음 장을 여는 다리라 「줄일 방법이 있습니다」로 끝맺어, 분리 뒤에도 「줄일 방법이 없다」로 끝나지 않게 한다.
 -->
 
@@ -2179,15 +2183,12 @@ docs/connect/mcp-servers.md `## 커넥터와 MCP 서버는 같은 것입니다 {
 
 </div>
 
-<div class="mt-6 text-center text-sm opacity-80 max-w-4xl mx-auto">
-방식은 내가 고르는 것이 아니라 <strong>만든 쪽이 정해서 내놓습니다.</strong> 쓰려는 도구가 어느 방식으로 나와 있는지부터 보세요.
-</div>
-
 <!--
 docs/connect/mcp-servers.md `## 어디에 설정하느냐가 갈림길입니다 { #remote-vs-local }` 2분할 카드 파생: ADR-0002 단방향 파생.
 ADR-0010 결정 3-1의 첫째 갈래를 한 장으로 세운다. 이 갈래가 접속 주체를 정하고, 사내망 주소에 접근할 수 있는지도 여기서 갈린다.
 슬라이드 본문에 「축」이라는 말을 쓰지 않는다(이슈 #52 Task 1 확정): 나누는 기준을 제목에 직접 써서 비개발자가 용어 없이 읽게 한다. ADR의 두 갈래 구도는 19·20장 두 장으로 나뉘어 유지된다.
 세 항목의 순서(누가 접속하나 → 접근 범위 → 어디서 쓰나)를 양쪽 카드에서 맞춰, 청중이 가로로 읽어 비교할 수 있게 한다.
+이슈 #56 audit 1차 F-6 보정: 하단 「방식은 만든 쪽이 정해서 내놓는다」 한 줄을 삭제했다. docs `#remote-vs-local`에 대응 문장이 없고(docs의 「방법은 회사가 정해서 안내」는 회사 제공 서버 한정), 슬라이드 전용 문장은 편입 또는 삭제 대상이다(R4).
 -->
 
 
@@ -2223,14 +2224,11 @@ ADR-0010 결정 3-1의 첫째 갈래를 한 장으로 세운다. 이 갈래가 �
 
 </div>
 
-<div class="text-sm opacity-80 max-w-5xl mx-auto">
-둘을 같이 써도 됩니다. 사내 위키의 자료를 확장 프로그램으로 읽고, 정리한 결과를 계정에 등록해 둔 업무 도구에 올리는 식입니다.
-</div>
-
 <!--
 docs/connect/mcp-servers.md `!!! info "내 컴퓨터에 설정한다고 서버까지 내 컴퓨터에 있는 것은 아닙니다"` + `!!! tip` 말미 압축: ADR-0002 단방향 파생.
 ADR-0010 결정 3-1의 둘째 갈래. ADR이 이 갈래를 뒤늦게 추가한 이유가 여기 그대로 있다: 원격/로컬 한 축으로 누르면 「내 컴퓨터에 설정 + 다른 곳의 서버」 조합(B)이 문서에서 빠지는데, 그것이 임직원의 실제 사내망 케이스다.
 A·B 라벨을 붙여 다음 두 장(mermaid)에서 참조할 수 있게 한다.
+이슈 #56 audit 1차 F-6 보정: 하단 「둘을 같이 써도 됩니다」와 사내 위키 예시를 삭제했다. 출처였던 `!!! tip` 말미는 #55에서 사라졌고, 현재 docs `#remote-vs-local`에 대응 문장이 없다(R4).
 -->
 
 
@@ -2458,7 +2456,9 @@ docs의 스크린샷 1장(커스텀 커넥터 추가 창)은 덱 관례대로 �
 
 <div class="border-l-4 border-red-400 pl-6 py-3 my-5 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **서버가 응답하는 내용에 지시가 섞여 있을 수 있습니다.** AI는 서버에서 받아 온 내용을 읽고 다음 행동을 정하는데, 그 안에 <em>"이 파일도 함께 보내라"</em> 같은 문장이 숨어 있으면 **사용자의 지시로 착각할 수 있습니다**(프롬프트 주입). 보호 장치가 있지만 완전하지는 않으니, **믿을 수 있는 곳에서 만든 서버만 등록하는 것**이 첫 번째 방어입니다.
+⚠️ **서버가 응답하는 내용에 지시가 섞여 있을 수 있습니다.** AI는 서버에서 받아 온 내용을 읽고 다음 행동을 정하는데, 그 안에 <em>"이 파일도 함께 보내라"</em> 같은 문장이 숨어 있으면 **사용자의 지시로 착각할 수 있습니다**(프롬프트 주입).
+
+보호 장치가 있지만 완전하지는 않습니다. **믿을 수 있는 곳에서 만든 서버만 등록하는 것**이 첫 번째 방어이고, 믿을 만한 서버도 이슈·문서처럼 **남이 쓴 내용을 그대로 가져오므로** 도구 실행 승인은 매번 읽고 판단하세요.
 
 </div>
 
@@ -2477,6 +2477,8 @@ docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` �
 프롬프트 주입은 이 구간에서 유일하게 새로 나오는 위험 개념이라 red 바로 세운다. 용어는 괄호로 한 번만 붙이고 본문은 현상 서술로 간다. 비개발자에게 필요한 것은 이름이 아니라 「믿을 수 있는 곳만」이라는 행동 기준이다.
 서술은 가능성형(착각할 수 있습니다)으로: 단정하면 보호 장치가 없는 것처럼 읽힌다.
 이슈 #56 Task 5 보정: 「가장 확실한 방어」를 docs 표현 「첫 번째 방어」로 바꿨다. docs는 그 뒤에 믿을 만한 서버도 남이 쓴 내용을 그대로 가져온다는 한정을 두는데, 슬라이드가 「가장 확실한」으로 올려 쓰면 서버만 잘 고르면 끝나는 것으로 읽힌다.
+이슈 #56 audit 1차 F-2 보정: 그 한정(믿을 만한 서버도 남이 쓴 내용을 그대로 가져온다)을 red 바 본문에 옮겼다. 노트에만 있던 조건이라 청중에게 전달되지 않았고, 다음 장 「매번 읽고 승인」의 이유가 이 문장이다.
+이슈 #56 audit 2차 화면 확인 보정: F-2 문장을 얹으면서 red 바가 한 문단에 네 마디가 이어 붙은 상태가 됐다. docs `#choosing`이 나눠 둔 대로 「현상+용어」와 「보호 장치의 한계+행동」 두 문단으로 끊었다. 문장은 그대로고 순서만 docs 순서를 따른다.
 -->
 
 
@@ -2486,9 +2488,9 @@ docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` �
 
 <div class="mt-6 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
-<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
+<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800 flex flex-col">
 <div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center text-sm">열쇠 값(토큰)을 만들 때</div>
-<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-xs">
+<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-xs flex-1">
 
 서비스가 "이 사람이 맞다"고 확인하는 데 쓰는 문자열입니다. 만드는 화면에서 골라 주는 서비스가 많으니, **고를 수 있다면 좁힙니다.**
 
@@ -2496,12 +2498,14 @@ docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` �
 - **권한**: 읽기로 되는 일이면 쓰기는 빼 두기
 - **기간**: 만료일을 짧게 잡고 필요할 때 다시 발급
 
+고를 수 없다면 그 값으로 무엇까지 되는지 서비스 안내에서 확인합니다. 확인이 안 되면 **계정 전체를 여는 값**으로 보고, 안 쓰게 되면 발급 화면에서 지웁니다.
+
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800">
+<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800 flex flex-col">
 <div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center text-sm">「항상 허용」을 누르기 전에</div>
-<div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-3 text-xs">
+<div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-3 text-xs flex-1">
 
 작업 중 AI가 도구 사용 승인을 물어볼 때 **항상 허용**을 고르면 이후로는 묻지 않습니다.
 
@@ -2524,6 +2528,8 @@ docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` �
 docs/connect/mcp-servers.md `!!! tip "열쇠 값(토큰)을 만들 때는 필요한 만큼만"` + `!!! warning "열쇠 값은 대화창에 붙여넣지 않습니다"` + `#choosing`의 `!!! warning "「항상 허용」은 마지막에 누르세요"` 병합: ADR-0002 단방향 파생.
 분량 압축을 위해 세 박스를 한 장에 묶는다(구성안의 ⊕ 표시, 줄일 때 병합 후보). 묶이는 축은 「승인을 미리 좁히기 vs 승인을 나중에 열기」로, 같은 판단의 앞뒤다.
 red 바는 1부 보안 섹션의 「절대 입력하면 안 되는 정보」 표를 되짚는 자리: 그 표의 「인증 정보」 행이 여기서 실물로 등장한다. 슬라이드는 되짚기만 하고 표는 다시 그리지 않는다.
+이슈 #56 audit 1차 F-1 보정: 열쇠 값 카드에 docs의 「고를 수 없는 서비스」 분기(서비스 안내에서 확인, 확인 불가면 계정 전체를 여는 값으로 취급, 불용 시 발급 화면에서 삭제)를 복원했다. 「고를 수 있다면 좁힌다」만 있으면 고를 수 없을 때의 행동이 비어 있었다.
+이슈 #56 audit 2차 화면 확인 보정: 두 카드에 `flex flex-col`·`flex-1`을 걸었다. F-1 보정으로 왼쪽 열쇠 값 카드가 한 문단 길어져 오른쪽 「항상 허용」 카드 몸통 아래가 배경 없이 비었다(29·37·59·78장과 같은 계열).
 -->
 
 
@@ -2558,7 +2564,7 @@ red 바는 1부 보안 섹션의 「절대 입력하면 안 되는 정보」 표
 
 <div class="border-l-4 border-purple-400 pl-6 py-3 mt-6 bg-purple-50 dark:bg-purple-900/15 rounded-r max-w-5xl mx-auto">
 
-**판단이 늘어난 만큼 검토도 늘어납니다.** 편의가 늘어난 만큼 검토를 줄이는 것이 아니라, **늘어난 편의에 비례해 검토도 늘린다**고 생각하는 편이 맞습니다. **메타 원칙 ③**이 가장 중요해지는 곳입니다.
+**등록은 시작일 뿐이고, 쓰는 동안 확인할 것이 남습니다.** **메타 원칙 ③** AI 결과물 검토·이해 의무가 연결 이후에 적용되는 자리입니다.
 
 </div>
 
@@ -2567,6 +2573,7 @@ docs/connect/mcp-servers.md `## 연결한 뒤에 할 일 { #after-connect }` + `
 구성안의 ⊕ 표시(줄일 때 병합 후보)를 적용한 장. 왼쪽은 잘 될 때 할 일, 오른쪽은 안 될 때 볼 것으로 축이 갈린다.
 문제 해결 표는 docs 5행 중 「주소를 잘못 넣음」 행을 뺐다. 24장 하단 orange 바에서 이미 다뤘다.
 하단 purple 바가 이 구간의 닫는 메시지: 5장·14장에 이어 메타 원칙 ③이 세 번째로 호출되는 자리이고, 2부에서 가장 세게 말해야 하는 지점이다. 색도 purple로 계속 맞춘다.
+이슈 #56 audit 1차 F-3 보정: 「늘어난 편의에 비례해 검토도 늘린다」는 docs에 없는 기준(편의)이라 `#after-connect` 리드 문장으로 교체했다. 검토 깊이의 기준은 메타 원칙 ③대로 영향 범위 하나다.
 -->
 
 
@@ -2625,20 +2632,20 @@ red 바 한 줄이 이 장의 전부다: 「판단이 사라진 것이 아니라
 
 <div class="mt-8 grid grid-cols-3 gap-4 max-w-5xl mx-auto">
 
-<div class="rounded-lg overflow-hidden border border-red-200 dark:border-red-800">
+<div class="rounded-lg overflow-hidden border border-red-200 dark:border-red-800 flex flex-col">
 <div class="bg-red-100 text-red-800 px-3 py-2 font-bold text-center text-sm">개인정보가 있는 자료</div>
-<div class="bg-red-50 dark:bg-red-900/15 px-3 py-3 text-xs">
+<div class="bg-red-50 dark:bg-red-900/15 px-3 py-3 text-xs flex-1">
 
 인사·급여 기록, 고객 명부, 건강 정보처럼 **개인정보가 자료의 본체인 곳**은 권한을 줄여서 연결하는 것이 아니라 **연결하지 않습니다.**
 
-섞여 있다면 그 부분을 빼고 승인합니다.
+섞여 있다면 그 부분을 빼고 승인합니다. **범위를 나눌 수 없는 서비스라면 연결을 미룹니다.**
 
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-orange-200 dark:border-orange-800">
+<div class="rounded-lg overflow-hidden border border-orange-200 dark:border-orange-800 flex flex-col">
 <div class="bg-orange-100 text-orange-800 px-3 py-2 font-bold text-center text-sm">맡기는 권한은 최소로</div>
-<div class="bg-orange-50 dark:bg-orange-900/15 px-3 py-3 text-xs">
+<div class="bg-orange-50 dark:bg-orange-900/15 px-3 py-3 text-xs flex-1">
 
 **무엇을 할 수 있는지**를 줄입니다. 읽기로 되는 일에 쓰기까지 열지 않습니다.
 
@@ -2647,9 +2654,9 @@ red 바 한 줄이 이 장의 전부다: 「판단이 사라진 것이 아니라
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
+<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800 flex flex-col">
 <div class="bg-blue-100 text-blue-800 px-3 py-2 font-bold text-center text-sm">정기적으로 점검</div>
-<div class="bg-blue-50 dark:bg-blue-900/15 px-3 py-3 text-xs">
+<div class="bg-blue-50 dark:bg-blue-900/15 px-3 py-3 text-xs flex-1">
 
 잊었다고 끊기는 것이 아니어서, **쓰지 않는 연결의 접근 허용도 그대로 유지됩니다.**
 
@@ -2672,6 +2679,8 @@ docs/security-guide.md `### 공통 ― 트랙과 관계없이 지킵니다` 세 
 세 카드의 색을 위험 강도 순으로 배열(red → orange → blue): 첫째는 하지 말 것, 둘째는 줄일 것, 셋째는 유지할 것이라 성격이 다르다.
 하단 문장이 첫째 카드의 근거다. 「왜 연결에서 더 엄격해야 하는가」를 말하지 않으면 「연결하지 않습니다」가 과한 금지로 들린다.
 1부 보안 섹션의 「절대 입력하면 안 되는 정보」 기준이 연결에도 그대로 적용된다는 것이 이 장의 전제: 그 표는 1부에서 이미 봤으므로 다시 그리지 않는다.
+이슈 #56 audit 1차 F-1 보정: 개인정보 카드에 docs의 「범위를 나눌 수 없는 서비스라면 연결을 미룹니다」를 복원했다. 「그 부분을 빼고 승인」에서 끝나면 뺄 수 없는 서비스에서 할 행동이 비어, 전제 9가 보존하라는 내용 있는 caveat를 떨어뜨린 것이었다.
+이슈 #56 audit 2차 화면 확인 보정: 세 카드에 `flex flex-col`·`flex-1`을 걸어 그리드가 맞춘 높이를 몸통 배경이 채우게 했다. F-1 보정으로 개인정보 카드가 2문단으로 길어져 가운데·오른쪽 카드의 테두리 안 아래가 배경 없이 비었다(29·37·59·78장과 같은 계열).
 -->
 
 
@@ -2730,9 +2739,9 @@ emerald 요약 바는 1부 보안 섹션의 「한 줄 요약」 관례와 같�
 
 <div class="mt-8 grid grid-cols-3 gap-4 max-w-5xl mx-auto">
 
-<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
+<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800 flex flex-col">
 <div class="bg-teal-100 text-teal-800 px-3 py-2 font-bold text-center text-sm">고르는 순서</div>
-<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs">
+<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs flex-1">
 
 목록에 **있으면 커넥터**, **없을 때** MCP 서버.
 
@@ -2741,9 +2750,9 @@ emerald 요약 바는 1부 보안 섹션의 「한 줄 요약」 관례와 같�
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
+<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800 flex flex-col">
 <div class="bg-teal-100 text-teal-800 px-3 py-2 font-bold text-center text-sm">다루는 범위</div>
-<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs">
+<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs flex-1">
 
 **이용까지**입니다. 만드는 일은 다루지 않습니다.
 
@@ -2752,9 +2761,9 @@ emerald 요약 바는 1부 보안 섹션의 「한 줄 요약」 관례와 같�
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
+<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800 flex flex-col">
 <div class="bg-teal-100 text-teal-800 px-3 py-2 font-bold text-center text-sm">시작하는 법</div>
-<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs">
+<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs flex-1">
 
 한 번에 다 열어 두는 것보다 **지금 하는 일에 필요한 하나부터** 연결하는 편이 훨씬 잘 굴러갑니다.
 
@@ -2775,6 +2784,7 @@ docs/connect/mcp-servers.md `#out-of-scope`·`#next` + `docs/connect/index.md#re
 2부 블록의 마지막 장. `layout: end` 「감사합니다」를 두지 않는다(이슈 #52 Task 1 확정): 2부 블록이 덱 중간에 있어 종료 슬라이드가 뒤따르는 1부 실습·보안 섹션을 가리게 된다. 다음 슬라이드는 기존 「실습」 섹션 divider다.
 카드 3장을 모두 teal로 통일: 대비가 아니라 회수라 색을 나누지 않는다.
 마지막 문장은 6장·7장에서 깐 「본인이 실제로 쓰는 서비스 하나를 정해 두고」의 회수: 2부를 듣고 나가는 청중에게 남길 행동 하나다.
+이슈 #56 audit 2차 화면 확인 보정: 세 카드에 `flex flex-col`·`flex-1`을 걸었다. 셋째 「시작하는 법」이 1문단이라 테두리 안 아래가 배경 없이 비었다(29·37·59·78장과 같은 계열).
 -->
 
 ---
