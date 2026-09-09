@@ -145,9 +145,10 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
 
     ```bash
     sed '/^<!--$/,/^-->$/d' slides/slides.md \
-      | grep -nE '에이전트 스킬|1회성 프롬프트|Team / Enterprise|시리즈 차원의 자세|Projects'
+      | grep -nE '에이전트 스킬|1회성 프롬프트|Team */ *Enterprise|시리즈 차원의 자세|Projects'
     ```
 
+    - 설계 주의: 슬래시 양옆 공백을 `*`로 열어 공백 없는 `Team/Enterprise` 변형도 잡는다 (**PR #58 리뷰 정정**. spec R2 게이트와 같은 패턴).
     </details>
   - [D] 덱 첫 등장 규칙이 지켜진다. 덱 본문에서 「Skill」 단독 표기가 나오기 전에 「Agent Skills」가 먼저 나오고, 완전형은 덱 전체에서 정확히 1회다 (spec 전제 15)
     <details>

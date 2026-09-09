@@ -1262,7 +1262,7 @@ docs/index.md `### AI 활용 메타 원칙` ① 박스 압축: ADR-0002 단방�
 </div>
 
 <div class="mt-6 text-center text-sm opacity-75 italic max-w-3xl mx-auto">
-실습 사례: <code>step01-weather</code> (날씨 값 + HTML 리포트), <code>step04-wrong-answer-note</code> (인식 엑셀 + 마크다운/HTML)
+실습 사례: <code>step01-weather</code> (날씨 값 + HTML 리포트), <code>step04-wrong-answer-note</code> (인식 엑셀 + 마크다운·HTML)
 </div>
 
 <!--
