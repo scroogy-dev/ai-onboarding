@@ -83,7 +83,7 @@
   <summary>검증 명령 ― 출력 0건이면 통과</summary>
 
   ```bash
-  F=.ai/90_issues/active/issue-0056/issue-0056-sync-check.md
+  F=.ai/90_issues/archive/issue-0056/issue-0056-sync-check.md
   N=$(grep -cE '^# ' slides/slides.md)
   R=$(grep -cE '^\| [0-9]+ \| ' "$F" 2>/dev/null); R=${R:-0}
   [ "$R" -eq "$N" ] || echo "위반: 점검표 ${R}행, 덱 ${N}장"
@@ -125,7 +125,7 @@
 
   ```bash
   BAD=$(printf '\xe2\x80\x94')
-  git grep -In --untracked "$BAD" -- 'docs/*.md' 'docs/connect/*.md' 'labs/' 'slides/*.md' '.ai/90_issues/active/issue-0056/'
+  git grep -In --untracked "$BAD" -- 'docs/*.md' 'docs/connect/*.md' 'labs/' 'slides/*.md' '.ai/90_issues/archive/issue-0056/'
   ```
 
   - 설계 주의: U+2014를 리터럴로 담으면 이 문서가 스스로 위반을 만든다. printf 바이트 조립으로 우회한다. `--untracked`는 gitignore된 `slides/node_modules/`·`dist/`·`review/`를 자동 제외한다.
@@ -135,7 +135,7 @@
   <summary>검증 명령 ― 출력 0건이면 통과</summary>
 
   ```bash
-  S=.ai/90_issues/active/issue-0056/issue-0056-spec.md
+  S=.ai/90_issues/archive/issue-0056/issue-0056-spec.md
   git diff --name-only main...HEAD -- docs labs mkdocs.yml \
     | while read -r f; do grep -qE "^\| \`$f\` \|" "$S" || echo "위반: $f 변경이 spec 전제 11 표에 없음"; done
   ```
@@ -166,7 +166,7 @@
     7. **62장(2173행)**: 제목을 docs `#vs-connector`와 같은 「커넥터와 MCP 서버는 같은 것입니다」로 바꾸고, 리드 첫 문장에 「같은 MCP 위에서 동작한다, 다른 점은 목록에 있느냐다」를 둔다. 표·하단 안내는 docs 본문과 대조해 유지한다. 검토 표시 서술을 손대면 K-0001 재검토 조건을 확인한다.
     8. **37장 프롬프트 예시(1141·1153~1155행)**: docs의 서울 날씨 예시로 교체한다. step01 실습과 이어지는 자리라 다른 예시를 두면 연결이 끊긴다.
     9. **52장 1764행 하네스 3분류 참조**: 현재 문장을 유지한다. 위 2의 ④ 편입으로 18장에 3분류가 생겨 「1부에서 나눴다」는 되짚기가 성립하며, 성립 여부는 Task 5 구간에서 18장 편입 문구와 대조해 확인한다.
-    10. **점검표 파일과 구간·커밋 단위**: 점검표는 `.ai/90_issues/active/issue-0056/issue-0056-sync-check.md`, 구간은 Task 3~6의 4구간, 커밋은 구간 승인마다 1회다(전제 13).
+    10. **점검표 파일과 구간·커밋 단위**: 점검표는 `.ai/90_issues/archive/issue-0056/issue-0056-sync-check.md`, 구간은 Task 3~6의 4구간, 커밋은 구간 승인마다 1회다(전제 13).
 
     이 목록에 없는 전제로 구현 방향을 바꾸지 않는다.
 4. **노트 부록 B-3(슬라이드에 없는 docs 절) 9건의 현재 위치** (HEAD 기준 재확인, 전부 살아 있음):

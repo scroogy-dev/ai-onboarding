@@ -79,7 +79,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
       7. **62장(2173행) 제목·리드 방향**: docs `#vs-connector` 「커넥터와 MCP 서버는 같은 것입니다」. 제안은 제목을 「커넥터와 MCP 서버는 같은 것입니다」로 바꾸고 리드 첫 문장에 「같은 MCP 위에서 동작한다, 다른 점은 목록에 있느냐다」를 두는 것이다. 표·하단 안내는 docs 본문과 대조해 유지한다. 검토 표시 서술은 K-0001 재검토 조건이 걸리는 자리라 손댈 때 원장을 본다.
       8. **B-2 ④ 프롬프트 예시(37장, 1141·1153~1155행)**: 슬라이드는 보고서 3줄 요약, docs는 서울 날씨(step01과 연결). 제안은 docs 날씨 예시로 교체다. 요지는 같지만 docs 예시가 실습과 이어지는 자리라 다른 예시를 두면 청중이 실습에서 다시 만나는 연결이 끊긴다.
       9. **B-2 ⑥ 하네스 3분류 참조(52장 1764행)**: 2번에서 ④ 편입을 택하면 18장에 3분류가 생겨 1764행이 성립한다. 편입하지 않으면 1764행을 `basics.md` 44행 절의 요약(「1부에서 하네스를 내가 세팅하는 것들로 봤고, 외부 서비스 연결이 그중 하나였다」)으로 재작성한다. 제안은 편입이다.
-      10. **점검표 파일과 구간·커밋 단위**: 점검표는 `.ai/90_issues/active/issue-0056/issue-0056-sync-check.md`(#52 선례 이름). 구간은 Task 3~6의 4구간, 커밋은 구간 승인마다 1회(spec 전제 13). 제안대로 확정한다.
+      10. **점검표 파일과 구간·커밋 단위**: 점검표는 `.ai/90_issues/archive/issue-0056/issue-0056-sync-check.md`(#52 선례 이름). 구간은 Task 3~6의 4구간, 커밋은 구간 승인마다 1회(spec 전제 13). 제안대로 확정한다.
   2. 항목이 있으면 **코드를 쓰기 전에 사용자에게 질의**하고, 답변을 spec `## 전제 (Assumptions)` 섹션(전제 3)에 반영한 뒤 구현을 시작한다. 제안값과 다르게 결정된 항목은 summary Task 0에 따로 적는다.
   3. 항목이 없으면 summary Task 0의 `수행 내용 요약`에 `전제 누락 없음` 한 줄을 기록하고 진행한다.
 - **완료 기준**:
@@ -103,7 +103,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
     <summary>검증 명령 ― 출력 0건이면 통과</summary>
 
     ```bash
-    F=.ai/90_issues/active/issue-0056/issue-0056-sync-check.md
+    F=.ai/90_issues/archive/issue-0056/issue-0056-sync-check.md
     N=$(grep -cE '^# ' slides/slides.md)
     R=$(grep -cE '^\| [0-9]+ \| ' "$F" 2>/dev/null); R=${R:-0}
     [ "$R" -eq "$N" ] || echo "위반: 점검표 ${R}행, 덱 ${N}장"
@@ -115,7 +115,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
     <summary>검증 명령 ― 출력 0건이면 통과</summary>
 
     ```bash
-    F=.ai/90_issues/active/issue-0056/issue-0056-sync-check.md
+    F=.ai/90_issues/archive/issue-0056/issue-0056-sync-check.md
     grep -qE '^> 기준 커밋: `[0-9a-f]{7,}`' "$F" || echo '위반: 기준 커밋 행 없음'
     C=$(grep -cE '^\| [0-9a-f]{7,} \| ' "$F"); [ "${C:-0}" -eq 20 ] || echo "위반: 커밋 매핑 ${C:-0}행 (기대 20)"
     ```
@@ -184,7 +184,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
     <summary>검증 명령 ― 출력 0건이면 통과</summary>
 
     ```bash
-    F=.ai/90_issues/active/issue-0056/issue-0056-sync-check.md
+    F=.ai/90_issues/archive/issue-0056/issue-0056-sync-check.md
     grep -E '^\| [0-9]+ \| ' "$F" | awk -F'|' '{ n = $2 + 0; gsub(/^ +| +$/, "", $4)
       if (n >= 1 && n <= 26 && $4 !~ /^(반영|해당 없음)$/) print "위반: " $0 }'
     ```
@@ -223,7 +223,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
     <summary>검증 명령 ― 출력 0건이면 통과</summary>
 
     ```bash
-    F=.ai/90_issues/active/issue-0056/issue-0056-sync-check.md
+    F=.ai/90_issues/archive/issue-0056/issue-0056-sync-check.md
     grep -E '^\| [0-9]+ \| ' "$F" | awk -F'|' '{ n = $2 + 0; gsub(/^ +| +$/, "", $4)
       if (n >= 27 && n <= 43 && $4 !~ /^(반영|해당 없음)$/) print "위반: " $0 }'
     ```
@@ -260,7 +260,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
     <summary>검증 명령 ― 출력 0건이면 통과</summary>
 
     ```bash
-    F=.ai/90_issues/active/issue-0056/issue-0056-sync-check.md
+    F=.ai/90_issues/archive/issue-0056/issue-0056-sync-check.md
     grep -E '^\| [0-9]+ \| ' "$F" | awk -F'|' '{ n = $2 + 0; gsub(/^ +| +$/, "", $4)
       if (n >= 44 && n <= 75 && $4 !~ /^(반영|해당 없음)$/) print "위반: " $0 }'
     ```
@@ -298,7 +298,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
     <summary>검증 명령 ― 출력 0건이면 통과</summary>
 
     ```bash
-    F=.ai/90_issues/active/issue-0056/issue-0056-sync-check.md
+    F=.ai/90_issues/archive/issue-0056/issue-0056-sync-check.md
     grep -E '^\| [0-9]+ \| ' "$F" | awk -F'|' '{ n = $2 + 0; gsub(/^ +| +$/, "", $4)
       if (n >= 76 && n <= 89 && $4 !~ /^(반영|해당 없음)$/) print "위반: " $0 }'
     ```
@@ -347,7 +347,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
     <summary>검증 명령 ― 출력 0건이면 통과</summary>
 
     ```bash
-    F=.ai/90_issues/active/issue-0056/issue-0056-sync-check.md
+    F=.ai/90_issues/archive/issue-0056/issue-0056-sync-check.md
     N=$(grep -cE '^# ' slides/slides.md)
     R=$(grep -cE '^\| [0-9]+ \| ' "$F" 2>/dev/null); R=${R:-0}
     [ "$R" -eq "$N" ] || echo "위반: 점검표 ${R}행, 덱 ${N}장"
@@ -377,7 +377,7 @@ spec을 쓴 주체와 구현하는 주체가 같아도 수행한다 ― 세션�
     <summary>검증 명령 ― 출력 0건이면 통과</summary>
 
     ```bash
-    F=.ai/90_issues/active/issue-0056/issue-0056-sync-check.md
+    F=.ai/90_issues/archive/issue-0056/issue-0056-sync-check.md
     L=$(grep -E '^\*\*집계\*\*: 반영 [0-9]+ · 해당 없음 [0-9]+ · 누락 0 · 미판정 0' "$F")
     [ -n "$L" ] || echo '위반: 집계 행 없음 또는 형식 불일치'
     S=$(echo "$L" | grep -oE '[0-9]+' | head -2 | paste -sd+ - | bc)
@@ -398,7 +398,7 @@ audit은 L2 [QD] 보완 검증 ― L1 [D] 결정적 게이트의 대체가 아�
 이 Task는 사용자가 직접 수행하며, 구현 AI는 자동으로 닫지 않는다.
 -->
 
-- [ ] 완료
+- [x] 완료
 - **목표**: 스펙 위반·누락·소스코드와의 모순을 구현 모델과 다른 시각으로 잡는다.
 - **실행 주체**: **사용자가 직접** 수행한다. 구현 AI는 이 Task를 **자동으로 닫지 않으며**, `issue-audit`를 자동 실행하지도 않는다.
 - **작업 내용**:
@@ -413,8 +413,8 @@ audit은 L2 [QD] 보완 검증 ― L1 [D] 결정적 게이트의 대체가 아�
     <summary>검증 명령 ― repo 루트에서 실행, 출력 0건이면 통과</summary>
 
     ```bash
-    P=.ai/90_issues/active/issue-0056/issue-0056-plan.md
-    S=.ai/90_issues/active/issue-0056/issue-0056-summary.md
+    P=.ai/90_issues/archive/issue-0056/issue-0056-plan.md
+    S=.ai/90_issues/archive/issue-0056/issue-0056-summary.md
     { grep -qE '^### Task ' "$P" && grep -qE '^### Task ' "$S" \
       && diff <(grep -E '^### Task ' "$P") <(grep -E '^### Task ' "$S") \
       || echo '위반: 입력 접근 실패 또는 Task 집합 불일치'; }
@@ -428,7 +428,7 @@ audit은 L2 [QD] 보완 검증 ― L1 [D] 결정적 게이트의 대체가 아�
     <summary>검증 명령 ― repo 루트에서 실행, 출력 0이면 통과</summary>
 
     ```bash
-    S=.ai/90_issues/active/issue-0056/issue-0056-summary.md
+    S=.ai/90_issues/archive/issue-0056/issue-0056-summary.md
     awk '
       /^### Task / { if (o && !n && v != 1) b++; o = 1; v = 0; n = ($0 ~ /^### Task N/) }
       o && /^- \*\*결과\*\*:/ {
@@ -447,7 +447,7 @@ audit은 L2 [QD] 보완 검증 ― L1 [D] 결정적 게이트의 대체가 아�
     <summary>검증 명령 ― repo 루트에서 실행, 출력 0이면 통과</summary>
 
     ```bash
-    S=.ai/90_issues/active/issue-0056/issue-0056-summary.md
+    S=.ai/90_issues/archive/issue-0056/issue-0056-summary.md
     awk '
       /^### Task / { if (o && !n && d && (t != 1 || m != 1)) b++; o = 1; d = 0; t = 0; m = 0; n = ($0 ~ /^### Task N/) }
       o && /^- \*\*결과\*\*: (완료|부분 완료)[[:space:]]*$/ { d = 1 }

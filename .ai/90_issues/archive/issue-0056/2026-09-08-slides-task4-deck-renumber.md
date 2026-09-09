@@ -4,9 +4,9 @@ created: 2026-09-08
 related-issue: 56
 related-files:
   - slides/slides.md
-  - .ai/90_issues/active/issue-0056/issue-0056-spec.md
-  - .ai/90_issues/active/issue-0056/issue-0056-plan.md
-  - .ai/90_issues/active/issue-0056/issue-0056-sync-check.md
+  - .ai/90_issues/archive/issue-0056/issue-0056-spec.md
+  - .ai/90_issues/archive/issue-0056/issue-0056-plan.md
+  - .ai/90_issues/archive/issue-0056/issue-0056-sync-check.md
 tags: [slides, sync, renumber]
 ---
 
@@ -82,7 +82,7 @@ spec DoD R4는 슬라이드 전용 콘텐츠의 처리 방향을 세 가지로 �
 <details>
 <summary>상세 펼치기</summary>
 
-- 워킹 트리 미커밋 변경 4건: `slides/slides.md`, `.ai/90_issues/active/issue-0056/issue-0056-{spec,plan,sync-check}.md`
+- 워킹 트리 미커밋 변경 4건: `slides/slides.md`, `.ai/90_issues/archive/issue-0056/issue-0056-{spec,plan,sync-check}.md` (작성 시점 경로는 `.ai/90_issues/archive/issue-0056/`, --clear로 이관)
 - 브랜치 `issue-0056`, 마지막 커밋 `5104826` (`docs: 1부 앞부분(1~26장) 슬라이드 동기화 (#56)`)
 - 대응 소멸을 만든 #55 커밋: `dd24721` (`docs: index 정리 (#55)`), `b70a819` (`docs: labs 정리 (#55)`)
 - 게이트 전수 통과 확인 (2026-09-08): 점검표 27~43행 · R1 구간 몫 · R5 행 수(89=89) · R2 전체 ·
