@@ -61,38 +61,38 @@
 | 41 | 메타 원칙 ③ 결과물 검토·이해 의무 | 반영 | `index.md` `#### ③`의 두 원칙과 #55 X3 확정(검토 깊이는 영향 범위에 비례)이 반영돼 있다. 코드 산출물 점검 3항목은 생략 (허용 생략) |
 | 42 | 메타 원칙 ④ 컨텍스트(대화방) 관리 | 반영 | `index.md` `#### ④`의 정의·신호 4종·시작 방법·회의록 비유 일치. 하단 참고의 「Fable 5」를 docs 「Fable 5.1」로 고쳤다 |
 | 43 | 메타 원칙 ⑤ 페르소나 부여 | 반영 | `index.md` `#### ⑤`의 조건부 권장·두 구분·직접 비교 권고·③ 연결까지 일치 |
-| 44 | 2부 ― 도구·데이터 연결 (구분) |  | 구분 슬라이드 (전제 6). 대응 페이지는 `connect/index.md` 리드 |
-| 45 | 2부의 흐름 |  | 덱 목차. 구조 슬라이드 (전제 6) |
-| 46 | 1부에 이어서 |  | `connect/index.md#from-part1` 앞부분 |
-| 47 | 연결은 단계가 아니라 선택입니다 |  | `connect/index.md#from-part1` 후반의 「단계가 아니라 선택」 서술 |
-| 48 | 무엇이 달라지나 |  | `connect/index.md#what-changes` |
-| 49 | 연결하는 방법은 두 가지 |  | `connect/index.md#two-paths` |
-| 50 | 시작하기 전에 ― 준비물과 범위 |  | `connect/index.md#preparation`, `connect/index.md#scope`. 제품별 지원 범위와 명령줄 미취급 note는 편입하지 않는다 (B-3 6, 생략 판정) |
-| 51 | 기본 커넥터 (구분) |  | 구분 슬라이드 (전제 6). 대응 페이지는 `connectors.md` 리드 |
-| 52 | 커넥터는 새로 만드는 게 아닙니다 |  | `connectors.md#what-is-connector`. 1764행의 하네스 3분류 되짚기는 18장 편입을 전제로 유지 (전제 3-9) |
-| 53 | 연결하는 순서 |  | `connectors.md#how-to-connect` |
-| 54 | 쓸 만큼만 켜 두세요 |  | `connectors.md#how-to-connect` 후반의 「쓸 만큼만」 서술 |
-| 55 | 승인 화면에서 확인할 것 |  | `connectors.md#approval-screen` |
-| 56 | 「내 권한 그대로」는 안심과 경고 |  | `connectors.md#approval-screen` 후반의 「내 권한 그대로」 서술 |
-| 57 | 권한이 넓다면 이렇게 줄입니다 |  | `connectors.md#approval-screen`의 권한 축소 서술 |
-| 58 | Atlassian ― Jira와 Confluence |  | `connectors.md#atlassian` |
-| 59 | GitHub ― 연결할지부터 판단이 갈립니다 |  | `connectors.md#github`. SSO 승인과 프로젝트 지식 첨부는 편입하지 않는다 (B-3 7, 생략 판정). `security-guide.md#right-tool`을 일부 흡수한 자리 |
-| 60 | 점검하고 끊기 · 회사 환경이라면 |  | `connectors.md#manage-disconnect`, `connectors.md#enterprise` |
-| 61 | MCP 서버 이용하기 (구분) |  | 구분 슬라이드 (전제 6). 대응 페이지는 `mcp-servers.md` 리드 |
-| 62 | 커넥터와 무엇이 다른가 |  | `mcp-servers.md#vs-connector`. 절 제목이 「커넥터와 MCP 서버는 같은 것입니다」로 바뀌어 제목과 리드를 맞춘다 (전제 3-7). 검토 표시 서술은 K-0001 재검토 조건 |
-| 63 | 갈림길 ① ― 설정을 어디에 두나 |  | `mcp-servers.md#remote-vs-local` 앞부분의 설정 위치 갈림길 |
-| 64 | 갈림길 ② ― 서버가 어디에서 실행되나 |  | `mcp-servers.md#remote-vs-local`의 실행 위치 서술 |
-| 65 | 내 계정에 등록했을 때 |  | `mcp-servers.md#remote-vs-local`의 첫 mermaid (72행) |
-| 66 | 내 컴퓨터에 설정했을 때 |  | `mcp-servers.md#remote-vs-local`의 두 번째 mermaid (98행). MCPB 권한 경고 카드를 이 장 또는 68장에 편입한다 (전제 3-2 ⑧) |
-| 67 | 내 컴퓨터에 설정해야 하는 때 |  | `mcp-servers.md#remote-vs-local` 후반의 로컬 설정 조건 |
-| 68 | 등록하는 순서 |  | `mcp-servers.md#how-to-register`, `#register-remote`, `#register-local`. MCPB 권한 경고 편입 후보 자리 (전제 3-2 ⑧) |
-| 69 | 믿을 만한 서버 고르기 |  | `mcp-servers.md#choosing`, `mcp-servers.md#choosing-basics` |
-| 70 | 열쇠 값은 필요한 만큼만 · 「항상 허용」 |  | `mcp-servers.md#register-local`의 열쇠 값 서술과 `#choosing-caveats` |
-| 71 | 연결한 뒤에 할 일 · 잘 안 될 때 |  | `mcp-servers.md#after-connect`, `mcp-servers.md#troubleshooting` |
-| 72 | 연결의 보안 ― 판단 시점이 앞당겨집니다 |  | `security-guide.md#external-connection` |
-| 73 | 공통 ― 트랙과 관계없이 |  | `security-guide.md` `### 공통 ― 트랙과 관계없이 지킵니다`의 하위 3절 |
-| 74 | 트랙별로 한 가지씩 |  | `security-guide.md` `### 임직원(비개발자) ― 회사 자료를 다루는 연결`과 `### 비개발자 학생·일반인 ― 개인 계정을 연결할 때` |
-| 75 | 2부 정리 |  | `mcp-servers.md#out-of-scope`, `mcp-servers.md#next`, `connect/index.md#reading-order` |
+| 44 | 2부 ― 도구·데이터 연결 (구분) | 해당 없음 | 구분 슬라이드 (전제 6). 대응 페이지는 `connect/index.md` 리드 |
+| 45 | 2부의 흐름 | 해당 없음 | 덱 목차. 구조 슬라이드 (전제 6) |
+| 46 | 1부에 이어서 | 반영 | `connect/index.md#from-part1` 앞 두 문단. 3단계 정의·Confluence/Jira 예시·「할 수 있는 일도 거기서 멈춥니다」까지 일치 |
+| 47 | 연결은 단계가 아니라 선택입니다 | 반영 | `connect/index.md#from-part1` 후반. 나누는 기준 차이·「선택」·연결하지 않는 쪽이 맞는 경우 일치. docs 「로컬 파일」은 「내 컴퓨터의 파일」로 풀어 썼다. 「편한 것과 연결이 있어야만 되는 것은 다릅니다」는 생략 ― 슬라이드가 반복을 연결 기준으로 세우지 않아 그 오해를 막을 자리가 없다 |
+| 48 | 무엇이 달라지나 | 반영 | `connect/index.md#what-changes` 카드 2종과 마무리 문단. 메타 원칙 ③ 호출까지 일치. 「어느 문서에서 나온 이야기인지 함께 물어 보세요」는 71장이 같은 지침으로 받는다 |
+| 49 | 연결하는 방법은 두 가지 | 반영 | `connect/index.md#two-paths` 표·고르는 순서와 `mcp-servers.md#vs-connector` 표 2행. **정정**: 「고를 수 있는 폭」 괄호를 docs 한정 조건(Claude가 지원하는 연결 방식에 한해)으로 바꿨다. 절차 끝의 「대화에서 켜기」는 53장이 5번 단계로 편다 |
+| 50 | 시작하기 전에 ― 준비물과 범위 | 반영 | `connect/index.md#preparation`, `connect/index.md#scope`. 유료 플랜 항목은 9·10장이 이미 다뤄 뺐다 (#52 사용자 확정). 제품별 지원 범위와 명령줄 미취급 note는 편입하지 않는다 (B-3 6, 생략 판정) |
+| 51 | 기본 커넥터 (구분) | 해당 없음 | 구분 슬라이드 (전제 6). 대응 페이지는 `connectors.md` 리드 |
+| 52 | 커넥터는 새로 만드는 게 아닙니다 | 반영 | `connectors.md#what-is-connector`. **정정**: 「커넥터가 그 칸의 실물입니다」를 docs 「바로 그 실제 예입니다」로 바꿨다 (「칸」의 지시 대상인 3분류가 Task 7 편입 대기 중). 1부 하네스 3분류 되짚기는 18장 편입을 전제로 유지 (전제 3-9) |
+| 53 | 연결하는 순서 | 반영 | `connectors.md#how-to-connect` 5단계와 두 진입 경로. 스크린샷 5장과 커넥터 화면 설명은 덱 관례(스크린샷 0건)대로 사이트로 위임 |
+| 54 | 쓸 만큼만 켜 두세요 | 반영 | `connectors.md#how-to-connect` 후반. 도구 액세스 3모드와 「켜 둔 커넥터가 많을수록 엉뚱한 곳을 찾아볼 여지가 는다」 일치 |
+| 55 | 승인 화면에서 확인할 것 | 반영 | `connectors.md#approval-screen` 표 3행 그대로. 셋째 행 뒤 문장과 「줄이는 두 방법」은 56·57장이 나눠 받는다 |
+| 56 | 「내 권한 그대로」는 안심과 경고 | 반영 | `connectors.md#approval-screen` warning 박스. 안심·경고 두 면과 「나는 권한이 넓은 편인가」까지 일치 |
+| 57 | 권한이 넓다면 이렇게 줄입니다 | 반영 | `connectors.md#approval-screen` 말미 두 항목(대화에서 켤 때 줄이기·물어볼 때 줄이기) 일치 |
+| 58 | Atlassian ― Jira와 Confluence | 반영 | `connectors.md#atlassian`. 예시 프롬프트는 각 3개 중 2개 (B-6 허용 생략). 「AI가 쓴 것도 내 이름으로 팀에 공개됩니다」 경고와 읽기부터 시작하는 순서 일치 |
+| 59 | GitHub ― 연결할지부터 판단이 갈립니다 | 반영 | `connectors.md#github`. **정정 2건**: 학생 카드 첫 줄을 docs 근거 문장(이 교육의 실습 자료도 공개 저장소에 있습니다)으로 바꾸고, GitHub Enterprise 서술을 docs 가능성형(회사 설정에 따라 ... 보일 수 있고)과 「라이선스 비용」 표기로 되돌렸다. 제목은 docs 절 제목이 아니라 docs 리드의 링크 문구(연결할지부터 판단이 갈리는 도구)를 따른다. SSO 승인과 프로젝트 지식 첨부는 편입하지 않는다 (B-3 7, 생략 판정) |
+| 60 | 점검하고 끊기 · 회사 환경이라면 | 반영 | `connectors.md#manage-disconnect`, `connectors.md#enterprise` 두 절 병합. 회사 계약 플랜 한정 서술은 50장이 맡는다 |
+| 61 | MCP 서버 이용하기 (구분) | 해당 없음 | 구분 슬라이드 (전제 6). 대응 페이지는 `mcp-servers.md` 리드 |
+| 62 | 커넥터와 MCP 서버는 같은 것입니다 | 반영 | `mcp-servers.md#vs-connector`. **정정 4건**: 제목을 docs 절 제목으로, 리드를 「같은 MCP 위에서 동작하고 다른 점은 목록에 있느냐」로, 표 머리글을 docs의 경로 기준(목록에서 고르기·직접 찾아 등록하기)으로 바꾸고 「고를 수 있는 폭」에 한정 조건을 복원했다 (전제 3-7). 하단 순서 문장의 「그걸·이쪽」도 docs대로 대상 이름으로 바꿨다. 검토 표시 서술은 손대지 않아 K-0001 재검토 조건에 해당하지 않는다 |
+| 63 | 갈림길 ① ― 설정을 어디에 두나 | 반영 | `mcp-servers.md#remote-vs-local` 2분할 카드. 누가 접속하나·접근 범위·어디서 쓰나 세 항목 일치 |
+| 64 | 갈림길 ② ― 서버가 어디에서 실행되나 | 반영 | `mcp-servers.md#remote-vs-local`의 설정 위치와 실행 위치 구분(A·B 두 조합)과 사내망 케이스 일치 |
+| 65 | 내 계정에 등록했을 때 | 반영 | `mcp-servers.md#remote-vs-local` 첫 mermaid를 노드·간선·색까지 그대로 파생. 아래 두 문단(접속 시작 주체·사내망 접근 불가)도 일치 |
+| 66 | 내 컴퓨터에 설정했을 때 | 반영 | `mcp-servers.md#remote-vs-local` 두 번째 mermaid 파생(노드 라벨의 「사내 데이터」 한 줄만 생략). **정정**: 하단의 「그쪽으로 올라갑니다」를 docs대로 「Claude 서비스로 올라갑니다」로 바꿨다. MCPB 권한 경고 카드를 이 장 또는 68장에 편입한다 (전제 3-2 ⑧) |
+| 67 | 내 컴퓨터에 설정해야 하는 때 | 반영 | `mcp-servers.md#remote-vs-local` 후반(사내망 자료·폴더 연결·회사가 정해서 안내)과 warning 박스 일치 |
+| 68 | 등록하는 순서 | 반영 | `mcp-servers.md#how-to-register`, `#register-remote`, `#register-local`. MCPB 설치 형태와 확장 프로그램 권한 경고는 Task 7 편입 후보 자리 (전제 3-2 ⑧) |
+| 69 | 믿을 만한 서버 고르기 | 반영 | `mcp-servers.md#choosing`, `mcp-servers.md#choosing-basics` 표 5행과 `#choosing-caveats`의 프롬프트 주입. **정정**: 「가장 확실한 방어」를 docs 「첫 번째 방어」로 바꿨다. 사내 서버 주소 확인 항은 생략 (B-6 허용 생략) |
+| 70 | 열쇠 값은 필요한 만큼만 · 「항상 허용」 | 반영 | `mcp-servers.md#register-local`의 열쇠 값 서술(범위·권한·기간)과 `#choosing-caveats`의 「항상 허용」, 대화창 금지 warning 일치 |
+| 71 | 연결한 뒤에 할 일 · 잘 안 될 때 | 반영 | `mcp-servers.md#after-connect` 3항목과 `mcp-servers.md#troubleshooting` 5행 중 4행 (B-6 허용 생략. 뺀 「주소를 잘못 넣음」 행은 68장 하단이 다룬다) |
+| 72 | 연결의 보안 ― 판단 시점이 앞당겨집니다 | 반영 | `security-guide.md#external-connection` 리드와 핵심 원칙 문단. 넓어지는 범위와 좁아지는 범위 두 방향이 함께 있다 |
+| 73 | 공통 ― 트랙과 관계없이 | 반영 | `security-guide.md` `### 공통 ― 트랙과 관계없이 지킵니다`의 하위 3절. 각 절의 핵심 항목을 카드 하나씩으로 옮겼다 |
+| 74 | 트랙별로 한 가지씩 | 반영 | `security-guide.md` `### 임직원(비개발자) ― 회사 자료를 다루는 연결`과 `### 비개발자 학생·일반인 ― 개인 계정을 연결할 때`에서 한 항목씩. 「한 줄 요약」 tip은 문장까지 일치 |
+| 75 | 2부 정리 | 반영 | `mcp-servers.md#out-of-scope`, `mcp-servers.md#next`, `connect/index.md#reading-order` 압축. 고르는 순서·이용까지 경계·하나부터 연결 세 갈래 일치 |
 | 76 | 실습 (구분) |  | 구분 슬라이드 (전제 6). 대응 페이지는 `labs.md`. 부제 「손으로 따라가는」이 B-2 ⑦ 자리 |
 | 77 | 실습 시리즈 ― 4개 step |  | `labs.md#series`, `labs.md` `## 자료 받기`, `## 진행 원칙` ①. 진행 원칙 ②를 편입한다 (전제 3-2 ⑤) |
 | 78 | step별 학습 포인트 |  | `labs/*/README.md`가 SSoT (ADR-0006). `labs.md#series`의 핵심 학습 포인트 열과 대조한다 |
