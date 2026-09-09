@@ -3106,7 +3106,7 @@ table th, table td { padding: 0.18em 0.5em; }
 - [모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview)
 - [Cowork 시작](https://support.claude.com/ko/articles/13345190)
 - [Claude Code](https://docs.claude.com/ko/docs/claude-code/overview)
-- [Claude Academy](https://academy.claude.com/) *(영문)*
+- [Claude Academy](https://academy.claude.com/)
 
 </div>
 
@@ -3144,6 +3144,7 @@ ul { line-height: 1.7; }
 docs/intro.md의 「공식 문서·참고 자료」 섹션 슬라이드 동기화.
 3그룹·9링크를 3컬럼으로 압축. 라벨은 docs보다 짧게(예: 「스킬이란 무엇인가요」 → 「스킬」), 한 줄 설명은 생략하고 docs로 위임. (종전 예시로 들던 Projects 링크는 #55에서 docs 언급이 0건이 되어 #56 Task 2에서 덱에서도 뺐다)
 한국어 페이지가 부재한 항목은 *(영문)* 또는 *(개발자용)* 한 단어 라벨로 시각 구분.
+이슈 #56 Task 8: 「Claude Academy」의 *(영문)* 라벨을 뺌 ― 한국어 페이지가 제공되기 시작했다(사용자 확인). docs/intro.md는 처음부터 이 라벨을 두지 않아 그대로다. 남은 라벨은 MCP *(개발자용·영문)*·플랜 *(영문)* 두 개다.
 -->
 
 
