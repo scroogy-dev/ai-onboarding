@@ -833,7 +833,7 @@ class: text-center
 
 <div class="text-2xl opacity-60 mb-8">교육 목표</div>
 
-# 반복해서 쓸 수 있는 것을<br/>**스스로 만들 수 있게** 된다
+# 반복해서 쓸 수 있는 결과물을<br/>**스스로 만들 수 있게** 된다
 
 <div class="mt-12 text-xl opacity-90">
 
@@ -861,24 +861,24 @@ class: text-center
 
 <div grid="~ cols-2 gap-4" class="mt-8">
 
-<div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800">
+<div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800 flex flex-col">
 <div class="bg-cyan-100 text-cyan-800 px-4 py-2 font-bold text-center">① 직접 지시 (= 매번 시키기)</div>
-<div class="bg-cyan-50 dark:bg-cyan-900/15 px-4 py-4">
+<div class="bg-cyan-50 dark:bg-cyan-900/15 px-4 py-4 flex-1">
 
 AI에게 그때그때 작업을 지시
 
-**적합**: 일회성·탐색·맥락이 매번 다른 작업
+**적합**: 한 번 쓰고 끝나는 일 · 아직 무엇을 원하는지 탐색 중인 일
 
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
+<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800 flex flex-col">
 <div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">② 소프트웨어로 만들기 (본 교육이 강조하는 쪽)</div>
-<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4">
+<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4 flex-1">
 
 AI로 작은 소프트웨어(Skill)를 만들어 활용
 
-**적합**: 반복·일관성·재사용이 필요한 작업
+**적합**: 반복되는 일 · 매번 같은 형식·품질이 필요한 일
 
 </div>
 </div>
@@ -891,10 +891,11 @@ AI로 작은 소프트웨어(Skill)를 만들어 활용
 
 <!--
 ADR-0005 본질 메시지 못박는 자리: "도구화"의 근거를 결정 룰로 압축.
-"특성: 매번 결과가 다름 / 동일한 품질로 반복 보장"은 다음 사다리 슬라이드 [3]·[4]가 결과형으로 다루므로 카드에서는 제거: 결정 룰은 "언제 ①/언제 ②"의 분기 가이드 역할에 집중.
+"특성: 매번 결과가 다름 / 동일한 품질로 반복 보장"은 다음 사다리 슬라이드 [3]이 결과형으로 다루므로 카드에서는 제거: 결정 룰은 "언제 ①/언제 ②"의 분기 가이드 역할에 집중.
 이슈 #40 운용 변경: 본 결정 룰은 ①/② 2분기 가이드, 「기본 용어와 범위」 직후의 「AI 활용의 세 형태」 비교표 슬라이드는 ② 안에서 에이전트 스킬과 애플리케이션의 위치 비교: 두 자산은 다른 일을 한다.
 사다리 슬라이드로 자연 연결.
 이슈 #52 Task 6 보정: ② 카드 본문 괄호를 「Skill·에이전트 활용」에서 「에이전트 스킬」로 바꿈. 종전 표기는 본문이 한 줄을 넘겨 「활용」만 다음 줄로 떨어졌고, 그리드가 두 카드 높이를 맞추느라 ① 카드 아래가 비어 보였음. 중간에 「Skill·에이전트」로 줄였다가 사용자 지적으로 되돌림: 에이전트가 만드는 대상으로 읽히는데, 3단계 표에서 에이전트는 운영·활용하는 도구이고 만드는 자산은 스킬임. 용어는 docs 세 형태의 「에이전트 스킬」을 그대로 씀. 카드 높이는 그리드 기본 stretch로 두어 덱 관례를 유지함.
+이슈 #56 Task 4 화면 확인 보정: 바깥 카드에 `flex flex-col`, 몸통에 `flex-1`을 걸어 그리드가 맞춘 높이를 몸통 배경이 채우게 함. 종전에는 「적합」 줄 길이 차로 ② 카드 몸통이 짧아, 테두리 안 아래쪽이 배경 없이 비어 보였음.
 -->
 
 
@@ -907,7 +908,7 @@ ADR-0005 본질 메시지 못박는 자리: "도구화"의 근거를 결정 룰�
 <div class="rounded-lg border border-blue-200 dark:border-blue-800 px-5 py-3 bg-blue-50 dark:bg-blue-900/15">
 <span class="font-mono text-sm opacity-60 mr-3">[1]</span>
 <span class="font-bold">출발은 누구나 같다</span>
-<div class="text-sm opacity-80 mt-1">"AI에게 매번 새로 시키기"도 좋은 출발점: 처음부터 본인의 챗봇이나 자동화 도구를 만드는 사람은 없습니다.</div>
+<div class="text-sm opacity-80 mt-1">AI에게 매번 새로 시키기도 좋은 출발점입니다.</div>
 </div>
 
 <div class="rounded-lg border border-blue-200 dark:border-blue-800 px-5 py-3 bg-blue-50 dark:bg-blue-900/15">
@@ -924,18 +925,12 @@ ADR-0005 본질 메시지 못박는 자리: "도구화"의 근거를 결정 룰�
 </div>
 </div>
 
-<div class="rounded-lg border border-emerald-200 dark:border-emerald-800 px-5 py-3 bg-emerald-50 dark:bg-emerald-900/15">
-<span class="font-mono text-sm opacity-60 mr-3">[4]</span>
-<span class="font-bold">한 번 만들고 100번 쓰는 게 합리적</span>
-<div class="text-sm opacity-80 mt-1">반복되는 일에는 <strong>본인 일에 맞는 작은 소프트웨어를 직접 만드는 것</strong>이 답입니다. 비개발자도 자기 일에 필요한 소프트웨어를 만든다.</div>
-</div>
-
 </div>
 
 <!--
 N-2 사다리: F-2 합의 반영. ADR-0005 결과형 우회를 [3]에 자연 결합.
 [3] ② "매번 결과가 조금씩 다름"은 본 슬라이드에서 여전히 결과형으로 우회 유지: 메커니즘 단어 명시는 이슈 #40 운용 변경에 따라 「AI 활용의 세 형태」 비교표 슬라이드 1곳으로 한정.
-[4]는 W2가 가졌던 "비개발자도 작은 소프트웨어 만든다" 메시지를 흡수한 ADR-0005 본질 메시지의 못박는 자리.
+이슈 #56 Task 4 보정: [4]「한 번 만들고 100번 쓰는 게 합리적」 카드를 걷어냄. #55가 docs에서 「한 번 만들고 여러 번 쓰는 것이 합리적」 문장을 지워 대응이 사라졌고, 「100번」은 docs에 없는 과장 수치였음. 사다리의 결론은 다음 슬라이드 「핵심: 비개발자도 소프트웨어를 만든다」가 단독으로 맡는다 (ADR-0005 본질 메시지).
 다음 슬라이드(핵심 박스)로 한 번 더 정점.
 -->
 
@@ -1011,60 +1006,14 @@ What 섹션에 위치한 이유: 학습자 분류가 아니라 "교육이 다루
 | 단계 | 무엇을 하나요? | 대표 도구·기능 | 본 교육에서 |
 |------|-------------|--------------|------------|
 | **1단계:<br/>챗봇&nbsp;사용** | 단발성 대화로 답을 얻음 | Claude·ChatGPT·Gemini 웹&nbsp;챗봇 | **참가&nbsp;전제**<br/>(이미&nbsp;경험) |
-| **2단계:<br/>프롬프트&nbsp;재활용** | 반복 사용 가능한 맞춤 프롬프트·챗봇을 자산으로 만듦 | **Agent&nbsp;Skills&nbsp;기초** | **2단계&nbsp;실습** |
+| **2단계:<br/>프롬프트&nbsp;재활용** | 반복 사용 가능한 맞춤 프롬프트·챗봇을 자산으로 만듦 | **Skill&nbsp;기초** | **2단계&nbsp;실습** |
 | **3단계:<br/>에이전트&nbsp;활용** | 로컬 파일·작업을 자동화하는 에이전트를&nbsp;운영함 | **Claude&nbsp;Cowork**,<br/>Claude&nbsp;Code | **3단계&nbsp;실습** |
 
-> 💡 2단계에서 익히는 **프롬프트 재활용·Agent Skills** 개념은 3단계에서도 그대로 재활용됩니다.
+> 💡 2단계에서 익히는 **프롬프트 재활용·Skill** 개념은 3단계에서도 그대로 재활용됩니다.
 
 <style>
 table { font-size: 0.85em; }
 </style>
-
----
-
-# 1단계 vs 2단계 ― 매번 vs 재사용
-
-<div grid="~ cols-2 gap-4" class="mt-8">
-
-<div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
-<div class="bg-gray-100 text-gray-800 px-4 py-2 font-bold text-center">1단계: 매번 새로 묻기</div>
-<div class="bg-gray-50 dark:bg-gray-700/20 px-4 py-4">
-
-"고객 문의 이메일에 정중하고 친근한 톤으로, 짧게 답장해줘…"
-
-→ 다음 답장도 **같은 지시를 처음부터 다시 입력**
-
-</div>
-</div>
-
-<div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">2단계: Skill로 묶어 재사용</div>
-<div class="bg-green-50 dark:bg-green-900/15 px-4 py-4">
-
-"고객 답장" Skill을 1번 만들어두고
-**호출만으로 동일 톤 유지**
-
-→ 새 답장은 **본문 핵심만** 입력하면 끝
-
-</div>
-</div>
-
-</div>
-
-<!--
-1↔2단계 차이의 첫 만남. "프롬프트 재활용" 추상어를 "이메일 답장 톤" 일상 작업에 연결.
-청중에게 "지금 본인은 어디에 있나"를 자가 평가시키는 자리: 자가 진단 슬라이드와 호응.
--->
-
-
----
-
-# 어떤 결과물을 만들 수 있나요?
-
-| 트랙 | 2단계 실습 결과물 예시 | 3단계 실습 결과물 예시 |
-|------|--------------------|--------------------|
-| 임직원<br/>(비개발자) | 반복 보고서 자동 작성 템플릿,<br/>데이터 정리·변환 워크플로우 | 로컬 파일을 일괄 정리·변환하는 에이전트 |
-| 비개발자<br/>학생·일반인 | AI 오답노트, 자동 문제 출제기,<br/>엑셀 데이터 관리 템플릿 | 학습 자료를 로컬 폴더 단위로<br/>정리·요약하는 에이전트 |
 
 ---
 layout: section
@@ -1137,31 +1086,32 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 
 ---
 
-# 막연한 vs 구조화된 프롬프트
+# 막연한 지시 vs 계획 문서를 통한 지시
 
 <div grid="~ cols-2 gap-4" class="mt-8">
 
-<div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
-<div class="bg-gray-100 text-gray-800 px-4 py-2 font-bold text-center">막연한 프롬프트</div>
-<div class="bg-gray-50 dark:bg-gray-700/20 px-4 py-4">
+<div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600 flex flex-col">
+<div class="bg-gray-100 text-gray-800 px-4 py-2 font-bold text-center">막연한 지시</div>
+<div class="bg-gray-50 dark:bg-gray-700/20 px-4 py-4 flex-1">
 
-"이 보고서 요약해줘"
+"오늘 서울 날씨 알려주는 것 좀 만들어줘."
 
-→ AI가 **임의로 분량·관점**을 잡음
-**매번 결과가 들쭉날쭉**
+→ AI가 **범위와 형식을 그때그때 정해** 바로 만들어 버림
+어긋나도 **짚을 기준이 없어** 처음부터 다시
 
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">구조화된 프롬프트</div>
-<div class="bg-green-50 dark:bg-green-900/15 px-4 py-4">
+<div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800 flex flex-col">
+<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">계획 문서를 통한 지시</div>
+<div class="bg-green-50 dark:bg-green-900/15 px-4 py-4 flex-1">
 
-"이 보고서를 3줄로 요약.
-1줄은 결론, 2~3줄은 근거.
-수치는 그대로 유지."
+"매일 아침 서울 날씨 리포트를 만들려고 합니다.
+기온·습도·미세먼지·우산 필요 여부 네 항목이 항상 같은 순서로 나와야 합니다.
+먼저 계획만 짜주세요."
 
-→ 매번 **같은 형식**의 일관된 결과
+→ 계획을 받아 검토한 뒤 실행
+**무엇이 다 된 것인지**가 미리 정해져 결과를 그 기준으로 확인
 
 </div>
 </div>
@@ -1169,8 +1119,9 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 </div>
 
 <!--
-"계획 → 실행" 흐름과 직결: 좋은 계획(구조화)이 좋은 결과를 부른다는 것.
-청중이 평소 챗봇을 쓰는 방식("막연한 프롬프트")의 한계를 자기 경험으로 떠올리게 함.
+docs/index.md `### 실습 접근법: 계획 → 실행` 절의 example 2종 슬라이드 압축: ADR-0002 단방향 파생.
+이슈 #56 Task 4 보정: 예시 축을 「프롬프트 구조화 여부」에서 「계획 문서 유무」로 바꿈. #55가 docs 예시를 같은 축으로 옮겼는데(보고서 요약 → 서울 날씨 리포트) 슬라이드만 옛 축으로 남아 있었음. 서울 날씨는 step01 실습과 이어지는 자리라 docs 예시를 그대로 씀. 같은 회차 화면 확인 보정으로 두 카드에 `flex flex-col`·`flex-1`을 걸었음: 오른쪽 프롬프트가 3줄이라 왼쪽 카드 몸통 아래가 비어 보였음.
+청중이 평소 챗봇을 쓰는 방식(「막연한 지시」)의 한계를 자기 경험으로 떠올리게 함.
 -->
 
 
@@ -1386,7 +1337,7 @@ labs/README.md·docs/labs.md의 "결과물은 반드시 읽고 이해합니다" 
 
 <div class="mt-5 text-center text-xs opacity-70 max-w-4xl mx-auto leading-relaxed">
 참고: 컨텍스트 크기<br/>
-최신 모델(Fable 5·Opus 5·Sonnet 5) <strong>1M</strong> · claude.ai 챗의 이전 세대 모델 <strong>500K</strong><br/>
+최신 모델(Fable 5.1·Opus 5·Sonnet 5) <strong>1M</strong> · claude.ai 챗의 이전 세대 모델 <strong>500K</strong><br/>
 Claude Code는 이전 세대 Opus까지 1M<br/>
 <a href="https://platform.claude.com/docs/ko/build-with-claude/context-windows">기술 배경</a> · <a href="https://support.claude.com/ko/articles/8606394">Claude.ai 한도</a>
 </div>
@@ -1450,38 +1401,6 @@ docs admonition은 ① ② ③ ④ `!!! abstract`(시리즈 확립 원칙) vs �
 페르소나 입장 결정: 사용자 확정(2026-05-09): 톤·형식 권장, 전문성 부여 보수적.
 -->
 
-
----
-
-# 임직원 (비개발자) 실습
-
-### 2단계 (예시) ― Agent Skills로 자산화
-
-- 반복 보고서 자동 작성
-- 엑셀·CSV 데이터 정리·변환
-
-<div class="mt-10"></div>
-
-### 3단계 (예시) ― Claude Cowork로 로컬 자동화
-
-- 로컬 파일 일괄 처리
-- 문서 폴더 자동 정리
-
----
-
-# 비개발자 학생·일반인 실습
-
-### 2단계 (예시) ― Agent Skills로 학습 자산화
-
-- 영어 단어 출제기 (`step03-voca-quiz`)
-- 자녀 채점지 답안 인식·채점 (`step04-wrong-answer-note` stage 1·2)
-- 파일 분류·정리 (`step02-file-classifier`)
-
-<div class="mt-10"></div>
-
-### 3단계 (예시) ― Claude Cowork로 학습 자료 자동화
-
-- 자녀용 학습 리포트 자동 생성: 마크다운·인쇄용 HTML (`step04-wrong-answer-note` stage 3)
 
 ---
 layout: section
