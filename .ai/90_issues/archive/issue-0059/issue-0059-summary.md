@@ -132,4 +132,4 @@
 
 - **결과**: 완료 — 2차 재감사 적합(PASS), F-1 닫힘
 - **수행 내용 요약**: 2026-09-10 사용자가 OpenAI GPT-6로 `issue-audit`를 두 차례 실행했다. 1차는 1단계 충족 32·부분 충족 2(R5·R5-QD)·미충족 0, 2단계 중간(MEDIUM) 1건(F-1)으로 조건부 적합(CONDITIONAL)이었다. `--response`에서 F-1을 1단계 발견 1건으로 병합하고 위험도를 매트릭스로 재산출했다(기능 저하 × 통상 사용, 중간 유지). 사용자가 부분 반영을 확정해 위치 ①(회사 플랜 note)·②(`#enterprise`)와 slides 카드·노트를 보정했고 ③(`#choosing-caveats`)은 유지했다. 2차 재감사는 F-1의 네 완료 기준을 모두 닫힘으로 판정하고 신규 발견 0건으로 적합(PASS)했다. 보정 후 spec 검증 명령 17개·MkDocs strict·Slidev 빌드 통과.
-- **특이 사항**: 리포트는 1차 `.ai/99_workspace/issue-0059-audit-report-1.md`, 2차 `.ai/99_workspace/issue-0059-audit-report.md`. 2차의 `#choosing-caveats` 항목은 코드 수정이 아니라 사용자 유지 결정으로 닫힌 것이라 수정 완료와 구분한다. 60번 슬라이드 화면은 감사인이 1600×900으로 점검했고, 사용자가 그 결과를 받아 Task N 완료를 확정했다.
+- **특이 사항**: 리포트는 1차 `./issue-0059-audit-report-1.md`, 2차 `./issue-0059-audit-report.md`. 2차의 `#choosing-caveats` 항목은 코드 수정이 아니라 사용자 유지 결정으로 닫힌 것이라 수정 완료와 구분한다. 60번 슬라이드 화면은 감사인이 1600×900으로 점검했고, 사용자가 그 결과를 받아 Task N 완료를 확정했다.

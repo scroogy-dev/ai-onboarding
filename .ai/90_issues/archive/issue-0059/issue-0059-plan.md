@@ -44,7 +44,7 @@
     <summary>검증 명령 — 출력 0건이면 통과</summary>
 
     ```bash
-    grep -n 'Task 0 확정 대상' .ai/90_issues/active/issue-0059/issue-0059-spec.md
+    grep -n 'Task 0 확정 대상' .ai/90_issues/archive/issue-0059/issue-0059-spec.md
     ```
 
     </details>
@@ -240,8 +240,8 @@
     <summary>검증 명령 — repo 루트에서 실행, 출력 0건이면 통과</summary>
 
     ```bash
-    P=.ai/90_issues/active/issue-0059/issue-0059-plan.md
-    S=.ai/90_issues/active/issue-0059/issue-0059-summary.md
+    P=.ai/90_issues/archive/issue-0059/issue-0059-plan.md
+    S=.ai/90_issues/archive/issue-0059/issue-0059-summary.md
     { grep -qE '^### Task ' "$P" && grep -qE '^### Task ' "$S" \
       && diff <(grep -E '^### Task ' "$P") <(grep -E '^### Task ' "$S") \
       || echo '위반: 입력 접근 실패 또는 Task 집합 불일치'; }
@@ -255,7 +255,7 @@
     <summary>검증 명령 — repo 루트에서 실행, 출력 0이면 통과</summary>
 
     ```bash
-    S=.ai/90_issues/active/issue-0059/issue-0059-summary.md
+    S=.ai/90_issues/archive/issue-0059/issue-0059-summary.md
     awk '
       /^### Task / { if (o && !n && v != 1) b++; o = 1; v = 0; n = ($0 ~ /^### Task N/) }
       o && /^- \*\*결과\*\*:/ {
@@ -274,7 +274,7 @@
     <summary>검증 명령 — repo 루트에서 실행, 출력 0이면 통과</summary>
 
     ```bash
-    S=.ai/90_issues/active/issue-0059/issue-0059-summary.md
+    S=.ai/90_issues/archive/issue-0059/issue-0059-summary.md
     awk '
       /^### Task / { if (o && !n && d && (t != 1 || m != 1)) b++; o = 1; d = 0; t = 0; m = 0; n = ($0 ~ /^### Task N/) }
       o && /^- \*\*결과\*\*: (완료|부분 완료)[[:space:]]*$/ { d = 1 }
