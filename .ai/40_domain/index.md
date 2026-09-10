@@ -9,5 +9,6 @@ AI는 비즈니스 리뷰 시 이 파일을 먼저 읽고, 리뷰 대상과 관�
 |------|------|
 | `policies/common/` | 공통 repo에서 동기화되는 정책 (이 repo에서 직접 수정 금지) |
 | `policies/local/` | 이 repo 고유 정책 |
+| `policies/local/company-policy-phrasing.md` | 회사 환경 서술 원칙 ― 담당 부서를 지목하지 않고 회사 정책으로 표현 (이슈 #59) |
 | `specs/` | 기능 명세 문서 모음 |
 | `glossary.md` | 프로젝트 도메인 용어 사전 |
