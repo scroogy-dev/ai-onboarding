@@ -173,8 +173,8 @@ layout: section
 
 AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 
-- **개인 역량 강화**: 본인의 업무·학습·일상 효율 *(본 교육의 초점)*
-- **조직 역량 강화**: 팀·전사 차원의 AI 도입·거버넌스
+- **개인 역량 강화**: 본인의 업무·학습·일상 효율
+- **조직 역량 강화**: 팀·전사 차원의 AI 도입과 사용 기준 세우기
 - **제품·서비스 역량 강화**: 자사 제품·서비스에 AI 기능을 제품화
 
 본 교육은 **개인 역량 강화**에 집중합니다. 조직 도입·제품화는 본 교육 범위 밖입니다.
@@ -235,7 +235,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 
 **임직원 (회사 업무)**
 
-❌ **개인 플랜 절대 금지** <span class="opacity-70">(무료·유료)</span><br/>→ **반드시 회사 Team / Enterprise**
+❌ **개인 플랜 절대 금지** <span class="opacity-70">(무료·유료)</span><br/>→ **반드시 회사 Team·Enterprise**
 
 </div>
 
@@ -503,9 +503,9 @@ AI가 직접 파일을 열고 작업
 
 <div grid="~ cols-2 gap-4" class="mt-5">
 
-<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
+<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800 flex flex-col">
 <div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center">모델: 생각하는 머리</div>
-<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-4 text-sm">
+<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-4 text-sm flex-1">
 
 똑똑하지만 **틀릴 수 있고**, 매번 답이 조금씩 다를 수 있는 부분.
 
@@ -514,13 +514,17 @@ AI가 직접 파일을 열고 작업
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
+<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800 flex flex-col">
 <div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">하네스: 사람이 짜 둔 틀</div>
-<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4 text-sm">
+<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4 text-sm flex-1">
 
 어떤 도구·자료를 쓸지, 어떤 순서로, 결과를 어디서 확인할지.
 
-**대부분 이미 있는 걸 고르고·잇고·정하는 일**입니다. 내 몫은 얇습니다.
+**출처는 셋**이고, 그중 새로 만드는 **내 몫은 얇습니다.**
+
+- **회사가 만든 구조**: 격리된 환경에서 도구를 정해진 순서로 불러 쓰는 틀
+- **고르고·연결만 하는 것**: 제품·모델 고르기 · 외부 서비스 연결
+- **내가 만드는·정하는 것**: 지시를 정리해 저장 · 자료 붙이기 · 순서 정하기 · 확인 단계 두기
 
 </div>
 </div>
@@ -535,15 +539,17 @@ AI가 직접 파일을 열고 작업
 이슈 #42 본체: docs/basics.md 「에이전트 = 모델 + 하네스」 슬라이드 압축.
 핵심: 에이전트 자율성 오해 해소: 좋은 결과는 창발이 아니라 「조립 + 사람 검토」.
 앞 「챗봇 vs 에이전트」(에이전트=맡기기)에서 이어짐: 그 에이전트가 무엇으로 이뤄졌나.
-하네스 출처는 셋(회사 제품·모델 / 외부 서비스 연결 / 내 설정)이지만 슬라이드는 「사람이 짜 둔 틀」로 압축.
+하네스 출처 셋(회사가 만든 구조 / 고르고·연결만 하는 것 / 내가 만드는·정하는 것)은 이슈 #56 Task 7에서 하네스 카드에 편입했다: docs/basics.md 「하네스는 결국 '내가 세팅하는 것들'」 파생.
+52장이 「하네스의 출처를 셋으로 나눴고 그중 「고르고·연결만 하는 것」 칸에 외부 서비스 연결이 있었다」로 되짚는 원본이 이 목록이다.
+「지시를 정리해 저장」은 docs 원문 표기: 「Agent Skills」 완전형의 덱 첫 등장 자리가 19장 표 머리글이라(전제 15) 여기서는 Skill 토큰을 쓰지 않는다.
 멀티에이전트 긍정 사례(역할 분업 + 명시적 기준 + 사람 검토)는 발화로 보충: 단일 에이전트로도 핵심 획득 가능.
-viewport 점검 필요: 2카드 + 오해 박스가 한 화면에 들어가는지 사용자 확인.
+viewport 점검 필요: 2카드 + 오해 박스가 한 화면에 들어가는지 사용자 확인. 3분류 편입으로 하네스 카드가 3행 늘었다.
 -->
 
 
 ---
 
-# 결과물의 성격 ― 1회성 · 스킬 · 애플리케이션
+# 결과물의 성격
 
 <div class="mt-2 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-2 bg-amber-50 dark:bg-amber-900/15 text-sm">
 <strong>⚠ 생성형 AI는 기본적으로 비결정적입니다</strong>. 같은 지시에도 매번 답이 조금씩 다를 수 있습니다.
@@ -551,23 +557,27 @@ viewport 점검 필요: 2카드 + 오해 박스가 한 화면에 들어가는지
 
 <div class="mt-3 text-xs">
 
-| | 1회성 프롬프트 | 에이전트 스킬 *(본 교육)* | 애플리케이션 *(개인용 웹앱까지 본 교육)* |
+| | 1회성 결과물 | Agent Skills *(본 교육)* | 애플리케이션 *(개인용 웹앱까지 본 교육)* |
 |---|---|---|---|
-| **무엇** | 챗봇에 그때그때 입력하는 한 번짜리 지시 | 자주 쓰는 프롬프트·절차를 재사용 자산으로 묶음 | 코드로 작성된 프로그램 |
+| **무엇** | 한 번 지시해 그때 받은 결과 하나. 다시 쓰려고 남겨 두지 않음 | 자주 쓰는 프롬프트·절차를 재사용 자산으로 묶음 | 코드로 작성된 프로그램 |
 | **결정성** | 비결정 | 비결정 *(내부 LLM)* | 결정 |
-| **결과 일관성** | 매번 결과가 조금씩 다름 | 형식·접근 보장 *(값은 다를 수 있음)* | 동일 입력 → 동일 출력 |
+| **결과 일관성** | 매번 결과가 조금씩 다를 수 있음 | 형식·접근 보장 *(값은 다를 수 있음)* | 동일 입력 → 동일 출력 |
 | **만드는 비용·누가** | 없음: 누구나 즉시 | 낮음: **비개발자도 직접** | 개인용 웹앱은 낮음, 그보다 크면 큼: 설계·코드·테스트 필요 |
 | **언제 적합** | 일회성·탐색·맥락이 매번 다른 작업 | 반복되는 동일 패턴 작업 | 대규모·다수 사용자·결정적 신뢰성 |
 
 </div>
 
 <div class="mt-2 text-center text-xs opacity-90">
-<strong>에이전트 스킬</strong>: 비개발자도 만들 수 있고, 한 번 만들어 두면 반복 작업을 크게 줄여 줍니다.
+<strong>Skill</strong>: 비개발자도 만들 수 있고, 한 번 만들어 두면 반복 작업을 크게 줄여 줍니다.
 </div>
 
 <div class="mt-1 text-center text-xs opacity-80">
 애플리케이션은 <strong>내 컴퓨터에서 열리는 HTML·자바스크립트 웹앱까지</strong>가 본 교육입니다. 여러 사람이 쓰거나 서버·설치·배포가 필요하면 범위 밖입니다.
 </div>
+
+<style>
+table th:first-child, table td:first-child { white-space: nowrap; }
+</style>
 
 <!--
 docs/basics.md 「결과물의 성격」(구 「AI 활용의 세 형태」) 슬라이드 압축 (이슈 #40): ADR-0002 단방향 파생. 이름 개명은 「AI 활용 3단계」와의 echo 제거(이슈 #42).
@@ -575,6 +585,7 @@ ADR-0005 §3 운용 변경 후속: 본문 기본은 결과형 유지, 「비결�
 nav 위치(개념 블록): 「에이전트 = 모델 + 하네스」 직후, 「기본 용어와 범위」 카드 앞: docs basics 개념 순서(챗봇/에이전트 → 모델+하네스 → 결과물의 성격) 정합. 「3단계」와 별개의 구분임은 뒤따르는 3단계 슬라이드에서 back-ref.
 이슈 #50 범위 경계 이동(2026-08-23): 애플리케이션 전체를 범위 밖으로 두던 기준을 「개인용이면서 HTML·자바스크립트만으로 동작하는 웹앱까지 범위 안」으로 옮김. docs/basics.md #three-forms 정합.
 viewport 점검 필요: 5축×3종 표가 가로폭·세로폭에 다 들어가는지 사용자 확인. 경계 한 줄과 비용 칸이 길어져 재점검 대상.
+이슈 #56 Task 3 보정: 첫 열(행 라벨)에 `white-space: nowrap`을 걸어 「만드는 비용·누가」가 두 줄로 접히지 않게 했다. 그만큼 나머지 3열이 좁아지는 것은 사용자 확인으로 수용.
 이슈 #52 Task 6 보정: 하단 요약에서 「두 끝점 사이」 공간 은유와 「반복 일관성 보장」 단정을 걷어냄. 상단 비결정 박스와 표의 「형식·접근 보장(값은 다를 수 있음)」이 이미 조건을 달아 두었는데 하단만 「보장」으로 단정해 스킬이 결정적으로 동작한다는 오해를 줄 수 있었음. 같은 은유가 docs/basics.md #three-forms에도 있어 사용자 승인으로 docs 쪽도 같은 회차에 정리했고, 두 표면의 문구가 같음(spec 전제 10). 2회차 지시로 요약 축을 「일관성」에서 「반복 작업 절감」으로 바꿈: 일관성은 표의 「결과 일관성」 행이 조건까지 달아 이미 말하고 있어, 하단 요약은 스킬을 왜 만드는지만 남김.
 -->
 
@@ -655,7 +666,7 @@ docs 「도구와 제품」(intro.md) 정합: 도구 블록 오프너. 개념 �
 | OpenAI | ChatGPT | Codex |
 | Google | Gemini | Antigravity |
 
-같은 회사의 챗봇과 에이전트는 **짝으로 묶여** 있습니다. 청중이 챗봇은 익숙해도, **본격 자동화 무대인 에이전트** 쪽은 잘 모르는 경우가 많습니다.
+같은 회사의 챗봇과 에이전트는 **짝으로 묶여** 있습니다. 챗봇은 익숙해도 에이전트 쪽은 잘 모르는 경우가 많은데, **본격 자동화 무대는 이쪽**입니다.
 
 > Anthropic은 비개발자용 에이전트 **Claude Cowork**도 함께 제공: 본 교육 3단계 본격 도구.
 
@@ -674,10 +685,10 @@ docs 「도구와 제품」(intro.md) 정합: 도구 블록 오프너. 개념 �
 | 제품 | 무엇 | 본 교육 단계 |
 |------|------|------------|
 | **claude.ai** | 웹·모바일 챗봇 | 1단계 (참가 전제) |
-| **Claude Cowork** | 데스크톱 범용 에이전트 | **3단계 본격 실습** |
+| **Claude Cowork** | 파일·도구를 직접 다루는 범용 에이전트 | **3단계 본격 실습** |
 | **Claude Code** | 터미널·IDE 코딩 에이전트 | 3단계 보조 (옵션) |
 
-> Cowork·Code는 **유료 플랜 + Claude Desktop** 필요 (개인 Pro↑·임직원 회사 Team/Enterprise): Who 섹션의 「준비사항」 슬라이드에서 다룸.
+> Cowork·Code는 **유료 플랜 + Claude Desktop** 필요 (개인 Pro↑·임직원 회사 Team·Enterprise).
 
 <style>
 table { font-size: 0.9em; }
@@ -701,8 +712,8 @@ Cowork이 3단계 본격 무대, Code는 진입 장벽이 있어 옵션 안내�
 | 대화에 파일 업로드 | ✓ | ✓ | ✓ |
 | **파일·시스템 접근** | ✗ | △ 연결 폴더만 | ✓ 전체 |
 | **터미널 명령 실행** | ✗ | △ 격리 VM | ✓ 전체 |
-| Agent Skills | ✓ | ✓ | ✓ |
-| MCP 연동 (외부 도구·데이터) | △ Connectors | ✓ | ✓ 전체 |
+| Skill | ✓ | ✓ | ✓ |
+| 외부 도구·데이터 연결 | ✓ 원격 · ✗ 로컬 | ✓ 원격 · △ 로컬 | ✓ 전체 |
 | 외부 API 호출 | ✗ | △ 송신 정책 | ✓ 전체 |
 
 <div class="text-sm opacity-80 mt-3">
@@ -714,6 +725,7 @@ Cowork이 3단계 본격 무대, Code는 진입 장벽이 있어 옵션 안내�
 <style>
 table { font-size: 0.72em; }
 table th, table td { padding: 0.35em 0.5em; }
+table th:first-child, table td:first-child { white-space: nowrap; }
 </style>
 
 <!--
@@ -723,6 +735,8 @@ docs/intro.md의 「기능 비교 ― 한눈에」(#claude-comparison) 표 슬�
 - Code: ✓ 전체 = 개발자 환경 전체 권한 → 진입 장벽 있어 본 교육에서는 옵션 안내.
 Cowork의 「△」가 「제한」이 아닌 「제어된 안전 동작」임을 발화로 보충: 비개발자가 가장 안전하게 에이전트를 쓸 수 있는 도구라는 메시지.
 nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞. docs intro 순서(기능비교 → 모델 → 사용량) 정합.
+이슈 #56 Task 3 보정: 외부 연결 행을 docs 표기로 맞추면서 부연 괄호 「(커넥터·MCP 서버)」는 생략했다. 기능 열만 두 배로 넓어져 나머지 3열을 밀어냈고, 커넥터·MCP 서버가 무엇인지는 20장과 2부가 맡는다. 첫 열은 `white-space: nowrap`으로 한 줄을 고정.
+이슈 #56 audit 1차 F-4 보정: 기능 행 「Agent Skills」를 「Skill」로. docs intro.md 표는 페이지 첫 등장이라 완전형이지만 덱은 전체 1회(19장 표 머리글)로 확정했다(spec 전제 15).
 -->
 
 
@@ -741,7 +755,7 @@ nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞. docs intro 
 
 <div class="text-sm opacity-80 mt-3">
 
-버전 번호(Fable 5·Opus 5 등)는 자주 갱신: 라인업만 기억하고 최신 사양은 docs. 사용량·한도 확인은 <strong>다음 슬라이드</strong>에서.
+버전 번호(Fable 5.1·Opus 5 등)는 자주 갱신: 라인업만 기억하고 최신 사양은 docs. 사용량·한도 확인은 <strong>다음 슬라이드</strong>에서.
 
 </div>
 
@@ -826,7 +840,7 @@ class: text-center
 
 <div class="text-2xl opacity-60 mb-8">교육 목표</div>
 
-# 반복해서 쓸 수 있는 것을<br/>**스스로 만들 수 있게** 된다
+# 반복해서 쓸 수 있는 결과물을<br/>**스스로 만들 수 있게** 된다
 
 <div class="mt-12 text-xl opacity-90">
 
@@ -854,24 +868,24 @@ class: text-center
 
 <div grid="~ cols-2 gap-4" class="mt-8">
 
-<div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800">
+<div class="rounded-lg overflow-hidden border border-cyan-200 dark:border-cyan-800 flex flex-col">
 <div class="bg-cyan-100 text-cyan-800 px-4 py-2 font-bold text-center">① 직접 지시 (= 매번 시키기)</div>
-<div class="bg-cyan-50 dark:bg-cyan-900/15 px-4 py-4">
+<div class="bg-cyan-50 dark:bg-cyan-900/15 px-4 py-4 flex-1">
 
 AI에게 그때그때 작업을 지시
 
-**적합**: 일회성·탐색·맥락이 매번 다른 작업
+**적합**: 한 번 쓰고 끝나는 일 · 아직 무엇을 원하는지 탐색 중인 일
 
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
+<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800 flex flex-col">
 <div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">② 소프트웨어로 만들기 (본 교육이 강조하는 쪽)</div>
-<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4">
+<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4 flex-1">
 
-AI로 작은 소프트웨어(에이전트 스킬)를 만들어 활용
+AI로 작은 소프트웨어(Skill)를 만들어 활용
 
-**적합**: 반복·일관성·재사용이 필요한 작업
+**적합**: 반복되는 일 · 매번 같은 형식·품질이 필요한 일
 
 </div>
 </div>
@@ -884,10 +898,12 @@ AI로 작은 소프트웨어(에이전트 스킬)를 만들어 활용
 
 <!--
 ADR-0005 본질 메시지 못박는 자리: "도구화"의 근거를 결정 룰로 압축.
-"특성: 매번 결과가 다름 / 동일한 품질로 반복 보장"은 다음 사다리 슬라이드 [3]·[4]가 결과형으로 다루므로 카드에서는 제거: 결정 룰은 "언제 ①/언제 ②"의 분기 가이드 역할에 집중.
+"특성: 매번 결과가 다름 / 동일한 품질로 반복 보장"은 다음 사다리 슬라이드 [3]이 결과형으로 다루므로 카드에서는 제거: 결정 룰은 "언제 ①/언제 ②"의 분기 가이드 역할에 집중.
 이슈 #40 운용 변경: 본 결정 룰은 ①/② 2분기 가이드, 「기본 용어와 범위」 직후의 「AI 활용의 세 형태」 비교표 슬라이드는 ② 안에서 에이전트 스킬과 애플리케이션의 위치 비교: 두 자산은 다른 일을 한다.
 사다리 슬라이드로 자연 연결.
 이슈 #52 Task 6 보정: ② 카드 본문 괄호를 「Skill·에이전트 활용」에서 「에이전트 스킬」로 바꿈. 종전 표기는 본문이 한 줄을 넘겨 「활용」만 다음 줄로 떨어졌고, 그리드가 두 카드 높이를 맞추느라 ① 카드 아래가 비어 보였음. 중간에 「Skill·에이전트」로 줄였다가 사용자 지적으로 되돌림: 에이전트가 만드는 대상으로 읽히는데, 3단계 표에서 에이전트는 운영·활용하는 도구이고 만드는 자산은 스킬임. 용어는 docs 세 형태의 「에이전트 스킬」을 그대로 씀. 카드 높이는 그리드 기본 stretch로 두어 덱 관례를 유지함.
+이슈 #56 Task 4 화면 확인 보정: 바깥 카드에 `flex flex-col`, 몸통에 `flex-1`을 걸어 그리드가 맞춘 높이를 몸통 배경이 채우게 함. 종전에는 「적합」 줄 길이 차로 ② 카드 몸통이 짧아, 테두리 안 아래쪽이 배경 없이 비어 보였음.
+이슈 #56 Task 8 노트 갱신: 위 #40·#52 기록의 「에이전트 스킬」·「AI 활용의 세 형태」는 그 시점 표기다. 현재 ② 카드 본문은 「Skill」, 비교표 슬라이드 제목은 「결과물의 성격」이다 (#42 개명, #55 docs 용어 통일, #56 Task 2 덱 반영). 카드 높이도 위 #52 기록의 그리드 기본 stretch가 아니라 바로 위 #56 Task 4 보정이 현재 값이다.
 -->
 
 
@@ -900,7 +916,7 @@ ADR-0005 본질 메시지 못박는 자리: "도구화"의 근거를 결정 룰�
 <div class="rounded-lg border border-blue-200 dark:border-blue-800 px-5 py-3 bg-blue-50 dark:bg-blue-900/15">
 <span class="font-mono text-sm opacity-60 mr-3">[1]</span>
 <span class="font-bold">출발은 누구나 같다</span>
-<div class="text-sm opacity-80 mt-1">"AI에게 매번 새로 시키기"도 좋은 출발점: 처음부터 본인의 챗봇이나 자동화 도구를 만드는 사람은 없습니다.</div>
+<div class="text-sm opacity-80 mt-1">AI에게 매번 새로 시키기도 좋은 출발점입니다.</div>
 </div>
 
 <div class="rounded-lg border border-blue-200 dark:border-blue-800 px-5 py-3 bg-blue-50 dark:bg-blue-900/15">
@@ -917,18 +933,12 @@ ADR-0005 본질 메시지 못박는 자리: "도구화"의 근거를 결정 룰�
 </div>
 </div>
 
-<div class="rounded-lg border border-emerald-200 dark:border-emerald-800 px-5 py-3 bg-emerald-50 dark:bg-emerald-900/15">
-<span class="font-mono text-sm opacity-60 mr-3">[4]</span>
-<span class="font-bold">한 번 만들고 100번 쓰는 게 합리적</span>
-<div class="text-sm opacity-80 mt-1">반복되는 일에는 <strong>본인 일에 맞는 작은 소프트웨어를 직접 만드는 것</strong>이 답입니다. 비개발자도 자기 일에 필요한 소프트웨어를 만든다.</div>
-</div>
-
 </div>
 
 <!--
 N-2 사다리: F-2 합의 반영. ADR-0005 결과형 우회를 [3]에 자연 결합.
 [3] ② "매번 결과가 조금씩 다름"은 본 슬라이드에서 여전히 결과형으로 우회 유지: 메커니즘 단어 명시는 이슈 #40 운용 변경에 따라 「AI 활용의 세 형태」 비교표 슬라이드 1곳으로 한정.
-[4]는 W2가 가졌던 "비개발자도 작은 소프트웨어 만든다" 메시지를 흡수한 ADR-0005 본질 메시지의 못박는 자리.
+이슈 #56 Task 4 보정: [4]「한 번 만들고 100번 쓰는 게 합리적」 카드를 걷어냄. #55가 docs에서 「한 번 만들고 여러 번 쓰는 것이 합리적」 문장을 지워 대응이 사라졌고, 「100번」은 docs에 없는 과장 수치였음. 사다리의 결론은 다음 슬라이드 「핵심: 비개발자도 소프트웨어를 만든다」가 단독으로 맡는다 (ADR-0005 본질 메시지).
 다음 슬라이드(핵심 박스)로 한 번 더 정점.
 -->
 
@@ -961,7 +971,7 @@ docs의 W3 quote 박스에 1:1 정합. ❌/✅ 시각 비교가 청중 인지에
 ```mermaid {scale: 0.85}
 flowchart LR
     A("<b>1단계</b><br/>챗봇 사용<br/><i>(참가 전제)</i>")
-    B("<b>2단계</b><br/>프롬프트 재활용<br/>Agent Skills")
+    B("<b>2단계</b><br/>프롬프트 재활용<br/>Skill")
     C("<b>3단계</b><br/>에이전트 활용<br/>Claude Cowork")
     A --> B --> C
     classDef stage1 fill:#1e293b,stroke:#6b7280,color:#9ca3af,stroke-width:1px
@@ -995,6 +1005,7 @@ ADR-0001의 핵심 모델: 본 교육이 다루는 결과물의 단계.
 What 섹션에 위치한 이유: 학습자 분류가 아니라 "교육이 다루는 범위·산출물의 단계"이기 때문.
 다음 슬라이드(상세표)로 이어 단계별 차이를 풀어 설명.
 2→3단계로 갈수록 "AI에게 시키는 일의 자동화 폭"이 넓어진다는 점을 강조.
+이슈 #56 audit 1차 F-4 보정: 2단계 노드 「Agent Skills」를 「Skill」로. docs index.md mermaid는 페이지 첫 등장이라 완전형이지만 덱은 전체 1회(19장 표 머리글)로 확정했다(spec 전제 15).
 -->
 
 ---
@@ -1004,60 +1015,14 @@ What 섹션에 위치한 이유: 학습자 분류가 아니라 "교육이 다루
 | 단계 | 무엇을 하나요? | 대표 도구·기능 | 본 교육에서 |
 |------|-------------|--------------|------------|
 | **1단계:<br/>챗봇&nbsp;사용** | 단발성 대화로 답을 얻음 | Claude·ChatGPT·Gemini 웹&nbsp;챗봇 | **참가&nbsp;전제**<br/>(이미&nbsp;경험) |
-| **2단계:<br/>프롬프트&nbsp;재활용** | 반복 사용 가능한 맞춤 프롬프트·챗봇을 자산으로 만듦 | **Agent&nbsp;Skills&nbsp;기초**,<br/>Claude&nbsp;Projects | **2단계&nbsp;실습** |
+| **2단계:<br/>프롬프트&nbsp;재활용** | 반복 사용 가능한 맞춤 프롬프트·챗봇을 자산으로 만듦 | **Skill&nbsp;기초** | **2단계&nbsp;실습** |
 | **3단계:<br/>에이전트&nbsp;활용** | 로컬 파일·작업을 자동화하는 에이전트를&nbsp;운영함 | **Claude&nbsp;Cowork**,<br/>Claude&nbsp;Code | **3단계&nbsp;실습** |
 
-> 💡 2단계에서 익히는 **프롬프트 재활용·Agent Skills** 개념은 3단계에서도 그대로 재활용됩니다.
+> 💡 2단계에서 익히는 **프롬프트 재활용·Skill** 개념은 3단계에서도 그대로 재활용됩니다.
 
 <style>
 table { font-size: 0.85em; }
 </style>
-
----
-
-# 1단계 vs 2단계 ― 매번 vs 재사용
-
-<div grid="~ cols-2 gap-4" class="mt-8">
-
-<div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
-<div class="bg-gray-100 text-gray-800 px-4 py-2 font-bold text-center">1단계: 매번 새로 묻기</div>
-<div class="bg-gray-50 dark:bg-gray-700/20 px-4 py-4">
-
-"고객 문의 이메일에 정중하고 친근한 톤으로, 짧게 답장해줘…"
-
-→ 다음 답장도 **같은 지시를 처음부터 다시 입력**
-
-</div>
-</div>
-
-<div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">2단계: Skill로 묶어 재사용</div>
-<div class="bg-green-50 dark:bg-green-900/15 px-4 py-4">
-
-"고객 답장" Skill을 1번 만들어두고
-**호출만으로 동일 톤 유지**
-
-→ 새 답장은 **본문 핵심만** 입력하면 끝
-
-</div>
-</div>
-
-</div>
-
-<!--
-1↔2단계 차이의 첫 만남. "프롬프트 재활용" 추상어를 "이메일 답장 톤" 일상 작업에 연결.
-청중에게 "지금 본인은 어디에 있나"를 자가 평가시키는 자리: 자가 진단 슬라이드와 호응.
--->
-
-
----
-
-# 어떤 결과물을 만들 수 있나요?
-
-| 트랙 | 2단계 실습 결과물 예시 | 3단계 실습 결과물 예시 |
-|------|--------------------|--------------------|
-| 임직원<br/>(비개발자) | 반복 보고서 자동 작성 템플릿,<br/>데이터 정리·변환 워크플로우 | 로컬 파일을 일괄 정리·변환하는 에이전트 |
-| 비개발자<br/>학생·일반인 | AI 오답노트, 자동 문제 출제기,<br/>엑셀 데이터 관리 템플릿 | 학습 자료를 로컬 폴더 단위로<br/>정리·요약하는 에이전트 |
 
 ---
 layout: section
@@ -1130,31 +1095,32 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 
 ---
 
-# 막연한 vs 구조화된 프롬프트
+# 막연한 지시 vs 계획 문서를 통한 지시
 
 <div grid="~ cols-2 gap-4" class="mt-8">
 
-<div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
-<div class="bg-gray-100 text-gray-800 px-4 py-2 font-bold text-center">막연한 프롬프트</div>
-<div class="bg-gray-50 dark:bg-gray-700/20 px-4 py-4">
+<div class="rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600 flex flex-col">
+<div class="bg-gray-100 text-gray-800 px-4 py-2 font-bold text-center">막연한 지시</div>
+<div class="bg-gray-50 dark:bg-gray-700/20 px-4 py-4 flex-1">
 
-"이 보고서 요약해줘"
+"오늘 서울 날씨 알려주는 것 좀 만들어줘."
 
-→ AI가 **임의로 분량·관점**을 잡음
-**매번 결과가 들쭉날쭉**
+→ AI가 **범위와 형식을 그때그때 정해** 바로 만들어 버림
+어긋나도 **짚을 기준이 없어** 처음부터 다시
 
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">구조화된 프롬프트</div>
-<div class="bg-green-50 dark:bg-green-900/15 px-4 py-4">
+<div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800 flex flex-col">
+<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">계획 문서를 통한 지시</div>
+<div class="bg-green-50 dark:bg-green-900/15 px-4 py-4 flex-1">
 
-"이 보고서를 3줄로 요약.
-1줄은 결론, 2~3줄은 근거.
-수치는 그대로 유지."
+"매일 아침 서울 날씨 리포트를 만들려고 합니다.
+기온·습도·미세먼지·우산 필요 여부 네 항목이 항상 같은 순서로 나와야 합니다.
+먼저 계획만 짜주세요."
 
-→ 매번 **같은 형식**의 일관된 결과
+→ 계획을 받아 검토한 뒤 실행
+**무엇이 다 된 것인지**가 미리 정해져 결과를 그 기준으로 확인
 
 </div>
 </div>
@@ -1162,8 +1128,9 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 </div>
 
 <!--
-"계획 → 실행" 흐름과 직결: 좋은 계획(구조화)이 좋은 결과를 부른다는 것.
-청중이 평소 챗봇을 쓰는 방식("막연한 프롬프트")의 한계를 자기 경험으로 떠올리게 함.
+docs/index.md `### 실습 접근법: 계획 → 실행` 절의 example 2종 슬라이드 압축: ADR-0002 단방향 파생.
+이슈 #56 Task 4 보정: 예시 축을 「프롬프트 구조화 여부」에서 「계획 문서 유무」로 바꿈. #55가 docs 예시를 같은 축으로 옮겼는데(보고서 요약 → 서울 날씨 리포트) 슬라이드만 옛 축으로 남아 있었음. 서울 날씨는 step01 실습과 이어지는 자리라 docs 예시를 그대로 씀. 같은 회차 화면 확인 보정으로 두 카드에 `flex flex-col`·`flex-1`을 걸었음: 오른쪽 프롬프트가 3줄이라 왼쪽 카드 몸통 아래가 비어 보였음.
+청중이 평소 챗봇을 쓰는 방식(「막연한 지시」)의 한계를 자기 경험으로 떠올리게 함.
 -->
 
 
@@ -1171,7 +1138,7 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 
 # AI 활용 메타 원칙
 
-도구·실습이 바뀌어도 그대로 통하는 **시리즈 차원의 자세** 5종.
+도구·실습이 바뀌어도 그대로 통하는 **공통 원칙** 5가지.
 
 <div grid="~ cols-3 gap-3" class="mt-8 max-w-2xl mx-auto">
 
@@ -1208,7 +1175,7 @@ LLM 메커니즘(컨텍스트·토큰)은 의도적으로 빼고 결과형으로
 
 <!--
 docs/index.md `### AI 활용 메타 원칙` 섹션의 표지: ADR-0002 단방향 파생.
-도구·실습이 바뀌어도 그대로 통하는 시리즈 차원의 자세 5종을 한눈에. 본문 5장 ① ② ③ ④ ⑤이 이 표지 다음에 누적.
+도구·실습이 바뀌어도 그대로 통하는 공통 원칙 5종을 한눈에. 본문 5장 ① ② ③ ④ ⑤이 이 표지 다음에 누적. (#55 docs 용어 통일로 종전 표기 「시리즈 차원의 자세」에서 바꿈, #56 Task 2 덱 반영)
 색상 분리: ①~④ 동일 abstract 톤 계열(cyan/blue/purple/teal, 시리즈 확립 원칙), ⑤ amber(검증 성격이라 note 톤 분리, docs admonition 종류 차이와 정합).
 -->
 
@@ -1295,7 +1262,7 @@ docs/index.md `### AI 활용 메타 원칙` ① 박스 압축: ADR-0002 단방�
 </div>
 
 <div class="mt-6 text-center text-sm opacity-75 italic max-w-3xl mx-auto">
-실습 사례: <code>step01-weather</code> (날씨 값 + HTML 리포트), <code>step04-wrong-answer-note</code> (인식 엑셀 + 마크다운/HTML)
+실습 사례: <code>step01-weather</code> (날씨 값 + HTML 리포트), <code>step04-wrong-answer-note</code> (인식 엑셀 + 마크다운·HTML)
 </div>
 
 <!--
@@ -1327,7 +1294,7 @@ ADR 격상 후보(이슈 #32 Task 8에서 결정): 데이터/뷰 분리를 별 A
 
 **검토의 깊이는 결과물의 영향 범위에 비례합니다.**
 
-반복해서 쓰거나 다른 사람에게 영향을 주는 산출물일수록 깊이 있게, 1회성·프로토타입은 가볍게.
+반복해서 쓰거나 다른 사람에게 영향을 주는 산출물일수록 깊이 있게, 한 번 쓰고 버리는 가벼운 산출물은 가볍게.
 
 </div>
 
@@ -1339,6 +1306,7 @@ ADR 격상 후보(이슈 #32 Task 8에서 결정): 데이터/뷰 분리를 별 A
 docs/index.md `### AI 활용 메타 원칙` ③ 박스 압축: ADR-0002 단방향 파생.
 labs/README.md·docs/labs.md의 "결과물은 반드시 읽고 이해합니다" ② 항목과도 짝: 시리즈 차원에서 도입(원칙)·실습(진행 원칙) 두 자리 모두 호출.
 검토 깊이 차등화 단서는 비개발자 청중이 "전부 이해 못 하면 못 쓴다"로 오독하지 않도록(2026-05-09 사용자 보강 가이드).
+이슈 #56 audit 1차 F-3 보정: 「1회성·프로토타입은 가볍게」를 docs 표현 「한 번 쓰고 버리는 가벼운 산출물」로 바꿨다. docs에 프로토타입이라는 완화 범주가 없고, 「1회성」은 19장 「1회성 결과물」 분류와 겹쳐 읽힌다.
 -->
 
 
@@ -1379,7 +1347,7 @@ labs/README.md·docs/labs.md의 "결과물은 반드시 읽고 이해합니다" 
 
 <div class="mt-5 text-center text-xs opacity-70 max-w-4xl mx-auto leading-relaxed">
 참고: 컨텍스트 크기<br/>
-최신 모델(Fable 5·Opus 5·Sonnet 5) <strong>1M</strong> · claude.ai 챗의 이전 세대 모델 <strong>500K</strong><br/>
+최신 모델(Fable 5.1·Opus 5·Sonnet 5) <strong>1M</strong> · claude.ai 챗의 이전 세대 모델 <strong>500K</strong><br/>
 Claude Code는 이전 세대 Opus까지 1M<br/>
 <a href="https://platform.claude.com/docs/ko/build-with-claude/context-windows">기술 배경</a> · <a href="https://support.claude.com/ko/articles/8606394">Claude.ai 한도</a>
 </div>
@@ -1443,38 +1411,6 @@ docs admonition은 ① ② ③ ④ `!!! abstract`(시리즈 확립 원칙) vs �
 페르소나 입장 결정: 사용자 확정(2026-05-09): 톤·형식 권장, 전문성 부여 보수적.
 -->
 
-
----
-
-# 임직원 (비개발자) 실습
-
-### 2단계 (예시) ― Agent Skills로 자산화
-
-- 반복 보고서 자동 작성
-- 엑셀·CSV 데이터 정리·변환
-
-<div class="mt-10"></div>
-
-### 3단계 (예시) ― Claude Cowork로 로컬 자동화
-
-- 로컬 파일 일괄 처리
-- 문서 폴더 자동 정리
-
----
-
-# 비개발자 학생·일반인 실습
-
-### 2단계 (예시) ― Agent Skills로 학습 자산화
-
-- 영어 단어 출제기 (`step03-voca-quiz`)
-- 자녀 채점지 답안 인식·채점 (`step04-wrong-answer-note` stage 1·2)
-- 파일 분류·정리 (`step02-file-classifier`)
-
-<div class="mt-10"></div>
-
-### 3단계 (예시) ― Claude Cowork로 학습 자료 자동화
-
-- 자녀용 학습 리포트 자동 생성: 마크다운·인쇄용 HTML (`step04-wrong-answer-note` stage 3)
 
 ---
 layout: section
@@ -1686,7 +1622,7 @@ docs의 example/success 2분할 카드를 그대로 슬라이드 2분할로. 연
 |---|---|---|
 | **무엇인가** | Claude가 미리 준비해 둔 목록에서 고르는 방식 | 목록에 없는 도구·자료를 **직접 찾아 등록해** 쓰는 방식 |
 | **연결 절차** | 서비스 선택 → 로그인 → 권한 확인 → 승인 | 서버 선택 → 등록 → 권한 확인 → 승인 |
-| **고를 수 있는 폭** | 준비된 서비스 (Atlassian·GitHub 등) | 훨씬 넓음 (준비되지 않은 도구까지) |
+| **고를 수 있는 폭** | 준비된 서비스 (Atlassian·GitHub 등) | 훨씬 넓음 (Claude가 지원하는 연결 방식에 한해) |
 | **내가 판단할 것** | 어떤 권한을 넘길지 | 어떤 권한을 넘길지 **+ 이 서버를 믿을 수 있는지** |
 
 <div class="border-l-4 border-blue-400 pl-6 py-3 my-5 bg-blue-50 dark:bg-blue-900/15 rounded-r">
@@ -1709,6 +1645,7 @@ docs/connect/index.md `## 연결하는 방법에는 두 가지가 있습니다 {
 docs 표 5행 중 「자세히 보기」 행(페이지 링크)은 슬라이드에서 뺀다. 발표 화면에서 클릭할 자리가 아니고, 두 방법은 뒤따르는 두 블록이 그대로 이어받는다.
 편의와 판단 부담이 정확히 반대 방향이라 어려운 쪽부터 갈 이유가 없다는 것이 순서의 근거: 표 「내가 판단할 것」 행이 그 근거를 이미 보여주므로 아래 바에서는 결론만 말한다.
 용어(외부 컨텍스트·MCP)는 1부 「그 밖의 기본 용어」에서 이미 정의: 2부는 다시 정의하지 않는다.
+이슈 #56 Task 5 보정: 「고를 수 있는 폭」의 괄호를 docs `#vs-connector` 표대로 한정 조건(Claude가 지원하는 연결 방식에 한해)으로 바꿨다. 종전 괄호(준비되지 않은 도구까지)는 왼쪽 칸을 되풀이할 뿐 docs가 둔 한계를 떨어뜨렸다.
 -->
 
 
@@ -1737,7 +1674,7 @@ docs 표 5행 중 「자세히 보기」 행(페이지 링크)은 슬라이드�
 docs/connect/index.md `## 시작하기 전에 { #preparation }`·`## 이 시리즈가 다루는 범위 { #scope }` 두 절 압축: ADR-0002 단방향 파생.
 이슈 #52 Task 6 보정: docs에 있던 유료 플랜 기준 항목과 개인 플랜 금지 경고 블록을 뺌. 1부 「준비사항」·「준비물 분담」 두 장이 이미 트랙별 카드와 목록으로 다뤄 세 번째 반복이었고, docs/connect/index.md는 독립 페이지라 다시 적지만 덱은 한 흐름이라 되풀이가 된다. 사용자 확정으로 백참조 줄도 두지 않는다. 남긴 두 항목은 2부에서 처음 나오는 준비물이다.
 범위 블록은 1부 「그 밖의 기본 용어」의 범위 밖 선언과 같은 gray 톤: 「원칙」이 아니라 「경계 안내」 결로 통일.
-docs의 warning(연결하면 AI가 자료를 직접 가져오고 남깁니다)은 여기서 한 줄로 접고, 실제 판단 기준은 12·13장(승인 화면)과 28~30장(연결 보안)에서 편다.
+docs의 warning(연결하면 AI가 자료를 직접 가져오고 남깁니다)은 이 장에 두지 않는다. 실제 판단 기준은 12·13장(승인 화면)과 28~30장(연결 보안)에서 편다. (종전 노트는 「한 줄로 접고」라고 적었으나 본문에 해당 줄이 없어 #56 Task 8에서 서술을 맞춤)
 -->
 
 
@@ -1761,7 +1698,7 @@ docs/connect/connectors.md 리드 정합: ADR-0002 단방향 파생. 2부 두 �
 
 <div class="border-l-4 border-teal-400 pl-6 py-4 my-6 bg-teal-50 dark:bg-teal-900/15 rounded-r">
 
-1부 **「에이전트 = 모델 + 하네스」** 에서 하네스의 출처를 셋으로 나눴고, 그중 **「고르고·연결만 하는 것」** 칸에 *외부 서비스 연결*이 있었습니다. **커넥터가 그 칸의 실물입니다.**
+1부 **「에이전트 = 모델 + 하네스」** 에서 하네스의 출처를 셋으로 나눴고, 그중 **「고르고·연결만 하는 것」** 칸에 *외부 서비스 연결*이 있었습니다. **커넥터가 바로 그 실제 예입니다.**
 
 통로를 만드는 일은 서비스를 만든 쪽과 Anthropic이 이미 해 두었습니다.
 
@@ -1795,6 +1732,7 @@ docs/connect/connectors.md 리드 정합: ADR-0002 단방향 파생. 2부 두 �
 docs/connect/connectors.md `## 커넥터는 새로 만드는 게 아닙니다 { #what-is-connector }` 압축: ADR-0002 단방향 파생.
 1부 하네스 슬라이드의 되짚기 자리: 「내가 다 만든다」는 오해를 여기서 한 번 더 끊는다. 하네스는 회사가 만든 것 + 외부 서비스 연결 + 내 설정의 조립이고, 커넥터는 가운데 칸이다.
 판단 3항목은 메타 원칙 ① 3분할 카드와 같은 형태: 절차가 아니라 판단이라는 것을 형태로 보여준다. 색은 teal(연결 계열)로 4장과 맞춘다.
+이슈 #56 Task 5 보정: 「커넥터가 그 칸의 실물입니다」를 docs 문장 「커넥터가 바로 그 실제 예입니다」로 바꿨다. 「칸」이 가리키는 3분류 표는 Task 7이 1부에 편입할 예정이라 편입 형태(한 줄·카드)가 정해지기 전에는 지시 대상이 확정되지 않는다.
 -->
 
 
@@ -1936,9 +1874,9 @@ docs 표 3행을 줄이지 않는다. 이 세 가지가 연결에서 사람이 �
 
 <div class="mt-6 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
-<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
+<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800 flex flex-col">
 <div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">안심 ✓</div>
-<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4 text-sm">
+<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4 text-sm flex-1">
 
 권한이 **새로 생기지는 않습니다.**
 
@@ -1947,9 +1885,9 @@ docs 표 3행을 줄이지 않는다. 이 세 가지가 연결에서 사람이 �
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800">
+<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800 flex flex-col">
 <div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center">경고 ⚠</div>
-<div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-4 text-sm">
+<div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-4 text-sm flex-1">
 
 **내가 볼 수 있는 것까지가** AI에게 열릴 수 있는 **가장 넓은 범위**입니다.
 
@@ -1969,6 +1907,7 @@ docs 표 3행을 줄이지 않는다. 이 세 가지가 연결에서 사람이 �
 <!--
 docs/connect/connectors.md `!!! warning "「내 권한 그대로」는 안심과 경고를 같이 줍니다"` 압축: ADR-0002 단방향 파생.
 카드 색은 「메타 원칙 ⑤」의 emerald(권장)/amber(보수)를 그대로 재사용: 같은 사실의 두 얼굴이라는 구도를 색으로 반복한다.
+이슈 #56 audit 2차 화면 확인 보정: 두 카드에 `flex flex-col`·`flex-1`을 걸어 그리드가 맞춘 높이를 몸통 배경이 채우게 했다. 왼쪽 안심 카드가 짧아 테두리 안 아래가 배경 없이 비었다(29·37·59·78장과 같은 계열).
 이슈 #52 Task 6 보정: 카드 4개가 한 화면에 들어가 아래쪽이 화면 끝까지 차서 두 장으로 나눔. 이 장은 사실(안심·경고)까지만 맡고, 줄이는 방법은 다음 장으로 넘긴다. 마지막 질문 줄이 다음 장을 여는 다리라 「줄일 방법이 있습니다」로 끝맺어, 분리 뒤에도 「줄일 방법이 없다」로 끝나지 않게 한다.
 -->
 
@@ -2066,11 +2005,11 @@ GitHub은 기본적으로 **소스코드를 보관하고 변경 이력을 관리
 
 <div class="mt-6 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
-<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
+<div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800 flex flex-col">
 <div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center text-sm">학생·일반인: 읽기만이면 연결 없이 ✓</div>
-<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-3 text-xs">
+<div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-3 text-xs flex-1">
 
-코드를 읽고 배우는 단계라면 GitHub만 한 자료실이 없습니다.
+이 교육의 **실습 자료**도 공개 저장소에 있습니다.
 
 공개 저장소는 계정 없이도 볼 수 있어 **주소를 알려 주고 물어보면** 됩니다.
 
@@ -2079,13 +2018,13 @@ GitHub은 기본적으로 **소스코드를 보관하고 변경 이력을 관리
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800">
+<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800 flex flex-col">
 <div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center text-sm">임직원: 업무 도구가 따로 있으면 보류 ⚠</div>
-<div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-3 text-xs">
+<div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-3 text-xs flex-1">
 
 Jira·Confluence 같은 업무 도구가 따로 있다면 비개발자가 GitHub까지 연결할 이유는 대개 없습니다.
 
-사내 **GitHub Enterprise**는 공개 저장소라도 로그인해야 보이고, 계정마다 비용이 붙습니다.
+사내 **GitHub Enterprise**는 회사 설정에 따라 공개 저장소라도 로그인해야 보일 수 있고, 계정마다 라이선스 비용이 붙습니다.
 
 </div>
 </div>
@@ -2105,6 +2044,8 @@ docs/connect/connectors.md `## GitHub ― 소스코드를 관리하는 곳 { #gi
 docs의 상세(지원 범위·프로젝트에 저장소 붙이기·SSO 승인)는 슬라이드에서 뺀다. 연결하기로 정한 사람만 필요한 내용이라 사이트에서 본다.
 이슈 #52 Task 6 보정: 하단 띠의 「권하지 않는 것은 연결이지 GitHub이라는 도구가 아닙니다」를 걷어냄. GHE 서술 바로 뒤에 붙어 GHE에도 적용되는 것처럼 읽혔다. 1차 보정에서 「저장소 전체가 사내 자료라 정책 확인이 먼저」로 바꿨다가 사용자 지적으로 다시 고쳤다: 사내 자료인 것은 Jira·Confluence도 같아서, 그것을 GitHub만의 이유로 쓰면 Atlassian은 정책 확인이 필요 없다는 뜻이 된다. 이 장에서 보류를 권하는 실제 이유는 연결할 이유가 적다는 것이고, GHE의 추가 사정은 계정 발급이 회사 몫이라는 점이다. 둘 다 amber 카드가 이미 말하므로 하단 띠는 되풀이하지 않고 커넥터의 쓸모(내 계정 접근)와 공통 기준만 맡는다.
 2차 보정(사용자 지적): 공개 저장소는 웹으로 그냥 읽히므로 커넥터가 필요 없다. 종전 emerald 카드가 「계정 없이 읽을 수 있어 문턱이 낮다」를 연결을 권하는 근거로 써서, 공개 자료를 읽으려면 커넥터를 붙여야 하는 것처럼 읽혔다. 같은 사실을 연결이 필요 없다는 근거로 되돌리고, 커넥터가 필요해지는 지점을 내 계정으로 해야 하는 일로 옮겼다. docs/connect/connectors.md #github이 SSoT. 회사 자료 연결의 공통 기준은 7장 준비물과 docs/security-guide.md가 맡는다. docs/connect/connectors.md #github·docs/security-guide.md #right-tool을 먼저 고치고 여기로 파생했다.
+이슈 #56 Task 5 화면 확인 보정: 두 카드에 `flex flex-col`·`flex-1`을 걸어 그리드가 맞춘 높이를 몸통 배경이 채우게 했다. emerald 카드가 3문단, amber 카드가 2문단이라 오른쪽 테두리 안 아래가 비어 보였다(29·37장과 같은 계열).
+이슈 #56 Task 5 보정 2건: emerald 카드 첫 줄의 「코드를 읽고 배우는 단계라면 GitHub만 한 자료실이 없습니다」는 docs에 근거가 없는 평가라 docs 문장(이 교육의 실습 자료도 공개 저장소에 있습니다)으로 바꿨다. amber 카드의 GitHub Enterprise 서술은 docs가 「회사 설정에 따라 ... 보일 수 있고」로 조건을 단 것을 단정으로 옮겨 놓았어서 가능성형으로 되돌리고 「라이선스 비용」 표기도 맞췄다.
 -->
 
 
@@ -2170,20 +2111,21 @@ docs/connect/mcp-servers.md 리드 정합: ADR-0002 단방향 파생. 2부 세 �
 
 ---
 
-# 커넥터와 무엇이 다른가
+# 커넥터와 MCP 서버는 같은 것입니다
 
-차이는 한 줄입니다. **기본 커넥터는 준비된 목록에서 고르고, MCP 서버는 그 목록에 없는 것을 직접 찾아 등록합니다.**
+둘은 다른 두 기술이 아닙니다. **같은 MCP 위에서 동작하고, 다른 점은 커넥터 목록에 있느냐입니다.**
+커넥터는 Claude가 미리 등록해 둔 MCP 서버이고, 이 구간의 방식은 아직 등록돼 있지 않은 MCP 서버를 내가 직접 넣는 것입니다.
 
-| 구분 | 기본 커넥터 | MCP 서버 |
+| 구분 | 목록에서 고르기 | 직접 찾아 등록하기 |
 |---|---|---|
 | **어떻게 연결하나** | 목록에서 서비스를 고름 | 서버 주소를 넣거나, 확장 프로그램을 설치해 직접 등록 |
 | **누가 확인했나** | 목록 안에서도 검토 수준이 갈림 | **아무도 검토하지 않은 곳도 등록 가능** |
-| **고를 수 있는 폭** | 준비된 서비스 | 훨씬 넓음 |
+| **고를 수 있는 폭** | 준비된 서비스 | 훨씬 넓음 (Claude가 지원하는 연결 방식에 한해) |
 | **내 판단의 몫** | 어떤 권한을 넘길지 | 어떤 권한을 넘길지 **+ 이 서버를 믿을 수 있는지** |
 
 <div class="border-l-4 border-orange-400 pl-6 py-3 my-5 bg-orange-50 dark:bg-orange-900/15 rounded-r">
 
-늘어난 폭만큼 **판단도 내 쪽으로 넘어옵니다.** 그래서 순서는 하나입니다. 커넥터 목록에 있으면 그걸 쓰고, 없을 때만 이쪽을 봅니다.
+늘어난 폭만큼 **판단도 내 쪽으로 넘어옵니다.** 그래서 순서는 하나입니다. 커넥터 목록에 있으면 커넥터를 쓰고, 없을 때만 MCP 서버를 직접 찾습니다.
 
 </div>
 
@@ -2197,7 +2139,8 @@ table th, table td { padding: 0.35em 0.5em; }
 </style>
 
 <!--
-docs/connect/mcp-servers.md `## 커넥터와 무엇이 다른가요 { #vs-connector }` 표 + 두 note 압축: ADR-0002 단방향 파생.
+docs/connect/mcp-servers.md `## 커넥터와 MCP 서버는 같은 것입니다 { #vs-connector }` 표 + note 압축: ADR-0002 단방향 파생.
+이슈 #56 Task 5 보정: 제목이 옛 절 제목(「커넥터와 무엇이 다른가」)의 파생이라 docs 절 제목으로 바꾸고, 리드를 「다른 두 기술이 아니다」로 다시 썼음. 표 머리글도 docs를 따라 제품 이름(기본 커넥터·MCP 서버)에서 경로 이름(목록에서 고르기·직접 찾아 등록하기)으로 바꿨음: docs가 「두 종류가 아니라 같은 것을 연결하는 두 경로의 비교」라고 못박은 자리라, 새 제목과 옛 머리글이 한 화면에서 부딪혔다. 「고를 수 있는 폭」의 한정 조건(Claude가 지원하는 연결 방식에 한해)을 docs에서 복원했고, 하단 순서 문장의 「그걸·이쪽」을 docs 표현대로 대상 이름으로 바꿨다.
 6장(연결하는 방법은 두 가지)과 표가 닮았지만 축이 다르다: 6장은 「무엇을 고를까」의 비교이고 이 장은 「무엇이 내 몫이 되나」의 비교다. 6장에 없던 「누가 확인했나」 행이 그 차이다.
 검토 표시 서술을 하단 한 줄로 접은 이유: 표시의 기준·상세는 화면 표기가 바뀌면 같이 늙는 내용이라 사이트로 위임하고, 슬라이드에는 화면에서 볼 라벨(체크 표시 / 「Community」)과 행동 지침(「Community」면 한 번 더)만 남긴다. audit 1차 F-2 보정: 종전 서술(검사 방식 단정, 표시 부재 전제)은 공식 문서(Connector verification)와 달라 docs를 먼저 고치고 파생했다.
 -->
@@ -2240,15 +2183,12 @@ docs/connect/mcp-servers.md `## 커넥터와 무엇이 다른가요 { #vs-connec
 
 </div>
 
-<div class="mt-6 text-center text-sm opacity-80 max-w-4xl mx-auto">
-방식은 내가 고르는 것이 아니라 <strong>만든 쪽이 정해서 내놓습니다.</strong> 쓰려는 도구가 어느 방식으로 나와 있는지부터 보세요.
-</div>
-
 <!--
 docs/connect/mcp-servers.md `## 어디에 설정하느냐가 갈림길입니다 { #remote-vs-local }` 2분할 카드 파생: ADR-0002 단방향 파생.
 ADR-0010 결정 3-1의 첫째 갈래를 한 장으로 세운다. 이 갈래가 접속 주체를 정하고, 사내망 주소에 접근할 수 있는지도 여기서 갈린다.
 슬라이드 본문에 「축」이라는 말을 쓰지 않는다(이슈 #52 Task 1 확정): 나누는 기준을 제목에 직접 써서 비개발자가 용어 없이 읽게 한다. ADR의 두 갈래 구도는 19·20장 두 장으로 나뉘어 유지된다.
 세 항목의 순서(누가 접속하나 → 접근 범위 → 어디서 쓰나)를 양쪽 카드에서 맞춰, 청중이 가로로 읽어 비교할 수 있게 한다.
+이슈 #56 audit 1차 F-6 보정: 하단 「방식은 만든 쪽이 정해서 내놓는다」 한 줄을 삭제했다. docs `#remote-vs-local`에 대응 문장이 없고(docs의 「방법은 회사가 정해서 안내」는 회사 제공 서버 한정), 슬라이드 전용 문장은 편입 또는 삭제 대상이다(R4).
 -->
 
 
@@ -2284,14 +2224,11 @@ ADR-0010 결정 3-1의 첫째 갈래를 한 장으로 세운다. 이 갈래가 �
 
 </div>
 
-<div class="text-sm opacity-80 max-w-5xl mx-auto">
-둘을 같이 써도 됩니다. 사내 위키의 자료를 확장 프로그램으로 읽고, 정리한 결과를 계정에 등록해 둔 업무 도구에 올리는 식입니다.
-</div>
-
 <!--
 docs/connect/mcp-servers.md `!!! info "내 컴퓨터에 설정한다고 서버까지 내 컴퓨터에 있는 것은 아닙니다"` + `!!! tip` 말미 압축: ADR-0002 단방향 파생.
 ADR-0010 결정 3-1의 둘째 갈래. ADR이 이 갈래를 뒤늦게 추가한 이유가 여기 그대로 있다: 원격/로컬 한 축으로 누르면 「내 컴퓨터에 설정 + 다른 곳의 서버」 조합(B)이 문서에서 빠지는데, 그것이 임직원의 실제 사내망 케이스다.
 A·B 라벨을 붙여 다음 두 장(mermaid)에서 참조할 수 있게 한다.
+이슈 #56 audit 1차 F-6 보정: 하단 「둘을 같이 써도 됩니다」와 사내 위키 예시를 삭제했다. 출처였던 `!!! tip` 말미는 #55에서 사라졌고, 현재 docs `#remote-vs-local`에 대응 문장이 없다(R4).
 -->
 
 
@@ -2341,7 +2278,7 @@ scale 0.72는 슬라이드 폭 기준 조정값: Task 6 viewport 점검 대상.
 
 # 내 컴퓨터에 설정했을 때
 
-```mermaid {scale: 0.62}
+```mermaid {scale: 0.56}
 flowchart LR
     subgraph PC["내 컴퓨터"]
         U["나<br/>(Claude Desktop)"]
@@ -2368,7 +2305,9 @@ flowchart LR
 
 접속이 내 컴퓨터에서 나가니 **내가 열 수 있는 자료는 모두 범위 안**입니다. 내 컴퓨터에서 실행되는 서버(A)든, 사내망에 있는 회사 서버(B)든 같습니다.
 
-다만 **Claude 서비스로 향하는 화살표**를 보세요. 읽은 내용은 결국 그쪽으로 올라갑니다.
+다만 **Claude 서비스로 향하는 화살표**를 보세요. 읽은 내용은 결국 Claude 서비스로 올라갑니다.
+
+**확장 프로그램은 일반 프로그램과 같은 권한으로 내 컴퓨터에서 실행됩니다.** 목록에서 골랐더라도 새 프로그램 설치와 같은 관점으로 판단하고, 회사 컴퓨터라면 회사의 설치 규정을 따르세요.
 
 </div>
 
@@ -2377,7 +2316,10 @@ docs/connect/mcp-servers.md `#remote-vs-local` 둘째 mermaid 파생: ADR-0002 �
 docs 노드 라벨에서 「사내 데이터」 이탤릭 한 줄만 뺐다. 슬라이드 폭에서 노드가 3행이 되면 그림이 눌린다. 나머지 노드·간선·색은 docs와 같다.
 20장의 A·B 라벨을 여기서 회수해 두 조합이 같은 그림 안에 있음을 보여준다.
 마지막 화살표(읽은 내용은 여기로)가 23장 경고 블록의 근거다: 내 컴퓨터에서 실행돼도 자료는 Claude 서비스로 간다.
-scale 0.62는 노드가 많아 21장보다 더 줄인 값: Task 6 viewport 점검 대상.
+이슈 #56 Task 5 보정: 하단 문장의 「그쪽으로 올라갑니다」를 docs대로 「Claude 서비스로 올라갑니다」로 바꿨다.
+scale은 노드가 많아 21장보다 더 줄인 값: Task 6 viewport 점검 대상. 이슈 #56 Task 7에서 권한 경고 문단이 늘어 화면 아래가 잘려 0.62 → 0.56으로 더 줄였다(사용자 화면 확인).
+이슈 #56 Task 7 편입: docs/connect/mcp-servers.md 184행 「확장 프로그램은 일반 프로그램과 같은 권한으로 내 컴퓨터에서 실행됩니다」를 하단 셋째 문단으로 넣었다. 보안 성격이라 누락 영향이 크다고 판단했다(전제 3-2 ⑧).
+68장이 아니라 이 장인 이유: 68장은 하단 경고 행을 3칸으로 늘리는 안과 카드 안에 넣는 안을 모두 사용자가 물렸고, 이 장은 제목부터 「내 컴퓨터에서 실행」이라 문장이 기존 문단에 그대로 이어진다.
 -->
 
 
@@ -2424,7 +2366,7 @@ scale 0.62는 노드가 많아 21장보다 더 줄인 값: Task 6 viewport 점�
 </div>
 
 <!--
-docs/connect/mcp-servers.md `!!! example "내 컴퓨터에 설정해야 되는 일은 이런 때입니다"` + `!!! info "회사 자료를 연결할 때"` + `!!! warning` 세 박스 압축: ADR-0002 단방향 파생.
+docs/connect/mcp-servers.md `## 어디에 설정하느냐가 갈림길입니다 { #remote-vs-local }` 절의 접근 범위 서술·폴더 연결 문장·회사 안내 문단 + `!!! warning "내 컴퓨터에 설정해도 자료는 Claude 서비스로 보내져 처리됩니다"` 압축: ADR-0002 단방향 파생. (#55가 절을 재편해 종전 출처 표기 `!!! example "내 컴퓨터에 설정해야 되는 일은 이런 때입니다"` + `!!! info "회사 자료를 연결할 때"`가 없어졌고, #56 Task 8에서 현재 절·박스 이름으로 바꿈)
 해당/해당 없음을 나란히 두는 것이 이 장의 요점: 「내 컴퓨터에 설정」을 내 폴더 파일 접근과 헷갈리는 오해를 같은 화면에서 끊는다. 폴더 연결은 1부 Claude Cowork에서 이미 나온 이야기라 여기서는 이름만 부른다.
 제목 아래 도입 문장을 두지 않는다(Task 6 사용자 확정). 계정 등록으로 안 되는 조건은 69장 mermaid가 이미 말했고, 「공개되지 않은 자료」라는 표현은 51장이 고정한 「공개된 자료」(로그인 없이 누구나 보는 자료)의 뜻과 부딪혀 Jira·Confluence까지 계정 등록이 안 되는 것으로 읽힌다. docs 박스의 같은 문단도 함께 뺐다.
 임직원 확장의 깊이는 ADR-0010 결정 3-1의 「회사가 안내한 대로 등록」 수준까지: 설정 파일 실물은 다루지 않는다.
@@ -2494,6 +2436,7 @@ docs/connect/mcp-servers.md `## 등록하는 순서 { #how-to-register }` 두 �
 19·20장에서 나눈 두 방식이 여기서 절차로 내려온다: 카드 색을 19장과 맞춰(계정 blue / 내 컴퓨터 purple) 어느 갈래의 절차인지 색으로 잇는다.
 docs의 스크린샷 1장(커스텀 커넥터 추가 창)은 덱 관례대로 가져오지 않고 화면 경로만 텍스트로 쓴다.
 고급 설정·MCPB 파일 배포·확장 프로그램 권한 경고는 슬라이드에서 뺀다. 실제로 등록하는 사람만 필요한 상세라 사이트에서 본다. 다만 열쇠 값과 「항상 허용」은 판단이 갈리는 자리라 다음 장으로 살린다.
+이슈 #56 Task 7 화면 확인: 권한 경고를 하단 셋째 칸으로 넣는 안과 카드 안 구분선 아래에 넣는 안을 모두 사용자가 물렸다. 하단 3칸은 화면을 3층으로 쪼개고, 카드박스 안에는 절차 외 정보를 넣지 않는다. 이 장의 구성은 착수 전 상태로 두고, 권한 경고는 66장 하단 문단으로 편입했다.
 -->
 
 
@@ -2513,7 +2456,9 @@ docs의 스크린샷 1장(커스텀 커넥터 추가 창)은 덱 관례대로 �
 
 <div class="border-l-4 border-red-400 pl-6 py-3 my-5 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **서버가 응답하는 내용에 지시가 섞여 있을 수 있습니다.** AI는 서버에서 받아 온 내용을 읽고 다음 행동을 정하는데, 그 안에 <em>"이 파일도 함께 보내라"</em> 같은 문장이 숨어 있으면 **사용자의 지시로 착각할 수 있습니다**(프롬프트 주입). 보호 장치가 있지만 완전하지는 않으니, **믿을 수 있는 곳의 서버만 등록하는 것**이 가장 확실한 방어입니다.
+⚠️ **서버가 응답하는 내용에 지시가 섞여 있을 수 있습니다.** AI는 서버에서 받아 온 내용을 읽고 다음 행동을 정하는데, 그 안에 <em>"이 파일도 함께 보내라"</em> 같은 문장이 숨어 있으면 **사용자의 지시로 착각할 수 있습니다**(프롬프트 주입).
+
+보호 장치가 있지만 완전하지는 않습니다. **믿을 수 있는 곳에서 만든 서버만 등록하는 것**이 첫 번째 방어이고, 믿을 만한 서버도 이슈·문서처럼 **남이 쓴 내용을 그대로 가져오므로** 도구 실행 승인은 매번 읽고 판단하세요.
 
 </div>
 
@@ -2531,6 +2476,9 @@ docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` �
 표 5행을 줄이지 않는다. 「고르는 눈」이 이 구간이 비개발자에게 주려는 것 전부라, 압축하면 남길 것이 없다.
 프롬프트 주입은 이 구간에서 유일하게 새로 나오는 위험 개념이라 red 바로 세운다. 용어는 괄호로 한 번만 붙이고 본문은 현상 서술로 간다. 비개발자에게 필요한 것은 이름이 아니라 「믿을 수 있는 곳만」이라는 행동 기준이다.
 서술은 가능성형(착각할 수 있습니다)으로: 단정하면 보호 장치가 없는 것처럼 읽힌다.
+이슈 #56 Task 5 보정: 「가장 확실한 방어」를 docs 표현 「첫 번째 방어」로 바꿨다. docs는 그 뒤에 믿을 만한 서버도 남이 쓴 내용을 그대로 가져온다는 한정을 두는데, 슬라이드가 「가장 확실한」으로 올려 쓰면 서버만 잘 고르면 끝나는 것으로 읽힌다.
+이슈 #56 audit 1차 F-2 보정: 그 한정(믿을 만한 서버도 남이 쓴 내용을 그대로 가져온다)을 red 바 본문에 옮겼다. 노트에만 있던 조건이라 청중에게 전달되지 않았고, 다음 장 「매번 읽고 승인」의 이유가 이 문장이다.
+이슈 #56 audit 2차 화면 확인 보정: F-2 문장을 얹으면서 red 바가 한 문단에 네 마디가 이어 붙은 상태가 됐다. docs `#choosing`이 나눠 둔 대로 「현상+용어」와 「보호 장치의 한계+행동」 두 문단으로 끊었다. 문장은 그대로고 순서만 docs 순서를 따른다.
 -->
 
 
@@ -2540,9 +2488,9 @@ docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` �
 
 <div class="mt-6 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
-<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
+<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800 flex flex-col">
 <div class="bg-blue-100 text-blue-800 px-4 py-2 font-bold text-center text-sm">열쇠 값(토큰)을 만들 때</div>
-<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-xs">
+<div class="bg-blue-50 dark:bg-blue-900/15 px-4 py-3 text-xs flex-1">
 
 서비스가 "이 사람이 맞다"고 확인하는 데 쓰는 문자열입니다. 만드는 화면에서 골라 주는 서비스가 많으니, **고를 수 있다면 좁힙니다.**
 
@@ -2550,12 +2498,14 @@ docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` �
 - **권한**: 읽기로 되는 일이면 쓰기는 빼 두기
 - **기간**: 만료일을 짧게 잡고 필요할 때 다시 발급
 
+고를 수 없다면 그 값으로 무엇까지 되는지 서비스 안내에서 확인합니다. 확인이 안 되면 **계정 전체를 여는 값**으로 보고, 안 쓰게 되면 발급 화면에서 지웁니다.
+
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800">
+<div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800 flex flex-col">
 <div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center text-sm">「항상 허용」을 누르기 전에</div>
-<div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-3 text-xs">
+<div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-3 text-xs flex-1">
 
 작업 중 AI가 도구 사용 승인을 물어볼 때 **항상 허용**을 고르면 이후로는 묻지 않습니다.
 
@@ -2578,6 +2528,8 @@ docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` �
 docs/connect/mcp-servers.md `!!! tip "열쇠 값(토큰)을 만들 때는 필요한 만큼만"` + `!!! warning "열쇠 값은 대화창에 붙여넣지 않습니다"` + `#choosing`의 `!!! warning "「항상 허용」은 마지막에 누르세요"` 병합: ADR-0002 단방향 파생.
 분량 압축을 위해 세 박스를 한 장에 묶는다(구성안의 ⊕ 표시, 줄일 때 병합 후보). 묶이는 축은 「승인을 미리 좁히기 vs 승인을 나중에 열기」로, 같은 판단의 앞뒤다.
 red 바는 1부 보안 섹션의 「절대 입력하면 안 되는 정보」 표를 되짚는 자리: 그 표의 「인증 정보」 행이 여기서 실물로 등장한다. 슬라이드는 되짚기만 하고 표는 다시 그리지 않는다.
+이슈 #56 audit 1차 F-1 보정: 열쇠 값 카드에 docs의 「고를 수 없는 서비스」 분기(서비스 안내에서 확인, 확인 불가면 계정 전체를 여는 값으로 취급, 불용 시 발급 화면에서 삭제)를 복원했다. 「고를 수 있다면 좁힌다」만 있으면 고를 수 없을 때의 행동이 비어 있었다.
+이슈 #56 audit 2차 화면 확인 보정: 두 카드에 `flex flex-col`·`flex-1`을 걸었다. F-1 보정으로 왼쪽 열쇠 값 카드가 한 문단 길어져 오른쪽 「항상 허용」 카드 몸통 아래가 배경 없이 비었다(29·37·59·78장과 같은 계열).
 -->
 
 
@@ -2612,7 +2564,7 @@ red 바는 1부 보안 섹션의 「절대 입력하면 안 되는 정보」 표
 
 <div class="border-l-4 border-purple-400 pl-6 py-3 mt-6 bg-purple-50 dark:bg-purple-900/15 rounded-r max-w-5xl mx-auto">
 
-**판단이 늘어난 만큼 검토도 늘어납니다.** 편의가 늘어난 만큼 검토를 줄이는 것이 아니라, **늘어난 편의에 비례해 검토도 늘린다**고 생각하는 편이 맞습니다. **메타 원칙 ③**이 가장 중요해지는 곳입니다.
+**등록은 시작일 뿐이고, 쓰는 동안 확인할 것이 남습니다.** **메타 원칙 ③** AI 결과물 검토·이해 의무가 연결 이후에 적용되는 자리입니다.
 
 </div>
 
@@ -2621,6 +2573,7 @@ docs/connect/mcp-servers.md `## 연결한 뒤에 할 일 { #after-connect }` + `
 구성안의 ⊕ 표시(줄일 때 병합 후보)를 적용한 장. 왼쪽은 잘 될 때 할 일, 오른쪽은 안 될 때 볼 것으로 축이 갈린다.
 문제 해결 표는 docs 5행 중 「주소를 잘못 넣음」 행을 뺐다. 24장 하단 orange 바에서 이미 다뤘다.
 하단 purple 바가 이 구간의 닫는 메시지: 5장·14장에 이어 메타 원칙 ③이 세 번째로 호출되는 자리이고, 2부에서 가장 세게 말해야 하는 지점이다. 색도 purple로 계속 맞춘다.
+이슈 #56 audit 1차 F-3 보정: 「늘어난 편의에 비례해 검토도 늘린다」는 docs에 없는 기준(편의)이라 `#after-connect` 리드 문장으로 교체했다. 검토 깊이의 기준은 메타 원칙 ③대로 영향 범위 하나다.
 -->
 
 
@@ -2679,20 +2632,20 @@ red 바 한 줄이 이 장의 전부다: 「판단이 사라진 것이 아니라
 
 <div class="mt-8 grid grid-cols-3 gap-4 max-w-5xl mx-auto">
 
-<div class="rounded-lg overflow-hidden border border-red-200 dark:border-red-800">
+<div class="rounded-lg overflow-hidden border border-red-200 dark:border-red-800 flex flex-col">
 <div class="bg-red-100 text-red-800 px-3 py-2 font-bold text-center text-sm">개인정보가 있는 자료</div>
-<div class="bg-red-50 dark:bg-red-900/15 px-3 py-3 text-xs">
+<div class="bg-red-50 dark:bg-red-900/15 px-3 py-3 text-xs flex-1">
 
 인사·급여 기록, 고객 명부, 건강 정보처럼 **개인정보가 자료의 본체인 곳**은 권한을 줄여서 연결하는 것이 아니라 **연결하지 않습니다.**
 
-섞여 있다면 그 부분을 빼고 승인합니다.
+섞여 있다면 그 부분을 빼고 승인합니다. **범위를 나눌 수 없는 서비스라면 연결을 미룹니다.**
 
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-orange-200 dark:border-orange-800">
+<div class="rounded-lg overflow-hidden border border-orange-200 dark:border-orange-800 flex flex-col">
 <div class="bg-orange-100 text-orange-800 px-3 py-2 font-bold text-center text-sm">맡기는 권한은 최소로</div>
-<div class="bg-orange-50 dark:bg-orange-900/15 px-3 py-3 text-xs">
+<div class="bg-orange-50 dark:bg-orange-900/15 px-3 py-3 text-xs flex-1">
 
 **무엇을 할 수 있는지**를 줄입니다. 읽기로 되는 일에 쓰기까지 열지 않습니다.
 
@@ -2701,9 +2654,9 @@ red 바 한 줄이 이 장의 전부다: 「판단이 사라진 것이 아니라
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800">
+<div class="rounded-lg overflow-hidden border border-blue-200 dark:border-blue-800 flex flex-col">
 <div class="bg-blue-100 text-blue-800 px-3 py-2 font-bold text-center text-sm">정기적으로 점검</div>
-<div class="bg-blue-50 dark:bg-blue-900/15 px-3 py-3 text-xs">
+<div class="bg-blue-50 dark:bg-blue-900/15 px-3 py-3 text-xs flex-1">
 
 잊었다고 끊기는 것이 아니어서, **쓰지 않는 연결의 접근 허용도 그대로 유지됩니다.**
 
@@ -2726,6 +2679,8 @@ docs/security-guide.md `### 공통 ― 트랙과 관계없이 지킵니다` 세 
 세 카드의 색을 위험 강도 순으로 배열(red → orange → blue): 첫째는 하지 말 것, 둘째는 줄일 것, 셋째는 유지할 것이라 성격이 다르다.
 하단 문장이 첫째 카드의 근거다. 「왜 연결에서 더 엄격해야 하는가」를 말하지 않으면 「연결하지 않습니다」가 과한 금지로 들린다.
 1부 보안 섹션의 「절대 입력하면 안 되는 정보」 기준이 연결에도 그대로 적용된다는 것이 이 장의 전제: 그 표는 1부에서 이미 봤으므로 다시 그리지 않는다.
+이슈 #56 audit 1차 F-1 보정: 개인정보 카드에 docs의 「범위를 나눌 수 없는 서비스라면 연결을 미룹니다」를 복원했다. 「그 부분을 빼고 승인」에서 끝나면 뺄 수 없는 서비스에서 할 행동이 비어, 전제 9가 보존하라는 내용 있는 caveat를 떨어뜨린 것이었다.
+이슈 #56 audit 2차 화면 확인 보정: 세 카드에 `flex flex-col`·`flex-1`을 걸어 그리드가 맞춘 높이를 몸통 배경이 채우게 했다. F-1 보정으로 개인정보 카드가 2문단으로 길어져 가운데·오른쪽 카드의 테두리 안 아래가 배경 없이 비었다(29·37·59·78장과 같은 계열).
 -->
 
 
@@ -2784,9 +2739,9 @@ emerald 요약 바는 1부 보안 섹션의 「한 줄 요약」 관례와 같�
 
 <div class="mt-8 grid grid-cols-3 gap-4 max-w-5xl mx-auto">
 
-<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
+<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800 flex flex-col">
 <div class="bg-teal-100 text-teal-800 px-3 py-2 font-bold text-center text-sm">고르는 순서</div>
-<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs">
+<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs flex-1">
 
 목록에 **있으면 커넥터**, **없을 때** MCP 서버.
 
@@ -2795,9 +2750,9 @@ emerald 요약 바는 1부 보안 섹션의 「한 줄 요약」 관례와 같�
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
+<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800 flex flex-col">
 <div class="bg-teal-100 text-teal-800 px-3 py-2 font-bold text-center text-sm">다루는 범위</div>
-<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs">
+<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs flex-1">
 
 **이용까지**입니다. 만드는 일은 다루지 않습니다.
 
@@ -2806,9 +2761,9 @@ emerald 요약 바는 1부 보안 섹션의 「한 줄 요약」 관례와 같�
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800">
+<div class="rounded-lg overflow-hidden border border-teal-200 dark:border-teal-800 flex flex-col">
 <div class="bg-teal-100 text-teal-800 px-3 py-2 font-bold text-center text-sm">시작하는 법</div>
-<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs">
+<div class="bg-teal-50 dark:bg-teal-900/15 px-3 py-3 text-xs flex-1">
 
 한 번에 다 열어 두는 것보다 **지금 하는 일에 필요한 하나부터** 연결하는 편이 훨씬 잘 굴러갑니다.
 
@@ -2829,6 +2784,7 @@ docs/connect/mcp-servers.md `#out-of-scope`·`#next` + `docs/connect/index.md#re
 2부 블록의 마지막 장. `layout: end` 「감사합니다」를 두지 않는다(이슈 #52 Task 1 확정): 2부 블록이 덱 중간에 있어 종료 슬라이드가 뒤따르는 1부 실습·보안 섹션을 가리게 된다. 다음 슬라이드는 기존 「실습」 섹션 divider다.
 카드 3장을 모두 teal로 통일: 대비가 아니라 회수라 색을 나누지 않는다.
 마지막 문장은 6장·7장에서 깐 「본인이 실제로 쓰는 서비스 하나를 정해 두고」의 회수: 2부를 듣고 나가는 청중에게 남길 행동 하나다.
+이슈 #56 audit 2차 화면 확인 보정: 세 카드에 `flex flex-col`·`flex-1`을 걸었다. 셋째 「시작하는 법」이 1문단이라 테두리 안 아래가 배경 없이 비었다(29·37·59·78장과 같은 계열).
 -->
 
 ---
@@ -2837,7 +2793,7 @@ layout: section
 
 # 실습
 
-손으로 따라가는 4개 step
+프롬프트로만 진행하는 4개 step
 
 <!--
 docs nav 정합: `mkdocs.yml`의 top-level은 「홈 / 도입 / 실습 / 보안 / 운영」으로 실습이 도입·보안과 동급 형제다.
@@ -2854,14 +2810,16 @@ docs/labs.md → labs/ SSoT의 단방향 파생(ADR-0002).
 
 | step | 주제 | stage | 핵심 학습 포인트 |
 |------|------|:-----:|----------------|
-| **[step01](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step01-weather)** | 날씨: 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약 |
+| **[step01](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step01-weather)** | 날씨: 자유응답 → 정형 → 리포트 | 1·2·3 | 텍스트 형식 통일, 파일 산출물 도약, 데이터·뷰 분리 |
 | **[step02](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step02-file-classifier)** | 파일 분류 | 1·2 | Skill 옵션(파라미터) 설계 |
-| **[step03](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step03-voca-quiz)** | 영어 단어 출제기 | 1·2 | 사진 입력·출처 충실성·외부 도구 연결 |
-| **[step04](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step04-wrong-answer-note)** | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 · 검수 단계 · 데이터/뷰 분리 |
+| **[step03](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step03-voca-quiz)** | 영어 단어 출제기 | 1·2 | 이미지 입력, 출처 충실성 제약, 외부 사전 링크 자동 연결 |
+| **[step04](https://github.com/scroogy-dev/ai-onboarding/tree/main/labs/step04-wrong-answer-note)** | 자녀 채점지 오답노트 | 1·2·3 | 다단계 파이프라인 + 검수 단계 + 데이터·뷰 분리 |
 
 <div class="border-l-4 border-emerald-400 pl-6 py-3 my-4 bg-emerald-50 dark:bg-emerald-900/15 rounded-r">
 
-🛠️ **진행 원칙: 프롬프트로만 진행합니다.** 파일·코드·템플릿을 에디터로 직접 고치지 않고, AI에게 프롬프트로 요청합니다.
+🛠️ **진행 원칙 ① 프롬프트로만 진행합니다.** 파일·코드·템플릿을 에디터로 직접 고치지 않고, AI에게 프롬프트로 요청합니다.
+
+📖 **진행 원칙 ② 결과물은 반드시 읽고 이해합니다.** 손으로 쓰지 않더라도, AI가 만든 결과물은 본인이 직접 읽고 이해한 상태에서 사용·수정합니다.
 
 </div>
 
@@ -2907,9 +2865,9 @@ docs/labs.md의 시리즈 구성 표 슬라이드 압축: ADR-0002 단방향 파
 </div>
 </div>
 
-<div class="rounded-lg overflow-hidden border border-purple-200 dark:border-purple-800">
+<div class="rounded-lg overflow-hidden border border-purple-200 dark:border-purple-800 flex flex-col">
 <div class="bg-purple-100 text-purple-800 px-4 py-2 font-bold">step03: 영어 단어 출제기</div>
-<div class="bg-purple-50 dark:bg-purple-900/15 px-4 py-3 text-sm">
+<div class="bg-purple-50 dark:bg-purple-900/15 px-4 py-3 text-sm flex-1">
 
 단어장 사진 + 옵션을 받는 출제 Skill.
 
@@ -2924,7 +2882,7 @@ docs/labs.md의 시리즈 구성 표 슬라이드 압축: ADR-0002 단방향 파
 
 채점지 사진 → 인식 엑셀 → **검수** → 자녀용 마크다운·인쇄용 HTML.
 
-다단계 파이프라인 + 데이터/뷰 분리.
+다단계 파이프라인 + 데이터·뷰 분리.
 
 </div>
 </div>
@@ -2939,6 +2897,7 @@ docs/labs.md의 시리즈 구성 표 슬라이드 압축: ADR-0002 단방향 파
 4개 step의 한 줄 메시지를 카드 그리드로 정렬: 단순 bullet 나열 회피(memory: 의도적 강조 카드 유지, 그룹핑은 시각 구분 권장).
 색상 사다리: step01 blue(입문) → step02 cyan(옵션) → step03 purple(사진) → step04 orange(파이프라인): 학습 단계 톤 변화.
 하단 한 줄로 강사 안내 메시지(이전 「실행 안내」 슬라이드 핵심) 흡수.
+이슈 #56 Task 6 화면 확인 보정: step03 카드에 `flex flex-col`·`flex-1`을 걸어 그리드가 맞춘 높이를 몸통 배경이 채우게 했다. 같은 행의 step04 카드가 더 길어 왼쪽 아래가 배경 없이 비어 보였다(29·37·59장과 같은 계열).
 -->
 
 
@@ -2962,14 +2921,13 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 <div class="border-l-4 border-red-400 pl-6 py-4 my-8 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **AI에 입력하는 모든 내용은 "누군가 볼 수 있다"고 가정하세요.**
+⚠️ **AI에게 입력하는 모든 내용은 "누군가 볼 수 있다"고 가정하세요.**
 
 엔터프라이즈 환경이라도 이 기본 태도는 유지합니다.
 
 </div>
 
-도구·버전은 계속 바뀌지만 **보안 원칙은 동일**합니다.
-입력 단계에서 민감한 정보를 넣지 않는 것이 가장 확실한 보호 방법입니다.
+아무리 안전한 시스템이라도, **입력 단계에서 민감한 정보를 넣지 않는 것**이 가장 확실한 보호 방법입니다.
 
 ---
 
@@ -2980,7 +2938,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 | **개인 식별 정보** | 주민등록번호, 여권번호, 운전면허번호 |
 | **금융 정보** | 카드번호, 계좌번호 |
 | **인증 정보** | 비밀번호, API 키, 인증 토큰 |
-| **타인의 개인정보** | 타인 이름·연락처 조합, 동의받지 않은 타인 사진 |
+| **타인의 개인정보** | 다른 사람의 이름·연락처, 동의 없이 찍힌 사진 |
 
 > 위 정보는 **트랙 무관 공통 금지**: 엔터프라이즈 환경에서도 동일하게 적용
 
@@ -3067,7 +3025,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 <div class="border-l-4 border-orange-400 pl-6 py-4 my-6 bg-orange-50 dark:bg-orange-900/15 rounded-r">
 
-본 교육 실습은 **유료 Claude**(개인 Pro↑·임직원 회사 Team/Enterprise)를 사용하지만,
+본 교육 실습은 **유료 Claude**(개인은 Pro 이상 / 임직원은 회사 Team·Enterprise)를 사용하지만,
 평소 쓰는 다른 무료 AI에도 **같은 원칙이 적용**됩니다.
 
 </div>
@@ -3125,18 +3083,24 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 | 개인 식별 정보 입력 금지 | ✅ | ✅ |
 | 타인 개인정보 입력 금지 | ✅ | ✅ |
 | 사진 속 개인정보 확인 | ✅ | ✅ |
-| 비식별 처리 | ✅ | ✅ |
-| AI 결과물 원본 검증 | ✅ | ✅ |
+| 개인정보 가리고 입력하기(비식별 처리) | ✅ | ✅ |
+| AI 결과물을 원본으로 검증 | ✅ | ✅ |
 | AI 결과물 외부 공유 전 검토 | ✅ | ✅ |
+| 개인정보가 있는 자료에 연결 금지 | ✅ | ✅ |
+| 연결에 맡기는 권한 최소화 | ✅ | ✅ |
+| 안 쓰는 연결 점검·해제 | ✅ | ✅ |
 | 문서 보안 등급 확인 | ✅ (사내 문서) | ― |
+| 연결은 회사 계약 플랜에서만 | ✅ (사내 자료) | ― |
+| 개인 계정 연결 전 개인·타인 자료 확인 | ― | ✅ |
 | 서비스 약관 확인 | ― (회사가 계약) | ✅ |
 
-<div class="text-sm opacity-70 mt-4">
+<div class="text-xs opacity-70 mt-3">
 범례: ✅ 반드시 준수 / ― 해당 없음 또는 트랙 특성상 적용 수준이 다름
 </div>
 
 <style>
-table { font-size: 0.78em; }
+table { font-size: 0.66em; }
+table th, table td { padding: 0.18em 0.5em; }
 </style>
 
 ---
@@ -3152,7 +3116,7 @@ table { font-size: 0.78em; }
 - [모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview)
 - [Cowork 시작](https://support.claude.com/ko/articles/13345190)
 - [Claude Code](https://docs.claude.com/ko/docs/claude-code/overview)
-- [Anthropic Learn](https://www.anthropic.com/learn) *(영문)*
+- [Claude Academy](https://academy.claude.com/)
 
 </div>
 
@@ -3160,9 +3124,8 @@ table { font-size: 0.78em; }
 
 **자산화·확장**
 
-- [Projects](https://support.claude.com/ko/articles/9517075)
 - [스킬](https://support.claude.com/ko/articles/12512176)
-- [MCP](https://docs.claude.com/ko/docs/agents-and-tools/mcp) *(개발자용)*
+- [MCP](https://claude.com/docs/connectors/building/mcp) *(개발자용·영문)*
 
 </div>
 
@@ -3170,7 +3133,7 @@ table { font-size: 0.78em; }
 
 **운영·지원**
 
-- [플랜](https://www.anthropic.com/pricing) *(영문)*
+- [플랜](https://claude.com/pricing) *(영문)*
 - [Support 홈](https://support.claude.com/ko/)
 - [Status](https://status.claude.com/)
 
@@ -3189,8 +3152,9 @@ ul { line-height: 1.7; }
 
 <!--
 docs/intro.md의 「공식 문서·참고 자료」 섹션 슬라이드 동기화.
-3그룹·9링크를 3컬럼으로 압축. 라벨은 docs보다 짧게(예: 「Projects(프로젝트)란 무엇입니까」 → 「Projects」), 한 줄 설명은 생략하고 docs로 위임.
+3그룹·9링크를 3컬럼으로 압축. 라벨은 docs보다 짧게(예: 「스킬이란 무엇인가요」 → 「스킬」), 한 줄 설명은 생략하고 docs로 위임. (종전 예시로 들던 Projects 링크는 #55에서 docs 언급이 0건이 되어 #56 Task 2에서 덱에서도 뺐다)
 한국어 페이지가 부재한 항목은 *(영문)* 또는 *(개발자용)* 한 단어 라벨로 시각 구분.
+이슈 #56 Task 8: 「Claude Academy」의 *(영문)* 라벨을 뺌 ― 한국어 페이지가 제공되기 시작했다(사용자 확인). docs/intro.md는 처음부터 이 라벨을 두지 않아 그대로다. 남은 라벨은 MCP *(개발자용·영문)*·플랜 *(영문)* 두 개다.
 -->
 
 
