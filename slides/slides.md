@@ -159,7 +159,7 @@ layout: section
 
 <div class="border-l-4 border-orange-400 pl-6 py-4 my-8 bg-orange-50 dark:bg-orange-900/15 rounded-r">
 
-⚠️ **개발 진로를 희망하는 학생**은 본 교육의 **대상이 아닙니다.**
+**개발 진로를 희망하는 학생**은 본 교육의 **대상이 아닙니다.**
 
 프로그래밍·개발에 특화된 별도 교육을 수강하시기를 권장합니다.
 
@@ -188,7 +188,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 <div grid="~ cols-2 gap-4" class="mt-8">
 
 <div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">✅ 요구합니다</div>
+<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">요구합니다</div>
 <div class="bg-green-50 dark:bg-green-900/15 px-4 py-4">
 
 - 기본 컴퓨터 조작 (파일 업·다운로드, 웹 브라우저)
@@ -199,7 +199,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 </div>
 
 <div class="rounded-lg overflow-hidden border border-red-200 dark:border-red-800">
-<div class="bg-red-100 text-red-800 px-4 py-2 font-bold text-center">❌ 요구하지 않습니다</div>
+<div class="bg-red-100 text-red-800 px-4 py-2 font-bold text-center">요구하지 않습니다</div>
 <div class="bg-red-50 dark:bg-red-900/15 px-4 py-4">
 
 - 프로그래밍·코딩 지식
@@ -217,7 +217,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 
 <div class="border-l-4 border-red-400 pl-6 py-3 my-4 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ 모든 실습은 Claude에서 진행: Cowork · Code 사용에 **유료 플랜이 반드시 필요합니다.**
+모든 실습은 Claude에서 진행: Cowork · Code 사용에 **유료 플랜이 반드시 필요합니다.**
 
 </div>
 
@@ -235,7 +235,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 
 **임직원 (회사 업무)**
 
-❌ **개인 플랜 절대 금지** <span class="opacity-70">(무료·유료)</span><br/>→ **반드시 회사 Team·Enterprise**
+**개인 플랜 절대 금지** <span class="opacity-70">(무료·유료)</span><br/>→ **반드시 회사 Team·Enterprise**
 
 </div>
 
@@ -263,7 +263,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 
 - 개인 노트북 (웹 브라우저)
 - 본인이 반복하는 업무·학습 작업 **1개 아이디어**
-- **유료 Claude 플랜**: 개인 Pro↑ / **임직원 회사 Team·Enterprise (❌ 개인 플랜 절대 금지)**
+- **유료 Claude 플랜**: 개인 Pro↑ / **임직원 회사 Team·Enterprise (개인 플랜 절대 금지)**
 - **Claude Desktop 설치**
 - (임직원) 사내 AI 도구 로그인 사전 확인
 
@@ -532,7 +532,7 @@ AI가 직접 파일을 열고 작업
 </div>
 
 <div class="mt-5 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-3 bg-amber-50 dark:bg-amber-900/15 text-sm">
-<strong>⚠ 흔한 오해</strong>: "에이전트끼리 알아서 회의하면 좋은 결론이 나온다" → <strong>아닙니다.</strong> 틀은 사람이 설계했고, 모델은 틀릴 수 있으며, 좋은 결론은 <strong>틀을 짠 사람 + 검토한 사람</strong>이 만듭니다.
+<strong>흔한 오해</strong>: "에이전트끼리 알아서 회의하면 좋은 결론이 나온다" → <strong>아닙니다.</strong> 틀은 사람이 설계했고, 모델은 틀릴 수 있으며, 좋은 결론은 <strong>틀을 짠 사람 + 검토한 사람</strong>이 만듭니다.
 </div>
 
 <!--
@@ -552,7 +552,7 @@ viewport 점검 필요: 2카드 + 오해 박스가 한 화면에 들어가는지
 # 결과물의 성격
 
 <div class="mt-2 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-2 bg-amber-50 dark:bg-amber-900/15 text-sm">
-<strong>⚠ 생성형 AI는 기본적으로 비결정적입니다</strong>. 같은 지시에도 매번 답이 조금씩 다를 수 있습니다.
+<strong>생성형 AI는 기본적으로 비결정적입니다</strong>. 같은 지시에도 매번 답이 조금씩 다를 수 있습니다.
 </div>
 
 <div class="mt-3 text-xs">
@@ -903,7 +903,7 @@ class: text-center
 
 <div class="mt-8 text-base opacity-75 max-w-2xl mx-auto">
 
-💡 출발점은 <strong>본인이 매주 반복하는 30분 ~ 1시간짜리 작업 1개</strong>가 좋습니다.
+출발점은 <strong>본인이 매주 반복하는 30분 ~ 1시간짜리 작업 1개</strong>가 좋습니다.
 
 </div>
 
@@ -1003,15 +1003,15 @@ class: text-center
 
 # 핵심: 비개발자도 소프트웨어를 만든다
 
-<div class="mt-12 text-xl opacity-50">"AI에게 매번 시킨다" ❌</div>
+<div class="mt-12 text-xl opacity-50">"AI에게 매번 시킨다"에 머물지 않고</div>
 
 <div class="text-2xl opacity-60 my-3">↓</div>
 
-<div class="text-2xl font-bold">"AI로 나만의 소프트웨어를 만들어 반복 자동화한다" ✅</div>
+<div class="text-2xl font-bold">"AI로 나만의 소프트웨어를 만들어 반복 자동화한다"</div>
 
 <!--
 ADR-0005 본질 메시지 못 ② 가시화 자리: 사다리 [4] 결론을 한 화면으로 압축.
-docs의 W3 quote 박스에 1:1 정합. ❌/✅ 시각 비교가 청중 인지에 박힘.
+docs의 W3 tip 박스에 1:1 정합. 흐린 앞 문장과 굵은 뒷 문장의 대비가 청중 인지에 박힘.
 -->
 
 
@@ -1071,7 +1071,7 @@ What 섹션에 위치한 이유: 학습자 분류가 아니라 "교육이 다루
 | **2단계:<br/>프롬프트&nbsp;재활용** | 반복 사용 가능한 맞춤 프롬프트·챗봇을 자산으로 만듦 | **Skill&nbsp;기초** | **2단계&nbsp;실습** |
 | **3단계:<br/>에이전트&nbsp;활용** | 로컬 파일·작업을 자동화하는 에이전트를&nbsp;운영함 | **Claude&nbsp;Cowork**,<br/>Claude&nbsp;Code | **3단계&nbsp;실습** |
 
-> 💡 2단계에서 익히는 **프롬프트 재활용·Skill** 개념은 3단계에서도 그대로 재활용됩니다.
+> 2단계에서 익히는 **프롬프트 재활용·Skill** 개념은 3단계에서도 그대로 재활용됩니다.
 
 <style>
 table { font-size: 0.85em; }
@@ -1425,7 +1425,7 @@ docs/index.md `### AI 활용 메타 원칙` ④ 박스 압축: ADR-0002 단방�
 <div class="mt-6 grid grid-cols-2 gap-4 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
-<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">톤·형식 지정: 권장 ✓</div>
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">톤·형식 지정: 권장</div>
 <div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-3 text-sm">
 
 예: <em>"공식 문서 톤으로 설명해줘"</em>, <em>"초등학생도 이해할 수 있게 풀어줘"</em>
@@ -1436,7 +1436,7 @@ docs/index.md `### AI 활용 메타 원칙` ④ 박스 압축: ADR-0002 단방�
 </div>
 
 <div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800">
-<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center">전문성 부여: 보수적 ⚠</div>
+<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center">전문성 부여: 보수적</div>
 <div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-3 text-sm">
 
 예: <em>"너는 20년 경력 변호사야, 이 계약서 검토해"</em>
@@ -1929,7 +1929,7 @@ docs 표 3행을 줄이지 않는다. 이 세 가지가 연결에서 사람이 �
 <div class="mt-6 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800 flex flex-col">
-<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">안심 ✓</div>
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">안심</div>
 <div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4 text-sm flex-1">
 
 권한이 **새로 생기지는 않습니다.**
@@ -1940,7 +1940,7 @@ docs 표 3행을 줄이지 않는다. 이 세 가지가 연결에서 사람이 �
 </div>
 
 <div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800 flex flex-col">
-<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center">경고 ⚠</div>
+<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center">경고</div>
 <div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-4 text-sm flex-1">
 
 **내가 볼 수 있는 것까지가** AI에게 열릴 수 있는 **가장 넓은 범위**입니다.
@@ -2032,7 +2032,7 @@ Confluence는 회의록·규정·기획서를, Jira는 업무 요청과 진행 �
 
 <div class="border-l-4 border-red-400 pl-6 py-4 my-6 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **AI가 쓴 것도 내 이름으로 팀에 공개됩니다.**
+**AI가 쓴 것도 내 이름으로 팀에 공개됩니다.**
 
 Atlassian 커넥터는 읽기와 쓰기를 모두 지원합니다. 내 계정으로 연결했으니 AI가 만든 문서나 코멘트도 **내가 쓴 것으로** 올라갑니다. 초안을 만들게 하되 **올리기 전에 직접 읽고 고치는 단계**를 반드시 두세요.
 
@@ -2060,7 +2060,7 @@ GitHub은 기본적으로 **소스코드를 보관하고 변경 이력을 관리
 <div class="mt-6 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800 flex flex-col">
-<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center text-sm">학생·일반인: 읽기만이면 연결 없이 ✓</div>
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center text-sm">학생·일반인: 읽기만이면 연결 없이</div>
 <div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-3 text-xs flex-1">
 
 이 교육의 **실습 자료**도 공개 저장소에 있습니다.
@@ -2073,7 +2073,7 @@ GitHub은 기본적으로 **소스코드를 보관하고 변경 이력을 관리
 </div>
 
 <div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800 flex flex-col">
-<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center text-sm">임직원: 업무 도구가 따로 있으면 보류 ⚠</div>
+<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center text-sm">임직원: 업무 도구가 따로 있으면 보류</div>
 <div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-3 text-xs flex-1">
 
 Jira·Confluence 같은 업무 도구가 따로 있다면 비개발자가 GitHub까지 연결할 이유는 대개 없습니다.
@@ -2417,7 +2417,7 @@ scale은 노드가 많아 21장보다 더 줄인 값: Task 6 viewport 점검 대
 
 <div class="border-l-4 border-red-400 pl-6 py-3 mt-4 bg-red-50 dark:bg-red-900/15 rounded-r max-w-5xl mx-auto text-sm">
 
-⚠️ 내 컴퓨터에서 실행돼도 **읽은 자료는 Claude 서비스로 보내져 처리됩니다.** 밖으로 나가면 안 되는 자료라면 처음부터 연결 대상에서 빼는 것이 맞습니다.
+내 컴퓨터에서 실행돼도 **읽은 자료는 Claude 서비스로 보내져 처리됩니다.** 밖으로 나가면 안 되는 자료라면 처음부터 연결 대상에서 빼는 것이 맞습니다.
 
 </div>
 
@@ -2513,7 +2513,7 @@ docs의 스크린샷 1장(커스텀 커넥터 추가 창)은 덱 관례대로 �
 
 <div class="border-l-4 border-red-400 pl-6 py-3 my-5 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **서버가 응답하는 내용에 지시가 섞여 있을 수 있습니다.** AI는 서버에서 받아 온 내용을 읽고 다음 행동을 정하는데, 그 안에 <em>"이 파일도 함께 보내라"</em> 같은 문장이 숨어 있으면 **사용자의 지시로 착각할 수 있습니다**(프롬프트 주입).
+**서버가 응답하는 내용에 지시가 섞여 있을 수 있습니다.** AI는 서버에서 받아 온 내용을 읽고 다음 행동을 정하는데, 그 안에 <em>"이 파일도 함께 보내라"</em> 같은 문장이 숨어 있으면 **사용자의 지시로 착각할 수 있습니다**(프롬프트 주입).
 
 보호 장치가 있지만 완전하지는 않습니다. **믿을 수 있는 곳에서 만든 서버만 등록하는 것**이 첫 번째 방어이고, 믿을 만한 서버도 이슈·문서처럼 **남이 쓴 내용을 그대로 가져오므로** 도구 실행 승인은 매번 읽고 판단하세요.
 
@@ -2577,7 +2577,7 @@ docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` �
 
 <div class="border-l-4 border-red-400 pl-6 py-3 mt-6 bg-red-50 dark:bg-red-900/15 rounded-r max-w-5xl mx-auto text-sm">
 
-⚠️ **열쇠 값은 대화창에 붙여넣지 않습니다.** 설정 칸은 연결을 세우는 곳이고 대화창은 자료가 오가는 곳입니다. 열쇠 값은 **절대 입력하면 안 되는 정보**의 「인증 정보」에 해당합니다.
+**열쇠 값은 대화창에 붙여넣지 않습니다.** 설정 칸은 연결을 세우는 곳이고 대화창은 자료가 오가는 곳입니다. 열쇠 값은 **절대 입력하면 안 되는 정보**의 「인증 정보」에 해당합니다.
 
 </div>
 
@@ -2640,7 +2640,7 @@ docs/connect/mcp-servers.md `## 연결한 뒤에 할 일 { #after-connect }` + `
 
 <div class="border-l-4 border-red-400 pl-6 py-5 my-8 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **붙여넣을 때마다 하던 "넘길까?" 판단을, 연결에서는 승인 화면에서 미리 합니다.**
+**붙여넣을 때마다 하던 "넘길까?" 판단을, 연결에서는 승인 화면에서 미리 합니다.**
 
 </div>
 
@@ -2777,7 +2777,7 @@ docs/security-guide.md `### 공통 ― 트랙과 관계없이 지킵니다` 세 
 
 <div class="border-l-4 border-emerald-400 pl-6 py-4 mt-8 bg-emerald-50 dark:bg-emerald-900/15 rounded-r max-w-5xl mx-auto">
 
-💡 **한 줄 요약**: 연결은 편의를 늘리는 만큼 **내가 직접 보지 않은 자료가 결과에 섞일 여지**도 늘립니다.
+**한 줄 요약**: 연결은 편의를 늘리는 만큼 **내가 직접 보지 않은 자료가 결과에 섞일 여지**도 늘립니다.
 **권한은 최소로, 점검은 정기적으로.**
 
 </div>
@@ -2874,9 +2874,9 @@ docs/labs.md → labs/ SSoT의 단방향 파생(ADR-0002).
 
 <div class="border-l-4 border-emerald-400 pl-6 py-3 my-4 bg-emerald-50 dark:bg-emerald-900/15 rounded-r">
 
-🛠️ **진행 원칙 ① 프롬프트로만 진행합니다.** 파일·코드·템플릿을 에디터로 직접 고치지 않고, AI에게 프롬프트로 요청합니다.
+**진행 원칙 ① 프롬프트로만 진행합니다.** 파일·코드·템플릿을 에디터로 직접 고치지 않고, AI에게 프롬프트로 요청합니다.
 
-📖 **진행 원칙 ② 결과물은 반드시 읽고 이해합니다.** 손으로 쓰지 않더라도, AI가 만든 결과물은 본인이 직접 읽고 이해한 상태에서 사용·수정합니다.
+**진행 원칙 ② 결과물은 반드시 읽고 이해합니다.** 손으로 쓰지 않더라도, AI가 만든 결과물은 본인이 직접 읽고 이해한 상태에서 사용·수정합니다.
 
 </div>
 
@@ -2978,7 +2978,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 <div class="border-l-4 border-red-400 pl-6 py-4 my-8 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **AI에게 입력하는 모든 내용은 "누군가 볼 수 있다"고 가정하세요.**
+**AI에게 입력하는 모든 내용은 "누군가 볼 수 있다"고 가정하세요.**
 
 엔터프라이즈 환경이라도 이 기본 태도는 유지합니다.
 
@@ -3068,7 +3068,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 </div>
 
-> 💡 한 줄 요약: 사내 AI는 안전하게 설계되어 있지만, **"입력 전에 한 번 더 생각하기"** 습관은 여전히 중요
+> 한 줄 요약: 사내 AI는 안전하게 설계되어 있지만, **"입력 전에 한 번 더 생각하기"** 습관은 여전히 중요
 
 ---
 
@@ -3129,7 +3129,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 </div>
 
-> 💡 한 줄 요약: 무료 AI는 편리하지만, **"나와 다른 사람의 개인정보는 절대 입력하지 않기"**
+> 한 줄 요약: 무료 AI는 편리하지만, **"나와 다른 사람의 개인정보는 절대 입력하지 않기"**
 
 ---
 
@@ -3137,23 +3137,23 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 | 원칙 | 임직원 | 학생·일반인 |
 |------|:--------:|:------------:|
-| 개인 식별 정보 입력 금지 | ✅ | ✅ |
-| 타인 개인정보 입력 금지 | ✅ | ✅ |
-| 사진 속 개인정보 확인 | ✅ | ✅ |
-| 개인정보 가리고 입력하기(비식별 처리) | ✅ | ✅ |
-| AI 결과물을 원본으로 검증 | ✅ | ✅ |
-| AI 결과물 외부 공유 전 검토 | ✅ | ✅ |
-| 개인정보가 있는 자료에 연결 금지 | ✅ | ✅ |
-| 연결에 맡기는 권한 최소화 | ✅ | ✅ |
-| 안 쓰는 연결 점검·해제 | ✅ | ✅ |
-| 문서 보안 등급 확인 | ✅ (사내 문서) | ― |
-| 연결은 회사 계약 플랜에서만 | ✅ (사내 자료) | ― |
-| 연결은 회사가 허용한 것만 | ✅ (사내 자료) | ― |
-| 개인 계정 연결 전 개인·타인 자료 확인 | ― | ✅ |
-| 서비스 약관 확인 | ― (회사가 계약) | ✅ |
+| 개인 식별 정보 입력 금지 | ✓ | ✓ |
+| 타인 개인정보 입력 금지 | ✓ | ✓ |
+| 사진 속 개인정보 확인 | ✓ | ✓ |
+| 개인정보 가리고 입력하기(비식별 처리) | ✓ | ✓ |
+| AI 결과물을 원본으로 검증 | ✓ | ✓ |
+| AI 결과물 외부 공유 전 검토 | ✓ | ✓ |
+| 개인정보가 있는 자료에 연결 금지 | ✓ | ✓ |
+| 연결에 맡기는 권한 최소화 | ✓ | ✓ |
+| 안 쓰는 연결 점검·해제 | ✓ | ✓ |
+| 문서 보안 등급 확인 | ✓ (사내 문서) | ― |
+| 연결은 회사 계약 플랜에서만 | ✓ (사내 자료) | ― |
+| 연결은 회사가 허용한 것만 | ✓ (사내 자료) | ― |
+| 개인 계정 연결 전 개인·타인 자료 확인 | ― | ✓ |
+| 서비스 약관 확인 | ― (회사가 계약) | ✓ |
 
 <div class="text-xs opacity-70 mt-3">
-범례: ✅ 반드시 준수 / ― 해당 없음 또는 트랙 특성상 적용 수준이 다름
+범례: ✓ 반드시 준수 / ― 해당 없음 또는 트랙 특성상 적용 수준이 다름
 </div>
 
 <style>
@@ -3176,7 +3176,7 @@ docs/security-guide.md `## 정리` 표 파생: ADR-0002 단방향 파생.
 
 **시작하기**
 
-- [모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview)
+- [모델 안내](https://platform.claude.com/docs/ko/models/overview)
 - [Cowork 시작](https://support.claude.com/ko/articles/13345190)
 - [Claude Code](https://docs.claude.com/ko/docs/claude-code/overview)
 - [Claude Academy](https://academy.claude.com/)
