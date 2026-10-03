@@ -734,7 +734,7 @@ docs/intro.md의 「기능 비교 ― 한눈에」(#claude-comparison) 표 슬�
 - Cowork: △ 표시는 모두 「3중 보호」 모델. 연결 폴더만 / 격리 VM / 송신 정책 (자세한 내용은 docs/intro.md의 「Cowork의 보호 모델」 admonition 참조).
 - Code: ✓ 전체 = 개발자 환경 전체 권한 → 진입 장벽 있어 본 교육에서는 옵션 안내.
 Cowork의 「△」가 「제한」이 아닌 「제어된 안전 동작」임을 발화로 보충: 비개발자가 가장 안전하게 에이전트를 쓸 수 있는 도구라는 메시지.
-nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞. docs intro 순서(기능비교 → 모델 → 사용량) 정합.
+nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞. docs intro 순서(기능비교 → 모델 → effort → 사용량) 정합.
 이슈 #56 Task 3 보정: 외부 연결 행을 docs 표기로 맞추면서 부연 괄호 「(커넥터·MCP 서버)」는 생략했다. 기능 열만 두 배로 넓어져 나머지 3열을 밀어냈고, 커넥터·MCP 서버가 무엇인지는 20장과 2부가 맡는다. 첫 열은 `white-space: nowrap`으로 한 줄을 고정.
 이슈 #56 audit 1차 F-4 보정: 기능 행 「Agent Skills」를 「Skill」로. docs intro.md 표는 페이지 첫 등장이라 완전형이지만 덱은 전체 1회(19장 표 머리글)로 확정했다(spec 전제 15).
 -->
@@ -755,7 +755,7 @@ nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞. docs intro 
 
 <div class="text-sm opacity-80 mt-3">
 
-버전 번호(Fable 5.1·Opus 5 등)는 자주 갱신: 라인업만 기억하고 최신 사양은 docs. 사용량·한도 확인은 <strong>다음 슬라이드</strong>에서.
+버전 번호(Fable 5.1·Opus 5.5 등)는 자주 갱신: 라인업만 기억하고 최신 사양은 docs. 같은 모델이 얼마나 공들일지(effort)는 <strong>다음 슬라이드</strong>에서.
 
 </div>
 
@@ -769,10 +769,62 @@ docs/intro.md 「모델 비교 ― Fable · Opus · Sonnet · Haiku」(#claude-m
 - Opus: 본인도 잘 모르는 주제·다단계. 추론이 핵심일 때.
 - Sonnet: 일상 기본값. 검색·요약·찾아바꾸기 같은 지시 이행 작업.
 - Haiku: 짧은 답·반복.
-버전 번호(Fable 5·Opus 5 등)는 본문 생략: 라인업 시그니처가 안정, 버전은 자주 갱신되므로 docs로 위임.
-사용량은 다음 슬라이드(사용량 확인)로: docs intro가 모델 다음에 사용량을 두는 순서와 정합.
+버전 번호(Fable 5.1·Opus 5.5 등)는 하단 작은 글씨 예시로만: 라인업 시그니처가 안정, 버전은 자주 갱신되므로 상세는 docs로 위임.
+다음 슬라이드는 effort(노력 수준), 그다음이 사용량 확인: docs intro가 모델 → effort → 사용량 순으로 두는 것과 정합.
 -->
 
+
+---
+
+# 노력 수준(effort) ― 같은 모델이 얼마나 공들일지
+
+모델은 **누구에게 맡길지**, effort는 같은 모델이 **얼마나 공들여 일할지**. 올리면 더 깊이 생각하고, 스스로 확인하고, 예외 상황까지 점검합니다.
+
+<div grid="~ cols-2 gap-6" class="mt-4">
+<div>
+
+| 단계 | 어떻게 일하나 |
+|------|---------------|
+| `low` | 빠르고 간결. 품질이 조금 떨어질 수 있고, 쉬운 문제는 생각을 건너뛰기도 |
+| `medium` | 속도·사용량·품질의 균형 |
+| `high` | 필요한 만큼 충분히 생각하고 확인 |
+| `xhigh` | 30분 이상 걸리는 긴 작업용 |
+| `max` | 사용량을 아끼지 않고 최대로 |
+
+</div>
+<div>
+
+| 모델 | 기본 단계 |
+|------|-----------|
+| Fable 5.1 | `high` |
+| Opus 5.5 | `medium` |
+| Sonnet 5.5 | `high` |
+| Haiku 4.5 | 지원하지 않음 |
+
+<div class="text-sm opacity-80 mt-2">Claude Code에서는 Sonnet 5.5도 <code>medium</code>으로 시작</div>
+
+</div>
+</div>
+
+<div class="border-l-4 border-emerald-400 pl-6 py-2 my-4 bg-emerald-50 dark:bg-emerald-900/15 rounded-r text-sm">
+
+단계를 올리면 같은 일도 **더 오래 걸리고 사용량도 늘어납니다**. 예: 같은 작업이 `low` 약 2분, 높은 단계 약 33분 (작업마다 크게 다름).
+
+</div>
+
+<style>
+table { font-size: 0.85em; }
+</style>
+
+<!--
+docs/intro.md 「노력 수준(effort) ― 같은 모델이 얼마나 공들일지」(#claude-effort)의 슬라이드 압축: ADR-0002 단방향 파생.
+- 정의: 모델 선택(누구에게 맡길지)과 별개로, 같은 모델이 얼마나 공들일지 정하는 조절 장치. 올리면 확인과 예외 상황 점검이 늘어난다.
+- 단계 표: Claude 기준 다섯 단계만. OpenAI에도 비슷한 단계가 있고 더 낮은 단계(none · minimal)도 있다는 점은 docs 한 줄에 있고 슬라이드에서는 말로만 보충.
+- 기본 단계: Claude 공식 문서 기준값. Claude Code는 Sonnet 5.5도 medium으로 시작. claude.ai는 단계를 고르는 메뉴에 모델별 기본 단계가 표시된다.
+- 시간 예시: Claude 블로그에 실린 글(Spending your effort)의 예시 1건. 단계별 소요 시간이 아니라 차이의 규모를 보여 주는 숫자라고 말로 강조.
+- 주의 사항 세 가지(모델마다 단계·기본값이 다름 / 같은 이름이라도 생각하는 양이 다름 / effort는 상한이 아니라 신호)와 바꾸는 위치 안내는 docs 카드에 두고 말로 보충.
+- 단계를 올릴수록 사용량이 빨리 찬다는 점으로 다음 슬라이드(사용량 확인)에 연결.
+-->
 
 ---
 
@@ -810,7 +862,7 @@ Claude Desktop의 **Code 탭 → 사용량 링**(모델 표시 옆).
 
 <div class="border-l-4 border-emerald-400 pl-6 py-2 my-4 bg-emerald-50 dark:bg-emerald-900/15 rounded-r text-sm">
 
-🛠️ 추론이 많이 필요한 작업과 단순 지시 이행은 사용량 차이가 큽니다. 작업 성격에 맞춰 모델을 골라 보세요. claude.ai · Cowork · Code는 **하나의 한도 풀**을 함께 씁니다.
+추론이 많이 필요한 작업과 단순 지시 이행은 사용량 차이가 큽니다. 작업 성격에 맞춰 모델과 effort를 골라 보세요. claude.ai · Cowork · Code는 **하나의 한도 풀**을 함께 씁니다.
 
 </div>
 
@@ -820,7 +872,7 @@ Claude Desktop의 **Code 탭 → 사용량 링**(모델 표시 옆).
 docs/intro.md 「사용량 확인 방법」(#claude-usage) 슬라이드 압축: ADR-0002 단방향 파생.
 두 화면(① 한도 숫자 = 설정→사용량 / ② 누적 사용량 = Code 탭→사용량 링)으로 docs 구조와 정합.
 이미지·화면 캡처는 사이트에 두고 본 슬라이드는 메시지 카드로 유지. UI 변경 시 docs/intro.md가 캡처 갱신 책임 자리.
-nav 위치(도구 블록 끝): 모델 라인업 직후. docs intro가 기능비교 → 모델 → 사용량 순인 것과 정합. Who 「준비사항」에서 이리로 옮김(docs도 Who에선 intro로 링크만 둠).
+nav 위치(도구 블록 끝): effort 슬라이드 직후. docs intro가 기능비교 → 모델 → effort → 사용량 순인 것과 정합. Who 「준비사항」에서 이리로 옮김(docs도 Who에선 intro로 링크만 둠).
 viewport 점검 필요: 2카드 + 박스 + 인용구가 한 화면에 들어가는지 사용자 확인.
 -->
 
@@ -1347,8 +1399,8 @@ labs/README.md·docs/labs.md의 "결과물은 반드시 읽고 이해합니다" 
 
 <div class="mt-5 text-center text-xs opacity-70 max-w-4xl mx-auto leading-relaxed">
 참고: 컨텍스트 크기<br/>
-최신 모델(Fable 5.1·Opus 5·Sonnet 5) <strong>1M</strong> · claude.ai 챗의 이전 세대 모델 <strong>500K</strong><br/>
-Claude Code는 이전 세대 Opus까지 1M<br/>
+최신 모델(Fable 5.1·Opus 5.5·Sonnet 5.5) <strong>1M</strong> · claude.ai 챗의 이전 세대 일부 모델 <strong>500K</strong><br/>
+Claude Code는 이전 세대 일부도 1M (모델·플랜에 따라 조건)<br/>
 <a href="https://platform.claude.com/docs/ko/build-with-claude/context-windows">기술 배경</a> · <a href="https://support.claude.com/ko/articles/8606394">Claude.ai 한도</a>
 </div>
 
