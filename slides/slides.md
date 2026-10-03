@@ -2060,7 +2060,7 @@ GitHub은 기본적으로 **소스코드를 보관하고 변경 이력을 관리
 <div class="mt-6 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800 flex flex-col">
-<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center text-sm">학생·일반인: 읽기만이면 연결 없이</div>
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center text-sm">학생·일반인: 읽기만이면 연결 불필요</div>
 <div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-3 text-xs flex-1">
 
 이 교육의 **실습 자료**도 공개 저장소에 있습니다.
