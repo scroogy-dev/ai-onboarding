@@ -19,6 +19,7 @@ AI는 작업 시 이 파일을 먼저 읽고, 관련된 항목만 선택적으�
 | 번호 | 제목 | 유형 | 위험도 | 상태 | 재검토 조건 |
 |------|------|------|--------|------|-------------|
 | K-0001 | [커넥터 검토 분류 「Custom」을 교육 자료에서 이름으로 부르지 않음](active/K-0001-connector-custom-label-omitted.md) | known issue | 낮음(LOW) | 수용 | 화면에서 `Custom` 표시가 확인되거나 공식 문서가 표시를 명시할 때. `mcp-servers.md`의 검토 표시 note 본문이나 `#choosing` 표 행 내용을 손볼 때 함께 판단 (2026-09-06 재검토: 계속 수용 · 2026-09-10 #59 재검토: 계속 수용) |
+| K-0002 | [plan 완료 기준의 범위 없는 작업 트리 검사가 보존 중인 감사 리포트로 실패함](active/K-0002-plan-whole-tree-status-check.md) | known issue | 낮음(LOW) | 수용 | 다음 이슈 plan 완료 기준에 범위 없는 `git status --porcelain`을 둘 때, 또는 같은 불일치가 다른 이슈 audit에서 다시 보고될 때 |
 
 ## 수명 주기
 

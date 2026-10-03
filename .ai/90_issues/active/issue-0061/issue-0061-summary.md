@@ -13,7 +13,7 @@
 | 계획 모델 | Anthropic, Claude Opus 5.5 (claude-opus-5-5) | high |
 | 계획 audit 모델 | OpenAI, GPT-6.1 Sol (gpt-6.1-sol) | high |
 | 구현 모델 | Anthropic, Claude Opus 5.5 (claude-opus-5-5) | high |
-| 최종 audit 모델 |  |  |
+| 최종 audit 모델 | OpenAI, GPT-6.1 Sol (gpt-6.1-sol) | high |
 
 - **계획 감사**: 수행 · 발견 3건 · 보정 3건
 
@@ -158,14 +158,15 @@
 - **결과**: 완료
 - **수행 모델**: claude-opus-5-5
 - **수행 effort**: high
-- **audit 발견**: 0건
-- **보정 반영**: 1건
+- **audit 발견**: 1건
+- **보정 반영**: 0건
 - **재시도**: 1회
 - **수행 내용 요약**: Slidev 서버(`localhost:3030`)를 띄우고 25·26·27·43장 주소를 안내했다. 화면 확인 중 사용자가 이모지를 지적해 26장 ⏱️(이번에 추가)와 27장 🛠️(기존)를 지웠고, 사용자가 확인했다 (2026-10-03). slides 변경을 커밋했다.
 - **특이 사항**:
   - 이모지 금지는 이슈 #17 archive 기록에만 있어 참조하지 못했다. 메모리에 규칙을 저장했고, 기존 이모지 정리는 번외 요구사항 R12(Task 8)로 추가했다
   - 화면 확인 중 사용자가 「헷갈리면 Sonnet으로 시작」 문구의 근거를 물었다. 근거 기록이 없고 공식 권장(대부분의 작업은 Opus 5.5로 시작)과 어긋나 번외 요구사항 R13(Task 7)으로 추가했다
   - 완료 기준 `[D]` `git status --porcelain`은 `.ai/99_workspace/`의 계획 감사 리포트 2개(미추적)로 출력이 남는다. docs·slides는 깨끗하다 (`git status --porcelain -- docs slides` 출력 0건)
+  - 최종 감사 1차 F-1(낮음(LOW))이 위 불일치를 지적했다. `--response`에서 이관으로 정해 원장 K-0002로 등재했다 (2026-10-03)
 
 ---
 
