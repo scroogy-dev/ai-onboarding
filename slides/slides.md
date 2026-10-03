@@ -751,7 +751,7 @@ nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞. docs intro 
 | **Sonnet** | 균형: 일상 기본 | 검색·요약·찾아바꾸기 등 지시 이행 |
 | **Haiku** | 가장 빠름 | 짧은 답·반복 |
 
-> 기준은 **추론이 얼마나 필요한가**: 헷갈리면 Sonnet으로 시작, 추론이 더 필요하면 Opus, 가장 어려운 문제는 Fable.
+> 기준은 **추론이 얼마나 필요한가**: 지시 이행이면 Sonnet, 추론이 필요하면 Opus, 가장 어려운 문제는 Fable. 헷갈리면 대부분 Opus로 시작 (Anthropic 권장).
 
 <div class="text-sm opacity-80 mt-3">
 
@@ -767,7 +767,8 @@ table { font-size: 0.85em; }
 docs/intro.md 「모델 비교 ― Fable · Opus · Sonnet · Haiku」(#claude-models)의 슬라이드 압축. 핵심 축은 「추론 vs 지시 이행」.
 - Fable: 기존 세 라인업 위에 추가된 최상위 모델 (대체 아님). 가장 어려운 문제·장시간 자율 작업. Opus로도 부족할 때.
 - Opus: 본인도 잘 모르는 주제·다단계. 추론이 핵심일 때.
-- Sonnet: 일상 기본값. 검색·요약·찾아바꾸기 같은 지시 이행 작업.
+- Sonnet: 일상 업무 기본. 검색·요약·찾아바꾸기 같은 지시 이행 작업.
+- 헷갈릴 때의 시작점은 Opus: Anthropic 공식 모델 안내가 「확실하지 않다면 대부분의 작업은 Opus 5.5로 시작」을 권장.
 - Haiku: 짧은 답·반복.
 버전 번호(Fable 5.1·Opus 5.5 등)는 하단 작은 글씨 예시로만: 라인업 시그니처가 안정, 버전은 자주 갱신되므로 상세는 docs로 위임.
 다음 슬라이드는 effort(노력 수준), 그다음이 사용량 확인: docs intro가 모델 → effort → 사용량 순으로 두는 것과 정합.
