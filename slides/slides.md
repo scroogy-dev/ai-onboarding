@@ -159,7 +159,7 @@ layout: section
 
 <div class="border-l-4 border-orange-400 pl-6 py-4 my-8 bg-orange-50 dark:bg-orange-900/15 rounded-r">
 
-⚠️ **개발 진로를 희망하는 학생**은 본 교육의 **대상이 아닙니다.**
+**개발 진로를 희망하는 학생**은 본 교육의 **대상이 아닙니다.**
 
 프로그래밍·개발에 특화된 별도 교육을 수강하시기를 권장합니다.
 
@@ -188,7 +188,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 <div grid="~ cols-2 gap-4" class="mt-8">
 
 <div class="rounded-lg overflow-hidden border border-green-200 dark:border-green-800">
-<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">✅ 요구합니다</div>
+<div class="bg-green-100 text-green-800 px-4 py-2 font-bold text-center">요구합니다</div>
 <div class="bg-green-50 dark:bg-green-900/15 px-4 py-4">
 
 - 기본 컴퓨터 조작 (파일 업·다운로드, 웹 브라우저)
@@ -199,7 +199,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 </div>
 
 <div class="rounded-lg overflow-hidden border border-red-200 dark:border-red-800">
-<div class="bg-red-100 text-red-800 px-4 py-2 font-bold text-center">❌ 요구하지 않습니다</div>
+<div class="bg-red-100 text-red-800 px-4 py-2 font-bold text-center">요구하지 않습니다</div>
 <div class="bg-red-50 dark:bg-red-900/15 px-4 py-4">
 
 - 프로그래밍·코딩 지식
@@ -217,7 +217,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 
 <div class="border-l-4 border-red-400 pl-6 py-3 my-4 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ 모든 실습은 Claude에서 진행: Cowork · Code 사용에 **유료 플랜이 반드시 필요합니다.**
+모든 실습은 Claude에서 진행: Cowork · Code 사용에 **유료 플랜이 반드시 필요합니다.**
 
 </div>
 
@@ -235,7 +235,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 
 **임직원 (회사 업무)**
 
-❌ **개인 플랜 절대 금지** <span class="opacity-70">(무료·유료)</span><br/>→ **반드시 회사 Team·Enterprise**
+**개인 플랜 절대 금지** <span class="opacity-70">(무료·유료)</span><br/>→ **반드시 회사 Team·Enterprise**
 
 </div>
 
@@ -263,7 +263,7 @@ AI 활용으로 강화할 수 있는 역량은 **세 가지**입니다.
 
 - 개인 노트북 (웹 브라우저)
 - 본인이 반복하는 업무·학습 작업 **1개 아이디어**
-- **유료 Claude 플랜**: 개인 Pro↑ / **임직원 회사 Team·Enterprise (❌ 개인 플랜 절대 금지)**
+- **유료 Claude 플랜**: 개인 Pro↑ / **임직원 회사 Team·Enterprise (개인 플랜 절대 금지)**
 - **Claude Desktop 설치**
 - (임직원) 사내 AI 도구 로그인 사전 확인
 
@@ -532,7 +532,7 @@ AI가 직접 파일을 열고 작업
 </div>
 
 <div class="mt-5 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-3 bg-amber-50 dark:bg-amber-900/15 text-sm">
-<strong>⚠ 흔한 오해</strong>: "에이전트끼리 알아서 회의하면 좋은 결론이 나온다" → <strong>아닙니다.</strong> 틀은 사람이 설계했고, 모델은 틀릴 수 있으며, 좋은 결론은 <strong>틀을 짠 사람 + 검토한 사람</strong>이 만듭니다.
+<strong>흔한 오해</strong>: "에이전트끼리 알아서 회의하면 좋은 결론이 나온다" → <strong>아닙니다.</strong> 틀은 사람이 설계했고, 모델은 틀릴 수 있으며, 좋은 결론은 <strong>틀을 짠 사람 + 검토한 사람</strong>이 만듭니다.
 </div>
 
 <!--
@@ -552,7 +552,7 @@ viewport 점검 필요: 2카드 + 오해 박스가 한 화면에 들어가는지
 # 결과물의 성격
 
 <div class="mt-2 rounded-lg border border-amber-200 dark:border-amber-800 px-4 py-2 bg-amber-50 dark:bg-amber-900/15 text-sm">
-<strong>⚠ 생성형 AI는 기본적으로 비결정적입니다</strong>. 같은 지시에도 매번 답이 조금씩 다를 수 있습니다.
+<strong>생성형 AI는 기본적으로 비결정적입니다</strong>. 같은 지시에도 매번 답이 조금씩 다를 수 있습니다.
 </div>
 
 <div class="mt-3 text-xs">
@@ -734,7 +734,7 @@ docs/intro.md의 「기능 비교 ― 한눈에」(#claude-comparison) 표 슬�
 - Cowork: △ 표시는 모두 「3중 보호」 모델. 연결 폴더만 / 격리 VM / 송신 정책 (자세한 내용은 docs/intro.md의 「Cowork의 보호 모델」 admonition 참조).
 - Code: ✓ 전체 = 개발자 환경 전체 권한 → 진입 장벽 있어 본 교육에서는 옵션 안내.
 Cowork의 「△」가 「제한」이 아닌 「제어된 안전 동작」임을 발화로 보충: 비개발자가 가장 안전하게 에이전트를 쓸 수 있는 도구라는 메시지.
-nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞. docs intro 순서(기능비교 → 모델 → 사용량) 정합.
+nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞. docs intro 순서(기능비교 → 모델 → effort → 사용량) 정합.
 이슈 #56 Task 3 보정: 외부 연결 행을 docs 표기로 맞추면서 부연 괄호 「(커넥터·MCP 서버)」는 생략했다. 기능 열만 두 배로 넓어져 나머지 3열을 밀어냈고, 커넥터·MCP 서버가 무엇인지는 20장과 2부가 맡는다. 첫 열은 `white-space: nowrap`으로 한 줄을 고정.
 이슈 #56 audit 1차 F-4 보정: 기능 행 「Agent Skills」를 「Skill」로. docs intro.md 표는 페이지 첫 등장이라 완전형이지만 덱은 전체 1회(19장 표 머리글)로 확정했다(spec 전제 15).
 -->
@@ -751,11 +751,11 @@ nav 위치(도구 블록): Claude 3종 직후, 모델 라인업 앞. docs intro 
 | **Sonnet** | 균형: 일상 기본 | 검색·요약·찾아바꾸기 등 지시 이행 |
 | **Haiku** | 가장 빠름 | 짧은 답·반복 |
 
-> 기준은 **추론이 얼마나 필요한가**: 헷갈리면 Sonnet으로 시작, 추론이 더 필요하면 Opus, 가장 어려운 문제는 Fable.
+> 기준은 **추론이 얼마나 필요한가**: 지시 이행이면 Sonnet, 추론이 필요하면 Opus, 가장 어려운 문제는 Fable. 헷갈리면 대부분 Opus로 시작 (Anthropic 권장).
 
 <div class="text-sm opacity-80 mt-3">
 
-버전 번호(Fable 5.1·Opus 5 등)는 자주 갱신: 라인업만 기억하고 최신 사양은 docs. 사용량·한도 확인은 <strong>다음 슬라이드</strong>에서.
+버전 번호(Fable 5.1·Opus 5.5 등)는 자주 갱신: 라인업만 기억하고 최신 사양은 docs. 같은 모델이 얼마나 공들일지(effort)는 <strong>다음 슬라이드</strong>에서.
 
 </div>
 
@@ -767,12 +767,65 @@ table { font-size: 0.85em; }
 docs/intro.md 「모델 비교 ― Fable · Opus · Sonnet · Haiku」(#claude-models)의 슬라이드 압축. 핵심 축은 「추론 vs 지시 이행」.
 - Fable: 기존 세 라인업 위에 추가된 최상위 모델 (대체 아님). 가장 어려운 문제·장시간 자율 작업. Opus로도 부족할 때.
 - Opus: 본인도 잘 모르는 주제·다단계. 추론이 핵심일 때.
-- Sonnet: 일상 기본값. 검색·요약·찾아바꾸기 같은 지시 이행 작업.
+- Sonnet: 일상 업무 기본. 검색·요약·찾아바꾸기 같은 지시 이행 작업.
+- 헷갈릴 때의 시작점은 Opus: Anthropic 공식 모델 안내가 「확실하지 않다면 대부분의 작업은 Opus 5.5로 시작」을 권장.
 - Haiku: 짧은 답·반복.
-버전 번호(Fable 5·Opus 5 등)는 본문 생략: 라인업 시그니처가 안정, 버전은 자주 갱신되므로 docs로 위임.
-사용량은 다음 슬라이드(사용량 확인)로: docs intro가 모델 다음에 사용량을 두는 순서와 정합.
+버전 번호(Fable 5.1·Opus 5.5 등)는 하단 작은 글씨 예시로만: 라인업 시그니처가 안정, 버전은 자주 갱신되므로 상세는 docs로 위임.
+다음 슬라이드는 effort(노력 수준), 그다음이 사용량 확인: docs intro가 모델 → effort → 사용량 순으로 두는 것과 정합.
 -->
 
+
+---
+
+# 노력 수준(effort) ― 같은 모델이 얼마나 공들일지
+
+모델은 **누구에게 맡길지**, effort는 같은 모델이 **얼마나 공들여 일할지**. 올리면 더 깊이 생각하고, 스스로 확인하고, 예외 상황까지 점검합니다.
+
+<div grid="~ cols-2 gap-6" class="mt-4">
+<div>
+
+| 단계 | 어떻게 일하나 |
+|------|---------------|
+| `low` | 빠르고 간결. 품질이 조금 떨어질 수 있고, 쉬운 문제는 생각을 건너뛰기도 |
+| `medium` | 속도·사용량·품질의 균형 |
+| `high` | 필요한 만큼 충분히 생각하고 확인 |
+| `xhigh` | 30분 이상 걸리는 긴 작업용 |
+| `max` | 사용량을 아끼지 않고 최대로 |
+
+</div>
+<div>
+
+| 모델 | 기본 단계 |
+|------|-----------|
+| Fable 5.1 | `high` |
+| Opus 5.5 | `medium` |
+| Sonnet 5.5 | `high` |
+| Haiku 4.5 | 지원하지 않음 |
+
+<div class="text-sm opacity-80 mt-2">Claude Code에서는 Sonnet 5.5도 <code>medium</code>으로 시작</div>
+
+</div>
+</div>
+
+<div class="border-l-4 border-emerald-400 pl-6 py-2 my-4 bg-emerald-50 dark:bg-emerald-900/15 rounded-r text-sm">
+
+단계를 올리면 같은 일도 **더 오래 걸리고 사용량도 늘어납니다**. 예: 같은 작업이 `low` 약 2분, 높은 단계 약 33분 (작업마다 크게 다름).
+
+</div>
+
+<style>
+table { font-size: 0.85em; }
+</style>
+
+<!--
+docs/intro.md 「노력 수준(effort) ― 같은 모델이 얼마나 공들일지」(#claude-effort)의 슬라이드 압축: ADR-0002 단방향 파생.
+- 정의: 모델 선택(누구에게 맡길지)과 별개로, 같은 모델이 얼마나 공들일지 정하는 조절 장치. 올리면 확인과 예외 상황 점검이 늘어난다.
+- 단계 표: Claude 기준 다섯 단계만. OpenAI에도 비슷한 단계가 있고 더 낮은 단계(none · minimal)도 있다는 점은 docs 한 줄에 있고 슬라이드에서는 말로만 보충.
+- 기본 단계: Claude 공식 문서 기준값. Claude Code는 Sonnet 5.5도 medium으로 시작. claude.ai는 단계를 고르는 메뉴에 모델별 기본 단계가 표시된다.
+- 시간 예시: Claude 블로그에 실린 글(Spending your effort)의 예시 1건. 단계별 소요 시간이 아니라 차이의 규모를 보여 주는 숫자라고 말로 강조.
+- 주의 사항 세 가지(모델마다 단계·기본값이 다름 / 같은 이름이라도 생각하는 양이 다름 / effort는 상한이 아니라 신호)와 바꾸는 위치 안내는 docs 카드에 두고 말로 보충.
+- 단계를 올릴수록 사용량이 빨리 찬다는 점으로 다음 슬라이드(사용량 확인)에 연결.
+-->
 
 ---
 
@@ -810,7 +863,7 @@ Claude Desktop의 **Code 탭 → 사용량 링**(모델 표시 옆).
 
 <div class="border-l-4 border-emerald-400 pl-6 py-2 my-4 bg-emerald-50 dark:bg-emerald-900/15 rounded-r text-sm">
 
-🛠️ 추론이 많이 필요한 작업과 단순 지시 이행은 사용량 차이가 큽니다. 작업 성격에 맞춰 모델을 골라 보세요. claude.ai · Cowork · Code는 **하나의 한도 풀**을 함께 씁니다.
+추론이 많이 필요한 작업과 단순 지시 이행은 사용량 차이가 큽니다. 작업 성격에 맞춰 모델과 effort를 골라 보세요. claude.ai · Cowork · Code는 **하나의 한도 풀**을 함께 씁니다.
 
 </div>
 
@@ -820,7 +873,7 @@ Claude Desktop의 **Code 탭 → 사용량 링**(모델 표시 옆).
 docs/intro.md 「사용량 확인 방법」(#claude-usage) 슬라이드 압축: ADR-0002 단방향 파생.
 두 화면(① 한도 숫자 = 설정→사용량 / ② 누적 사용량 = Code 탭→사용량 링)으로 docs 구조와 정합.
 이미지·화면 캡처는 사이트에 두고 본 슬라이드는 메시지 카드로 유지. UI 변경 시 docs/intro.md가 캡처 갱신 책임 자리.
-nav 위치(도구 블록 끝): 모델 라인업 직후. docs intro가 기능비교 → 모델 → 사용량 순인 것과 정합. Who 「준비사항」에서 이리로 옮김(docs도 Who에선 intro로 링크만 둠).
+nav 위치(도구 블록 끝): effort 슬라이드 직후. docs intro가 기능비교 → 모델 → effort → 사용량 순인 것과 정합. Who 「준비사항」에서 이리로 옮김(docs도 Who에선 intro로 링크만 둠).
 viewport 점검 필요: 2카드 + 박스 + 인용구가 한 화면에 들어가는지 사용자 확인.
 -->
 
@@ -850,7 +903,7 @@ class: text-center
 
 <div class="mt-8 text-base opacity-75 max-w-2xl mx-auto">
 
-💡 출발점은 <strong>본인이 매주 반복하는 30분 ~ 1시간짜리 작업 1개</strong>가 좋습니다.
+출발점은 <strong>본인이 매주 반복하는 30분 ~ 1시간짜리 작업 1개</strong>가 좋습니다.
 
 </div>
 
@@ -950,15 +1003,15 @@ class: text-center
 
 # 핵심: 비개발자도 소프트웨어를 만든다
 
-<div class="mt-12 text-xl opacity-50">"AI에게 매번 시킨다" ❌</div>
+<div class="mt-12 text-xl opacity-50">"AI에게 매번 시킨다"에 머물지 않고</div>
 
 <div class="text-2xl opacity-60 my-3">↓</div>
 
-<div class="text-2xl font-bold">"AI로 나만의 소프트웨어를 만들어 반복 자동화한다" ✅</div>
+<div class="text-2xl font-bold">"AI로 나만의 소프트웨어를 만들어 반복 자동화한다"</div>
 
 <!--
 ADR-0005 본질 메시지 못 ② 가시화 자리: 사다리 [4] 결론을 한 화면으로 압축.
-docs의 W3 quote 박스에 1:1 정합. ❌/✅ 시각 비교가 청중 인지에 박힘.
+docs의 W3 tip 박스에 1:1 정합. 흐린 앞 문장과 굵은 뒷 문장의 대비가 청중 인지에 박힘.
 -->
 
 
@@ -1018,7 +1071,7 @@ What 섹션에 위치한 이유: 학습자 분류가 아니라 "교육이 다루
 | **2단계:<br/>프롬프트&nbsp;재활용** | 반복 사용 가능한 맞춤 프롬프트·챗봇을 자산으로 만듦 | **Skill&nbsp;기초** | **2단계&nbsp;실습** |
 | **3단계:<br/>에이전트&nbsp;활용** | 로컬 파일·작업을 자동화하는 에이전트를&nbsp;운영함 | **Claude&nbsp;Cowork**,<br/>Claude&nbsp;Code | **3단계&nbsp;실습** |
 
-> 💡 2단계에서 익히는 **프롬프트 재활용·Skill** 개념은 3단계에서도 그대로 재활용됩니다.
+> 2단계에서 익히는 **프롬프트 재활용·Skill** 개념은 3단계에서도 그대로 재활용됩니다.
 
 <style>
 table { font-size: 0.85em; }
@@ -1347,8 +1400,8 @@ labs/README.md·docs/labs.md의 "결과물은 반드시 읽고 이해합니다" 
 
 <div class="mt-5 text-center text-xs opacity-70 max-w-4xl mx-auto leading-relaxed">
 참고: 컨텍스트 크기<br/>
-최신 모델(Fable 5.1·Opus 5·Sonnet 5) <strong>1M</strong> · claude.ai 챗의 이전 세대 모델 <strong>500K</strong><br/>
-Claude Code는 이전 세대 Opus까지 1M<br/>
+최신 모델(Fable 5.1·Opus 5.5·Sonnet 5.5) <strong>1M</strong> · claude.ai 챗의 이전 세대 일부 모델 <strong>500K</strong><br/>
+Claude Code는 이전 세대 일부도 1M (모델·플랜에 따라 조건)<br/>
 <a href="https://platform.claude.com/docs/ko/build-with-claude/context-windows">기술 배경</a> · <a href="https://support.claude.com/ko/articles/8606394">Claude.ai 한도</a>
 </div>
 
@@ -1372,7 +1425,7 @@ docs/index.md `### AI 활용 메타 원칙` ④ 박스 압축: ADR-0002 단방�
 <div class="mt-6 grid grid-cols-2 gap-4 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800">
-<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">톤·형식 지정: 권장 ✓</div>
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">톤·형식 지정: 권장</div>
 <div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-3 text-sm">
 
 예: <em>"공식 문서 톤으로 설명해줘"</em>, <em>"초등학생도 이해할 수 있게 풀어줘"</em>
@@ -1383,7 +1436,7 @@ docs/index.md `### AI 활용 메타 원칙` ④ 박스 압축: ADR-0002 단방�
 </div>
 
 <div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800">
-<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center">전문성 부여: 보수적 ⚠</div>
+<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center">전문성 부여: 보수적</div>
 <div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-3 text-sm">
 
 예: <em>"너는 20년 경력 변호사야, 이 계약서 검토해"</em>
@@ -1876,7 +1929,7 @@ docs 표 3행을 줄이지 않는다. 이 세 가지가 연결에서 사람이 �
 <div class="mt-6 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800 flex flex-col">
-<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">안심 ✓</div>
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center">안심</div>
 <div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-4 text-sm flex-1">
 
 권한이 **새로 생기지는 않습니다.**
@@ -1887,7 +1940,7 @@ docs 표 3행을 줄이지 않는다. 이 세 가지가 연결에서 사람이 �
 </div>
 
 <div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800 flex flex-col">
-<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center">경고 ⚠</div>
+<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center">경고</div>
 <div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-4 text-sm flex-1">
 
 **내가 볼 수 있는 것까지가** AI에게 열릴 수 있는 **가장 넓은 범위**입니다.
@@ -1979,7 +2032,7 @@ Confluence는 회의록·규정·기획서를, Jira는 업무 요청과 진행 �
 
 <div class="border-l-4 border-red-400 pl-6 py-4 my-6 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **AI가 쓴 것도 내 이름으로 팀에 공개됩니다.**
+**AI가 쓴 것도 내 이름으로 팀에 공개됩니다.**
 
 Atlassian 커넥터는 읽기와 쓰기를 모두 지원합니다. 내 계정으로 연결했으니 AI가 만든 문서나 코멘트도 **내가 쓴 것으로** 올라갑니다. 초안을 만들게 하되 **올리기 전에 직접 읽고 고치는 단계**를 반드시 두세요.
 
@@ -2007,7 +2060,7 @@ GitHub은 기본적으로 **소스코드를 보관하고 변경 이력을 관리
 <div class="mt-6 grid grid-cols-2 gap-5 max-w-5xl mx-auto">
 
 <div class="rounded-lg overflow-hidden border border-emerald-200 dark:border-emerald-800 flex flex-col">
-<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center text-sm">학생·일반인: 읽기만이면 연결 없이 ✓</div>
+<div class="bg-emerald-100 text-emerald-800 px-4 py-2 font-bold text-center text-sm">학생·일반인: 읽기만이면 연결 불필요</div>
 <div class="bg-emerald-50 dark:bg-emerald-900/15 px-4 py-3 text-xs flex-1">
 
 이 교육의 **실습 자료**도 공개 저장소에 있습니다.
@@ -2020,7 +2073,7 @@ GitHub은 기본적으로 **소스코드를 보관하고 변경 이력을 관리
 </div>
 
 <div class="rounded-lg overflow-hidden border border-amber-200 dark:border-amber-800 flex flex-col">
-<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center text-sm">임직원: 업무 도구가 따로 있으면 보류 ⚠</div>
+<div class="bg-amber-100 text-amber-800 px-4 py-2 font-bold text-center text-sm">임직원: 업무 도구가 따로 있으면 보류</div>
 <div class="bg-amber-50 dark:bg-amber-900/15 px-4 py-3 text-xs flex-1">
 
 Jira·Confluence 같은 업무 도구가 따로 있다면 비개발자가 GitHub까지 연결할 이유는 대개 없습니다.
@@ -2364,7 +2417,7 @@ scale은 노드가 많아 21장보다 더 줄인 값: Task 6 viewport 점검 대
 
 <div class="border-l-4 border-red-400 pl-6 py-3 mt-4 bg-red-50 dark:bg-red-900/15 rounded-r max-w-5xl mx-auto text-sm">
 
-⚠️ 내 컴퓨터에서 실행돼도 **읽은 자료는 Claude 서비스로 보내져 처리됩니다.** 밖으로 나가면 안 되는 자료라면 처음부터 연결 대상에서 빼는 것이 맞습니다.
+내 컴퓨터에서 실행돼도 **읽은 자료는 Claude 서비스로 보내져 처리됩니다.** 밖으로 나가면 안 되는 자료라면 처음부터 연결 대상에서 빼는 것이 맞습니다.
 
 </div>
 
@@ -2460,7 +2513,7 @@ docs의 스크린샷 1장(커스텀 커넥터 추가 창)은 덱 관례대로 �
 
 <div class="border-l-4 border-red-400 pl-6 py-3 my-5 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **서버가 응답하는 내용에 지시가 섞여 있을 수 있습니다.** AI는 서버에서 받아 온 내용을 읽고 다음 행동을 정하는데, 그 안에 <em>"이 파일도 함께 보내라"</em> 같은 문장이 숨어 있으면 **사용자의 지시로 착각할 수 있습니다**(프롬프트 주입).
+**서버가 응답하는 내용에 지시가 섞여 있을 수 있습니다.** AI는 서버에서 받아 온 내용을 읽고 다음 행동을 정하는데, 그 안에 <em>"이 파일도 함께 보내라"</em> 같은 문장이 숨어 있으면 **사용자의 지시로 착각할 수 있습니다**(프롬프트 주입).
 
 보호 장치가 있지만 완전하지는 않습니다. **믿을 수 있는 곳에서 만든 서버만 등록하는 것**이 첫 번째 방어이고, 믿을 만한 서버도 이슈·문서처럼 **남이 쓴 내용을 그대로 가져오므로** 도구 실행 승인은 매번 읽고 판단하세요.
 
@@ -2524,7 +2577,7 @@ docs/connect/mcp-servers.md `## 믿을 만한 서버 고르기 { #choosing }` �
 
 <div class="border-l-4 border-red-400 pl-6 py-3 mt-6 bg-red-50 dark:bg-red-900/15 rounded-r max-w-5xl mx-auto text-sm">
 
-⚠️ **열쇠 값은 대화창에 붙여넣지 않습니다.** 설정 칸은 연결을 세우는 곳이고 대화창은 자료가 오가는 곳입니다. 열쇠 값은 **절대 입력하면 안 되는 정보**의 「인증 정보」에 해당합니다.
+**열쇠 값은 대화창에 붙여넣지 않습니다.** 설정 칸은 연결을 세우는 곳이고 대화창은 자료가 오가는 곳입니다. 열쇠 값은 **절대 입력하면 안 되는 정보**의 「인증 정보」에 해당합니다.
 
 </div>
 
@@ -2587,7 +2640,7 @@ docs/connect/mcp-servers.md `## 연결한 뒤에 할 일 { #after-connect }` + `
 
 <div class="border-l-4 border-red-400 pl-6 py-5 my-8 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **붙여넣을 때마다 하던 "넘길까?" 판단을, 연결에서는 승인 화면에서 미리 합니다.**
+**붙여넣을 때마다 하던 "넘길까?" 판단을, 연결에서는 승인 화면에서 미리 합니다.**
 
 </div>
 
@@ -2724,7 +2777,7 @@ docs/security-guide.md `### 공통 ― 트랙과 관계없이 지킵니다` 세 
 
 <div class="border-l-4 border-emerald-400 pl-6 py-4 mt-8 bg-emerald-50 dark:bg-emerald-900/15 rounded-r max-w-5xl mx-auto">
 
-💡 **한 줄 요약**: 연결은 편의를 늘리는 만큼 **내가 직접 보지 않은 자료가 결과에 섞일 여지**도 늘립니다.
+**한 줄 요약**: 연결은 편의를 늘리는 만큼 **내가 직접 보지 않은 자료가 결과에 섞일 여지**도 늘립니다.
 **권한은 최소로, 점검은 정기적으로.**
 
 </div>
@@ -2821,9 +2874,9 @@ docs/labs.md → labs/ SSoT의 단방향 파생(ADR-0002).
 
 <div class="border-l-4 border-emerald-400 pl-6 py-3 my-4 bg-emerald-50 dark:bg-emerald-900/15 rounded-r">
 
-🛠️ **진행 원칙 ① 프롬프트로만 진행합니다.** 파일·코드·템플릿을 에디터로 직접 고치지 않고, AI에게 프롬프트로 요청합니다.
+**진행 원칙 ① 프롬프트로만 진행합니다.** 파일·코드·템플릿을 에디터로 직접 고치지 않고, AI에게 프롬프트로 요청합니다.
 
-📖 **진행 원칙 ② 결과물은 반드시 읽고 이해합니다.** 손으로 쓰지 않더라도, AI가 만든 결과물은 본인이 직접 읽고 이해한 상태에서 사용·수정합니다.
+**진행 원칙 ② 결과물은 반드시 읽고 이해합니다.** 손으로 쓰지 않더라도, AI가 만든 결과물은 본인이 직접 읽고 이해한 상태에서 사용·수정합니다.
 
 </div>
 
@@ -2925,7 +2978,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 <div class="border-l-4 border-red-400 pl-6 py-4 my-8 bg-red-50 dark:bg-red-900/15 rounded-r">
 
-⚠️ **AI에게 입력하는 모든 내용은 "누군가 볼 수 있다"고 가정하세요.**
+**AI에게 입력하는 모든 내용은 "누군가 볼 수 있다"고 가정하세요.**
 
 엔터프라이즈 환경이라도 이 기본 태도는 유지합니다.
 
@@ -3015,7 +3068,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 </div>
 
-> 💡 한 줄 요약: 사내 AI는 안전하게 설계되어 있지만, **"입력 전에 한 번 더 생각하기"** 습관은 여전히 중요
+> 한 줄 요약: 사내 AI는 안전하게 설계되어 있지만, **"입력 전에 한 번 더 생각하기"** 습관은 여전히 중요
 
 ---
 
@@ -3076,7 +3129,7 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 </div>
 
-> 💡 한 줄 요약: 무료 AI는 편리하지만, **"나와 다른 사람의 개인정보는 절대 입력하지 않기"**
+> 한 줄 요약: 무료 AI는 편리하지만, **"나와 다른 사람의 개인정보는 절대 입력하지 않기"**
 
 ---
 
@@ -3084,23 +3137,23 @@ docs/security-guide.md의 핵심 메시지를 발표 청중에게 전달하는 �
 
 | 원칙 | 임직원 | 학생·일반인 |
 |------|:--------:|:------------:|
-| 개인 식별 정보 입력 금지 | ✅ | ✅ |
-| 타인 개인정보 입력 금지 | ✅ | ✅ |
-| 사진 속 개인정보 확인 | ✅ | ✅ |
-| 개인정보 가리고 입력하기(비식별 처리) | ✅ | ✅ |
-| AI 결과물을 원본으로 검증 | ✅ | ✅ |
-| AI 결과물 외부 공유 전 검토 | ✅ | ✅ |
-| 개인정보가 있는 자료에 연결 금지 | ✅ | ✅ |
-| 연결에 맡기는 권한 최소화 | ✅ | ✅ |
-| 안 쓰는 연결 점검·해제 | ✅ | ✅ |
-| 문서 보안 등급 확인 | ✅ (사내 문서) | ― |
-| 연결은 회사 계약 플랜에서만 | ✅ (사내 자료) | ― |
-| 연결은 회사가 허용한 것만 | ✅ (사내 자료) | ― |
-| 개인 계정 연결 전 개인·타인 자료 확인 | ― | ✅ |
-| 서비스 약관 확인 | ― (회사가 계약) | ✅ |
+| 개인 식별 정보 입력 금지 | ✓ | ✓ |
+| 타인 개인정보 입력 금지 | ✓ | ✓ |
+| 사진 속 개인정보 확인 | ✓ | ✓ |
+| 개인정보 가리고 입력하기(비식별 처리) | ✓ | ✓ |
+| AI 결과물을 원본으로 검증 | ✓ | ✓ |
+| AI 결과물 외부 공유 전 검토 | ✓ | ✓ |
+| 개인정보가 있는 자료에 연결 금지 | ✓ | ✓ |
+| 연결에 맡기는 권한 최소화 | ✓ | ✓ |
+| 안 쓰는 연결 점검·해제 | ✓ | ✓ |
+| 문서 보안 등급 확인 | ✓ (사내 문서) | ― |
+| 연결은 회사 계약 플랜에서만 | ✓ (사내 자료) | ― |
+| 연결은 회사가 허용한 것만 | ✓ (사내 자료) | ― |
+| 개인 계정 연결 전 개인·타인 자료 확인 | ― | ✓ |
+| 서비스 약관 확인 | ― (회사가 계약) | ✓ |
 
 <div class="text-xs opacity-70 mt-3">
-범례: ✅ 반드시 준수 / ― 해당 없음 또는 트랙 특성상 적용 수준이 다름
+범례: ✓ 반드시 준수 / ― 해당 없음 또는 트랙 특성상 적용 수준이 다름
 </div>
 
 <style>
@@ -3123,7 +3176,7 @@ docs/security-guide.md `## 정리` 표 파생: ADR-0002 단방향 파생.
 
 **시작하기**
 
-- [모델 안내](https://docs.claude.com/ko/docs/about-claude/models/overview)
+- [모델 안내](https://platform.claude.com/docs/ko/models/overview)
 - [Cowork 시작](https://support.claude.com/ko/articles/13345190)
 - [Claude Code](https://docs.claude.com/ko/docs/claude-code/overview)
 - [Claude Academy](https://academy.claude.com/)
