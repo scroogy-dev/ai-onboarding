@@ -35,51 +35,51 @@ layout: default
 <div class="text-xl mt-8 max-w-3xl mx-auto">
 
 <div class="flex items-center mb-4">
-<div class="font-mono text-2xl opacity-50 w-14">01</div>
+<div class="font-mono text-2xl opacity-50 w-16">01</div>
 <div class="font-bold w-44">Who</div>
 <div class="opacity-80">Who this training is for</div>
 </div>
 
 <div class="flex items-center mb-4">
-<div class="font-mono text-2xl opacity-50 w-14">02</div>
+<div class="font-mono text-2xl opacity-50 w-16">02</div>
 <div class="font-bold w-44">Why</div>
 <div class="opacity-80">Why learn to use AI</div>
 </div>
 
 <div class="flex items-center mb-4">
-<div class="font-mono text-2xl opacity-50 w-14">03</div>
+<div class="font-mono text-2xl opacity-50 w-16">03</div>
 <div class="font-bold w-44">Terms & Scope</div>
 <div class="opacity-80">Chatbots vs. agents, model + harness</div>
 </div>
 
 <div class="flex items-center mb-4">
-<div class="font-mono text-2xl opacity-50 w-14">04</div>
+<div class="font-mono text-2xl opacity-50 w-16">04</div>
 <div class="font-bold w-44">Tools & Products</div>
 <div class="opacity-80">The generative AI landscape and Claude</div>
 </div>
 
 <div class="flex items-center mb-4">
-<div class="font-mono text-2xl opacity-50 w-14">05</div>
+<div class="font-mono text-2xl opacity-50 w-16">05</div>
 <div class="font-bold w-44">What</div>
 <div class="opacity-80">What you take away: building it yourself</div>
 </div>
 
 <div class="flex items-center mb-4">
-<div class="font-mono text-2xl opacity-50 w-14">06</div>
+<div class="font-mono text-2xl opacity-50 w-16">06</div>
 <div class="font-bold w-44">How</div>
 <div class="opacity-80">How the training works</div>
 </div>
 
 <div class="flex items-center">
-<div class="font-mono text-2xl opacity-50 w-14">07</div>
+<div class="font-mono text-2xl opacity-50 w-16">07</div>
 <div class="font-bold w-44">Security</div>
 <div class="opacity-80">Using AI safely</div>
 </div>
 
 <div class="mt-5 pt-4 border-t border-slate-300 dark:border-slate-700 flex items-center text-lg opacity-70">
-<div class="font-mono text-lg w-14">Part 2</div>
-<div class="font-bold w-44">Tools & Data</div>
-<div>Connect your own data with connectors and MCP <span class="opacity-70">(separate session)</span></div>
+<div class="font-mono text-sm whitespace-nowrap w-16 shrink-0">Part 2</div>
+<div class="font-bold w-44 shrink-0">Tools & Data</div>
+<div>Link your data via connectors and MCP <span class="opacity-70">(separate session)</span></div>
 </div>
 
 </div>
@@ -1858,7 +1858,7 @@ This is the most confusing part. **Where the setup lives** and **where the serve
 
 # When Registered to Your Account
 
-```mermaid {scale: 0.72}
+```mermaid {scale: 0.64}
 flowchart LR
     subgraph PC["Your computer"]
         U["You"]
