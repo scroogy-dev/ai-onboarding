@@ -1,0 +1,74 @@
+# English snapshot build (one-off). The Korean docs/ remain the SSoT.
+# Build: mkdocs build -f mkdocs.en.yml -d <out-dir>, then print <out-dir>/print_page/ to PDF.
+site_name: Practical AI Training
+site_description: Practical AI training for non-developers (English edition, translated from the Korean original as of 2026-10-21)
+site_url: ""
+docs_dir: docs-en
+site_dir: site-en
+
+validation:
+  anchors: warn
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+
+plugins:
+  - search
+  - print-site:
+      add_to_navigation: false
+      print_page_title: "Practical AI Training"
+      add_print_site_banner: false
+      add_table_of_contents: true
+      toc_title: "Contents"
+      toc_depth: 2
+      add_full_urls: false
+      enumerate_headings: false
+      enumerate_figures: false
+      add_cover_page: true
+      path_to_pdf: ""
+      include_css: true
+      enabled: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/css/claude-theme.css
+
+nav:
+  - Home: index.md
+  - "Part 1: AI Basics":
+      - Key Terms and Scope: basics.md
+      - Tools and Products: intro.md
+      - Labs: labs.md
+  - "Part 2: Connecting Tools and Data":
+      - "Overview: Why Connect?": connect/index.md
+      - "Built-in Connectors: Atlassian and GitHub": connect/connectors.md
+      - Using MCP Servers: connect/mcp-servers.md
+  - Security and Privacy Guide: security-guide.md

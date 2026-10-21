@@ -1,0 +1,26 @@
+.slide-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--md-primary-fg-color);
+  border-radius: 2rem;
+  background: transparent;
+  color: var(--md-primary-fg-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.slide-link-btn:hover {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+.slide-link-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
